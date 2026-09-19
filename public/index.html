@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trivia Arena</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- GİRİŞ EKRANI -->
+    <section id="screen-entry" class="screen active">
+      <h1>🎮 Trivia Arena</h1>
+      <input id="input-name" type="text" placeholder="Adınız" maxlength="16" />
+
+      <div class="entry-actions">
+        <button id="btn-create">Oda Kur</button>
+        <div class="divider">veya</div>
+        <input id="input-code" type="text" placeholder="ODA KODU" maxlength="4" style="text-transform:uppercase" />
+        <button id="btn-join">Odaya Katıl</button>
+      </div>
+      <p id="entry-error" class="error"></p>
+    </section>
+
+    <!-- LOBİ EKRANI -->
+    <section id="screen-lobby" class="screen">
+      <h2>Oda Kodu</h2>
+      <div id="room-code-display" class="room-code"></div>
+      <p class="hint">Bu kodu arkadaşlarınla paylaş — herkes bu siteye gelip kodu girsin.</p>
+      <h3>Oyuncular</h3>
+      <ul id="player-list" class="player-list"></ul>
+      <button id="btn-start" style="display:none">Oyunu Başlat</button>
+      <p id="lobby-wait" class="hint">Host'un başlatmasını bekliyorsunuz...</p>
+    </section>
+
+    <!-- SORU EKRANI -->
+    <section id="screen-question" class="screen">
+      <div class="progress"><span id="q-progress"></span></div>
+      <div class="timer-bar"><div id="timer-fill"></div></div>
+      <h2 id="q-prompt"></h2>
+      <div id="q-options" class="options-grid"></div>
+      <p id="q-status" class="hint"></p>
+    </section>
+
+    <!-- SONUÇ EKRANI -->
+    <section id="screen-results" class="screen">
+      <h2>Doğru Cevap</h2>
+      <div id="correct-answer" class="correct-answer"></div>
+      <h3>Skor Tablosu</h3>
+      <ul id="results-list" class="player-list"></ul>
+      <button id="btn-next" style="display:none">Sıradaki Soru</button>
+      <p id="results-wait" class="hint">Host'un devam ettirmesini bekliyorsunuz...</p>
+    </section>
+
+    <!-- OYUN SONU -->
+    <section id="screen-gameover" class="screen">
+      <h1>🏆 Oyun Bitti</h1>
+      <ul id="final-list" class="player-list"></ul>
+      <button id="btn-restart">Yeni Oyun</button>
+    </section>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
