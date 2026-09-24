@@ -244,6 +244,7 @@ func exit_loge() -> void:
 func throw_item(kind: String) -> void:
 	var b := RigidBody3D.new()
 	b.mass = 0.3
+	b.collision_mask = 1 | 2
 	b.add_to_group("prop")
 	b.contact_monitor = true
 	b.max_contacts_reported = 2
@@ -364,7 +365,7 @@ func start_arena(kind := "") -> void:
 		arena = ConquestQuiz.new()
 	else:
 		props.build_arena_set()
-		arena = TriviaArena.new()
+		arena = ClassicShow.new()
 	cam.set_shot(BalconyCam.Shot.ARENA, true)
 	arena.name = "Arena"
 	add_child(arena)
@@ -516,6 +517,29 @@ func prepare_game_shot(part: String) -> void:
 			while arena == null or arena.phase != "reveal":
 				await get_tree().process_frame
 			await get_tree().create_timer(1.5).timeout
+		"arena_intro":
+			start_arena("arena")
+			while arena == null or arena.phase != "intro":
+				await get_tree().process_frame
+			await get_tree().create_timer(1.6).timeout
+		"arena_tug":
+			if arena == null:
+				start_arena("arena")
+			while arena == null or arena.phase != "tug":
+				await get_tree().process_frame
+			await get_tree().create_timer(5.0).timeout
+		"arena_reward":
+			while arena == null or arena.phase != "reward":
+				await get_tree().process_frame
+			await get_tree().create_timer(0.7).timeout
+		"arena_standings":
+			while arena == null or arena.phase != "standings":
+				await get_tree().process_frame
+			await get_tree().create_timer(1.4).timeout
+		"arena_final":
+			while arena == null or not arena.hp_mode or arena.phase != "reveal" or arena.q_index < 2:
+				await get_tree().process_frame
+			await get_tree().create_timer(1.2).timeout
 		"result":
 			while ui == null or not ui.result_panel.visible:
 				await get_tree().process_frame

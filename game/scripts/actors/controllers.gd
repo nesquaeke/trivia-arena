@@ -130,7 +130,8 @@ class Scripted extends Base:
 
 ## Bot: lobide dolaşır, ara sıra birine omuz atar; modda hedefe koşar.
 class Bot extends Base:
-	var mode := "wander"          # wander | goto | idle
+	var mode := "wander"          # wander | goto | hop | idle
+	var hop_rate := 0.12          # "hop" modunda karede zıplama ihtimali
 	var target := Vector3.ZERO
 	var aggression := 0.25
 	var bounds := Rect2(-6.6, -4.0, 13.2, 7.4)   # x, z, genişlik, derinlik
@@ -144,6 +145,11 @@ class Bot extends Base:
 		label = "BOT"
 	func go_to(p: Vector3) -> void:
 		mode = "goto"
+		target = p
+		_chase = null
+	## Hedefe git ve orada durmadan zıpla (kategori halatı)
+	func hop_at(p: Vector3) -> void:
+		mode = "hop"
 		target = p
 		_chase = null
 	func wander() -> void:
@@ -180,7 +186,9 @@ class Bot extends Base:
 		var to: Vector3 = target - p.global_position
 		to.y = 0.0
 		var dist := to.length()
-		var arrive := 0.35 if mode == "goto" else 0.6
+		var arrive := 0.35 if mode == "goto" else (0.7 if mode == "hop" else 0.6)
+		if mode == "hop" and dist < 1.0 and p.grounded and rng.randf() < hop_rate:
+			_jump = true
 		if dist < arrive:
 			_move = Vector2.ZERO
 			if mode == "wander" and _chase == null:

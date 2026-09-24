@@ -67,6 +67,8 @@ func _chrome() -> StandardMaterial3D:
 func _body(pos: Vector3, mass: float, yaw := 0.0, com := Vector3.ZERO) -> RigidBody3D:
 	var b := RigidBody3D.new()
 	b.mass = mass
+	b.collision_layer = 1
+	b.collision_mask = 1 | 2
 	b.add_to_group("prop")
 	b.contact_monitor = true
 	b.max_contacts_reported = 2

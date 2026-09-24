@@ -556,7 +556,7 @@ func _build_result() -> void:
 	result_panel.visible = false
 	root.add_child(result_panel)
 
-func show_result(title: String, ranking: Array) -> void:
+func show_result(title: String, ranking: Array, _rows: Array = []) -> void:
 	for c in result_panel.get_children():
 		c.queue_free()
 	var v := VBoxContainer.new()

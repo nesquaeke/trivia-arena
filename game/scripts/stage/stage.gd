@@ -201,6 +201,8 @@ func _box(parent: Node3D, size: Vector3, pos: Vector3, mat: Material, collide :=
 	mi.rotation = rot
 	if collide:
 		var sb := StaticBody3D.new()
+		sb.collision_layer = 2
+		sb.collision_mask = 0
 		var cs := CollisionShape3D.new()
 		var sh := BoxShape3D.new()
 		sh.size = size
@@ -675,6 +677,132 @@ func _build_lights() -> void:
 	# kostüm odası için tek spot
 	solo_spot = _spot(Vector3(0, 9.5, 2.6), Vector3(0, 0, 0.7), Color(1.0, 0.93, 0.82), 9.0, 11.0, 2.2, true, 16.0)
 	solo_spot.visible = false
+
+# ── kişisel kapak (tur 3'te ölüm) ───────────────────────────────────
+## Oyuncunun ayağının altında küçük yuvarlak bir kapak açılır, sonra kapanır.
+func spawn_hatch(pos: Vector3) -> void:
+	var root := Node3D.new()
+	add_child(root)
+	root.global_position = Vector3(pos.x, 0.012, pos.z)
+	var hole := MeshInstance3D.new()
+	var hm := CylinderMesh.new()
+	hm.top_radius = 0.62
+	hm.bottom_radius = 0.62
+	hm.height = 0.01
+	hole.mesh = hm
+	hole.material_override = m_plain(Color("020102"), 1.0, "hole")
+	root.add_child(hole)
+	var ring := MeshInstance3D.new()
+	var tm := TorusMesh.new()
+	tm.inner_radius = 0.6
+	tm.outer_radius = 0.7
+	ring.mesh = tm
+	ring.material_override = m_gold()
+	root.add_child(ring)
+	var flaps: Array[Node3D] = []
+	for side: int in [-1, 1]:
+		var hinge := Node3D.new()
+		hinge.position = Vector3(side * 0.6, 0, 0)
+		root.add_child(hinge)
+		var flap := MeshInstance3D.new()
+		var fb := BoxMesh.new()
+		fb.size = Vector3(0.6, 0.04, 1.1)
+		flap.mesh = fb
+		flap.material_override = m_carpet()
+		flap.position = Vector3(-side * 0.3, 0.0, 0)
+		hinge.add_child(flap)
+		flaps.append(hinge)
+	root.scale = Vector3(0.2, 1, 0.2)
+	var tw := create_tween()
+	tw.tween_property(root, "scale", Vector3.ONE, 0.18).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tw.set_parallel(true)
+	tw.tween_property(flaps[0], "rotation:z", deg_to_rad(-95.0), 0.3).set_delay(0.18)
+	tw.tween_property(flaps[1], "rotation:z", deg_to_rad(95.0), 0.3).set_delay(0.18)
+	tw.set_parallel(false)
+	tw.tween_interval(1.4)
+	tw.set_parallel(true)
+	tw.tween_property(flaps[0], "rotation:z", 0.0, 0.25)
+	tw.tween_property(flaps[1], "rotation:z", 0.0, 0.25)
+	tw.set_parallel(false)
+	tw.tween_property(root, "scale", Vector3(0.01, 1, 0.01), 0.25)
+	tw.tween_callback(root.queue_free)
+	if not Engine.is_editor_hint():
+		Sfx.play("trapdoor", -2.0, 1.3)
+
+# ── kategori halatı daireleri ───────────────────────────────────────
+const TUG_POS := [Vector3(-3.7, 0, -0.3), Vector3(0, 0, -0.3), Vector3(3.7, 0, -0.3)]
+const TUG_R := 1.35
+var _tug_nodes: Array[Node3D] = []
+
+func show_tug(names: Array, colors: Array) -> void:
+	hide_tug()
+	for i in names.size():
+		var root := Node3D.new()
+		add_child(root)
+		root.position = TUG_POS[i] + Vector3(0, 0.02, 0)
+		var disc := MeshInstance3D.new()
+		var cm := CylinderMesh.new()
+		cm.top_radius = TUG_R
+		cm.bottom_radius = TUG_R
+		cm.height = 0.02
+		cm.radial_segments = 48
+		disc.mesh = cm
+		var m := StandardMaterial3D.new()
+		m.albedo_color = Color(colors[i], 0.55)
+		m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		m.emission_enabled = true
+		m.emission = colors[i]
+		m.emission_energy_multiplier = 0.4
+		disc.material_override = m
+		disc.name = "Disc"
+		root.add_child(disc)
+		var ring := MeshInstance3D.new()
+		var tm := TorusMesh.new()
+		tm.inner_radius = TUG_R - 0.05
+		tm.outer_radius = TUG_R + 0.06
+		tm.ring_segments = 12
+		tm.rings = 48
+		ring.mesh = tm
+		ring.material_override = m_gold()
+		root.add_child(ring)
+		var lab := Label3D.new()
+		lab.text = String(names[i]).to_upper()
+		lab.font = load("res://assets/fonts/BigShoulders.ttf")
+		lab.font_size = 96
+		lab.pixel_size = 0.006
+		lab.outline_size = 16
+		lab.outline_modulate = Color(0.06, 0.02, 0.02)
+		lab.modulate = Color(colors[i]).lightened(0.35)
+		lab.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+		lab.position = Vector3(0, 2.3, 0)
+		lab.name = "Label"
+		root.add_child(lab)
+		root.scale = Vector3(0.01, 1, 0.01)
+		create_tween().tween_property(root, "scale", Vector3.ONE, 0.45).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_delay(i * 0.12)
+		_tug_nodes.append(root)
+
+## Halattaki payına göre dairenin parlaklığı ve yazının boyu
+func set_tug_share(i: int, share: float) -> void:
+	if i >= _tug_nodes.size():
+		return
+	var disc: MeshInstance3D = _tug_nodes[i].get_node("Disc")
+	(disc.material_override as StandardMaterial3D).emission_energy_multiplier = 0.3 + share * 2.5
+	_tug_nodes[i].get_node("Label").scale = Vector3.ONE * (0.9 + share * 0.8)
+
+func tug_winner(i: int) -> void:
+	for k in _tug_nodes.size():
+		var n := _tug_nodes[k]
+		var tw := create_tween()
+		if k == i:
+			tw.tween_property(n, "scale", Vector3(1.25, 1, 1.25), 0.3).set_trans(Tween.TRANS_BACK)
+		else:
+			tw.tween_property(n, "scale", Vector3(0.01, 1, 0.01), 0.3)
+
+func hide_tug() -> void:
+	for n in _tug_nodes:
+		if is_instance_valid(n):
+			n.queue_free()
+	_tug_nodes.clear()
 
 ## İzleyici kamerası: locanın içinden, korkuluğun arkasından sahneye bakar.
 func loge_camera() -> Dictionary:

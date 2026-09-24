@@ -299,6 +299,33 @@ func _build_bowtie(kind: String) -> void:
 		for side: int in [-1, 1]:
 			_mesh(neck_anchor, _sphere(0.012), mat("dot", Color(1, 1, 1), 0.5), Vector3(0.06 * side, 0.01, 0.03))
 
+# ── sabotaj görünüşleri ─────────────────────────────────────────────
+var _boots: Array[MeshInstance3D] = []
+var _frost: MeshInstance3D
+
+## Kurşun ayakkabı: ayaklarda ağır, gri metal pabuçlar
+func set_boots(on: bool) -> void:
+	if on and _boots.is_empty():
+		for leg in [leg_l, leg_r]:
+			var b := _mesh(leg, _cyl(0.14, 0.16, 0.16, 12), mat("lead", Color("4A4E57"), 0.35, 0.9), Vector3(0, -0.3, 0.03))
+			_boots.append(b)
+	for b in _boots:
+		b.visible = on
+
+## Buz pisti: ayak altında buz parçası ve soğuk mavi bir parıltı
+func set_frost(on: bool) -> void:
+	if on and _frost == null:
+		var m := StandardMaterial3D.new()
+		m.albedo_color = Color(0.7, 0.9, 1.0, 0.55)
+		m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		m.roughness = 0.05
+		m.emission_enabled = true
+		m.emission = Color(0.5, 0.8, 1.0)
+		m.emission_energy_multiplier = 0.6
+		_frost = _mesh(self, _cyl(0.5, 0.55, 0.04, 20), m, Vector3(0, 0.02, 0))
+	if _frost:
+		_frost.visible = on
+
 # ── animasyon ───────────────────────────────────────────────────────
 func punch() -> void:
 	_punch = 0.28

@@ -13,6 +13,8 @@ var angle := 0.0:
 
 func _ready() -> void:
 	sync_to_physics = true
+	collision_layer = 2
+	collision_mask = 0
 	_apply()
 
 func _apply() -> void:

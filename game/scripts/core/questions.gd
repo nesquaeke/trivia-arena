@@ -72,5 +72,53 @@ func face(item: Dictionary, lang: String) -> Dictionary:
 		"cat_name": cat_row[1 if lang == "en" else 0], "cat_color": Color(cat_row[2]),
 	}
 
+## Belirli bir zorluk ve (varsa) kategoriden soru çek. Kategoride uygun soru
+## kalmazsa aynı zorluğun genel havuzuna düşer (web sürümüyle aynı davranış).
+func draw_from(tier: String, category: String, rng: RandomNumberGenerator) -> Dictionary:
+	var pool: Array = tiers.get(tier, tiers.get("d1", []))
+	var cands := pool.filter(func(q): return (category == "" or q.c == category) and not _used.has(q.tr.q))
+	if cands.is_empty():
+		cands = pool.filter(func(q): return not _used.has(q.tr.q))
+	if cands.is_empty():
+		_used.clear()
+		cands = pool
+	var q: Dictionary = cands[rng.randi() % cands.size()]
+	_used[q.tr.q] = true
+	var order := [0, 1, 2, 3]
+	for i in range(3, 0, -1):
+		var j := rng.randi() % (i + 1)
+		var tmp = order[i]
+		order[i] = order[j]
+		order[j] = tmp
+	return {"src": q, "order": order, "correct": order.find(int(q.a)), "cat": q.c, "tier": tier}
+
+## Kategori halatı için: her zorlukta en az `depth` sorusu olan kategorilerden n tane.
+func pick_categories(n: int, rng: RandomNumberGenerator, exclude: Array = [], depth := 6) -> Array:
+	var ok := []
+	for c in categories:
+		if exclude.has(c):
+			continue
+		var enough := true
+		for t in ["d1", "d2", "d3"]:
+			var cnt: int = tiers.get(t, []).filter(func(q): return q.c == c).size()
+			if cnt < depth:
+				enough = false
+		if enough:
+			ok.append(c)
+	for i in range(ok.size() - 1, 0, -1):
+		var j := rng.randi() % (i + 1)
+		var tmp = ok[i]
+		ok[i] = ok[j]
+		ok[j] = tmp
+	return ok.slice(0, n)
+
+func category_name(c: String, lang: String) -> String:
+	var row: Array = categories.get(c, [c, c, "#B8893B"])
+	return String(row[1 if lang == "en" else 0])
+
+func category_color(c: String) -> Color:
+	var row: Array = categories.get(c, [c, c, "#B8893B"])
+	return Color(row[2])
+
 func reset_used() -> void:
 	_used.clear()

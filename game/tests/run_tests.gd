@@ -9,7 +9,7 @@ var _only := ""
 
 func _ready() -> void:
 	# güvenlik: bir test takılırsa 170 sn sonra hata ile çık
-	get_tree().create_timer(400.0, true, false, true).timeout.connect(func():
+	get_tree().create_timer(900.0, true, false, true).timeout.connect(func():
 		print("ZAMAN AŞIMI")
 		get_tree().quit(99))
 	Profile.save_enabled = false
@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_arena_match", "test_conquest_match",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_match",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -214,6 +214,16 @@ func test_trapdoors() -> void:
 	p.fell_out.disconnect(cb)
 	await seconds(1.0)
 
+func test_rules() -> void:
+	var r: RulesConfig = load("res://data/rules.tres")
+	check(r != null, "kurallar dosyası (rules.tres) yüklendi")
+	check(r.combo_gain(1) == 250 and r.combo_gain(2) == 250 and r.combo_gain(3) == 500 and r.combo_gain(7) == 750, "kombo merdiveni 250/250/500/750")
+	check(r.round_penalty(1, 4) == 210 and r.round_penalty(5, 2) == 600, "tur 3 bedeli web formülüyle aynı")
+	check(r.tier_for(1, 0) == "d1" and r.tier_for(1, 3) == "d3" and r.tier_for(2, 1) == "d2", "tur 1-2 zorluk sırası")
+	check(r.tier_for(3, 2) == "d2" and r.tier_for(3, 3) == "d3", "tur 3: önce orta, sonra zor")
+	var n := r.penalty_rounds(r.final_start_hp, 4)
+	check(n >= 7 and n <= 14, "4 kişilik masada 4500 can %d soruda biter" % n)
+
 func test_arena_match() -> void:
 	var m: Node = await _get_main()
 	Engine.time_scale = 4.0
@@ -223,24 +233,35 @@ func test_arena_match() -> void:
 	var champ_before := {}
 	for n in names_before:
 		champ_before[n] = Profile.record(n).champs
-	m.start_arena()
+	m.start_arena("arena")
 	var waited := 0.0
-	while (m.arena == null or m.arena.phase != "done") and waited < 120.0:
+	var saw := {}
+	while (m.arena == null or m.arena.phase != "done") and waited < 260.0:
 		await get_tree().process_frame
 		waited += get_process_delta_time() / Engine.time_scale
-	var a: TriviaArena = m.arena
-	check(a != null and a.phase == "done", "maç sona erdi (%.0f sn gerçek zaman)" % waited)
-	if a == null:
+		if m.arena:
+			saw[m.arena.phase] = true
+	var a = m.arena
+	check(a is ClassicShow and a.phase == "done", "klasik şov bitti (%.0f sn gerçek zaman)" % waited)
+	if not (a is ClassicShow):
 		Engine.time_scale = 1.0
 		return
+	for ph in ["intro", "tug", "question", "reveal", "reward", "standings"]:
+		check(saw.has(ph), "evre görüldü: " + ph)
+	var cats: Array = a.log_lines.filter(func(l): return l.begins_with("CAT "))
+	check(cats.size() == 3, "her tur bir kategori halatıyla açıldı (%d)" % cats.size())
+	check(a.round_no == 3 and a.hp_mode, "can turuna geçildi")
+	var steals: int = a.log_lines.filter(func(l): return l.begins_with("STEAL ") or l.begins_with("SABOTAGE ")).size()
+	check(steals >= 1, "tur 2'de soygun/sabotaj yapıldı (%d)" % steals)
+	var deaths: int = a.log_lines.filter(func(l): return l.begins_with("DIE ")).size()
+	check(deaths >= 1, "can turunda en az biri öldü (%d)" % deaths)
+	var any_points: bool = a.st.values().any(func(s): return s.points > 0)
+	check(any_points, "puan kazanıldı")
 	var rk: Array[Plush] = a.ranking()
 	check(rk.size() == names_before.size(), "sıralamada herkes var")
-	check(a.alive.size() <= 1, "en fazla bir kişi ayakta kaldı")
-	check(a.q_index >= 1, "en az bir soru soruldu (%d)" % a.q_index)
+	check(a.alive().size() <= 1 or a.q_index >= a.rules.final_max_questions - 1, "en fazla bir kişi ayakta ya da soru sınırı doldu")
 	var winner: String = rk[0].player_name
 	check(Profile.record(winner).champs == champ_before[winner] + 1, "kazananın şampiyonluğu karneye yazıldı (%s)" % winner)
-	var log_ok: bool = a.log_lines.any(func(l): return l.begins_with("WIN "))
-	check(log_ok, "kazanan ilan edildi")
 	# lobiye dönüş
 	await get_tree().create_timer(1.0).timeout
 	m.end_arena()
@@ -248,6 +269,8 @@ func test_arena_match() -> void:
 	check(m.mode == 0 and m.arena == null, "lobiye dönüldü")
 	var visible_all: bool = m.all_actors().all(func(p): return p.visible and p.state != Plush.State.OUT)
 	check(visible_all, "herkes sahneye geri geldi")
+	var clean: bool = m.all_actors().all(func(p): return p.debuffs.is_empty() and p.collision_layer == 1)
+	check(clean, "sabotajlar ve çarpışma katmanları temizlendi")
 	Engine.time_scale = 1.0
 
 func test_conquest_match() -> void:

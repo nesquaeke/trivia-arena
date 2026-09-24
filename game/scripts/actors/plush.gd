@@ -7,6 +7,7 @@ extends RigidBody3D
 
 signal fell_out(p: Plush)
 signal tumbled(p: Plush)
+signal jumped(p: Plush)
 
 enum State { NORMAL, STUMBLE, TUMBLE, GETUP, OUT }
 
@@ -29,7 +30,18 @@ var state: int = State.NORMAL
 var state_t := 0.0
 var facing := 0.0
 var grounded := false
-var frozen_input := false         # sahne geçişlerinde girdi kapalı
+## Girdi kapalıyken kontrolcü okunmaya devam eder ama tuşlar tüketilmez;
+## böylece ödül seçici gibi arayüzler aynı kontrolcüyü okuyabilir.
+var frozen_input := false:
+	set(v):
+		if frozen_input and not v and controller:
+			controller.consume_jump()
+			controller.consume_shove()
+		frozen_input = v
+## Sabotajlar: "lead" kurşun ayakkabı, "invert" ters kumanda, "ice" buz, "bighead" dev kafa
+var debuffs := {}
+var accel_mult := 1.0
+var fragility := 1.0              # dengeye gelen hasarın çarpanı
 var speed_mult := 1.0
 var balance := 1.0
 var visual: PlushVisual
@@ -52,6 +64,8 @@ func _init(p_name: String = "Oyuncu", p_look: Dictionary = {}, p_bot := false) -
 
 func _ready() -> void:
 	add_to_group("plush")
+	collision_layer = 1
+	collision_mask = 1 | 2   # 1: oyuncular ve dekorlar, 2: sahne zemini
 	mass = 1.4
 	can_sleep = false
 	continuous_cd = true
@@ -78,6 +92,7 @@ func _ready() -> void:
 	_ray = RayCast3D.new()
 	_ray.position = Vector3(0, 0.3, 0)
 	_ray.target_position = Vector3(0, -0.45, 0)
+	_ray.collision_mask = 1 | 2
 	_ray.add_exception(self)
 	add_child(_ray)
 
@@ -114,8 +129,12 @@ func _physics_process(delta: float) -> void:
 	var move := Vector2.ZERO
 	if controller and state != State.OUT:
 		controller.poll(self, delta)
-		if not frozen_input and (state == State.NORMAL or state == State.STUMBLE):
+		if frozen_input:
+			pass
+		elif state == State.NORMAL or state == State.STUMBLE:
 			move = controller.get_move()
+			if debuffs.has("invert"):
+				move = -move
 			if controller.consume_jump():
 				_jump_buf = 0.16
 			if controller.consume_shove():
@@ -164,7 +183,7 @@ func _locomotion(delta: float, move: Vector2) -> void:
 	var target := Vector3(move.x, 0, move.y) * RUN_SPEED * speed_mult
 	var v := linear_velocity
 	var hv := Vector3(v.x, 0, v.z)
-	var accel := ACCEL_GROUND if grounded else ACCEL_AIR
+	var accel := (ACCEL_GROUND if grounded else ACCEL_AIR) * accel_mult
 	if state == State.STUMBLE:
 		accel *= 0.3
 	var dv := target - hv
@@ -179,6 +198,7 @@ func _locomotion(delta: float, move: Vector2) -> void:
 		_coyote = 0.0
 		linear_velocity = Vector3(linear_velocity.x, JUMP_VEL, linear_velocity.z)
 		Sfx.play("jump", -8.0, randf_range(0.9, 1.15))
+		jumped.emit(self)
 
 # ── omuz atma / çarpışma ────────────────────────────────────────────
 func forward() -> Vector3:
@@ -221,7 +241,7 @@ func receive_shove(dir: Vector3, _from: Plush) -> void:
 	if state == State.OUT:
 		return
 	apply_central_impulse((dir * SHOVE_IMPULSE + Vector3.UP * 1.9) * mass)
-	balance -= 0.6
+	balance -= 0.6 * fragility
 	Sfx.play("bump", -4.0, randf_range(0.8, 1.2))
 	if balance <= 0.0 or randf() < 0.35:
 		tumble(dir, 1.0)
@@ -233,7 +253,7 @@ func receive_bump(dir: Vector3, speed: float) -> void:
 		return
 	_last_bump = 0.25
 	apply_central_impulse(dir * speed * 0.35 * mass)
-	balance -= speed * 0.13
+	balance -= speed * 0.13 * fragility
 	if balance <= 0.1:
 		tumble(dir, 0.8)
 	else:
@@ -303,4 +323,110 @@ func teleport(pos: Vector3, yaw: float = 0.0) -> void:
 func revive(pos: Vector3) -> void:
 	freeze = false
 	visible = true
+	restore_collision()
+	frozen_input = false
 	teleport(pos, 0.0)
+
+
+# ── sabotajlar, isim plakası, uçan yazılar, kişisel kapak ───────────
+const DEBUFF_KEYS := ["lead", "invert", "ice", "bighead"]
+var _plate: Label3D
+var _badge: Label3D
+
+## Sabotajı aç/kapat. Değerler RulesConfig'ten gelir.
+func set_debuff(kind: String, on: bool, rules: Resource = null) -> void:
+	if on:
+		debuffs[kind] = true
+	else:
+		debuffs.erase(kind)
+	speed_mult = rules.lead_speed if (debuffs.has("lead") and rules) else 1.0
+	accel_mult = rules.ice_accel if (debuffs.has("ice") and rules) else 1.0
+	fragility = (1.0 / max(0.05, rules.bighead_balance)) if (debuffs.has("bighead") and rules) else 1.0
+	if physics_material_override:
+		physics_material_override.friction = 0.04 if debuffs.has("ice") else 0.55
+	if visual:
+		var tw := create_tween()
+		tw.tween_property(visual.head_pivot, "scale", Vector3.ONE * (2.1 if debuffs.has("bighead") else 1.0), 0.35).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+		visual.set_boots(debuffs.has("lead"))
+		visual.set_frost(debuffs.has("ice"))
+	_update_badge()
+
+func clear_debuffs() -> void:
+	for k in debuffs.keys():
+		set_debuff(k, false)
+
+func _update_badge() -> void:
+	if _badge == null:
+		_badge = Label3D.new()
+		_badge.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+		_badge.no_depth_test = true
+		_badge.font = load("res://assets/fonts/BigShoulders.ttf")
+		_badge.font_size = 44
+		_badge.pixel_size = 0.006
+		_badge.outline_size = 10
+		_badge.outline_modulate = Color(0.1, 0.0, 0.02)
+		_badge.modulate = Color("FF6B52")
+		_badge.position = Vector3(0, 2.15, 0)
+		add_child(_badge)
+	var names := []
+	for k in debuffs:
+		names.append(I18n.t("debuff." + k).to_upper())
+	_badge.text = " · ".join(names)
+	_badge.visible = not names.is_empty()
+
+## Başın üstünde isim + değer (puan ya da can). Maç sırasında görünür.
+func set_plate(top: String, bottom: String, col: Color) -> void:
+	if _plate == null:
+		_plate = Label3D.new()
+		_plate.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+		_plate.no_depth_test = true
+		_plate.font = load("res://assets/fonts/BigShoulders.ttf")
+		_plate.font_size = 40
+		_plate.pixel_size = 0.0058
+		_plate.outline_size = 12
+		_plate.outline_modulate = Color(0.05, 0.02, 0.02, 0.95)
+		_plate.line_spacing = -6
+		_plate.position = Vector3(0, 1.82, 0)
+		add_child(_plate)
+	_plate.visible = top != ""
+	_plate.text = top.to_upper() + ("\n" + bottom if bottom != "" else "")
+	_plate.modulate = col.lightened(0.25)
+
+func hide_plate() -> void:
+	if _plate:
+		_plate.visible = false
+
+## Yükselip kaybolan yazı: "+250", "−540", "GÜVENDE"…
+func float_text(text: String, col: Color, big := false) -> void:
+	var l := Label3D.new()
+	l.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	l.no_depth_test = true
+	l.font = load("res://assets/fonts/BigShoulders.ttf")
+	l.font_size = 72 if big else 56
+	l.pixel_size = 0.007
+	l.outline_size = 14
+	l.outline_modulate = Color(0.05, 0.02, 0.02)
+	l.modulate = col
+	l.text = text
+	l.position = Vector3(0, 2.1, 0)
+	add_child(l)
+	l.scale = Vector3.ONE * 0.3
+	var tw := l.create_tween().set_parallel(true)
+	tw.tween_property(l, "scale", Vector3.ONE, 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tw.tween_property(l, "position:y", 3.1, 1.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	tw.tween_property(l, "modulate:a", 0.0, 0.5).set_delay(1.2)
+	tw.chain().tween_callback(l.queue_free)
+
+## Tur 3'te canı biten: ayağının altında bir kapak açılır, zemini delip düşer.
+func drop_through() -> void:
+	collision_mask = 0
+	collision_layer = 0
+	frozen_input = true
+	_lock(false)
+	apply_central_impulse(Vector3(0, -2.0, 0) * mass)
+	apply_torque_impulse(Vector3(randf_range(-1, 1), 0, randf_range(-1, 1)) * 0.4 * mass)
+	hide_plate()
+
+func restore_collision() -> void:
+	collision_layer = 1
+	collision_mask = 1 | 2
