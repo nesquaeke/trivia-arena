@@ -92,6 +92,33 @@ class Gamepad extends Base:
 		_prev_jump = j
 		_prev_shove = s
 
+## Telefon kumandası (Ev partisi): girdiler PhoneBridge üzerinden gelir.
+class Phone extends Base:
+	var bridge: Object = null
+	var pid := ""
+	var _prev_jump := false
+	var _prev_shove := false
+	func _init(p_bridge: Object = null, p_pid := "") -> void:
+		bridge = p_bridge
+		pid = p_pid
+		label = "TEL"
+	func poll(_p, _dt: float) -> void:
+		if bridge == null or not bridge.inputs.has(pid):
+			_move = Vector2.ZERO
+			_prev_jump = false
+			_prev_shove = false
+			return
+		var i: Dictionary = bridge.inputs[pid]
+		_move = Vector2(float(i.x), float(i.y)).limit_length(1.0)
+		var j: bool = i.j
+		var s: bool = i.s
+		if j and not _prev_jump:
+			_jump = true
+		if s and not _prev_shove:
+			_shove = true
+		_prev_jump = j
+		_prev_shove = s
+
 ## Test ve senaryo için elle sürülen kontrolcü.
 class Scripted extends Base:
 	func set_move(v: Vector2) -> void:

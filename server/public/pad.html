@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#1E0F09">
+<title>Trivia Arena — Kumanda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Playfair+Display:ital,wght@0,600;0,800;1,500&display=swap">
+<style>
+  :root{
+    --wood:#1E0F09; --wood2:#2A160C; --brass:#C39646; --brass-hi:#F4D994; --brass-lo:#6B4718;
+    --cream:#F3E4C4; --red:#7A0E1C; --gold:#F2C66A; --ink:#2A1706;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+  html,body{margin:0;height:100%;overflow:hidden;background:var(--wood);color:var(--cream);
+    font-family:'Playfair Display',Georgia,serif;touch-action:none;overscroll-behavior:none}
+  body{background:
+    repeating-linear-gradient(90deg,rgba(120,60,20,.05) 0 3px,transparent 3px 23px),
+    radial-gradient(900px 500px at 50% -10%,rgba(242,198,106,.12),transparent 70%),var(--wood)}
+  .frame{position:fixed;inset:10px;border:3px solid var(--brass-lo);outline:1px solid var(--brass);outline-offset:-6px;pointer-events:none}
+  .view{position:fixed;inset:0;display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top)) 22px calc(18px + env(safe-area-inset-bottom))}
+  [hidden]{display:none!important}
+  h1{font-family:Limelight,serif;font-weight:400;margin:0;text-align:center;color:var(--gold);
+    text-shadow:0 0 18px rgba(242,160,60,.45);font-size:clamp(34px,9vw,54px);line-height:1}
+  .tag{text-align:center;font-style:italic;opacity:.8;margin:6px 0 18px}
+  label{display:block;font-weight:800;margin:10px 0 6px;color:var(--gold)}
+  input{width:100%;font:800 22px 'Playfair Display',serif;padding:12px 14px;border:2px solid var(--brass);
+    background:#140905;color:var(--cream);outline:none;text-transform:none}
+  input.code{text-transform:uppercase;letter-spacing:.35em;text-align:center;font-family:Limelight,serif;font-weight:400;font-size:30px}
+  .brass{display:block;width:100%;margin-top:20px;padding:16px;border:2px solid #3a2408;cursor:pointer;
+    font:800 22px 'Playfair Display',serif;color:var(--ink);
+    background:linear-gradient(180deg,var(--brass-hi),var(--brass) 55%,var(--brass-lo));
+    box-shadow:4px 5px 0 rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.5);
+    clip-path:polygon(8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px),0 8px)}
+  .brass:active{transform:translate(2px,2px);filter:brightness(.92)}
+  .msg{min-height:1.4em;text-align:center;margin-top:12px;color:#ffb39a;font-style:italic}
+  /* kumanda */
+  #pad{padding:0}
+  .bar{display:flex;align-items:center;gap:12px;padding:calc(12px + env(safe-area-inset-top)) 20px 10px;border-bottom:2px solid var(--brass-lo);
+    background:rgba(20,9,5,.7)}
+  .dot{width:30px;height:30px;border-radius:50%;border:3px solid var(--brass);background:#F2C230;flex:none}
+  .name{font-weight:800;font-size:20px}
+  .status{flex:1;text-align:right;font-style:italic;font-size:15px;opacity:.9}
+  .area{flex:1;display:flex;position:relative}
+  .stick{flex:1;position:relative}
+  .stick .hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.35;font-style:italic;text-align:center;pointer-events:none}
+  .ring{position:absolute;width:150px;height:150px;border-radius:50%;border:3px solid var(--brass);background:rgba(195,150,70,.08);
+    transform:translate(-50%,-50%);pointer-events:none}
+  .knob{position:absolute;width:74px;height:74px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;
+    background:radial-gradient(circle at 35% 30%,var(--brass-hi),var(--brass) 55%,var(--brass-lo));border:2px solid #3a2408;box-shadow:0 6px 12px rgba(0,0,0,.5)}
+  .buttons{width:44%;max-width:340px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:26px;padding:14px}
+  .btn{width:min(150px,36vw,34vh);height:min(150px,36vw,34vh);border-radius:50%;border:3px solid #3a2408;display:flex;align-items:center;justify-content:center;
+    font:800 22px 'Playfair Display',serif;color:var(--ink);letter-spacing:.06em;
+    background:radial-gradient(circle at 35% 28%,var(--brass-hi),var(--brass) 55%,var(--brass-lo));box-shadow:0 8px 0 #3a2408,0 12px 20px rgba(0,0,0,.5)}
+  .btn.red{background:radial-gradient(circle at 35% 28%,#e0737a,#9a1a26 58%,#4a060c);color:var(--gold)}
+  .btn.down{transform:translateY(6px);box-shadow:0 2px 0 #3a2408,0 4px 10px rgba(0,0,0,.5)}
+  .out{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:rgba(10,4,4,.8);text-align:center;padding:20px}
+  .out b{font-family:Limelight,serif;font-weight:400;font-size:36px;color:#ff8a6a}
+  @media (orientation:portrait){ .area{flex-direction:column} .buttons{width:100%;max-width:none;flex-direction:row;padding-bottom:26px} }
+</style>
+</head>
+<body>
+<div class="frame"></div>
+
+<section class="view" id="join">
+  <h1>TRIVIA<br>ARENA</h1>
+  <div class="tag" data-t="tag">— Büyük Sahne · Kumanda —</div>
+  <label for="code" data-t="code">Sahne kodu</label>
+  <input id="code" class="code" maxlength="4" autocomplete="off" inputmode="text">
+  <label for="name" data-t="name">Sahne adın</label>
+  <input id="name" maxlength="14" autocomplete="off">
+  <button class="brass" id="go" data-t="go">Sahneye çık</button>
+  <div class="msg" id="joinMsg"></div>
+</section>
+
+<section class="view" id="pad" hidden>
+  <div class="bar"><span class="dot" id="dot"></span><span class="name" id="me"></span><span class="status" id="status"></span></div>
+  <div class="area">
+    <div class="stick" id="stick"><div class="hint" data-t="stick">Koşmak için<br>burada sürükle</div></div>
+    <div class="buttons">
+      <div class="btn" id="bJump" data-t="jump">ZIPLA</div>
+      <div class="btn red" id="bShove" data-t="shove">OMUZ</div>
+    </div>
+    <div class="out" id="outCard" hidden><b data-t="out">Elendin!</b><p data-t="outSub">Kuyudan izle. Bir sonraki maçta sahnedesin.</p></div>
+  </div>
+</section>
+
+<script>
+const T = {
+  tr:{tag:'— Büyük Sahne · Kumanda —',code:'Sahne kodu',name:'Sahne adın',go:'Sahneye çık',stick:'Koşmak için<br>burada sürükle',
+      jump:'ZIPLA',shove:'OMUZ',out:'Elendin!',outSub:'Kuyudan izle. Bir sonraki maçta sahnedesin.',
+      noStage:'Bu kodla bir sahne yok. Oyundaki kodu kontrol et.',full:'Sahne dolu (8 oyuncu).',conn:'Bağlanıyor…',
+      lost:'Bağlantı koptu, yeniden deneniyor…',hostLeft:'Sahne kapandı.',ready:'Sahnedesin!',short:'Kod 4 harf olmalı.'},
+  en:{tag:'— The Grand Stage · Controller —',code:'Stage code',name:'Your stage name',go:'Step on stage',stick:'Drag here<br>to run',
+      jump:'JUMP',shove:'SHOVE',out:'You are out!',outSub:'Watch from the pit. You are back next match.',
+      noStage:'No stage with that code. Check the code on screen.',full:'The stage is full (8 players).',conn:'Connecting…',
+      lost:'Connection lost, retrying…',hostLeft:'The stage closed.',ready:'You are on stage!',short:'The code has 4 letters.'}
+};
+let LANG = (navigator.language||'tr').toLowerCase().startsWith('tr') ? 'tr' : 'en';
+const t = (k) => T[LANG][k] || k;
+function applyLang(l){ if (l) LANG = l === 'en' ? 'en' : 'tr'; document.documentElement.lang = LANG; document.querySelectorAll('[data-t]').forEach(el => el.innerHTML = t(el.dataset.t)); }
+applyLang();
+const $ = (id) => document.getElementById(id);
+const store = { get:(k,d)=>{try{return localStorage.getItem(k)??d}catch(e){return d}}, set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}} };
+
+const qs = new URLSearchParams(location.search);
+$('code').value = (qs.get('c') || qs.get('code') || '').toUpperCase().slice(0,4);
+$('name').value = store.get('ta3d-name', '');
+if (!$('code').value) $('code').focus(); else $('name').focus();
+
+let ws = null, code = '', pid = '', joined = false, retry = 0, wantOpen = false;
+const input = { x:0, y:0, j:false, s:false };
+// kısa dokunuşlar kaybolmasın: basış bir sonraki gönderime kadar mandallı kalır
+const latch = { j:false, s:false };
+
+function wsUrl(){ return (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/ws'; }
+
+function connect(){
+  wantOpen = true;
+  ws = new WebSocket(wsUrl());
+  ws.onopen = () => { retry = 0; ws.send(JSON.stringify({ t:'join', code, name:$('name').value || 'Oyuncu', pid })); };
+  ws.onmessage = (e) => { let m; try { m = JSON.parse(e.data); } catch(_) { return; } onMsg(m); };
+  ws.onclose = () => {
+    if (!wantOpen) return;
+    if (joined) $('status').textContent = t('lost');
+    setTimeout(connect, Math.min(4000, 500 * Math.pow(2, retry++)));
+  };
+}
+
+function onMsg(m){
+  if (m.t === 'joined') {
+    if (!m.ok) {
+      wantOpen = false; ws.close();
+      $('joinMsg').textContent = m.reason === 'full' ? t('full') : t('noStage');
+      return;
+    }
+    pid = m.pid; store.set('ta3d-pid-' + code, pid);
+    joined = true;
+    $('join').hidden = true; $('pad').hidden = false;
+    $('me').textContent = $('name').value || 'Oyuncu';
+    $('status').textContent = t('ready');
+    keepAwake();
+  } else if (m.t === 'you') {
+    if (m.lang) applyLang(m.lang);
+    if (m.color) $('dot').style.background = m.color;
+    if (m.name) $('me').textContent = m.name;
+  } else if (m.t === 'status') {
+    $('status').textContent = m.text || '';
+  } else if (m.t === 'out') {
+    $('outCard').hidden = false; buzz(200);
+  } else if (m.t === 'in_game') {
+    $('outCard').hidden = true;
+  } else if (m.t === 'buzz') {
+    buzz(m.ms || 60);
+  } else if (m.t === 'host_left') {
+    wantOpen = false; $('status').textContent = t('hostLeft');
+  }
+}
+
+function buzz(ms){ try { navigator.vibrate && navigator.vibrate(ms); } catch(e){} }
+async function keepAwake(){ try { if ('wakeLock' in navigator) await navigator.wakeLock.request('screen'); } catch(e){} }
+
+$('go').addEventListener('click', () => {
+  code = $('code').value.trim().toUpperCase();
+  if (!/^[A-Z]{4}$/.test(code)) { $('joinMsg').textContent = t('short'); return; }
+  store.set('ta3d-name', $('name').value.trim());
+  pid = store.get('ta3d-pid-' + code, '');
+  $('joinMsg').textContent = t('conn');
+  connect();
+});
+
+// ── joystick ──
+const stick = $('stick');
+let ring = null, knob = null, sid = null, origin = null;
+const R = 70;
+function stickStart(e){
+  if (sid !== null) return;
+  const p = e.changedTouches ? e.changedTouches[0] : e;
+  sid = e.changedTouches ? p.identifier : 'mouse';
+  const r = stick.getBoundingClientRect();
+  origin = { x:p.clientX - r.left, y:p.clientY - r.top };
+  ring = document.createElement('div'); ring.className = 'ring';
+  knob = document.createElement('div'); knob.className = 'knob';
+  ring.style.left = knob.style.left = origin.x + 'px';
+  ring.style.top = knob.style.top = origin.y + 'px';
+  stick.appendChild(ring); stick.appendChild(knob);
+  e.preventDefault();
+}
+function stickMove(e){
+  if (sid === null) return;
+  const list = e.changedTouches ? Array.from(e.changedTouches) : [e];
+  const p = list.find(q => (e.changedTouches ? q.identifier : 'mouse') === sid);
+  if (!p) return;
+  const r = stick.getBoundingClientRect();
+  let dx = p.clientX - r.left - origin.x, dy = p.clientY - r.top - origin.y;
+  const d = Math.hypot(dx, dy);
+  if (d > R) { dx *= R / d; dy *= R / d; }
+  knob.style.left = origin.x + dx + 'px'; knob.style.top = origin.y + dy + 'px';
+  input.x = +(dx / R).toFixed(2); input.y = +(dy / R).toFixed(2);
+  e.preventDefault();
+}
+function stickEnd(e){
+  if (sid === null) return;
+  const list = e.changedTouches ? Array.from(e.changedTouches) : [e];
+  if (!list.some(q => (e.changedTouches ? q.identifier : 'mouse') === sid)) return;
+  sid = null; input.x = 0; input.y = 0;
+  ring && ring.remove(); knob && knob.remove();
+}
+stick.addEventListener('touchstart', stickStart, { passive:false });
+stick.addEventListener('touchmove', stickMove, { passive:false });
+stick.addEventListener('touchend', stickEnd); stick.addEventListener('touchcancel', stickEnd);
+stick.addEventListener('mousedown', stickStart); window.addEventListener('mousemove', stickMove); window.addEventListener('mouseup', stickEnd);
+
+function holdButton(el, key){
+  const down = (e) => { input[key] = true; latch[key] = true; el.classList.add('down'); buzz(25); e.preventDefault(); };
+  const up = () => { input[key] = false; el.classList.remove('down'); };
+  el.addEventListener('touchstart', down, { passive:false }); el.addEventListener('touchend', up); el.addEventListener('touchcancel', up);
+  el.addEventListener('mousedown', down); el.addEventListener('mouseup', up); el.addEventListener('mouseleave', up);
+}
+holdButton($('bJump'), 'j');
+holdButton($('bShove'), 's');
+
+// klavye (masaüstünden test için): WASD + boşluk + F
+const keys = {};
+addEventListener('keydown', (e) => { if ($('pad').hidden) return; keys[e.code] = true; syncKeys(); });
+addEventListener('keyup', (e) => { keys[e.code] = false; syncKeys(); });
+function syncKeys(){
+  if (sid !== null) return;
+  input.x = (keys.KeyD ? 1 : 0) - (keys.KeyA ? 1 : 0);
+  input.y = (keys.KeyS ? 1 : 0) - (keys.KeyW ? 1 : 0);
+  input.j = !!keys.Space; input.s = !!keys.KeyF;
+}
+
+// girdiyi saniyede 30 kez gönder (yalnızca değiştiğinde ya da tuş basılıyken)
+let last = '';
+setInterval(() => {
+  if (!joined || !ws || ws.readyState !== 1) return;
+  const msg = JSON.stringify({ t:'in', x:input.x, y:input.y, j:input.j || latch.j, s:input.s || latch.s });
+  latch.j = false; latch.s = false;
+  if (msg !== last || input.x || input.y) { ws.send(msg); last = msg; }
+}, 33);
+</script>
+</body>
+</html>

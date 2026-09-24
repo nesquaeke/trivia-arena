@@ -91,6 +91,9 @@ func _ask() -> void:
 	_ui_top()
 	_say(I18n.t("arena.run"))
 	Sfx.play("ding", -4.0, 0.9)
+	if game.has_method("notify_phones"):
+		game.notify_phones({"t": "status", "text": I18n.t("house.status_q", {"n": q_index + 1})})
+		game.notify_phones({"t": "buzz", "ms": 40})
 	_plan_bots()
 	time_left = timer_total
 	_tick = 99
@@ -250,6 +253,8 @@ func _eliminate(p: Plush) -> void:
 		return
 	alive.erase(p)
 	out_order.append(p)
+	if game.has_method("notify_player"):
+		game.notify_player(p, {"t": "out"})
 	_fell_this_round.append(p)
 	log_lines.append("OUT " + p.player_name)
 	_ui_top()
@@ -286,6 +291,8 @@ func _finish() -> void:
 	Sfx.play("applause", -6.0)
 	if rk.size() > 0 and is_instance_valid(rk[0]):
 		stage.set_gold_target(rk[0])
+		if game.has_method("notify_player"):
+			game.notify_player(rk[0], {"t": "status", "text": I18n.t("house.status_win")})
 	_say(title, UIKit.GOLD)
 	if ui:
 		ui.hud_set_timer(0.0, 1.0)

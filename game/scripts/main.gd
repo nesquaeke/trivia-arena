@@ -28,6 +28,9 @@ var players: Array[Plush] = []       # insanlar (yerel)
 var bots: Array[Plush] = []
 var actors_root: Node3D
 var _joined_sets := {}               # "kb0", "kb1", "pad0"… → Plush
+var bridge: PhoneBridge = null
+var phone_players := {}              # pid -> Plush
+var _relay_override := ""
 var _shot_mode := ""
 var _shot_dir := "/tmp/ta_shots"
 
@@ -63,6 +66,8 @@ func _ready() -> void:
 			_shot_mode = a.substr(7)
 		elif a.begins_with("--shotdir="):
 			_shot_dir = a.substr(10)
+		elif a.begins_with("--relay="):
+			_relay_override = a.substr(8)
 		elif a.begins_with("--timescale="):
 			Engine.time_scale = float(a.substr(12))
 	if _shot_mode != "":
@@ -338,6 +343,8 @@ func _reset_lobby_layout() -> void:
 		all[i].revive(SPAWNS[i % SPAWNS.size()])
 	_bots_wander()
 	cam.set_shot(BalconyCam.Shot.LOBBY, true)
+	notify_phones({"t": "in_game"})
+	notify_phones({"t": "status", "text": I18n.t("house.status_lobby")})
 
 func start_arena() -> void:
 	if mode != Mode.LOBBY:
@@ -391,6 +398,93 @@ func restart_arena() -> void:
 func house_open_instant() -> void:
 	stage.house_l.position.x = -13.8
 	stage.house_r.position.x = 13.8
+
+# ── ev partisi: telefonlar kumanda ─────────────────────────────────
+func relay_url() -> String:
+	if _relay_override != "":
+		return _relay_override
+	return String(Profile.setting("relay_url", "ws://localhost:3000/ws"))
+
+func start_house(url := "") -> void:
+	if url != "":
+		Profile.set_setting("relay_url", url)
+		_relay_override = ""
+	if bridge == null:
+		bridge = PhoneBridge.new()
+		bridge.name = "PhoneBridge"
+		add_child(bridge)
+		bridge.pad_joined.connect(_on_pad_joined)
+		bridge.pad_left.connect(_on_pad_left)
+	bridge.stop()
+	bridge.start(relay_url())
+
+func stop_house() -> void:
+	if bridge:
+		bridge.stop()
+	for pid in phone_players.keys():
+		_remove_player(phone_players[pid])
+	phone_players.clear()
+
+func _free_color() -> String:
+	var used := {}
+	for p in all_actors():
+		used[String(p.look.get("color", ""))] = true
+	for c in PlushVisual.COLOR_KEYS:
+		if not used.has(c):
+			return c
+	return PlushVisual.COLOR_KEYS[randi() % PlushVisual.COLOR_KEYS.size()]
+
+func _on_pad_joined(pid: String, pad_name: String) -> void:
+	var p: Plush = phone_players.get(pid)
+	if p and is_instance_valid(p):
+		p.set_meta("left_at", -1.0)      # geri döndü
+	else:
+		var look: Dictionary = BOT_LOOKS[(players.size() * 3 + 1) % BOT_LOOKS.size()].duplicate()
+		look.color = _free_color()
+		p = _join("ph:" + pid, Controllers.Phone.new(bridge, pid), pad_name, look)
+		phone_players[pid] = p
+		if mode == Mode.ARENA:
+			p.visible = false
+			p.freeze = true
+	bridge.send_to(pid, {"t": "you", "name": p.player_name, "lang": I18n.lang, "color": "#" + PlushVisual.COLORS[p.look.color].to_html(false)})
+	bridge.send_to(pid, {"t": "status", "text": I18n.t("house.status_lobby")})
+	if ui and ui.has_method("refresh_house"):
+		ui.refresh_house()
+
+func _on_pad_left(pid: String) -> void:
+	var p: Plush = phone_players.get(pid)
+	if p == null:
+		return
+	var stamp := Time.get_ticks_msec() / 1000.0
+	p.set_meta("left_at", stamp)
+	if ui and ui.has_method("refresh_house"):
+		ui.refresh_house()
+	# 20 sn içinde geri gelmezse sahneden çıkar
+	await get_tree().create_timer(20.0).timeout
+	if is_instance_valid(p) and float(p.get_meta("left_at", -1.0)) == stamp and mode != Mode.ARENA:
+		phone_players.erase(pid)
+		_remove_player(p)
+		if ui and ui.has_method("refresh_house"):
+			ui.refresh_house()
+
+func _remove_player(p: Plush) -> void:
+	if not is_instance_valid(p):
+		return
+	players.erase(p)
+	for k in _joined_sets.keys():
+		if _joined_sets[k] == p:
+			_joined_sets.erase(k)
+	p.queue_free()
+	_update_focus()
+
+## Telefon oyuncusuna kısa mesaj (renk, durum, elendin…)
+func notify_player(p: Plush, msg: Dictionary) -> void:
+	if bridge and p and p.controller is Controllers.Phone:
+		bridge.send_to(p.controller.pid, msg)
+
+func notify_phones(msg: Dictionary) -> void:
+	if bridge and bridge.state == "live":
+		bridge.broadcast(msg)
 
 func start_conquest() -> void:
 	if ui:

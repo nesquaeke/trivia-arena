@@ -40,6 +40,22 @@ const S := {
 	"ticket.best": ["En iyi seri", "Best streak"],
 	"ticket.rename": ["Adını değiştirmek için tıkla", "Click to rename"],
 
+	# ── ev partisi (telefon kumandası)
+	"menu.house": ["Ev partisi", "House party"],
+	"menu.house.sub": ["QR'ı okut, telefonun kumanda olsun", "Scan the QR, your phone is the controller"],
+	"house.title": ["Ev Partisi", "House Party"],
+	"house.scan": ["Telefon kamerasıyla QR'ı okut ya da şu adrese gir ve kodu yaz:", "Scan the QR with your phone camera, or open this address and type the code:"],
+	"house.phones": ["Bağlı telefonlar: {n}", "Phones connected: {n}"],
+	"house.none": ["Henüz telefon yok", "No phones yet"],
+	"house.connecting": ["Sunucuya bağlanılıyor…", "Connecting to the server…"],
+	"house.error": ["Sunucuya ulaşılamadı, yeniden deneniyor…", "Can't reach the server, retrying…"],
+	"house.server": ["Sunucu adresi", "Server address"],
+	"house.connect": ["Bağlan", "Connect"],
+	"house.close": ["Kapat", "Close"],
+	"house.status_q": ["Soru {n}: doğru kapağa koş!", "Question {n}: run to the right trapdoor!"],
+	"house.status_lobby": ["Lobidesin. Koş, zıpla, omuz at!", "You're in the lobby. Run, jump, shove!"],
+	"house.status_win": ["Kazandın! Sahne senin!", "You won! The stage is yours!"],
+
 	# ── lobi ipuçları
 	"lobby.join": ["Katıl: WASD + Boşluk  ·  Oklar + Enter  ·  Gamepad Ⓐ", "Join: WASD + Space  ·  Arrows + Enter  ·  Gamepad Ⓐ"],
 	"lobby.controls": ["Koş: WASD  ·  Zıpla: Boşluk  ·  Omuz at: F", "Run: WASD  ·  Jump: Space  ·  Shove: F"],

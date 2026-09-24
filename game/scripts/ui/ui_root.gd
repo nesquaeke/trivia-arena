@@ -21,6 +21,15 @@ var hud_msg: UIKit.Banner
 var hud_timer: Control
 var result_panel: UIKit.WoodPanel
 var rename_panel: UIKit.WoodPanel
+var house_card: UIKit.WoodPanel
+var _qr_rect: TextureRect
+var _house_code: Label
+var _house_url: Label
+var _house_list: Label
+var _house_status: Label
+var _house_edit: LineEdit
+var _qr_http: HTTPRequest
+var _qr_for := ""
 var name_edit: LineEdit
 
 var _plaques := {}
@@ -53,6 +62,7 @@ func setup(p_game: Node) -> void:
 	_build_hud()
 	_build_result()
 	_build_rename()
+	_build_house()
 	_build_hint()
 	I18n.changed.connect(func(_l): _retext())
 	Profile.changed.connect(_refresh_ticket)
@@ -119,6 +129,7 @@ func _build_left() -> void:
 	_add_plaque(menu_box, "trivia", "menu.trivia", "menu.trivia.sub", true, "?", _on_trivia)
 	_add_plaque(menu_box, "conquest", "menu.conquest", "menu.conquest.sub", true, "#", _on_conquest)
 	menu_box.add_child(_rule())
+	_add_plaque(menu_box, "house", "menu.house", "menu.house.sub", false, "", _on_house)
 	_add_plaque(menu_box, "customize", "menu.customize", "menu.customize.sub", false, "", _on_customize)
 	_add_plaque(menu_box, "spectate", "menu.spectate", "menu.spectate.sub", false, "", _on_spectate)
 	_add_plaque(menu_box, "howto", "menu.howto", "menu.howto.sub", false, "", _on_howto)
@@ -589,6 +600,121 @@ func show_result(title: String, ranking: Array) -> void:
 	result_panel.modulate.a = 0.0
 	create_tween().tween_property(result_panel, "modulate:a", 1.0, 0.4)
 
+# ── ev partisi kartı ────────────────────────────────────────────────
+func _build_house() -> void:
+	house_card = UIKit.WoodPanel.new()
+	house_card.size = Vector2(620, 420)
+	house_card.position = Vector2(1920 + 20, 290)
+	house_card.visible = false
+	root.add_child(house_card)
+	var t := _label("", 34, UIKit.GOLD, UIKit.display())
+	_tr(t, "house.title")
+	t.position = Vector2(30, 26)
+	t.size = Vector2(560, 44)
+	house_card.add_child(t)
+	var frame := ColorRect.new()
+	frame.color = UIKit.BRASS_LO
+	frame.position = Vector2(28, 84)
+	frame.size = Vector2(244, 244)
+	house_card.add_child(frame)
+	_qr_rect = TextureRect.new()
+	_qr_rect.position = Vector2(34, 90)
+	_qr_rect.size = Vector2(232, 232)
+	_qr_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_qr_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	_qr_rect.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	house_card.add_child(_qr_rect)
+	_house_code = _label("----", 76, UIKit.GOLD, UIKit.display())
+	_house_code.autowrap_mode = TextServer.AUTOWRAP_OFF
+	_house_code.position = Vector2(292, 78)
+	_house_code.size = Vector2(300, 90)
+	house_card.add_child(_house_code)
+	var scan := _label("", 17, Color(UIKit.CREAM, 0.85), UIKit.serif(500, true))
+	_tr(scan, "house.scan")
+	scan.position = Vector2(294, 170)
+	scan.size = Vector2(300, 70)
+	house_card.add_child(scan)
+	_house_url = _label("", 17, UIKit.GOLD, UIKit.serif(700))
+	_house_url.position = Vector2(294, 240)
+	_house_url.size = Vector2(300, 50)
+	house_card.add_child(_house_url)
+	_house_list = _label("", 18, UIKit.CREAM, UIKit.serif(700))
+	_house_list.position = Vector2(294, 290)
+	_house_list.size = Vector2(300, 60)
+	house_card.add_child(_house_list)
+	_house_status = _label("", 16, Color(1, 0.7, 0.55), UIKit.serif(500, true))
+	_house_status.position = Vector2(30, 334)
+	_house_status.size = Vector2(560, 26)
+	house_card.add_child(_house_status)
+	var row := HBoxContainer.new()
+	row.position = Vector2(28, 362)
+	row.size = Vector2(564, 44)
+	row.add_theme_constant_override("separation", 8)
+	house_card.add_child(row)
+	_house_edit = LineEdit.new()
+	_house_edit.custom_minimum_size = Vector2(300, 40)
+	_house_edit.add_theme_font_size_override("font_size", 16)
+	_house_edit.placeholder_text = "wss://…/ws"
+	row.add_child(_house_edit)
+	var go := UIKit.Knob.new("")
+	go.custom_minimum_size = Vector2(120, 40)
+	_tr(go, "house.connect", "label")
+	go.pressed.connect(func(): game.start_house(_house_edit.text))
+	row.add_child(go)
+	var close := UIKit.Knob.new("")
+	close.custom_minimum_size = Vector2(120, 40)
+	_tr(close, "house.close", "label")
+	close.pressed.connect(_close_house)
+	row.add_child(close)
+	_qr_http = HTTPRequest.new()
+	add_child(_qr_http)
+	_qr_http.request_completed.connect(_on_qr)
+
+func _on_house() -> void:
+	house_card.visible = true
+	_house_edit.text = game.relay_url()
+	_slide(house_card, "position:x", 1920 - 620 - 28.0)
+	game.start_house()
+	if not game.bridge.hosted.is_connected(_on_hosted):
+		game.bridge.hosted.connect(_on_hosted)
+		game.bridge.state_changed.connect(func(_s): refresh_house())
+	refresh_house()
+
+func _close_house() -> void:
+	_slide(house_card, "position:x", 1920 + 20.0)
+	game.stop_house()
+
+func _on_hosted(_code: String) -> void:
+	refresh_house()
+	var u: String = game.bridge.qr_url()
+	if u != _qr_for:
+		_qr_for = u
+		_qr_http.cancel_request()
+		_qr_http.request(u)
+
+func _on_qr(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
+	if result != HTTPRequest.RESULT_SUCCESS or code != 200:
+		return
+	var img := Image.new()
+	if img.load_png_from_buffer(body) == OK:
+		_qr_rect.texture = ImageTexture.create_from_image(img)
+
+func refresh_house() -> void:
+	if house_card == null or game == null or game.bridge == null:
+		return
+	var b: PhoneBridge = game.bridge
+	_house_code.text = b.code if b.state == "live" else "····"
+	_house_url.text = b.http_base().replace("https://", "").replace("http://", "") + "/pad"
+	var n := 0
+	var names: Array[String] = []
+	for pid in game.phone_players:
+		var p: Plush = game.phone_players[pid]
+		if is_instance_valid(p):
+			n += 1
+			names.append(p.player_name)
+	_house_list.text = I18n.t("house.phones", {"n": n}) + ("\n" + ", ".join(names) if n > 0 else "")
+	_house_status.text = "" if b.state == "live" else I18n.t("house.connecting" if b.state == "connecting" else "house.error")
+
 # ── akışlar ─────────────────────────────────────────────────────────
 func _on_trivia() -> void:
 	_show_setup(true)
@@ -635,6 +761,8 @@ func _on_howto() -> void:
 ## Lobi süsleri (sol pano, bilet, ipucu) göster/gizle.
 func show_lobby_chrome(on: bool) -> void:
 	_slide(left, "position:x", _left_x if on else -LEFT_W - 40.0)
+	if house_card and house_card.visible:
+		_slide(house_card, "position:x", (1920 - 620 - 28.0) if on else 1920 + 20.0)
 	_slide(ticket, "position:y", 26.0 if on else -300.0)
 	hint.visible = on
 
@@ -656,6 +784,9 @@ func prepare_shot(part: String) -> void:
 			game.throw_item("rose")
 			game.throw_item("tomato")
 			await get_tree().create_timer(0.7).timeout
+		"house":
+			_on_house()
+			await get_tree().create_timer(4.0).timeout
 		"en":
 			I18n.set_lang("en")
 			await get_tree().create_timer(1.0).timeout
