@@ -41,6 +41,8 @@ var _ward_rows := {}
 var _left_x := 22.0
 var _timer_left := 0.0
 var _timer_total := 1.0
+var _setup_kind := "arena"
+var _setup_title: Label
 
 func setup(p_game: Node) -> void:
 	game = p_game
@@ -90,8 +92,7 @@ func _retext() -> void:
 			if row[0] is CanvasItem:
 				row[0].queue_redraw()
 	marquee.tagline = I18n.t("title.tagline")
-	if _plaques.has("conquest"):
-		_plaques.conquest.stamp = I18n.t("common.soon")
+
 	_refresh_ticket()
 	_refresh_setup()
 	_refresh_wardrobe()
@@ -173,6 +174,8 @@ func _build_setup(v: VBoxContainer) -> void:
 	var t := _label("", 30, UIKit.GOLD, UIKit.display())
 	_tr(t, "setup.title")
 	v.add_child(t)
+	_setup_title = _label("", 22, UIKit.CREAM, UIKit.serif(700, true))
+	v.add_child(_setup_title)
 	v.add_child(_rule())
 	# bot sayısı
 	var bl := _label("", 20, UIKit.CREAM, UIKit.serif(700))
@@ -245,6 +248,7 @@ func _set_bots(n: int) -> void:
 func _refresh_setup() -> void:
 	if _bot_value == null:
 		return
+	_setup_title.text = I18n.t("menu.conquest" if _setup_kind == "conquest" else "menu.trivia")
 	_bot_value.text = str(Profile.setting("bots", 3))
 	var lv := String(Profile.setting("bot_level", "normal"))
 	for k in _level_knobs:
@@ -428,7 +432,7 @@ func _fill_poster(mode: String) -> void:
 	poster.head = I18n.t("howto.head")
 	poster.title = I18n.t("menu.conquest") if mode == "conquest" else I18n.t("menu.trivia")
 	if mode == "conquest":
-		poster.lines = [I18n.t("howto.c1"), I18n.t("howto.c2"), I18n.t("howto.t5")]
+		poster.lines = [I18n.t("howto.c1"), I18n.t("howto.c2"), I18n.t("howto.c3"), I18n.t("howto.c4"), I18n.t("howto.c5")]
 	else:
 		poster.lines = [I18n.t("howto.t1"), I18n.t("howto.t2"), I18n.t("howto.t3"), I18n.t("howto.t4"), I18n.t("howto.t5")]
 	poster.foot = I18n.t("howto.keys")
@@ -717,16 +721,17 @@ func refresh_house() -> void:
 
 # ── akışlar ─────────────────────────────────────────────────────────
 func _on_trivia() -> void:
+	_setup_kind = "arena"
 	_show_setup(true)
 
 func _on_conquest() -> void:
-	if game.has_method("start_conquest"):
-		game.start_conquest()
+	_setup_kind = "conquest"
+	_show_setup(true)
 
 func _on_start() -> void:
 	_show_setup(false)
 	show_lobby_chrome(false)
-	game.start_arena()
+	game.start_arena(_setup_kind)
 
 func _on_customize() -> void:
 	_slide(left, "position:x", -LEFT_W + 60.0)
@@ -756,7 +761,7 @@ func _leave_loge() -> void:
 	game.exit_loge()
 
 func _on_howto() -> void:
-	open_howto("trivia")
+	open_howto(_setup_kind if setup_box.visible else "trivia")
 
 ## Lobi süsleri (sol pano, bilet, ipucu) göster/gizle.
 func show_lobby_chrome(on: bool) -> void:

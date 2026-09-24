@@ -35,6 +35,16 @@ func build_arena_set() -> void:
 	crate(Vector3(-3.6, 0, -4.2), 0.2)
 	crate(Vector3(3.9, 0, -4.2), 0.0)
 
+## Conquest için: kenar kürsülerinin yolunu kesmeyen, arkada duran dekorlar.
+func build_conquest_set() -> void:
+	clear()
+	column(Vector3(-7.1, 0, -4.2))
+	column(Vector3(7.1, 0, -4.2))
+	masks(Vector3(-3.8, 0, -4.35), 0.0)
+	question_cutout(Vector3(3.8, 0, -4.35), 0.0)
+	crate(Vector3(-5.2, 0, -4.35), 0.2)
+	crate(Vector3(5.2, 0, -4.35), -0.3)
+
 func clear() -> void:
 	for c in get_children():
 		c.queue_free()

@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_arena_match",
+		"test_stage_builds", "test_trapdoors", "test_arena_match", "test_conquest_match",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -248,4 +248,33 @@ func test_arena_match() -> void:
 	check(m.mode == 0 and m.arena == null, "lobiye dönüldü")
 	var visible_all: bool = m.all_actors().all(func(p): return p.visible and p.state != Plush.State.OUT)
 	check(visible_all, "herkes sahneye geri geldi")
+	Engine.time_scale = 1.0
+
+func test_conquest_match() -> void:
+	var m: Node = await _get_main()
+	await seconds(1.0)
+	Engine.time_scale = 4.0
+	m.start_arena("conquest")
+	var waited := 0.0
+	while (m.arena == null or m.arena.phase != "done") and waited < 150.0:
+		await get_tree().process_frame
+		waited += get_process_delta_time() / Engine.time_scale
+	var c = m.arena
+	check(c is ConquestQuiz and c.phase == "done", "Conquest maçı bitti (%.0f sn gerçek zaman)" % waited)
+	if not (c is ConquestQuiz):
+		Engine.time_scale = 1.0
+		return
+	check(c.q_index >= ConquestQuiz.QUESTIONS or c._free_tiles().is_empty(), "12 soru soruldu ya da sahne doldu (%d)" % c.q_index)
+	check(c.tile_owner.size() > 0, "karolar boyandı (%d/28)" % c.tile_owner.size())
+	var rk: Array[Plush] = c.ranking()
+	check(c.count_for(rk[0]) >= c.count_for(rk[rk.size() - 1]), "sıralama karo sayısına göre")
+	var claims: int = c.log_lines.filter(func(l): return l.begins_with("CLAIM ")).size()
+	check(claims >= 3, "botlar doğru kürsüye basıp karo aldı (%d kez)" % claims)
+	check(c.tile_at(c.tile_center(Vector2i(3, 2))) == Vector2i(3, 2), "karo koordinatları tutarlı")
+	await get_tree().create_timer(1.0).timeout
+	m.end_arena()
+	await seconds(4.0)
+	check(m.mode == 0 and m.arena == null, "Conquest'ten lobiye dönüldü")
+	var speeds_ok: bool = m.all_actors().all(func(p): return is_equal_approx(p.speed_mult, 1.0))
+	check(speeds_ok, "lobide boya hız etkisi sıfırlandı")
 	Engine.time_scale = 1.0

@@ -1,0 +1,44 @@
+name: Testler
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  godot:
+    name: Godot (başsız testler)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Godot 4.7.2 indir
+        run: |
+          curl -sSL -o godot.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q godot.zip
+          mv Godot_v4.7.2-stable_linux.x86_64 godot
+          chmod +x godot
+      - name: Varlıkları içe aktar
+        run: ./godot --headless --path game --import || true
+      - name: Testler
+        run: ./godot --headless --path game res://tests/tests.tscn
+
+  server:
+    name: Kumanda sunucusu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-audit --no-fund
+        working-directory: server
+      - run: node --check server.js
+        working-directory: server
+      - name: Sunucu ayağa kalkıyor mu
+        working-directory: server
+        run: |
+          PORT=3999 node server.js &
+          sleep 2
+          curl -sf localhost:3999/healthz
+          curl -sf -o /dev/null "localhost:3999/qr.png?text=test"
+          curl -sf -o /dev/null localhost:3999/pad

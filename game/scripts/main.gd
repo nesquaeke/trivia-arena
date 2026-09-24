@@ -346,18 +346,26 @@ func _reset_lobby_layout() -> void:
 	notify_phones({"t": "in_game"})
 	notify_phones({"t": "status", "text": I18n.t("house.status_lobby")})
 
-func start_arena() -> void:
+var match_kind := "arena"
+
+func start_arena(kind := "") -> void:
 	if mode != Mode.LOBBY:
 		return
+	if kind != "":
+		match_kind = kind
 	mode = Mode.ARENA
 	stage.set_gold_target(null)
 	if ui:
 		ui.show_lobby_chrome(false)
 	stage.set_curtain(true)
 	await stage.curtain_done
-	props.build_arena_set()
+	if match_kind == "conquest":
+		props.build_conquest_set()
+		arena = ConquestQuiz.new()
+	else:
+		props.build_arena_set()
+		arena = TriviaArena.new()
 	cam.set_shot(BalconyCam.Shot.ARENA, true)
-	arena = TriviaArena.new()
 	arena.name = "Arena"
 	add_child(arena)
 	var actors := all_actors()
@@ -393,7 +401,7 @@ func restart_arena() -> void:
 	mode = Mode.LOBBY
 	stage.curtain_closed = false
 	house_open_instant()
-	start_arena()
+	start_arena(match_kind)
 
 func house_open_instant() -> void:
 	stage.house_l.position.x = -13.8
@@ -487,13 +495,21 @@ func notify_phones(msg: Dictionary) -> void:
 		bridge.broadcast(msg)
 
 func start_conquest() -> void:
-	if ui:
-		ui.open_howto("conquest")
+	start_arena("conquest")
 
 func prepare_game_shot(part: String) -> void:
 	match part:
+		"conquest_q":
+			start_arena("conquest")
+			while arena == null or arena.phase != "question" or arena.time_left > arena.timer_total - 5.0:
+				await get_tree().process_frame
+		"conquest_late":
+			while arena == null or arena.q_index < 6:
+				await get_tree().process_frame
+			while arena.phase != "question" or arena.time_left > arena.timer_total - 5.0:
+				await get_tree().process_frame
 		"arena_q":
-			start_arena()
+			start_arena("arena")
 			while arena == null or arena.phase != "question" or arena.time_left > arena.timer_total - 4.0:
 				await get_tree().process_frame
 		"arena_open":
