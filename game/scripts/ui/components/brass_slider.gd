@@ -24,7 +24,7 @@ func _init() -> void:
 	custom_minimum_size = Vector2(430, 44)
 
 func _ready() -> void:
-	focus_entered.connect(func(): Pal.sfx("tick", -12.0, 1.6))
+	focus_entered.connect(func(): Pal.sfx("ui_hover", -7.0))
 
 func _set_from_x(x: float) -> void:
 	var v := clampf((x - 12.0) / TRACK_W, 0.0, 1.0)

@@ -178,6 +178,7 @@ func _round(r: int) -> void:
 	for i in 3:
 		chips.append(I18n.t("round.%d.chip%d" % [r, i + 1]))
 	_hud("hud_round_card", [r, I18n.t("round.%d" % r), I18n.t("round.%dd" % r), chips])
+	Narrator.say("act%d_arena" % clampi(r, 1, 3))
 	_notify_all(I18n.t("round.%d" % r))
 	Sfx.play("whoosh", -4.0, 0.9)
 	await _wait(rules.intro_s)
@@ -406,6 +407,11 @@ func _resolve() -> void:
 			if s.hp <= 0:
 				dead.append(p)
 	Sfx.play("applause" if not right.is_empty() else "buzz", -10.0 if not right.is_empty() else -4.0)
+	if right.is_empty():
+		Narrator.say("nobody")
+		Sfx.play("aww", -7.0)
+	else:
+		Sfx.play("cheer", -12.0)
 	_say(I18n.t("arena.correct", {"x": ans}), Color("9BE38B") if not right.is_empty() else Color("FF7A5A"),
 		(I18n.t("hud.fastest", {"name": fastest.player_name}) if fastest else I18n.t("hud.nobody")))
 	_refresh_scores(deltas)
@@ -413,6 +419,8 @@ func _resolve() -> void:
 		_notify(p, {"t": "buzz", "ms": 30})
 	await _wait(rules.reveal_s)
 	if not dead.is_empty():
+		Narrator.say("eliminated")
+		Sfx.play("ooh", -6.0)
 		for p in dead:
 			_kill(p)
 		var names := []
@@ -501,6 +509,9 @@ func _reward() -> void:
 		t.float_text("−%d" % amount, Color("FF6B52"), true)
 		p.float_text("+%d" % amount, Color("F2C66A"), true)
 		Sfx.play("fanfare", -8.0, 1.5)
+		Narrator.say("steal")
+		if not (p.controller is Controllers.Bot):
+			SteamService.unlock("HEIST")
 		_say(I18n.t("reward.stole", {"a": p.player_name, "b": t.player_name, "n": amount}), Color("F2C66A"))
 		log_lines.append("STEAL %s %s %d" % [p.player_name, t.player_name, amount])
 		_refresh_scores({t: -amount, p: amount})
@@ -621,6 +632,7 @@ func _finish() -> void:
 	if phase == "done":
 		return
 	phase = "done"
+	Narrator.say("winner")
 	Music.stop(0.8)
 	Music.sting("victory")
 	stage.set_zones_visible(false)
@@ -633,6 +645,8 @@ func _finish() -> void:
 	var title := I18n.t("arena.winner", {"name": rk[0].player_name}) if rk.size() > 0 else I18n.t("arena.draw")
 	log_lines.append("WIN " + (names[0] if names.size() > 0 else "-"))
 	Profile.record_match(names, "arena")
+	if game.has_method("on_match_finished"):
+		game.on_match_finished("arena", names)
 	Sfx.play("fanfare", -2.0)
 	Sfx.play("applause", -6.0)
 	if rk.size() > 0 and is_instance_valid(rk[0]):

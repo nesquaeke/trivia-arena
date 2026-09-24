@@ -18,12 +18,14 @@ var _sting: AudioStreamPlayer
 var _cache := {}
 var _duck := 0.0
 var _duck_target := 0.0
+var _voice_duck := false
 var _tweens: Array = [null, null]
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_ensure_bus("Music")
 	_ensure_bus("SFX")
+	_ensure_bus("Voice")
 	for i in 2:
 		var p := AudioStreamPlayer.new()
 		p.bus = "Music"
@@ -49,16 +51,27 @@ func apply_volumes() -> void:
 	var prof := get_node_or_null("/root/Profile")
 	var mv := 0.7
 	var sv := 0.9
+	var vv := 0.9
 	var master := 1.0
 	if prof:
 		mv = float(prof.setting("music_vol", 0.7))
 		sv = float(prof.setting("sfx_vol", 0.9))
+		vv = float(prof.setting("voice_vol", 0.9))
 		master = float(prof.setting("master_vol", 1.0))
 	_set_bus("Master", master)
 	_set_bus("Music", mv)
 	_set_bus("SFX", sv)
+	_set_bus("Voice", vv)
+
+## Anlatıcı konuşurken müziği kıs
+func duck_voice(on: bool) -> void:
+	_voice_duck = on
+
+var _bus_level := 0.7
 
 func _set_bus(bus_name: String, v: float) -> void:
+	if bus_name == "Music":
+		_bus_level = v
 	var i := AudioServer.get_bus_index(bus_name)
 	if i == -1:
 		return
@@ -120,13 +133,11 @@ func sting(track: String, db := 0.0) -> void:
 	_duck_target = 1.0
 
 func _process(delta: float) -> void:
-	_duck = lerpf(_duck, _duck_target, 1.0 - exp(-4.0 * delta))
+	var want := maxf(_duck_target, 0.55 if _voice_duck else 0.0)
+	_duck = lerpf(_duck, want, 1.0 - exp(-(6.0 if want > _duck else 2.5) * delta))
 	var i := AudioServer.get_bus_index("Music")
-	if i != -1 and _players.size() == 2:
-		# fanfar sırasında döngüdeki oynatıcıları kıs
-		for p in _players:
-			p.pitch_scale = 1.0
-		for k in 2:
-			if _players[k].playing and _tweens[k] is Tween and not (_tweens[k] as Tween).is_running():
-				var base := float(LEVEL.get(current, -4.0)) if k == _active else -80.0
-				_players[k].volume_db = base - 14.0 * _duck
+	if i == -1:
+		return
+	# kısma veri yolu üstünden: çalan parçaların kendi geçişleri bozulmaz
+	var base := linear_to_db(maxf(_bus_level, 0.0001))
+	AudioServer.set_bus_volume_db(i, base - 12.0 * _duck)

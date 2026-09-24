@@ -37,7 +37,8 @@ func _ready() -> void:
 	streams.click = _make(0.06, _click)
 	streams.thud = _make(0.3, _thud)
 	# orkestral efektler (tools/music/compose.py üretir)
-	for n in ["war_drum", "war_horn", "collapse", "sting", "stamp", "roll", "claim"]:
+	for n in ["war_drum", "war_horn", "collapse", "sting", "stamp", "roll", "claim",
+			"ooh", "aww", "cheer", "ui_hover", "ui_confirm", "ui_back", "coin", "curtain", "heartbeat", "page"]:
 		var path := "res://assets/audio/sfx/%s.ogg" % n
 		if ResourceLoader.exists(path):
 			streams[n] = load(path)

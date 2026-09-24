@@ -6,6 +6,10 @@ extends RefCounted
 ##   quality                          "low" | "medium" | "high"
 ##   shake                            bool (kamera sarsıntısı)
 ##   vsync                            bool
+##   window                           "windowed" | "borderless" | "fullscreen"
+##   fps                              0 (sınırsız) | 30 | 60 | 120
+##   grain, narrator, hints           bool
+##   voice_vol                        0–1
 
 const QUALITY := ["low", "medium", "high"]
 
@@ -13,6 +17,7 @@ static func apply_all(tree: SceneTree) -> void:
 	apply_window()
 	apply_quality(tree)
 	apply_audio(tree)
+	apply_grain(tree)
 
 static func _prof() -> Node:
 	var ml := Engine.get_main_loop()
@@ -29,14 +34,32 @@ static func apply_audio(tree: SceneTree) -> void:
 	if m:
 		m.apply_volumes()
 
+## "windowed" | "borderless" | "fullscreen" (eski "fullscreen" bool ayarını da okur)
+static func window_mode() -> String:
+	var w := String(get_v("window", ""))
+	if w == "":
+		w = "fullscreen" if bool(get_v("fullscreen", false)) else "windowed"
+	return w
+
 static func apply_window() -> void:
+	Engine.max_fps = int(get_v("fps", 0))
 	if DisplayServer.get_name() == "headless":
 		return
-	var fs := bool(get_v("fullscreen", false))
-	var want := DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN if fs else DisplayServer.WINDOW_MODE_WINDOWED
+	var w := window_mode()
+	var want := DisplayServer.WINDOW_MODE_WINDOWED
+	if w == "fullscreen":
+		want = DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN
+	elif w == "borderless":
+		want = DisplayServer.WINDOW_MODE_FULLSCREEN
 	if DisplayServer.window_get_mode() != want:
 		DisplayServer.window_set_mode(want)
 	DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if bool(get_v("vsync", true)) else DisplayServer.VSYNC_DISABLED)
+
+## Film greni (eski sinema dokusu) açık/kapalı
+static func apply_grain(tree: SceneTree) -> void:
+	var ui := tree.root.find_child("UI", true, false)
+	if ui and "grain" in ui and ui.grain:
+		ui.grain.visible = bool(get_v("grain", true))
 
 ## Kalite: düşükte hacimsel sis, SSAO ve MSAA kapanır, 3D çözünürlük %75'e iner
 static func apply_quality(tree: SceneTree) -> void:

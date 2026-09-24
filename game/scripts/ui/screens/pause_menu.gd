@@ -5,17 +5,18 @@ extends Control
 
 signal resume_requested
 signal lobby_requested
+signal settings_requested
 
 var _panel: Control
 var _resume: StageButton
 var _lobby: StageButton
+var _settings: StageButton
 var _music: BrassSlider
 var _sfx: BrassSlider
 var _k := 0.0
 
 func _ready() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
-	size = Vector2(1920, 1080)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	visible = false
@@ -34,6 +35,11 @@ func _ready() -> void:
 	_resume.big = false
 	_resume.pressed.connect(func(): resume_requested.emit())
 	col.add_child(_resume)
+	_settings = StageButton.new()
+	_settings.emblem = "gear"
+	_settings.big = false
+	_settings.pressed.connect(func(): settings_requested.emit())
+	col.add_child(_settings)
 	_lobby = StageButton.new()
 	_lobby.emblem = "door"
 	_lobby.big = false
@@ -67,6 +73,7 @@ func _ready() -> void:
 func open() -> void:
 	_resume.title = Pal.t("pause.resume")
 	_lobby.title = Pal.t("pause.lobby")
+	_settings.title = Pal.t("menu.settings")
 	(_music.get_parent().get_node("L_music_vol") as Label).text = Pal.t("settings.music")
 	(_sfx.get_parent().get_node("L_sfx_vol") as Label).text = Pal.t("settings.sfx")
 	_music.value = float(Profile.setting("music_vol", 0.7))
@@ -76,9 +83,15 @@ func open() -> void:
 	var tw := create_tween()
 	tw.tween_property(self, "_k", 1.0, 0.35).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 	_resume.intro(0.05)
+	_settings.intro(0.08)
 	_lobby.intro(0.1)
 	_resume.grab_focus()
 	Pal.sfx("whoosh", -8.0, 0.7)
+
+func refocus() -> void:
+	_settings.grab_focus()
+	_music.value = float(Profile.setting("music_vol", 0.7))
+	_sfx.value = float(Profile.setting("sfx_vol", 0.9))
 
 func close() -> void:
 	visible = false

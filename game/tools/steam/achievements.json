@@ -1,0 +1,21 @@
+{
+  "_not": "Steamworks > Stats & Achievements sayfasında bu id'lerle tanımla. Simgeler: tools/steam/icons/ (256x256 JPG, açık ve gri iki sürüm).",
+  "stats": [
+    {"id": "matches", "type": "INT", "name": "Oynanan maç"},
+    {"id": "wins", "type": "INT", "name": "Kazanılan maç"}
+  ],
+  "achievements": [
+    {"id": "FIRST_WIN", "tr": "İlk Alkış", "en": "First Applause"},
+    {"id": "TRIVIA_CHAMP", "tr": "Son Ayakta Kalan", "en": "Last One Standing"},
+    {"id": "CONQUEROR", "tr": "Anadolu'nun Hâkimi", "en": "Master of Anatolia"},
+    {"id": "CASTLE_BREAKER", "tr": "Kale Yıkan", "en": "Castle Breaker"},
+    {"id": "SPOT_ON", "tr": "Tam İsabet", "en": "Spot On"},
+    {"id": "HEIST", "tr": "Kasa Soygunu", "en": "The Heist"},
+    {"id": "STREAK_3", "tr": "Üçleme", "en": "Hat Trick"},
+    {"id": "HOUSE_PARTY", "tr": "Ev Partisi", "en": "House Party"},
+    {"id": "FULL_HOUSE", "tr": "Tam Kadro", "en": "Full House"},
+    {"id": "WARDROBE", "tr": "Kostüm Provası", "en": "Dress Rehearsal"},
+    {"id": "MARATHON", "tr": "Sahnenin Demirbaşı", "en": "Stage Regular", "stat": "matches", "min": 25},
+    {"id": "UNTOUCHED", "tr": "Dokunulmaz", "en": "Untouchable"}
+  ]
+}

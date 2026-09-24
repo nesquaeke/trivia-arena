@@ -546,7 +546,7 @@ func _build_curtains() -> void:
 ## Ana perdeyi kapat/aç. Kapanınca sinyal verir.
 func set_curtain(closed: bool, dur := 1.3) -> void:
 	curtain_closed = closed
-	Sfx.play("whoosh", -4.0, 0.8 if closed else 1.0)
+	Sfx.play("curtain", -2.0, 0.9 if closed else 1.0)
 	var tw := create_tween().set_parallel(true)
 	tw.tween_property(house_l, "position:x", -4.62 if closed else -13.8, dur).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	tw.tween_property(house_r, "position:x", 4.62 if closed else 13.8, dur).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)

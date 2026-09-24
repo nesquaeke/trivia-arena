@@ -173,6 +173,39 @@ static func draw(ci: CanvasItem, name: String, c: Vector2, s: float, col: Color,
 				ci.draw_rect(Rect2(c + Vector2(x, -s * 0.46), Vector2(s * 0.07, s * 0.1)), col)
 				ci.draw_rect(Rect2(c + Vector2(x + s * 0.13, -s * 0.46), Vector2(s * 0.07, s * 0.1)), col)
 			_ellipse(ci, c + Vector2(0, s * 0.3), Vector2(s * 0.09, s * 0.12), Color(0, 0, 0, 0.6))
+		"globe":
+			ci.draw_arc(c, s * 0.42, 0, TAU, 32, col, lw, true)
+			ci.draw_line(c + Vector2(-s * 0.42, 0), c + Vector2(s * 0.42, 0), col, lw * 0.8)
+			for k: float in [0.18, 0.34]:
+				var pts := PackedVector2Array()
+				for i in 17:
+					var a := -PI / 2 + PI * i / 16.0
+					pts.append(c + Vector2(cos(a) * s * k, sin(a) * s * 0.42))
+				ci.draw_polyline(pts, col, lw * 0.8, true)
+				var pts2 := PackedVector2Array()
+				for i in 17:
+					var a := PI / 2 + PI * i / 16.0
+					pts2.append(c + Vector2(cos(a) * s * k, sin(a) * s * 0.42))
+				ci.draw_polyline(pts2, col, lw * 0.8, true)
+		"speaker":
+			ci.draw_colored_polygon(PackedVector2Array([c + Vector2(-s * 0.42, -s * 0.14), c + Vector2(-s * 0.2, -s * 0.14), c + Vector2(s * 0.06, -s * 0.38),
+				c + Vector2(s * 0.06, s * 0.38), c + Vector2(-s * 0.2, s * 0.14), c + Vector2(-s * 0.42, s * 0.14)]), col)
+			for k in 2:
+				ci.draw_arc(c + Vector2(s * 0.06, 0), s * (0.2 + k * 0.16), -0.9, 0.9, 12, col, lw, true)
+		"screen":
+			ci.draw_rect(Rect2(c + Vector2(-s * 0.44, -s * 0.32), Vector2(s * 0.88, s * 0.56)), col, false, lw)
+			ci.draw_line(c + Vector2(-s * 0.16, s * 0.4), c + Vector2(s * 0.16, s * 0.4), col, lw)
+			ci.draw_line(c + Vector2(0, s * 0.24), c + Vector2(0, s * 0.4), col, lw)
+		"pad":
+			var body := PackedVector2Array()
+			for i in 24:
+				var a := TAU * i / 24.0
+				body.append(c + Vector2(cos(a) * s * 0.46, sin(a) * s * 0.26 + (s * 0.06 if sin(a) > 0.3 else 0.0)))
+			ci.draw_colored_polygon(body, col)
+			ci.draw_line(c + Vector2(-s * 0.3, 0), c + Vector2(-s * 0.14, 0), Color(0, 0, 0, 0.7), lw)
+			ci.draw_line(c + Vector2(-s * 0.22, -s * 0.08), c + Vector2(-s * 0.22, s * 0.08), Color(0, 0, 0, 0.7), lw)
+			ci.draw_circle(c + Vector2(s * 0.2, -s * 0.05), s * 0.05, Color(0, 0, 0, 0.7))
+			ci.draw_circle(c + Vector2(s * 0.28, s * 0.04), s * 0.05, Color(0, 0, 0, 0.7))
 		"door":
 			ci.draw_rect(Rect2(c + Vector2(-s * 0.26, -s * 0.42), Vector2(s * 0.52, s * 0.84)), col, false, lw)
 			ci.draw_colored_polygon(PackedVector2Array([c + Vector2(-s * 0.26, -s * 0.42), c + Vector2(s * 0.12, -s * 0.3), c + Vector2(s * 0.12, s * 0.5), c + Vector2(-s * 0.26, s * 0.42)]), col)

@@ -18,7 +18,6 @@ var _playing := false
 
 func _ready() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
-	size = Vector2(1920, 1080)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	visible = false
 	_pa = _make_portrait(0.55)

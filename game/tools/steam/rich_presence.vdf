@@ -1,0 +1,22 @@
+"lang"
+{
+	"Language"	"english"
+	"Tokens"
+	{
+		"#Status_Lobby"		"In the lobby"
+		"#Status_Trivia"	"Playing Trivia Arena"
+		"#Status_Conquest"	"Conquering Anatolia"
+		"#Status_Wardrobe"	"In the wardrobe"
+	}
+}
+"lang"
+{
+	"Language"	"turkish"
+	"Tokens"
+	{
+		"#Status_Lobby"		"Lobide"
+		"#Status_Trivia"	"Trivia Arena oynuyor"
+		"#Status_Conquest"	"Anadolu'yu fethediyor"
+		"#Status_Wardrobe"	"Kostüm odasında"
+	}
+}

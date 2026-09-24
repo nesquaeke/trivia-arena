@@ -74,6 +74,10 @@ func _ready() -> void:
 		add_child(ui)
 	ui.setup(self)
 	GameSettings.apply_all(get_tree())
+	# Steam'deki adı ilk açılışta sahne adı yap (oyuncu sonradan değiştirebilir)
+	if SteamService.available and Profile.player_name() in ["Oyuncu", "Player", ""] and SteamService.player_name() != "":
+		Profile.set_player_name(SteamService.player_name())
+		rename_player_one("", Profile.player_name())
 
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--shot="):
@@ -249,12 +253,16 @@ func enter_wardrobe() -> void:
 	if p1:
 		p1.frozen_input = true
 		p1.teleport(Vector3(0, 0.05, 0.7), 0.0)
+		# koşarken açılırsa adım pozunda donmasın
+		p1.linear_velocity = Vector3.ZERO
+		p1.angular_velocity = Vector3.ZERO
 		p1.freeze = true
 	for b in bots:
 		b.controller.go_to(Vector3(randf_range(-6.0, 6.0), 0, randf_range(-4.2, -3.4)))
 	stage.set_solo(true)
 	stage.set_gold_target(null)
 	cam.set_shot(BalconyCam.Shot.WARDROBE)
+	SteamService.presence("wardrobe")
 	Sfx.play("whoosh", -8.0, 1.2)
 
 func exit_wardrobe() -> void:
@@ -388,6 +396,7 @@ func _reset_lobby_layout() -> void:
 	_bots_wander()
 	cam.set_shot(BalconyCam.Shot.LOBBY, true)
 	Music.play("lobby", 2.0)
+	SteamService.presence("lobby")
 	notify_phones({"t": "in_game"})
 	notify_phones({"t": "status", "text": I18n.t("house.status_lobby")})
 
@@ -405,6 +414,8 @@ func start_arena(kind := "") -> void:
 		ui.show_lobby_chrome(false)
 	stage.set_curtain(true)
 	Music.play("conquest" if match_kind == "conquest" else "trivia", 2.0)
+	SteamService.presence("conquest" if match_kind == "conquest" else "trivia")
+	Narrator.say("ready")
 	await stage.curtain_done
 	if match_kind == "conquest":
 		props.clear()
@@ -545,6 +556,26 @@ func notify_phones(msg: Dictionary) -> void:
 	if bridge and bridge.state == "live":
 		bridge.broadcast(msg)
 
+## Maç bitti: başarımlar ve istatistikler (bu makinenin sahibi = 1. oyuncu)
+func on_match_finished(kind: String, names: Array, extra := {}) -> void:
+	var matches := SteamService.add_stat("matches", 1)
+	if matches >= 25:
+		SteamService.unlock("MARATHON")
+	if not phone_players.is_empty():
+		SteamService.unlock("HOUSE_PARTY")
+	if all_actors().size() >= 8:
+		SteamService.unlock("FULL_HOUSE")
+	var p1 := player_one()
+	if p1 == null or names.is_empty() or String(names[0]) != p1.player_name:
+		return
+	SteamService.add_stat("wins", 1)
+	SteamService.unlock("FIRST_WIN")
+	SteamService.unlock("CONQUEROR" if kind == "conquest" else "TRIVIA_CHAMP")
+	if kind == "conquest" and bool(extra.get("untouched", false)):
+		SteamService.unlock("UNTOUCHED")
+	if int(Profile.record(p1.player_name).streak) >= 3:
+		SteamService.unlock("STREAK_3")
+
 func start_conquest() -> void:
 	start_arena("conquest")
 
@@ -608,6 +639,21 @@ func prepare_game_shot(part: String) -> void:
 			while arena == null or arena.phase != "reward":
 				await get_tree().process_frame
 			await get_tree().create_timer(0.7).timeout
+		"post_a", "post_c":
+			# maçı bitir, lobiye dön, Karakterim'i aç (maç sonrası hataları için)
+			start_arena("conquest" if part == "post_c" else "arena")
+			while arena == null or arena.phase != "done":
+				await get_tree().process_frame
+			await get_tree().create_timer(3.0).timeout
+			ui.hud.hide_result()
+			await end_arena()
+			await get_tree().create_timer(1.5).timeout
+			ui._open_wardrobe()
+			await get_tree().create_timer(2.5).timeout
+		"post_tab":
+			ui.wardrobe._tabs.selected = 1
+			ui.wardrobe._tabs.changed.emit(1)
+			await get_tree().create_timer(2.0).timeout
 		"map_demo":
 			# yalnız görüntü: haritayı kur, birkaç bölgeyi boya
 			props.clear()

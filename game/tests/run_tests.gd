@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_estimate_ruler", "test_phone_events",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -285,6 +285,33 @@ func test_estimate_ruler() -> void:
 	check(EstimatePanel.nice(1453.4, true) == 1453, "yıl yuvarlanmaz")
 	check(EstimatePanel.fine_step(8849, false) == 10 and EstimatePanel.fine_step(42, false) == 1, "ince ayar adımı")
 
+func test_steam_local() -> void:
+	# Steam yokken başarım profilde tutulur ve bir kez açılır
+	var got := []
+	var cb := func(id, _t): got.append(id)
+	SteamService.achievement_unlocked.connect(cb)
+	var had: Dictionary = Profile.data.get("achievements", {}).duplicate()
+	Profile.data["achievements"] = {}
+	SteamService.unlock("SPOT_ON")
+	SteamService.unlock("SPOT_ON")
+	SteamService.unlock("NOPE")
+	check(got == ["SPOT_ON"], "başarım bir kez açılır, bilinmeyen yok sayılır")
+	check(SteamService.is_unlocked("SPOT_ON") and SteamService.unlocked_count() == 1, "başarım profilde")
+	Profile.data["achievements"] = had
+	SteamService.achievement_unlocked.disconnect(cb)
+	check(not SteamService.invite_remote_play() or SteamService.available, "Steam yokken davet sessizce reddedilir")
+
+func test_voice_and_audio() -> void:
+	var missing := []
+	for lang in ["tr", "en"]:
+		for key in ["welcome", "act1_cq", "act3_arena", "castle_fall", "winner", "duel", "five", "spot_on"]:
+			if not ResourceLoader.exists("res://assets/audio/voice/%s/%s.ogg" % [lang, key]):
+				missing.append(lang + "/" + key)
+	check(missing.is_empty(), "sunucu replikleri iki dilde var " + str(missing))
+	for n in ["ooh", "aww", "cheer", "ui_confirm", "curtain", "heartbeat", "war_drum", "collapse"]:
+		check(Sfx.streams.has(n), "efekt yüklü: " + n)
+	check(AudioServer.get_bus_index("Voice") != -1 and AudioServer.get_bus_index("Music") != -1, "ses veri yolları (Music, SFX, Voice)")
+
 func test_phone_events() -> void:
 	var b := PhoneBridge.new()
 	b._handle({"t": "num", "pid": "p1", "v": 1453, "lock": true})
@@ -370,5 +397,18 @@ func test_conquest_match() -> void:
 	var clean: bool = m.all_actors().all(func(p): return p.visual.culture == "" and not p.frozen_input)
 	check(clean, "kostümler çıkarıldı, kontrol geri verildi")
 	check(m.get_node_or_null("MapBoard") == null, "harita kaldırıldı")
+	var shown: bool = m.all_actors().all(func(p): return p.visible and not p.freeze)
+	check(shown, "maçtan sonra herkes sahnede ve serbest")
+	# maç sonrası kostüm odası: pelüş kostüm giyebilir, sonra çıkarır
+	m.ui._open_wardrobe()
+	await seconds(1.0)
+	check(m.mode == m.Mode.WARDROBE, "maçtan sonra Karakterim açılıyor")
+	m.wardrobe_conquest(true)
+	await seconds(0.5)
+	var p1: Plush = m.player_one()
+	check(p1.visual.culture != "" and p1.grounded, "Fetih sekmesinde kostüm giyildi, pelüş yerde")
+	m.ui._close_wardrobe()
+	await seconds(1.0)
+	check(m.mode == 0 and p1.visual.culture == "" and not p1.freeze, "Karakterim kapanınca lobi temiz")
 	Engine.time_scale = 1.0
 	m.debug_ff = 1.0

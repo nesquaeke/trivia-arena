@@ -80,6 +80,11 @@ func set_setting(key: String, value) -> void:
 	data.settings[key] = value
 	save()
 
+## Ayarlar → Oynanış → İstatistikleri sıfırla (kostüm ve ayarlar kalır)
+func reset_stats() -> void:
+	data.records = {}
+	save()
+
 func _key(n: String) -> String:
 	return n.strip_edges().to_lower()
 

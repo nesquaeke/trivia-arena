@@ -50,7 +50,7 @@ static func shake(c: Control, amount := 10.0, dur := 0.4) -> void:
 
 static func fade(c: CanvasItem, to: float, dur := 0.3, delay := 0.0) -> Tween:
 	# aynı düğümdeki önceki solma yarıda kalsın (yoksa geç gelen "gizle" yeni gösterimi söndürür)
-	var old = c.get_meta("fx_fade", null)
+	var old = c.get_meta("fx_fade") if c.has_meta("fx_fade") else null
 	if old is Tween and (old as Tween).is_valid():
 		(old as Tween).kill()
 	var tw := c.create_tween()
@@ -64,7 +64,7 @@ static func fade(c: CanvasItem, to: float, dur := 0.3, delay := 0.0) -> Tween:
 
 ## Süren bir solmayı iptal et (düğümü hemen yeniden göstermeden önce çağır)
 static func cancel_fade(c: CanvasItem) -> void:
-	var old = c.get_meta("fx_fade", null)
+	var old = c.get_meta("fx_fade") if c.has_meta("fx_fade") else null
 	if old is Tween and (old as Tween).is_valid():
 		(old as Tween).kill()
 

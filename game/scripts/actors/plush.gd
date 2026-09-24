@@ -123,6 +123,9 @@ func _physics_process(delta: float) -> void:
 	balance = min(1.0, balance + delta * 0.5)
 
 	grounded = _ray.is_colliding() and linear_velocity.y < 2.8
+	# dondurulmuş gövde (kostüm odası, sahne dışı) havada sanılıp zıplama pozunda kalmasın
+	if freeze:
+		grounded = true
 	if grounded:
 		_coyote = 0.12
 

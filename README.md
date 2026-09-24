@@ -22,8 +22,10 @@ Fizik motoruyla çalışan, kaotik bir 3D parti bilgi yarışması. Kırmızı k
 | **Tahmin cetveli:** herkes sancağını kaydırıp çakar | **Açıklama:** altın iğne doğru cevaba düşer, en yakına taç |
 | ![Üstten seçim](docs/screenshots/cq_pick.jpg) | ![Düello](docs/screenshots/cq_splash.jpg) |
 | **Seçim:** kamera tepeye çıkar, bölgenin değeri altta | **Düello açılışı:** saldıran ve savunan karşı karşıya |
-| ![Kale düşüşü](docs/screenshots/castle_fall.jpg) | ![Ayarlar](docs/screenshots/settings.jpg) |
-| **Kale düşüşü:** kamera kalenin etrafında döner | **Ayarlar:** ses, ekran, kalite, sarsıntı |
+| ![Kale düşüşü](docs/screenshots/castle_fall.jpg) | ![Ayarlar](docs/screenshots/settings_video.jpg) |
+| **Kale düşüşü:** kamera kalenin etrafında döner | **Ayarlar:** sekmeli pano |
+| ![Çevrimiçi](docs/screenshots/online.jpg) | |
+| **Çevrimiçi:** Remote Play Together, lobi, başarımlar | |
 | ![Kültür kostümleri](docs/screenshots/costumes.jpg) | ![Kaleler](docs/screenshots/castles.jpg) |
 | **On kültür kostümü** | **Altı kale üslubu, 3 kule = 3 can** |
 | ![Kostüm odası](docs/screenshots/wardrobe_cq.jpg) | ![Ev partisi](docs/screenshots/house.jpg) |
@@ -62,7 +64,7 @@ Yanlış cevap seni hemen oyundan atmaz; kaybettikçe can kaybedersin.
 
 ### Conquest Quiz: Bil ve Fethet
 
-Web sürümünün planı birebir, sahneye serilen keçeden dikilmiş bir Türkiye haritasında (16 bölge, gerçek il sınırları):
+Web sürümünün planı birebir (kurulumda maç süresi: kısa / normal / uzun; düellolar çoğunlukla kolay sorulardan, tahminler herkesin kestirebileceği sorulardan), sahneye serilen keçeden dikilmiş bir Türkiye haritasında (16 bölge, gerçek il sınırları):
 
 1. **Perde I · Kale kurulumu.** Tek bir tahmin sorusu sırayı belirler. Gerçeğe en yakın tahmin eden kalesini ilk kurar; iki kale yan yana kurulamaz. Herkes 1000 puanla başlar, her kale 3 kuledir.
 2. **Perde II · Toprak paylaşımı.** Tahmin sorularında en yakın tahmin 2, ikinci 1 bölge alır (kendi sınırına komşu). Bölge 200, 2× rozetli bölge 400 puan. Boş toprak bitene kadar sürer.
@@ -84,9 +86,31 @@ python3 game/tools/music/compose.py            # hepsini yeniden üret
 python3 game/tools/music/compose.py conquest   # tek parça
 ```
 
-### Ayarlar ve Steam
+### Sunucu (anlatıcı)
 
-Menüde **Ayarlar**: ana ses, müzik, efekt; pencere / tam ekran; kalite (düşük: sis, SSAO ve MSAA kapanır, 3D çözünürlük %75); kamera sarsıntısı. Oyun içinde **Esc** ya da gamepad **Start** perde arası menüsünü açar (devam, lobiye dön, hızlı ses). Menüler klavye ve gamepad ile gezilir. `game/export_presets.cfg` Windows ve Linux dışa aktarma ayarlarını içerir (çıktı `build/`).
+Sahnede bir sunucu konuşur: perde açılışları, "Tahminler gelsin!", "Düello!", "Kale düştü!", "Son beş saniye!", "Ve gecenin galibi…" gibi 29 replik, Türkçe ve İngilizce. Konuşurken müzik kısılır. Replikler `game/tools/voice/narrate.py` ile eSpeak NG + MBROLA seslerinden üretilir ve tiyatro anonsu gibi işlenir (EQ, sıkıştırma, salon yankısı). **Gerçek bir seslendirme sanatçısıyla değiştirmek için** `game/assets/audio/voice/tr|en/` altındaki dosyaları aynı adlarla değiştirmen yeter.
+
+### Ayarlar
+
+Ortada tek pano, beş sekme (Q/E ya da LB/RB ile geçilir):
+
+- **Ses:** ana ses, müzik, efektler, sunucu sesi, sunucu açık/kapalı
+- **Görüntü:** pencere / kenarlıksız / tam ekran, kalite (düşük: sis, SSAO ve MSAA kapanır, 3D çözünürlük %75), dikey senkron, kare sınırı, kamera sarsıntısı, film greni
+- **Oynanış:** dil, tuş ipuçları, istatistikleri sıfırlama (iki kez basınca)
+- **Kontroller:** klavye 1–2, gamepad, telefon tuş şeması
+- **Hakkında:** sürüm ve emeği geçenler
+
+Oyun içinde **Esc** ya da gamepad **Start** perde arası menüsünü açar (devam, ayarlar, lobiye dön, hızlı ses).
+
+### Steam ve çevrimiçi
+
+`scripts/core/steam_service.gd`, GodotSteam kuruluysa Steam'i kullanır; değilse oyun aynen çalışır. Kurulum ve mağaza kontrol listesi: [game/tools/steam/README.md](game/tools/steam/README.md).
+
+- **12 başarım** (Kale Yıkan, Tam İsabet, Kasa Soygunu, Dokunulmaz…) ve istatistikler. Steam yoksa profilde tutulur, oyun içinde rozet çıkar. Listesi menüde Çevrimiçi ekranında.
+- **Zengin durum:** arkadaş listesinde "Anadolu'yu fethediyor".
+- **Çevrimiçi:** Remote Play Together. Oyun arkadaşına yayınlanır, onun gamepad'i sahnede bir pelüş olur (oyun zaten çok girişli). Menüde **Çevrimiçi → Arkadaş davet et** ve **Arkadaş lobisi aç**. Steam adı ilk açılışta sahne adı olur.
+
+`game/export_presets.cfg` Windows ve Linux dışa aktarma ayarlarını içerir (çıktı `build/`).
 
 ### Diğerleri
 

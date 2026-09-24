@@ -33,11 +33,11 @@ func _ready() -> void:
 		add_theme_stylebox_override(st, StyleBoxEmpty.new())
 	mouse_entered.connect(func():
 		_hover = true
-		Pal.sfx("tick", -12.0, 1.3))
+		Pal.sfx("ui_hover", -6.0, 0.9))
 	mouse_exited.connect(func(): _hover = false)
 	button_down.connect(func():
 		_press = 1.0
-		Pal.sfx("click", -3.0, 0.9))
+		Pal.sfx("ui_back" if style == "ghost" else "ui_confirm", -2.0))
 	_apply_material()
 	set_process(true)
 

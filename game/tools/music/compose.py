@@ -510,6 +510,116 @@ def sfx_claim():
     return master(tr, False, (1.4, 0.25), -3.0)
 
 
+# ── arayüz ve seyirci efektleri ────────────────────────────────────
+def _crowd_voices(dur, f_lo, f_hi, formants, n=26, glide=0.0, vel=0.5):
+    """Kalabalık vokali: n kişilik testere kaynağı, her biri ayrı perde ve
+    gecikmeyle; ünlü formantlarından (F1, F2, F3) geçer."""
+    t = t_axis(dur)
+    out = np.zeros_like(t)
+    for k in range(n):
+        f0 = RNG.uniform(f_lo, f_hi)
+        d = RNG.uniform(0, 0.25)
+        env = np.clip((t - d) / 0.25, 0, 1) * np.clip((dur - t) / 0.6, 0, 1)
+        vib = 1 + 0.01 * np.sin(2 * np.pi * RNG.uniform(4, 6) * t + RNG.uniform(0, 6))
+        pitch = f0 * vib * (1 + glide * np.clip(t / dur, 0, 1))
+        ph = 2 * np.pi * np.cumsum(pitch) / SR
+        src = 2.0 * ((ph / (2 * np.pi)) % 1.0) - 1.0
+        src += 0.3 * RNG.uniform(-1, 1, len(t))
+        out += src * env * RNG.uniform(0.6, 1.0)
+    y = np.zeros_like(out)
+    for f, bw, a in formants:
+        y += bandpass(out, f - bw / 2, f + bw / 2) * a
+    return y / n * vel * 3.0
+
+
+def sfx_ooh():
+    """Seyirci: "Ooooh!" (kale düşüşü, büyük an)"""
+    tr = Track(2.6, 120)
+    tr.add(_crowd_voices(2.2, 140, 320, [(320, 160, 1.0), (800, 260, 0.6), (2400, 400, 0.12)], glide=0.25), 0)
+    return master(tr, False, (1.8, 0.35), -3.0)
+
+
+def sfx_aww():
+    """Seyirci: "Ahhh..." (kimse bilemedi, saldırı püskürtüldü)"""
+    tr = Track(2.4, 120)
+    tr.add(_crowd_voices(2.0, 150, 300, [(700, 250, 1.0), (1150, 300, 0.6), (2500, 400, 0.1)], glide=-0.22), 0)
+    return master(tr, False, (1.8, 0.35), -4.0)
+
+
+def sfx_cheer():
+    """Seyirci tezahüratı + alkış (kazanma, doğru cevap)"""
+    tr = Track(3.0, 120)
+    tr.add(_crowd_voices(2.4, 180, 420, [(750, 300, 1.0), (1300, 400, 0.7), (2700, 500, 0.2)], glide=0.1, vel=0.6), 0)
+    for i in range(160):
+        s = RNG.uniform(0, 2.6)
+        n = int(0.02 * SR)
+        tt = np.arange(n) / SR
+        clap = bandpass(noise(n), 900, 4200) * np.exp(-tt * 180)
+        tr.add(clap, s, RNG.uniform(-0.9, 0.9), 0.35 * min(1.0, (2.8 - s)))
+    return master(tr, False, (1.6, 0.3), -2.0)
+
+
+def sfx_ui_hover():
+    """Menü üstüne gelme: küçük pirinç çın"""
+    tr = Track(0.5, 120)
+    tr.add(synth_bell(hz("E6"), 0.4, 0.2), 0)
+    return master(tr, False, (0.6, 0.12), -8.0)
+
+
+def sfx_ui_confirm():
+    """Onay: iki notalı sıcak çın (yukarı)"""
+    tr = Track(0.9, 120)
+    tr.add(synth_bell(hz("C6"), 0.6, 0.25), 0)
+    tr.add(synth_bell(hz("G6"), 0.7, 0.25), 0.07)
+    tr.add(synth_pizz(hz("C4"), 0.3, 0.4), 0)
+    return master(tr, False, (0.9, 0.18), -5.0)
+
+
+def sfx_ui_back():
+    """Geri: iki notalı çın (aşağı)"""
+    tr = Track(0.8, 120)
+    tr.add(synth_bell(hz("G5"), 0.5, 0.22), 0)
+    tr.add(synth_bell(hz("C5"), 0.6, 0.22), 0.07)
+    return master(tr, False, (0.8, 0.15), -6.0)
+
+
+def sfx_coin():
+    """Puan kazanıldı: bozuk para şıngırtısı"""
+    tr = Track(0.9, 120)
+    for k, f in enumerate(("B6", "E7")):
+        tr.add(synth_bell(hz(f), 0.5, 0.22), k * 0.06, 0.2)
+    return master(tr, False, (0.7, 0.12), -6.0)
+
+
+def sfx_curtain():
+    """Kadife perde hışırtısı (açılış/kapanış)"""
+    dur = 2.2
+    tr = Track(dur, 120)
+    t = t_axis(dur)
+    env = np.sin(np.pi * np.clip(t / dur, 0, 1)) ** 1.5
+    swish = bandpass(noise(len(t)), 300, 2500) * env * 0.7
+    rustle = highpass(noise(len(t)), 3000) * env * (0.5 + 0.5 * np.sin(2 * np.pi * 7 * t) ** 2) * 0.25
+    tr.add(swish + rustle, 0)
+    return master(tr, False, (1.4, 0.25), -6.0)
+
+
+def sfx_heartbeat():
+    """Kalp atışı (son saniyeler)"""
+    tr = Track(1.0, 120)
+    tr.add(synth_bass_drum(0.3, 0.8, 70, 40), 0)
+    tr.add(synth_bass_drum(0.3, 0.55, 65, 38), 0.2)
+    return master(tr, False, (0.6, 0.1), -4.0)
+
+
+def sfx_page():
+    """Kâğıt/afiş çevirme"""
+    tr = Track(0.7, 120)
+    t = t_axis(0.45)
+    env = np.exp(-((t - 0.12) ** 2) / 0.004)
+    tr.add(bandpass(noise(len(t)), 1500, 7000) * env * 0.6, 0)
+    return master(tr, False, (0.6, 0.12), -8.0)
+
+
 PIECES = {
     "conquest": (piece_conquest, OUT_MUSIC),
     "lobby": (piece_lobby, OUT_MUSIC),
@@ -523,6 +633,16 @@ PIECES = {
     "stamp": (sfx_stamp, OUT_SFX),
     "roll": (sfx_roll, OUT_SFX),
     "claim": (sfx_claim, OUT_SFX),
+    "ooh": (sfx_ooh, OUT_SFX),
+    "aww": (sfx_aww, OUT_SFX),
+    "cheer": (sfx_cheer, OUT_SFX),
+    "ui_hover": (sfx_ui_hover, OUT_SFX),
+    "ui_confirm": (sfx_ui_confirm, OUT_SFX),
+    "ui_back": (sfx_ui_back, OUT_SFX),
+    "coin": (sfx_coin, OUT_SFX),
+    "curtain": (sfx_curtain, OUT_SFX),
+    "heartbeat": (sfx_heartbeat, OUT_SFX),
+    "page": (sfx_page, OUT_SFX),
 }
 
 if __name__ == "__main__":

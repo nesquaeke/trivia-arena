@@ -25,7 +25,7 @@ extends Button
 @export var big := true:
 	set(v):
 		big = v
-		custom_minimum_size.y = 112.0 if big else 62.0
+		custom_minimum_size.y = 112.0 if big else 54.0
 		queue_redraw()
 @export var accent := Color("F6CF7B")
 
@@ -49,7 +49,7 @@ func _ready() -> void:
 	focus_exited.connect(func(): _hover = false)
 	button_down.connect(func():
 		_press = 1.0
-		Pal.sfx("click", -4.0, 1.1))
+		Pal.sfx("ui_confirm", -2.0))
 	for st in ["normal", "hover", "pressed", "focus", "disabled", "hover_pressed"]:
 		add_theme_stylebox_override(st, StyleBoxEmpty.new())
 	set_process(true)
@@ -57,7 +57,7 @@ func _ready() -> void:
 func _on_enter() -> void:
 	if not _hover:
 		_hover = true
-		Pal.sfx("tick", -12.0, 1.6)
+		Pal.sfx("ui_hover", -6.0, randf_range(0.97, 1.05))
 
 func intro(delay: float) -> void:
 	_intro = 0.0
@@ -92,15 +92,15 @@ func _draw() -> void:
 	if _press > 0.0:
 		draw_rect(Rect2(-48, 2, size.x + 90, size.y - 4), Color(1, 0.9, 0.7, 0.18 * _press))
 	var f_title := Pal.display()
-	var fs := 72 if big else 42
+	var fs := 72 if big else 38
 	var cap_fs := 21 if big else 19
 	var x0 := (84.0 if emblem != "" else 64.0) + 18.0 * h + slide
-	var title_y := 74.0 if big else 46.0
+	var title_y := 74.0 if big else 41.0
 	# madalyon (ya da numara)
 	var idx_col := Pal.MUTED.lerp(accent, h)
 	var iy := title_y - fs * 0.5
 	if emblem != "":
-		_draw_medallion(Vector2(slide + 30, title_y - fs * 0.36), 27.0 if big else 21.0, h, ia)
+		_draw_medallion(Vector2(slide + 30, title_y - fs * 0.36), 27.0 if big else 18.0, h, ia)
 	else:
 		draw_string(Pal.italic(), Vector2(slide + 4, iy), index, HORIZONTAL_ALIGNMENT_LEFT, -1, 24 if big else 19, Color(idx_col, ia))
 		draw_line(Vector2(slide + 6, iy + 8), Vector2(slide + 38 + 10 * h, iy + 8), Color(idx_col, 0.6 * ia), 1.0)

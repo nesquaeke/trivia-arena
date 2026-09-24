@@ -54,6 +54,7 @@ func fill(p_mode: String) -> void:
 	queue_redraw()
 
 func drop() -> void:
+	Pal.sfx("page", -2.0)
 	visible = true
 	position.y = -H - 60
 	rotation = 0.0

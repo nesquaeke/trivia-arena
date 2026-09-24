@@ -20,9 +20,9 @@ extends Node
 signal finished(ranking: Array)
 
 const CFG := {
-	"base": 1000, "land": 200, "rich": 400, "turn_budget": 16,
-	"estimate_s": 16.0, "reveal_s": 4.6, "castle_s": 12.0, "claim_s": 10.0,
-	"target_s": 10.0, "duel_s": 11.0, "tie_s": 12.0, "result_s": 2.6, "intro_s": 4.2,
+	"base": 1000, "land": 200, "rich": 400, "turn_budget": 26,
+	"estimate_s": 20.0, "reveal_s": 5.2, "castle_s": 14.0, "claim_s": 12.0,
+	"target_s": 12.0, "duel_s": 14.0, "tie_s": 14.0, "result_s": 2.8, "intro_s": 4.6,
 }
 const BOT_ACC := {"easy": [0.7, 0.55, 0.4], "normal": [0.86, 0.7, 0.55], "hard": [0.95, 0.86, 0.72]}
 const BOT_SPREAD := {"easy": 0.2, "normal": 0.12, "hard": 0.07}
@@ -85,7 +85,9 @@ func setup(p_game: Node, actors: Array[Plush], _p_timer: float, p_level: String,
 		p.visual.set_culture(culture)
 		i += 1
 	var n := contestants.size()
-	war_rounds = clampi(int(round(float(CFG.turn_budget) / maxf(2.0, n))), 2, 6)
+	# maç süresi (kurulum ekranı): kısa / normal / uzun
+	var budget: float = {"short": 16.0, "normal": float(CFG.turn_budget), "long": 36.0}.get(String(Profile.setting("cq_length", "normal")), float(CFG.turn_budget))
+	war_rounds = clampi(int(round(budget / maxf(2.0, n))), 2, 10)
 	if ui and ui.has_signal("answer_clicked"):
 		ui.answer_clicked.connect(_on_answer_clicked)
 	if ui and ui.has_signal("ruler_input"):
@@ -310,6 +312,7 @@ func _act_card(n: int) -> void:
 	_hud("hud_round_card", [n, title, I18n.t("cq.act%dd" % n), chips])
 	_hud("hud_set_top", [title, I18n.t("round.kicker") + " " + Pal.roman(n)])
 	_notify_all(title)
+	Narrator.say("act%d_cq" % clampi(n, 1, 3))
 	Sfx.play("sting", -3.0)
 	Sfx.play("whoosh", -8.0, 0.9)
 	await _wait(CFG.intro_s)
@@ -318,7 +321,10 @@ func _act_card(n: int) -> void:
 
 # ── tahmin sorusu (bütün perdelerde ortak) ─────────────────────────
 func _pick_estimate() -> Dictionary:
-	var pool: Array = Questions.estimate.filter(func(q): return not _used_est.has(q.tr.q))
+	# herkesin kestirebileceği sorular önce; "hard" işaretliler yalnız havuz tükenirse
+	var pool: Array = Questions.estimate.filter(func(q): return not _used_est.has(q.tr.q) and not bool(q.get("hard", false)))
+	if pool.is_empty():
+		pool = Questions.estimate.filter(func(q): return not _used_est.has(q.tr.q))
 	if pool.is_empty():
 		_used_est.clear()
 		pool = Questions.estimate
@@ -360,6 +366,7 @@ func _estimate(who: Array[Plush], kicker: String) -> Array:
 			_mouse_p = p
 	_ruler.clear()
 	Music.play("think", 0.8)
+	Narrator.say("estimate")
 	_hud("hud_estimate_open", [kicker, tx.q, tx.unit, lo, hi, is_year, entries, _mouse_p != null])
 	Sfx.play("drum", -4.0, 1.0)
 	# botlar
@@ -382,6 +389,10 @@ func _estimate(who: Array[Plush], kicker: String) -> Array:
 		time_left -= dt
 		t += dt
 		_hud("hud_timer", [maxf(0.0, time_left), timer_total])
+		if time_left < 5.0 and time_left + dt >= 5.0:
+			Narrator.say("five")
+		if time_left < 5.0 and int(ceil(time_left)) != int(ceil(time_left + dt)):
+			Sfx.play("heartbeat", -5.0)
 		var all_locked := true
 		for p in who:
 			var s: Dictionary = state[p]
@@ -424,6 +435,10 @@ func _estimate(who: Array[Plush], kicker: String) -> Array:
 		rows.append({"i": state[r.p].idx, "guess": r.guess, "diff": r.diff})
 	var ans: String = EstimatePanel.group(int(q.a), is_year) + ((" " + String(tx.unit)) if String(tx.unit) != "" else "")
 	_hud("hud_estimate_reveal", [int(q.a), ans, rows])
+	Narrator.say("spot_on" if not ranked.is_empty() and int(ranked[0].diff) == 0 else "reveal")
+	for r in ranked:
+		if int(r.diff) == 0 and not is_bot(r.p):
+			SteamService.unlock("SPOT_ON")
 	log_lines.append("EST %s → %s" % [str(q.a), ranked[0].p.player_name])
 	await _wait(1.1)
 	Sfx.play("ding", -3.0, 1.2)
@@ -748,6 +763,8 @@ var _turn_of: Plush = null
 func _war() -> void:
 	for rr in war_rounds:
 		war_round = rr
+		if rr == war_rounds - 1:
+			Narrator.say("last_round")
 		var order := alive()
 		for p in order:
 			if phase == "done" or alive().size() <= 1:
@@ -804,6 +821,7 @@ func _turn(p: Plush, rr: int) -> void:
 	_hud("hud_duel_splash", [{"name": p.player_name, "color": pcolor(p), "look": p.look, "culture": P[p].culture},
 		{"name": d.player_name, "color": pcolor(d), "look": d.look, "culture": P[d].culture}, board.region_name(id)])
 	_cam_focus([from if from != "" else id, id], 1.35)
+	Narrator.say("duel")
 	await _wait(DuelSplash.DUR - 0.1)
 	var win := await _duel(p, d)
 	_cam_focus([id], 0.75)
@@ -824,12 +842,25 @@ func _bot_target_score(p: Plush, id: String) -> float:
 		v += 2.0
 	return v
 
+## Düello zorluğu: ilk turlarda çoğunlukla kolay, son turlarda biraz orta
+func _duel_tier() -> String:
+	var late := war_rounds > 0 and float(war_round) / war_rounds >= 0.5
+	var r := rng.randf()
+	if not late:
+		return "d1" if r < 0.8 else "d2"
+	return "d1" if r < 0.55 else ("d2" if r < 0.95 else "d3")
+
 ## Düello: iki kişi aynı soruyu cevaplar. Dönüş: saldıran kazandı mı?
 func _duel(a: Plush, d: Plush) -> bool:
 	phase = "duel"
 	var tiers := ["d1", "d2", "d3"]
-	var tier: String = tiers[rng.randi() % 3]
+	var tier := _duel_tier()
 	var item := Questions.draw_from(tier, "", rng)
+	# uzun, okunması zor sorular düelloya uygun değil: birkaç kez yeniden çek
+	for _k in 6:
+		if String(Questions.face(item, I18n.lang).prompt).length() <= 95:
+			break
+		item = Questions.draw_from(tier, "", rng)
 	var face := Questions.face(item, I18n.lang)
 	var extra := clampf((String(face.prompt).length() - 60) * 0.03, 0.0, 4.0)
 	timer_total = CFG.duel_s + extra
@@ -940,6 +971,7 @@ func _duel(a: Plush, d: Plush) -> bool:
 	Music.play("conquest", 1.0)
 	if ra and rd:
 		_say(I18n.t("cq.tieBreak"), Pal.GOLD)
+		Narrator.say("tie")
 		await _wait(1.0)
 		var duo: Array[Plush] = [a, d]
 		var ranked := await _estimate(duo, I18n.t("cq.tieBreak"))
@@ -951,6 +983,8 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 	board.flash(id)
 	if not win:
 		_say(I18n.t("cq.repelled", {"d": d.player_name}), pcolor(d).lightened(0.3))
+		Narrator.say("repel")
+		Sfx.play("aww", -6.0)
 		Sfx.play("buzz", -4.0, 0.8)
 		_cheer(d)
 		log_lines.append("REPEL %s" % d.player_name)
@@ -963,6 +997,7 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 			await _wait(0.35)
 			if castle:
 				castle.set_towers(shields[id])
+			Narrator.say("tower")
 			Sfx.play("war_drum", 0.0, 0.9)
 			Sfx.play("thud", -2.0, 0.6)
 			if game.cam:
@@ -974,8 +1009,12 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 			_cam_orbit(id)
 			Music.play("", 0.8)
 			await _wait(0.6)
+			if not is_bot(a):
+				SteamService.unlock("CASTLE_BREAKER")
 			if castle:
 				castle.collapse()
+			Narrator.say("castle_fall")
+			Sfx.play("ooh", -3.0)
 			Sfx.play("collapse", 0.0)
 			Sfx.play("sting", -4.0)
 			if game.cam:
@@ -1006,6 +1045,7 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 			return
 	else:
 		var loot := mini(value_of(id), maxi(0, int(P[d].points)))
+		P[d].lost = int(P[d].get("lost", 0)) + 1
 		holder[id] = a
 		P[a].points += loot
 		P[d].points -= loot
@@ -1014,6 +1054,8 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 		_place_warrior(a, id)
 		Sfx.play("claim", -2.0)
 		_say(I18n.t("cq.captured", {"a": a.player_name, "t": board.region_name(id), "p": loot}), pcolor(a).lightened(0.3))
+		Narrator.say("capture")
+		Sfx.play("coin", -4.0)
 		log_lines.append("CAPTURE %s %s" % [a.player_name, id])
 		_cheer(a)
 		_refresh_scores({a: loot, d: -loot})
@@ -1041,6 +1083,10 @@ func _finish() -> void:
 	var title := I18n.t("cq.winner", {"name": rk[0].player_name}) if rk.size() > 0 else I18n.t("arena.draw")
 	log_lines.append("WIN " + (names[0] if names.size() > 0 else "-"))
 	Profile.record_match(names, "conquest")
+	if game.has_method("on_match_finished"):
+		game.on_match_finished("conquest", names, {"untouched": rk.size() > 0 and int(P[rk[0]].get("lost", 0)) == 0})
+	Narrator.say("winner")
+	Sfx.play("cheer", -3.0)
 	Music.stop(0.6)
 	Music.sting("victory")
 	Sfx.play("applause", -6.0)

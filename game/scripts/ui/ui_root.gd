@@ -30,6 +30,9 @@ var name_edit: LineEdit
 var grain: ColorRect
 var result_panel: Control          # ekran görüntüsü aracı için (hud.result)
 var pause: PauseMenu
+var settings: SettingsScreen
+var online: OnlinePanel
+var toast: AchievementToast
 
 var _qr_http: HTTPRequest
 var _qr_for := ""
@@ -74,6 +77,10 @@ func setup(p_game: Node) -> void:
 	menu.loge_requested.connect(_open_loge)
 	menu.howto_requested.connect(func(k): open_howto(k))
 	menu.quit_requested.connect(_quit)
+	menu.settings_requested.connect(func(): open_settings())
+	menu.online_requested.connect(func():
+		root.move_child(online, -1)
+		online.open())
 
 	card = ProfileCard.new()
 	card.position = Vector2(CARD_X, 30)
@@ -91,6 +98,7 @@ func setup(p_game: Node) -> void:
 	wardrobe.visible = false
 	root.add_child(wardrobe)
 	wardrobe.look_changed.connect(func(k, v):
+		SteamService.unlock("WARDROBE")
 		Profile.set_look(k, v)
 		game.apply_look_to_player_one()
 		wardrobe.refresh()
@@ -122,6 +130,23 @@ func setup(p_game: Node) -> void:
 
 	pause = PauseMenu.new()
 	root.add_child(pause)
+	pause.settings_requested.connect(func(): open_settings())
+	settings = SettingsScreen.new()
+	root.add_child(settings)
+	settings.closed.connect(_settings_closed)
+	settings.hints_changed.connect(func(): menu.retext())
+	online = OnlinePanel.new()
+	root.add_child(online)
+	online.closed.connect(func():
+		if _lobby and menu.menu_col.visible:
+			menu.buttons["online"].grab_focus())
+	online.house_requested.connect(_open_house)
+	toast = AchievementToast.new()
+	root.add_child(toast)
+	SteamService.achievement_unlocked.connect(func(id, title):
+		var row: Array = SteamService.ACHIEVEMENTS[id]
+		toast.show_toast(title, String(row[2] if Pal.tr_lang() else row[3]))
+		root.move_child(toast, -1))
 	pause.resume_requested.connect(func(): set_paused(false))
 	pause.lobby_requested.connect(func():
 		set_paused(false)
@@ -360,6 +385,16 @@ func set_paused(on: bool) -> void:
 	else:
 		pause.close()
 
+func open_settings() -> void:
+	root.move_child(settings, -1)
+	settings.open()
+
+func _settings_closed() -> void:
+	if pause.visible:
+		pause.refocus()
+	elif _lobby and menu.menu_col.visible:
+		menu.buttons["settings"].grab_focus()
+
 func _quit() -> void:
 	Music.stop(0.4)
 	stage_curtain_then(func(): get_tree().quit())
@@ -371,6 +406,8 @@ func stage_curtain_then(cb: Callable) -> void:
 	cb.call()
 
 func _unhandled_input(e: InputEvent) -> void:
+	if settings.visible or online.visible:
+		return
 	var back: bool = e.is_action_pressed("ui_cancel") or (e is InputEventJoypadButton and e.pressed and e.button_index == JOY_BUTTON_START)
 	if back:
 		if get_tree().paused:
@@ -398,9 +435,16 @@ func prepare_shot(part: String) -> void:
 		"setup":
 			menu._open_setup("arena")
 			await get_tree().create_timer(1.8).timeout
-		"settings":
-			menu._open_settings()
-			await get_tree().create_timer(1.6).timeout
+		"settings", "settings_video", "settings_controls", "settings_about":
+			open_settings()
+			var tabs := {"settings": 0, "settings_video": 1, "settings_controls": 3, "settings_about": 4}
+			settings._set_tab(int(tabs[part]))
+			await get_tree().create_timer(1.2).timeout
+		"online":
+			root.move_child(online, -1)
+			online.open()
+			SteamService.unlock("WARDROBE")
+			await get_tree().create_timer(1.3).timeout
 		"pause":
 			await get_tree().create_timer(0.5).timeout
 			set_paused(true)

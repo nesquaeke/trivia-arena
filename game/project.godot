@@ -19,6 +19,8 @@ Profile="*res://scripts/core/profile.gd"
 Questions="*res://scripts/core/questions.gd"
 Sfx="*res://scripts/core/sfx.gd"
 Music="*res://scripts/core/music.gd"
+Narrator="*res://scripts/core/narrator.gd"
+SteamService="*res://scripts/core/steam_service.gd"
 
 [display]
 
