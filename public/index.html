@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
   html,body{margin:0;padding:0;background:#EFE4CE}
-  @media (prefers-color-scheme: dark){html,body{background:#15131C}}
+  @media (prefers-color-scheme: dark){html,body{background:#0E0C19}}
   /* mobilde adres çubuğu yüzünden 100vh yanıltıyor */
   html,body{height:100%;height:100dvh;overflow:hidden;overscroll-behavior:none}
 </style>
@@ -54,14 +54,36 @@
      Mantık aynı kalıyor — her yüzey kendi kenarından açık, gölge kenardan koyu —
      sadece kağıt gece rengine dönüyor. Kenar ve gölge koyu kalıyor, kartlar
      zeminden belirgin şekilde açılıyor. */
-  --paper:#17141F; --paper-2:#211D2D; --paper-3:#2D2839;
-  --ink:#F2E7D4; --ink-2:#CDC0AC; --ink-soft:#9E93AE;
-  --red:#FF6B52; --mustard:#F7C85A; --teal:#3CC7B4; --violet:#9B86FF; --pink:#FF7DB0; --moss:#7FCC5E;
-  --edge:#0B0912;
-  --shadow:6px 6px 0 #050409; --shadow-sm:3px 3px 0 #050409; --bd:3px solid var(--edge);
-  --hatch:#1E1A29; --hover:#3A3448; --glass:rgba(6,5,12,.84); --blend:screen;
+  /* v2: siyah gölge siyah zeminde kayboluyordu, kartlar zeminle aynı düzlemde
+     duruyordu. Artık zemin derin gece mavisi, kaymalı gölge görünür bir mor
+     levha, kartın üst kenarında ince bir ışık çizgisi var; sahne ışığı
+     zeminin tepesinden vuruyor. Baskı dili aynı: kalın kontur + sert gölge. */
+  --paper:#0E0C19; --paper-2:#1A1630; --paper-3:#221D3B;
+  --ink:#F5ECDD; --ink-2:#D6CBE6; --ink-soft:#A69CC4;
+  --red:#FF6B52; --mustard:#FFCB57; --teal:#3FD6C1; --violet:#A591FF; --pink:#FF7DB6; --moss:#86D867;
+  --edge:#06050D;
+  --slab:#2F2656;
+  --shadow:6px 6px 0 var(--slab); --shadow-sm:3px 3px 0 var(--slab); --bd:3px solid var(--edge);
+  --hatch:#171430; --hover:#2E2852; --glass:rgba(5,4,14,.86); --blend:screen;
   color-scheme: dark;
 }
+:root[data-theme="dark"] body{
+  background:
+    radial-gradient(1200px 520px at 50% -140px, rgba(165,145,255,.16), transparent 70%),
+    radial-gradient(900px 600px at 110% 110%, rgba(63,214,193,.07), transparent 70%),
+    var(--paper);
+}
+:root[data-theme="dark"] body::before{opacity:.05}
+:root[data-theme="dark"] :is(.card,.tile,.poster,.stat,.tcard,.hstep,.lbtable,.frow,.modal,.famestrip,.choice,.seat,.news,.rchip,.qcard){
+  box-shadow:var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,.07);
+}
+:root[data-theme="dark"] :is(.card,.poster,.modal,.news){box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,.07)}
+:root[data-theme="dark"] .topbar{background:rgba(26,22,48,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+:root[data-theme="dark"] .btn.primary{box-shadow:var(--shadow-sm), 0 0 22px rgba(255,203,87,.22)}
+:root[data-theme="dark"] .choice.on,:root[data-theme="dark"] .pslot.lead{box-shadow:var(--shadow-sm), 0 0 18px rgba(255,203,87,.25)}
+:root[data-theme="dark"] h1,:root[data-theme="dark"] h2{text-shadow:0 2px 0 rgba(0,0,0,.35)}
+/* podyum: ikinci basamak gümüş; koyu zeminde koyu yazı okunmuyordu */
+:root[data-theme="dark"] .block.s2{background:#C9C3E3}
 /* Hardal/moss gibi açık zeminlerin üstündeki yazı her iki temada da koyu kalır;
    yoksa karanlıkta krem yazı açık zemine biniyor ve okunmuyor. */
 .btn.primary,.choice.on,.mapcard.on,.swatch.on,.tag.mustard,.pslot.lead,
@@ -143,6 +165,10 @@ canvas{display:block}
 .langswitch{display:flex;border:var(--bd);border-radius:4px;overflow:hidden;box-shadow:var(--shadow-sm)}
 .langswitch button{padding:7px 11px;font-weight:800;font-size:12px;background:var(--paper-3)}
 .langswitch button.on{background:var(--ink);color:var(--paper)}
+.botlevel{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:2px dashed var(--paper-2)}
+.botlevel .lbl{font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.botlevel .langswitch button{padding:8px 14px}
+.botlevel .small{flex:1 1 180px;margin:0}
 
 /* ─── SPLASH ─── */
 #v-splash{align-items:center;justify-content:center;text-align:center;gap:4px;padding:22px}
@@ -203,7 +229,7 @@ canvas{display:block}
 .choice.on{background:var(--mustard)}
 .choice b{font-family:'Alfa Slab One',serif;font-size:19px;font-weight:400}
 .choice span{font-size:12.5px;color:var(--ink-soft)}
-.choice.on span{color:var(--ink)}
+.choice.on span{color:rgba(25,19,32,.78)}
 .maps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
 .mapcard{border:var(--bd);border-radius:6px;background:var(--paper-3);box-shadow:var(--shadow-sm);padding:9px;
   display:flex;flex-direction:column;gap:6px;align-items:center;transition:transform .08s}
@@ -611,6 +637,52 @@ canvas{display:block}
 .stat .who{font-family:'Alfa Slab One',serif;font-size:17px;margin-top:2px;font-weight:400}
 .stat .dt{font-size:12px;color:var(--ink-soft)}
 .finaltable{width:min(860px,100%);display:flex;flex-direction:column;gap:6px}
+/* maç sonu ünvanları: herkes bir tane alır */
+.sechead{width:min(860px,100%);font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin:6px 0 -4px}
+.titlegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;width:min(860px,100%)}
+.tcard{position:relative;border:var(--bd);border-radius:6px;background:var(--paper-3);box-shadow:var(--shadow-sm);
+  padding:12px 13px 11px 60px;min-height:78px;overflow:hidden;animation:tcIn .45s cubic-bezier(.2,1.4,.4,1) both}
+.tcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:48px;background:var(--pc,var(--mustard));border-right:var(--bd)}
+.tcard .em{position:absolute;left:0;top:0;width:48px;height:100%;display:flex;align-items:center;justify-content:center;font-size:24px}
+.tcard .tt{font-family:'Alfa Slab One',serif;font-size:16px;line-height:1.1}
+.tcard .tw{font-weight:800;font-size:13px;margin-top:3px}
+.tcard .td{font-size:12px;color:var(--ink-soft);margin-top:1px}
+@keyframes tcIn{from{opacity:0;transform:translateY(10px) scale(.96)}to{opacity:1;transform:none}}
+/* sıralama tablosu */
+.lbtable{width:min(860px,100%);border:var(--bd);border-radius:6px;background:var(--paper-3);box-shadow:var(--shadow-sm);overflow:hidden}
+.lbtable .lr{display:grid;grid-template-columns:34px 1fr 64px 44px 44px 40px;align-items:center;gap:6px;padding:8px 12px;border-top:2px solid var(--paper-2)}
+.lbtable .lr:first-child{border-top:none}
+.lbtable .lr.hd{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);background:var(--paper-2)}
+.lbtable .lr.hot{background:color-mix(in srgb,var(--mustard) 28%,var(--paper-3))}
+.lbtable .pl{font-family:'Alfa Slab One',serif;text-align:center}
+.lbtable .nm{font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lbtable .nm i{display:inline-block;width:10px;height:10px;border-radius:50%;border:2px solid var(--edge);margin-right:7px;vertical-align:-1px}
+.lbtable .v{font-family:'DM Mono',monospace;text-align:right;font-size:13px}
+.lbtable .v b{font-weight:500;font-size:15px}
+.lbtable .mv{font:800 10.5px/1 'DM Mono',monospace;text-align:right}
+.lbtable .mv.up{color:var(--moss)} .lbtable .mv.dn{color:var(--red)} .lbtable .mv.nw{color:var(--violet)}
+@media (max-width:520px){ .lbtable .lr{grid-template-columns:28px 1fr 54px 34px 34px} .lbtable .c-best{display:none} }
+/* telefonda maç sonu */
+.modal.howmodal{width:min(780px,100%)}
+.howsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0 4px}
+.hstep{position:relative;border:var(--bd);border-radius:6px;background:var(--paper);box-shadow:var(--shadow-sm);padding:12px 12px 12px 12px;
+  animation:tcIn .4s cubic-bezier(.2,1.4,.4,1) both}
+.hstep .he{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.hstep .hi{width:40px;height:40px;flex:none;border:var(--bd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;background:var(--hc,var(--mustard))}
+.hstep .hn{font:800 10px/1 'DM Mono',monospace;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase}
+.hstep h4{font-size:16px;margin-top:2px}
+.hstep p{margin:0;font-size:13px;line-height:1.4;color:var(--ink-2)}
+/* tur başı kural çipleri */
+.rulechips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
+.rchip{display:flex;align-items:center;gap:10px;border:var(--bd);border-radius:999px;background:var(--paper-3);box-shadow:var(--shadow-sm);
+  padding:8px 16px 8px 8px;font-weight:800;font-size:15px;animation:tcIn .45s cubic-bezier(.2,1.4,.4,1) both}
+.rchip .ri{width:38px;height:38px;border:var(--bd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:19px;background:var(--rc,var(--mustard))}
+.rchip small{display:block;font-weight:600;font-size:12px;color:var(--ink-soft)}
+.btn.pulse{animation:btnPulse 1.1s ease-in-out infinite}
+@keyframes btnPulse{50%{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--edge)}}
+.padres{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.padres .big{font-family:'Alfa Slab One',serif;font-size:44px;line-height:1}
+.padres .tcard{width:100%;text-align:left}
 .frow{display:flex;align-items:center;gap:10px;border:var(--bd);border-radius:5px;background:var(--paper-3);padding:8px 12px}
 .frow .r{width:24px;font-family:'Alfa Slab One',serif}
 .frow .n{flex:1;font-weight:800}
@@ -734,6 +806,7 @@ input[type=text],input[type=number],select{font:inherit;border:var(--bd);border-
         <div class="menurow">
           <button class="tile" id="tileWard"><canvas></canvas><span><b data-t="menu.character"></b><span data-t="menu.characterSub"></span></span></button>
           <button class="tile" id="tileSpectate"><canvas></canvas><span><b data-t="menu.spectate"></b><span data-t="menu.spectateSub"></span></span></button>
+          <button class="tile" id="tileHowto"><span style="font-size:30px;width:44px;text-align:center;flex:none">❓</span><span><b data-t="menu.howto"></b><span data-t="menu.howtoSub"></span></span></button>
         </div>
         <!-- Rekor şeridi: menünün altındaki boşluk bugüne kadar boştu; evdeki
              maçların hafızası burada duruyor ve tekrar oynamaya sebep veriyor -->
@@ -797,6 +870,13 @@ input[type=text],input[type=number],select{font:inherit;border:var(--bd);border-
           </div>
           <div class="seatlist" id="seats"></div>
           <p class="small" id="seatHint" style="margin-top:10px"></p>
+          <div class="botlevel">
+            <span class="lbl" data-t="bot.level"></span>
+            <div class="langswitch" id="botLevel">
+              <button data-lv="easy" data-t="bot.easy"></button><button data-lv="normal" data-t="bot.normal"></button><button data-lv="hard" data-t="bot.hard"></button>
+            </div>
+            <p class="small" id="botLevelSub"></p>
+          </div>
         </div>
 
         <div class="card" id="mapCard" hidden>
@@ -957,8 +1037,11 @@ input[type=text],input[type=number],select{font:inherit;border:var(--bd);border-
       <p class="small" id="resSub" style="text-align:center;margin:0"></p>
       <div id="resRecords" class="recbar" hidden></div>
       <div class="podium" id="podium"></div>
-      <div class="statgrid" id="statGrid"></div>
+      <div class="sechead" data-t="titles.head"></div>
+      <div class="titlegrid" id="statGrid"></div>
       <div class="finaltable" id="finalTable"></div>
+      <div class="sechead" id="resBoardHead" data-t="lb.title"></div>
+      <div class="lbtable" id="resBoard"></div>
       <div class="news" id="news"></div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding-bottom:20px">
         <button class="btn primary big" id="btnAgain" data-t="results.again"></button>
@@ -985,6 +1068,16 @@ input[type=text],input[type=number],select{font:inherit;border:var(--bd);border-
   </div>
 </div>
 
+<div class="scrim" id="resumeScrim" hidden>
+  <div class="modal">
+    <h3 data-t="resume.title"></h3>
+    <p class="small" id="resumeSub"></p>
+    <div class="row">
+      <button class="btn primary" id="btnResumeYes" data-t="resume.yes"></button>
+      <button class="btn" id="btnResumeNo" data-t="resume.no"></button>
+    </div>
+  </div>
+</div>
 <div class="scrim" id="quitScrim" hidden>
   <div class="modal">
     <h3 data-t="quit.title"></h3>
@@ -1100,10 +1193,25 @@ input[type=text],input[type=number],select{font:inherit;border:var(--bd);border-
   </div>
 </div>
 
+<div class="scrim" id="howScrim" hidden>
+  <div class="modal setmodal howmodal">
+    <h3 data-t="how.title"></h3>
+    <div class="fametabs" id="howTabs">
+      <button data-how="trivia" data-t="how.trivia"></button>
+      <button data-how="conquest" data-t="how.conquest"></button>
+      <button data-how="phone" data-t="how.phone"></button>
+    </div>
+    <div class="howsteps" id="howBody"></div>
+    <div class="row">
+      <button class="btn primary" id="btnHowClose" data-t="how.ok"></button>
+    </div>
+  </div>
+</div>
 <div class="scrim" id="fameScrim" hidden>
   <div class="modal setmodal">
     <h3 data-t="fame.title"></h3>
     <div class="fametabs">
+      <button id="tabBoard" data-t="lb.tab"></button>
       <button id="tabLocal" data-t="fame.tabLocal"></button>
       <button id="tabWorld" data-t="fame.tabWorld"></button>
     </div>
@@ -1174,6 +1282,8 @@ const STR = {
     'splash.start':'▶ Başla',
     'menu.party':'Parti', 'menu.strategy':'Strateji',
     'menu.character':'Karakterim', 'menu.characterSub':'Ten, şapka, gözlük, surat',
+    'menu.howto':'Nasıl oynanır?', 'menu.howtoSub':'1 dakikada kurallar',
+    'how.title':'Nasıl oynanır?', 'how.trivia':'Trivia Arena', 'how.conquest':'Bil ve Fethet', 'how.phone':'Telefonla katıl', 'how.ok':'Anladım, oynayalım!',
     'menu.spectate':'İzleyici olarak katıl', 'menu.spectateSub':'Yayın modu · emoji at',
     'menu.pad':'Telefonum kumanda olsun', 'menu.padSub':'Oda koduyla bağlan',
     'mode.trivia.name':'Trivia Arena', 'mode.trivia.desc':'Üç turluk parti yarışması: kategoriyi siz seçersiniz, kombo puanı katlar, son turda puanlar cana döner.',
@@ -1185,6 +1295,8 @@ const STR = {
     'setup.online':'Telefonlarla', 'setup.onlineSub':'Oda kodu ve QR ile herkes kendi telefonundan katılır.',
     'setup.roomCode':'Oda kodu', 'setup.copyLink':'Bağlantıyı kopyala', 'setup.copied':'✔ Kopyalandı',
     'setup.lineup':'Kadro', 'setup.addBot':'+ Bot', 'setup.addLocal':'+ Yerel oyuncu',
+    'bot.level':'Bot zorluğu', 'bot.easy':'Kolay', 'bot.normal':'Normal', 'bot.hard':'Zor',
+    'bot.easySub':'Yavaş düşünür, sık yanılır. Çocuklar ve ilk maç için.', 'bot.normalSub':'Ortalama bir arkadaş kadar bilir.', 'bot.hardSub':'Hızlı ve bilgili. Kendine güvenenlere.',
     'setup.variant':'Maç türü', 'setup.start':'▶ Maçı başlat',
     'setup.seatHintSolo':'Her yerel oyuncunun kendi tuşları vardır. Dokunmatikte ilk oyuncu ekrana basar.',
     'setup.seatHintOnline':'Telefondan katılanlar boş koltuklara oturur. Kalan koltukları botlar doldurur.',
@@ -1235,6 +1347,9 @@ const STR = {
     'cq.fell':'👑 <b>{a}</b>, {d} başkentini DÜŞÜRDÜ! Bütün toprakları el değiştirdi.',
     'cq.quiet':'Kimse istila ilan etmedi, tur sessiz geçti.', 'cq.banner':'İSTİLA!', 'cq.bannerFall':'BAŞKENT DÜŞTÜ!',
     'cq.tiles':'{n} bölge', 'cq.picked':'{a} bölgesini seçti',
+    'resume.title':'Yarım kalan maç bulundu', 'resume.sub':'Sayfa yenilendi ama maç kaybolmadı: Tur {r}, soru {q}. Kaldığınız yerden sürdürelim mi?',
+    'resume.yes':'▶ Kaldığımız yerden devam', 'resume.no':'Yeni başla', 'resume.label':'Devam', 'resume.go':'Maç kaldığı yerden sürüyor',
+    'resume.goSub':'Telefonlar birkaç saniye içinde kendiliğinden yeniden bağlanır.', 'leave.warn':'Maç sürüyor. Sayfadan çıkarsan maç yarıda kalır.',
     'pad.title':'Kumanda', 'pad.connected':'Bağlandın! Sahnedeki ekrana bak.', 'pad.wait':'Sahnenin sırası…',
     'pad.saved':'Cevabın kaydedildi ✔', 'pad.lockedIn':'Tahmin kilitlendi ✔', 'pad.tap':'Hızlı bas!',
     'spec.title':'İzleyici', 'spec.hint':'Emoji gönder, sahnedeki ekranda uçsun. İzleyiciler oyuna karışamaz.',
@@ -1267,7 +1382,7 @@ const STR = {
     'set.contrast':'Yüksek kontrast harita', 'set.text':'Yazı boyutu',
     'set.tSmall':'Küçük', 'set.tNormal':'Normal', 'set.tBig':'Büyük', 'set.tHuge':'Dev (TV)',
     'set.keys':'Kısayollar', 'set.keysVal':'Her oyuncunun kendi tuş takımı var, kurulum ekranında yazıyor. Esc mola · menüde M ses, D tema.',
-    'fame.title':'Rekorlar', 'fame.menu':'Rekorlar', 'fame.sub':'Bu cihazdaki tüm maçlar',
+    'fame.title':'Sıralama ve rekorlar', 'fame.menu':'Sıralama · Rekorlar', 'fame.sub':'Bu cihazdaki tüm maçlar',
     'fame.matches':'Maç', 'fame.questions':'Soru', 'fame.accuracy':'İsabet',
     'fame.score':'En yüksek puan', 'fame.streak':'En uzun seri', 'fame.tiles':'En çok bölge',
     'fame.fast':'En hızlı parmak', 'fame.bestCat':'En iyi kategori', 'fame.worstCat':'En zayıf kategori',
@@ -1278,7 +1393,15 @@ const STR = {
     'fame.tabLocal':'Bu cihaz', 'fame.tabWorld':'Herkes',
     'fame.worldNone':'Henüz kimse maç bitirmemiş. İlk sen ol.',
     'fame.worldOff':'Leaderboard’a ulaşılamadı. İnternet yoksa ya da sunucu uykudaysa böyle olur.',
-    'fame.wins':'galibiyet', 'fame.needAuth':'Sıralamada yer almak için giriş yap.',
+    'fame.winsWord':'galibiyet', 'fame.needAuth':'Sıralamada yer almak için giriş yap.',
+    'lb.tab':'Sıralama', 'lb.title':'Masa sıralaması', 'lb.none':'Henüz sıralamada kimse yok. Bir maç bitir, telefondan katılanlar dahil herkes buraya yazılsın.',
+    'lb.head':'Oyuncu', 'lb.pts':'Lig puanı', 'lb.w':'Gal.', 'lb.m':'Maç', 'lb.best':'En iyi',
+    'lb.note':'1. = 10, 2. = 6, 3. = 4, katılım = 2 lig puanı. Bu cihazda oynanan bütün maçlar, telefondan katılanlar dahil. Botlar sayılmaz.',
+    'lb.up':'▲{n}', 'lb.down':'▼{n}', 'lb.new':'YENİ',
+    'titles.head':'Maçın ünvanları', 'titles.hpLeft':'Son {n} canla ayakta', 'titles.gap':'Üstündekine sadece {n} puan uzakta', 'titles.tie':'Üstündekiyle puanı eşit, sıralamayı hız belirledi',
+    'results.againN':'↻ Rövanş ({n} hazır)',
+    'pad.place':'{n}. oldun', 'pad.of':'{n} kişi arasında', 'pad.rematch':'🔁 Rövanş istiyorum', 'pad.rematchOk':'Rövanş isteğin sahneye gitti ✔',
+    'rules.head':'Bu turun kuralları',
     'auth.signIn':'Giriş yap', 'auth.signUp':'Hesap aç', 'auth.signOut':'Çıkış yap',
     'auth.nick':'Takma ad', 'auth.pass':'Şifre',
     'auth.titleIn':'Hesabına gir', 'auth.titleUp':'Yeni hesap',
@@ -1353,6 +1476,8 @@ const STR = {
     'splash.start':'▶ Start',
     'menu.party':'Party', 'menu.strategy':'Strategy',
     'menu.character':'My character', 'menu.characterSub':'Skin, hat, eyewear, face',
+    'menu.howto':'How to play', 'menu.howtoSub':'The rules in one minute',
+    'how.title':'How to play', 'how.trivia':'Trivia Arena', 'how.conquest':'Conquest Quiz', 'how.phone':'Join by phone', 'how.ok':'Got it, let’s play!',
     'menu.spectate':'Join as spectator', 'menu.spectateSub':'Stream mode · throw emoji',
     'menu.pad':'Use my phone as a controller', 'menu.padSub':'Join with a room code',
     'mode.trivia.name':'Trivia Arena', 'mode.trivia.desc':'A three-round party quiz: you pick the category, combos multiply the points, and in the last round points become health.',
@@ -1364,6 +1489,8 @@ const STR = {
     'setup.online':'With phones', 'setup.onlineSub':'Everyone joins from their own phone with the room code or QR.',
     'setup.roomCode':'Room code', 'setup.copyLink':'Copy link', 'setup.copied':'✔ Copied',
     'setup.lineup':'Line-up', 'setup.addBot':'+ Bot', 'setup.addLocal':'+ Local player',
+    'bot.level':'Bot difficulty', 'bot.easy':'Easy', 'bot.normal':'Normal', 'bot.hard':'Hard',
+    'bot.easySub':'Slow and often wrong. Great for kids and first games.', 'bot.normalSub':'About as sharp as an average friend.', 'bot.hardSub':'Fast and well-read. For the confident.',
     'setup.variant':'Match type', 'setup.start':'▶ Start match',
     'setup.seatHintSolo':'Every local player gets their own keys. On touch, player one taps the screen.',
     'setup.seatHintOnline':'Phones take the open seats. Bots fill whatever is left.',
@@ -1414,6 +1541,9 @@ const STR = {
     'cq.fell':'👑 <b>{a}</b> TOPPLED {d}’s capital! Every territory changed hands.',
     'cq.quiet':'Nobody declared an invasion — a quiet round.', 'cq.banner':'INVASION!', 'cq.bannerFall':'CAPITAL FALLS!',
     'cq.tiles':'{n} territories', 'cq.picked':'{a} picked a territory',
+    'resume.title':'Unfinished match found', 'resume.sub':'The page reloaded but the match survived: round {r}, question {q}. Pick up where you left off?',
+    'resume.yes':'▶ Resume the match', 'resume.no':'Start fresh', 'resume.label':'Resume', 'resume.go':'Back where we left off',
+    'resume.goSub':'Phones reconnect by themselves in a few seconds.', 'leave.warn':'A match is running. Leaving now abandons it.',
     'pad.title':'Controller', 'pad.connected':'Connected! Watch the big screen.', 'pad.wait':'Waiting on the stage…',
     'pad.saved':'Answer locked ✔', 'pad.lockedIn':'Estimate locked ✔', 'pad.tap':'Tap fast!',
     'spec.title':'Spectator', 'spec.hint':'Send emoji and watch them fly across the stage. Spectators cannot play.',
@@ -1446,7 +1576,7 @@ const STR = {
     'set.contrast':'High-contrast map', 'set.text':'Text size',
     'set.tSmall':'Small', 'set.tNormal':'Normal', 'set.tBig':'Large', 'set.tHuge':'Huge (TV)',
     'set.keys':'Shortcuts', 'set.keysVal':'Each player has their own key set, shown on the setup screen. Esc pauses · in menus M toggles sound, D the theme.',
-    'fame.title':'Records', 'fame.menu':'Records', 'fame.sub':'Every match on this device',
+    'fame.title':'Standings & records', 'fame.menu':'Standings · Records', 'fame.sub':'Every match on this device',
     'fame.matches':'Matches', 'fame.questions':'Questions', 'fame.accuracy':'Accuracy',
     'fame.score':'Highest score', 'fame.streak':'Longest streak', 'fame.tiles':'Most regions',
     'fame.fast':'Fastest finger', 'fame.bestCat':'Best category', 'fame.worstCat':'Weakest category',
@@ -1457,7 +1587,15 @@ const STR = {
     'fame.tabLocal':'This device', 'fame.tabWorld':'Everyone',
     'fame.worldNone':'Nobody has finished a match yet. Be the first.',
     'fame.worldOff':'Could not reach the leaderboard. That happens with no internet, or if the server is asleep.',
-    'fame.wins':'wins', 'fame.needAuth':'Sign in to appear on the board.',
+    'fame.winsWord':'wins', 'fame.needAuth':'Sign in to appear on the board.',
+    'lb.tab':'Standings', 'lb.title':'Table standings', 'lb.none':'Nobody on the board yet. Finish a match and everyone, phone players included, lands here.',
+    'lb.head':'Player', 'lb.pts':'League pts', 'lb.w':'W', 'lb.m':'Games', 'lb.best':'Best',
+    'lb.note':'1st = 10, 2nd = 6, 3rd = 4, taking part = 2 league points. Every match played on this device, phone players included. Bots do not count.',
+    'lb.up':'▲{n}', 'lb.down':'▼{n}', 'lb.new':'NEW',
+    'titles.head':'Titles of the night', 'titles.hpLeft':'Standing on just {n} HP', 'titles.gap':'Only {n} points off the next spot', 'titles.tie':'Level on points, split only by speed',
+    'results.againN':'↻ Rematch ({n} ready)',
+    'pad.place':'You finished {n}.', 'pad.of':'out of {n}', 'pad.rematch':'🔁 I want a rematch', 'pad.rematchOk':'Rematch request sent to the stage ✔',
+    'rules.head':'This round’s rules',
     'auth.signIn':'Sign in', 'auth.signUp':'Create account', 'auth.signOut':'Sign out',
     'auth.nick':'Nickname', 'auth.pass':'Password',
     'auth.titleIn':'Sign in', 'auth.titleUp':'New account',
@@ -1533,6 +1671,7 @@ try {
 function applySettings() {
   Sfx.setOn(SET.sound); Sfx.setVol(SET.vol);
   document.documentElement.setAttribute('data-theme', SET.dark ? 'dark' : 'light');
+  try { document.querySelector('meta[name="theme-color"]').setAttribute('content', SET.dark ? '#0E0C19' : '#EFE4CE'); } catch (e) {}
   applyCanvasTheme(SET.dark);
   if (typeof SPRITES !== 'undefined') SPRITES.clear();   // mürekkep rengi değişti
   $('swDark').classList.toggle('on', SET.dark);
@@ -1645,8 +1784,8 @@ const THEME = {
 };
 function applyCanvasTheme(dark) {
   if (dark) {
-    Object.assign(THEME, { ink:'#F6EEDD', paper:'#15131C', paper2:'#1F1C29', paper3:'#252131',
-      neutral:'#3A3446', sea:'#171A2C', eye:'#FFFDF6', shadow:'rgba(0,0,0,.55)' });
+    Object.assign(THEME, { ink:'#F6EEDD', paper:'#0E0C19', paper2:'#1A1630', paper3:'#221D3B',
+      neutral:'#3A3458', sea:'#131A33', eye:'#FFFDF6', shadow:'rgba(0,0,0,.55)' });
   } else {
     Object.assign(THEME, { ink:'#191320', paper:'#EFE4CE', paper2:'#E3D5B8', paper3:'#F7F0E1',
       neutral:'#C9BFA6', sea:'#A9C6DE', eye:'#FFFDF6', shadow:'rgba(25,19,32,.25)' });
@@ -4943,7 +5082,7 @@ const Net = {
     } catch (e) { this.room = null; }
     if (this.room) {
       this.transport = 'room'; this.ready = true;
-      ['join','joined','input','stage','spec','cheer'].forEach(topic => {
+      ['join','joined','input','stage','spec','cheer','rematch'].forEach(topic => {
         this.room.on(topic, (msg) => {
           const d = (msg && msg.data) || msg || {};
           if (d.code && this.code && d.code !== this.code) return;
@@ -4978,7 +5117,8 @@ const Net = {
     let sock;
     try { sock = this.sock = window.io(); } catch (e) { return; }
     this.transport = 'relay'; this.ready = true;
-    this.relayKey = Math.random().toString(36).slice(2) + Date.now().toString(36);
+    const saved = savedHost();
+    this.relayKey = (saved && saved.key) || Math.random().toString(36).slice(2) + Date.now().toString(36);
     sock.on('relay_msg', (w) => { if (w && w.topic) this.fire(w.topic, w.data || {}); });
     sock.on('relay_peers', (m) => { this.relayPeers = (m && m.n) || 0; if (this.role === 'host') netStatus('live'); });
     sock.on('relay_host_left', () => { this.joinedCode = null; netPadLost(); });
@@ -4999,7 +5139,11 @@ const Net = {
     if (!this.sock.connected) return;                    // 'connect' olayında kaydolur
     this.sock.emit('relay_host', { code, key:this.relayKey }, (r) => {
       if (this.role !== 'host' || this.code !== code) return;
-      if (r && r.ok) { this.relayHosted = code; this.relayPeers = r.n || 0; netStatus('live'); return; }
+      if (r && r.ok) {
+        this.relayHosted = code; this.relayPeers = r.n || 0; netStatus('live');
+        try { sessionStorage.setItem('ta-host', JSON.stringify({ code, key:this.relayKey })); } catch (e) {}
+        return;
+      }
       if (r && r.reason === 'taken') { Net.code = Net.newCode(); setupRoom(); return; }   // kod çakıştı
       netStatus('fail', (r && r.reason) || 'server');
     });
@@ -5140,10 +5284,13 @@ const NETQ = new Map();                                  // padId → beklenen c
 const PAD = { id:null, name:'', look:null, view:null, prompt:null };
 const SPEC = { viewers:0, last:null };
 
+const NETLAST = new Map();                               // padId → son gönderilen istem (yeniden bağlanana tekrar gider)
 function netAsk(player, prompt, ctx) {
   if (!player || !player.remote || !player.pad) return;
   NETQ.set(player.pad, ctx || prompt.kind);
-  Net.emit('stage', { to:player.pad, prompt:netEnrich(prompt) });
+  const full = netEnrich(prompt);
+  NETLAST.set(player.pad, full);
+  Net.emit('stage', { to:player.pad, prompt:full });
 }
 function netAskAll(players, build, ctx) { (players || []).filter(p => p.remote).forEach(p => netAsk(p, build(p), ctx)); }
 function netIdle(text) { Net.emit('stage', { to:'*', prompt:{ kind:'idle', text } }); }
@@ -5238,8 +5385,11 @@ function netPadLost() {
   padRender({ kind:'idle', text:t('join.lost') });
 }
 /* ── sahne: oda ── */
+/** Bu sekmede daha önce açılmış sahne (kod + anahtar). Sayfa yenilenince
+    aynı kodla geri gelinir; sunucu odayı 30 sn bekletir, telefonlar kopmaz. */
+function savedHost() { try { return JSON.parse(sessionStorage.getItem('ta-host') || 'null'); } catch (e) { return null; } }
 function setupRoom() {
-  if (!Net.code) Net.code = Net.newCode();
+  if (!Net.code) { const sh = Net.transport === 'relay' ? savedHost() : null; Net.code = (sh && sh.code) || Net.newCode(); }
   Net.role = 'host';
   Net.host(Net.code);
   $('roomCode').textContent = Net.code;
@@ -5266,6 +5416,16 @@ Net.on('join', (m) => {
     return;
   }
   let i = ROSTER.findIndex(r => r.pad === m.pad);
+  /* Maç sürerken bağlantısı kopup geri gelen telefon: koltuğu zaten onun.
+     Herkese "bağlandın" yayınlamak yerine yalnızca ona son istemi yolla;
+     eskiden bu yayın öteki telefonlardaki soruyu siliyordu. */
+  if (i >= 0 && (G.running || CQ.on)) {
+    Net.emit('joined', { pad:m.pad, ok:true, seat:i, name:ROSTER[i].name });
+    const last = NETLAST.get(m.pad);
+    Net.emit('stage', { to:m.pad, prompt:last || { kind:'idle', text:t('pad.wait') } });
+    netStatus('live');
+    return;
+  }
   if (i < 0) i = ROSTER.findIndex(r => r.kind === 'bot');
   if (i < 0 && ROSTER.length < maxSeats()) { ROSTER.push({ kind:'bot', name:'-', look:randomLook(ROSTER.length) }); i = ROSTER.length - 1; }
   if (i < 0) { Net.emit('joined', { pad:m.pad, ok:false, reason:t('join.full') }); return; }
@@ -5364,6 +5524,21 @@ function padRender(prompt) {
     ? '<div class="finaltable" style="margin-top:8px">' + prompt.scores.map((s2, i) =>
         '<div class="frow" style="padding:5px 9px"><span class="r">' + (i + 1) + '</span><span class="n">' + esc(s2.n) + '</span><span class="mono small">' + esc(s2.v) + '</span></div>').join('') + '</div>'
     : '';
+  if (prompt.kind === 'result') {
+    const tt = prompt.title;
+    box.innerHTML = '<div class="padres"><div class="big">' + (['🏆', '🥈', '🥉'][prompt.place - 1] || '🎖️') + '</div>' +
+      '<h3>' + esc(t('pad.place', { n:prompt.place })) + '</h3><p class="small" style="margin:0">' + esc(t('pad.of', { n:prompt.total })) +
+      (prompt.value ? ' · <b class="mono">' + esc(prompt.value) + '</b>' : '') + '</p>' +
+      (tt ? '<div class="tcard" style="--pc:' + esc(prompt.color || '#F0B02A') + '"><span class="em">' + tt.e + '</span><div class="tt">' + esc(tt.n) +
+        '</div><div class="td">' + esc(tt.d) + '</div></div>' : '') +
+      '<button class="padbtn c0" id="padRematch" style="width:100%;min-height:64px">' + esc(t('pad.rematch')) + '</button></div>';
+    $('padRematch').addEventListener('click', () => {
+      Net.emit('rematch', { from:PAD.id }); Sfx.correct();
+      const b = $('padRematch'); b.disabled = true; b.textContent = t('pad.rematchOk');
+      if (navigator.vibrate) try { navigator.vibrate(40); } catch (e) {}
+    });
+    return;
+  }
   if (prompt.kind === 'choice') {
     /* Tur 2'de telefondan oynayan birine yapılan sabotaj eskiden ortak sahne
        ekranına uygulanıyordu (herkesi cezalandırıyordu), "ters tuş" ise
@@ -5771,6 +5946,7 @@ function openSetup(branch) {
   renderSeats();
   showView('setup');
   Sfx.whoosh();
+  howtoOnce(branch);
 }
 /* harita seçimi (sadece fetih) */
 function renderMaps() {
@@ -5810,6 +5986,7 @@ function renderVariants() {
 }
 const seatViews = [];
 function renderSeats() {
+  renderBotLevel();
   const box = $('seats'); if (!box) return;
   box.innerHTML = ''; seatViews.forEach(v => v.destroy()); seatViews.length = 0;
   ROSTER.forEach((p, i) => {
@@ -6023,7 +6200,10 @@ function doJoin() {
   if (code.length !== 4) { $('joinStatus').textContent = t('join.short'); return; }
   if (!Net.ready) { $('joinStatus').textContent = t('join.offline'); return; }
   Net.code = code;
-  PAD.id = 'pad-' + Math.random().toString(36).slice(2, 9);
+  // aynı sekmede aynı koda yeniden katılan telefon aynı kimliği alır: koltuğu korunur
+  let pid = null; try { pid = sessionStorage.getItem('ta-pad-' + code); } catch (e) {}
+  PAD.id = pid || 'pad-' + Math.random().toString(36).slice(2, 9);
+  try { sessionStorage.setItem('ta-pad-' + code, PAD.id); sessionStorage.setItem('ta-padname', $('joinName').value || ''); } catch (e) {}
   $('joinStatus').textContent = t('join.searching');
   Sfx.click();
   const send = () => {
@@ -6071,7 +6251,7 @@ function rebuildLangUI() {
    8. TRIVIA ARENA — parti motoru (4 tur / düello / maraton)
    ══════════════════════════════════════════════════════════════════════════ */
 const CFG = {
-  introMs:3600, revealMs:3000, scoreboardMs:5200, bankFloor:0,
+  introMs:5000, revealMs:3000, scoreboardMs:5200, bankFloor:0,
   tugMs:8000,
   r2:{ interludeMs:4200, pickMs:9000, siphon:400 },
   r3:{ maxQuestions:16, startHp:4500 },
@@ -6283,7 +6463,8 @@ function runRound(r) {
   if (ROUNDS[r] && ROUNDS[r].hp) toHpRound();
   $('hudRound').textContent = G.marathon ? t('g.marathon') : t('g.round') + ' ' + r;
   refreshCrowd();
-  interstitial(G.marathon ? t('g.marathon') : t('g.round') + ' ' + r, t('round.' + r), G.marathon ? t('v.marathonSub') : t('round.' + r + 'd'));
+  interstitial(G.marathon ? t('g.marathon') : t('g.round') + ' ' + r, t('round.' + r), G.marathon ? t('v.marathonSub') : t('round.' + r + 'd'),
+    roundChips(G.marathon ? 'marathon' : r));
   Sfx.whoosh();
   /* Kategori önce seçilir, sonra o turun BÜTÜN soruları o kategoriden gelir. */
   later(() => openCategoryPick(BANK().d1, (cat) => { G.forcedCategory = cat; askQuestion(0); }), slow(CFG.introMs));
@@ -6395,8 +6576,49 @@ function relocQuestion() {
   if (hr && G.running) hr.textContent = G.marathon ? t('g.marathon') : t('g.round') + ' ' + G.round;
 }
 
+/* ══ MAÇ KURTARMA ═══════════════════════════════════════════════════════
+   Trivia maçı her sorunun başında sekmeye yazılır. Sahne sayfası yenilenir
+   ya da kapanıp 30 dk içinde açılırsa maç o sorudan sürer. (Bil ve Fethet
+   henüz kapsanmıyor; orada sayfadan çıkmadan önce uyarı veriyoruz.) */
+const CKPT_KEY = 'ta-match';
+function saveCheckpoint(index) {
+  if (Net.role === 'pad' || Net.role === 'spec' || !G.running) return;
+  try {
+    sessionStorage.setItem(CKPT_KEY, JSON.stringify({
+      at:Date.now(), variant:G.variant, round:G.round, roundQueue:G.roundQueue, roundPos:G.roundPos, qIndex:index,
+      forcedCategory:G.forcedCategory, hpMode:G.hpMode, stakeScale:G.stakeScale, startHp:G.startHp, marathon:G.marathon, elimCount:G.elimCount,
+      players:G.players.map(p => Object.assign({}, p, { brain:p.brain ? p.brain.name : null, debuffs:[], activeDebuffs:[] }))
+    }));
+  } catch (e) {}
+}
+function clearCheckpoint() { try { sessionStorage.removeItem(CKPT_KEY); } catch (e) {} }
+function loadCheckpoint() {
+  try { const c = JSON.parse(sessionStorage.getItem(CKPT_KEY) || 'null'); return c && Date.now() - c.at < 30 * 60 * 1000 && c.players ? c : null; }
+  catch (e) { return null; }
+}
+function offerResume() {
+  const c = loadCheckpoint(); if (!c) return;
+  $('resumeSub').textContent = t('resume.sub', { r:c.marathon ? 1 : c.round, q:c.qIndex + 1 });
+  $('resumeScrim').hidden = false;
+}
+function resumeTrivia(c) {
+  clearAll(); hideTip();
+  BRANCH = 'trivia'; VARIANT = c.variant; G.variant = c.variant;
+  G.players = c.players.map(p => Object.assign(p, { brain:p.brain ? (BOT_BRAINS.find(b => b.name === p.brain) || BOT_BRAINS[0]) : null }));
+  Object.assign(G, { used:new Set(), running:true, paused:false, hpMode:!!c.hpMode, elimCount:c.elimCount || 0, forcedCategory:c.forcedCategory,
+    stakeScale:c.stakeScale || 1, startHp:c.startHp || 0, marathon:!!c.marathon, roundQueue:c.roundQueue, roundPos:c.roundPos,
+    round:c.round, stake:0, heist:null, q:null, answers:new Map() });
+  G.plan = planMatch(G.players.length); G.startedAt = performance.now();
+  $('hudMode').textContent = t('v.' + G.variant);
+  $('hudRound').textContent = G.marathon ? t('g.marathon') : t('g.round') + ' ' + G.round;
+  buildCrowd(); showView('game'); Sfx.resume(); Sfx.whoosh();
+  interstitial(t('resume.label'), t('resume.go'), t('resume.goSub'));
+  netIdle(t('resume.go'));
+  later(() => askQuestion(c.qIndex), slow(3000));
+}
 function askQuestion(index) {
   clearAll();
+  saveCheckpoint(index);
   const r = G.round;
   const base = drawQuestion(r, index);
   const order = Array.from({ length:base.kind === 'tf' ? 2 : 4 }, (_, i) => i).sort(() => rnd() - .5);
@@ -6513,15 +6735,32 @@ function markPick(p, idx) {
 /* Botların cevap süresi soruyu okuma süresinden başlar. Eskiden en hızlı
    bot ~1,1 sn'de cevaplıyordu; insan daha soruyu okumadan "en hızlı doğru"
    ödülü ve tur 3 dokunulmazlığı hep ona gidiyordu. */
-function botReadMs(text) { return 900 + Math.min(150, String(text || '').length) * 28; }
+/* Bot zorluğu: kişilikler (hızlı, temkinli, kaotik…) aynı kalır; seviye
+   hepsinin isabetini, düşünme süresini ve tahmin sapmasını birlikte kaydırır. */
+const BOT_LEVELS = {
+  easy:{ acc:-.24, think:1.7, read:1.25, spread:1.9 },
+  normal:{ acc:0, think:1, read:1, spread:1 },
+  hard:{ acc:.07, think:.7, read:.85, spread:.55 }
+};
+const botLv = () => BOT_LEVELS[SET.botLevel] || BOT_LEVELS.normal;
+function botAcc(p, diff) { return clamp(p.brain.acc[diff] + botLv().acc, .12, .97); }
+/** Tahmin sorularında botun sapması. */
+function botSpread(p, q, base, k) { return (q.max - q.min) * (base - p.brain.acc[1] * k) * botLv().spread; }
+function renderBotLevel() {
+  const lv = SET.botLevel || 'normal';
+  const box = $('botLevel'); if (!box) return;
+  box.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.lv === lv));
+  $('botLevelSub').textContent = t('bot.' + lv + 'Sub');
+}
+function botReadMs(text) { return (900 + Math.min(150, String(text || '').length) * 28) * botLv().read; }
 function botWhen(p, text, limit) {
-  const read = botReadMs(text);
-  return clamp(read + gauss(p.brain.speed[0] * .45, p.brain.speed[1] * .6), read * .85, limit);
+  const read = botReadMs(text), L = botLv();
+  return clamp(read + gauss(p.brain.speed[0] * .45 * L.think, p.brain.speed[1] * .6 * L.think), read * .85, limit);
 }
 function scheduleBot(p, r) {
   const tier = roundTier(r, G.qIndex);
   const diff = tier === 'd1' ? 0 : tier === 'd2' ? 1 : 2;
-  let acc = p.brain.acc[diff], mean = p.brain.speed[0], sd = p.brain.speed[1];
+  let acc = botAcc(p, diff), mean = p.brain.speed[0] * botLv().think, sd = p.brain.speed[1] * botLv().think;
   const dbs = p.activeDebuffs || [];
   if (dbs.length) { acc -= .18 * dbs.length; mean += 900 * dbs.length; }
   const correct = rnd() < acc;
@@ -6581,7 +6820,7 @@ function closeQuestion() {
       if (el) { const r = el.getBoundingClientRect(); confetti(r.left + r.width / 2, r.top + r.height * .35, 24, [p.color, '#F7F0E1', '#F0B02A']); }
       if (p.kind === 'human') humanRight = true;
     } else {
-      p.wrongs++;
+      p.wrongs++; if (!a) p.timeouts = (p.timeouts || 0) + 1;
       if (v) v.setMood(G.hpMode && !p.alive ? 'dead' : 'sad', 1800);
       if (p.kind === 'human') humanWrong = true;
     }
@@ -6823,7 +7062,7 @@ function resolveHeist() {
       lines.push(attacker.name + ' → ' + target.name + ': ' + amount);
     } else {
       target.debuffs = [...new Set([...target.debuffs, act.action])];
-      target.sabotaged++;
+      target.sabotaged++; attacker.sabotages = (attacker.sabotages || 0) + 1;
       Sfx.sabotage();
       const v = slotViews[target.id]; if (v) v.setMood('panic', 1400);
       lines.push(attacker.name + ' → ' + target.name + ': ' + debuffName(act.action));
@@ -7783,7 +8022,7 @@ function cqCastleAct() {
   }
   netAskAll(CQ.players, () => ({ kind:'number', title:t('cq.act1'), text:q.q, unit:q.unit, plain:isYearQ(q), start:'' }), 'cq-castleq');
   CQ.players.filter(p => p.kind === 'bot').forEach(p => {
-    const spread = (q.max - q.min) * (0.22 - p.brain.acc[1] * 0.18);
+    const spread = botSpread(p, q, .22, .18);
     CQ.est.guesses.set(p.id, Math.round(clamp(q.a + gauss(0, spread), q.min, q.max)));
     CQ.est.at.set(p.id, performance.now() + clamp(gauss(p.brain.speed[0], p.brain.speed[1]), 800, 9000));
   });
@@ -7987,7 +8226,7 @@ function cqExpand(i) {
   }
   netAskAll(CQ.players, () => ({ kind:'number', title:t('cq.expand'), text:q.q, unit:q.unit, plain:isYearQ(q), start:'' }), 'cq-estimate');
   CQ.players.filter(p => p.kind === 'bot' && !p.dead).forEach(p => {
-    const spread = (q.max - q.min) * (0.22 - p.brain.acc[1] * 0.18);
+    const spread = botSpread(p, q, .22, .18);
     CQ.est.guesses.set(p.id, Math.round(clamp(q.a + gauss(0, spread), q.min, q.max)));
     CQ.est.at.set(p.id, performance.now() + clamp(gauss(p.brain.speed[0], p.brain.speed[1]), 800, 9000));
   });
@@ -8175,9 +8414,15 @@ function cqLaunch(attacker, key) {
 function cqDuel() {
   const at = CQ.attack; if (!at) return cqNextTurn();
   CQ.phase = 'duel';
+  /* Düello soruları Trivia Arena'nın bütün havuzundan gelir: 12 kategori,
+     kolay/orta/zor karışık, rastgele. Eskiden yalnızca orta seviye vardı. */
   const B = BANK();
-  const pool = B.d2.filter(q => !CQ.usedQ.has(q));
-  const src = pick(SEEN.prefer(pool.length ? pool : B.d2)); CQ.usedQ.add(src); SEEN.add(src);
+  const all = [].concat(B.d1 || [], B.d2 || [], B.d3 || []);
+  const pool = all.filter(q => !CQ.usedQ.has(q));
+  const src = pick(SEEN.prefer(pool.length ? pool : all)); CQ.usedQ.add(src); SEEN.add(src);
+  const tierIdx = (B.d1 || []).indexOf(src) >= 0 ? 0 : (B.d3 || []).indexOf(src) >= 0 ? 2 : 1;
+  // uzun (zor) sorular okunabilsin: 60 karakterden sonrası için ek süre, en fazla 4 sn
+  const duelMs = qms(CQCFG.duelMs + Math.min(4000, Math.max(0, LQ(src).q.length - 60) * 30));
   const order = [0, 1, 2, 3].sort(() => rnd() - .5);
   const L = () => LQ(src);
   const options = order.map(i => L().o[i]);
@@ -8196,8 +8441,8 @@ function cqDuel() {
   duellists.filter(p => p.remote).forEach(p => netAsk(p, { kind:'choice', title:t('cq.duel'), text:L().q, options:CQ.duel.options }, 'cq-duel'));
   netIdleExcept(duellists, t('cq.watching', { a:at.attacker.name, b:at.defender.name }));
   duellists.filter(p => p.kind === 'bot').forEach(p => {
-    const ok = rnd() < p.brain.acc[1];
-    const when = botWhen(p, L().q, qms(CQCFG.duelMs) - 300);
+    const ok = rnd() < botAcc(p, tierIdx);
+    const when = botWhen(p, L().q, duelMs - 300);
     later(() => {
       if (CQ.phase !== 'duel') return;
       const wrongs = options.map((_, i) => i).filter(i => i !== correct);
@@ -8206,7 +8451,7 @@ function cqDuel() {
   });
   Sfx.whoosh();
   cqRenderPlayers();
-  cqTimer(qms(CQCFG.duelMs), cqDuelClose);
+  cqTimer(duelMs, cqDuelClose);
 }
 function cqAnswer(p, idx) {
   const d = CQ.duel, at = CQ.attack;
@@ -8253,7 +8498,7 @@ function cqTieBreak() {
   }
   duellists.filter(p => p.remote).forEach(p => netAsk(p, { kind:'number', title:t('cq.tieBreak'), text:q.q, unit:q.unit, plain:isYearQ(q), start:'' }, 'cq-tie'));
   duellists.filter(p => p.kind === 'bot').forEach(p => {
-    const spread = (q.max - q.min) * (0.2 - p.brain.acc[1] * 0.16);
+    const spread = botSpread(p, q, .2, .16);
     CQ.tie.guesses.set(p.id, Math.round(clamp(q.a + gauss(0, spread), q.min, q.max)));
     CQ.tie.at.set(p.id, performance.now() + clamp(gauss(p.brain.speed[0], p.brain.speed[1]), 600, 7000));
   });
@@ -8385,7 +8630,7 @@ const podViews = [];
 let LAST_RESULT = null;
 
 function finishTrivia() {
-  clearAll(); G.running = false; G.q = null;
+  clearAll(); G.running = false; G.q = null; clearCheckpoint();
   const ranked = [...G.players].sort((a, b) => {
     if (G.hpMode) {
       if (a.alive !== b.alive) return a.alive ? -1 : 1;
@@ -8460,8 +8705,21 @@ function showResults(ranked, kind) {
   else if (wildest && wildest.wrongs > 0) cards.push([t('stat.wild'), wildest.name, t('stat.wildSub', { n:wildest.wrongs })]);
   if (climbed) cards.push([t('stat.comeback'), comeback.name, t('stat.climb', { a:comeback.rankEarly, b:ranked.indexOf(comeback) + 1 })]);
   else cards.push([t('stat.steady'), ranked[0].name, t('stat.steadySub')]);
-  $('statGrid').innerHTML = cards.slice(0, 4)
-    .map(([a, b, c]) => '<div class="stat"><b>' + esc(a) + '</b><div class="who">' + esc(b) + '</div><div class="dt">' + esc(c) + '</div></div>').join('');
+  void cards;
+  const titles = awardTitles(ranked, kind);
+  $('statGrid').innerHTML = ranked.map((p, i) => titleCard(p, titles.get(p), i)).join('');
+  const moves = leagueRecord(ranked);
+  renderLeague($('resBoard'), moves, ranked, 8);
+  $('resBoardHead').hidden = $('resBoard').hidden = !moves;
+  // telefonlara kişisel sonuç: sıra, ünvan ve rövanş düğmesi
+  REMATCH.clear(); renderAgain();
+  ranked.forEach((p, i) => {
+    if (!p.remote || !p.pad) return;
+    const tt = titles.get(p);
+    NETLAST.set(p.pad, null);
+    Net.emit('stage', { to:p.pad, prompt:{ kind:'result', place:i + 1, total:ranked.length, value:resultValue(p, kind),
+      title:tt ? { e:tt.e, n:tt.n, d:tt.d } : null, color:p.color } });
+  });
 
   $('finalTable').innerHTML = ranked.map((p, i) =>
     '<div class="frow"><span class="r">' + (i + 1) + '</span><span class="n">' + esc(p.name) +
@@ -8475,6 +8733,252 @@ function showResults(ranked, kind) {
   let n = 0;
   const rain = setInterval(() => { confettiRain([win.color, '#F0B02A', '#F7F0E1']); if (++n > 26) clearInterval(rain); }, 320);
 }
+/* ══ MAÇ SONU ÜNVANLARI ═══════════════════════════════════════════════════
+   Herkes bir ünvanla ayrılır, sonuncu bile. Ünvan gerçek olmalı: "En hızlı
+   parmak" gerçekten en hızlı olana gider. Bir oyuncu birden fazla ünvanı
+   hak ediyorsa listede önce geleni alır; ünvanı kalmayanlara sonuncu için
+   "Gelecek vadeden", diğerlerine komik teselli ünvanları düşer.
+   ═══════════════════════════════════════════════════════════════════════════ */
+const TITLES = [
+  { k:'saboteur', e:'🦹', tr:['Sabotaj Kralı', '{n} sabotaj, sıfır pişmanlık'], en:['Sabotage King', '{n} sabotages, zero regrets'],
+    v:(p) => (p.sabotages || 0) >= 1 ? [p.sabotages * 1000 + (p.stolen || 0), p.sabotages] : null },
+  { k:'thief', e:'💰', tr:['Tatlı Dilli Hırsız', '{n} puanı “ödünç” aldı'], en:['Smooth Operator', '“Borrowed” {n} points'],
+    v:(p) => (p.stolen || 0) > 0 ? [p.stolen, p.stolen] : null },
+  { k:'close', e:'🪂', tr:['Kıl Payı Kurtulan', '{n}'], en:['Narrow Escape', '{n}'], v:(p, c) => c.close(p) },
+  { k:'comeback', e:'📈', tr:['Geri Dönüş Ustası', '{n}. sıradan tırmandı'], en:['Comeback Artist', 'Climbed from #{n}'],
+    v:(p, c) => { const up = (p.rankEarly || 0) - c.rank(p); return p.rankEarly && up >= 1 ? [up, p.rankEarly] : null; } },
+  { k:'fire', e:'🔥', tr:['Alev Topu', 'Üst üste {n} doğru'], en:['On Fire', '{n} in a row'],
+    v:(p) => (p.bestCombo || 0) >= 3 ? [p.bestCombo, p.bestCombo] : null },
+  { k:'fast', e:'⚡', tr:['En Hızlı Parmak', 'Ortalama {n} sn'], en:['Fastest Finger', '{n}s on average'],
+    v:(p) => p.timeCount >= 3 ? [-p.timeSum / p.timeCount, (p.timeSum / p.timeCount / 1000).toFixed(1)] : null },
+  { k:'brain', e:'🧠', tr:['Ayaklı Ansiklopedi', '{n} doğru'], en:['Walking Encyclopedia', '{n} correct'],
+    v:(p) => p.asked >= 3 && p.correct / p.asked >= .5 ? [p.correct / p.asked + p.correct / 1000, p.correct + '/' + p.asked] : null },
+  { k:'conqueror', e:'🏰', tr:['Fatih', '{n} bölge fethetti'], en:['The Conqueror', 'Took {n} territories'],
+    v:(p) => (p.conquered || 0) >= 1 ? [p.conquered, p.conquered] : null },
+  { k:'siege', e:'🔨', tr:['Kale Kırıcı', '{n} kule yıktı'], en:['Wall Breaker', 'Toppled {n} towers'],
+    v:(p) => (p.capitalHits || 0) >= 1 ? [p.capitalHits, p.capitalHits] : null },
+  { k:'magnet', e:'🎯', tr:['Sabotaj Mıknatısı', '{n} kez hedef oldu, yıkılmadı'], en:['Sabotage Magnet', 'Targeted {n} times, still standing'],
+    v:(p) => (p.sabotaged || 0) >= 1 ? [p.sabotaged, p.sabotaged] : null },
+  { k:'brave', e:'🎲', tr:['Cesur Tahminci', '{n} yanlış, hiç çekinmedi'], en:['Fearless Guesser', '{n} misses, never hesitated'],
+    v:(p) => (p.wrongs || 0) - (p.timeouts || 0) >= 3 ? [p.wrongs - (p.timeouts || 0), p.wrongs - (p.timeouts || 0)] : null },
+  { k:'sleepy', e:'😴', tr:['Uykucu', '{n} soruyu süreye bıraktı'], en:['Sleepyhead', 'Let {n} questions run out'],
+    v:(p) => (p.timeouts || 0) >= 3 ? [p.timeouts, p.timeouts] : null },
+  { k:'thinker', e:'🐢', tr:['Derin Düşünür', 'Ortalama {n} sn — acele işe şeytan karışır'], en:['Deep Thinker', '{n}s on average — haste makes waste'],
+    v:(p) => p.timeCount >= 3 ? [p.timeSum / p.timeCount, (p.timeSum / p.timeCount / 1000).toFixed(1)] : null }
+];
+const TITLE_LAST = { e:'🌱', tr:['Gelecek Vadeden', 'Bir sonraki maçın gizli favorisi'], en:['Rising Star', 'Secret favourite for the next match'] };
+const TITLE_FALLBACK = [
+  { e:'🎉', tr:['Partinin Neşesi', 'Masaya enerji getirdi'], en:['Life of the Party', 'Brought the energy'] },
+  { e:'🫡', tr:['Sadık Asker', 'Sonuna kadar savaştı'], en:['Loyal Soldier', 'Fought to the very end'] },
+  { e:'🍀', tr:['Şans Perisi Yolda', 'Zar bu sefer tutmadı'], en:['Luck Is on Its Way', 'The dice will turn'] },
+  { e:'🧘', tr:['Zen Ustası', 'Kaos içinde huzur'], en:['Zen Master', 'Calm amid the chaos'] }
+];
+function awardTitles(ranked, kind) {
+  const rank = (p) => ranked.indexOf(p) + 1;
+  const ctx = {
+    rank,
+    close(p) {
+      const i = ranked.indexOf(p);
+      if (kind === 'hp') {
+        if (!p.alive || !(p.hp > 0)) return null;
+        const r = p.hp / Math.max(1, p.maxHp || p.hp);
+        return r < .35 ? [-r, t('titles.hpLeft', { n:groupNum(p.hp) })] : null;
+      }
+      if (i < 1) return null;
+      const gap = (ranked[i - 1].points || 0) - (p.points || 0);
+      return gap >= 0 && gap <= 500 ? [-gap, gap ? t('titles.gap', { n:gap }) : t('titles.tie')] : null;
+    }
+  };
+  const out = new Map();
+  const lang = LANG === 'en' ? 'en' : 'tr';
+  TITLES.forEach(def => {
+    let best = null;
+    ranked.forEach(p => {
+      const r = def.v(p, ctx);
+      if (r && (!best || r[0] > best.r[0])) best = { p, r };
+    });
+    if (!best || out.has(best.p)) return;
+    const [n, d] = def[lang];
+    out.set(best.p, { k:def.k, e:def.e, n, d:d.split('{n}').join(String(best.r[1])) });
+  });
+  let fb = Math.floor(rnd() * TITLE_FALLBACK.length);
+  ranked.forEach((p, i) => {
+    if (out.has(p)) return;
+    const def = (i === ranked.length - 1 && ranked.length > 1) ? TITLE_LAST : TITLE_FALLBACK[fb++ % TITLE_FALLBACK.length];
+    out.set(p, { k:'fb', e:def.e, n:def[lang][0], d:def[lang][1] });
+  });
+  return out;
+}
+function titleCard(p, tt, i) {
+  if (!tt) return '';
+  return '<div class="tcard" style="--pc:' + esc(p.color || '#F0B02A') + ';animation-delay:' + (i * 90) + 'ms">' +
+    '<span class="em">' + tt.e + '</span><div class="tt">' + esc(tt.n) + '</div>' +
+    '<div class="tw">' + esc(p.name) + (p.kind === 'bot' ? ' <span class="small">' + esc(t('g.bot')) + '</span>' : '') + '</div>' +
+    '<div class="td">' + esc(tt.d) + '</div></div>';
+}
+
+/* ══ MASA SIRALAMASI ═══════════════════════════════════════════════════════
+   Bu cihazda biten her maç lig puanı yazar: 1. 10, 2. 6, 3. 4, diğerleri 2.
+   Kimlik oyuncunun adıdır; telefondan katılan da, klavyeden oynayan da
+   aynı tabloya girer. Botlar tabloya girmez ama sıralamayı etkiler.
+   ═══════════════════════════════════════════════════════════════════════════ */
+const LEAGUE_KEY = 'ta-league';
+const LEAGUE = Object.assign({ v:1, players:{} }, store.get(LEAGUE_KEY, {}));
+LEAGUE.players = LEAGUE.players || {};
+const LEAGUE_PTS = [10, 6, 4];
+const leagueKey = (name) => String(name || '').trim().toLocaleLowerCase('tr');
+function leagueRows() {
+  return Object.values(LEAGUE.players)
+    .sort((a, b) => b.lp - a.lp || b.w - a.w || b.best - a.best || a.m - b.m);
+}
+/** Maçı tabloya yazar; sıra değişimlerini döndürür (insan yoksa null). */
+function leagueRecord(ranked) {
+  const humans = ranked.filter(p => p.kind === 'human' && p.name);
+  if (!humans.length) return null;
+  const before = new Map(leagueRows().map((r, i) => [leagueKey(r.name), i + 1]));
+  ranked.forEach((p, i) => {
+    if (p.kind !== 'human' || !p.name) return;
+    const k = leagueKey(p.name);
+    const r = LEAGUE.players[k] || (LEAGUE.players[k] = { name:p.name, lp:0, w:0, m:0, pod:0, best:0, color:p.color });
+    r.name = p.name; r.color = p.color || r.color;
+    r.m++; r.lp += LEAGUE_PTS[i] || 2;
+    if (i === 0) r.w++;
+    if (i < 3) r.pod++;
+    r.best = Math.max(r.best || 0, p.points | 0);
+    r.at = Date.now();
+  });
+  store.set(LEAGUE_KEY, LEAGUE);
+  const moves = new Map();
+  leagueRows().forEach((r, i) => {
+    const k = leagueKey(r.name), was = before.get(k);
+    moves.set(k, was == null ? 'new' : was - (i + 1));
+  });
+  moves.hot = new Set(humans.map(p => leagueKey(p.name)));
+  return moves;
+}
+function renderLeague(box, moves, ranked, limit) {
+  if (!box) return;
+  const rows = leagueRows();
+  if (!rows.length) { box.innerHTML = '<div class="lr"><span class="small" style="grid-column:1/-1;padding:8px 2px;text-align:center">🏆 ' + esc(t('lb.none')) + '</span></div>'; return; }
+  const hot = (moves && moves.hot) || new Set();
+  const lim = limit || 50;
+  let list = rows.slice(0, lim);
+  // bu maçta oynayan biri ilk sıralarda değilse yine de görünsün
+  rows.forEach(r => { if (hot.has(leagueKey(r.name)) && list.indexOf(r) < 0) list.push(r); });
+  box.innerHTML = '<div class="lr hd"><span>#</span><span>' + esc(t('lb.head')) + '</span><span class="v">' + esc(t('lb.pts')) +
+    '</span><span class="v">' + esc(t('lb.w')) + '</span><span class="v">' + esc(t('lb.m')) + '</span><span class="v c-best">' + esc(t('lb.best')) + '</span></div>' +
+    list.map(r => {
+      const i = rows.indexOf(r), k = leagueKey(r.name), mv = moves ? moves.get(k) : 0;
+      const mvHtml = !moves || !hot.has(k) ? '' : mv === 'new' ? '<span class="mv nw">' + esc(t('lb.new')) + '</span>'
+        : mv > 0 ? '<span class="mv up">' + esc(t('lb.up', { n:mv })) + '</span>' : mv < 0 ? '<span class="mv dn">' + esc(t('lb.down', { n:-mv })) + '</span>' : '';
+      return '<div class="lr' + (hot.has(k) ? ' hot' : '') + '"><span class="pl">' + (i === 0 ? '🏆' : i + 1) + '</span>' +
+        '<span class="nm"><i style="background:' + esc(r.color || '#F0B02A') + '"></i>' + esc(r.name) + ' ' + mvHtml + '</span>' +
+        '<span class="v"><b>' + r.lp + '</b></span><span class="v">' + r.w + '</span><span class="v">' + r.m + '</span>' +
+        '<span class="v c-best">' + (r.best || '—') + '</span></div>';
+    }).join('') +
+    '<div class="lr"><span></span><span class="small" style="grid-column:2/-1">' + esc(t('lb.note')) + '</span></div>';
+}
+
+/* ══ NASIL OYNANIR ═══════════════════════════════════════════════════════
+   Kurallar eskiden tek bir bilgi balonunda uzun bir paragraftı; ilk maçta
+   kimse okumuyordu. Artık adım adım, ikonlu kartlar. Bir mod ilk kez
+   açıldığında pencere kendiliğinden bir kez gelir.                         */
+const HOWTO = {
+  trivia:[
+    ['🪢', 'var(--mustard)', ['Kategori halatı', 'Her tur başında istediğin kategoriye hızlı hızlı bas. En çok çekilen kategori, turun bütün sorularını belirler.'],
+                             ['Category tug-of-war', 'At the start of each round, mash the category you want. The one pulled hardest sets every question in the round.']],
+    ['🎯', 'var(--teal)', ['Tur 1 · Kategori avı', '4 soru. Doğru cevap 250 puan. Üst üste doğrular 500 ve 750 yazar; yanlış seriyi sıfırlar.'],
+                          ['Round 1 · Category hunt', '4 questions. A correct answer is 250. Chains pay 500 then 750; a miss resets the chain.']],
+    ['🦹', 'var(--pink)', ['Tur 2 · Güç turu', 'Her soruda en hızlı doğru bilen ödül seçer: birinden 400 puan çal ya da ekranını sabote et.'],
+                          ['Round 2 · Power round', 'The fastest correct answer each question picks a reward: steal 400 points or sabotage a rival’s screen.']],
+    ['❤️', 'var(--red)', ['Tur 3 · Son ayakta kalan', 'Puanın cana döner. Her soruda sadece en hızlı doğru cevap cezadan kurtulur. Canı biten elenir.'],
+                         ['Round 3 · Last one standing', 'Points become health. Only the fastest correct answer escapes each question’s price. Hit zero and you are out.']],
+    ['⌨️', 'var(--violet)', ['Kontroller', 'Tek ekranda herkesin kendi 4 tuşu var (kadroda yazıyor). Telefonla katılan kendi telefonundan basar.'],
+                            ['Controls', 'On one screen everyone has their own 4 keys (shown in the line-up). Phone players tap on their phones.']]
+  ],
+  conquest:[
+    ['🏰', 'var(--mustard)', ['1 · Kaleni kur', 'Bir tahmin sorusu sorulur. Gerçeğe en yakın tahmin eden ilk seçer; herkes haritada kalesini kurar.'],
+                             ['1 · Found your castle', 'One estimate question. The closest guess picks first, and everyone places a castle on the map.']],
+    ['🗺️', 'var(--teal)', ['2 · Toprağı paylaş', 'Tahmin sorularında en yakın tahmin 2, ikinci 1 bölge alır. ★ zengin bölgeler 2 kat puan.'],
+                          ['2 · Divide the land', 'Estimate questions: closest guess takes 2 regions, runner-up 1. ★ rich regions score double.']],
+    ['⚔️', 'var(--red)', ['3 · Savaş', 'Sırayla komşu bir bölgeye saldır. İkiniz aynı soruyu cevaplarsınız; sadece sen bilirsen bölge senin. İkiniz de bilirseniz tahmin sorusu ayırır.'],
+                         ['3 · War', 'Take turns attacking a neighbouring region. You both answer the same question; win it alone and the land is yours. Both right? An estimate decides.']],
+    ['🏯', 'var(--violet)', ['Kaleyi düşür', 'Her kalenin 3 kulesi var. Son kulesi düşen elenir; toprakları ve puanı fatihe geçer. Sonunda en çok puan kazanır.'],
+                            ['Topple the castle', 'Every castle has 3 towers. Lose the last one and you are out; your land and points go to the conqueror. Most points wins.']],
+    ['❓', 'var(--pink)', ['Sorular', 'Düellolar Trivia Arena’nın bütün havuzundan gelir: 12 kategori, kolay/orta/zor karışık.'],
+                          ['Questions', 'Duels draw from the whole Trivia Arena pool: 12 categories, easy to hard, mixed.']]
+  ],
+  phone:[
+    ['📺', 'var(--mustard)', ['Sahneyi aç', 'Bilgisayarda ya da TV’de modu seç, “Ev partisi” veya “Online arena”ya tıkla. Ekranda 4 harfli kod ve QR çıkar.'],
+                             ['Open the stage', 'On a computer or TV pick a mode, then “House party” or “Online arena”. A 4-letter code and a QR appear.']],
+    ['📱', 'var(--teal)', ['Katıl', 'Telefon kamerasıyla QR’ı okut ya da siteyi açıp “Telefonum kumanda olsun”a kodu yaz. Adını gir.'],
+                          ['Join', 'Scan the QR with your phone camera, or open the site, tap “My phone is the controller” and type the code.']],
+    ['🎮', 'var(--pink)', ['Oyna', 'Sorular büyük ekranda, cevap tuşları telefonunda. Uzun listelerde (harita) ekranı kaydırabilirsin.'],
+                          ['Play', 'Questions on the big screen, answer buttons on your phone. Long lists (map picks) scroll.']],
+    ['🔁', 'var(--violet)', ['Rövanş', 'Maç bitince telefonunda sıran ve ünvanın çıkar. “Rövanş istiyorum” de; sahne tek tuşla yeni maçı başlatır.'],
+                            ['Rematch', 'When the match ends your place and title appear on your phone. Tap “I want a rematch” and the stage restarts in one click.']]
+  ]
+};
+let howTab = 'trivia';
+function renderHowto() {
+  const lang = LANG === 'en' ? 4 : 3;
+  $('howTabs').querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.how === howTab));
+  $('howBody').innerHTML = HOWTO[howTab].map((st, i) => {
+    const [title, body] = st[lang - 1];
+    return '<div class="hstep" style="--hc:' + st[1] + ';animation-delay:' + (i * 70) + 'ms"><div class="he"><span class="hi">' + st[0] + '</span>' +
+      '<div><div class="hn">' + (i + 1) + ' / ' + HOWTO[howTab].length + '</div><h4>' + esc(title) + '</h4></div></div><p>' + esc(body) + '</p></div>';
+  }).join('');
+}
+function openHowto(tab) {
+  howTab = tab || (BRANCH === 'conquest' ? 'conquest' : 'trivia');
+  renderHowto();
+  $('howScrim').hidden = false;
+}
+function closeHowto() { $('howScrim').hidden = true; }
+/** Bir mod ilk kez açılınca kuralları bir kez kendiliğinden göster. */
+function howtoOnce(branch) {
+  const seen = store.get('ta-howto', {});
+  if (seen[branch]) return;
+  seen[branch] = 1; store.set('ta-howto', seen);
+  later(() => openHowto(branch), 350);
+}
+/* Tur başı kural çipleri: interstitial'daki paragrafın görsel özeti. */
+const ROUND_CHIPS = {
+  1:[['🎯', 'var(--teal)', ['Doğru = 250', 'Correct = 250'], ['4 soru', '4 questions']],
+     ['🔥', 'var(--red)', ['Seri: 500 → 750', 'Chain: 500 → 750'], ['yanlış sıfırlar', 'a miss resets']],
+     ['⏱️', 'var(--mustard)', ['14 saniye', '14 seconds'], ['her soru', 'per question']]],
+  2:[['⚡', 'var(--mustard)', ['En hızlı doğru', 'Fastest correct'], ['ödül seçer', 'picks a reward']],
+     ['💰', 'var(--teal)', ['400 puan çal', 'Steal 400'], ['ya da…', 'or…']],
+     ['🦹', 'var(--pink)', ['Sabotaj', 'Sabotage'], ['rakibin ekranına', 'a rival’s screen']]],
+  3:[['❤️', 'var(--red)', ['Puan = can', 'Points = health'], ['canı biten elenir', 'zero means out']],
+     ['⚡', 'var(--mustard)', ['En hızlı doğru', 'Fastest correct'], ['cezadan kurtulur', 'is spared']],
+     ['📈', 'var(--violet)', ['Ceza büyür', 'Price climbs'], ['her soruda', 'every question']]],
+  marathon:[['🔥', 'var(--red)', ['Zincir', 'Chain'], ['250 → 500 → 750', '250 → 500 → 750']],
+     ['🎯', 'var(--teal)', ['10 soru', '10 questions'], ['kolaydan zora', 'easy to hard']],
+     ['🕊️', 'var(--mustard)', ['Sabotaj yok', 'No sabotage'], ['sadece bilgi', 'pure knowledge']]]
+};
+function roundChips(key) {
+  const set = ROUND_CHIPS[key]; if (!set) return '';
+  const li = LANG === 'en' ? 1 : 0;
+  return '<div class="rulechips">' + set.map((c, i) =>
+    '<div class="rchip" style="--rc:' + c[1] + ';animation-delay:' + (200 + i * 160) + 'ms"><span class="ri">' + c[0] + '</span><span>' +
+    esc(c[2][li]) + '<small>' + esc(c[3][li]) + '</small></span></div>').join('') + '</div>';
+}
+
+/* ══ RÖVANŞ ═══════════════════════════════════════════════════════════════
+   Telefonlar maç bitince bağlı kalır; "Tekrar oyna" aynı kadroyla, aynı
+   modda yeni maçı başlatır. Telefondan rövanş isteyenler düğmede sayılır. */
+const REMATCH = new Set();
+function renderAgain() {
+  const b = $('btnAgain'); if (!b) return;
+  b.textContent = REMATCH.size ? t('results.againN', { n:REMATCH.size }) : t('results.again');
+  b.classList.toggle('pulse', REMATCH.size > 0);
+}
+Net.on('rematch', (m) => {
+  if (Net.role !== 'host' || !m.from || $('v-results').hidden) return;
+  REMATCH.add(m.from); renderAgain(); Sfx.pop();
+});
+
 function resultValue(p, kind) {
   if (kind === 'conquest') return (p.dead ? '☠ ' : '') + p.points + 'p · ' + p.tiles + '🏳';
   if (kind === 'hp') return p.alive ? p.hp + ' HP' : t('g.out');
@@ -9033,7 +9537,7 @@ function showChat(code) {
   renderChat();
 }
 /** Rekor penceresindeki "Herkes" sekmesi. */
-let fameTab = 'local';
+let fameTab = 'board';
 async function renderWorld() {
   const box = $('fameBody'); if (!box) return;
   box.innerHTML = '<p class="small">' + esc(t('auth.busy')) + '</p>';
@@ -9053,9 +9557,12 @@ async function renderWorld() {
 }
 function setFameTab(tab) {
   fameTab = tab;
+  $('tabBoard').classList.toggle('on', tab === 'board');
   $('tabLocal').classList.toggle('on', tab === 'local');
   $('tabWorld').classList.toggle('on', tab === 'world');
-  if (tab === 'world') renderWorld(); else renderFame();
+  if (tab === 'world') renderWorld();
+  else if (tab === 'board') { $('fameBody').innerHTML = '<div class="lbtable" id="lbBody"></div>'; renderLeague($('lbBody'), null, null, 50); }
+  else renderFame();
 }
 
 /* ── sunucu ayarı ───────────────────────────────────────────────────────
@@ -9101,7 +9608,7 @@ function resetServer() {
    11. OLAYLAR VE AÇILIŞ
    ══════════════════════════════════════════════════════════════════════════ */
 function toMenu() {
-  clearAll();
+  clearAll(); clearCheckpoint();
   if (CQ.on) cqStop();
   TUG.on = false; $('tug').hidden = true;
   G.running = false; G.q = null; G.hpMode = false;
@@ -9113,9 +9620,20 @@ function startMatch() {
 }
 
 $('btnStart').addEventListener('click', () => { Sfx.resume(); Sfx.click(); showView('menu'); });
-$('posterTrivia').addEventListener('click', (e) => { if (e.target.dataset.info) return showTip(e.target, t('mode.trivia.name'), t('mode.trivia.info')); Sfx.click(); openSetup('trivia'); });
-$('posterConquest').addEventListener('click', (e) => { if (e.target.dataset.info) return showTip(e.target, t('mode.conquest.name'), t('mode.conquest.info')); Sfx.click(); openSetup('conquest'); });
+$('posterTrivia').addEventListener('click', (e) => { if (e.target.dataset.info) { Sfx.click(); return openHowto('trivia'); } Sfx.click(); openSetup('trivia'); });
+$('posterConquest').addEventListener('click', (e) => { if (e.target.dataset.info) { Sfx.click(); return openHowto('conquest'); } Sfx.click(); openSetup('conquest'); });
 $('tileWard').addEventListener('click', () => { Sfx.click(); openWard(); });
+$('btnResumeYes').addEventListener('click', () => { const c = loadCheckpoint(); $('resumeScrim').hidden = true; if (c) resumeTrivia(c); });
+$('btnResumeNo').addEventListener('click', () => { clearCheckpoint(); $('resumeScrim').hidden = true; Sfx.click(); });
+window.addEventListener('beforeunload', (e) => {
+  if (Net.role === 'pad' || Net.role === 'spec') return;
+  if (!(G.running || CQ.on)) return;
+  e.preventDefault(); e.returnValue = t('leave.warn'); return t('leave.warn');
+});
+$('tileHowto').addEventListener('click', () => { Sfx.click(); openHowto('trivia'); });
+$('howTabs').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { howTab = b.dataset.how; Sfx.click(); renderHowto(); }));
+$('btnHowClose').addEventListener('click', () => { Sfx.click(); closeHowto(); });
+$('howScrim').addEventListener('click', (e) => { if (e.target === $('howScrim')) closeHowto(); });
 $('tileSpectate').addEventListener('click', () => { Sfx.click(); openJoin('spec', ''); });
 $('btnPadJoin').addEventListener('click', () => { Sfx.resume(); Sfx.click(); openJoin('pad', ''); });
 $('btnSetupBack').addEventListener('click', () => { Sfx.click(); showView('menu'); });
@@ -9130,6 +9648,9 @@ $('chSolo').addEventListener('click', () => { Sfx.click(); setPlayMode('solo'); 
 $('chRoom').addEventListener('click', () => { Sfx.click(); setPlayMode('room'); });
 $('chRemote').addEventListener('click', () => { Sfx.click(); setPlayMode('remote'); });
 $('btnWardFromSetup').addEventListener('click', () => { Sfx.click(); openWard(); });
+$('botLevel').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+  SET.botLevel = b.dataset.lv; applySettings(); renderBotLevel(); Sfx.click();
+}));
 $('btnAddBot').addEventListener('click', () => {
   if (ROSTER.length >= maxSeats()) return;
   const brain = BOT_BRAINS.find(b => !ROSTER.some(r => r.name === b.name)) || BOT_BRAINS[0];
@@ -9187,9 +9708,11 @@ $('btnFameReset').addEventListener('click', () => {
   if (!confirm(t('fame.resetAsk'))) return;
   Object.assign(FAME, { matches:{ trivia:0, conquest:0 }, questions:0, correct:0,
     best:{ score:null, streak:null, tiles:null, fast:null, hp:null }, cats:{}, wins:{}, lastAt:0 });
-  fameSave(); renderFame(); renderFameStrip(); Sfx.thud();
+  LEAGUE.players = {}; store.set(LEAGUE_KEY, LEAGUE);
+  fameSave(); setFameTab(fameTab); renderFameStrip(); Sfx.thud();
 });
 $('fameScrim').addEventListener('click', (e) => { if (e.target.id === 'fameScrim') closeFame(); });
+$('tabBoard').addEventListener('click', () => { Sfx.click(); setFameTab('board'); });
 $('tabLocal').addEventListener('click', () => { Sfx.click(); setFameTab('local'); });
 $('tabWorld').addEventListener('click', () => { Sfx.click(); setFameTab('world'); });
 
@@ -9309,7 +9832,15 @@ function boot() {
   Net.init().then(() => {
     setupRoom();
     const m = (location.hash || '').match(/kod=([A-Za-z]{4})/);
-    if (m) openJoin('pad', m[1]);
+    if (m) {
+      openJoin('pad', m[1]);
+      // telefon sayfayı yenilediyse sormadan geri bağlan
+      let again = null, nm = '';
+      try { again = sessionStorage.getItem('ta-pad-' + m[1].toUpperCase()); nm = sessionStorage.getItem('ta-padname') || ''; } catch (e) {}
+      if (again) { if (nm) $('joinName').value = nm; doJoin(); }
+      return;
+    }
+    offerResume();
   });
 }
 /* hata ayıklama köprüsü: konsoldan TA.G / TA.CQ */
