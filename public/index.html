@@ -532,10 +532,17 @@ canvas{display:block}
 .chatrow input{flex:1}
 
 /* ─── KUMANDA (telefon) ─── */
-.padwrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 14px 16px;min-height:0}
+/* Kumanda kaydırılabilir: haritada 16 bölgelik liste ekranın altına taşıyor,
+   ortalanmış içerik hem üstten hem alttan kesiliyordu. Ortalamayı artık
+   auto kenar boşlukları yapıyor; yer yetmezse boşluk sıfırlanır, sayfa kayar. */
+.padwrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 14px calc(16px + env(safe-area-inset-bottom,0px));
+  min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 #padAvatar{width:104px;height:104px;flex:none}
-.padbody{flex:1;width:min(520px,100%);display:flex;flex-direction:column;gap:10px;justify-content:center}
+.padwrap.compact #padAvatar{display:none}
+.padbody{flex:1 0 auto;width:min(520px,100%);display:flex;flex-direction:column;gap:10px;justify-content:flex-start}
 .padbody>*{flex:none}
+.padbody>:first-child{margin-top:auto}
+.padbody>:last-child{margin-bottom:auto}
 .padq{font-family:'Alfa Slab One',serif;font-size:19px;text-align:center;margin:0;font-weight:400}
 .padgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .padbtn{min-height:86px;border:var(--bd);border-radius:6px;box-shadow:var(--shadow);font-weight:800;font-size:18px;padding:12px;transition:transform .07s}
@@ -561,6 +568,10 @@ canvas{display:block}
 .padlist .num{flex:none;width:24px;height:24px;border:2px solid var(--edge);border-radius:50%;
   background:var(--paper-3);color:var(--ink);font:800 12px/1 'DM Mono',monospace;
   display:flex;align-items:center;justify-content:center}
+.padgrid{position:relative}
+.padbtn.drift .txt{display:inline-block;animation:drift 2.8s ease-in-out infinite alternate}
+.padfx{border:var(--bd);border-radius:6px;background:var(--red);color:var(--paper-3);font-weight:800;font-size:13px;
+  padding:8px 10px;text-align:center;box-shadow:var(--shadow-sm);line-height:1.35}
 .padwait{display:flex;flex-direction:column;align-items:center;gap:12px;color:var(--ink-soft);text-align:center;font-weight:700}
 .padspin{width:32px;height:32px;border:4px solid var(--edge);border-top-color:transparent;border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -5338,6 +5349,13 @@ Net.on('input', (m) => {
 function padRender(prompt) {
   const box = $('padBody');
   PAD.prompt = prompt;
+  if (PAD.shuffle) { clearInterval(PAD.shuffle); PAD.shuffle = null; }
+  // uzun seçimlerde avatar yer kaplamasın; her yeni istem en üstten başlasın
+  const wrap = box.parentElement;
+  if (wrap) {
+    wrap.classList.toggle('compact', !!prompt && (prompt.kind === 'map' || (prompt.options || []).length > 4));
+    wrap.scrollTop = 0;
+  }
   if (!prompt || prompt.kind === 'idle') {
     box.innerHTML = '<div class="padwait"><div class="padspin"></div><p>' + esc((prompt && prompt.text) || t('pad.wait')) + '</p></div>';
     return;
@@ -5347,9 +5365,27 @@ function padRender(prompt) {
         '<div class="frow" style="padding:5px 9px"><span class="r">' + (i + 1) + '</span><span class="n">' + esc(s2.n) + '</span><span class="mono small">' + esc(s2.v) + '</span></div>').join('') + '</div>'
     : '';
   if (prompt.kind === 'choice') {
+    /* Tur 2'de telefondan oynayan birine yapılan sabotaj eskiden ortak sahne
+       ekranına uygulanıyordu (herkesi cezalandırıyordu), "ters tuş" ise
+       telefonda hiç görünmeden cevabı sessizce yanlışa çeviriyordu. Artık
+       sabotaj kurbanın kendi telefonunda oluyor ve ekranda yazıyor. */
+    const fx = prompt.fx || [];
+    const has = (k) => fx.indexOf(k) >= 0;
     box.innerHTML = (prompt.title ? '<h3 style="text-align:center">' + esc(prompt.title) + '</h3>' : '') +
+      (fx.length ? '<div class="padfx">' + fx.map(k => '⚡ ' + esc(debuffName(k)) + ': ' + esc(debuffDesc(k))).join('<br>') + '</div>' : '') +
       (prompt.text ? '<p class="padq">' + esc(prompt.text) + '</p>' : '') +
-      '<div class="padgrid">' + prompt.options.map((o, i) => '<button class="padbtn c' + (i % 4) + '" data-i="' + i + '">' + esc(o) + '</button>').join('') + '</div>';
+      '<div class="padgrid">' + prompt.options.map((o, i) => '<button class="padbtn c' + (i % 4) + (has('DRIFTING_TEXT') ? ' drift' : '') +
+        '" data-i="' + i + '"><span class="txt">' + esc(o) + '</span></button>').join('') +
+      (has('INK_BLOT') ? '<div class="ink-blot">' + Array.from({ length:4 }, (_, i) =>
+        '<b style="width:' + (38 + rnd() * 30) + '%;height:' + (30 + rnd() * 25) + '%;left:' + (rnd() * 60) + '%;top:' + (rnd() * 60) +
+        '%;animation-delay:' + (i * 60) + 'ms"></b>').join('') + '</div>' : '') + '</div>';
+    if (has('BUTTON_SHUFFLE')) {
+      const grid = box.querySelector('.padgrid'), ink = grid.querySelector('.ink-blot');
+      PAD.shuffle = setInterval(() => {
+        if (!grid.isConnected) { clearInterval(PAD.shuffle); PAD.shuffle = null; return; }
+        [...grid.querySelectorAll('.padbtn')].sort(() => rnd() - .5).forEach(k => grid.insertBefore(k, ink));
+      }, 1500);
+    }
     box.querySelectorAll('.padbtn').forEach(b => b.addEventListener('click', () => {
       Sfx.click();
       Net.emit('input', { from:PAD.id, kind:'pick', index:Number(b.dataset.i) });
@@ -6037,7 +6073,7 @@ function rebuildLangUI() {
 const CFG = {
   introMs:3600, revealMs:3000, scoreboardMs:5200, bankFloor:0,
   tugMs:8000,
-  r2:{ interludeMs:4200, siphon:400 },
+  r2:{ interludeMs:4200, pickMs:9000, siphon:400 },
   r3:{ maxQuestions:16, startHp:4500 },
   /* Doğru cevap merdiveni: iki doğru 250'şer, üçüncü 500, dördüncü ve sonrası 750. */
   steps:[250, 250, 500, 750]
@@ -6292,6 +6328,22 @@ const totalQuestions = (r) => {
 };
 const timerFor = (r) => qms((ROUNDS[r] || ROUNDS[1]).timerMs);
 
+/* Maçlar arası soru hafızası. G.used her maçta sıfırlanıyordu; aynı masa
+   ikinci maçta aynı soruları görebiliyordu. Son 600 soru tarayıcıda
+   hatırlanır ve önce hiç görülmemiş sorular seçilir. */
+const SEEN = {
+  keys:new Set(store.get('ta-seen', [])),
+  key(q) { return String((q && q.tr && q.tr.q) || (q && q.en && q.en.q) || '').slice(0, 60); },
+  has(q) { return this.keys.has(this.key(q)); },
+  add(q) {
+    const k = this.key(q); if (!k) return;
+    this.keys.delete(k); this.keys.add(k);
+    while (this.keys.size > 600) this.keys.delete(this.keys.values().next().value);
+    store.set('ta-seen', [...this.keys]);
+  },
+  /** Havuzdan önce görülmemişleri tercih eder; hepsi görüldüyse havuzun kendisi. */
+  prefer(pool) { const f = pool.filter(q => !this.has(q)); return f.length ? f : pool; }
+};
 function drawQuestion(r, i) {
   const B = BANK();
   /* Havuz tükenince eskiden aynı soruyu tekrar tekrar veriyordu. Artık önce
@@ -6299,6 +6351,7 @@ function drawQuestion(r, i) {
   const take = (arr, fb) => {
     let p = arr.filter(q => !G.used.has(q));
     if (!p.length && fb && fb !== arr) p = fb.filter(q => !G.used.has(q));
+    if (p.length) p = SEEN.prefer(p);
     if (!p.length) {
       const all = (fb && fb.length > arr.length) ? fb : arr;
       const recent = new Set(Array.from(G.used).slice(-6));
@@ -6306,7 +6359,7 @@ function drawQuestion(r, i) {
       if (!p.length) p = all.slice();
       G.used = recent;
     }
-    const q = pick(p); G.used.add(q); return q;
+    const q = pick(p); G.used.add(q); SEEN.add(q); return q;
   };
   const base = B[roundTier(r, i)] || B.d1;
   let pool = base;
@@ -6361,14 +6414,15 @@ function askQuestion(index) {
   G.players.forEach(p => { p.activeDebuffs = []; });
   victims.forEach(p => {
     p.activeDebuffs = p.debuffs.slice(); p.debuffs = [];
-    p.activeDebuffs.forEach(d => { if (d === 'INK_BLOT' || d === 'DRIFTING_TEXT') screenFx.push({ p, d }); });
+    if (!p.remote) p.activeDebuffs.forEach(d => { if (d === 'INK_BLOT' || d === 'DRIFTING_TEXT') screenFx.push({ p, d }); });
     const v = slotViews[p.id]; if (v) v.setMood('panic', 1500);
   });
   G.players.forEach(p => { const el = $('slot-' + p.id); if (el) el.classList.remove('ready', 'hit', 'miss'); });
   renderQuestion(screenFx, victims);
   refreshCrowd();
   $('qpanel').hidden = false; $('inter').hidden = true; $('tug').hidden = true;
-  netAskAll(eligible, () => ({ kind:'choice', title:t('g.question') + ' ' + (index + 1), text:G.q.prompt, options:G.q.options }), 'answer');
+  netAskAll(eligible, (p) => ({ kind:'choice', title:t('g.question') + ' ' + (index + 1), text:G.q.prompt, options:G.q.options,
+    fx:(p.activeDebuffs || []).length ? p.activeDebuffs.slice() : undefined }), 'answer');
   eligible.filter(p => p.kind === 'bot').forEach(p => scheduleBot(p, r));
   if (!eligible.length) return closeQuestion();
   later(() => closeQuestion(), G.q.duration + 140);
@@ -6408,7 +6462,7 @@ function renderQuestion(screenFx, victims) {
       ink.appendChild(b);
     }
   }
-  if (victims.some(p => p.activeDebuffs.includes('BUTTON_SHUFFLE'))) {
+  if (victims.some(p => !p.remote && p.activeDebuffs.includes('BUTTON_SHUFFLE'))) {
     G.shuffleTimer = setInterval(() => { [...box.children].sort(() => rnd() - .5).forEach(k => box.appendChild(k)); Sfx.pop(); }, 1500);
   }
   const notes = victims.map(p => p.name + ': ' + p.activeDebuffs.map(debuffName).join(', '));
@@ -6456,6 +6510,14 @@ function markPick(p, idx) {
   box.appendChild(chip);
 }
 
+/* Botların cevap süresi soruyu okuma süresinden başlar. Eskiden en hızlı
+   bot ~1,1 sn'de cevaplıyordu; insan daha soruyu okumadan "en hızlı doğru"
+   ödülü ve tur 3 dokunulmazlığı hep ona gidiyordu. */
+function botReadMs(text) { return 900 + Math.min(150, String(text || '').length) * 28; }
+function botWhen(p, text, limit) {
+  const read = botReadMs(text);
+  return clamp(read + gauss(p.brain.speed[0] * .45, p.brain.speed[1] * .6), read * .85, limit);
+}
 function scheduleBot(p, r) {
   const tier = roundTier(r, G.qIndex);
   const diff = tier === 'd1' ? 0 : tier === 'd2' ? 1 : 2;
@@ -6463,7 +6525,7 @@ function scheduleBot(p, r) {
   const dbs = p.activeDebuffs || [];
   if (dbs.length) { acc -= .18 * dbs.length; mean += 900 * dbs.length; }
   const correct = rnd() < acc;
-  const when = clamp(gauss(mean * .78, sd * .8), 550, G.q.duration - 250);
+  const when = clamp(botReadMs(G.q.prompt) + gauss(mean * .45, sd * .6), botReadMs(G.q.prompt) * .85, G.q.duration - 250);
   later(() => {
     if (!G.q || G.answers.has(p.id) || G.paused) return;
     const wrongs = G.q.options.map((_, i) => i).filter(i => i !== G.q.correct);
@@ -6708,7 +6770,7 @@ function heistPrompt() {
   if (me.remote) {
     netAsk(me, { kind:'choice', title:t('heist.target'), options:targets.map(x => x.name + ' (' + x.points + ')') }, 'heist-target');
     interstitial(t('g.awardLabel'), t('g.awardTitle', { name:me.name }), t('g.awardSub'));
-    clearAll(); later(() => { if (G.heist) { G.heist.queue = []; resolveHeist(); } }, slow(CFG.r2.interludeMs));
+    clearAll(); later(() => { if (G.heist) { G.heist.queue = []; resolveHeist(); } }, qms(CFG.r2.pickMs));
     return;
   }
   const html =
@@ -6735,7 +6797,7 @@ function heistPrompt() {
     $('hActions').querySelectorAll('.pick').forEach(x => x.classList.toggle('sel', x === b)); done();
   }));
   clearAll();
-  later(() => { if (G.heist) { G.heist.queue = []; resolveHeist(); } }, slow(CFG.r2.interludeMs));
+  later(() => { if (G.heist) { G.heist.queue = []; resolveHeist(); } }, qms(CFG.r2.pickMs));
 }
 function botHeist(bot) {
   const targets = G.players.filter(p => p.id !== bot.id);
@@ -7702,7 +7764,7 @@ function cqCastleAct() {
   $('cqRound').textContent = '1/1';
   const B = BANK();
   const pool = B.est.filter(q => !CQ.usedEst.has(q));
-  const src = pick(pool.length ? pool : B.est); CQ.usedEst.add(src);
+  const src = pick(SEEN.prefer(pool.length ? pool : B.est)); CQ.usedEst.add(src); SEEN.add(src);
   CQ.est = mkEst(src); const q = CQ.est.q;
   CQ.plainNum = isYearQ(q);            // yıl sorusunda binlik ayraç yok
   const local = CQ.players.filter(p => p.kind === 'human' && !p.remote);
@@ -7906,7 +7968,7 @@ function cqExpand(i) {
   $('cqRound').textContent = (i + 1) + '/' + Math.max(CQ.expandRounds, i + 1);
   const B = BANK();
   const pool = B.est.filter(q => !CQ.usedEst.has(q));
-  const src = pick(pool.length ? pool : B.est); CQ.usedEst.add(src);
+  const src = pick(SEEN.prefer(pool.length ? pool : B.est)); CQ.usedEst.add(src); SEEN.add(src);
   CQ.est = mkEst(src); const q = CQ.est.q;
   CQ.plainNum = isYearQ(q);            // yıl sorusunda binlik ayraç yok
   const local = CQ.players.filter(p => p.kind === 'human' && !p.remote && !p.dead);
@@ -8115,7 +8177,7 @@ function cqDuel() {
   CQ.phase = 'duel';
   const B = BANK();
   const pool = B.d2.filter(q => !CQ.usedQ.has(q));
-  const src = pick(pool.length ? pool : B.d2); CQ.usedQ.add(src);
+  const src = pick(SEEN.prefer(pool.length ? pool : B.d2)); CQ.usedQ.add(src); SEEN.add(src);
   const order = [0, 1, 2, 3].sort(() => rnd() - .5);
   const L = () => LQ(src);
   const options = order.map(i => L().o[i]);
@@ -8135,7 +8197,7 @@ function cqDuel() {
   netIdleExcept(duellists, t('cq.watching', { a:at.attacker.name, b:at.defender.name }));
   duellists.filter(p => p.kind === 'bot').forEach(p => {
     const ok = rnd() < p.brain.acc[1];
-    const when = clamp(gauss(p.brain.speed[0], p.brain.speed[1]), 700, qms(CQCFG.duelMs) - 300);
+    const when = botWhen(p, L().q, qms(CQCFG.duelMs) - 300);
     later(() => {
       if (CQ.phase !== 'duel') return;
       const wrongs = options.map((_, i) => i).filter(i => i !== correct);
@@ -8173,7 +8235,7 @@ function cqTieBreak() {
   const at = CQ.attack;
   const B = BANK();
   const pool = B.est.filter(q => !CQ.usedEst.has(q));
-  const src = pick(pool.length ? pool : B.est); CQ.usedEst.add(src);
+  const src = pick(SEEN.prefer(pool.length ? pool : B.est)); CQ.usedEst.add(src); SEEN.add(src);
   CQ.tie = mkEst(src); const q = CQ.tie.q;
   CQ.plainNum = isYearQ(q);
   const duellists = [at.attacker, at.defender];
