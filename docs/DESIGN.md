@@ -79,14 +79,16 @@ Web sürümünün "matematiksel" soru sistemi, 3D bedenle:
 
 Bütün sayılar `data/rules.tres`'te (RulesConfig kaynağı).
 
-### Conquest Quiz — bölge hakimiyeti (`modes/conquest_quiz.gd`)
-1. Sahne 7×4 = 28 karoya bölünür. Her soruda bir hedef karo altın spotla parlar; her 4. soruda 2×2 büyük ödül vardır (rakipten çalabilir).
-2. Kenarlarda A-B-C-D pirinç kürsüleri durur. Doğru kürsüye **ilk basan** hedefi kendi rengine boyar.
-3. Yanlış kürsü çarpar: oyuncu havaya fırlayıp devrilir ve o soruda bir daha deneyemez.
-4. Kendi renginde koşan %15 hızlanır, rakip boyasında %18 yavaşlar.
-5. 12 soru sonunda en çok karosu olan kazanır.
+### Conquest — Bil ve Fethet (`modes/conquest_war.gd`)
+Web sürümünün planı, sahneye serilen 3D bir Türkiye haritasında:
 
-> Sıradaki: Türkiye haritası (web sürümündeki bölge savaşı) Conquest'e taşınacak.
+- **Harita** (`conquest/map_board.gd`, `data/maps/turkiye.json`): 16 bölge, gerçek il sınırları web sürümünden. Her bölge keçeden kesilmiş, kalın bir parça; kenarı bir ton koyu, üstünde beyaz iplik dikişi, içinde il sınırları ince koyu iplikle. Sahibi olunca parça onun rengine boyanır. Çevresi mavi saten deniz ve sığ su halesi; önde ve arkada eski tiyatroların dalga makinesi gibi sallanan boyalı dalga kesikleri; köşede pirinç pusula. 2× bölgelerin üstünde dönen altın para.
+- **Kaleler** (`conquest/castle_model.gd`): altı üslup (Beyaz Balıkçıl, basamaklı piramit, Elhamra, masal şatosu, gotik katedral, bozkır otağı). Boyanmış ahşap/alçı maket hissi; kaide ve sancak oyuncunun renginde, pencerelerde sıcak ışık. 3 kule = 3 can: vurulan kule sallanıp devrilir, moloz ve toz kalır; tepede üç arma canı gösterir.
+- **Taşlar** (`conquest/culture_costume.gd`, `conquest_piece.gd`): her bölgede sahibinin kültür kostümlü küçük pelüşü. Gövde klasik oyuncak ayı keçesi, kıyafet oyuncunun renginde. On kostüm: Viking, Romalı lejyoner, firavun, samuray, mariachi, silahşor, İskoç, yeniçeri, kanatlı hüsar, sınır avcısı. Oyuncuların kendi pelüşleri de maç boyunca aynı kostümle sahnenin önünde general gibi durur.
+- **Perde I:** tek tahmin sorusu sırayı belirler; herkes boş ve başka kaleye komşu olmayan bir bölgeye kalesini kurar (1000 puan).
+- **Perde II:** tahmin sorularında en yakın 2, ikinci 1 bölge alır (sınırına komşu); bölge 200, 2× bölge 400.
+- **Perde III:** savaş turu sayısı = 16 / oyuncu sayısı (2–6). Sırayla komşu bir düşman bölgesine saldırılır; saldırı yayı (renkli ışık topu) haritada uçar. Saldıran ve savunan aynı 4 şıklı soruyu cevaplar; yalnız saldıran bilirse bölge ve değeri kadar puan geçer; ikisi de bilirse tahmin sorusu ayırır. Kaleye vurmak bir kule düşürür; son kule düşünce kale çöker, bütün toprak ve puan fatihe geçer.
+- **Girdi:** tahmin için pirinç sayaç kadranı (yukarı/aşağı rakam, sol/sağ basamak, zıpla kilit, klavyeden yazmak); bölge seçimi yönle ya da fareyle; düelloda şık seçimi yönle, zıpla ya da tıkla. Telefonlar joystick ve ZIPLA ile aynısını yapar.
 
 ---
 
