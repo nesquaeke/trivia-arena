@@ -5,13 +5,14 @@ extends Camera3D
 ## sahneyi yukarıdan görür; oyuncuların yoğun olduğu tarafa yavaşça kayar
 ## (cinematic sway), hafif el kamerası nefesi ve sarsıntı (trauma) taşır.
 
-enum Shot { LOBBY, ARENA, WARDROBE, LOGE, CURTAIN, CUSTOM }
+enum Shot { LOBBY, ARENA, WARDROBE, LOGE, CURTAIN, CUSTOM, MAP }
 
 const SHOTS := {
 	Shot.LOBBY: {"pos": Vector3(0, 7.0, 15.0), "look": Vector3(0.0, 1.3, -1.0), "fov": 50.0, "h": -2.2, "sway": 1.0},
 	Shot.ARENA: {"pos": Vector3(0, 6.6, 13.5), "look": Vector3(0, 2.2, -1.5), "fov": 47.0, "h": 0.0, "sway": 0.4},
 	Shot.WARDROBE: {"pos": Vector3(0.0, 2.3, 5.4), "look": Vector3(0.0, 0.95, 0.4), "fov": 36.0, "h": 0.55, "sway": 0.0},
 	Shot.LOGE: {"pos": Vector3(-11.4, 5.1, 6.9), "look": Vector3(-0.5, 0.8, -1.0), "fov": 46.0, "h": 0.0, "sway": 0.35},
+	Shot.MAP: {"pos": Vector3(0, 8.4, 11.6), "look": Vector3(0, 0.0, -1.0), "fov": 41.0, "h": 0.0, "sway": 0.1},
 	Shot.CURTAIN: {"pos": Vector3(0, 5.0, 14.5), "look": Vector3(0, 3.6, 3.0), "fov": 48.0, "h": 0.0, "sway": 0.0},
 }
 

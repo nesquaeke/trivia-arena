@@ -48,6 +48,8 @@ const S := {
 	"hint.jump": ["zıpla", "jump"],
 	"hint.shove": ["omuz at", "shove"],
 	"hint.join": ["Katılmak için kendi tuşuna bas:", "Press your own key to join:"],
+	"hint.p2join": ["2. oyuncu katılır", "player 2 joins"],
+	"hint.padjoin": ["gamepad katılır", "gamepad joins"],
 	"hint.p2": ["2. oyuncu", "Player 2"],
 	"key.space": ["Boşluk", "Space"],
 	"key.enter": ["Enter", "Enter"],

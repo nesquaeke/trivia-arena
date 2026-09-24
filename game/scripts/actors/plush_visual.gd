@@ -9,6 +9,7 @@ const COLORS := {
 	"mustard": Color("F2C230"), "butter": Color("F6DD7C"), "tangerine": Color("EE8A33"),
 	"rose": Color("E77C95"), "mint": Color("7ACFAE"), "sky": Color("77B3E6"),
 	"lilac": Color("B49BE0"), "charcoal": Color("4B4553"),
+	"teddy": Color("CFA877"),
 }
 const COLOR_KEYS := ["mustard", "butter", "tangerine", "rose", "mint", "sky", "lilac", "charcoal"]
 const HATS := ["none", "tophat", "bowler", "fez", "boater", "crown", "cone"]
@@ -19,6 +20,8 @@ static var _felt_normal: NoiseTexture2D
 static var _mats := {}
 
 var look := {}
+var culture := ""              ## Fetih kostümü (boşsa Trivia kostümü: şapka/bıyık/papyon)
+var costume_color = null       ## kostümün rengi (boşsa gövde renginin koyusu)
 var body_root: Node3D
 var head_pivot: Node3D
 var arm_l: Node3D
@@ -223,9 +226,19 @@ func apply_look(l: Dictionary) -> void:
 	for a in [hat_anchor, face_anchor, neck_anchor]:
 		for ch in a.get_children():
 			ch.queue_free()
+	CultureCostume.undress(self)
+	if culture != "":
+		CultureCostume.dress(self, culture, costume_color if costume_color != null else c.darkened(0.25).lerp(Color("7A1F24"), 0.25))
+		return
 	_build_hat(String(look.get("hat", "none")))
 	_build_mustache(String(look.get("mustache", "none")))
 	_build_bowtie(String(look.get("bowtie", "none")))
+
+## Fetih kostümünü giy ("" verilirse Trivia kostümüne döner)
+func set_culture(c: String) -> void:
+	culture = c
+	if body_root:
+		apply_look(look)
 
 func _build_hat(kind: String) -> void:
 	var satin := mat("satin", Color("171217"), 0.32)

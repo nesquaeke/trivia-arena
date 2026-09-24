@@ -23,7 +23,6 @@ var house: HouseCard
 var loge: LogeBar
 var playbill: Playbill
 var hud: Hud
-var join_hint: KeyHint
 var rename_panel: GlassPanel
 var name_edit: LineEdit
 var grain: ColorRect
@@ -77,12 +76,6 @@ func setup(p_game: Node) -> void:
 	card.rename_requested.connect(_open_rename)
 	_build_rename()
 
-	join_hint = KeyHint.new()
-	join_hint.align = 2
-	join_hint.position = Vector2(1920 - 1000 - 40, 1030)
-	join_hint.size = Vector2(1000, 36)
-	join_hint.font_size = 17
-	root.add_child(join_hint)
 
 	wardrobe = WardrobePanel.new()
 	wardrobe.position = Vector2(1920 + 40, 190)
@@ -140,8 +133,6 @@ func _retext() -> void:
 	wardrobe.retext()
 	house.retext()
 	loge.retext()
-	join_hint.lead = I18n.t("hint.join")
-	join_hint.items = ["WASD+" + I18n.t("key.space"), I18n.t("key.arrows") + "+Enter", I18n.t("key.pad")]
 	_refresh_card()
 	if playbill.visible:
 		playbill.fill(playbill.get_meta("mode", "trivia"))
@@ -216,7 +207,6 @@ func show_lobby_chrome(on: bool) -> void:
 	_lobby = on
 	menu.set_shown(on)
 	_card_to(on)
-	join_hint.visible = on
 	if house.visible:
 		_slide(house, "position:x", (1920 - house.size.x - 34.0) if on else 1920 + 40.0)
 	if rename_panel.visible and not on:
@@ -226,7 +216,6 @@ func show_lobby_chrome(on: bool) -> void:
 func _open_wardrobe() -> void:
 	menu.set_shown(false)
 	_card_to(false)
-	join_hint.visible = false
 	wardrobe.visible = true
 	wardrobe.open()
 	_slide(wardrobe, "position:x", 1920 - wardrobe.size.x - 70.0, 0.6)
@@ -236,7 +225,6 @@ func _close_wardrobe() -> void:
 	menu.set_shown(true)
 	_card_to(true)
 	_slide(wardrobe, "position:x", 1920 + 40.0)
-	join_hint.visible = true
 	game.exit_wardrobe()
 
 # ── loca ────────────────────────────────────────────────────────────

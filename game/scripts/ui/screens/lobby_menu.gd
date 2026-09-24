@@ -18,7 +18,6 @@ var scrim: ColorRect
 var menu_col: VBoxContainer
 var setup_col: VBoxContainer
 var footer: KeyHint
-var footer2: KeyHint
 var buttons := {}
 var kind := "arena"
 var shown := true
@@ -79,15 +78,11 @@ func setup(p_game: Node) -> void:
 	_build_setup()
 
 	footer = KeyHint.new()
-	footer.position = Vector2(COL_X, 1002)
-	footer.size = Vector2(900, 36)
+	footer.position = Vector2(COL_X, 1030)
+	footer.size = Vector2(1400, 30)
+	footer.font_size = 16
+	footer.color = Color(Pal.CREAM, 0.75)
 	add_child(footer)
-	footer2 = KeyHint.new()
-	footer2.position = Vector2(COL_X, 1040)
-	footer2.size = Vector2(900, 30)
-	footer2.font_size = 16
-	footer2.color = Color(Pal.CREAM, 0.7)
-	add_child(footer2)
 	retext()
 
 func _add_btn(id: String, idx: String, big: bool, cb: Callable) -> void:
@@ -191,10 +186,9 @@ func retext() -> void:
 	for id in map:
 		buttons[id].title = I18n.t(map[id][0])
 		buttons[id].caption = I18n.t(map[id][1])
-	logo.tagline = I18n.t("title.tagline") + "  ·  " + ("The Grand Stage" if I18n.lang == "tr" else "Büyük Sahne")
-	footer.items = ["WASD|" + I18n.t("hint.run"), I18n.t("key.space") + "|" + I18n.t("hint.jump"), "F|" + I18n.t("hint.shove")]
-	footer2.lead = I18n.t("hint.p2")
-	footer2.items = [I18n.t("key.arrows") + "|" + I18n.t("hint.run"), "Enter|" + I18n.t("hint.jump"), I18n.t("key.rshift") + "|" + I18n.t("hint.shove")]
+	# tek satır: kendi tuşlar + ikinci oyuncu/gamepad nasıl katılır
+	footer.items = ["WASD|" + I18n.t("hint.run"), I18n.t("key.space") + "|" + I18n.t("hint.jump"), "F|" + I18n.t("hint.shove"),
+		I18n.t("key.arrows") + "+Enter|" + I18n.t("hint.p2join"), I18n.t("key.pad") + "|" + I18n.t("hint.padjoin")]
 	_k_setup.text = I18n.t("setup.title")
 	_k_bots.text = I18n.t("setup.bots")
 	_k_level.text = I18n.t("setup.level")
@@ -255,7 +249,8 @@ func _open_setup(k: String) -> void:
 		var tw := b.create_tween()
 		tw.tween_property(b, "modulate:a", 0.0, 0.18).set_delay(i * 0.025)
 		i += 1
-	await get_tree().create_timer(0.22).timeout
+	# bütün solma tweenleri bitsin; yoksa geç kalanlar düğmeleri görünmez bırakır
+	await get_tree().create_timer(0.4).timeout
 	menu_col.visible = false
 	for b in buttons.values():
 		b.modulate.a = 1.0

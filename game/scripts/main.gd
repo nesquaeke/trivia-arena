@@ -552,6 +552,67 @@ func prepare_game_shot(part: String) -> void:
 			while arena == null or arena.phase != "reward":
 				await get_tree().process_frame
 			await get_tree().create_timer(0.7).timeout
+		"map_demo":
+			# yalnız görüntü: haritayı kur, birkaç bölgeyi boya
+			props.clear()
+			stage.set_zones_visible(false)
+			var mb := MapBoard.new()
+			add_child(mb)
+			mb.build()
+			var acts := all_actors()
+			for i in acts.size():
+				acts[i].teleport(Vector3((i - (acts.size() - 1) * 0.5) * 1.2, 0.05, 3.3), PI)
+			var ids := mb.order
+			for i in 8:
+				var col: Color = PlushVisual.COLORS[PlushVisual.COLOR_KEYS[i % 4]]
+				mb.set_owner_color(ids[i * 2 % ids.size()], col)
+			mb.set_rich(ids[3], true)
+			# her bölgeye bir kale ya da kostümlü taş
+			for i in ids.size():
+				var col: Color = PlushVisual.COLORS[PlushVisual.COLOR_KEYS[i % 8]]
+				if i < 6:
+					var c := CastleModel.new(CastleModel.STYLES[i], col)
+					c.set_meta("base_scale", Vector3.ONE * 1.0)
+					mb.set_piece(ids[i], c)
+					if i == 2:
+						c.set_towers(1, false)
+				else:
+					var fig := ConquestPiece.new({"color": PlushVisual.COLOR_KEYS[i % 8]}, CultureCostume.CULTURES[(i - 6) % 10])
+					mb.set_piece(ids[i], fig)
+			mb.set_mark(ids[5], "cursor")
+			mb.set_mark(ids[6], "pickable")
+			cam.set_shot(BalconyCam.Shot.MAP, true)
+			if ui:
+				ui.show_lobby_chrome(false)
+			await get_tree().create_timer(2.0).timeout
+		"costume_demo", "costume_demo2", "castle_demo":
+			props.clear()
+			for a in all_actors():
+				a.visible = false
+				a.freeze = true
+			var root := Node3D.new()
+			add_child(root)
+			if part.begins_with("costume"):
+				var first := 0 if part == "costume_demo" else 5
+				for i in range(first, first + 5):
+					var fig := ConquestPiece.new({"color": PlushVisual.COLOR_KEYS[i % 8]}, CultureCostume.CULTURES[i])
+					root.add_child(fig)
+					fig.position = Vector3((i - first - 2) * 1.25, 0, 0.3)
+					fig.rotation.y = 0.0
+					fig.scale = Vector3.ONE * 1.3
+				cam.set_custom({"pos": Vector3(0, 2.6, 5.6), "look": Vector3(0, 0.7, 0.1), "fov": 40.0, "h": 0.0, "sway": 0.0}, true)
+			else:
+				for i in 6:
+					var c := CastleModel.new(CastleModel.STYLES[i], PlushVisual.COLORS[PlushVisual.COLOR_KEYS[i]])
+					root.add_child(c)
+					c.position = Vector3((i % 3 - 1) * 2.0, 0, -0.8 + int(i / 3) * 1.8)
+					c.scale = Vector3.ONE * 1.5
+					if i == 4:
+						c.set_towers(2, false)
+				cam.set_custom({"pos": Vector3(0, 3.2, 6.2), "look": Vector3(0, 0.6, 0.0), "fov": 42.0, "h": 0.0, "sway": 0.0}, true)
+			if ui:
+				ui.show_lobby_chrome(false)
+			await get_tree().create_timer(2.0).timeout
 		"reward_demo":
 			# ödül seçiciyi insan oyuncu kazanmış gibi aç (yalnız görüntü için)
 			if arena is ClassicShow:

@@ -4,11 +4,12 @@ extends Control
 ## Ana logo: el yazısı "Trivia" + ampullü blok harflerle "ARENA".
 ## play() ile açılış animasyonu: ampuller sırayla yanar, harfler titreyerek açılır.
 
-@export var tagline := "Büyük Sahne":
+@export var tagline := "":
 	set(v):
 		tagline = v
 		if _kick:
 			_kick.text = v
+			_kick.visible = v != ""
 @export var script_word := "Trivia"
 @export var block_word := "ARENA"
 
@@ -40,6 +41,7 @@ func _ready() -> void:
 	_mark(_halo)
 	_kick = KickerLabel.new()
 	_kick.text = tagline
+	_kick.visible = tagline != ""
 	_kick.position = Vector2(6, 0)
 	_kick.size = Vector2(560, 28)
 	_kick.spacing = 6.0

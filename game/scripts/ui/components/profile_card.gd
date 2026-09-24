@@ -2,6 +2,8 @@ class_name ProfileCard
 extends Control
 ## Sağ üstteki kulis kartı: canlı pelüş portresi, sahne adı, karne.
 ## Kenarları bilet gibi oyuk; üstüne gelince hafifçe eğilir, ışık fareyi izler.
+## Kapalıyken küçük bir rozettir (portre + isim); tıklayınca açılır, tekrar
+## tıklayınca kapanır. İsme tıklamak adı değiştirir.
 
 signal lang_toggled
 signal rename_requested
@@ -18,8 +20,12 @@ var _hover := false
 var _name_hover := false
 var _mouse := Vector2.ZERO
 var _t := 0.0
+var expanded := false
+var _k := 0.0                     # 0 = rozet, 1 = tam kart
 
 const W := 520.0
+const CW := 262.0                 # rozet genişliği
+const CH := 78.0                  # rozet yüksekliği
 const H := 236.0
 const PORTRAIT_W := 172.0
 const STUB := 62.0
@@ -53,6 +59,7 @@ func _ready() -> void:
 	_lang.focus_mode = Control.FOCUS_NONE
 	_lang.changed.connect(func(_i): lang_toggled.emit())
 	add_child(_lang)
+	_apply_k()
 	mouse_entered.connect(func(): _hover = true)
 	mouse_exited.connect(func():
 		_hover = false
@@ -71,6 +78,41 @@ func refresh(p_name: String, p_stats: Dictionary, look: Dictionary, lang: String
 	_lang.selected = 1 if lang == "en" else 0
 	queue_redraw()
 
+func toggle(open := not expanded) -> void:
+	expanded = open
+	Pal.sfx("whoosh" if open else "click", -10.0, 1.3 if open else 1.0)
+	var tw := create_tween()
+	tw.tween_method(_set_k, _k, 1.0 if open else 0.0, 0.42).set_trans(Tween.TRANS_BACK if open else Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	if open:
+		portrait.hop()
+
+func _set_k(v: float) -> void:
+	_k = v
+	_apply_k()
+
+## Rozetten karta geçiş: portre küçülür/büyür, sayılar ve dil anahtarı belirir.
+func _apply_k() -> void:
+	var e := clampf(_k, 0.0, 1.2)
+	var small := Rect2(W - CW + 8, 7, 64, 64)
+	var big := Rect2(12, 12, PORTRAIT_W - 12, H - 24)
+	portrait.position = small.position.lerp(big.position, e)
+	portrait.size = small.size.lerp(big.size, clampf(e, 0.0, 1.0))
+	var a := clampf((_k - 0.7) / 0.3, 0.0, 1.0)
+	for n in _nums.values():
+		n.modulate.a = a
+		n.visible = a > 0.01
+	_lang.modulate.a = a
+	_lang.visible = a > 0.01
+	queue_redraw()
+
+func _cur_rect() -> Rect2:
+	var e := clampf(_k, 0.0, 1.0)
+	var small := Rect2(W - CW, 0, CW, CH)
+	return Rect2(small.position.lerp(Vector2.ZERO, e), small.size.lerp(Vector2(W, H), e))
+
+func _has_point(p: Vector2) -> bool:
+	return _cur_rect().has_point(p)
+
 func _name_rect() -> Rect2:
 	return Rect2(PORTRAIT_W + 16, 40, W - STUB - PORTRAIT_W - 40, 70)
 
@@ -82,19 +124,20 @@ func _gui_input(e: InputEvent) -> void:
 			_name_hover = over
 			mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND if over else Control.CURSOR_ARROW
 	if e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
-		if _name_rect().has_point(e.position):
+		if expanded and _k > 0.95 and _name_rect().has_point(e.position):
 			Pal.sfx("click", -4.0, 1.2)
 			rename_requested.emit()
 		else:
-			portrait.hop()
+			toggle()
 
 func _process(delta: float) -> void:
 	_t += delta
 	_h = Fx.damp(_h, 1.0 if _hover else 0.0, 8.0, delta)
 	var tilt := 0.0
-	if _hover:
+	if _hover and expanded:
 		tilt = (_mouse.x / W - 0.5) * 0.025
 	rotation = Fx.damp(rotation, tilt, 8.0, delta)
+	pivot_offset = Vector2(W, 0)
 	scale = Vector2.ONE * (1.0 + 0.015 * _h)
 	queue_redraw()
 
@@ -122,6 +165,9 @@ func _shape() -> PackedVector2Array:
 	return pts
 
 func _draw() -> void:
+	if _k < 0.97:
+		_draw_compact()
+		return
 	var pts := _shape()
 	draw_colored_polygon(_offset(pts, Vector2(0, 10)), Color(0, 0, 0, 0.45))
 	# gövde: koyu kadife gradyan
@@ -186,6 +232,31 @@ func _draw() -> void:
 		Icons.draw(self, "flame", Vector2(392, 150), 13, Color("FF8A3C"))
 	if int(stats.get("champs", 0)) > 0:
 		Icons.draw(self, "crown", Vector2(340, 152), 13, Pal.GOLD)
+
+## Rozet ve geçiş hali: köşeleri kesik küçük bilet; portre, isim, kısa karne.
+func _draw_compact() -> void:
+	var r := _cur_rect()
+	var pts := Icons.notched(r, 10.0)
+	draw_colored_polygon(Icons.notched(Rect2(r.position + Vector2(0, 8), r.size), 10.0), Color(0, 0, 0, 0.4))
+	draw_colored_polygon(pts, Color("1A070C").lerp(Color("22090F"), _h * 0.5))
+	Icons.outline(self, pts, Color(Pal.BRASS, 0.6 + 0.3 * _h), 1.5)
+	var pc := portrait.position + portrait.size * 0.5
+	for i in 5:
+		draw_circle(pc, portrait.size.x * 0.5 - i * 5.0, Color(accent, 0.05 + i * 0.02))
+	var a := clampf(1.0 - _k * 2.5, 0.0, 1.0)
+	if a <= 0.0:
+		return
+	var x0 := W - CW + 82
+	var nf := Pal.display()
+	var nm := Pal.upper(player_name)
+	var fs := 34
+	while fs > 20 and nf.get_string_size(nm, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > CW - 120:
+		fs -= 2
+	draw_string(nf, Vector2(x0, 40), nm, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(Pal.CHAMPAGNE, a))
+	var sub := "%s  ·  %s %d" % [String(stats.get("wl", "0 / 0")), Pal.upper(Pal.t("ticket.streak_s")), int(stats.get("streak", 0))]
+	draw_string(Pal.kicker(), Vector2(x0, 62), sub, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(Pal.CREAM, 0.7 * a))
+	# aç/kapa oku
+	Icons.draw(self, "arrow_r", Vector2(W - 24, CH * 0.5 + sin(_t * 3.0) * 2.0 * _h), 18, Color(Pal.GOLD, a * (0.6 + 0.4 * _h)), 2.5)
 
 func _short(key: String) -> String:
 	match key:
