@@ -4903,9 +4903,14 @@ const LQ = (q) => q ? Object.assign({}, q, q[LANG] || q.tr) : q;
 /* ══════════════════════════════════════════════════════════════════════════
    6. AĞ — sahne (host) · telefon kumandası (pad) · izleyici (spec)
 
-   İki taşıma var, protokol ikisinde de aynı:
+   Üç taşıma var, protokol hepsinde aynı:
      • room    — Claude artifact içinde çalışırken, platformun "room" yeteneği.
-     • peer    — bağımsız bir sitede yayındayken, WebRTC (PeerJS). Sahne, oda
+     • relay   — sayfa kendi Node sunucumuzdan (server.js) açıldığında,
+                 Socket.io üzerinden. Mesajlar sunucudan geçtiği için telefon
+                 mobil veride, sahne evdeki Wi-Fi'da olsa da buluşurlar.
+                 WebRTC'nin NAT arkasında takıldığı "sahne zamanında cevap
+                 vermedi" derdi bununla bitti; varsa ilk tercih bu.
+     • peer    — yalnızca statik bir sitede yayındayken, WebRTC (PeerJS). Sahne, oda
                  koduyla türetilmiş sabit bir peer kimliği alır; telefonlar o
                  kimliğe bağlanır. Ortada sunucu yok, yalnızca eşleştirme var.
    Hiçbiri yoksa oyun sessizce tek cihaz moduna düşer; tuşlarla ve botlarla
@@ -4913,10 +4918,12 @@ const LQ = (q) => q ? Object.assign({}, q, q[LANG] || q.tr) : q;
    ══════════════════════════════════════════════════════════════════════════ */
 const PEER_LIB = 'https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js';
 const PEER_NS = 'trivia-arena-v1-';
+const RELAY_LIB = '/socket.io/socket.io.js';
 
 const Net = {
   room:null, ready:false, role:'local', code:null, handlers:{},
   transport:'none', peer:null, conns:[], hostConn:null,
+  sock:null, relayKey:null, relayHosted:null, relayPeers:0, joinedCode:null,
 
   async init() {
     try {
@@ -4934,9 +4941,80 @@ const Net = {
       });
       return true;
     }
+    if (await this.loadRelay()) {
+      this.startRelay();
+      return true;
+    }
     const ok = await this.loadPeer();
     if (ok) { this.transport = 'peer'; this.ready = true; }
     return this.ready;
+  },
+
+  /** Sayfa server.js'ten geliyorsa Socket.io istemcisi aynı adreste durur. */
+  loadRelay() {
+    if (window.io) return Promise.resolve(true);
+    if (!/^https?:$/.test(location.protocol)) return Promise.resolve(false);
+    return new Promise(res => {
+      const sc = document.createElement('script');
+      sc.src = RELAY_LIB; sc.async = true;
+      sc.onload = () => res(typeof window.io === 'function');
+      sc.onerror = () => res(false);
+      document.head.appendChild(sc);
+      setTimeout(() => res(typeof window.io === 'function'), 5000);
+    });
+  },
+  startRelay() {
+    let sock;
+    try { sock = this.sock = window.io(); } catch (e) { return; }
+    this.transport = 'relay'; this.ready = true;
+    this.relayKey = Math.random().toString(36).slice(2) + Date.now().toString(36);
+    sock.on('relay_msg', (w) => { if (w && w.topic) this.fire(w.topic, w.data || {}); });
+    sock.on('relay_peers', (m) => { this.relayPeers = (m && m.n) || 0; if (this.role === 'host') netStatus('live'); });
+    sock.on('relay_host_left', () => { this.joinedCode = null; netPadLost(); });
+    // Kopup geri gelince kaldığı yerden devam: sahne kodunu, telefon odasını yeniden alır
+    sock.on('connect', () => {
+      if (this.role === 'host' && this.code) { this.relayHosted = null; this.hostRelay(this.code); }
+      else if ((this.role === 'pad' || this.role === 'spec') && this.joinedCode) {
+        sock.emit('relay_join', { code:this.joinedCode }, (r) => { if (!r || !r.ok) { this.joinedCode = null; netPadLost(); } });
+      }
+    });
+    sock.on('disconnect', () => { this.relayHosted = null; if (this.role === 'host') netStatus('reconnect'); });
+  },
+  hostRelay(code) {
+    if (!this.sock) { netStatus('off'); return; }
+    if (this.relayHosted === code && this.sock.connected) { netStatus('live'); return; }
+    this.relayHosted = null; this.joinedCode = null;
+    netStatus(this.sock.connected ? 'opening' : 'reconnect');
+    if (!this.sock.connected) return;                    // 'connect' olayında kaydolur
+    this.sock.emit('relay_host', { code, key:this.relayKey }, (r) => {
+      if (this.role !== 'host' || this.code !== code) return;
+      if (r && r.ok) { this.relayHosted = code; this.relayPeers = r.n || 0; netStatus('live'); return; }
+      if (r && r.reason === 'taken') { Net.code = Net.newCode(); setupRoom(); return; }   // kod çakıştı
+      netStatus('fail', (r && r.reason) || 'server');
+    });
+  },
+  joinRelay(code, onOpen) {
+    if (!this.sock) { onOpen(false, 'nolib'); return; }
+    this.relayHosted = null; this.joinedCode = null;
+    let done = false;
+    const fin = (ok, why) => { if (!done) { done = true; onOpen(ok, why); } };
+    const go = () => this.sock.emit('relay_join', { code }, (r) => {
+      if (r && r.ok) { this.joinedCode = code; fin(true); }
+      else fin(false, (r && r.reason) || 'stage');
+    });
+    if (this.sock.connected) go(); else this.sock.once('connect', go);
+    setTimeout(() => fin(false, this.sock.connected ? 'timeout' : 'network'), 10000);
+  },
+
+  /** Sahne olarak yayına çık (hangi taşıma varsa). */
+  host(code) {
+    if (this.transport === 'relay') return this.hostRelay(code);
+    return this.hostPeer(code);
+  },
+  /** Telefon/izleyici olarak sahneye bağlan (hangi taşıma varsa). */
+  connect(code, onOpen) {
+    if (this.transport === 'relay') return this.joinRelay(code, onOpen);
+    return this.joinPeer(code, onOpen);
   },
 
   /** PeerJS'i yalnızca gerektiğinde ve sessizce yükler. */
@@ -4959,6 +5037,7 @@ const Net = {
   emit(topic, data) {
     const msg = Object.assign({}, data, { code:this.code });
     if (this.transport === 'room' && this.room) { try { this.room.emit(topic, msg); } catch (e) {} return; }
+    if (this.transport === 'relay') { try { if (this.sock) this.sock.emit('relay_msg', { topic, data:msg }); } catch (e) {} return; }
     if (this.transport !== 'peer') return;
     const wire = { topic, data:msg };
     if (this.role === 'host') this.conns.forEach(c => { try { if (c.open) c.send(wire); } catch (e) {} });
@@ -5132,7 +5211,8 @@ function netStatus(state, why) {
   Net.state = state;
   const el = $('roomLive');
   if (!el) return;
-  const n = Net.transport === 'peer' ? Net.conns.filter(c => c.open).length : SPEC.pads || 0;
+  const n = Net.transport === 'peer' ? Net.conns.filter(c => c.open).length
+    : Net.transport === 'relay' ? Net.relayPeers || 0 : SPEC.pads || 0;
   const txt = state === 'live' ? t('net.live', { n })
     : state === 'opening' ? t('net.opening')
     : state === 'reconnect' ? t('net.reconnect')
@@ -5150,7 +5230,7 @@ function netPadLost() {
 function setupRoom() {
   if (!Net.code) Net.code = Net.newCode();
   Net.role = 'host';
-  Net.hostPeer(Net.code);
+  Net.host(Net.code);
   $('roomCode').textContent = Net.code;
   $('padCode').textContent = Net.code;
   const shareable = publicHost();
@@ -5924,10 +6004,10 @@ function doJoin() {
       Net.emit('join', { pad:PAD.id, name:PAD.name, look:PAD.look });
     }
   };
-  // room yeteneğinde yayın ortak; peer taşımasında önce sahneye bağlanmak gerekir
-  if (Net.transport === 'peer') {
+  // room yeteneğinde yayın ortak; relay/peer taşımasında önce sahneye bağlanmak gerekir
+  if (Net.transport === 'peer' || Net.transport === 'relay') {
     Net.role = joinAs === 'spec' ? 'spec' : 'pad';
-    Net.joinPeer(code, (ok, why) => {
+    Net.connect(code, (ok, why) => {
       if (!ok) {
         // ne olduğunu söyle: "bulunamadı" her derde deva bir cevap değil
         const key = why === 'network' || why === 'broker' ? 'join.errNet'
