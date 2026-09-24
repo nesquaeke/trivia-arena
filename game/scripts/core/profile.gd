@@ -6,7 +6,7 @@ extends Node
 signal changed
 
 const PATH := "user://profile.json"
-const DEFAULT_LOOK := {"color": "mustard", "hat": "tophat", "mustache": "handlebar", "bowtie": "classic"}
+const DEFAULT_LOOK := {"color": "mustard", "hat": "tophat", "mustache": "handlebar", "bowtie": "classic", "culture": "janissary", "castle": "fairy"}
 
 var data := {}
 var save_enabled := true   # testlerde kapatılır

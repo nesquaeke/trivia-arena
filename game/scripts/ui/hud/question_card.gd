@@ -4,6 +4,8 @@ extends Control
 ## (kelime kelime yazılır), yerdeki kapaklarla aynı renkte dört şık.
 ## Can turunda sağda kırmızı "bedel" mührü.
 
+signal answer_clicked(index: int)
+
 const W := 1180.0
 const H := 262.0
 
@@ -21,6 +23,9 @@ var _t := 0.0
 var _reveal_t := 0.0
 var _shown := false
 var _tw: Tween
+## Düelloda oyuncuların seçimleri: [{idx, color, name, locked}]
+var marks: Array = []
+var clickable := false
 
 func _ready() -> void:
 	size = Vector2(W, H)
@@ -43,15 +48,19 @@ func _ready() -> void:
 		var a := Control.new()
 		a.position = Vector2(24 + i * ((W - 48) / 4.0), 176)
 		a.size = Vector2((W - 48) / 4.0 - 12, 66)
-		a.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		a.mouse_filter = Control.MOUSE_FILTER_STOP
 		var idx := i
 		a.draw.connect(func(): _draw_answer(a, idx))
+		a.gui_input.connect(func(e: InputEvent):
+			if clickable and e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT:
+				answer_clicked.emit(idx))
 		add_child(a)
 		_answers.append(a)
 	visible = false
 
 func show_question(p_label: String, prompt: String, options: Array, p_cat: String, p_col: Color, p_stake: int, p_pips: Vector2i) -> void:
 	label = p_label
+	marks = []
 	cat_name = p_cat
 	cat_color = p_col
 	stake = p_stake
@@ -188,3 +197,16 @@ func _draw_answer(a: Control, i: int) -> void:
 	if is_wrong:
 		var pw := minf(para.get_size().x, maxw)
 		a.draw_line(Vector2(66, a.size.y * 0.5), Vector2(74 + pw, a.size.y * 0.5), Color(Pal.BAD, 0.7), 2.0)
+	# düello işaretleri: seçen oyuncunun renginde bayrakçık, kilitliyse dolu
+	var k := 0
+	for m in marks:
+		if int(m.idx) != i:
+			continue
+		var col: Color = m.color
+		var mx := a.size.x - 30 - k * 34
+		var tag := Rect2(mx, -16, 28, 26)
+		a.draw_colored_polygon(Icons.notched(tag, 5.0), col if m.locked else Color(col, 0.25))
+		Icons.outline(a, Icons.notched(tag, 5.0), col.lightened(0.3), 2.0)
+		var ini := Pal.upper(String(m.name)).substr(0, 1)
+		a.draw_string(Pal.display(), Vector2(mx + 7, 5), ini, HORIZONTAL_ALIGNMENT_LEFT, -1, 22, Pal.INK if m.locked else Pal.CHAMPAGNE)
+		k += 1

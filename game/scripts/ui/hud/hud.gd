@@ -11,6 +11,7 @@ extends Control
 ##   tam ekran RoundCard, RewardPicker, StandingsBoard, ResultScreen
 
 signal reward_clicked(step: int, index: int)
+signal answer_clicked(index: int)
 signal again_pressed
 signal back_pressed
 
@@ -24,6 +25,7 @@ var round_card: RoundCard
 var reward: RewardPicker
 var standings: StandingsBoard
 var result: ResultScreen
+var estimate: EstimatePanel
 var _tug_open := false
 
 func _ready() -> void:
@@ -41,7 +43,11 @@ func _ready() -> void:
 	add_child(timer)
 	question = QuestionCard.new()
 	question.position = Vector2((1920 - QuestionCard.W) * 0.5, 22)
+	question.answer_clicked.connect(func(i): answer_clicked.emit(i))
 	add_child(question)
+	estimate = EstimatePanel.new()
+	estimate.position = Vector2((1920 - EstimatePanel.W) * 0.5, 22)
+	add_child(estimate)
 	callout = Callout.new()
 	callout.position = Vector2((1920 - 1400) * 0.5, 930)
 	add_child(callout)
@@ -69,6 +75,7 @@ func reset() -> void:
 		c.modulate.a = 1.0
 	badge.set_round("", "")
 	question.visible = false
+	estimate.visible = false
 	tug.visible = false
 	_tug_open = false
 	round_card.visible = false
@@ -144,6 +151,24 @@ func hud_standings(rows: Array, round_no: int) -> void:
 
 func hud_standings_hide() -> void:
 	standings.close()
+
+# ── Conquest ────────────────────────────────────────────────────────
+func hud_estimate_open(kicker: String, q: String, unit: String, dials: Array, year: bool) -> void:
+	question.hide_card()
+	estimate.open(kicker, q, unit, dials, year)
+
+func hud_estimate_dial(i: int, value: int, cursor: int, locked: bool) -> void:
+	estimate.update_dial(i, value, cursor, locked)
+
+func hud_estimate_reveal(answer: String, ranked: Array) -> void:
+	estimate.reveal(answer, ranked)
+
+func hud_estimate_close() -> void:
+	estimate.close()
+
+func hud_duel_marks(marks: Array, clickable: bool) -> void:
+	question.marks = marks
+	question.clickable = clickable
 
 func show_result(title: String, names: Array, rows: Array = []) -> void:
 	question.hide_card()

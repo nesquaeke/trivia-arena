@@ -12,6 +12,8 @@ var foot := ""
 var _swing := 0.0
 var _swing_v := 0.0
 var _close: CtaButton
+var _mode_tabs: Segmented
+var mode := "trivia"
 
 const W := 820.0
 const H := 940.0
@@ -27,9 +29,20 @@ func _ready() -> void:
 	_close.font_size = 26
 	_close.pressed.connect(func(): closed.emit())
 	add_child(_close)
+	_mode_tabs = Segmented.new()
+	_mode_tabs.options = ["Trivia Arena", "Conquest Quiz"]
+	_mode_tabs.custom_minimum_size = Vector2(420, 44)
+	_mode_tabs.size = Vector2(420, 44)
+	_mode_tabs.position = Vector2((W - 420) * 0.5, 242)
+	_mode_tabs.font_size = 20
+	_mode_tabs.changed.connect(func(i): fill("conquest" if i == 1 else "trivia"))
+	add_child(_mode_tabs)
 	visible = false
 
-func fill(mode: String) -> void:
+func fill(p_mode: String) -> void:
+	mode = p_mode
+	if _mode_tabs:
+		_mode_tabs.selected = 1 if mode == "conquest" else 0
 	head = Pal.t("howto.head")
 	title = Pal.t("menu.conquest") if mode == "conquest" else Pal.t("menu.trivia")
 	if mode == "conquest":
@@ -93,8 +106,8 @@ func _draw() -> void:
 	var ts := Pal.upper(title)
 	var tw := f.get_string_size(ts, HORIZONTAL_ALIGNMENT_LEFT, -1, 108).x
 	draw_string(f, Vector2((W - tw) * 0.5, 206), ts, HORIZONTAL_ALIGNMENT_LEFT, -1, 108, Color("2A0A10"))
-	draw_line(Vector2(80, 232), Vector2(W - 80, 232), Color(Pal.VELVET, 0.6), 2.0)
-	var y := 262.0
+	draw_line(Vector2(80, 226), Vector2(W - 80, 226), Color(Pal.VELVET, 0.6), 2.0)
+	var y := 306.0
 	for i in steps.size():
 		var st: Array = steps[i]
 		var c := Vector2(84, y + 26)
@@ -102,9 +115,9 @@ func _draw() -> void:
 		Icons.draw(self, String(st[0]), c, 30, Pal.GOLD)
 		var para := TextParagraph.new()
 		para.width = W - 190
-		para.add_string(String(st[1]), Pal.serif(), 22)
+		para.add_string(String(st[1]), Pal.serif(), 21)
 		para.draw(get_canvas_item(), Vector2(134, y), Color("2A140C"))
-		y += maxf(64.0, para.get_size().y + 22.0)
+		y += maxf(64.0, para.get_size().y + 16.0)
 	var ff := Pal.italic()
 	var fw := ff.get_string_size(foot, HORIZONTAL_ALIGNMENT_LEFT, -1, 20).x
 	draw_string(ff, Vector2((W - fw) * 0.5, H - 116), foot, HORIZONTAL_ALIGNMENT_LEFT, -1, 20, Color("5A2A18"))

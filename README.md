@@ -17,7 +17,7 @@ Fizik motoruyla çalışan, kaotik bir 3D parti bilgi yarışması. Kırmızı k
 | ![Ödül](docs/screenshots/reward.jpg) | ![Can turu](docs/screenshots/final.jpg) |
 | **Güç turu:** en hızlı doğru 400 puan çalar ya da sabote eder | **Can turu:** yalnız en hızlı doğru kurtulur |
 | ![Final](docs/screenshots/result.jpg) | ![Conquest Quiz](docs/screenshots/conquest.jpg) |
-| **Final:** konfeti, karne, rövanş | **Conquest Quiz:** doğru kürsüye ilk basan karoyu boyar |
+| **Final:** konfeti, karne, rövanş | **Conquest Quiz:** keçe Türkiye haritasında kaleler ve düellolar |
 | ![Kostüm odası](docs/screenshots/wardrobe.jpg) | ![Ev partisi](docs/screenshots/house.jpg) |
 | **Kostüm odası:** şapka, bıyık, papyon, kumaş | **Ev partisi:** QR'ı okut, telefonun kumanda olsun |
 
@@ -52,13 +52,21 @@ Kurallar web sürümündeki klasik partiyle aynıdır; bütün sayılar `game/da
 
 Yanlış cevap seni hemen oyundan atmaz; kaybettikçe can kaybedersin.
 
-### Conquest Quiz
+### Conquest Quiz: Bil ve Fethet
 
-28 karolu sahnede her soru bir hedef karoyu parlatır. Doğru kürsüye ilk basan onu kendi rengine boyar; yanlış kürsü çarpar. Kendi renginde hızlanır, rakibin boyasında yavaşlarsın. 12 sorunun sonunda en çok karo kazanır.
+Web sürümünün planı birebir, sahneye serilen keçeden dikilmiş bir Türkiye haritasında (16 bölge, gerçek il sınırları):
+
+1. **Perde I · Kale kurulumu.** Tek bir tahmin sorusu sırayı belirler. Gerçeğe en yakın tahmin eden kalesini ilk kurar; iki kale yan yana kurulamaz. Herkes 1000 puanla başlar, her kale 3 kuledir.
+2. **Perde II · Toprak paylaşımı.** Tahmin sorularında en yakın tahmin 2, ikinci 1 bölge alır (kendi sınırına komşu). Bölge 200, 2× rozetli bölge 400 puan. Boş toprak bitene kadar sürer.
+3. **Perde III · Savaş çağı.** Sırayla komşu bir düşman bölgesine saldırırsın; saldıran ve savunan aynı 4 şıklı soruyu cevaplar. Yalnız saldıran bilirse bölge ve puanı el değiştirir; ikisi de bilirse tahmin sorusu ayırır. Kaleye saldırmak bir kule düşürür, son kulesi düşen elenir ve bütün toprağı fatihe geçer.
+
+Tahminler pirinç sayaç kadranıyla girilir (yukarı/aşağı rakam, sol/sağ basamak, zıpla kilit; klavyeden yazmak da olur). Bölgeler yönlerle ya da fareyle seçilir.
+
+Her oyuncunun bir **kültür kostümü** (Viking, Romalı, firavun, samuray, mariachi, silahşor, İskoç, yeniçeri, kanatlı hüsar, sınır avcısı) ve bir **kale üslubu** (Beyaz Balıkçıl, basamaklı piramit, Elhamra, masal şatosu, gotik katedral, bozkır otağı) vardır. Haritadaki her bölgede sahibinin kostümlü pelüş taşı durur.
 
 ### Diğerleri
 
-- **Karakterim:** sahnenin ortasında, tek spotun altında kostüm seçimi.
+- **Karakterim:** iki sekme. Trivia için şapka/bıyık/papyon, Fetih için kültür kostümü ve kale üslubu.
 - **İzleyici:** yan duvardaki locadan izle; sahneye gül, domates ya da şapka fırlat.
 - **Ev partisi:** evde tek ekran, diğer oyuncular telefonlarını kumanda olarak kullanır.
 
@@ -78,7 +86,10 @@ Godot'da `game/project.godot`'u aç. En sık dokunulacak yerler:
 | Metinler (TR/EN) | `scripts/core/i18n.gd` |
 | Sorular | `data/questions.json` (1200 çift dilli soru) |
 | Kostümler | `scripts/actors/plush_visual.gd` (`HATS`, `MUSTACHES`, `BOWTIES`, `COLORS`) |
-| Bot zekâsı | `scripts/modes/classic_show.gd` (`BOT_ACC`, `BOT_READ`) |
+| Bot zekâsı | `scripts/modes/classic_show.gd` (`BOT_ACC`, `BOT_READ`), `conquest_war.gd` (`BOT_ACC`, `BOT_SPREAD`) |
+| Conquest sayıları (puan, süreler) | `scripts/modes/conquest_war.gd` → `CFG` |
+| Kaleler, kostümler | `scripts/conquest/castle_model.gd`, `culture_costume.gd` (her üslup tek bir `match` dalı) |
+| Harita | `data/maps/turkiye.json` (bölgeler, komşuluklar); görünüş `scripts/conquest/map_board.gd` |
 
 Denemek için kısayollar (komut satırı, `--` sonrasına):
 
@@ -153,7 +164,9 @@ game/
   scripts/stage/          sahne, perdeler, ışık, kapaklar, dekorlar
   scripts/actors/         pelüş fizik + görünüş, kontrolcüler (klavye, gamepad, telefon, bot)
   scripts/camera/         balkon kamerası
-  scripts/modes/          Trivia Arena (classic_show.gd), Conquest Quiz
+  scripts/modes/          Trivia Arena (classic_show.gd), Conquest (conquest_war.gd)
+  scripts/conquest/       harita tahtası, kaleler, kültür kostümleri, taşlar
+  data/maps/turkiye.json  Conquest haritası (web sürümünden)
   scripts/ui/             arayüz: pal.gd (renk/yazı), fx.gd (hareket), icons.gd (simgeler)
     components/           logo, menü satırı, düğmeler, seçiciler, profil kartı, 3D portre
     screens/              lobi menüsü, kostüm odası, ev partisi, loca, afiş

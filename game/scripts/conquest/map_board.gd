@@ -114,7 +114,6 @@ func _build_region(r: Dictionary, col: Color) -> void:
 				if inner.size() >= 3:
 					_add_cap(st_top, inner, H + 0.004)
 					stitches.append(inner)
-	st_rim.generate_tangents()
 	var rim_mi := MeshInstance3D.new()
 	rim_mi.mesh = st_rim.commit()
 	rim_mi.material_override = rim_mat
@@ -393,7 +392,14 @@ func set_rich(id: String, on: bool) -> void:
 		cm.height = 0.04
 		coin.mesh = cm
 		coin.rotation.x = PI / 2
-		coin.material_override = PlushVisual.mat("coin", Color("E8B93C"), 0.25, 1.0)
+		var cm2 := StandardMaterial3D.new()
+		cm2.albedo_color = Color("F2C24E")
+		cm2.roughness = 0.3
+		cm2.metallic = 0.3
+		cm2.emission_enabled = true
+		cm2.emission = Color("E8A93C")
+		cm2.emission_energy_multiplier = 0.6
+		coin.material_override = cm2
 		b.add_child(coin)
 		for side: float in [1.0, -1.0]:
 			var l := Label3D.new()
@@ -501,6 +507,48 @@ func set_piece(id: String, piece: Node3D) -> void:
 func piece(id: String) -> Node3D:
 	var r := region(id)
 	return r.piece if not r.is_empty() else null
+
+## Saldırı: saldıranın renginde bir ışık topu bölgeden bölgeye yay çizerek uçar,
+## arkasında sönen izler bırakır; hedefe varınca parlar.
+func attack_arc(from_id: String, to_id: String, col: Color) -> void:
+	var a := seat(from_id) + Vector3(0, 0.3, 0)
+	var b := seat(to_id) + Vector3(0, 0.3, 0)
+	var mat := StandardMaterial3D.new()
+	mat.albedo_color = col
+	mat.emission_enabled = true
+	mat.emission = col.lightened(0.3)
+	mat.emission_energy_multiplier = 2.5
+	var sm := SphereMesh.new()
+	sm.radius = 0.09
+	sm.height = 0.18
+	sm.radial_segments = 10
+	sm.rings = 6
+	var ball := MeshInstance3D.new()
+	ball.mesh = sm
+	ball.material_override = mat
+	add_child(ball)
+	var trail: Array[MeshInstance3D] = []
+	var steps := 18
+	var hgt := 1.0 + a.distance_to(b) * 0.25
+	var tw := create_tween()
+	for i in steps + 1:
+		var k := float(i) / steps
+		var p := a.lerp(b, k) + Vector3(0, sin(k * PI) * hgt, 0)
+		tw.tween_property(ball, "position", p, 0.045)
+		tw.tween_callback(func():
+			var d := MeshInstance3D.new()
+			d.mesh = sm
+			d.material_override = mat
+			d.position = p
+			d.scale = Vector3.ONE * 0.5
+			add_child(d)
+			trail.append(d)
+			var fade := d.create_tween()
+			fade.tween_property(d, "scale", Vector3.ONE * 0.05, 1.2)
+			fade.tween_callback(d.queue_free))
+	tw.tween_callback(func():
+		flash(to_id)
+		ball.queue_free())
 
 # ── canlılık ────────────────────────────────────────────────────────
 func _process(delta: float) -> void:

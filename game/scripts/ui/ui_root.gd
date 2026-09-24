@@ -13,6 +13,7 @@ extends CanvasLayer
 ## Renkler/yazı tipleri: scripts/ui/pal.gd, ui/fonts/*.tres, ui/theme/grand_stage.tres
 
 signal reward_clicked(step: int, index: int)
+signal answer_clicked(index: int)
 
 var game: Node = null
 var root: Control
@@ -46,6 +47,7 @@ func setup(p_game: Node) -> void:
 
 	hud = Hud.new()
 	hud.reward_clicked.connect(func(s, i): reward_clicked.emit(s, i))
+	hud.answer_clicked.connect(func(i): answer_clicked.emit(i))
 	hud.again_pressed.connect(func():
 		hud.hide_result()
 		game.restart_arena())
@@ -87,6 +89,7 @@ func setup(p_game: Node) -> void:
 		wardrobe.refresh()
 		_refresh_card())
 	wardrobe.done.connect(_close_wardrobe)
+	wardrobe.tab_changed.connect(func(c): game.wardrobe_conquest(c))
 
 	house = HouseCard.new()
 	house.position = Vector2(1920 + 40, 300)
@@ -135,7 +138,7 @@ func _retext() -> void:
 	loge.retext()
 	_refresh_card()
 	if playbill.visible:
-		playbill.fill(playbill.get_meta("mode", "trivia"))
+		playbill.fill(playbill.mode)
 
 func _refresh_card() -> void:
 	if card == null:
@@ -326,6 +329,12 @@ func hud_reward_close() -> void: hud.hud_reward_close()
 func hud_standings(rows: Array, round_no: int) -> void: hud.hud_standings(rows, round_no)
 func hud_standings_hide() -> void: hud.hud_standings_hide()
 
+func hud_estimate_open(kicker: String, q: String, unit: String, dials: Array, year: bool) -> void: hud.hud_estimate_open(kicker, q, unit, dials, year)
+func hud_estimate_dial(i: int, value: int, cursor: int, locked: bool) -> void: hud.hud_estimate_dial(i, value, cursor, locked)
+func hud_estimate_reveal(answer: String, ranked: Array) -> void: hud.hud_estimate_reveal(answer, ranked)
+func hud_estimate_close() -> void: hud.hud_estimate_close()
+func hud_duel_marks(marks: Array, clickable: bool) -> void: hud.hud_duel_marks(marks, clickable)
+
 func show_result(title: String, ranking: Array, rows: Array = []) -> void:
 	hud.show_result(title, ranking, rows)
 
@@ -342,6 +351,12 @@ func prepare_shot(part: String) -> void:
 		"wardrobe":
 			_open_wardrobe()
 			await get_tree().create_timer(2.5).timeout
+		"wardrobe_cq":
+			_open_wardrobe()
+			await get_tree().create_timer(1.5).timeout
+			wardrobe._tabs.selected = 1
+			wardrobe._set_tab(true)
+			await get_tree().create_timer(1.8).timeout
 		"howto":
 			open_howto("trivia")
 			await get_tree().create_timer(2.2).timeout

@@ -172,6 +172,8 @@ class _Row extends Control:
 				bits.append(Pal.t("result.correct_n", {"n": data.correct, "m": data.get("asked", 0)}))
 			if int(data.get("best_combo", 0)) >= 2:
 				bits.append(Pal.t("hud.best_combo", {"n": data.best_combo}))
+			if data.has("tiles"):
+				bits.append(Pal.t("result.tiles_n", {"n": data.tiles}))
 			if int(data.get("stolen", 0)) > 0:
 				bits.append(Pal.t("result.stolen_n", {"n": data.stolen}))
 			draw_string(Pal.italic(), Vector2(152, h * 0.5 + (32 if big else 24)), "  ·  ".join(bits), HORIZONTAL_ALIGNMENT_LEFT, 420, 18 if big else 16, Color(Pal.CREAM, 0.7))

@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_match",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -273,31 +273,78 @@ func test_arena_match() -> void:
 	check(clean, "sabotajlar ve çarpışma katmanları temizlendi")
 	Engine.time_scale = 1.0
 
+func test_conquest_map() -> void:
+	var mb := MapBoard.new()
+	add_child(mb)
+	mb.build()
+	check(mb.order.size() == 16, "Türkiye haritası 16 bölge (%d)" % mb.order.size())
+	var sym := true
+	for id in mb.order:
+		for n in mb.region(id).adj:
+			if not mb.region(n).adj.has(id):
+				sym = false
+	check(sym, "komşuluklar iki yönlü")
+	check(mb.region("trakya").adj.has("batikaradeniz"), "İstanbul Boğazı geçişi var")
+	var inside := true
+	for id in mb.order:
+		if mb.region_at(mb.region(id).seat) != id:
+			inside = false
+	check(inside, "her bölgenin taş yeri kendi içinde")
+	var c := CastleModel.new("gothic", Color.RED)
+	add_child(c)
+	c.set_towers(1, false)
+	check(c.towers == 1, "kale kulesi düşer")
+	c.queue_free()
+	mb.queue_free()
+
 func test_conquest_match() -> void:
 	var m: Node = await _get_main()
 	await seconds(1.0)
 	Engine.time_scale = 4.0
+	m.debug_ff = 3.0
 	m.start_arena("conquest")
 	var waited := 0.0
-	while (m.arena == null or m.arena.phase != "done") and waited < 150.0:
+	var saw := {}
+	while (m.arena == null or m.arena.phase != "done") and waited < 300.0:
 		await get_tree().process_frame
 		waited += get_process_delta_time() / Engine.time_scale
+		if m.arena:
+			saw[m.arena.phase] = true
 	var c = m.arena
-	check(c is ConquestQuiz and c.phase == "done", "Conquest maçı bitti (%.0f sn gerçek zaman)" % waited)
-	if not (c is ConquestQuiz):
+	check(c is ConquestWar and c.phase == "done", "Conquest maçı bitti (%.0f sn gerçek zaman)" % waited)
+	if not (c is ConquestWar):
 		Engine.time_scale = 1.0
+		m.debug_ff = 1.0
 		return
-	check(c.q_index >= ConquestQuiz.QUESTIONS or c._free_tiles().is_empty(), "12 soru soruldu ya da sahne doldu (%d)" % c.q_index)
-	check(c.tile_owner.size() > 0, "karolar boyandı (%d/28)" % c.tile_owner.size())
-	var rk: Array[Plush] = c.ranking()
-	check(c.count_for(rk[0]) >= c.count_for(rk[rk.size() - 1]), "sıralama karo sayısına göre")
+	var castles: int = c.log_lines.filter(func(l): return l.begins_with("CASTLE ")).size()
+	check(castles == c.contestants.size(), "herkes kalesini kurdu (%d)" % castles)
+	check(c.free_regions().is_empty(), "toprak paylaşımında harita doldu")
 	var claims: int = c.log_lines.filter(func(l): return l.begins_with("CLAIM ")).size()
-	check(claims >= 3, "botlar doğru kürsüye basıp karo aldı (%d kez)" % claims)
-	check(c.tile_at(c.tile_center(Vector2i(3, 2))) == Vector2i(3, 2), "karo koordinatları tutarlı")
+	check(claims >= 12 - (c.contestants.size() - 4), "boş bölgeler tahminle paylaşıldı (%d)" % claims)
+	var duels: int = c.log_lines.filter(func(l): return l.begins_with("DUEL ")).size()
+	check(duels >= 1, "savaşta düello yapıldı (%d)" % duels)
+	var ok_castle := true
+	for id in c.capital:
+		if c.holder[id] != c.capital[id]:
+			ok_castle = false
+	check(ok_castle, "kaleler sahibinin elinde")
+	for ph in ["estimate", "reveal", "duel"]:
+		check(saw.has(ph), "evre görüldü: " + ph)
+	var rk: Array[Plush] = c.ranking()
+	check(rk.size() == c.contestants.size(), "sıralamada herkes var")
+	var sorted_ok := true
+	for i in rk.size() - 1:
+		var a: Dictionary = c.P[rk[i]]
+		var b: Dictionary = c.P[rk[i + 1]]
+		if not a.dead and not b.dead and a.points < b.points:
+			sorted_ok = false
+	check(sorted_ok, "sıralama puana göre")
 	await get_tree().create_timer(1.0).timeout
 	m.end_arena()
 	await seconds(4.0)
 	check(m.mode == 0 and m.arena == null, "Conquest'ten lobiye dönüldü")
-	var speeds_ok: bool = m.all_actors().all(func(p): return is_equal_approx(p.speed_mult, 1.0))
-	check(speeds_ok, "lobide boya hız etkisi sıfırlandı")
+	var clean: bool = m.all_actors().all(func(p): return p.visual.culture == "" and not p.frozen_input)
+	check(clean, "kostümler çıkarıldı, kontrol geri verildi")
+	check(m.get_node_or_null("MapBoard") == null, "harita kaldırıldı")
 	Engine.time_scale = 1.0
+	m.debug_ff = 1.0

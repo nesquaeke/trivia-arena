@@ -210,6 +210,28 @@ func apply_look_to_player_one() -> void:
 	var p1 := player_one()
 	if p1:
 		p1.set_look(Profile.look())
+	if _ward_castle and is_instance_valid(_ward_castle) and _ward_castle.style != String(Profile.look().get("castle", "fairy")):
+		wardrobe_conquest(true)
+
+## Kostüm odasında Fetih sekmesi: pelüş kültür kostümünü giyer, yanında kalesi belirir
+var _ward_castle: CastleModel = null
+
+func wardrobe_conquest(on: bool) -> void:
+	var p1 := player_one()
+	if p1 == null:
+		return
+	var look := Profile.look()
+	p1.visual.set_culture(String(look.get("culture", "janissary")) if on else "")
+	if _ward_castle and is_instance_valid(_ward_castle):
+		_ward_castle.queue_free()
+		_ward_castle = null
+	if on:
+		_ward_castle = CastleModel.new(String(look.get("castle", "fairy")), PlushVisual.COLORS.get(String(look.get("color", "mustard")), Color.WHITE))
+		add_child(_ward_castle)
+		_ward_castle.position = Vector3(-1.25, 0.02, 0.35)
+		_ward_castle.rotation.y = 0.35
+		_ward_castle.scale = Vector3.ONE * 0.05
+		create_tween().tween_property(_ward_castle, "scale", Vector3.ONE * 1.1, 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 func _bots_wander() -> void:
 	for b in bots:
@@ -233,6 +255,7 @@ func enter_wardrobe() -> void:
 	Sfx.play("whoosh", -8.0, 1.2)
 
 func exit_wardrobe() -> void:
+	wardrobe_conquest(false)
 	var p1 := player_one()
 	if p1:
 		p1.freeze = false
@@ -378,8 +401,8 @@ func start_arena(kind := "") -> void:
 	stage.set_curtain(true)
 	await stage.curtain_done
 	if match_kind == "conquest":
-		props.build_conquest_set()
-		arena = ConquestQuiz.new()
+		props.clear()
+		arena = ConquestWar.new()
 	else:
 		props.build_arena_set()
 		arena = ClassicShow.new()
@@ -394,6 +417,7 @@ func start_arena(kind := "") -> void:
 	arena.setup(self, actors, float(Profile.setting("timer", 10)), String(Profile.setting("bot_level", "normal")))
 	if arena is ClassicShow:
 		arena.start_round = debug_round
+	if "fast_forward" in arena:
 		arena.fast_forward = debug_ff
 	arena.line_up()
 	if ui:
@@ -520,15 +544,29 @@ func start_conquest() -> void:
 
 func prepare_game_shot(part: String) -> void:
 	match part:
-		"conquest_q":
+		"cq_estimate":
 			start_arena("conquest")
-			while arena == null or arena.phase != "question" or arena.time_left > arena.timer_total - 5.0:
+			while arena == null or arena.phase != "estimate" or arena.time_left > arena.timer_total - 3.0:
 				await get_tree().process_frame
-		"conquest_late":
-			while arena == null or arena.q_index < 6:
+		"cq_reveal":
+			while arena == null or arena.phase != "reveal":
 				await get_tree().process_frame
-			while arena.phase != "question" or arena.time_left > arena.timer_total - 5.0:
+			await get_tree().create_timer(1.2).timeout
+		"cq_claim":
+			if arena == null:
+				start_arena("conquest")
+			while arena == null or arena.act < 2 or arena.log_lines.filter(func(l): return l.begins_with("CLAIM")).size() < 5:
 				await get_tree().process_frame
+			await get_tree().create_timer(0.4).timeout
+		"cq_duel":
+			if arena == null:
+				start_arena("conquest")
+			while arena == null or arena.phase != "duel" or arena.time_left > arena.timer_total - 2.5:
+				await get_tree().process_frame
+		"cq_war":
+			while arena == null or arena.phase != "resolve":
+				await get_tree().process_frame
+			await get_tree().create_timer(1.0).timeout
 		"arena_q":
 			start_arena("arena")
 			while arena == null or arena.phase != "question" or arena.time_left > arena.timer_total - 4.0:

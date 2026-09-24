@@ -1,9 +1,12 @@
 class_name WardrobePanel
 extends GlassPanel
-## Kostüm odası: kumaş renkleri + şapka / bıyık / papyon seçicileri.
-## Seçim değişince sahnedeki pelüş anında giyinir.
+## Kostüm odası: iki sekme.
+##   Trivia karakteri  kumaş + şapka / bıyık / papyon
+##   Fetih taşı        kumaş + kültür kostümü + kale üslubu
+## Seçim değişince sahnedeki pelüş anında giyinir; Fetih sekmesinde yanında kalesi belirir.
 
 signal look_changed(key: String, value: String)
+signal tab_changed(conquest: bool)
 signal done
 
 var _swatches: Control
@@ -12,6 +15,10 @@ var _title: KineticText
 var _kick: KickerLabel
 var _done: CtaButton
 var _labels := {}
+var _tabs: Segmented
+var _trivia_box: VBoxContainer
+var _conquest_box: VBoxContainer
+var conquest_tab := false
 
 func _ready() -> void:
 	size = Vector2(540, 720)
@@ -29,6 +36,12 @@ func _ready() -> void:
 	_title.custom_minimum_size = Vector2(460, 82)
 	_title.color = Pal.CHAMPAGNE
 	v.add_child(_title)
+	_tabs = Segmented.new()
+	_tabs.custom_minimum_size = Vector2(460, 48)
+	_tabs.font_size = 22
+	_tabs.selected = 0
+	_tabs.changed.connect(func(i): _set_tab(i == 1))
+	v.add_child(_tabs)
 	_labels["color"] = _small_label(v)
 	_swatches = Control.new()
 	_swatches.custom_minimum_size = Vector2(460, 64)
@@ -36,13 +49,24 @@ func _ready() -> void:
 	_swatches.draw.connect(_draw_swatches)
 	_swatches.gui_input.connect(_swatch_input)
 	v.add_child(_swatches)
-	for cat in [["hat", PlushVisual.HATS], ["mustache", PlushVisual.MUSTACHES], ["bowtie", PlushVisual.BOWTIES]]:
-		_labels[cat[0]] = _small_label(v)
+	_trivia_box = VBoxContainer.new()
+	_trivia_box.add_theme_constant_override("separation", 12)
+	v.add_child(_trivia_box)
+	_conquest_box = VBoxContainer.new()
+	_conquest_box.add_theme_constant_override("separation", 12)
+	_conquest_box.visible = false
+	v.add_child(_conquest_box)
+	for cat in [["hat", PlushVisual.HATS, "look.", _trivia_box], ["mustache", PlushVisual.MUSTACHES, "look.", _trivia_box],
+			["bowtie", PlushVisual.BOWTIES, "look.", _trivia_box],
+			["culture", CultureCostume.CULTURES, "culture.", _conquest_box], ["castle", CastleModel.STYLES, "castle.", _conquest_box]]:
+		var box: VBoxContainer = cat[3]
+		_labels[cat[0]] = _small_label(box)
 		var row := _Carousel.new()
 		row.key = cat[0]
 		row.opts = cat[1]
+		row.prefix = cat[2]
 		row.changed.connect(func(k, val): look_changed.emit(k, val))
-		v.add_child(row)
+		box.add_child(row)
 		_rows[cat[0]] = row
 	var sp := Control.new()
 	sp.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -61,11 +85,23 @@ func _small_label(v: VBoxContainer) -> KickerLabel:
 	v.add_child(k)
 	return k
 
+func _set_tab(conquest: bool) -> void:
+	conquest_tab = conquest
+	_trivia_box.visible = not conquest
+	_conquest_box.visible = conquest
+	var box := _conquest_box if conquest else _trivia_box
+	box.modulate.a = 0.0
+	create_tween().tween_property(box, "modulate:a", 1.0, 0.3)
+	tab_changed.emit(conquest)
+
 func retext() -> void:
 	_kick.text = Pal.t("wardrobe.kicker")
 	_title.text = Pal.upper(Pal.t("wardrobe.title"))
+	_tabs.options = [Pal.t("ward.tab_trivia"), Pal.t("ward.tab_conquest")]
 	for k in ["color", "hat", "mustache", "bowtie"]:
 		_labels[k].text = Pal.t("wardrobe." + k)
+	_labels["culture"].text = Pal.t("ward.culture")
+	_labels["castle"].text = Pal.t("ward.castle")
 	_done.label = Pal.t("common.done")
 	refresh()
 
@@ -77,6 +113,8 @@ func refresh() -> void:
 
 func open() -> void:
 	retext()
+	_tabs.selected = 0
+	_set_tab(false)
 	_title.play(0.25)
 
 func _swatch_input(e: InputEvent) -> void:
@@ -114,6 +152,7 @@ func _draw_swatches() -> void:
 class _Carousel extends HBoxContainer:
 	signal changed(key: String, value: String)
 	var key := ""
+	var prefix := "look."
 	var opts: Array = []
 	var cur := 0
 	var _name: Control
@@ -150,11 +189,14 @@ class _Carousel extends HBoxContainer:
 			set_process(false)
 	func _draw_name() -> void:
 		var f := Pal.display()
-		var s := Pal.upper(Pal.t("look." + String(opts[cur])))
-		var w := f.get_string_size(s, HORIZONTAL_ALIGNMENT_LEFT, -1, 38).x
+		var s := Pal.upper(Pal.t(prefix + String(opts[cur])))
+		var fs := 38
+		while fs > 22 and f.get_string_size(s, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > _name.size.x - 10:
+			fs -= 2
+		var w := f.get_string_size(s, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
 		var e := _slide * _slide
 		var x := (_name.size.x - w) * 0.5 + e * 60.0 * _dir
-		_name.draw_string(f, Vector2(x, 40), s, HORIZONTAL_ALIGNMENT_LEFT, -1, 38, Color(Pal.CHAMPAGNE, 1.0 - e))
+		_name.draw_string(f, Vector2(x, 40), s, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(Pal.CHAMPAGNE, 1.0 - e))
 		var n := opts.size()
 		var dx := 12.0
 		var x0 := _name.size.x * 0.5 - (n - 1) * dx * 0.5

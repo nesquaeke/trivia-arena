@@ -220,7 +220,8 @@ func _build() -> void:
 func apply_look(l: Dictionary) -> void:
 	look = l.duplicate()
 	var c: Color = COLORS.get(String(look.get("color", "mustard")), COLORS.mustard)
-	var fm := felt(c)
+	# Fetih kostümünde gövde klasik oyuncak ayı keçesi, kıyafet oyuncunun renginde
+	var fm := felt(c if culture == "" else COLORS.teddy)
 	for mi in felt_parts:
 		mi.material_override = fm
 	for a in [hat_anchor, face_anchor, neck_anchor]:
@@ -228,7 +229,7 @@ func apply_look(l: Dictionary) -> void:
 			ch.queue_free()
 	CultureCostume.undress(self)
 	if culture != "":
-		CultureCostume.dress(self, culture, costume_color if costume_color != null else c.darkened(0.25).lerp(Color("7A1F24"), 0.25))
+		CultureCostume.dress(self, culture, costume_color if costume_color != null else c)
 		return
 	_build_hat(String(look.get("hat", "none")))
 	_build_mustache(String(look.get("mustache", "none")))

@@ -111,6 +111,19 @@ func _draw() -> void:
 		for i in range(1, 10):
 			draw_line(Vector2(bx + bw * i / 10.0, by), Vector2(bx + bw * i / 10.0, by + bh), Color(0, 0, 0, 0.35), 1.0)
 		Icons.draw(self, "heart", Vector2(W - 132, 26), 18, Pal.HEART)
+	elif alive and row.has("tiles"):
+		# fetih: bölge sayısı + kale kuleleri
+		var sx := nx
+		Icons.draw(self, "diamond", Vector2(sx + 8, 55), 14, col.lightened(0.2))
+		draw_string(Pal.display_bold(), Vector2(sx + 20, 63), Pal.t("cq.tiles", {"n": int(row.tiles)}), HORIZONTAL_ALIGNMENT_LEFT, -1, 19, Color(Pal.CREAM, 0.85))
+		var tw := int(row.get("towers", -1))
+		if tw >= 0:
+			for k in 3:
+				var c := Vector2(W - 150 + k * 16, 55)
+				var sh := PackedVector2Array([c + Vector2(-6, -7), c + Vector2(6, -7), c + Vector2(6, 1), c + Vector2(0, 8), c + Vector2(-6, 1)])
+				draw_colored_polygon(sh, col.lightened(0.15) if k < tw else Color("5A5364"))
+		if bool(row.get("turn", false)):
+			draw_rect(Rect2(0, 0, W, H), Color(Pal.GOLD, 0.08 + 0.06 * sin(_t * 6.0)))
 	elif alive:
 		# seri ve sabotajlar
 		var sx := nx
