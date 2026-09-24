@@ -1,3 +1,4 @@
+@tool
 class_name Stage
 extends Node3D
 ## "The Grand Stage": kadife halı, katlı ağır perdeler, yaldızlı sahne ağzı,
@@ -563,7 +564,7 @@ func _build_proscenium() -> void:
 	crest.name = "Crest"
 	var mask := Label3D.new()
 	mask.text = "TA"
-	mask.font = load("res://assets/fonts/Limelight-Regular.ttf")
+	mask.font = Pal.italic_black()
 	mask.font_size = 160
 	mask.pixel_size = 0.006
 	mask.modulate = Color("3B0A10")

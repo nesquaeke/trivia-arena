@@ -1,3 +1,4 @@
+@tool
 extends Node
 ## İki dilli sözlük (TR/EN). Tüm arayüz metinleri buradan gelir.
 ## Kullanım: I18n.t("menu.trivia"), I18n.t("hud.alive", {"n": 3})

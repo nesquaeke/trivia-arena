@@ -139,7 +139,7 @@ func _build() -> void:
 		body.add_child(top)
 		var letter := Label3D.new()
 		letter.text = Stage.LETTERS[i]
-		letter.font = load("res://assets/fonts/Limelight-Regular.ttf")
+		letter.font = Pal.display()
 		letter.font_size = 200
 		letter.pixel_size = 0.005
 		letter.modulate = Stage.ZONE_COLORS[i]
@@ -149,7 +149,7 @@ func _build() -> void:
 		letter.position = Vector3(0, 2.1, 0)
 		a.add_child(letter)
 		var lab := Label3D.new()
-		lab.font = load("res://assets/fonts/PlayfairDisplay.ttf")
+		lab.font = Pal.serif_semi()
 		lab.font_size = 56
 		lab.pixel_size = 0.005
 		lab.outline_size = 14
@@ -212,7 +212,7 @@ func run() -> void:
 func _wait(s: float) -> void:
 	await get_tree().create_timer(s, false, true).timeout
 
-func _say(text: String, accent := UIKit.GOLD, sub := "") -> void:
+func _say(text: String, accent := Pal.GOLD, sub := "") -> void:
 	log_lines.append(text)
 	if ui:
 		ui.hud_set_msg(text, accent, sub)
@@ -225,7 +225,14 @@ func _standings() -> String:
 
 func _ui_top() -> void:
 	if ui:
-		ui.hud_set_top(I18n.t("arena.round", {"n": q_index + 1}) + " / %d" % QUESTIONS, _standings())
+		ui.hud_set_top(I18n.t("menu.conquest"), I18n.t("arena.round", {"n": q_index + 1}) + " / %d" % QUESTIONS)
+	# soldaki skor şeridi: karo sayıları
+	if ui and ui.has_method("hud_scores"):
+		var rows := []
+		for p in _ranked():
+			rows.append({"name": p.player_name, "color": PlushVisual.COLORS.get(String(p.look.get("color", "mustard")), Color.WHITE),
+				"value": count_for(p), "alive": true, "hp_mode": false, "combo": 0, "debuffs": []})
+		ui.hud_scores(rows)
 
 func _free_tiles() -> Array[Vector2i]:
 	var out: Array[Vector2i] = []
@@ -266,6 +273,9 @@ func _ask() -> void:
 	item = Questions.draw(q_index, rng)
 	face = Questions.face(item, I18n.lang)
 	stage.board.show_question(q_index, face.prompt, face.options, face.cat_name, face.cat_color, timer_total)
+	if ui and ui.has_method("hud_question"):
+		ui.hud_question(I18n.t("arena.round", {"n": q_index + 1}) + " / %d" % QUESTIONS, face.prompt, face.options,
+			face.cat_name, face.cat_color, timer_total, 0, Vector2i(0, 0))
 	for i in 4:
 		ped_labels[i].text = String(face.options[i])
 	_ui_top()
@@ -362,6 +372,8 @@ func _resolve() -> void:
 		ui.hud_set_timer(0.0, timer_total)
 	var correct: int = face.correct
 	stage.board.reveal = correct
+	if ui and ui.has_method("hud_reveal"):
+		ui.hud_reveal(correct)
 	var ans: String = Stage.LETTERS[correct] + " · " + String(face.options[correct])
 	if winner_of_q:
 		var col: Color = PlushVisual.COLORS.get(String(winner_of_q.look.get("color", "mustard")), Color.WHITE)
@@ -383,6 +395,8 @@ func _resolve() -> void:
 	_ui_top()
 	await _wait(2.6)
 	stage.board.reveal = -1
+	if ui and ui.has_method("hud_question_hide"):
+		ui.hud_question_hide()
 
 func on_fell_out(p: Plush) -> void:
 	# Conquest'te eleme yok: öne düşen kulisten geri gelir
@@ -416,8 +430,12 @@ func _finish() -> void:
 	stage.set_gold_target(rk[0])
 	if game.has_method("notify_player"):
 		game.notify_player(rk[0], {"t": "status", "text": I18n.t("house.status_win")})
-	_say(title, UIKit.GOLD)
+	_say(title, Pal.GOLD)
 	if ui:
 		await _wait(1.6)
-		ui.show_result(title, names)
+		var rows := []
+		for p in rk:
+			rows.append({"name": p.player_name, "color": PlushVisual.COLORS.get(String(p.look.get("color", "mustard")), Color.WHITE),
+				"points": count_for(p)})
+		ui.show_result(title, names, rows)
 	finished.emit(names)

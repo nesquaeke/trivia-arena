@@ -1,3 +1,4 @@
+@tool
 class_name TrapDoor
 extends AnimatableBody3D
 ## Menteşeli sahne kapağı. Gövdenin kendisi menteşe etrafında döner; ebeveyn

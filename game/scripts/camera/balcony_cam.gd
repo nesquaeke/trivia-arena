@@ -1,3 +1,4 @@
+@tool
 class_name BalconyCam
 extends Camera3D
 ## Tiyatro balkonu açısından bakan kamera. İzometrik değil: hafif geniş açılı,

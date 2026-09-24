@@ -39,29 +39,40 @@ var debug_ff := 1.0                  # --ff=2: bekleme sürelerini kısalt (dene
 func _ready() -> void:
 	randomize()
 	I18n.set_lang(String(Profile.data.get("lang", "tr")))
-	stage = Stage.new()
-	stage.name = "Stage"
-	add_child(stage)
-	props = Props.new()
-	props.name = "Props"
-	add_child(props)
+	# Sahne ağacı scenes/main.tscn'de: Stage, Props, Actors, Camera, UI.
+	# Editörde bu düğümlere tıklayıp Inspector'dan ayarlarını değiştirebilirsin.
+	stage = get_node_or_null("Stage")
+	if stage == null:
+		stage = Stage.new()
+		stage.name = "Stage"
+		add_child(stage)
+	props = get_node_or_null("Props")
+	if props == null:
+		props = Props.new()
+		props.name = "Props"
+		add_child(props)
 	props.build_lobby_set()
-	actors_root = Node3D.new()
-	actors_root.name = "Actors"
-	add_child(actors_root)
-	cam = BalconyCam.new()
-	cam.name = "Camera"
-	add_child(cam)
+	actors_root = get_node_or_null("Actors")
+	if actors_root == null:
+		actors_root = Node3D.new()
+		actors_root.name = "Actors"
+		add_child(actors_root)
+	cam = get_node_or_null("Camera")
+	if cam == null:
+		cam = BalconyCam.new()
+		cam.name = "Camera"
+		add_child(cam)
 
 	_join("kb0", Controllers.Keyboard.new(0), Profile.player_name(), Profile.look(), false)
 	_refill_bots(int(Profile.setting("bots", 3)))
 	_update_focus()
 
-	if ResourceLoader.exists("res://scripts/ui/ui_root.gd"):
+	ui = get_node_or_null("UI")
+	if ui == null:
 		ui = load("res://scripts/ui/ui_root.gd").new()
 		ui.name = "UI"
 		add_child(ui)
-		ui.setup(self)
+	ui.setup(self)
 
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--shot="):

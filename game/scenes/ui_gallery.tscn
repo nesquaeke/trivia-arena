@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/components/marquee_logo.gd" id="1_logo"]
+[ext_resource type="Script" path="res://scripts/ui/components/stage_button.gd" id="2_btn"]
+[ext_resource type="Script" path="res://scripts/ui/components/cta_button.gd" id="3_cta"]
+[ext_resource type="Script" path="res://scripts/ui/components/segmented.gd" id="4_seg"]
+[ext_resource type="Script" path="res://scripts/ui/components/kicker_label.gd" id="5_kick"]
+[ext_resource type="Script" path="res://scripts/ui/components/glass_panel.gd" id="6_glass"]
+[ext_resource type="Script" path="res://scripts/ui/components/kinetic_text.gd" id="7_kin"]
+[ext_resource type="Script" path="res://scripts/ui/components/key_hint.gd" id="8_keys"]
+[ext_resource type="Theme" path="res://ui/theme/grand_stage.tres" id="9_theme"]
+
+[node name="UIGallery" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("9_theme")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.09, 0.035, 0.045, 1)
+
+[node name="Note" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 1010.0
+offset_right = 1860.0
+offset_bottom = 1050.0
+text = "Arayüz vitrini: parçaları buradan seçip Inspector'dan değiştirebilirsin (renk, yazı, boyut). Oyundaki yerleşim scripts/ui/ altındaki dosyalarda."
+
+[node name="MarqueeLogo" type="Control" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 50.0
+offset_right = 680.0
+offset_bottom = 350.0
+script = ExtResource("1_logo")
+
+[node name="Kicker" type="Control" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 400.0
+offset_right = 660.0
+offset_bottom = 428.0
+script = ExtResource("5_kick")
+text = "Bu geceki gösteri"
+
+[node name="MenuItem" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 450.0
+offset_right = 680.0
+offset_bottom = 562.0
+script = ExtResource("2_btn")
+title = "Trivia Arena"
+caption = "Üç perde: kategori avı, güç turu, son ayakta kalan."
+
+[node name="MenuItemSmall" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 580.0
+offset_right = 680.0
+offset_bottom = 642.0
+script = ExtResource("2_btn")
+index = "03"
+title = "Ev partisi"
+big = false
+
+[node name="Cta" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 700.0
+offset_right = 420.0
+offset_bottom = 778.0
+script = ExtResource("3_cta")
+
+[node name="Ghost" type="Button" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 700.0
+offset_right = 600.0
+offset_bottom = 778.0
+script = ExtResource("3_cta")
+label = "Geri"
+style = "ghost"
+
+[node name="Segmented" type="Control" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 820.0
+offset_right = 500.0
+offset_bottom = 874.0
+script = ExtResource("4_seg")
+
+[node name="Keys" type="Control" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 920.0
+offset_right = 900.0
+offset_bottom = 956.0
+script = ExtResource("8_keys")
+
+[node name="Panel" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 80.0
+offset_right = 1500.0
+offset_bottom = 480.0
+script = ExtResource("6_glass")
+
+[node name="Title" type="Control" parent="Panel"]
+layout_mode = 2
+script = ExtResource("7_kin")
+text = "KOSTÜM ODASI"
+font_size = 80

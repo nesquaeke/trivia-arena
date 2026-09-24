@@ -1,3 +1,4 @@
+@tool
 class_name Props
 extends Node3D
 ## Sahnedeki etkileşimli dekorlar. Hepsi fizikli (RigidBody3D) ve "prop"
@@ -5,7 +6,14 @@ extends Node3D
 ## Jüri masası sabittir ama üstüne zıplanabilir. Kapak alanının (merkez)
 ## dışına yerleştirilir ki Trivia sırasında da sahnede kalabilsinler.
 
+## Editörde sahneyi açınca lobi dekorlarını da göster (oyunda main.gd kurar)
+@export var preview_in_editor := true
+
 var _mats := {}
+
+func _ready() -> void:
+	if Engine.is_editor_hint() and preview_in_editor:
+		build_lobby_set()
 
 func build_lobby_set() -> void:
 	clear()
@@ -180,7 +188,7 @@ func question_cutout(pos: Vector3, yaw := 0.0) -> RigidBody3D:
 	var b := _body(pos, 1.6, yaw, Vector3(0, 0.6, 0))
 	var tm := TextMesh.new()
 	tm.text = "?"
-	tm.font = load("res://assets/fonts/Limelight-Regular.ttf")
+	tm.font = Pal.display()
 	tm.font_size = 180
 	tm.pixel_size = 0.012
 	tm.depth = 0.12
@@ -238,7 +246,7 @@ func jury_table(pos: Vector3) -> StaticBody3D:
 		_shape(s, _boxs(Vector3(0.1, 0.92, 0.9)), Vector3(x, 0.46, 0))
 	var plate := Label3D.new()
 	plate.text = "JÜRİ"
-	plate.font = load("res://assets/fonts/Limelight-Regular.ttf")
+	plate.font = Pal.display()
 	plate.font_size = 96
 	plate.pixel_size = 0.004
 	plate.modulate = Color("E9C27A")

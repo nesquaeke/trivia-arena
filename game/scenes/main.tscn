@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/stage/stage.gd" id="2_stage"]
+[ext_resource type="Script" path="res://scripts/stage/props.gd" id="3_props"]
+[ext_resource type="Script" path="res://scripts/camera/balcony_cam.gd" id="4_cam"]
+[ext_resource type="Script" path="res://scripts/ui/ui_root.gd" id="5_ui"]
 
 [node name="Main" type="Node3D"]
-script = ExtResource("1")
+script = ExtResource("1_main")
+
+[node name="Stage" type="Node3D" parent="."]
+script = ExtResource("2_stage")
+
+[node name="Props" type="Node3D" parent="."]
+script = ExtResource("3_props")
+
+[node name="Actors" type="Node3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="."]
+current = true
+fov = 42.0
+script = ExtResource("4_cam")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 10
+script = ExtResource("5_ui")

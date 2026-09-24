@@ -1,3 +1,4 @@
+@tool
 class_name BoardScreen
 extends Control
 ## Sahnenin arkasındaki dev pano (SubViewport içinde çizilir, 3D'de bir yüzeye yansır).

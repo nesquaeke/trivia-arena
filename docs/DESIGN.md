@@ -35,43 +35,58 @@ Hepsi fizikli (`RigidBody3D`, `prop` grubu). Karakterler çarpınca devrilir, om
 - **Devrilme ("ragdoll hissi"):** Kilitler açılır, gövde gerçekten yuvarlanır, kollar-bacaklar çırpınır. 1–1,6 sn sonra doğrulup kalkar (görünüş yumuşakça dikleşir).
 - **Görünüş** (`actors/plush_visual.gd`): Keçe dokulu sarı pelüş, düğme gözler, dikişli gülüş, karın yaması, ayı kulakları. Yürüyüş salınımı, iniş sıkışması (yay), ivmeye gecikmeli kafa yayı ve göz kırpma var.
 
-> Tam iskeletli ragdoll (PhysicalBone3D) v0.3 hedefidir. Şimdiki çözüm tek gövdenin gerçekten devrilmesi + prosedürel uzuv çırpınması. Oynanışta aynı komik hissi veriyor ve ağ senkronizasyonu çok daha ucuz.
+> Tam iskeletli ragdoll (PhysicalBone3D) v0.4 hedefidir. Şimdiki çözüm tek gövdenin gerçekten devrilmesi + prosedürel uzuv çırpınması. Oynanışta aynı komik hissi veriyor ve ağ senkronizasyonu çok daha ucuz.
 
 ---
 
-## 2. Arayüz: "Anti-AI Slop", dokulu ve diegetik
+## 2. Arayüz: tema aynı, dil yeni (v0.2)
 
-Yuvarlak neon düğme yok. Pirinç levhalar, koyu ahşap, kadife ve kağıt var; hepsi kodla çizilir (`ui/ui_kit.gd`).
+İlk arayüz kodla çizilmiş ahşap panolar ve pirinç plaketlerdi; durağan ve "şablon" hissi veriyordu. Yeni arayüz aynı tiyatro temasını (kadife, pirinç, ampul) bir TV şovu grafik paketi gibi kullanır: sert, sıkışık başlıklar; zarif italik vurgular; her şey hareket eder.
 
-- **Sol pano (%24):** Yarı saydam ahşap, pirinç çerçeve, köşe gönyeleri. Sahne arkada görünmeye devam eder.
-  - Ampullü tabela: kovalayan ampuller, titrek neon başlık (Limelight).
-  - Mod plaketleri: Trivia Arena, Conquest Quiz, Ev partisi, Karakterim, İzleyici, Nasıl oynanır. Kazınmış yazı ve köşe vidaları var.
-- **Sağ üst bilet:** Tiyatro bileti (zımba delikleri, koçan, seri no). Pirinç isim plaketi (tıklayınca yeniden adlandır), iki yönlü pirinç TR/EN şalteri, sahne karnesi (G/M, Arena şampiyonluğu, mevcut seri).
-- **Seri lideri:** Lobide en uzun seriye sahip oyuncunun üstüne altın bir spot vurur (`Stage.set_gold_target`).
-- **Kostüm odası:** Sol pano hafifçe içeri çekilir, karakter sahnenin ortasında tek spotun altına gelir, diğer ışıklar kısılır. 7 şapka, 5 bıyık, 4 papyon ve 8 kumaş rengi var.
-- **İzleyici (loca):** Kamera yan duvardaki yaldızlı locaya geçer; sahneye gül, domates (çarpınca ezilir) ya da silindir şapka fırlatılır.
-- **Nasıl oynanır:** Eski tiyatro afişi. İpten sarkarak düşer, hafifçe sallanır; Roma rakamlı maddeler var.
-- **Sonuç:** "Perde!" panosu; sıralama, seriler, "Bir daha!" ve "Lobiye dön".
+**Tipografi** (`ui/fonts/*.tres`, FontVariation):
+- **Big Shoulders Display 900:** başlıklar, isimler, sayılar. Dar, yüksek, afiş gibi.
+- **Fraunces:** gövde metni ve sorular; italik siyah kesim el yazısı logoda ve kategori adlarında.
+- Türkçe büyük harf kuralı (`Pal.upper`): i → İ, ı → I. Özel adlar (TRIVIA, QUIZ, SHIFT) korunur.
+
+**Hareket** (`scripts/ui/fx.gd`): yaylı girişler, sıralı (stagger) belirme, vuruş, sarsıntı; `KineticText` harf harf düşen / neon gibi titreyerek yanan başlıklar; `RollingNumber` artışta yeşil, düşüşte kırmızı parlayan dönen sayılar.
+
+**Shaderlar** (`ui/shaders/`): altın yüzeylerde kayan parıltı, kovalayan ampuller, halka sayaç, kadife perde (kıvrım + altın saçak), yumuşak spot + toz, film greni ve köşe karartması.
+
+**Ekranlar:**
+- **Lobi:** Soldan karartma; "Trivia" el yazısı + ampullü "ARENA" logosu (ampuller sırayla yanar, harfler titreyerek açılır). Menü satırları numaralı; üstüne gelince kadife ışık bandı süzülür, başlık kayar, altın ok belirir. Kurulumda logo çekilir, yerine gösteri başlığı, bot sayacı, zorluk/süre seçicileri ve altın "Perde açılsın" düğmesi gelir.
+- **Profil kartı:** Bilet biçimi (oyuklu kenar, delikli koçan, seri no). Solda **canlı 3D pelüş portresi**: kendi küçük dünyasında spot altında nefes alır, göz kırpar, fareye bakar, arada zıplar; kostüm değişince anında giyinir. Karne sayıları döner. TR/EN kayan anahtar.
+- **HUD:** sol üstte perde rozeti; solda skor şeridi (sıralama değişince kartlar yer değiştirir; can turunda gecikmeli erimeli can çubuğu; seri alevi; sabotaj simgeleri; +/− farkı uçar); üstte kategori renkli soru kartı (metin kelime kelime yazılır, şıklar yerdeki kapak renkleriyle aynı); sağ üstte halka sayaç (son 5 saniyede kırmızı ve vuruşlu); altta duyuru bandı.
+- **Perde kartı:** kadife perde iner, Roma rakamı parlar, tur adı harf harf düşer, kural çipleri belirir.
+- **Ödül seçici:** yelpaze gibi kartlar; seçili kart havaya kalkar. Kumanda, telefon ya da fareyle.
+- **Final:** "Perde!", kazanan satırı taçlı, istatistikler (doğru, en iyi seri, çalınan puan), konfeti.
+- **Kostüm odası, ev partisi, loca, afiş:** aynı panel dili; afiş krem kağıt, ipte sallanarak iner.
+- **Sahnedeki pano:** lobide logo + kayan ilan; soru sırasında kategori ve dev geri sayım (okunacak metin HUD'da).
+
+**Düzenlenebilirlik:** `scenes/main.tscn` sahne ağacı (Stage, Props, Camera, UI) editörde canlı önizlenir (`@tool`); `scenes/ui_gallery.tscn` arayüz parçalarını tek tek gösterir; renkler `pal.gd`, sayılar `data/rules.tres`.
 
 ---
 
 ## 3. Modlar
 
-### Trivia Arena — fiziksel eleme (`modes/trivia_arena.gd`)
-1. Soru arkadaki dev panoya düşer. Zemin 4 menteşeli kapağa bölünür (A-B-C-D); şıklar kapakların üstüne yazılıdır.
-2. Oyuncular süre bitmeden (8/10/12 sn) doğru kapağa koşar. Omuz atıp birini kapağından düşürmek serbest.
-3. Süre dolunca trampet çalar ve yanlış kapaklar açılır; üstündekiler çığlıklarla kuyuya düşer. Hiçbir kapakta durmayanı **vodvil kancası** kulise çeker.
-4. Kimse doğru kapakta değilse kapaklar açılmaz, soru yenilenir.
-5. Son ayakta kalan kazanır. Kazanan karneye yazılır: galibiyet, Arena şampiyonluğu, seri.
+### Trivia Arena — üç perdelik klasik şov (`modes/classic_show.gd`)
+Web sürümünün "matematiksel" soru sistemi, 3D bedenle:
 
-Kapaklar (`stage/trapdoor.gd`) gövdenin kendisini menteşe etrafında döndürür. İlk sürümde ebeveyn düğüm döndürülüyordu ve fizik zemini yerinde kalıyordu; testler bunu yakaladı.
+1. **Kategori halatı** (her perde başında): sahneye üç kategori dairesi iner; dairede her zıplayış bir çekiş. İtişmek serbest. Kazanan kategori perdenin bütün sorularını belirler.
+2. **Perde I · Kategori avı:** 4 soru (d1, d1, d2, d3). Süre bitince üstünde durduğun kapak cevabın. Kombo merdiveni 250 / 250 / 500 / 750.
+3. **Perde II · Güç turu:** 4 soru (d1, d2, d2, d3). En hızlı doğru (doğru kapağa en erken girip orada kalan) ödül seçer: 400 puan soygunu ya da bir soruluk sabotaj (kurşun ayakkabı: yarı hız; ters kumanda; buz: kaygan ivme; dev kafa: en ufak omuzda devrilir).
+4. **Perde III · Son ayakta kalan:** puan → can (taban: max(1000, liderin %35'i)). Bedel = round((100 + 40·t) · (1 + 2/N)) × ölçek; ölçek = masanın ortalama canı / 4500 (0,3–2,5). Yalnız en hızlı doğru kurtulur. Canı biten oyuncunun ayağının altında **kişisel bir kapak** açılır ve sahneyi delip düşer. En fazla 16 soru.
+5. Kazanan karneye yazılır: galibiyet, Arena şampiyonluğu, seri.
+
+Bütün sayılar `data/rules.tres`'te (RulesConfig kaynağı).
 
 ### Conquest Quiz — bölge hakimiyeti (`modes/conquest_quiz.gd`)
 1. Sahne 7×4 = 28 karoya bölünür. Her soruda bir hedef karo altın spotla parlar; her 4. soruda 2×2 büyük ödül vardır (rakipten çalabilir).
 2. Kenarlarda A-B-C-D pirinç kürsüleri durur. Doğru kürsüye **ilk basan** hedefi kendi rengine boyar.
 3. Yanlış kürsü çarpar: oyuncu havaya fırlayıp devrilir ve o soruda bir daha deneyemez.
-4. Kendi renginde koşan %15 hızlanır, rakip boyasında %18 yavaşlar. Bu "sıkıştırma" mekaniğinin ilk hali.
+4. Kendi renginde koşan %15 hızlanır, rakip boyasında %18 yavaşlar.
 5. 12 soru sonunda en çok karosu olan kazanır.
+
+> Sıradaki: Türkiye haritası (web sürümündeki bölge savaşı) Conquest'e taşınacak.
 
 ---
 
@@ -82,7 +97,7 @@ Kapaklar (`stage/trapdoor.gd`) gövdenin kendisini menteşe etrafında döndür�
 | Yerel: 2 klavye seti + gamepad'ler | ✅ WASD/Boşluk/F · Oklar/Enter/Sağ Shift · gamepad (Ⓐ zıpla, Ⓧ/Ⓑ omuz). Katılmak için tuşa basmak yeterli. |
 | Botlar | ✅ Kolay/Normal/Zor. Soruyu okuma süresi, isabet, kararsızlık ve kaos için omuz atma var. |
 | **Ev partisi (QR + telefon kumandası)** | ✅ Tek ekran; telefonlar QR ile `/pad` sayfasını açar: sanal joystick, ZIPLA, OMUZ, titreşim. Sunucu: `server/`. |
-| Steam online (lobiler, Remote Play Together) | ⏳ v0.3. Hareket girdi ile sürüldüğü için ağ katmanı kontrolcü arayüzünün arkasına takılacak. |
+| Steam online (lobiler, Remote Play Together) | ⏳ v0.4. Hareket girdi ile sürüldüğü için ağ katmanı kontrolcü arayüzünün arkasına takılacak. |
 
 ### Ev partisi mimarisi
 ```
@@ -112,11 +127,12 @@ Kapaklar (`stage/trapdoor.gd`) gövdenin kendisini menteşe etrafında döndür�
 | Sürüm | İçerik |
 |---|---|
 | `v1.0-web` | Web prototipi (`web-archive` dalı). Render'da canlı. |
-| **`v0.1.0-3d-stage`** (bu sürüm) | Büyük Sahne, pelüş fizik, diegetik arayüz, Trivia Arena, Conquest Quiz, Ev partisi, 47 başsız test |
-| v0.2 | Gerçek sanat: pelüş karakter modeli + kumaş dokuları, tiyatro dekor modelleri, müzik, gamepad ile menü gezinme, ayarlar (ses, görüntü kalitesi) |
-| v0.3 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
-| v0.4 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
+| `v0.1.0-3d-stage` | Büyük Sahne, pelüş fizik, diegetik arayüz, Trivia Arena (eleme), Conquest Quiz, Ev partisi, 47 başsız test |
+| **v0.2 (bu sürüm)** | Klasik şov (web kuralları), yeni arayüz (kinetik tipografi, shaderlar, canlı 3D portre), düzenlenebilir sahne ağacı, 63 başsız test |
+| v0.3 | Gerçek sanat: pelüş karakter modeli + kumaş dokuları, tiyatro dekor modelleri, müzik, gamepad ile menü gezinme, ayarlar (ses, görüntü kalitesi) |
+| v0.4 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
+| v0.5 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
 
 ### Performans notları
-- Hacimsel sis ve gölgeli spotlar Forward+ gerektirir. Zayıf makineler için "Sade" kalite ayarı (v0.2) sisi ve ikincil gölgeleri kapatacak.
+- Hacimsel sis ve gölgeli spotlar Forward+ gerektirir. Zayıf makineler için "Sade" kalite ayarı (v0.3) sisi ve ikincil gölgeleri kapatacak.
 - Toz partikülleri GPU'da; dekorlar az çokgenli ve paylaşılan malzemeli.

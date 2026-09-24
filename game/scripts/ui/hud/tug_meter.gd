@@ -95,7 +95,7 @@ func _lead() -> int:
 func _draw() -> void:
 	var r := Rect2(Vector2.ZERO, size)
 	var pts := Icons.notched(r, 16.0)
-	draw_colored_polygon(pts, Color(0.05, 0.02, 0.025, 0.9))
+	draw_colored_polygon(pts, Color(0.05, 0.02, 0.025, 0.96))
 	Icons.outline(self, pts, Color(Pal.BRASS, 0.5), 1.0)
 	# başlık
 	var kf := Pal.kicker()
