@@ -88,7 +88,9 @@ Web sürümünün planı, sahneye serilen 3D bir Türkiye haritasında:
 - **Perde I:** tek tahmin sorusu sırayı belirler; herkes boş ve başka kaleye komşu olmayan bir bölgeye kalesini kurar (1000 puan).
 - **Perde II:** tahmin sorularında en yakın 2, ikinci 1 bölge alır (sınırına komşu); bölge 200, 2× bölge 400.
 - **Perde III:** savaş turu sayısı = 16 / oyuncu sayısı (2–6). Sırayla komşu bir düşman bölgesine saldırılır; saldırı yayı (renkli ışık topu) haritada uçar. Saldıran ve savunan aynı 4 şıklı soruyu cevaplar; yalnız saldıran bilirse bölge ve değeri kadar puan geçer; ikisi de bilirse tahmin sorusu ayırır. Kaleye vurmak bir kule düşürür; son kule düşünce kale çöker, bütün toprak ve puan fatihe geçer.
-- **Girdi:** tahmin için pirinç sayaç kadranı (yukarı/aşağı rakam, sol/sağ basamak, zıpla kilit, klavyeden yazmak); bölge seçimi yönle ya da fareyle; düelloda şık seçimi yönle, zıpla ya da tıkla. Telefonlar joystick ve ZIPLA ile aynısını yapar.
+- **Girdi:** tahmin cetveli (`hud/estimate_panel.gd`): min–max aralığında pirinç cetvel, geniş aralıkta logaritmik. Sol/sağ sancağı ivmeyle kaydırır (değer 3 anlamlı basamağa yuvarlanır), yukarı/aşağı büyüklüğe göre ince ayar, zıpla çakar, omuz kilidi açar; klavyeden yazma, fareyle sürükleme. Telefona sayı klavyesi (`{t:"mode", m:"num"}` → `{t:"num", v, lock}`), düelloda şık düğmeleri (`m:"abcd"` → `{t:"ans", i}`). Telefon ve bot tahminleri açıklamaya kadar gizli; açıklamada altın iğne cevaba düşer, mesafe çizgileri uzar.
+- **Kamera:** genel bakış (proscenium kirişinin içinden), seçimde tepeden, saldırıda iki bölgeye yakın, düelloda orta plan, kale düşüşünde yörünge çekimi (`BalconyCam.set_custom` + `orbit`). Generaller maçta gizli; sol sütunda kostümlü canlı portreli sancak kartları (`hud/war_rail.gd`), düello açılışı (`hud/duel_splash.gd`), finalde selam.
+- **Ses:** müzikler ve orkestral efektler `tools/music/compose.py` ile notadan üretilir (`assets/audio`); `Music` autoload'ı parçalar arasında geçiş yapar (soru = gerilim yatağı).
 
 ---
 

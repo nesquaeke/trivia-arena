@@ -126,8 +126,82 @@ static func draw(ci: CanvasItem, name: String, c: Vector2, s: float, col: Color,
 			var e := Color(0, 0, 0, 0.75)
 			_ellipse(ci, c + Vector2(-s * 0.17, -s * 0.03), Vector2(s * 0.11, s * 0.07), e)
 			_ellipse(ci, c + Vector2(s * 0.17, -s * 0.03), Vector2(s * 0.11, s * 0.07), e)
+		"masks":
+			# komedi (önde, gülen) ve trajedi (arkada, eğik, ağlayan)
+			var back := c + Vector2(s * 0.14, -s * 0.08)
+			_mask(ci, back, s * 0.62, col.darkened(0.35), false, 0.3)
+			_mask(ci, c + Vector2(-s * 0.1, s * 0.06), s * 0.62, col, true, -0.2)
+		"swords":
+			for k: float in [-1.0, 1.0]:
+				var a := c + Vector2(-s * 0.36 * k, s * 0.36)
+				var b := c + Vector2(s * 0.34 * k, -s * 0.34)
+				ci.draw_line(a, b, col, lw * 1.1, true)
+				# kabza ve siper
+				var d := (b - a).normalized()
+				var n := Vector2(-d.y, d.x)
+				var g := a + d * s * 0.16
+				ci.draw_line(g - n * s * 0.13, g + n * s * 0.13, col, lw * 1.3, true)
+				ci.draw_circle(a - d * s * 0.03, s * 0.055, col)
+		"hanger":
+			ci.draw_arc(c + Vector2(0, -s * 0.3), s * 0.09, PI * 0.9, PI * 2.4, 12, col, lw, true)
+			ci.draw_polyline(PackedVector2Array([c + Vector2(0, -s * 0.2), c + Vector2(-s * 0.44, s * 0.18), c + Vector2(s * 0.44, s * 0.18), c + Vector2(0, -s * 0.2)]), col, lw, true)
+		"opera":
+			for k: float in [-1.0, 1.0]:
+				ci.draw_circle(c + Vector2(s * 0.2 * k, s * 0.08), s * 0.17, col)
+				ci.draw_circle(c + Vector2(s * 0.2 * k, s * 0.08), s * 0.09, Color(0, 0, 0, 0.55))
+			ci.draw_rect(Rect2(c + Vector2(-s * 0.08, -s * 0.02), Vector2(s * 0.16, s * 0.09)), col)
+			ci.draw_line(c + Vector2(s * 0.3, -s * 0.02), c + Vector2(s * 0.46, -s * 0.42), col, lw, true)
+		"scroll":
+			ci.draw_rect(Rect2(c + Vector2(-s * 0.28, -s * 0.32), Vector2(s * 0.56, s * 0.64)), col, false, lw)
+			for k: float in [-1.0, 1.0]:
+				_ellipse(ci, c + Vector2(0, s * 0.36 * k), Vector2(s * 0.36, s * 0.07), col)
+			for i in 3:
+				ci.draw_line(c + Vector2(-s * 0.16, -s * 0.14 + i * s * 0.13), c + Vector2(s * 0.16, -s * 0.14 + i * s * 0.13), col, maxf(1.0, lw * 0.6))
+		"gear":
+			var pts := PackedVector2Array()
+			for i in 48:
+				var a := TAU * i / 48.0
+				var r := s * (0.44 if (i / 3) % 2 == 0 else 0.34)
+				pts.append(c + Vector2(cos(a), sin(a)) * r)
+			ci.draw_colored_polygon(pts, col)
+			ci.draw_circle(c, s * 0.15, Color(0, 0, 0, 0.6))
+		"castle":
+			ci.draw_rect(Rect2(c + Vector2(-s * 0.4, -s * 0.05), Vector2(s * 0.8, s * 0.45)), col)
+			for i in 3:
+				var x := -s * 0.4 + i * s * 0.3
+				ci.draw_rect(Rect2(c + Vector2(x, -s * 0.38), Vector2(s * 0.2, s * 0.36)), col)
+				ci.draw_rect(Rect2(c + Vector2(x, -s * 0.46), Vector2(s * 0.07, s * 0.1)), col)
+				ci.draw_rect(Rect2(c + Vector2(x + s * 0.13, -s * 0.46), Vector2(s * 0.07, s * 0.1)), col)
+			_ellipse(ci, c + Vector2(0, s * 0.3), Vector2(s * 0.09, s * 0.12), Color(0, 0, 0, 0.6))
+		"door":
+			ci.draw_rect(Rect2(c + Vector2(-s * 0.26, -s * 0.42), Vector2(s * 0.52, s * 0.84)), col, false, lw)
+			ci.draw_colored_polygon(PackedVector2Array([c + Vector2(-s * 0.26, -s * 0.42), c + Vector2(s * 0.12, -s * 0.3), c + Vector2(s * 0.12, s * 0.5), c + Vector2(-s * 0.26, s * 0.42)]), col)
+			ci.draw_circle(c + Vector2(s * 0.03, s * 0.05), s * 0.05, Color(0, 0, 0, 0.7))
+		"flag":
+			ci.draw_line(c + Vector2(-s * 0.3, s * 0.45), c + Vector2(-s * 0.3, -s * 0.45), col, lw, true)
+			ci.draw_colored_polygon(PackedVector2Array([c + Vector2(-s * 0.3, -s * 0.45), c + Vector2(s * 0.4, -s * 0.3), c + Vector2(-s * 0.3, -s * 0.05)]), col)
 		_:
 			ci.draw_circle(c, s * 0.3, col)
+
+static func _mask(ci: CanvasItem, c: Vector2, s: float, col: Color, happy: bool, tilt: float) -> void:
+	var pts := PackedVector2Array()
+	for i in 32:
+		var a := TAU * i / 32.0
+		var r := Vector2(s * 0.42, s * 0.5)
+		var p := Vector2(cos(a) * r.x * (1.0 - 0.18 * maxf(0.0, sin(a))), sin(a) * r.y)
+		pts.append(c + p.rotated(tilt))
+	ci.draw_colored_polygon(pts, col)
+	var e := Color(0, 0, 0, 0.8)
+	for k: float in [-1.0, 1.0]:
+		var ec := c + Vector2(s * 0.16 * k, -s * 0.1).rotated(tilt)
+		_ellipse(ci, ec, Vector2(s * 0.1, s * (0.05 if happy else 0.07)), e)
+	var m := PackedVector2Array()
+	for i in 9:
+		var t := float(i) / 8.0
+		var x := lerpf(-s * 0.18, s * 0.18, t)
+		var y := s * 0.2 + (s * 0.1 if happy else -s * 0.08) * sin(t * PI)
+		m.append(c + Vector2(x, y).rotated(tilt))
+	ci.draw_polyline(m, e, maxf(1.5, s * 0.07), true)
 
 static func _ellipse(ci: CanvasItem, c: Vector2, r: Vector2, col: Color) -> void:
 	var pts := PackedVector2Array()

@@ -12,11 +12,14 @@ extends Control
 
 signal reward_clicked(step: int, index: int)
 signal answer_clicked(index: int)
+signal ruler_input(u: float, release: bool)
 signal again_pressed
 signal back_pressed
 
 var badge: RoundBadge
 var rail: ScoreRail
+var war_rail: WarRail
+var duel_splash: DuelSplash
 var timer: RingTimer
 var question: QuestionCard
 var callout: Callout
@@ -38,6 +41,10 @@ func _ready() -> void:
 	rail.position = Vector2(30, 150)
 	rail.size = Vector2(340, 800)
 	add_child(rail)
+	war_rail = WarRail.new()
+	war_rail.position = Vector2(26, 142)
+	war_rail.size = Vector2(340, 800)
+	add_child(war_rail)
 	timer = RingTimer.new()
 	timer.position = Vector2(1920 - 156 - 34, 30)
 	add_child(timer)
@@ -46,10 +53,10 @@ func _ready() -> void:
 	question.answer_clicked.connect(func(i): answer_clicked.emit(i))
 	add_child(question)
 	estimate = EstimatePanel.new()
-	estimate.position = Vector2((1920 - EstimatePanel.W) * 0.5, 22)
+	estimate.ruler_input.connect(func(u, r): ruler_input.emit(u, r))
 	add_child(estimate)
 	callout = Callout.new()
-	callout.position = Vector2((1920 - 1400) * 0.5, 930)
+	callout.position = Vector2((1920 - 1400) * 0.5, 920)
 	add_child(callout)
 	tug = TugMeter.new()
 	tug.position = Vector2((1920 - TugMeter.W) * 0.5, 22)
@@ -59,6 +66,8 @@ func _ready() -> void:
 	reward = RewardPicker.new()
 	reward.clicked.connect(func(s, i): reward_clicked.emit(s, i))
 	add_child(reward)
+	duel_splash = DuelSplash.new()
+	add_child(duel_splash)
 	round_card = RoundCard.new()
 	add_child(round_card)
 	result = ResultScreen.new()
@@ -69,7 +78,9 @@ func _ready() -> void:
 
 func reset() -> void:
 	rail.clear()
-	for c in [rail, badge]:
+	war_rail.clear()
+	duel_splash.visible = false
+	for c in [rail, war_rail, badge]:
 		Fx.cancel_fade(c)
 		c.visible = true
 		c.modulate.a = 1.0
@@ -93,7 +104,16 @@ func hud_top(text: String, sub := "") -> void:
 	badge.set_round(sub, text)
 
 func hud_scores(rows: Array) -> void:
-	rail.update_rows(rows)
+	# Conquest satırları (toprak sayısı taşıyanlar) sancak kartlarına gider
+	if not rows.is_empty() and (rows[0] as Dictionary).has("tiles"):
+		war_rail.update_rows(rows)
+	else:
+		rail.update_rows(rows)
+
+func hud_duel_splash(a: Dictionary, d: Dictionary, place: String) -> void:
+	question.hide_card()
+	callout.say("")
+	duel_splash.play(a, d, place)
 
 func hud_round(r: int, title: String) -> void:
 	badge.set_round(Pal.t("round.kicker") + " " + Pal.roman(r), title)
@@ -122,6 +142,7 @@ func hud_tug_hide() -> void:
 	tug.close()
 
 func hud_question(label: String, prompt: String, options: Array, cat_name: String, cat_color: Color, total: float, stake: int, pips := Vector2i(0, 0)) -> void:
+	duel_splash.visible = false
 	question.show_question(label, prompt, options, cat_name, cat_color, stake, pips)
 	timer.set_time(total, total)
 
@@ -153,15 +174,17 @@ func hud_standings_hide() -> void:
 	standings.close()
 
 # ── Conquest ────────────────────────────────────────────────────────
-func hud_estimate_open(kicker: String, q: String, unit: String, dials: Array, year: bool) -> void:
+func hud_estimate_open(kicker: String, q: String, unit: String, lo: float, hi: float, year: bool, entries: Array, mouse_on: bool) -> void:
 	question.hide_card()
-	estimate.open(kicker, q, unit, dials, year)
+	callout.say("")
+	estimate.mouse_on = mouse_on
+	estimate.open(kicker, q, unit, lo, hi, year, entries)
 
-func hud_estimate_dial(i: int, value: int, cursor: int, locked: bool) -> void:
-	estimate.update_dial(i, value, cursor, locked)
+func hud_estimate_entry(i: int, value: int, locked: bool) -> void:
+	estimate.update_entry(i, value, locked)
 
-func hud_estimate_reveal(answer: String, ranked: Array) -> void:
-	estimate.reveal(answer, ranked)
+func hud_estimate_reveal(answer: int, answer_text: String, ranked: Array) -> void:
+	estimate.reveal(answer, answer_text, ranked)
 
 func hud_estimate_close() -> void:
 	estimate.close()
@@ -176,6 +199,7 @@ func show_result(title: String, names: Array, rows: Array = []) -> void:
 	callout.say("")
 	timer.set_time(0.0, 1.0)
 	Fx.fade(rail, 0.0, 0.4)
+	Fx.fade(war_rail, 0.0, 0.4)
 	Fx.fade(badge, 0.0, 0.4)
 	result.open(title, names, rows)
 

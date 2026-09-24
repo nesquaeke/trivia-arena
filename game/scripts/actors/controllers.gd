@@ -25,6 +25,15 @@ class Base extends RefCounted:
 		var s := _shove
 		_shove = false
 		return s
+	## Telefonun sayı klavyesinden gelen tahmin: {v: int, lock: bool} ya da boş
+	func take_number() -> Dictionary:
+		return {}
+	## Telefonun şık düğmelerinden gelen cevap (0-3) ya da -1
+	func take_answer() -> int:
+		return -1
+	## Telefon ekranı kendi girdisini gösteriyor mu (tahmin gizli kalsın mı)
+	func is_phone() -> bool:
+		return false
 
 ## Klavye: set 0 = WASD + Boşluk + F ; set 1 = Oklar + Enter + Sağ Shift
 class Keyboard extends Base:
@@ -118,6 +127,17 @@ class Phone extends Base:
 			_shove = true
 		_prev_jump = j
 		_prev_shove = s
+	func take_number() -> Dictionary:
+		if bridge == null:
+			return {}
+		return bridge.take_event(pid, "num")
+	func take_answer() -> int:
+		if bridge == null:
+			return -1
+		var e: Dictionary = bridge.take_event(pid, "ans")
+		return int(e.get("i", -1)) if not e.is_empty() else -1
+	func is_phone() -> bool:
+		return true
 
 ## Test ve senaryo için elle sürülen kontrolcü.
 class Scripted extends Base:

@@ -73,6 +73,7 @@ func _ready() -> void:
 		ui.name = "UI"
 		add_child(ui)
 	ui.setup(self)
+	GameSettings.apply_all(get_tree())
 
 	for a in OS.get_cmdline_user_args():
 		if a.begins_with("--shot="):
@@ -89,6 +90,8 @@ func _ready() -> void:
 			debug_ff = float(a.substr(5))
 	if _shot_mode != "":
 		_run_shot_script()
+	else:
+		Music.play("lobby", 2.5)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.keycode == KEY_SHIFT and event.location == KEY_LOCATION_RIGHT:
@@ -384,10 +387,12 @@ func _reset_lobby_layout() -> void:
 		all[i].revive(SPAWNS[i % SPAWNS.size()])
 	_bots_wander()
 	cam.set_shot(BalconyCam.Shot.LOBBY, true)
+	Music.play("lobby", 2.0)
 	notify_phones({"t": "in_game"})
 	notify_phones({"t": "status", "text": I18n.t("house.status_lobby")})
 
 var match_kind := "arena"
+var _demo_map: MapBoard
 
 func start_arena(kind := "") -> void:
 	if mode != Mode.LOBBY:
@@ -399,6 +404,7 @@ func start_arena(kind := "") -> void:
 	if ui:
 		ui.show_lobby_chrome(false)
 	stage.set_curtain(true)
+	Music.play("conquest" if match_kind == "conquest" else "trivia", 2.0)
 	await stage.curtain_done
 	if match_kind == "conquest":
 		props.clear()
@@ -558,6 +564,18 @@ func prepare_game_shot(part: String) -> void:
 			while arena == null or arena.act < 2 or arena.log_lines.filter(func(l): return l.begins_with("CLAIM")).size() < 5:
 				await get_tree().process_frame
 			await get_tree().create_timer(0.4).timeout
+		"cq_pick":
+			if arena == null:
+				start_arena("conquest")
+			while arena == null or arena.phase != "pick":
+				await get_tree().process_frame
+			await get_tree().create_timer(1.4).timeout
+		"cq_splash":
+			if arena == null:
+				start_arena("conquest")
+			while arena == null or arena.log_lines.filter(func(l): return l.begins_with("ATTACK")).size() < 1:
+				await get_tree().process_frame
+			await get_tree().create_timer(0.95).timeout
 		"cq_duel":
 			if arena == null:
 				start_arena("conquest")
@@ -594,12 +612,14 @@ func prepare_game_shot(part: String) -> void:
 			# yalnız görüntü: haritayı kur, birkaç bölgeyi boya
 			props.clear()
 			stage.set_zones_visible(false)
+			stage.set_map_light(true)
 			var mb := MapBoard.new()
 			add_child(mb)
 			mb.build()
-			var acts := all_actors()
-			for i in acts.size():
-				acts[i].teleport(Vector3((i - (acts.size() - 1) * 0.5) * 1.2, 0.05, 3.3), PI)
+			for a in all_actors():
+				a.visible = false
+				a.freeze = true
+			_demo_map = mb
 			var ids := mb.order
 			for i in 8:
 				var col: Color = PlushVisual.COLORS[PlushVisual.COLOR_KEYS[i % 4]]
@@ -619,10 +639,21 @@ func prepare_game_shot(part: String) -> void:
 					mb.set_piece(ids[i], fig)
 			mb.set_mark(ids[5], "cursor")
 			mb.set_mark(ids[6], "pickable")
-			cam.set_shot(BalconyCam.Shot.MAP, true)
+			cam.set_custom({"pos": Vector3(0.0, 9.4, 4.5), "look": Vector3(0.0, 0.0, -1.25), "fov": 50.0, "h": -0.6, "sway": 0.0}, true)
 			if ui:
 				ui.show_lobby_chrome(false)
 			await get_tree().create_timer(2.0).timeout
+		"map_top":
+			cam.set_custom({"pos": Vector3(0.0, 12.8, 2.2), "look": Vector3(0.0, 0.0, -1.3), "fov": 44.0, "h": -0.75, "sway": 0.0}, true)
+			await get_tree().create_timer(1.0).timeout
+		"castle_fall":
+			var id: String = _demo_map.order[0]
+			var c := _demo_map.seat(id) + Vector3(0, 0.35, 0)
+			cam.set_custom({"pos": c + Vector3(0, 1.6, 2.6), "look": c, "fov": 36.0, "h": 0.0, "sway": 0.0,
+				"orbit": {"center": c, "radius": 3.3, "height": 1.9, "speed": 0.42, "angle": -0.5}}, true)
+			await get_tree().create_timer(0.6).timeout
+			(_demo_map.piece(id) as CastleModel).collapse()
+			await get_tree().create_timer(1.25).timeout
 		"costume_demo", "costume_demo2", "castle_demo":
 			props.clear()
 			for a in all_actors():

@@ -1,13 +1,18 @@
 @tool
 class_name StageButton
 extends Button
-## Menü satırı: numara, büyük başlık, italik alt yazı.
+## Menü satırı: ampullü pirinç madalyon (içinde simge), büyük başlık, italik alt yazı.
 ## Üstüne gelince kadife bir ışık bandı soldan süzülür, başlık sağa kayar,
 ## altın ok belirir. Klavye/gamepad odağında da aynı şekilde yanar.
 
 @export var index := "01":
 	set(v):
 		index = v
+		queue_redraw()
+## Madalyonun içindeki simge (Icons.draw adı). Boşsa numara yazılır.
+@export var emblem := "":
+	set(v):
+		emblem = v
 		queue_redraw()
 @export var title := "Trivia Arena":
 	set(v):
@@ -28,6 +33,7 @@ var _h := 0.0          # üstünde olma (yumuşatılmış)
 var _press := 0.0
 var _hover := false
 var _intro := 1.0
+var _t := 0.0
 
 func _init() -> void:
 	flat = true
@@ -62,6 +68,7 @@ func _process(delta: float) -> void:
 	var target := 1.0 if (_hover or has_focus()) and not disabled else 0.0
 	_h = Fx.damp(_h, target, 12.0, delta)
 	_press = maxf(0.0, _press - delta * 3.0)
+	_t += delta
 	queue_redraw()
 
 func _draw() -> void:
@@ -87,13 +94,16 @@ func _draw() -> void:
 	var f_title := Pal.display()
 	var fs := 72 if big else 42
 	var cap_fs := 21 if big else 19
-	var x0 := 64.0 + 18.0 * h + slide
+	var x0 := (84.0 if emblem != "" else 64.0) + 18.0 * h + slide
 	var title_y := 74.0 if big else 46.0
-	# numara
+	# madalyon (ya da numara)
 	var idx_col := Pal.MUTED.lerp(accent, h)
 	var iy := title_y - fs * 0.5
-	draw_string(Pal.italic(), Vector2(slide + 4, iy), index, HORIZONTAL_ALIGNMENT_LEFT, -1, 24 if big else 19, Color(idx_col, ia))
-	draw_line(Vector2(slide + 6, iy + 8), Vector2(slide + 38 + 10 * h, iy + 8), Color(idx_col, 0.6 * ia), 1.0)
+	if emblem != "":
+		_draw_medallion(Vector2(slide + 30, title_y - fs * 0.36), 27.0 if big else 21.0, h, ia)
+	else:
+		draw_string(Pal.italic(), Vector2(slide + 4, iy), index, HORIZONTAL_ALIGNMENT_LEFT, -1, 24 if big else 19, Color(idx_col, ia))
+		draw_line(Vector2(slide + 6, iy + 8), Vector2(slide + 38 + 10 * h, iy + 8), Color(idx_col, 0.6 * ia), 1.0)
 	# başlık
 	var tcol := Pal.CREAM.lerp(Pal.CHAMPAGNE, h)
 	var ttl := Pal.upper(title)
@@ -113,3 +123,24 @@ func _draw() -> void:
 		elif h > 0.02:
 			var cx := x0 + tw + 58 + 12 * h
 			draw_string(Pal.italic(), Vector2(cx, title_y - 8), caption, HORIZONTAL_ALIGNMENT_LEFT, -1, cap_fs, Color(Pal.CREAM, 0.85 * h * ia))
+
+## Tiyatro tabelası gibi: koyu pirinç disk, çevresinde küçük ampuller.
+## Üstüne gelince ampuller sırayla yanıp döner, simge altına kesilir.
+func _draw_medallion(c: Vector2, r: float, h: float, a: float) -> void:
+	var spin := _t * 1.6
+	draw_circle(c + Vector2(0, 3), r + 9, Color(0, 0, 0, 0.35 * a))
+	draw_circle(c, r + 8, Color(Pal.BRASS_LO.lerp(Pal.BRASS, h * 0.5), a))
+	draw_circle(c, r + 2, Color(0.09, 0.035, 0.04, a))
+	draw_arc(c, r + 2, 0, TAU, 40, Color(Pal.GOLD, (0.35 + 0.5 * h) * a), 1.5, true)
+	var n := 12
+	for i in n:
+		var ang := TAU * i / n - PI / 2
+		var p := c + Vector2(cos(ang), sin(ang)) * (r + 5)
+		# sırayla yanan ampuller (hover), sönükken hafif kor
+		var chase := 0.5 + 0.5 * sin(spin * 4.0 - i * 0.9)
+		var lit := lerpf(0.18, 0.35 + 0.65 * chase, h)
+		draw_circle(p, 2.4 if r > 22 else 2.0, Color(Pal.CHAMPAGNE.lerp(Pal.GOLD, 1.0 - lit), lit * a))
+		if lit > 0.6:
+			draw_circle(p, 5.0, Color(Pal.GOLD, (lit - 0.6) * 0.5 * a))
+	var ic := Color(Pal.BRASS.lerp(Pal.GOLD, h), a)
+	Icons.draw(self, emblem, c + Vector2(0, 1), r * 1.25, ic)

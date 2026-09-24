@@ -435,6 +435,18 @@ func zone_at(p: Vector3) -> int:
 func zone_half_extents() -> Vector2:
 	return Vector2((TRAP_X - GAP / 2) / 2, ((TRAP_Z1 - TRAP_Z0) / 2 - GAP / 2) / 2)
 
+## Harita ışığı (Conquest): yan spotların dar sıcak havuzları haritada
+## parlama yapar; onları yayıp kısar, üstten yumuşak bir dolgu verir.
+func set_map_light(on: bool) -> void:
+	if main_lights.size() < 3:
+		return
+	var tw := create_tween().set_parallel(true)
+	for i in [1, 2]:
+		var l: SpotLight3D = main_lights[i]
+		tw.tween_property(l, "light_energy", 3.2 if on else (11.0 if i == 1 else 10.0), 0.8)
+		tw.tween_property(l, "spot_angle", 34.0 if on else 13.0, 0.8)
+	tw.tween_property(main_lights[0], "light_energy", 9.0 if on else 7.5, 0.8)
+
 func set_zones_visible(on: bool) -> void:
 	for l in zone_letters:
 		l.visible = on

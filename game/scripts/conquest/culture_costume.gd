@@ -361,3 +361,38 @@ static func dress(v: PlushVisual, culture: String, accent: Color) -> void:
 			hand_r.add_child(ls)
 			_add(ls, _torus(0.12, 0.145), rope, Vector3(0, 0.12, 0), Vector3(0, 0, PI / 2))
 			_add(ls, _torus(0.1, 0.125), rope, Vector3(0.02, 0.12, 0), Vector3(0, 0.3, PI / 2))
+
+	_details(v, culture, accent)
+
+## Ortak ince iş: her kostümün eteğinde açık renkli şerit ve üstünde dikiş
+## izleri (tiyatro terzisinin elinden çıkmış gibi), önde iki keçe düğme.
+## Pelerinli kültürlerde sırtta dalgalı, iki katlı bir pelerin.
+static func _details(v: PlushVisual, culture: String, accent: Color) -> void:
+	var body := v.body_root
+	var trim := PlushVisual.felt(accent.lightened(0.35))
+	var thread := _mat("thread", accent.darkened(0.55), 0.9)
+	var hem_y := {"viking": 0.31, "centurion": 0.36, "pharaoh": 0.34, "samurai": 0.36, "mariachi": 0.39,
+		"musketeer": 0.37, "highlander": 0.33, "janissary": 0.3, "hussar": 0.38, "frontier": 0.39}
+	var y: float = hem_y.get(culture, 0.38)
+	_add(body, _torus(0.325, 0.352), trim, Vector3(0, y, 0))
+	for i in 18:
+		var ang := TAU * i / 18.0
+		_add(body, _box(0.028, 0.008, 0.008), thread, Vector3(sin(ang) * 0.352, y + 0.018, cos(ang) * 0.352), Vector3(0, ang, 0))
+	if not ["samurai", "pharaoh", "centurion"].has(culture):
+		for k in 2:
+			_add(body, _cyl(0.022, 0.022, 0.012, 10), _mat("button", Color("E9D6A8"), 0.5, 0.2), Vector3(0, 0.58 + k * 0.1, 0.335), Vector3(PI / 2, 0, 0))
+	if ["centurion", "musketeer", "hussar", "highlander", "janissary"].has(culture):
+		var cape_col := accent.darkened(0.2) if culture != "centurion" else Color("A81E2A")
+		var cape := PlushVisual.felt(cape_col)
+		var lining := PlushVisual.felt(cape_col.lightened(0.3) if culture != "highlander" else Color("2F5A3A"))
+		var root := Node3D.new()
+		root.position = Vector3(0, 0.8, -0.3)
+		root.rotation.x = 0.12
+		root.add_to_group("costume")
+		body.add_child(root)
+		_add(root, _box(0.5, 0.52, 0.03), cape, Vector3(0, -0.24, -0.02))
+		_add(root, _box(0.46, 0.5, 0.02), lining, Vector3(0, -0.24, 0.005))
+		for k in 3:
+			# kıvrımlar: pelerinin eteğinde üç dikey kat
+			_add(root, _cyl(0.03, 0.03, 0.5, 8), cape, Vector3(-0.16 + k * 0.16, -0.24, -0.04))
+		_add(body, _torus(0.23, 0.27), cape, Vector3(0, 0.83, -0.02), Vector3(0.2, 0, 0))

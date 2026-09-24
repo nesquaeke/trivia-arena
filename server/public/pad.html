@@ -58,6 +58,29 @@
   .btn.down{transform:translateY(6px);box-shadow:0 2px 0 #3a2408,0 4px 10px rgba(0,0,0,.5)}
   .out{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:rgba(10,4,4,.8);text-align:center;padding:20px}
   .out b{font-family:Limelight,serif;font-weight:400;font-size:36px;color:#ff8a6a}
+  /* sayı klavyesi ve şıklar (Conquest) */
+  .sheet{position:absolute;inset:0;display:flex;flex-direction:column;padding:14px 18px calc(16px + env(safe-area-inset-bottom));gap:10px;
+    background:linear-gradient(180deg,rgba(20,9,5,.96),rgba(30,15,9,.98))}
+  .sheet .q{font-style:italic;font-size:17px;line-height:1.3;text-align:center;opacity:.9;max-height:4.2em;overflow:hidden}
+  .disp{display:flex;align-items:baseline;justify-content:center;gap:10px;padding:10px 12px;border:2px solid var(--brass);background:#140905;
+    clip-path:polygon(10px 0,calc(100% - 10px) 0,100% 10px,100% calc(100% - 10px),calc(100% - 10px) 100%,10px 100%,0 calc(100% - 10px),0 10px)}
+  .disp b{font:400 clamp(40px,12vw,64px) Limelight,serif;color:var(--gold);letter-spacing:.02em;min-height:1em}
+  .disp small{font-style:italic;opacity:.75;font-size:18px}
+  .range{text-align:center;font-size:13px;opacity:.6;font-style:italic}
+  .keys{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;min-height:0}
+  .key{display:flex;align-items:center;justify-content:center;font:800 clamp(24px,7vw,34px) 'Playfair Display',serif;color:var(--cream);
+    background:linear-gradient(180deg,#3a2012,#24120a);border:2px solid var(--brass-lo);border-radius:12px;box-shadow:0 4px 0 #0c0503}
+  .key:active,.key.down{transform:translateY(3px);box-shadow:0 1px 0 #0c0503;background:#4a2a16}
+  .key.fn{color:var(--gold);font-size:22px}
+  .lockbtn{padding:16px;border:2px solid #3a2408;font:800 22px 'Playfair Display',serif;color:var(--ink);letter-spacing:.08em;
+    background:linear-gradient(180deg,var(--brass-hi),var(--brass) 55%,var(--brass-lo));box-shadow:0 5px 0 #3a2408;border-radius:12px}
+  .lockbtn.done{background:linear-gradient(180deg,#b9f0a6,#6cc15a 60%,#2f6b24);color:#0d2a08}
+  .abcd{flex:1;display:grid;grid-template-rows:repeat(4,1fr);gap:10px;min-height:0}
+  .opt{display:flex;align-items:center;gap:14px;padding:8px 14px;border-radius:14px;border:3px solid rgba(0,0,0,.35);color:#1a0d06;
+    font:700 clamp(16px,4.6vw,21px) 'Playfair Display',serif;text-align:left;box-shadow:0 5px 0 rgba(0,0,0,.45);line-height:1.15;overflow:hidden}
+  .opt i{font:400 clamp(30px,9vw,44px) Limelight,serif;font-style:normal;flex:none;width:1.1em;text-align:center}
+  .opt.sel{outline:4px solid var(--cream);outline-offset:2px;transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.45)}
+  .abcd.locked .opt:not(.sel){opacity:.35;filter:saturate(.4)}
   @media (orientation:portrait){ .area{flex-direction:column} .buttons{width:100%;max-width:none;flex-direction:row;padding-bottom:26px} }
 </style>
 </head>
@@ -84,6 +107,17 @@
       <div class="btn red" id="bShove" data-t="shove">OMUZ</div>
     </div>
     <div class="out" id="outCard" hidden><b data-t="out">Elendin!</b><p data-t="outSub">Kuyudan izle. Bir sonraki maçta sahnedesin.</p></div>
+    <div class="sheet" id="numSheet" hidden>
+      <div class="q" id="numQ"></div>
+      <div class="disp"><b id="numVal">0</b><small id="numUnit"></small></div>
+      <div class="range" id="numRange"></div>
+      <div class="keys" id="keys"></div>
+      <button class="lockbtn" id="numLock" data-t="lock">KİLİTLE</button>
+    </div>
+    <div class="sheet" id="ansSheet" hidden>
+      <div class="q" id="ansQ"></div>
+      <div class="abcd" id="abcd"></div>
+    </div>
   </div>
 </section>
 
@@ -92,11 +126,11 @@ const T = {
   tr:{tag:'— Büyük Sahne · Kumanda —',code:'Sahne kodu',name:'Sahne adın',go:'Sahneye çık',stick:'Koşmak için<br>burada sürükle',
       jump:'ZIPLA',shove:'OMUZ',out:'Elendin!',outSub:'Kuyudan izle. Bir sonraki maçta sahnedesin.',
       noStage:'Bu kodla bir sahne yok. Oyundaki kodu kontrol et.',full:'Sahne dolu (8 oyuncu).',conn:'Bağlanıyor…',
-      lost:'Bağlantı koptu, yeniden deneniyor…',hostLeft:'Sahne kapandı.',ready:'Sahnedesin!',short:'Kod 4 harf olmalı.'},
+      lost:'Bağlantı koptu, yeniden deneniyor…',hostLeft:'Sahne kapandı.',ready:'Sahnedesin!',short:'Kod 4 harf olmalı.',lock:'KİLİTLE',locked:'KİLİTLENDİ ✓',range:'{a} – {b} arası'},
   en:{tag:'— The Grand Stage · Controller —',code:'Stage code',name:'Your stage name',go:'Step on stage',stick:'Drag here<br>to run',
       jump:'JUMP',shove:'SHOVE',out:'You are out!',outSub:'Watch from the pit. You are back next match.',
       noStage:'No stage with that code. Check the code on screen.',full:'The stage is full (8 players).',conn:'Connecting…',
-      lost:'Connection lost, retrying…',hostLeft:'The stage closed.',ready:'You are on stage!',short:'The code has 4 letters.'}
+      lost:'Connection lost, retrying…',hostLeft:'The stage closed.',ready:'You are on stage!',short:'The code has 4 letters.',lock:'LOCK IN',locked:'LOCKED IN ✓',range:'between {a} and {b}'}
 };
 let LANG = (navigator.language||'tr').toLowerCase().startsWith('tr') ? 'tr' : 'en';
 const t = (k) => T[LANG][k] || k;
@@ -154,9 +188,99 @@ function onMsg(m){
     $('outCard').hidden = true;
   } else if (m.t === 'buzz') {
     buzz(m.ms || 60);
+  } else if (m.t === 'mode') {
+    if (m.m === 'num') openNum(m);
+    else if (m.m === 'abcd') openAbcd(m);
+    else showSheet('');
   } else if (m.t === 'host_left') {
     wantOpen = false; $('status').textContent = t('hostLeft');
   }
+}
+
+
+// ── Conquest: sayı klavyesi ve şık düğmeleri ──
+const ZONE = ['#F2B83C','#3FC4B2','#EE5C86','#9A7CF2'];
+let num = { on:false, v:'', max:0, year:false, locked:false, sent:'' };
+function group(n){
+  const s = String(n);
+  if (num.year || s.length <= 3) return s;
+  const sep = LANG === 'tr' ? '.' : ',';
+  return s.replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+}
+function showSheet(which){
+  $('numSheet').hidden = which !== 'num';
+  $('ansSheet').hidden = which !== 'abcd';
+  $('stick').style.visibility = which ? 'hidden' : '';
+  document.querySelector('.buttons').style.visibility = which ? 'hidden' : '';
+}
+(function buildKeys(){
+  const k = $('keys');
+  ['1','2','3','4','5','6','7','8','9','⌫','0','000'].forEach(c => {
+    const b = document.createElement('div');
+    b.className = 'key' + (c === '⌫' || c === '000' ? ' fn' : '');
+    b.textContent = c;
+    const press = (e) => { e.preventDefault(); b.classList.add('down'); numKey(c); };
+    b.addEventListener('touchstart', press, { passive:false });
+    b.addEventListener('touchend', () => b.classList.remove('down'));
+    b.addEventListener('mousedown', press); b.addEventListener('mouseup', () => b.classList.remove('down'));
+    k.appendChild(b);
+  });
+})();
+function numKey(c){
+  buzz(12);
+  if (num.locked) { num.locked = false; paintLock(); }
+  if (c === '⌫') num.v = num.v.slice(0, -1);
+  else {
+    let nv = (num.v + c).replace(/^0+(?=\d)/, '');
+    if (String(num.max).length && nv.length > String(num.max).length + 1) return;
+    num.v = nv;
+  }
+  paintNum(); sendNum(false);
+}
+function paintNum(){ $('numVal').textContent = num.v === '' ? '—' : group(Number(num.v)); }
+function paintLock(){ const b = $('numLock'); b.textContent = t(num.locked ? 'locked' : 'lock'); b.classList.toggle('done', num.locked); }
+function sendNum(lock){
+  if (!ws || ws.readyState !== 1 || num.v === '') return;
+  const key = num.v + (lock ? '!' : '');
+  if (key === num.sent) return;
+  num.sent = key;
+  ws.send(JSON.stringify({ t:'num', v:Number(num.v), lock }));
+}
+$('numLock').addEventListener('click', () => {
+  if (num.v === '') { buzz(80); return; }
+  num.locked = true; paintLock(); buzz(40); sendNum(true);
+});
+addEventListener('keydown', (e) => {
+  if ($('numSheet').hidden) return;
+  if (/^[0-9]$/.test(e.key)) numKey(e.key);
+  else if (e.key === 'Backspace') numKey('⌫');
+  else if (e.key === 'Enter') $('numLock').click();
+});
+function openNum(m){
+  num = { on:true, v:'', max:m.max || 0, year:!!m.year, locked:false, sent:'' };
+  $('numQ').textContent = m.q || '';
+  $('numUnit').textContent = m.unit || '';
+  $('numRange').textContent = (m.min !== undefined && m.max !== undefined) ? t('range').replace('{a}', group(m.min)).replace('{b}', group(m.max)) : '';
+  paintNum(); paintLock(); showSheet('num'); buzz(60);
+}
+function openAbcd(m){
+  $('ansQ').textContent = m.q || '';
+  const box = $('abcd'); box.innerHTML = ''; box.classList.remove('locked');
+  (m.options || []).forEach((txt, i) => {
+    const b = document.createElement('div');
+    b.className = 'opt'; b.style.background = ZONE[i % 4];
+    b.innerHTML = '<i>' + 'ABCD'[i] + '</i><span></span>';
+    b.querySelector('span').textContent = txt;
+    const pick = (e) => {
+      e.preventDefault();
+      if (box.classList.contains('locked')) return;
+      box.classList.add('locked'); b.classList.add('sel'); buzz(40);
+      ws && ws.readyState === 1 && ws.send(JSON.stringify({ t:'ans', i }));
+    };
+    b.addEventListener('touchstart', pick, { passive:false }); b.addEventListener('mousedown', pick);
+    box.appendChild(b);
+  });
+  showSheet('abcd'); buzz(60);
 }
 
 function buzz(ms){ try { navigator.vibrate && navigator.vibrate(ms); } catch(e){} }

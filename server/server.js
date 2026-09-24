@@ -17,7 +17,10 @@
 //   sahne → {t:"host", code?, key}          ← {t:"hosted", code}
 //   kumanda → {t:"join", code, name, pid?}  ← {t:"joined", ok, pid, reason?}
 //   kumanda → {t:"in", x, y, j, s}          → sahneye {t:"in", pid, x, y, j, s}
+//   kumanda → {t:"num", v, lock}            → sahneye {t:"num", pid, v, lock}  (tahmin klavyesi)
+//   kumanda → {t:"ans", i}                  → sahneye {t:"ans", pid, i}        (şık düğmesi)
 //   sahne → {t:"to", pid, msg}              → o kumandaya msg
+//     msg {t:"mode", m:"pad"|"num"|"abcd", ...} kumandanın ekranını değiştirir
 //   sahne → {t:"all", msg}                  → bütün kumandalara msg
 //   sahneye: {t:"pad_join", pid, name} / {t:"pad_left", pid}
 //   kumandaya: {t:"host_left"}
@@ -173,6 +176,18 @@ wss.on("connection", (ws) => {
       // girdi: sayıları sınırla, sahneye aynen ilet
       const clamp = (v) => Math.max(-1, Math.min(1, Number(v) || 0));
       send(room.host, { t: "in", pid: ws.pid, x: clamp(m.x), y: clamp(m.y), j: !!m.j, s: !!m.s });
+      return;
+    }
+    if (ws.role === "pad" && m.t === "num") {
+      // sayı klavyesinden tahmin
+      const v = Math.max(-1e9, Math.min(1e9, Math.round(Number(m.v) || 0)));
+      send(room.host, { t: "num", pid: ws.pid, v, lock: !!m.lock });
+      return;
+    }
+    if (ws.role === "pad" && m.t === "ans") {
+      // şık düğmesi (0-3)
+      const i = Math.max(0, Math.min(3, Math.round(Number(m.i) || 0)));
+      send(room.host, { t: "ans", pid: ws.pid, i });
       return;
     }
     if (ws.role === "host" && room.host === ws) {

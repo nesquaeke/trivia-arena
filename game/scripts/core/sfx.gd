@@ -11,9 +11,13 @@ var _rng := RandomNumberGenerator.new()
 
 func _ready() -> void:
 	_rng.seed = 7
-	for i in 10:
+	if AudioServer.get_bus_index("SFX") == -1:
+		AudioServer.add_bus()
+		AudioServer.set_bus_name(AudioServer.bus_count - 1, "SFX")
+		AudioServer.set_bus_send(AudioServer.bus_count - 1, "Master")
+	for i in 12:
 		var p := AudioStreamPlayer.new()
-		p.bus = "Master"
+		p.bus = "SFX"
 		add_child(p)
 		_voices.append(p)
 	streams.jump = _make(0.22, _jump)
@@ -32,6 +36,13 @@ func _ready() -> void:
 	streams.fanfare = _make(1.6, _fanfare)
 	streams.click = _make(0.06, _click)
 	streams.thud = _make(0.3, _thud)
+	# orkestral efektler (tools/music/compose.py üretir)
+	for n in ["war_drum", "war_horn", "collapse", "sting", "stamp", "roll", "claim"]:
+		var path := "res://assets/audio/sfx/%s.ogg" % n
+		if ResourceLoader.exists(path):
+			streams[n] = load(path)
+	if streams.has("war_drum"):
+		streams.drum = streams.war_drum
 
 func play(name: String, db: float = 0.0, pitch: float = 1.0) -> void:
 	if muted or not streams.has(name):

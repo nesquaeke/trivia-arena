@@ -17,6 +17,8 @@ const CENTER_Z := -1.55      ## haritanın merkezinin sahnedeki z'si
 const H := 0.16              ## keçe parçasının kalınlığı
 const GAP := 0.028           ## bölgeler arası dikiş boşluğu
 const RIM := 0.075           ## kenardaki koyu şerit genişliği
+const SEA_D := 7.1            ## deniz (masa) derinliği — arka duvara girmesin
+const SEA_Z := -1.3           ## denizin merkezi
 const NEUTRAL := [Color("E9DCC0"), Color("E3D2B0"), Color("EEE3CA"), Color("DDCDA9")]
 
 var data := {}
@@ -27,6 +29,8 @@ var sea_mat: ShaderMaterial
 var _t := 0.0
 var _waves: Array[Node3D] = []
 var hover_id := ""
+var _compass: Node3D
+var _ships: Array[Node3D] = []
 
 ## Bölge sözlüğü:
 ##   id, name_tr, name_en, adj, seat (Vector3), polys (Array[PackedVector2Array], dünya x/z),
@@ -71,6 +75,8 @@ func build() -> void:
 			if not b.adj.has(link[0]):
 				b.adj.append(link[0])
 	_build_compass()
+	_build_frame()
+	_build_ships()
 
 func _felt(c: Color) -> StandardMaterial3D:
 	var m := StandardMaterial3D.new()
@@ -240,11 +246,11 @@ func _quad_line(st: SurfaceTool, a: Vector2, b: Vector2, w: float, y: float) -> 
 func _build_sea() -> void:
 	var sea := MeshInstance3D.new()
 	var pm := PlaneMesh.new()
-	pm.size = Vector2(15.6, 7.9)
+	pm.size = Vector2(15.6, SEA_D)
 	pm.subdivide_width = 1
 	pm.subdivide_depth = 1
 	sea.mesh = pm
-	sea.position = Vector3(0, 0.012, CENTER_Z - 0.1)
+	sea.position = Vector3(0, 0.012, SEA_Z)
 	sea_mat = ShaderMaterial.new()
 	sea_mat.shader = preload("res://ui/shaders/satin_sea.gdshader")
 	sea.material_override = sea_mat
@@ -276,7 +282,7 @@ func _build_waves() -> void:
 	var crest := StandardMaterial3D.new()
 	crest.albedo_color = Color("EAF4F7")
 	crest.roughness = 0.6
-	for row in [[2.35, 0.0, 1.0], [2.6, 0.9, 0.85], [-5.05, 0.4, 1.1]]:
+	for row in [[2.1, 0.0, 1.0], [2.28, 0.9, 0.85], [-4.72, 0.4, 0.9]]:
 		var z: float = row[0]
 		var node := Node3D.new()
 		node.position = Vector3(float(row[1]) * 0.3, 0, z)
@@ -316,38 +322,206 @@ func _wave_mesh(length: float, height: float, depth: float, crests: int, crest_o
 			_tri(st, Vector3(a.x, y0a, zz), Vector3(b.x, b.y, zz), Vector3(a.x, a.y, zz), nn)
 	return st.commit()
 
+## Pusula gülü: pirinç disk, üstünde kabartma 8 kollu yıldız. Her kol iki
+## yüzlü (açık/koyu) — ışık ne yandan gelirse gelsin okunur. Kuzey kolu yakut.
 func _build_compass() -> void:
-	var gold := PlushVisual.mat("gold", Color("D6A93F"), 0.28, 1.0)
 	var root := Node3D.new()
-	root.position = Vector3(-6.4, 0.03, 1.55)
+	root.name = "Compass"
+	root.position = Vector3(-6.05, 0.02, 1.25)
 	add_child(root)
-	var ring := MeshInstance3D.new()
-	var tm := TorusMesh.new()
-	tm.inner_radius = 0.34
-	tm.outer_radius = 0.38
-	ring.mesh = tm
-	ring.material_override = gold
-	root.add_child(ring)
-	for i in 4:
-		var p := MeshInstance3D.new()
-		var pr := PrismMesh.new()
-		pr.size = Vector3(0.14, 0.52 if i % 2 == 0 else 0.36, 0.02)
-		p.mesh = pr
-		p.material_override = gold if i != 0 else PlushVisual.mat("ruby", Color("C2183A"), 0.1)
-		p.rotation = Vector3(-PI / 2, 0, -i * PI / 2)
-		p.position = Vector3(0, 0.01, 0)
-		var off := Vector3(0, 0, -0.2).rotated(Vector3.UP, -i * PI / 2)
-		p.position += off
-		root.add_child(p)
+	var brass := PlushVisual.mat("brass", Color("B88A3E"), 0.35, 0.7)
+	var dark := StandardMaterial3D.new()
+	dark.albedo_color = Color("2A1810")
+	dark.roughness = 0.8
+	var disc := MeshInstance3D.new()
+	var cm := CylinderMesh.new()
+	cm.top_radius = 0.62
+	cm.bottom_radius = 0.66
+	cm.height = 0.04
+	cm.radial_segments = 40
+	disc.mesh = cm
+	disc.material_override = dark
+	disc.position.y = 0.02
+	root.add_child(disc)
+	for rr: float in [0.6, 0.47]:
+		var ring := MeshInstance3D.new()
+		var tm := TorusMesh.new()
+		tm.inner_radius = rr - 0.018
+		tm.outer_radius = rr
+		tm.rings = 40
+		ring.mesh = tm
+		ring.material_override = brass
+		ring.position.y = 0.042
+		root.add_child(ring)
+	# derece çentikleri
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	for i in 32:
+		var ang := TAU * i / 32.0
+		var d := Vector2(sin(ang), -cos(ang))
+		var r0 := 0.5 if i % 4 == 0 else 0.53
+		_quad_line(st, d * r0, d * 0.575, 0.012, 0.045)
+	var ticks := MeshInstance3D.new()
+	ticks.mesh = st.commit()
+	ticks.material_override = brass
+	root.add_child(ticks)
+	# yıldız: 4 uzun (ana yönler) + 4 kısa kol, her kol iki üçgen yüz
+	var light := PlushVisual.mat("compass_l", Color("F1D9A0"), 0.4, 0.2)
+	var shade := PlushVisual.mat("compass_d", Color("8A6224"), 0.5, 0.3)
+	var ruby := PlushVisual.mat("ruby", Color("C2183A"), 0.2)
+	var ruby_d := PlushVisual.mat("ruby_d", Color("6E0C20"), 0.3)
+	var sl := SurfaceTool.new()
+	sl.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var sd := SurfaceTool.new()
+	sd.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var nl := SurfaceTool.new()
+	nl.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var nd := SurfaceTool.new()
+	nd.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var hub := Vector3(0, 0.14, 0)
+	for i in 8:
+		var ang := TAU * i / 8.0
+		var long := i % 2 == 0
+		var L := 0.56 if long else 0.34
+		var w := 0.1 if long else 0.07
+		var tip := Vector3(sin(ang) * L, 0.05, -cos(ang) * L)
+		var side := Vector3(cos(ang), 0, sin(ang)) * w
+		var base_l := hub * 0.0 + Vector3(0, 0.05, 0) - side
+		var base_r := Vector3(0, 0.05, 0) + side
+		var north := i == 0
+		var t_l: SurfaceTool = nl if north else sl
+		var t_d: SurfaceTool = nd if north else sd
+		# sol yüz açık, sağ yüz koyu (sırt boyunca kabartma)
+		_tri(t_l, base_l, hub, tip, (hub - base_l).cross(tip - base_l).normalized() * -1.0 if (hub - base_l).cross(tip - base_l).y < 0 else (hub - base_l).cross(tip - base_l).normalized())
+		_tri(t_d, hub, base_r, tip, (base_r - hub).cross(tip - hub).normalized() if (base_r - hub).cross(tip - hub).y > 0 else -(base_r - hub).cross(tip - hub).normalized())
+	for pair in [[sl, light], [sd, shade], [nl, ruby], [nd, ruby_d]]:
+		var mi := MeshInstance3D.new()
+		mi.mesh = (pair[0] as SurfaceTool).commit()
+		mi.material_override = pair[1]
+		root.add_child(mi)
+	var cap := MeshInstance3D.new()
+	var sm := SphereMesh.new()
+	sm.radius = 0.045
+	sm.height = 0.05
+	cap.mesh = sm
+	cap.material_override = brass
+	cap.position.y = 0.14
+	root.add_child(cap)
 	var n := Label3D.new()
 	n.text = "K" if Pal.tr_lang() else "N"
 	n.font = Pal.display()
-	n.font_size = 64
-	n.pixel_size = 0.004
+	n.font_size = 72
+	n.pixel_size = 0.0036
 	n.modulate = Pal.GOLD
+	n.outline_modulate = Color(0.1, 0.04, 0.02, 0.9)
+	n.outline_size = 10
 	n.rotation = Vector3(-PI / 2, 0, 0)
-	n.position = Vector3(0, 0.02, -0.56)
+	n.position = Vector3(0, 0.05, -0.8)
 	root.add_child(n)
+	_compass = root
+
+## Harita masasının yaldızlı çerçevesi: koyu ceviz kenar, üstünde altın pervaz
+func _build_frame() -> void:
+	var w := 15.6
+	var d := SEA_D
+	var cz := SEA_Z
+	var wood := StandardMaterial3D.new()
+	wood.albedo_color = Color("3B1E10")
+	wood.roughness = 0.55
+	var gilt := PlushVisual.mat("gilt", Color("C99A45"), 0.3, 0.8)
+	for side in 4:
+		var horiz := side < 2
+		var len := w + 0.5 if horiz else d
+		var box := BoxMesh.new()
+		box.size = Vector3(len, 0.12, 0.26) if horiz else Vector3(0.26, 0.12, len)
+		var mi := MeshInstance3D.new()
+		mi.mesh = box
+		mi.material_override = wood
+		var off := Vector3(0, 0.06, (d * 0.5 + 0.12) * (1 if side == 0 else -1)) if horiz else Vector3((w * 0.5 + 0.12) * (1 if side == 2 else -1), 0.06, 0)
+		mi.position = Vector3(0, 0, cz) + off
+		add_child(mi)
+		var trim := BoxMesh.new()
+		trim.size = Vector3(len, 0.03, 0.06) if horiz else Vector3(0.06, 0.03, len)
+		var tm := MeshInstance3D.new()
+		tm.mesh = trim
+		tm.material_override = gilt
+		var inward := Vector3(0, 0, -0.07 * (1 if side == 0 else -1)) if horiz else Vector3(-0.07 * (1 if side == 2 else -1), 0, 0)
+		tm.position = mi.position + Vector3(0, 0.075, 0) + inward
+		add_child(tm)
+	for cx: float in [-1.0, 1.0]:
+		for czs: float in [-1.0, 1.0]:
+			var knob := MeshInstance3D.new()
+			var sm := SphereMesh.new()
+			sm.radius = 0.12
+			sm.height = 0.2
+			knob.mesh = sm
+			knob.material_override = gilt
+			knob.position = Vector3(cx * (w * 0.5 + 0.12), 0.14, cz + czs * (d * 0.5 + 0.12))
+			add_child(knob)
+
+## Dekor gemileri: boyalı tahta tekneler denizde yavaşça seyreder, dalgada sallanır
+func _build_ships() -> void:
+	_ships.clear()
+	var hull_m := StandardMaterial3D.new()
+	hull_m.albedo_color = Color("6B3A1E")
+	hull_m.roughness = 0.6
+	var sail_m := StandardMaterial3D.new()
+	sail_m.albedo_color = Color("F2E6CC")
+	sail_m.roughness = 0.9
+	sail_m.cull_mode = BaseMaterial3D.CULL_DISABLED
+	var red := PlushVisual.mat("ship_flag", Color("B8263A"), 0.6)
+	# [başlangıç x, z, yön]: Karadeniz'de doğuya, Akdeniz'de batıya
+	for spec in [[-2.6, -4.5, 1.0], [-1.4, 1.72, -1.0]]:
+		var ship := Node3D.new()
+		ship.position = Vector3(float(spec[0]), 0.03, float(spec[1]))
+		ship.set_meta("dir", float(spec[2]))
+		ship.set_meta("x0", float(spec[0]))
+		ship.rotation.y = 0.0 if float(spec[2]) > 0 else PI
+		add_child(ship)
+		var hull := MeshInstance3D.new()
+		var pm := PrismMesh.new()
+		pm.size = Vector3(0.62, 0.16, 0.2)
+		pm.left_to_right = 0.5
+		hull.mesh = pm
+		hull.rotation = Vector3(PI, 0, 0)
+		hull.position.y = 0.1
+		hull.material_override = hull_m
+		ship.add_child(hull)
+		var deck := MeshInstance3D.new()
+		var db := BoxMesh.new()
+		db.size = Vector3(0.62, 0.03, 0.2)
+		deck.mesh = db
+		deck.position.y = 0.18
+		deck.material_override = hull_m
+		ship.add_child(deck)
+		for m in 2:
+			var mx := -0.1 + m * 0.2
+			var mast := MeshInstance3D.new()
+			var mc := CylinderMesh.new()
+			mc.top_radius = 0.008
+			mc.bottom_radius = 0.01
+			mc.height = 0.46 - m * 0.08
+			mast.mesh = mc
+			mast.position = Vector3(mx, 0.18 + mc.height * 0.5, 0)
+			mast.material_override = hull_m
+			ship.add_child(mast)
+			var sail := MeshInstance3D.new()
+			var qm := QuadMesh.new()
+			qm.size = Vector2(0.2 - m * 0.03, 0.26 - m * 0.05)
+			sail.mesh = qm
+			sail.rotation.y = PI / 2
+			sail.position = Vector3(mx + 0.01, 0.2 + mc.height * 0.55, 0)
+			sail.material_override = sail_m
+			ship.add_child(sail)
+			if m == 0:
+				var fl := MeshInstance3D.new()
+				var fb := BoxMesh.new()
+				fb.size = Vector3(0.09, 0.05, 0.005)
+				fl.mesh = fb
+				fl.position = Vector3(mx + 0.05, 0.18 + mc.height + 0.02, 0)
+				fl.material_override = red
+				ship.add_child(fl)
+		_ships.append(ship)
 
 # ── durum ───────────────────────────────────────────────────────────
 func region(id: String) -> Dictionary:
@@ -564,6 +738,13 @@ func _process(delta: float) -> void:
 		if r.badge:
 			r.badge.rotation.y += delta * 1.6
 			r.badge.position.y = r.seat.y + 0.32 + sin(_t * 2.0) * 0.03
+	for sh in _ships:
+		var dir: float = sh.get_meta("dir")
+		var x0: float = sh.get_meta("x0")
+		sh.position.x = x0 + sin(_t * 0.05 * dir) * 1.8
+		sh.position.y = 0.03 + sin(_t * 1.7 + x0) * 0.012
+		sh.rotation.x = sin(_t * 1.3 + x0) * 0.06
+		sh.rotation.z = sin(_t * 1.1 + x0 * 2.0) * 0.05
 	for w in _waves:
 		var ph: float = w.get_meta("phase")
 		w.position.x = sin(_t * 0.6 + ph) * 0.35

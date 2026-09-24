@@ -8,15 +8,18 @@ signal house_requested
 signal wardrobe_requested
 signal loge_requested
 signal howto_requested(kind: String)
+signal quit_requested
 
 const COL_X := 88.0
 const COL_W := 600.0
+const MENU_ORDER := ["trivia", "conquest", "house", "customize", "spectate", "howto", "settings", "quit"]
 
 var game: Node
 var logo: MarqueeLogo
 var scrim: ColorRect
 var menu_col: VBoxContainer
 var setup_col: VBoxContainer
+var settings_col: VBoxContainer
 var footer: KeyHint
 var buttons := {}
 var kind := "arena"
@@ -35,6 +38,7 @@ var _k_bots: KickerLabel
 var _k_level: KickerLabel
 var _k_timer: KickerLabel
 var _k_setup: KickerLabel
+var _st := {}                       # ayarlar ekranının parçaları
 
 func setup(p_game: Node) -> void:
 	game = p_game
@@ -59,15 +63,17 @@ func setup(p_game: Node) -> void:
 	menu_col.size = Vector2(COL_W, 560)
 	menu_col.add_theme_constant_override("separation", 2)
 	add_child(menu_col)
-	_add_btn("trivia", "01", true, func(): _open_setup("arena"))
-	_add_btn("conquest", "02", true, func(): _open_setup("conquest"))
+	_add_btn("trivia", "masks", true, func(): _open_setup("arena"))
+	_add_btn("conquest", "swords", true, func(): _open_setup("conquest"))
 	var gap := Control.new()
 	gap.custom_minimum_size.y = 18
 	menu_col.add_child(gap)
-	_add_btn("house", "03", false, func(): house_requested.emit())
-	_add_btn("customize", "04", false, func(): wardrobe_requested.emit())
-	_add_btn("spectate", "05", false, func(): loge_requested.emit())
-	_add_btn("howto", "06", false, func(): howto_requested.emit("trivia"))
+	_add_btn("house", "phone", false, func(): house_requested.emit())
+	_add_btn("customize", "hanger", false, func(): wardrobe_requested.emit())
+	_add_btn("spectate", "opera", false, func(): loge_requested.emit())
+	_add_btn("howto", "scroll", false, func(): howto_requested.emit("trivia"))
+	_add_btn("settings", "gear", false, _open_settings)
+	_add_btn("quit", "door", false, func(): quit_requested.emit())
 
 	setup_col = VBoxContainer.new()
 	setup_col.position = Vector2(COL_X, 64)
@@ -76,6 +82,13 @@ func setup(p_game: Node) -> void:
 	setup_col.visible = false
 	add_child(setup_col)
 	_build_setup()
+	settings_col = VBoxContainer.new()
+	settings_col.position = Vector2(COL_X, 64)
+	settings_col.size = Vector2(COL_W - 40, 900)
+	settings_col.add_theme_constant_override("separation", 8)
+	settings_col.visible = false
+	add_child(settings_col)
+	_build_settings()
 
 	footer = KeyHint.new()
 	footer.position = Vector2(COL_X, 1030)
@@ -87,7 +100,7 @@ func setup(p_game: Node) -> void:
 
 func _add_btn(id: String, idx: String, big: bool, cb: Callable) -> void:
 	var b := StageButton.new()
-	b.index = idx
+	b.emblem = idx
 	b.big = big
 	b.pressed.connect(cb)
 	menu_col.add_child(b)
@@ -165,6 +178,115 @@ func _build_setup() -> void:
 	row.add_child(_back)
 	setup_col.add_child(row)
 
+## Ayarlar: ses düzeyleri, pencere, görüntü kalitesi, kamera sarsıntısı
+func _build_settings() -> void:
+	_st.kicker = KickerLabel.new()
+	settings_col.add_child(_st.kicker)
+	_st.title = KineticText.new()
+	_st.title.font = Pal.display()
+	_st.title.font_size = 118
+	_st.title.color = Pal.CHAMPAGNE
+	_st.title.custom_minimum_size = Vector2(COL_W - 40, 120)
+	_st.title.style = 0
+	_st.title.stagger = 0.03
+	settings_col.add_child(_st.title)
+	_st.k_sound = _section()
+	settings_col.add_child(_st.k_sound)
+	for key in ["master_vol", "music_vol", "sfx_vol"]:
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 12)
+		var lab := _label(Pal.display_bold(), 26, Pal.CREAM)
+		lab.custom_minimum_size = Vector2(150, 0)
+		lab.autowrap_mode = TextServer.AUTOWRAP_OFF
+		row.add_child(lab)
+		var sl := BrassSlider.new()
+		sl.value = float(Profile.setting(key, 1.0 if key == "master_vol" else (0.7 if key == "music_vol" else 0.9)))
+		sl.changed.connect(func(v):
+			Profile.set_setting(key, v)
+			GameSettings.apply_audio(get_tree()))
+		row.add_child(sl)
+		settings_col.add_child(row)
+		_st[key] = lab
+		_st[key + "_sl"] = sl
+	settings_col.add_child(_spacer(6))
+	_st.k_video = _section()
+	settings_col.add_child(_st.k_video)
+	for key in ["fullscreen", "quality", "shake"]:
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 12)
+		var lab := _label(Pal.display_bold(), 26, Pal.CREAM)
+		lab.custom_minimum_size = Vector2(150, 0)
+		lab.autowrap_mode = TextServer.AUTOWRAP_OFF
+		row.add_child(lab)
+		var seg := Segmented.new()
+		seg.custom_minimum_size = Vector2(420 if key == "quality" else 300, 50)
+		seg.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+		seg.changed.connect(func(i): _setting_seg(key, i))
+		row.add_child(seg)
+		settings_col.add_child(row)
+		_st[key] = lab
+		_st[key + "_seg"] = seg
+	settings_col.add_child(_spacer(18))
+	_st.back = CtaButton.new()
+	_st.back.style = "ghost"
+	_st.back.custom_minimum_size = Vector2(220, 70)
+	_st.back.font_size = 28
+	_st.back.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	_st.back.pressed.connect(show_menu)
+	settings_col.add_child(_st.back)
+
+func _section() -> KickerLabel:
+	var k := KickerLabel.new()
+	k.rules = false
+	k.color = Color(Pal.GOLD, 0.85)
+	k.font_size = 18
+	return k
+
+func _setting_seg(key: String, i: int) -> void:
+	match key:
+		"fullscreen":
+			Profile.set_setting("fullscreen", i == 1)
+			GameSettings.apply_window()
+		"quality":
+			Profile.set_setting("quality", GameSettings.QUALITY[i])
+			GameSettings.apply_quality(get_tree())
+		"shake":
+			Profile.set_setting("shake", i == 0)
+
+func _open_settings() -> void:
+	_refresh_settings()
+	var i := 0
+	for b: StageButton in buttons.values():
+		var tw := b.create_tween()
+		tw.tween_property(b, "modulate:a", 0.0, 0.18).set_delay(i * 0.02)
+		i += 1
+	await get_tree().create_timer(0.35).timeout
+	menu_col.visible = false
+	for b in buttons.values():
+		b.modulate.a = 1.0
+	_logo_away(true)
+	settings_col.visible = true
+	await get_tree().process_frame
+	var j := 0
+	for c in settings_col.get_children():
+		if c is Control:
+			Fx.anchor(c)
+			Fx.rise(c, j * 0.03, Vector2(-30, 0), 0.45)
+			j += 1
+	_st.title.play(0.05)
+	_st.master_vol_sl.grab_focus()
+
+func _refresh_settings() -> void:
+	_st.master_vol_sl.value = float(Profile.setting("master_vol", 1.0))
+	_st.music_vol_sl.value = float(Profile.setting("music_vol", 0.7))
+	_st.sfx_vol_sl.value = float(Profile.setting("sfx_vol", 0.9))
+	_st.fullscreen_seg.selected = 1 if bool(Profile.setting("fullscreen", false)) else 0
+	_st.quality_seg.selected = maxi(0, GameSettings.QUALITY.find(String(Profile.setting("quality", "high"))))
+	_st.shake_seg.selected = 0 if bool(Profile.setting("shake", true)) else 1
+
+func is_settings() -> bool:
+	return settings_col.visible
+
 func _label(f: Font, fs: int, col: Color) -> Label:
 	var l := Label.new()
 	l.add_theme_font_override("font", f)
@@ -182,7 +304,8 @@ func _spacer(h: float) -> Control:
 func retext() -> void:
 	var map := {"trivia": ["menu.trivia", "menu.trivia.sub"], "conquest": ["menu.conquest", "menu.conquest.sub"],
 		"house": ["menu.house", "menu.house.sub"], "customize": ["menu.customize", "menu.customize.sub"],
-		"spectate": ["menu.spectate", "menu.spectate.sub"], "howto": ["menu.howto", "menu.howto.sub"]}
+		"spectate": ["menu.spectate", "menu.spectate.sub"], "howto": ["menu.howto", "menu.howto.sub"],
+		"settings": ["menu.settings", "menu.settings.sub"], "quit": ["menu.quit", "menu.quit.sub"]}
 	for id in map:
 		buttons[id].title = I18n.t(map[id][0])
 		buttons[id].caption = I18n.t(map[id][1])
@@ -197,6 +320,20 @@ func retext() -> void:
 	_timer.options = [I18n.t("setup.seconds", {"n": 8}), I18n.t("setup.seconds", {"n": 10}), I18n.t("setup.seconds", {"n": 12})]
 	_go.label = I18n.t("setup.go")
 	_back.label = I18n.t("common.back")
+	_st.kicker.text = I18n.t("settings.kicker")
+	_st.title.text = Pal.upper(I18n.t("menu.settings"))
+	_st.k_sound.text = I18n.t("settings.sound")
+	_st.k_video.text = I18n.t("settings.video")
+	_st.master_vol.text = I18n.t("settings.master")
+	_st.music_vol.text = I18n.t("settings.music")
+	_st.sfx_vol.text = I18n.t("settings.sfx")
+	_st.fullscreen.text = I18n.t("settings.window")
+	_st.quality.text = I18n.t("settings.quality")
+	_st.shake.text = I18n.t("settings.shake")
+	_st.fullscreen_seg.options = [I18n.t("settings.windowed"), I18n.t("settings.full")]
+	_st.quality_seg.options = [I18n.t("settings.q.low"), I18n.t("settings.q.medium"), I18n.t("settings.q.high")]
+	_st.shake_seg.options = [I18n.t("settings.on"), I18n.t("settings.off")]
+	_st.back.label = I18n.t("common.back")
 	refresh_setup()
 
 func refresh_setup() -> void:
@@ -237,7 +374,7 @@ func _draw_cast() -> void:
 func intro() -> void:
 	logo.play()
 	var i := 0
-	for id in ["trivia", "conquest", "house", "customize", "spectate", "howto"]:
+	for id in MENU_ORDER:
 		buttons[id].intro(0.9 + i * 0.07)
 		i += 1
 
@@ -267,15 +404,21 @@ func _open_setup(k: String) -> void:
 	_go.grab_focus()
 
 func show_menu() -> void:
-	if not setup_col.visible:
+	if not setup_col.visible and not settings_col.visible:
 		return
+	var from_settings := settings_col.visible
 	setup_col.visible = false
+	settings_col.visible = false
 	menu_col.visible = true
 	_logo_away(false)
 	var i := 0
-	for id in ["trivia", "conquest", "house", "customize", "spectate", "howto"]:
+	for id in MENU_ORDER:
 		buttons[id].intro(i * 0.04)
 		i += 1
+	buttons["settings" if from_settings else kind_button()].grab_focus()
+
+func kind_button() -> String:
+	return "conquest" if kind == "conquest" else "trivia"
 
 ## Kurulumda logo yukarı süzülüp söner; kurulum paneli onun yerine çıkar.
 func _logo_away(away: bool) -> void:

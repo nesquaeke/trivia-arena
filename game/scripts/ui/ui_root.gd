@@ -14,6 +14,7 @@ extends CanvasLayer
 
 signal reward_clicked(step: int, index: int)
 signal answer_clicked(index: int)
+signal ruler_input(u: float, release: bool)
 
 var game: Node = null
 var root: Control
@@ -28,6 +29,7 @@ var rename_panel: GlassPanel
 var name_edit: LineEdit
 var grain: ColorRect
 var result_panel: Control          # ekran görüntüsü aracı için (hud.result)
+var pause: PauseMenu
 
 var _qr_http: HTTPRequest
 var _qr_for := ""
@@ -39,6 +41,8 @@ const CARD_X := 1920.0 - ProfileCard.W - 34.0
 func setup(p_game: Node) -> void:
 	game = p_game
 	layer = 10
+	# duraklatınca da menü çalışsın; oyun içi HUD oyunla birlikte durur
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	root = Control.new()
 	root.set_anchors_preset(Control.PRESET_FULL_RECT)
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -48,6 +52,7 @@ func setup(p_game: Node) -> void:
 	hud = Hud.new()
 	hud.reward_clicked.connect(func(s, i): reward_clicked.emit(s, i))
 	hud.answer_clicked.connect(func(i): answer_clicked.emit(i))
+	hud.ruler_input.connect(func(u, r): ruler_input.emit(u, r))
 	hud.again_pressed.connect(func():
 		hud.hide_result()
 		game.restart_arena())
@@ -55,6 +60,7 @@ func setup(p_game: Node) -> void:
 		hud.hide_result()
 		game.end_arena())
 	root.add_child(hud)
+	hud.process_mode = Node.PROCESS_MODE_PAUSABLE
 	result_panel = hud.result
 
 	menu = LobbyMenu.new()
@@ -67,6 +73,7 @@ func setup(p_game: Node) -> void:
 	menu.wardrobe_requested.connect(_open_wardrobe)
 	menu.loge_requested.connect(_open_loge)
 	menu.howto_requested.connect(func(k): open_howto(k))
+	menu.quit_requested.connect(_quit)
 
 	card = ProfileCard.new()
 	card.position = Vector2(CARD_X, 30)
@@ -112,6 +119,14 @@ func setup(p_game: Node) -> void:
 	playbill.position = Vector2((1920 - Playbill.W) * 0.5 + 200, -1100)
 	root.add_child(playbill)
 	playbill.closed.connect(func(): playbill.lift())
+
+	pause = PauseMenu.new()
+	root.add_child(pause)
+	pause.resume_requested.connect(func(): set_paused(false))
+	pause.lobby_requested.connect(func():
+		set_paused(false)
+		hud.hide_result()
+		game.end_arena())
 
 	root.move_child(hud, -1)
 	grain = ColorRect.new()
@@ -329,11 +344,50 @@ func hud_reward_close() -> void: hud.hud_reward_close()
 func hud_standings(rows: Array, round_no: int) -> void: hud.hud_standings(rows, round_no)
 func hud_standings_hide() -> void: hud.hud_standings_hide()
 
-func hud_estimate_open(kicker: String, q: String, unit: String, dials: Array, year: bool) -> void: hud.hud_estimate_open(kicker, q, unit, dials, year)
-func hud_estimate_dial(i: int, value: int, cursor: int, locked: bool) -> void: hud.hud_estimate_dial(i, value, cursor, locked)
-func hud_estimate_reveal(answer: String, ranked: Array) -> void: hud.hud_estimate_reveal(answer, ranked)
+func hud_estimate_open(kicker: String, q: String, unit: String, lo: float, hi: float, year: bool, entries: Array, mouse_on: bool) -> void: hud.hud_estimate_open(kicker, q, unit, lo, hi, year, entries, mouse_on)
+func hud_estimate_entry(i: int, value: int, locked: bool) -> void: hud.hud_estimate_entry(i, value, locked)
+func hud_estimate_reveal(answer: int, answer_text: String, ranked: Array) -> void: hud.hud_estimate_reveal(answer, answer_text, ranked)
 func hud_estimate_close() -> void: hud.hud_estimate_close()
 func hud_duel_marks(marks: Array, clickable: bool) -> void: hud.hud_duel_marks(marks, clickable)
+func hud_duel_splash(a: Dictionary, d: Dictionary, place: String) -> void: hud.hud_duel_splash(a, d, place)
+
+# ── duraklatma, geri, gamepad odağı ────────────────────────────────
+func set_paused(on: bool) -> void:
+	get_tree().paused = on
+	if on:
+		pause.open()
+		root.move_child(pause, -1)
+	else:
+		pause.close()
+
+func _quit() -> void:
+	Music.stop(0.4)
+	stage_curtain_then(func(): get_tree().quit())
+
+func stage_curtain_then(cb: Callable) -> void:
+	if game and game.stage:
+		game.stage.set_curtain(true)
+		await game.stage.curtain_done
+	cb.call()
+
+func _unhandled_input(e: InputEvent) -> void:
+	var back: bool = e.is_action_pressed("ui_cancel") or (e is InputEventJoypadButton and e.pressed and e.button_index == JOY_BUTTON_START)
+	if back:
+		if get_tree().paused:
+			set_paused(false)
+		elif game.mode == game.Mode.ARENA and not hud.result.visible:
+			set_paused(true)
+		elif menu.is_setup() or menu.is_settings():
+			menu.show_menu()
+		else:
+			return
+		get_viewport().set_input_as_handled()
+		return
+	# gamepad/klavye ile menüde gezinme: odak yoksa ilk düğmeyi yakala
+	if _lobby and game.mode == game.Mode.LOBBY and root.get_viewport().gui_get_focus_owner() == null:
+		var nav: bool = (e is InputEventJoypadButton and e.pressed) or (e is InputEventJoypadMotion and absf(e.axis_value) > 0.6 and e.axis == JOY_AXIS_LEFT_Y)
+		if nav and menu.menu_col.visible:
+			menu.buttons["trivia"].grab_focus()
 
 func show_result(title: String, ranking: Array, rows: Array = []) -> void:
 	hud.show_result(title, ranking, rows)
@@ -344,6 +398,13 @@ func prepare_shot(part: String) -> void:
 		"setup":
 			menu._open_setup("arena")
 			await get_tree().create_timer(1.8).timeout
+		"settings":
+			menu._open_settings()
+			await get_tree().create_timer(1.6).timeout
+		"pause":
+			await get_tree().create_timer(0.5).timeout
+			set_paused(true)
+			await get_tree().create_timer(0.6).timeout
 		"menu_hover":
 			await get_tree().create_timer(2.0).timeout
 			menu.buttons["trivia"].grab_focus()

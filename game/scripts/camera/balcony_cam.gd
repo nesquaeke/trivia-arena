@@ -23,6 +23,7 @@ var trauma := 0.0
 var blend := 2.4
 
 var _t := 0.0
+var _orbit_t := 0.0
 var _look := Vector3.ZERO
 var _noise := FastNoiseLite.new()
 
@@ -41,8 +42,12 @@ func _shot_data() -> Dictionary:
 	return custom if shot == Shot.CUSTOM else SHOTS[shot]
 
 ## Hazır kadrajların dışında bir çekim (loca gibi, konumu sahneye bağlı olanlar)
+## data: {pos, look, fov, h, sway, blend?}
+## Yörünge çekimi için data'ya "orbit": {center, radius, height, speed, angle} ekle:
+## kamera merkezin çevresinde döner, merkeze bakar (kale düşüşü sinematiği).
 func set_custom(data: Dictionary, instant := false) -> void:
 	custom = data
+	_orbit_t = 0.0
 	set_shot(Shot.CUSTOM, instant)
 
 func set_shot(p_shot: int, instant := false) -> void:
@@ -56,6 +61,8 @@ func set_shot(p_shot: int, instant := false) -> void:
 		look_at(_look, Vector3.UP)
 
 func add_trauma(x: float) -> void:
+	if not Engine.is_editor_hint() and not GameSettings.shake_on():
+		return
 	trauma = min(1.0, trauma + x)
 
 func _centroid() -> Vector3:
@@ -79,7 +86,14 @@ func _process(delta: float) -> void:
 	var breath := Vector3(_noise.get_noise_2d(_t * 0.4, 0.0), _noise.get_noise_2d(0.0, _t * 0.4), 0.0) * 0.08 * (1.0 if sway > 0.0 else 0.3)
 	var want_pos: Vector3 = s.pos + Vector3(c.x * 0.32, 0.0, c.z * 0.12) * sway + breath
 	var want_look: Vector3 = s.look + Vector3(c.x * 0.42, 0.0, c.z * 0.3) * sway
-	var k := 1.0 - exp(-blend * delta)
+	if s.has("orbit"):
+		_orbit_t += delta
+		var o: Dictionary = s.orbit
+		var ang: float = float(o.get("angle", 0.0)) + float(o.get("speed", 0.4)) * _orbit_t
+		var ctr: Vector3 = o.center
+		want_pos = ctr + Vector3(sin(ang) * float(o.radius), float(o.height), cos(ang) * float(o.radius))
+		want_look = ctr
+	var k := 1.0 - exp(-float(s.get("blend", blend)) * delta)
 	position = position.lerp(want_pos, k)
 	_look = _look.lerp(want_look, k)
 	fov = lerp(fov, float(s.fov), k)

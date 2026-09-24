@@ -294,6 +294,7 @@ func _ask() -> void:
 	time_left = timer_total
 	_tick = 99
 	phase = "question"
+	Music.play("think", 0.8)
 	while time_left > 0.0 and phase == "question":
 		await get_tree().physics_frame
 
@@ -356,6 +357,7 @@ func _drive_bots() -> void:
 # ── sonuç ───────────────────────────────────────────────────────────
 func _resolve() -> void:
 	phase = "reveal"
+	Music.play("trivia", 1.2)
 	_hud("hud_timer", [0.0, timer_total])
 	var correct: int = face.correct
 	var right: Array[Plush] = []
@@ -619,6 +621,8 @@ func _finish() -> void:
 	if phase == "done":
 		return
 	phase = "done"
+	Music.stop(0.8)
+	Music.sting("victory")
 	stage.set_zones_visible(false)
 	stage.hide_tug()
 	stage.board.show_marquee(I18n.t("arena.lobby_board"))

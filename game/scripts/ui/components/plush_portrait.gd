@@ -7,6 +7,9 @@ extends SubViewportContainer
 @export var look := {}
 @export var yaw := -0.35
 @export var hop_every := 5.5
+## Yakın plan (baş ve omuzlar): skor kartları için
+@export var close_up := false
+var culture := ""
 
 var viewport: SubViewport
 var visual: PlushVisual
@@ -45,6 +48,11 @@ func _ready() -> void:
 	cam.position = Vector3(0, 0.95, 4.2)
 	world.add_child(cam)
 	cam.look_at(Vector3(0, 0.72, 0))
+	if close_up:
+		cam.fov = 26.0
+		cam.position = Vector3(0, 1.05, 2.35)
+		cam.look_at(Vector3(0, 0.82, 0))
+		viewport.msaa_3d = Viewport.MSAA_2X
 	var key := SpotLight3D.new()
 	key.light_color = Color(1.0, 0.86, 0.66)
 	key.light_energy = 2.6
@@ -102,8 +110,16 @@ func set_look(l: Dictionary) -> void:
 	if visual == null:
 		visual = PlushVisual.new(look)
 		pivot.add_child(visual)
+		if culture != "":
+			visual.set_culture(culture)
 	else:
 		visual.apply_look(look)
+
+## Conquest kostümü (kültür); boş: kostümsüz
+func set_culture(c: String) -> void:
+	culture = c
+	if visual:
+		visual.set_culture(c)
 
 func hop() -> void:
 	_hop_v = 3.2

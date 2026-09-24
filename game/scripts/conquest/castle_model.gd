@@ -255,41 +255,126 @@ func _rubble(p: Vector3) -> void:
 			Vector3(rng.randf(), rng.randf(), rng.randf()))
 		b.name = "Rubble"
 
-func _dust(p: Vector3) -> void:
+func _dust(p: Vector3, amount := 26, life := 1.3, size := 1.0) -> void:
 	var ps := CPUParticles3D.new()
 	ps.one_shot = true
-	ps.amount = 26
-	ps.lifetime = 1.3
-	ps.explosiveness = 0.9
+	ps.amount = amount
+	ps.lifetime = life
+	ps.explosiveness = 0.85
 	ps.position = p
 	ps.direction = Vector3(0, 1, 0)
-	ps.spread = 70.0
-	ps.initial_velocity_min = 0.3
-	ps.initial_velocity_max = 0.9
-	ps.gravity = Vector3(0, -0.3, 0)
-	ps.scale_amount_min = 0.5
-	ps.scale_amount_max = 1.2
-	var sm := SphereMesh.new()
-	sm.radius = 0.05
-	sm.height = 0.1
-	sm.radial_segments = 6
-	sm.rings = 3
-	ps.mesh = sm
-	var dm := StandardMaterial3D.new()
-	dm.albedo_color = Color(0.75, 0.7, 0.62, 0.6)
-	dm.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	dm.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	ps.material_override = dm
+	ps.spread = 80.0
+	ps.initial_velocity_min = 0.25 * size
+	ps.initial_velocity_max = 0.8 * size
+	ps.gravity = Vector3(0, 0.05, 0)
+	ps.damping_min = 0.6
+	ps.damping_max = 1.2
+	ps.scale_amount_min = 0.6 * size
+	ps.scale_amount_max = 1.4 * size
+	var curve := Curve.new()
+	curve.add_point(Vector2(0, 0.35))
+	curve.add_point(Vector2(0.3, 1.0))
+	curve.add_point(Vector2(1, 1.6))
+	ps.scale_amount_curve = curve
+	var ramp := Gradient.new()
+	ramp.set_color(0, Color(0.86, 0.8, 0.7, 0.55))
+	ramp.set_color(1, Color(0.7, 0.64, 0.56, 0.0))
+	ps.color_ramp = ramp
+	var q := QuadMesh.new()
+	q.size = Vector2(0.16, 0.16)
+	ps.mesh = q
+	ps.material_override = _puff_mat()
 	add_child(ps)
 	ps.emitting = true
-	get_tree().create_timer(2.0).timeout.connect(ps.queue_free)
+	get_tree().create_timer(life + 1.0).timeout.connect(ps.queue_free)
 
-## Bütün kale yıkılır (son kule düştüğünde): kaide çöker, bayrak iner
+static var _puff: StandardMaterial3D
+## Yumuşak kenarlı toz bulutu: ışınsal geçişli doku, kameraya dönük kare
+static func _puff_mat() -> StandardMaterial3D:
+	if _puff:
+		return _puff
+	var g := Gradient.new()
+	g.set_color(0, Color(1, 1, 1, 0.85))
+	g.set_color(1, Color(1, 1, 1, 0))
+	g.add_point(0.35, Color(1, 1, 1, 0.4))
+	g.add_point(0.7, Color(1, 1, 1, 0.08))
+	var tex := GradientTexture2D.new()
+	tex.gradient = g
+	tex.fill = GradientTexture2D.FILL_RADIAL
+	tex.fill_from = Vector2(0.5, 0.5)
+	tex.fill_to = Vector2(0.5, 0.0)
+	tex.width = 64
+	tex.height = 64
+	var m := StandardMaterial3D.new()
+	m.albedo_texture = tex
+	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	m.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	m.billboard_mode = BaseMaterial3D.BILLBOARD_PARTICLES
+	m.vertex_color_use_as_albedo = true
+	m.depth_draw_mode = BaseMaterial3D.DEPTH_DRAW_DISABLED
+	_puff = m
+	return m
+
+## Bütün kale yıkılır (son kule düştüğünde): gümbürtüyle sarsılır, kuleler
+## sırayla devrilir, taşlar dört yana saçılır, koca bir toz bulutu kalkar,
+## sancak iner, kaide çöker. Geriye isli bir harabe kalır.
 func collapse() -> void:
-	set_towers(0, true)
+	var base := position
+	var rumble := create_tween()
+	for i in 12:
+		var k := 1.0 - i / 12.0
+		rumble.tween_property(self, "position", base + Vector3(randf_range(-1, 1) * 0.03 * k, 0, randf_range(-1, 1) * 0.02 * k), 0.05)
+	rumble.tween_property(self, "position", base, 0.05)
+	for i in 3:
+		if i < towers:
+			var t := _towers[i]
+			get_tree().create_timer(0.25 + i * 0.22).timeout.connect(func(): if is_instance_valid(t): _topple(t))
+	towers = 0
+	for pip in _pips:
+		pip.material_override = m("pip_dead", Color("5A5364"), 0.8)
+		pip.create_tween().tween_property(pip, "scale", Vector3(0.01, 0.01, 0.01), 0.4).set_delay(0.3)
+	if _flag:
+		var fl := _flag
+		_flag = null
+		var ft := fl.create_tween()
+		ft.tween_property(fl, "position:y", fl.position.y - 0.45, 1.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN).set_delay(0.5)
+		ft.tween_property(fl, "scale", Vector3(1, 0.01, 1), 0.2)
+	get_tree().create_timer(0.7).timeout.connect(func():
+		if not is_instance_valid(self):
+			return
+		_debris(18)
+		_dust(Vector3(0, 0.25, 0), 70, 1.8, 2.2))
 	var tw := create_tween()
-	tw.tween_interval(0.8)
-	tw.tween_property(self, "scale", Vector3(1.0, 0.35, 1.0), 0.4).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	tw.tween_interval(0.9)
+	tw.tween_property(self, "scale", Vector3(1.08, 0.3, 1.08), 0.45).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	tw.tween_callback(func():
+		for mi in find_children("*", "MeshInstance3D", true, false):
+			var gm := mi as MeshInstance3D
+			if gm.material_override is StandardMaterial3D and gm.name != "Rubble":
+				var dm := (gm.material_override as StandardMaterial3D).duplicate() as StandardMaterial3D
+				dm.albedo_color = dm.albedo_color.darkened(0.28)
+				gm.material_override = dm)
+
+## Taş parçaları: merkezden yay çizerek saçılır, dönerek yere düşer
+func _debris(n: int) -> void:
+	var stone := m("rubble", PALETTE[style].wall.darkened(0.3), 0.95)
+	for k in n:
+		var sz := randf_range(0.035, 0.08)
+		var b := _mi(get_parent() if get_parent() else self, _box(sz, sz * 0.8, sz), stone, global_position + Vector3(0, 0.3, 0), Vector3.ZERO)
+		b.global_position = global_position + Vector3(randf_range(-0.1, 0.1), 0.35, randf_range(-0.1, 0.1))
+		var dir := Vector2.from_angle(randf() * TAU) * randf_range(0.35, 0.95)
+		var start := b.position
+		var end := start + Vector3(dir.x, -0.2, dir.y)
+		var peak := randf_range(0.25, 0.6)
+		var spin := Vector3(randf_range(-9, 9), randf_range(-9, 9), randf_range(-9, 9))
+		var tw := b.create_tween()
+		tw.tween_method(func(q: float):
+			if is_instance_valid(b):
+				b.position = start.lerp(end, q) + Vector3(0, sin(q * PI) * peak - q * q * 0.05, 0)
+				b.rotation = spin * q, 0.0, 1.0, randf_range(0.55, 0.85))
+		tw.tween_interval(2.5)
+		tw.tween_property(b, "scale", Vector3(0.01, 0.01, 0.01), 0.6)
+		tw.tween_callback(b.queue_free)
 
 func _process(delta: float) -> void:
 	_t += delta

@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_estimate_ruler", "test_phone_events",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -272,6 +272,30 @@ func test_arena_match() -> void:
 	var clean: bool = m.all_actors().all(func(p): return p.debuffs.is_empty() and p.collision_layer == 1)
 	check(clean, "sabotajlar ve çarpışma katmanları temizlendi")
 	Engine.time_scale = 1.0
+
+func test_estimate_ruler() -> void:
+	# logaritmik cetvel: gidiş-dönüş aynı değeri verir, uçlar 0 ve 1
+	check(EstimatePanel.is_log(500, 15000, false), "geniş aralık logaritmik")
+	check(not EstimatePanel.is_log(1000, 2000, true), "yıl sorusu doğrusal")
+	var u := EstimatePanel.to_u(8849, 500, 15000, true)
+	var back := EstimatePanel.from_u(u, 500, 15000, true)
+	check(absf(back - 8849) < 1.0, "cetvel gidiş-dönüş (%f)" % back)
+	check(EstimatePanel.to_u(500, 500, 15000, true) == 0.0 and EstimatePanel.to_u(15000, 500, 15000, true) == 1.0, "cetvel uçları")
+	check(EstimatePanel.nice(8849.0, false) == 8850, "3 anlamlı basamağa yuvarlama")
+	check(EstimatePanel.nice(1453.4, true) == 1453, "yıl yuvarlanmaz")
+	check(EstimatePanel.fine_step(8849, false) == 10 and EstimatePanel.fine_step(42, false) == 1, "ince ayar adımı")
+
+func test_phone_events() -> void:
+	var b := PhoneBridge.new()
+	b._handle({"t": "num", "pid": "p1", "v": 1453, "lock": true})
+	b._handle({"t": "ans", "pid": "p1", "i": 2})
+	var ctrl := Controllers.Phone.new(b, "p1")
+	var n: Dictionary = ctrl.take_number()
+	check(int(n.get("v", 0)) == 1453 and bool(n.get("lock", false)), "telefon sayı klavyesi olayı")
+	check(ctrl.take_number().is_empty(), "olay bir kez alınır")
+	check(ctrl.take_answer() == 2 and ctrl.take_answer() == -1, "telefon şık düğmesi")
+	check(ctrl.is_phone() and not Controllers.Keyboard.new(0).is_phone(), "telefon kontrolcüsü tanınır")
+	b.free()
 
 func test_conquest_map() -> void:
 	var mb := MapBoard.new()

@@ -18,8 +18,12 @@ Fizik motoruyla çalışan, kaotik bir 3D parti bilgi yarışması. Kırmızı k
 | **Güç turu:** en hızlı doğru 400 puan çalar ya da sabote eder | **Can turu:** yalnız en hızlı doğru kurtulur |
 | ![Final](docs/screenshots/result.jpg) | ![Conquest Quiz](docs/screenshots/conquest.jpg) |
 | **Final:** konfeti, karne, rövanş | **Conquest Quiz:** keçe Türkiye haritasında kaleler ve düellolar |
-| ![Conquest tahmin](docs/screenshots/cq_estimate.jpg) | ![Conquest düello](docs/screenshots/cq_duel.jpg) |
-| **Conquest tahmini:** en yakın tahmin önce seçer | **Conquest düellosu:** saldıran ve savunan aynı soruda |
+| ![Tahmin cetveli](docs/screenshots/cq_estimate.jpg) | ![Açıklama](docs/screenshots/cq_reveal.jpg) |
+| **Tahmin cetveli:** herkes sancağını kaydırıp çakar | **Açıklama:** altın iğne doğru cevaba düşer, en yakına taç |
+| ![Üstten seçim](docs/screenshots/cq_pick.jpg) | ![Düello](docs/screenshots/cq_splash.jpg) |
+| **Seçim:** kamera tepeye çıkar, bölgenin değeri altta | **Düello açılışı:** saldıran ve savunan karşı karşıya |
+| ![Kale düşüşü](docs/screenshots/castle_fall.jpg) | ![Ayarlar](docs/screenshots/settings.jpg) |
+| **Kale düşüşü:** kamera kalenin etrafında döner | **Ayarlar:** ses, ekran, kalite, sarsıntı |
 | ![Kültür kostümleri](docs/screenshots/costumes.jpg) | ![Kaleler](docs/screenshots/castles.jpg) |
 | **On kültür kostümü** | **Altı kale üslubu, 3 kule = 3 can** |
 | ![Kostüm odası](docs/screenshots/wardrobe_cq.jpg) | ![Ev partisi](docs/screenshots/house.jpg) |
@@ -64,9 +68,25 @@ Web sürümünün planı birebir, sahneye serilen keçeden dikilmiş bir Türkiy
 2. **Perde II · Toprak paylaşımı.** Tahmin sorularında en yakın tahmin 2, ikinci 1 bölge alır (kendi sınırına komşu). Bölge 200, 2× rozetli bölge 400 puan. Boş toprak bitene kadar sürer.
 3. **Perde III · Savaş çağı.** Sırayla komşu bir düşman bölgesine saldırırsın; saldıran ve savunan aynı 4 şıklı soruyu cevaplar. Yalnız saldıran bilirse bölge ve puanı el değiştirir; ikisi de bilirse tahmin sorusu ayırır. Kaleye saldırmak bir kule düşürür, son kulesi düşen elenir ve bütün toprağı fatihe geçer.
 
-Tahminler pirinç sayaç kadranıyla girilir (yukarı/aşağı rakam, sol/sağ basamak, zıpla kilit; klavyeden yazmak da olur). Bölgeler yönlerle ya da fareyle seçilir.
+Tahminler **tahmin cetveli** ile girilir: sorunun aralığını kapsayan pirinç bir cetvel (geniş aralıklarda logaritmik). Sol/sağ sancağını kaydırır, basılı tuttukça hızlanır; yukarı/aşağı ince ayar yapar; zıplamak sancağı çakar, omuz kilidi açar. Klavyeden rakam yazmak, fareyle sürüklemek de olur. Telefonla oynayanın ekranına **sayı klavyesi**, düelloda **dört büyük şık düğmesi** gelir; telefon ve bot tahminleri açıklamaya kadar gizlidir. Bölgeler yönlerle ya da fareyle seçilir; seçimde kamera tepeye çıkar.
+
+Generaller maç boyunca kulistedir: harita onların taşlarıyla konuşur, soldaki sancak kartlarında kostümlü canlı portreleri durur. Saldırıda kamera iki bölgeye iner, düello açılışında iki general karşı karşıya gelir; kale düşünce kamera yıkılan kalenin çevresinde döner. Finalde herkes selama çıkar.
 
 Her oyuncunun bir **kültür kostümü** (Viking, Romalı, firavun, samuray, mariachi, silahşor, İskoç, yeniçeri, kanatlı hüsar, sınır avcısı) ve bir **kale üslubu** (Beyaz Balıkçıl, basamaklı piramit, Elhamra, masal şatosu, gotik katedral, bozkır otağı) vardır. Haritadaki her bölgede sahibinin kostümlü pelüş taşı durur.
+
+### Müzik ve ses
+
+Bütün müzikler notadan sentezlenir, ses örneği yoktur: lobi valsi, yarışma swingi, Conquest savaş marşı, soru sırasında gerilim yatağı ve zafer fanfarı. Müzik oyun anına göre geçiş yapar (soru gelince gerilim, cevapta geri döner). Savaş davulu, savaş borusu, kale çöküşü, orkestra vuruşu gibi efektler de aynı betikten çıkar. Değiştirmek için `game/tools/music/compose.py` içindeki notaları düzenle:
+
+```bash
+pip install numpy scipy soundfile
+python3 game/tools/music/compose.py            # hepsini yeniden üret
+python3 game/tools/music/compose.py conquest   # tek parça
+```
+
+### Ayarlar ve Steam
+
+Menüde **Ayarlar**: ana ses, müzik, efekt; pencere / tam ekran; kalite (düşük: sis, SSAO ve MSAA kapanır, 3D çözünürlük %75); kamera sarsıntısı. Oyun içinde **Esc** ya da gamepad **Start** perde arası menüsünü açar (devam, lobiye dön, hızlı ses). Menüler klavye ve gamepad ile gezilir. `game/export_presets.cfg` Windows ve Linux dışa aktarma ayarlarını içerir (çıktı `build/`).
 
 ### Diğerleri
 

@@ -16,6 +16,7 @@ var code := ""
 var state := "off"            # off | connecting | live | error
 var inputs := {}              # pid -> {x, y, j, s}
 var names := {}               # pid -> ad
+var events := {}              # pid -> {tür: son olay} (sayı klavyesi, şık düğmesi)
 
 var _ws: WebSocketPeer = null
 var _key := ""
@@ -103,6 +104,26 @@ func _handle(m: Dictionary) -> void:
 		"in":
 			var pid3 := String(m.get("pid", ""))
 			inputs[pid3] = {"x": float(m.get("x", 0.0)), "y": float(m.get("y", 0.0)), "j": bool(m.get("j", false)), "s": bool(m.get("s", false))}
+		"num":
+			_push(String(m.get("pid", "")), "num", {"v": int(m.get("v", 0)), "lock": bool(m.get("lock", false))})
+		"ans":
+			_push(String(m.get("pid", "")), "ans", {"i": int(m.get("i", -1))})
+
+func _push(pid: String, kind: String, e: Dictionary) -> void:
+	if pid == "":
+		return
+	if not events.has(pid):
+		events[pid] = {}
+	events[pid][kind] = e
+
+## Bir kumandanın bekleyen olayını al (yoksa boş sözlük)
+func take_event(pid: String, kind: String) -> Dictionary:
+	var box: Dictionary = events.get(pid, {})
+	if not box.has(kind):
+		return {}
+	var e: Dictionary = box[kind]
+	box.erase(kind)
+	return e
 
 func _send(obj: Dictionary) -> void:
 	if _ws and _ws.get_ready_state() == WebSocketPeer.STATE_OPEN:

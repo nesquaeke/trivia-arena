@@ -88,17 +88,25 @@ func setup(p_game: Node, actors: Array[Plush], _p_timer: float, p_level: String,
 	war_rounds = clampi(int(round(float(CFG.turn_budget) / maxf(2.0, n))), 2, 6)
 	if ui and ui.has_signal("answer_clicked"):
 		ui.answer_clicked.connect(_on_answer_clicked)
+	if ui and ui.has_signal("ruler_input"):
+		ui.ruler_input.connect(_on_ruler)
 
 func _exit_tree() -> void:
 	for p in contestants:
 		if is_instance_valid(p):
 			p.visual.set_culture("")
 			p.frozen_input = false
+			p.visible = true
+			p.freeze = false
 			p.hide_plate()
 	if is_instance_valid(board):
 		board.queue_free()
+	if is_instance_valid(stage):
+		stage.set_map_light(false)
 	if ui and ui.has_signal("answer_clicked") and ui.answer_clicked.is_connected(_on_answer_clicked):
 		ui.answer_clicked.disconnect(_on_answer_clicked)
+	if ui and ui.has_signal("ruler_input") and ui.ruler_input.is_connected(_on_ruler):
+		ui.ruler_input.disconnect(_on_ruler)
 	if ui and ui.has_method("hud_estimate_close"):
 		ui.hud_estimate_close()
 
@@ -185,7 +193,7 @@ func _refresh_scores(deltas := {}) -> void:
 		var s: Dictionary = P[p]
 		var cap := capital_of(p)
 		rows.append({"name": p.player_name, "color": pcolor(p), "value": s.points, "alive": not s.dead,
-			"hp_mode": false, "combo": 0, "debuffs": [], "tiles": owned(p).size(),
+			"hp_mode": false, "combo": 0, "debuffs": [], "tiles": owned(p).size(), "look": p.look, "culture": s.culture,
 			"towers": int(shields.get(cap, 0)) if cap != "" else -1, "delta": deltas.get(p, 0), "turn": p == turn_p})
 		if not s.dead:
 			p.set_plate(p.player_name, "", pcolor(p))
@@ -206,21 +214,77 @@ func _ranked() -> Array[Plush]:
 func ranking() -> Array[Plush]:
 	return _ranked()
 
-## Generaller: sahnenin önünde, haritaya dönük değil seyirciye dönük, kostümlü
+## Generaller maç boyunca kuliste bekler: harita onların taşlarıyla konuşur,
+## skor şeridindeki portreler onları gösterir. Finalde selama çıkarlar.
 func line_up() -> void:
 	var n := contestants.size()
 	for i in n:
 		var p := contestants[i]
 		p.teleport(Vector3((i - (n - 1) * 0.5) * 1.15, 0.05, 3.45), 0.0)
 		p.frozen_input = true
+		p.visible = false
+		p.freeze = true
 		if p.controller is Controllers.Bot:
 			p.controller.mode = "idle"
+
+## Final selamı: kostümlü generaller sahnenin önünde, kazanan ortada
+func _curtain_call(rk: Array[Plush]) -> void:
+	var n := rk.size()
+	var order: Array[Plush] = []
+	for i in n:
+		# kazanan ortada, diğerleri sırayla iki yana
+		if i % 2 == 0:
+			order.append(rk[i])
+		else:
+			order.push_front(rk[i])
+	for i in n:
+		var p := order[i]
+		p.visible = true
+		p.freeze = false
+		p.teleport(Vector3((i - (n - 1) * 0.5) * 1.2, 0.3, 3.2 if p != rk[0] else 3.6), 0.0)
+		p.frozen_input = true
+		p.visual.wobble = 0.6
+	if game.cam:
+		game.cam.set_custom({"pos": Vector3(0, 3.2, 9.6), "look": Vector3(0, 0.9, 2.4), "fov": 40.0, "h": 0.0, "sway": 0.0, "blend": 1.8})
+
+# ── kamera ──────────────────────────────────────────────────────────
+## Haritaya genel bakış: skor şeridine yer açmak için kadraj sağa kayık
+func _cam_overview() -> void:
+	if game.cam:
+		game.cam.set_custom({"pos": Vector3(0.0, 9.4, 4.5), "look": Vector3(0.0, 0.0, -1.25), "fov": 50.0, "h": -0.6, "sway": 0.0, "blend": 2.0})
+
+## Seçim: neredeyse tepeden, bütün bölgeler okunur
+func _cam_top() -> void:
+	if game.cam:
+		game.cam.set_custom({"pos": Vector3(0.0, 12.8, 2.2), "look": Vector3(0.0, 0.0, -1.3), "fov": 44.0, "h": -0.75, "sway": 0.0, "blend": 2.4})
+
+## İki bölgeye yakın plan (saldırı, düello): orta noktaya iner
+func _cam_focus(ids: Array, dist := 1.0) -> void:
+	if not game.cam or ids.is_empty():
+		return
+	var c := Vector3.ZERO
+	for id in ids:
+		c += board.seat(id)
+	c /= ids.size()
+	var spread := 0.0
+	for id in ids:
+		spread = maxf(spread, board.seat(id).distance_to(c))
+	var d := (3.2 + spread * 1.1) * dist
+	game.cam.set_custom({"pos": c + Vector3(0.0, d * 1.05, d * 0.8), "look": c + Vector3(0, 0.1, -0.15), "fov": 40.0, "h": 0.0, "sway": 0.0, "blend": 2.6})
+
+## Kale düşüşü: kalenin çevresinde yavaşça dönen alçak çekim
+func _cam_orbit(id: String) -> void:
+	if not game.cam:
+		return
+	var c := board.seat(id) + Vector3(0, 0.35, 0)
+	game.cam.set_custom({"pos": c + Vector3(0, 1.6, 2.6), "look": c, "fov": 38.0, "h": 0.0, "sway": 0.0, "blend": 3.0,
+		"orbit": {"center": c, "radius": 3.3, "height": 1.9, "speed": 0.42, "angle": -0.5}})
 
 # ── akış ────────────────────────────────────────────────────────────
 func run() -> void:
 	stage.set_zones_visible(false)
-	if game.cam:
-		game.cam.set_shot(BalconyCam.Shot.MAP, false)
+	stage.set_map_light(true)
+	_cam_overview()
 	_refresh_scores()
 	await _wait(0.8)
 	await _act_card(1)
@@ -246,7 +310,8 @@ func _act_card(n: int) -> void:
 	_hud("hud_round_card", [n, title, I18n.t("cq.act%dd" % n), chips])
 	_hud("hud_set_top", [title, I18n.t("round.kicker") + " " + Pal.roman(n)])
 	_notify_all(title)
-	Sfx.play("whoosh", -4.0, 0.9)
+	Sfx.play("sting", -3.0)
+	Sfx.play("whoosh", -8.0, 0.9)
 	await _wait(CFG.intro_s)
 	_hud("hud_round_card_hide")
 	await _wait(0.5)
@@ -270,31 +335,47 @@ func _estimate(who: Array[Plush], kicker: String) -> Array:
 	var q := _pick_estimate()
 	var tx := _est_text(q)
 	var is_year := bool(q.get("year", false))
-	var digits := maxi(1, str(int(q.max)).length())
-	var hs := humans(who)
+	var lo := float(q.min)
+	var hi := float(q.max)
+	var logk := EstimatePanel.is_log(lo, hi, is_year)
+	var start_v := EstimatePanel.nice(EstimatePanel.from_u(0.5, lo, hi, logk), is_year)
+	if phase != "duel_reveal":
+		_cam_overview()
 	var state := {}
-	var dials := []
-	for i in hs.size():
-		var p := hs[i]
-		state[p] = {"value": 0, "cursor": 0, "locked": false, "at": INF, "cool": 0.0, "idx": i}
-		dials.append({"name": p.player_name, "color": pcolor(p), "value": 0, "digits": digits, "cursor": 0, "locked": false})
-		_notify(p, {"t": "status", "text": I18n.t("cq.phone_est")})
-	_typed.clear()
-	_hud("hud_estimate_open", [kicker, tx.q, tx.unit, dials, is_year])
+	var entries := []
+	var p1: Plush = game.player_one() if game.has_method("player_one") else null
+	_mouse_p = null
+	for i in who.size():
+		var p := who[i]
+		var bot := is_bot(p)
+		var phone: bool = not bot and p.controller != null and p.controller.is_phone()
+		state[p] = {"value": start_v, "u": 0.5, "locked": false, "at": INF, "hold": 0.0, "rep": 0.0, "idx": i, "typed": ""}
+		entries.append({"name": p.player_name, "color": pcolor(p), "value": start_v, "locked": false,
+			"show": not bot and not phone, "human": not bot})
+		if phone:
+			_notify(p, {"t": "mode", "m": "num", "q": tx.q, "unit": tx.unit, "min": int(lo), "max": int(hi), "year": is_year})
+		elif not bot:
+			_notify(p, {"t": "status", "text": I18n.t("cq.phone_est")})
+		if not bot and not phone and (_mouse_p == null or p == p1):
+			_mouse_p = p
+	_ruler.clear()
+	Music.play("think", 0.8)
+	_hud("hud_estimate_open", [kicker, tx.q, tx.unit, lo, hi, is_year, entries, _mouse_p != null])
+	Sfx.play("drum", -4.0, 1.0)
 	# botlar
 	var guesses := {}
 	var times := {}
-	var spread: float = (float(q.max) - float(q.min)) * float(BOT_SPREAD.get(level, 0.12))
+	var spread: float = float(BOT_SPREAD.get(level, 0.12))
 	for p in who:
 		if is_bot(p):
-			guesses[p] = int(round(clampf(float(q.a) + rng.randfn(0.0, spread), float(q.min), float(q.max))))
-			times[p] = rng.randf_range(2.0, 9.0)
+			var bu := EstimatePanel.to_u(float(q.a), lo, hi, logk) + rng.randfn(0.0, spread * 0.8)
+			guesses[p] = EstimatePanel.nice(EstimatePanel.from_u(bu, lo, hi, logk), is_year)
+			times[p] = rng.randf_range(2.5, 10.0)
 	phase = "estimate"
 	q_index += 1
 	timer_total = CFG.estimate_s
 	time_left = timer_total
 	var t := 0.0
-	var start_ms := Time.get_ticks_msec()
 	while time_left > 0.0:
 		await get_tree().physics_frame
 		var dt := get_physics_process_delta_time() * fast_forward
@@ -302,91 +383,144 @@ func _estimate(who: Array[Plush], kicker: String) -> Array:
 		t += dt
 		_hud("hud_timer", [maxf(0.0, time_left), timer_total])
 		var all_locked := true
-		for p in hs:
+		for p in who:
 			var s: Dictionary = state[p]
-			if s.locked:
+			if is_bot(p):
+				if not s.locked and t >= float(times[p]):
+					s.locked = true
+					s.at = t
+					_hud("hud_estimate_entry", [s.idx, int(guesses[p]), true])
+				if not s.locked:
+					all_locked = false
 				continue
-			all_locked = false
-			_dial_input(p, s, digits, dt)
-			_hud("hud_estimate_dial", [s.idx, s.value, s.cursor, s.locked])
-			if s.locked:
+			var was := bool(s.locked)
+			var before := int(s.value)
+			_ruler_input(p, s, lo, hi, logk, is_year, dt)
+			if s.locked and not was:
 				s.at = t
-		if all_locked and not hs.is_empty():
+			if not s.locked:
+				all_locked = false
+			if int(s.value) != before or bool(s.locked) != was:
+				_hud("hud_estimate_entry", [s.idx, int(s.value), bool(s.locked)])
+		if all_locked:
+			await _wait(0.5)
 			break
-	for p in hs:
-		guesses[p] = int(state[p].value)
-		times[p] = float(state[p].at)
+	for p in who:
+		if not is_bot(p):
+			guesses[p] = int(state[p].value)
+			times[p] = float(state[p].at)
+			if p.controller != null and p.controller.is_phone():
+				_notify(p, {"t": "mode", "m": "pad"})
 	var ranked := []
 	for p in who:
-		var g := int(guesses.get(p, int(q.min)))
+		var g := int(guesses.get(p, start_v))
 		ranked.append({"p": p, "guess": g, "diff": absi(g - int(q.a)), "at": float(times.get(p, INF))})
 	ranked.sort_custom(func(a, b): return a.diff < b.diff or (a.diff == b.diff and a.at < b.at))
 	# açıklama
 	phase = "reveal"
 	_hud("hud_timer", [0.0, timer_total])
-	var worst := 1
-	for r in ranked:
-		worst = maxi(worst, int(r.diff))
 	var rows := []
-	for k in ranked.size():
-		var r: Dictionary = ranked[k]
-		rows.append({"name": r.p.player_name, "color": pcolor(r.p), "guess_text": EstimatePanel.group(r.guess, is_year),
-			"diff_text": I18n.t("cq.exact") if r.diff == 0 else I18n.t("cq.off", {"n": EstimatePanel.group(r.diff, is_year)}),
-			"ratio": 1.0 - float(r.diff) / float(worst) * 0.88, "win": k == 0})
+	for r in ranked:
+		rows.append({"i": state[r.p].idx, "guess": r.guess, "diff": r.diff})
 	var ans: String = EstimatePanel.group(int(q.a), is_year) + ((" " + String(tx.unit)) if String(tx.unit) != "" else "")
-	_hud("hud_estimate_reveal", [ans, rows])
-	Sfx.play("ding", -3.0, 1.2)
+	_hud("hud_estimate_reveal", [int(q.a), ans, rows])
 	log_lines.append("EST %s → %s" % [str(q.a), ranked[0].p.player_name])
+	await _wait(1.1)
+	Sfx.play("ding", -3.0, 1.2)
 	if not ranked.is_empty():
 		_cheer(ranked[0].p)
 	await _wait(CFG.reveal_s)
 	_hud("hud_estimate_close")
+	Music.play("conquest", 1.2)
 	return ranked
 
-## Kadran: yukarı/aşağı rakam, sol/sağ basamak, zıpla kilit; klavyeden yazmak da olur
-func _dial_input(p: Plush, s: Dictionary, digits: int, dt: float) -> void:
+var _mouse_p: Plush = null
+var _pick_top_for_bots := true
+var _ruler := {}                  # fare sürüklemesi: {"u": float, "release": bool}
+
+## Cetvel girdisi:
+##   sağ/sol   sancağı kaydırır, basılı tuttukça hızlanır
+##   yukarı/aşağı ince ayar (değerin büyüklüğüne göre adım), basılı tutunca tekrarlar
+##   zıpla     kilitle · omuz: kilidi aç
+##   klavye    rakam yaz, Enter kilitle (1. oyuncu) · fare: cetvelde sürükle
+##   telefon   sayı klavyesi
+func _ruler_input(p: Plush, s: Dictionary, lo: float, hi: float, logk: bool, is_year: bool, dt: float) -> void:
 	var ctrl = p.controller
 	if ctrl == null:
 		return
-	s.cool -= dt
+	# telefon sayı klavyesi
+	var num: Dictionary = ctrl.take_number()
+	if not num.is_empty():
+		s.value = clampi(int(num.v), int(lo) if lo < 0 else 0, int(hi) * 10)
+		s.u = EstimatePanel.to_u(float(s.value), lo, hi, logk)
+		s.locked = bool(num.lock)
+		return
+	if ctrl.consume_shove() and s.locked:
+		s.locked = false
+		Sfx.play("click", -8.0, 0.8)
+	if s.locked:
+		ctrl.consume_jump()
+		return
 	var mv: Vector2 = ctrl.get_move()
-	var place := digits - 1 - int(s.cursor)
-	if s.cool <= 0.0:
-		if mv.y < -0.5:
-			s.value = _bump(int(s.value), place, 1, digits)
-			s.cool = 0.16
-			Sfx.play("tick", -12.0, 1.5)
-		elif mv.y > 0.5:
-			s.value = _bump(int(s.value), place, -1, digits)
-			s.cool = 0.16
-			Sfx.play("tick", -12.0, 1.3)
-		elif mv.x > 0.5:
-			s.cursor = mini(digits - 1, int(s.cursor) + 1)
-			s.cool = 0.2
-		elif mv.x < -0.5:
-			s.cursor = maxi(0, int(s.cursor) - 1)
-			s.cool = 0.2
-	if absf(mv.x) < 0.3 and absf(mv.y) < 0.3:
-		s.cool = minf(s.cool, 0.0)
+	if absf(mv.x) > 0.25 and absf(mv.x) >= absf(mv.y):
+		s.hold = float(s.hold) + dt
+		var speed := lerpf(0.07, 0.75, clampf((float(s.hold) - 0.15) / 1.6, 0.0, 1.0)) * signf(mv.x) * absf(mv.x)
+		s.u = clampf(float(s.u) + speed * dt, 0.0, 1.0)
+		var nv := EstimatePanel.nice(EstimatePanel.from_u(s.u, lo, hi, logk), is_year)
+		if nv != int(s.value):
+			s.value = nv
+			if int(Time.get_ticks_msec() / 60) % 2 == 0:
+				Sfx.play("tick", -16.0, 1.2 + float(s.u) * 0.8)
+		s.typed = ""
+	else:
+		s.hold = 0.0
+	if absf(mv.y) > 0.5 and absf(mv.y) > absf(mv.x):
+		s.rep = float(s.rep) - dt
+		if s.rep <= 0.0:
+			var step := EstimatePanel.fine_step(float(s.value), is_year)
+			s.value = clampi(int(s.value) + (step if mv.y < 0.0 else -step), 0, int(hi) * 10)
+			s.u = EstimatePanel.to_u(float(s.value), lo, hi, logk)
+			s.rep = 0.3 if s.get("rep_first", true) else 0.06
+			s.rep_first = false
+			Sfx.play("tick", -12.0, 1.5 if mv.y < 0.0 else 1.3)
+			s.typed = ""
+	else:
+		s.rep = 0.0
+		s.rep_first = true
+	# klavyeyle yazılan rakamlar
 	if _typed.has(p):
-		var typed: Array = _typed[p]
-		for k in typed:
+		var buf := String(s.typed)
+		for k in _typed[p]:
 			if k == -1:
-				s.value = int(s.value) / 10
+				buf = buf.substr(0, maxi(0, buf.length() - 1))
 			elif k == -2:
 				s.locked = true
-			else:
-				s.value = (int(s.value) * 10 + int(k)) % int(pow(10, digits))
+			elif buf.length() < 9:
+				buf += str(k)
 		_typed.erase(p)
+		s.typed = buf
+		if buf != "":
+			s.value = int(buf)
+			s.u = EstimatePanel.to_u(float(s.value), lo, hi, logk)
+		Sfx.play("tick", -10.0, 1.4)
+	# fare
+	if p == _mouse_p and not _ruler.is_empty():
+		s.u = float(_ruler.u)
+		s.value = EstimatePanel.nice(EstimatePanel.from_u(s.u, lo, hi, logk), is_year)
+		s.typed = ""
+		_ruler.clear()
 	if ctrl.consume_jump():
 		s.locked = true
-	ctrl.consume_shove()
 
-func _bump(v: int, place: int, d: int, digits: int) -> int:
-	var p10 := int(pow(10, place))
-	var dig := (v / p10) % 10
-	var nd := (dig + d + 10) % 10
-	return clampi(v + (nd - dig) * p10, 0, int(pow(10, digits)) - 1)
+## 2. klavye oyuncusu (oklar + Enter) varsa Enter onun zıplamasıdır
+func _second_keyboard() -> bool:
+	for p in contestants:
+		if p.controller is Controllers.Keyboard and p.controller.set_id == 1:
+			return true
+	return false
+
+func _on_ruler(u: float, _release: bool) -> void:
+	_ruler = {"u": u}
 
 func _unhandled_input(e: InputEvent) -> void:
 	if e is InputEventKey and e.pressed and not e.echo and phase == "estimate":
@@ -400,7 +534,7 @@ func _unhandled_input(e: InputEvent) -> void:
 			k = e.keycode - KEY_KP_0
 		elif e.keycode == KEY_BACKSPACE:
 			k = -1
-		elif e.keycode == KEY_ENTER or e.keycode == KEY_KP_ENTER:
+		elif e.keycode == KEY_ENTER and not _second_keyboard():
 			k = -2
 		if k != -99:
 			if not _typed.has(p1):
@@ -422,6 +556,8 @@ func _pick_region(p: Plush, options: Array, title: String, sub: String, limit: f
 	board.clear_marks()
 	for id in options:
 		board.set_mark(id, "pickable")
+	if not is_bot(p) or _pick_top_for_bots:
+		_cam_top()
 	_say(title, pcolor(p).lightened(0.3), sub if not is_bot(p) else "")
 	if is_bot(p):
 		var best: String = options[0]
@@ -448,6 +584,7 @@ func _pick_region(p: Plush, options: Array, title: String, sub: String, limit: f
 				bd = d
 				cur = id
 	board.set_mark(cur, "cursor")
+	_hud("hud_message", [title, pcolor(p).lightened(0.3), _region_info(cur)])
 	phase = "pick"
 	_mouse_click = ""
 	_mouse_hover = ""
@@ -487,6 +624,7 @@ func _pick_region(p: Plush, options: Array, title: String, sub: String, limit: f
 			cur = next
 			board.set_mark(cur, "cursor")
 			Sfx.play("tick", -10.0, 1.4)
+			_hud("hud_message", [title, pcolor(p).lightened(0.3), _region_info(cur)])
 	if chosen == "":
 		var best: String = cur
 		var bs := -INF
@@ -518,6 +656,18 @@ func _castle_act() -> void:
 	_say(I18n.t("cq.castlesDone"), Pal.GOLD)
 	await _wait(1.2)
 
+## İmleçteki bölge: adı, değeri, sahibi / kalesi
+func _region_info(id: String) -> String:
+	var parts := [board.region_name(id)]
+	parts.append(I18n.t("cq.worth", {"p": value_of(id)}) + ("  ·  2×" if board.region(id).rich else ""))
+	var o = holder.get(id)
+	if o != null:
+		if capital.has(id):
+			parts.append(I18n.t("cq.castleOf", {"name": o.player_name, "n": int(shields.get(id, 0))}))
+		else:
+			parts.append(I18n.t("cq.landOf", {"name": o.player_name}))
+	return "  ·  ".join(parts)
+
 func _castle_options() -> Array:
 	var free := free_regions()
 	var roomy := free.filter(func(id):
@@ -535,8 +685,8 @@ func _build_castle(p: Plush, id: String) -> void:
 	var c := CastleModel.new(String(P[p].castle), pcolor(p))
 	c.set_meta("base_scale", Vector3.ONE * 1.05)
 	board.set_piece(id, c)
-	Sfx.play("thud", -2.0, 0.7)
-	Sfx.play("fanfare", -12.0, 1.4)
+	Sfx.play("war_drum", -2.0, 1.1)
+	Sfx.play("stamp", -4.0, 0.8)
 	if game.cam:
 		game.cam.add_trauma(0.25)
 	_say(I18n.t("cq.castleBuilt", {"a": p.player_name, "t": board.region_name(id)}), pcolor(p).lightened(0.3))
@@ -587,7 +737,7 @@ func _claim(p: Plush, id: String) -> void:
 	P[p].points += v
 	board.set_owner_color(id, pcolor(p))
 	_place_warrior(p, id)
-	Sfx.play("ding", -6.0, 1.3)
+	Sfx.play("claim", -4.0, 1.0 + rng.randf() * 0.1)
 	_say(I18n.t("cq.picked", {"a": p.player_name, "t": board.region_name(id), "p": v}), pcolor(p).lightened(0.3))
 	log_lines.append("CLAIM %s %s" % [p.player_name, id])
 	_refresh_scores({p: v})
@@ -638,14 +788,28 @@ func _turn(p: Plush, rr: int) -> void:
 		if board.region(o).adj.has(id) and dist < bd:
 			bd = dist
 			from = o
+	_cam_focus([from if from != "" else id, id], 0.8)
+	Sfx.play("war_horn", -3.0)
+	_say(I18n.t("cq.attackCall", {"a": p.player_name, "t": board.region_name(id)}), pcolor(p).lightened(0.3))
+	await _wait(0.5)
 	board.attack_arc(from if from != "" else id, id, pcolor(p))
 	board.flash(id)
 	Sfx.play("whoosh", -2.0, 1.2)
 	log_lines.append("ATTACK %s %s %s" % [p.player_name, d.player_name, id])
-	await _wait(1.0)
+	await _wait(1.1)
+	Sfx.play("war_drum", -2.0)
+	if game.cam:
+		game.cam.add_trauma(0.2)
+	await _wait(0.3)
+	_hud("hud_duel_splash", [{"name": p.player_name, "color": pcolor(p), "look": p.look, "culture": P[p].culture},
+		{"name": d.player_name, "color": pcolor(d), "look": d.look, "culture": P[d].culture}, board.region_name(id)])
+	_cam_focus([from if from != "" else id, id], 1.35)
+	await _wait(DuelSplash.DUR - 0.1)
 	var win := await _duel(p, d)
+	_cam_focus([id], 0.75)
 	await _resolve(p, d, id, win)
 	_turn_of = null
+	_cam_overview()
 
 func _bot_target_score(p: Plush, id: String) -> float:
 	var v := rng.randf() * 2.0
@@ -672,6 +836,7 @@ func _duel(a: Plush, d: Plush) -> bool:
 	time_left = timer_total
 	var label := I18n.t("cq.duel", {"a": a.player_name, "d": d.player_name})
 	_hud("hud_question", [label, face.prompt, face.options, face.cat_name, face.cat_color, timer_total, 0, Vector2i(0, 0)])
+	Music.play("think", 0.6)
 	_say(I18n.t("cq.duel_s"), Pal.BAD, I18n.t("cq.duelSub", {"a": a.player_name, "d": d.player_name}))
 	var duellists: Array[Plush] = [a, d]
 	var st := {}
@@ -685,6 +850,8 @@ func _duel(a: Plush, d: Plush) -> bool:
 			wrong.erase(face.correct)
 			st[p].ans = face.correct if ok else wrong[rng.randi() % 3]
 			st[p].at = clampf((1.0 + String(face.prompt).length() * 0.03) * rng.randf_range(0.7, 1.4), 1.0, timer_total - 0.5)
+		elif p.controller != null and p.controller.is_phone():
+			_notify(p, {"t": "mode", "m": "abcd", "q": face.prompt, "options": face.options})
 		else:
 			_notify(p, {"t": "status", "text": I18n.t("cq.phone_duel")})
 	var p1: Plush = game.player_one() if game.has_method("player_one") else null
@@ -718,6 +885,13 @@ func _duel(a: Plush, d: Plush) -> bool:
 			var ctrl = p.controller
 			s.cool -= dt
 			if ctrl:
+				var tap: int = ctrl.take_answer()
+				if tap >= 0:
+					s.sel = tap
+					s.ans = tap
+					s.locked = true
+					s.at = t
+					continue
 				var mv: Vector2 = ctrl.get_move()
 				if s.cool <= 0.0 and absf(mv.x) + absf(mv.y) > 0.6:
 					var dir := 1 if (mv.x > 0.5 or mv.y > 0.5) else -1
@@ -747,6 +921,9 @@ func _duel(a: Plush, d: Plush) -> bool:
 		_hud("hud_duel_marks", [marks, mouse_p != null and not st[mouse_p].locked])
 		if done:
 			break
+	for p in duellists:
+		if not is_bot(p) and p.controller != null and p.controller.is_phone():
+			_notify(p, {"t": "mode", "m": "pad"})
 	var ra: bool = st[a].locked and int(st[a].ans) == int(face.correct)
 	var rd: bool = st[d].locked and int(st[d].ans) == int(face.correct)
 	if ra:
@@ -760,6 +937,7 @@ func _duel(a: Plush, d: Plush) -> bool:
 	log_lines.append("DUEL %s:%s %s:%s" % [a.player_name, str(ra), d.player_name, str(rd)])
 	await _wait(1.8)
 	_hud("hud_question_hide")
+	Music.play("conquest", 1.0)
 	if ra and rd:
 		_say(I18n.t("cq.tieBreak"), Pal.GOLD)
 		await _wait(1.0)
@@ -781,21 +959,29 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 		P[a].captures += 1
 		var castle := board.piece(id) as CastleModel
 		if shields[id] > 0:
+			_cam_focus([id], 0.55)
+			await _wait(0.35)
 			if castle:
 				castle.set_towers(shields[id])
-			Sfx.play("thud", 0.0, 0.6)
+			Sfx.play("war_drum", 0.0, 0.9)
+			Sfx.play("thud", -2.0, 0.6)
 			if game.cam:
 				game.cam.add_trauma(0.35)
 			_say(I18n.t("cq.towerFell", {"a": a.player_name, "d": d.player_name, "n": shields[id]}), pcolor(a).lightened(0.3))
 			log_lines.append("TOWER %s %d" % [d.player_name, shields[id]])
 			_cheer(a)
 		else:
+			_cam_orbit(id)
+			Music.play("", 0.8)
+			await _wait(0.6)
 			if castle:
 				castle.collapse()
-			Sfx.play("thud", 2.0, 0.5)
-			Sfx.play("scream", -4.0, 0.9)
+			Sfx.play("collapse", 0.0)
+			Sfx.play("sting", -4.0)
 			if game.cam:
-				game.cam.add_trauma(0.6)
+				game.cam.add_trauma(0.45)
+			await _wait(2.6)
+			Music.play("conquest", 1.5)
 			var loot: int = P[d].points
 			P[a].points += loot
 			P[d].points = 0
@@ -826,7 +1012,7 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 		P[a].captures += 1
 		board.set_owner_color(id, pcolor(a))
 		_place_warrior(a, id)
-		Sfx.play("fanfare", -10.0, 1.3)
+		Sfx.play("claim", -2.0)
 		_say(I18n.t("cq.captured", {"a": a.player_name, "t": board.region_name(id), "p": loot}), pcolor(a).lightened(0.3))
 		log_lines.append("CAPTURE %s %s" % [a.player_name, id])
 		_cheer(a)
@@ -855,12 +1041,14 @@ func _finish() -> void:
 	var title := I18n.t("cq.winner", {"name": rk[0].player_name}) if rk.size() > 0 else I18n.t("arena.draw")
 	log_lines.append("WIN " + (names[0] if names.size() > 0 else "-"))
 	Profile.record_match(names, "conquest")
-	Sfx.play("fanfare", -2.0)
+	Music.stop(0.6)
+	Music.sting("victory")
 	Sfx.play("applause", -6.0)
+	_curtain_call(rk)
 	if rk.size() > 0:
 		stage.set_gold_target(rk[0])
 		_notify(rk[0], {"t": "status", "text": I18n.t("house.status_win")})
-		_cheer(rk[0])
+		get_tree().create_timer(0.6).timeout.connect(func(): _cheer(rk[0]))
 	_say(title, Pal.GOLD)
 	var rows := []
 	for p in rk:
