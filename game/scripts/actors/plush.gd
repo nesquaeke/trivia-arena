@@ -360,7 +360,7 @@ func _update_badge() -> void:
 		_badge = Label3D.new()
 		_badge.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 		_badge.no_depth_test = true
-		_badge.font = load("res://assets/fonts/BigShoulders.ttf")
+		_badge.font = Pal.display()
 		_badge.font_size = 44
 		_badge.pixel_size = 0.006
 		_badge.outline_size = 10
@@ -370,7 +370,7 @@ func _update_badge() -> void:
 		add_child(_badge)
 	var names := []
 	for k in debuffs:
-		names.append(I18n.t("debuff." + k).to_upper())
+		names.append(Pal.upper(I18n.t("debuff." + k)))
 	_badge.text = " · ".join(names)
 	_badge.visible = not names.is_empty()
 
@@ -380,7 +380,7 @@ func set_plate(top: String, bottom: String, col: Color) -> void:
 		_plate = Label3D.new()
 		_plate.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 		_plate.no_depth_test = true
-		_plate.font = load("res://assets/fonts/BigShoulders.ttf")
+		_plate.font = Pal.display()
 		_plate.font_size = 40
 		_plate.pixel_size = 0.0058
 		_plate.outline_size = 12
@@ -389,7 +389,7 @@ func set_plate(top: String, bottom: String, col: Color) -> void:
 		_plate.position = Vector3(0, 1.82, 0)
 		add_child(_plate)
 	_plate.visible = top != ""
-	_plate.text = top.to_upper() + ("\n" + bottom if bottom != "" else "")
+	_plate.text = Pal.upper(top) + ("\n" + Pal.upper(bottom) if bottom != "" else "")
 	_plate.modulate = col.lightened(0.25)
 
 func hide_plate() -> void:
@@ -401,7 +401,7 @@ func float_text(text: String, col: Color, big := false) -> void:
 	var l := Label3D.new()
 	l.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	l.no_depth_test = true
-	l.font = load("res://assets/fonts/BigShoulders.ttf")
+	l.font = Pal.display()
 	l.font_size = 72 if big else 56
 	l.pixel_size = 0.007
 	l.outline_size = 14

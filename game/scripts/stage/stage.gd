@@ -18,7 +18,7 @@ const TRAP_Z0 := -3.3
 const TRAP_Z1 := 2.3
 const GAP := 0.04
 const LETTERS := ["A", "B", "C", "D"]
-const ZONE_COLORS := [Color("E9B53A"), Color("3FB6A8"), Color("D9577A"), Color("8C74E0")]
+const ZONE_COLORS := Pal.ZONE
 
 var env: Environment
 var trapdoors: Array[TrapDoor] = []
@@ -388,7 +388,7 @@ func _build_trapdoors() -> void:
 		# harf ve şık yazısı zemine işli (yalnızca Trivia'da görünür); kameraya doğru hafif eğik
 		var letter := Label3D.new()
 		letter.text = LETTERS[i]
-		letter.font = load("res://assets/fonts/Limelight-Regular.ttf")
+		letter.font = Pal.display()
 		letter.font_size = 300
 		letter.pixel_size = 0.0034
 		letter.modulate = Color(ZONE_COLORS[i], 0.9)
@@ -399,7 +399,7 @@ func _build_trapdoors() -> void:
 		body.add_child(letter)
 		zone_letters.append(letter)
 		var lab := Label3D.new()
-		lab.font = load("res://assets/fonts/PlayfairDisplay.ttf")
+		lab.font = Pal.serif_semi()
 		lab.font_size = 64
 		lab.pixel_size = 0.0052
 		lab.outline_size = 14
@@ -766,8 +766,8 @@ func show_tug(names: Array, colors: Array) -> void:
 		ring.material_override = m_gold()
 		root.add_child(ring)
 		var lab := Label3D.new()
-		lab.text = String(names[i]).to_upper()
-		lab.font = load("res://assets/fonts/BigShoulders.ttf")
+		lab.text = String(names[i])
+		lab.font = Pal.italic_black()
 		lab.font_size = 96
 		lab.pixel_size = 0.006
 		lab.outline_size = 16

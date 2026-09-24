@@ -1,0 +1,52 @@
+[gd_resource type="Theme" load_steps=6 format=3]
+
+[ext_resource type="FontVariation" path="res://ui/fonts/serif_body.tres" id="1_body"]
+[ext_resource type="FontVariation" path="res://ui/fonts/display_bold.tres" id="2_disp"]
+
+[sub_resource type="StyleBoxFlat" id="edit_normal"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.05, 0.02, 0.025, 0.9)
+border_width_bottom = 2
+border_color = Color(0.79, 0.63, 0.35, 0.6)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="edit_focus"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.1, 0.03, 0.05, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.965, 0.81, 0.48, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="empty"]
+
+[resource]
+default_font = ExtResource("1_body")
+default_font_size = 22
+Label/colors/font_color = Color(0.918, 0.851, 0.722, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.5)
+Label/constants/shadow_offset_y = 2
+LineEdit/colors/font_color = Color(1, 0.945, 0.824, 1)
+LineEdit/colors/caret_color = Color(0.965, 0.81, 0.48, 1)
+LineEdit/colors/selection_color = Color(0.64, 0.125, 0.23, 0.8)
+LineEdit/colors/font_placeholder_color = Color(0.66, 0.57, 0.48, 0.6)
+LineEdit/font_sizes/font_size = 26
+LineEdit/fonts/font = ExtResource("2_disp")
+LineEdit/styles/normal = SubResource("edit_normal")
+LineEdit/styles/focus = SubResource("edit_focus")
+LineEdit/styles/read_only = SubResource("edit_normal")
+Button/styles/normal = SubResource("empty")
+Button/styles/hover = SubResource("empty")
+Button/styles/pressed = SubResource("empty")
+Button/styles/focus = SubResource("empty")
+Button/styles/disabled = SubResource("empty")
+TooltipPanel/styles/panel = SubResource("edit_focus")
+TooltipLabel/colors/font_color = Color(1, 0.945, 0.824, 1)

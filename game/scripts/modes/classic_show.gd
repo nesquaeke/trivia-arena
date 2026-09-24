@@ -51,6 +51,7 @@ var _tug_pull: Array = []
 var _tug_cats: Array = []
 var _tug_open := false
 var fast_forward := 1.0            # testlerde bekleme sürelerini kısaltır
+var start_round := 1               # deneme için: 2 ya da 3'ten başla (puanlar rastgele dağıtılır)
 
 func setup(p_game: Node, actors: Array[Plush], p_timer: float, p_level: String, seed_val := 0) -> void:
 	game = p_game
@@ -117,12 +118,11 @@ func _refresh_scores(deltas := {}) -> void:
 	var rows := []
 	for p in _ranked():
 		var s: Dictionary = st[p]
-		var val := ("%d" % s.hp if s.alive else "✝") if hp_mode else "%d" % s.points
-		rows.append({"name": p.player_name, "color": pcolor(p), "value": s.hp if hp_mode else s.points, "value_text": val,
+		rows.append({"name": p.player_name, "color": pcolor(p), "value": s.hp if hp_mode else s.points,
 			"combo": s.combo, "hp": s.hp, "max_hp": s.max_hp, "alive": s.alive, "hp_mode": hp_mode,
 			"delta": deltas.get(p, 0), "debuffs": p.debuffs.keys()})
 		if s.alive:
-			p.set_plate(p.player_name, (I18n.t("hud.hp", {"n": s.hp}) if hp_mode else I18n.t("hud.pts", {"n": s.points})), pcolor(p))
+			p.set_plate(p.player_name, "", pcolor(p))
 	_hud("hud_scores", [rows])
 
 func _ranked() -> Array[Plush]:
@@ -152,7 +152,14 @@ func run() -> void:
 	stage.set_zones_visible(false)
 	_refresh_scores()
 	await _wait(0.6)
+	if start_round > 1:
+		round_no = start_round - 1
+		for p in contestants:
+			st[p].points = rng.randi_range(2, 12) * 250
+		_refresh_scores()
 	for r in [1, 2, 3]:
+		if r < start_round:
+			continue
 		if r > 1:
 			await _standings()
 		await _round(r)
@@ -234,6 +241,7 @@ func _tug() -> void:
 	category = _tug_cats[best]
 	used_cats.append(category)
 	stage.tug_winner(best)
+	_hud("hud_tug_winner", [best])
 	Sfx.play("ding", -2.0, 1.2)
 	_say(I18n.t("tug.won", {"cat": names[best]}), Color(cols[best]).lightened(0.3))
 	log_lines.append("CAT " + category)
@@ -272,7 +280,8 @@ func _ask() -> void:
 	stage.set_zone_texts(face.options)
 	stage.set_zones_visible(true)
 	var label := I18n.t("hud.q_of", {"n": q_index + 1, "m": rules.questions_in(round_no)}) if not hp_mode else I18n.t("hud.q_final", {"n": q_index + 1})
-	_hud("hud_question", [label, face.prompt, face.options, face.cat_name, face.cat_color, timer_total, stake if hp_mode else 0])
+	var pips := Vector2i(q_index, rules.questions_in(round_no)) if not hp_mode else Vector2i(0, 0)
+	_hud("hud_question", [label, face.prompt, face.options, face.cat_name, face.cat_color, timer_total, stake if hp_mode else 0, pips])
 	_say(I18n.t("arena.run"), Color("F2C66A"), I18n.t("hud.stake", {"n": stake}) if hp_mode else "")
 	_notify_all(I18n.t("house.status_q", {"n": q_index + 1}))
 	Sfx.play("ding", -4.0, 0.9)
@@ -379,7 +388,7 @@ func _resolve() -> void:
 				p.visual.land(4.0)
 			else:
 				s.combo = 0
-				p.float_text("✗", Color("FF6B52"))
+				p.float_text("×", Color("FF6B52"))
 		if round_no == 2:
 			award_to = fastest
 	else:
@@ -419,6 +428,7 @@ func _resolve() -> void:
 				dl.erase(k)
 				p.set_debuff(k, false, rules)
 	stage.board.reveal = -1
+	_hud("hud_question_hide")
 	_refresh_scores()
 
 func _kill(p: Plush) -> void:
@@ -507,19 +517,19 @@ func _reward() -> void:
 ## Klavye, gamepad ve telefon aynı şekilde çalışır; fareyle tıklamak da olur.
 func _pick_reward(p: Plush, targets: Array[Plush]) -> Dictionary:
 	p.frozen_input = true
-	var tnames := []
+	var tlist := []
+	var rk := _ranked()
 	for t in targets:
-		tnames.append("%s  ·  %d" % [t.player_name, st[t].points])
-	var anames := []
+		tlist.append({"name": t.player_name, "color": pcolor(t), "points": st[t].points, "rank": rk.find(t) + 1})
+	var alist := []
 	for a in ACTIONS:
-		anames.append(I18n.t("debuff." + a) if a != "siphon" else I18n.t("reward.siphon", {"n": rules.siphon}))
-	var adesc := []
-	for a in ACTIONS:
-		adesc.append(I18n.t("debuff." + a + ".d") if a != "siphon" else I18n.t("reward.siphon_d"))
+		alist.append({"id": a,
+			"name": I18n.t("debuff." + a) if a != "siphon" else I18n.t("reward.siphon", {"n": rules.siphon}),
+			"desc": I18n.t("debuff." + a + ".d") if a != "siphon" else I18n.t("reward.siphon_d")})
 	var step := 0
 	var idx := [0, 0]
 	var result := {}
-	_hud("hud_reward_open", [p.player_name, pcolor(p), tnames, anames, adesc])
+	_hud("hud_reward_open", [p.player_name, pcolor(p), tlist, alist])
 	_hud("hud_reward_select", [0, 0])
 	_notify(p, {"t": "status", "text": I18n.t("reward.phone")})
 	_notify(p, {"t": "buzz", "ms": 120})

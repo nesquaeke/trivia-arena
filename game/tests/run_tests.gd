@@ -192,7 +192,7 @@ func test_stage_builds() -> void:
 	check(ok, "her kapağın merkezi kendi bölgesine düşer")
 	check(st.zone_at(Vector3(0, 0, 4.0)) == -1, "ön şerit hiçbir kapak değildir")
 	check(m.all_actors().size() == 1 + int(Profile.setting("bots", 3)), "oyuncu + botlar sahnede (%d)" % m.all_actors().size())
-	check(m.ui != null and m.ui.left.visible, "sol pano kuruldu")
+	check(m.ui != null and m.ui.menu.visible and m.ui.card != null, "lobi menüsü ve profil kartı kuruldu")
 	var props_count := get_tree().get_nodes_in_group("prop").size()
 	check(props_count >= 10, "fizikli dekorlar sahnede (%d)" % props_count)
 

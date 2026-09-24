@@ -33,6 +33,8 @@ var phone_players := {}              # pid -> Plush
 var _relay_override := ""
 var _shot_mode := ""
 var _shot_dir := "/tmp/ta_shots"
+var debug_round := 1                 # --round=3: Trivia'yı can turundan başlat (deneme)
+var debug_ff := 1.0                  # --ff=2: bekleme sürelerini kısalt (deneme)
 
 func _ready() -> void:
 	randomize()
@@ -70,6 +72,10 @@ func _ready() -> void:
 			_relay_override = a.substr(8)
 		elif a.begins_with("--timescale="):
 			Engine.time_scale = float(a.substr(12))
+		elif a.begins_with("--round="):
+			debug_round = int(a.substr(8))
+		elif a.begins_with("--ff="):
+			debug_ff = float(a.substr(5))
 	if _shot_mode != "":
 		_run_shot_script()
 
@@ -375,6 +381,9 @@ func start_arena(kind := "") -> void:
 		p.freeze = false
 		p.frozen_input = false
 	arena.setup(self, actors, float(Profile.setting("timer", 10)), String(Profile.setting("bot_level", "normal")))
+	if arena is ClassicShow:
+		arena.start_round = debug_round
+		arena.fast_forward = debug_ff
 	arena.line_up()
 	if ui:
 		ui.hud_show(true)
@@ -532,18 +541,34 @@ func prepare_game_shot(part: String) -> void:
 			while arena == null or arena.phase != "reward":
 				await get_tree().process_frame
 			await get_tree().create_timer(0.7).timeout
+		"reward_demo":
+			# ödül seçiciyi insan oyuncu kazanmış gibi aç (yalnız görüntü için)
+			if arena is ClassicShow:
+				var p1 := player_one()
+				arena.award_to = p1
+				arena.phase = "reward"
+				arena._pick_reward(p1, arena.contestants.filter(func(x): return x != p1))
+				await get_tree().create_timer(1.2).timeout
+				ui.hud_reward_select(1, 2)
+				await get_tree().create_timer(0.8).timeout
 		"arena_standings":
+			if arena == null:
+				start_arena("arena")
 			while arena == null or arena.phase != "standings":
 				await get_tree().process_frame
 			await get_tree().create_timer(1.4).timeout
 		"arena_final":
-			while arena == null or not arena.hp_mode or arena.phase != "reveal" or arena.q_index < 2:
+			if arena == null:
+				start_arena("arena")
+			while arena == null or not arena.hp_mode or arena.phase != "reveal" or arena.q_index < 1:
 				await get_tree().process_frame
 			await get_tree().create_timer(1.2).timeout
 		"result":
+			if arena == null and mode == Mode.LOBBY:
+				start_arena("arena")
 			while ui == null or not ui.result_panel.visible:
 				await get_tree().process_frame
-			await get_tree().create_timer(0.8).timeout
+			await get_tree().create_timer(2.6).timeout
 		_:
 			await get_tree().create_timer(1.0).timeout
 
