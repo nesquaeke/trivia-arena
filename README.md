@@ -18,8 +18,12 @@ Fizik motoruyla çalışan, kaotik bir 3D parti bilgi yarışması. Kırmızı k
 | **Güç turu:** en hızlı doğru 400 puan çalar ya da sabote eder | **Can turu:** yalnız en hızlı doğru kurtulur |
 | ![Final](docs/screenshots/result.jpg) | ![Conquest Quiz](docs/screenshots/conquest.jpg) |
 | **Final:** konfeti, karne, rövanş | **Conquest Quiz:** keçe Türkiye haritasında kaleler ve düellolar |
-| ![Kostüm odası](docs/screenshots/wardrobe.jpg) | ![Ev partisi](docs/screenshots/house.jpg) |
-| **Kostüm odası:** şapka, bıyık, papyon, kumaş | **Ev partisi:** QR'ı okut, telefonun kumanda olsun |
+| ![Conquest tahmin](docs/screenshots/cq_estimate.jpg) | ![Conquest düello](docs/screenshots/cq_duel.jpg) |
+| **Conquest tahmini:** en yakın tahmin önce seçer | **Conquest düellosu:** saldıran ve savunan aynı soruda |
+| ![Kültür kostümleri](docs/screenshots/costumes.jpg) | ![Kaleler](docs/screenshots/castles.jpg) |
+| **On kültür kostümü** | **Altı kale üslubu, 3 kule = 3 can** |
+| ![Kostüm odası](docs/screenshots/wardrobe_cq.jpg) | ![Ev partisi](docs/screenshots/house.jpg) |
+| **Kostüm odası:** Trivia ve Fetih sekmeleri | **Ev partisi:** QR'ı okut, telefonun kumanda olsun |
 
 ## Çalıştırma
 
