@@ -1,0 +1,3 @@
+Suno'dan indirdiğin müzikleri bu klasöre şu adlarla yükle:
+  lobby.mp3  trivia.mp3  think.mp3  conquest.mp3  victory.mp3
+Sonra: python3 game/tools/audio/music_import.py   (tarifler: ../SUNO.md)
