@@ -654,9 +654,10 @@ func prepare_game_shot(part: String) -> void:
 			await get_tree().create_timer(0.7).timeout
 		"result_rank":
 			# maç sonu: sonuç ekranı + rütbe paneli (XP dökümü, açılanlar)
-			start_arena("conquest")
+			start_arena("arena")
 			while arena == null or arena.phase != "done":
 				await get_tree().process_frame
+			Engine.time_scale = 1.0
 			await get_tree().create_timer(3.5).timeout
 		"post_a", "post_c":
 			# maçı bitir, lobiye dön, Karakterim'i aç (maç sonrası hataları için)
