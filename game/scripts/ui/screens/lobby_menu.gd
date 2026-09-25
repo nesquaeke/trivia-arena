@@ -54,6 +54,7 @@ func setup(p_game: Node) -> void:
 	scrim.position = Vector2(0, 0)
 	scrim.size = Vector2(1000, 1080)
 	scrim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	Pal.bleed_scrim(scrim, 0.9)
 	add_child(scrim)
 	logo = MarqueeLogo.new()
 	logo.position = Vector2(COL_X - 6, 58)
@@ -62,22 +63,28 @@ func setup(p_game: Node) -> void:
 	menu_col = VBoxContainer.new()
 	menu_col.position = Vector2(COL_X, 372)
 	menu_col.size = Vector2(COL_W + 160, 560)
-	menu_col.add_theme_constant_override("separation", 2)
+	menu_col.add_theme_constant_override("separation", 6)
 	add_child(menu_col)
 	_add_btn("trivia", "masks", true, func(): _open_setup("arena"))
 	_add_btn("conquest", "swords", true, func(): _open_setup("conquest"))
 	_add_btn("mayhem", "bolt", true, func(): _open_setup("mayhem"))
 	var gap := Control.new()
-	gap.custom_minimum_size.y = 10
+	gap.custom_minimum_size.y = 18
 	menu_col.add_child(gap)
-	_add_btn("daily", "star", false, func(): daily_requested.emit())
-	_add_btn("house", "phone", false, func(): house_requested.emit())
-	_add_btn("online", "globe", false, func(): online_requested.emit())
-	_add_btn("customize", "hanger", false, func(): wardrobe_requested.emit())
-	_add_btn("spectate", "opera", false, func(): loge_requested.emit())
-	_add_btn("howto", "scroll", false, func(): howto_requested.emit("trivia"))
-	_add_btn("settings", "gear", false, _open_settings)
-	_add_btn("quit", "door", false, func(): quit_requested.emit())
+	# ikincil düğmeler iki sütunda: menü küçük ekranlarda da alt ipucu şeridine taşmaz
+	var grid := GridContainer.new()
+	grid.columns = 2
+	grid.add_theme_constant_override("h_separation", 22)
+	grid.add_theme_constant_override("v_separation", 8)
+	menu_col.add_child(grid)
+	_add_btn("daily", "star", false, func(): daily_requested.emit(), grid)
+	_add_btn("house", "phone", false, func(): house_requested.emit(), grid)
+	_add_btn("online", "globe", false, func(): online_requested.emit(), grid)
+	_add_btn("customize", "hanger", false, func(): wardrobe_requested.emit(), grid)
+	_add_btn("spectate", "opera", false, func(): loge_requested.emit(), grid)
+	_add_btn("howto", "scroll", false, func(): howto_requested.emit("trivia"), grid)
+	_add_btn("settings", "gear", false, _open_settings, grid)
+	_add_btn("quit", "door", false, func(): quit_requested.emit(), grid)
 
 	setup_col = VBoxContainer.new()
 	setup_col.position = Vector2(COL_X, 64)
@@ -95,12 +102,15 @@ func setup(p_game: Node) -> void:
 	add_child(footer)
 	retext()
 
-func _add_btn(id: String, idx: String, big: bool, cb: Callable) -> void:
+func _add_btn(id: String, idx: String, big: bool, cb: Callable, parent: Control = null) -> void:
 	var b := StageButton.new()
 	b.emblem = idx
 	b.big = big
 	b.pressed.connect(cb)
-	menu_col.add_child(b)
+	if parent:
+		b.custom_minimum_size.x = 372
+		b.side_caption = false
+	(parent if parent else menu_col).add_child(b)
 	buttons[id] = b
 
 func _build_setup() -> void:

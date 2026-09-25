@@ -828,8 +828,11 @@ func set_gold_target(n: Node3D) -> void:
 		gold_spot.global_position = Vector3(n.global_position.x, 9.0, n.global_position.z + 3.0)
 
 ## Kostüm odası: ana ışıkları kıs, tek spotu aç.
-func set_solo(on: bool) -> void:
+## soft: kostüm odası gibi yakın çekimlerde spot yumuşak ve düşük tutulur (karakter parlayıp beyaza dönmesin)
+func set_solo(on: bool, soft := false) -> void:
 	solo_spot.visible = on
+	solo_spot.light_energy = 4.0 if soft else 9.0
+	solo_spot.light_volumetric_fog_energy = 0.4 if soft else 2.2
 	var tw := create_tween().set_parallel(true)
 	for l in main_lights:
 		var base: float = l.get_meta("base", l.light_energy)

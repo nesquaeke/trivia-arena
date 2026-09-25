@@ -26,6 +26,20 @@ const HEART := Color("FF4D5E")
 ## Sahnedeki A-B-C-D kapaklarının renkleri (panoda ve yerde aynı)
 const ZONE := [Color("F2B83C"), Color("3FC4B2"), Color("EE5C86"), Color("9A7CF2")]
 const LETTERS := ["A", "B", "C", "D"]
+## Arayüz 1920×1080 tasarım alanında ortalanır; ekran başka oranda ise
+## tam ekran karartmalar bu taşkın dikdörtgenle kenarlara kadar uzanır
+const BLEED := Rect2(-1600, -900, 5120, 2880)
+
+## Soldan sönen karartmayı (scrim) ekranın sol kenarına ve üst/alt taşkına uzatır
+static func bleed_scrim(scrim: Control, strength: float) -> void:
+	scrim.position.y = BLEED.position.y
+	scrim.size.y = BLEED.size.y
+	var fill := ColorRect.new()
+	fill.color = Color(0.05, 0.02, 0.03, strength)
+	fill.position = Vector2(BLEED.position.x - scrim.position.x, 0)
+	fill.size = Vector2(-BLEED.position.x, BLEED.size.y)
+	fill.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	scrim.add_child(fill)
 
 # ── yazı tipleri ───────────────────────────────────────────────────
 const FONT_DIR := "res://ui/fonts/"

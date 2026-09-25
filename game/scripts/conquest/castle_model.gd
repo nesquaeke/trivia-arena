@@ -266,7 +266,7 @@ func _build_tower(t: Node3D, i: int, pal: Dictionary, wall: Material, roof: Mate
 			_mi(t, _cyl(0.035, 0.035, 0.012, 12), m("arch", pal.trim, 0.6), Vector3(0, h * 0.62 + 0.04, tw * 0.5 + 0.004), Vector3(PI / 2, 0, 0))
 	if i == 1:
 		# sancak: oyuncunun renginde, rüzgârda dalgalanır
-		_mi(t, _cyl(0.008, 0.008, 0.36, 6), m("pole", Color("3A2A1A")), Vector3(0.0, top + 0.5, 0))
+		_mi(t, _cyl(0.01, 0.01, 0.42, 6), m("pole", Color("3A2A1A")), Vector3(0.0, top + 0.5, 0))
 		var fm := StandardMaterial3D.new()
 		fm.albedo_texture = banner_texture(banner, color)
 		fm.roughness = 0.8
@@ -276,7 +276,8 @@ func _build_tower(t: Node3D, i: int, pal: Dictionary, wall: Material, roof: Mate
 		var flag_h := top + (0.62 if style != "lighthouse" else 0.8)
 		if style == "lighthouse":
 			_mi(t, _cyl(0.008, 0.008, 0.36, 6), m("pole", Color("3A2A1A")), Vector3(0.0, flag_h - 0.12, 0))
-		_flag = _mi(t, _box(0.2, 0.12, 0.008), fm, Vector3(0.1, flag_h, 0))
+		# sancak deseni seçilebildiği için bayrak okunur büyüklükte
+		_flag = _mi(t, _box(0.3, 0.18, 0.01), fm, Vector3(0.15, flag_h - 0.03, 0))
 
 static var _banner_cache := {}
 

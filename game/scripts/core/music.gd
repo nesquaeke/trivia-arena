@@ -82,12 +82,19 @@ func _stream(track: String) -> AudioStream:
 	if _cache.has(track):
 		return _cache[track]
 	var path := DIR + track + ".ogg"
-	if not ResourceLoader.exists(path):
-		_cache[track] = null
-		return null
-	var s = load(path)
+	var s = AudioPack.find("music", track)   # profesyonel parça varsa o çalar
+	if s == null:
+		if not ResourceLoader.exists(path):
+			_cache[track] = null
+			return null
+		s = load(path)
 	if s is AudioStreamOggVorbis:
 		(s as AudioStreamOggVorbis).loop = LOOPS.has(track)
+	elif s is AudioStreamMP3:
+		(s as AudioStreamMP3).loop = LOOPS.has(track)
+	elif s is AudioStreamWAV and LOOPS.has(track):
+		(s as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
+		(s as AudioStreamWAV).loop_end = int((s as AudioStreamWAV).get_length() * (s as AudioStreamWAV).mix_rate)
 	_cache[track] = s
 	return s
 

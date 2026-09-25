@@ -38,6 +38,9 @@ func _stream(key: String) -> AudioStream:
 	var i18n := get_node_or_null("/root/I18n")
 	if i18n:
 		lang = String(i18n.lang)
+	var pro: AudioStream = AudioPack.find("voice/" + lang, key)
+	if pro:
+		return pro
 	var path := DIR + lang + "/" + key + ".ogg"
 	if not ResourceLoader.exists(path):
 		path = DIR + "en/" + key + ".ogg"

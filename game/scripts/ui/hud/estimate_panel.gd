@@ -294,7 +294,7 @@ func _draw_ruler(k: float) -> void:
 	var a := k
 	# alt gölge şeridi (okunurluk)
 	draw_rect(Rect2(0, y - 190, 1920, 290), Color(0, 0, 0, 0.0))
-	var grad := PackedVector2Array([Vector2(0, y - 210), Vector2(1920, y - 210), Vector2(1920, 1080), Vector2(0, 1080)])
+	var grad := PackedVector2Array([Vector2(-1600, y - 210), Vector2(3520, y - 210), Vector2(3520, 1980), Vector2(-1600, 1980)])
 	draw_polygon(grad, PackedColorArray([Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0.02, 0.0, 0.01, 0.82 * a), Color(0.02, 0.0, 0.01, 0.82 * a)]))
 	# pirinç şerit
 	var body := Rect2(RULER_X - 26, y, RULER_W + 52, 30)

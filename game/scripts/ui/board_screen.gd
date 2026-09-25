@@ -25,9 +25,18 @@ var banner := ""
 var stake := 0
 var _t := 0.0
 var _lobby_text := false     # kayan yazı lobi metniyse dil değişince yenilenir
+var _strip: Control          # kayan şerit: çerçevenin içinde kırpılır, taşmaz
+const STRIP := Rect2(60, 493, W - 120, 97)
 
 func _ready() -> void:
 	size = Vector2(W, H)
+	_strip = Control.new()
+	_strip.position = STRIP.position
+	_strip.size = STRIP.size
+	_strip.clip_contents = true
+	_strip.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_strip.draw.connect(_draw_strip)
+	add_child(_strip)
 	I18n.changed.connect(func(_l: String):
 		if mode == "marquee" and _lobby_text:
 			marquee_text = I18n.t("arena.lobby_board"))
@@ -35,6 +44,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	_t += delta
 	queue_redraw()
+	if _strip:
+		_strip.visible = mode == "marquee"
+		_strip.queue_redraw()
 
 func show_marquee(text: String) -> void:
 	mode = "marquee"
@@ -78,17 +90,24 @@ func _draw_marquee() -> void:
 	var sw := sf.get_string_size(s, HORIZONTAL_ALIGNMENT_LEFT, -1, 150).x
 	draw_string(sf, Vector2((W - tw) * 0.5 - 30, 222 + 6), s, HORIZONTAL_ALIGNMENT_LEFT, -1, 150, Color(0.2, 0.02, 0.04, 0.9))
 	draw_string(sf, Vector2((W - tw) * 0.5 - 30, 222), s, HORIZONTAL_ALIGNMENT_LEFT, -1, 150, Pal.GOLD)
-	# kayan şerit
+	draw_rect(Rect2(60, 490, W - 120, 3), Color("C99A45"))
+	draw_rect(Rect2(60, 590, W - 120, 3), Color("C99A45"))
+
+## Kayan ilan şeridi: kırpılan alt düğümde çizilir, kenarlarda kararır
+func _draw_strip() -> void:
 	var fb := Pal.kicker()
 	var fs2 := 44
 	var line := Pal.upper(marquee_text) + "     —     "
-	var lw := fb.get_string_size(line, HORIZONTAL_ALIGNMENT_LEFT, -1, fs2).x
+	var lw := maxf(fb.get_string_size(line, HORIZONTAL_ALIGNMENT_LEFT, -1, fs2).x, 1.0)
 	var x := -fmod(_t * 140.0, lw)
-	while x < W:
-		draw_string(fb, Vector2(x, 560), line, HORIZONTAL_ALIGNMENT_LEFT, -1, fs2, Color("F3E2C0"))
+	while x < STRIP.size.x:
+		_strip.draw_string(fb, Vector2(x, 560 - STRIP.position.y), line, HORIZONTAL_ALIGNMENT_LEFT, -1, fs2, Color("F3E2C0"))
 		x += lw
-	draw_rect(Rect2(60, 490, W - 120, 3), Color("C99A45"))
-	draw_rect(Rect2(60, 590, W - 120, 3), Color("C99A45"))
+	var bg := Color("100607")
+	for i in 12:
+		var a := 1.0 - i / 12.0
+		_strip.draw_rect(Rect2(i * 6, 0, 6, STRIP.size.y), Color(bg, a))
+		_strip.draw_rect(Rect2(STRIP.size.x - (i + 1) * 6, 0, 6, STRIP.size.y), Color(bg, a))
 
 func _draw_question() -> void:
 	# kategori bandı

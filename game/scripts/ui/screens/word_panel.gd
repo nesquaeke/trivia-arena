@@ -189,7 +189,7 @@ func _process(delta: float) -> void:
 
 # ── çizim ───────────────────────────────────────────────────────────
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, size), Color(0.03, 0.01, 0.02, 0.9))
+	draw_rect(Pal.BLEED, Color(0.03, 0.01, 0.02, 0.9))
 	var s := DailyWord.state(lang)
 	var guesses: Array = s.guesses
 	var ans := DailyWord.answer(lang)

@@ -114,7 +114,7 @@ Diğer kurallar:
 
 ### Müzik ve ses
 
-Bütün müzikler notadan sentezlenir, ses örneği yoktur: lobi valsi, yarışma swingi, Conquest savaş marşı, soru sırasında gerilim yatağı ve zafer fanfarı. Müzik oyun anına göre geçiş yapar (soru gelince gerilim, cevapta geri döner). Savaş davulu, savaş borusu, kale çöküşü, orkestra vuruşu gibi efektler de aynı betikten çıkar. Değiştirmek için `game/tools/music/compose.py` içindeki notaları düzenle:
+Bütün müzikler koddaki notalardan üretilir: lobi valsi, yarışma swingi, Conquest savaş marşı, soru sırasında gerilim yatağı ve zafer fanfarı. Müzik oyun anına göre geçiş yapar (soru gelince gerilim, cevapta geri döner). Savaş davulu, savaş borusu, kale çöküşü, orkestra vuruşu gibi efektler de aynı betikten çıkar. Değiştirmek için `game/tools/music/compose.py` içindeki notaları düzenle:
 
 ```bash
 pip install numpy scipy soundfile
@@ -122,9 +122,19 @@ python3 game/tools/music/compose.py            # hepsini yeniden üret
 python3 game/tools/music/compose.py conquest   # tek parça
 ```
 
+Makinede FluidSynth ve FluidR3 GM ses bankası kuruluysa (`sudo apt install fluidsynth fluid-soundfont-gm`) notalar gerçek enstrüman örnekleriyle çalınır: yaylılar, korno, trompet, pizzicato, çelesta, timpani, davullar, koro ve alkış. Kurulu değilse eski sentez enstrümanları kullanılır. Oyundaki müzik ve efektler bu örneklerle üretildi. Oyun içi efektlerin (doğru/yanlış, alkış, trampet, fanfar, saat) örneklenmiş sürümleri `python3 game/tools/music/sfx_pro.py` ile üretilir.
+
+### Profesyonel ses paketi
+Her ses, müzik ya da sunucu repliği aynı adlı bir dosyayla değiştirilebilir. Dosya bırakılmayan sesler eskisi gibi çalar. İki yol var:
+
+- **Derlemeden:** Oyunda Ayarlar > Ses > **Ses paketi: Klasörü aç**. Dosyayı `sfx/`, `music/`, `mayhem/` ya da `voice/<dil>/` klasörüne `.ogg`, `.wav` veya `.mp3` olarak bırak, oyunu yeniden başlat.
+- **Oyunla dağıtmak:** Dosyayı `game/assets/audio_pro/<tür>/<ad>.ogg` olarak ekle.
+
+Bütün adların listesi ve ses bulunabilecek yerler `game/assets/audio_pro/README.md` içinde.
+
 ### Sunucu (anlatıcı)
 
-Sahnede bir sunucu konuşur: perde açılışları, "Tahminler gelsin!", "Düello!", "Kale düştü!", "Son beş saniye!", "Ve gecenin galibi…" gibi 29 replik, Türkçe ve İngilizce. Konuşurken müzik kısılır. Replikler `game/tools/voice/narrate.py` ile eSpeak NG + MBROLA seslerinden üretilir ve tiyatro anonsu gibi işlenir (EQ, sıkıştırma, salon yankısı). **Gerçek bir seslendirme sanatçısıyla değiştirmek için** `game/assets/audio/voice/tr|en/` altındaki dosyaları aynı adlarla değiştirmen yeter.
+Sahnede bir sunucu konuşur: perde açılışları, "Tahminler gelsin!", "Düello!", "Kale düştü!", "Son beş saniye!", "Ve gecenin galibi…" gibi 29 replik, beş dilde (TR, EN, PL, FR, ES). Konuşurken müzik kısılır. Replikler `game/tools/voice/narrate.py` ile eSpeak NG + MBROLA seslerinden üretilir ve tiyatro anonsu gibi işlenir (EQ, sıkıştırma, salon yankısı). **Gerçek bir seslendirme sanatçısıyla değiştirmek için** `game/assets/audio/voice/<dil>/` altındaki dosyaları aynı adlarla değiştirmen ya da ses paketi klasörüne koyman yeter.
 
 ### Ayarlar
 
@@ -322,4 +332,4 @@ docs/                     tasarım belgesi, ekran görüntüleri
 
 ## Lisanslar
 
-Yazı tipleri SIL Open Font License altındadır (`game/assets/fonts/OFL-*.txt`): Big Shoulders, Fraunces. Bütün modeller, dokular ve sesler çalışma anında kodla üretilir.
+Yazı tipleri SIL Open Font License altındadır (`game/assets/fonts/OFL-*.txt`): Big Shoulders, Fraunces. Bütün modeller ve dokular kodla üretilir. Müzik ve efektlerdeki enstrüman örnekleri FluidR3_GM ses bankasından gelir (Frank Wen, MIT lisansı). Anlatıcı sesleri MBROLA seslerindendir.

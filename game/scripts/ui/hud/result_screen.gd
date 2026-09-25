@@ -26,6 +26,7 @@ func _ready() -> void:
 	_scrim.material = sm
 	_scrim.size = Vector2(1500, 1080)
 	_scrim.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	Pal.bleed_scrim(_scrim, 0.94)
 	add_child(_scrim)
 	_head = KineticText.new()
 	_head.font = Pal.italic_black()

@@ -320,14 +320,14 @@ func chaos_hide() -> void:
 
 func _draw_chaos(c: Control) -> void:
 	var s := c.size
-	c.draw_rect(Rect2(Vector2.ZERO, s), Color(0.05, 0.0, 0.02, 0.55))
+	c.draw_rect(Pal.BLEED, Color(0.05, 0.0, 0.02, 0.55))
 	# kırmızı-altın ikaz şeritleri
 	var band_h := 300.0
 	var y0 := s.y * 0.5 - band_h * 0.5
-	c.draw_rect(Rect2(0, y0, s.x, band_h), Color("7A0F1E"))
+	c.draw_rect(Rect2(Pal.BLEED.position.x, y0, Pal.BLEED.size.x, band_h), Color("7A0F1E"))
 	var stripe := 60.0
 	var off := fmod(_t * 160.0, stripe * 2.0)
-	for i in range(-2, int(s.x / stripe) + 3):
+	for i in range(-16, int(s.x / stripe) + 16):
 		var x := i * stripe * 2.0 + off
 		for yy in [y0, y0 + band_h - 22]:
 			c.draw_colored_polygon(PackedVector2Array([Vector2(x, yy), Vector2(x + stripe, yy), Vector2(x + stripe + 22, yy + 22), Vector2(x + 22, yy + 22)]), Pal.GOLD)
@@ -410,7 +410,7 @@ func awards_hide() -> void:
 
 func _draw_awards(c: Control) -> void:
 	var s := c.size
-	c.draw_rect(Rect2(Vector2.ZERO, s), Color(0.03, 0.01, 0.02, 0.78))
+	c.draw_rect(Pal.BLEED, Color(0.03, 0.01, 0.02, 0.78))
 	var f := Pal.display()
 	var head := Pal.upper(Pal.t("mh.awards"))
 	var hw := f.get_string_size(head, HORIZONTAL_ALIGNMENT_LEFT, -1, 84).x

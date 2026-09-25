@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile", "test_save_file", "test_error_reporter", "test_progress", "test_shop", "test_daily_word", "test_round_track",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_wardrobe_spot", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -70,6 +70,10 @@ func test_i18n() -> void:
 	check(I18n.t("menu.howto") == "How to play", "EN çeviri çalışıyor")
 	I18n.set_lang("tr")
 	check(I18n.t("arena.alive", {"n": 3}) == "Sahnede 3 kişi", "yer tutucu dolduruluyor")
+	# dışa aktarım ek dil dosyalarını pakete koymalı (yoksa dağıtılan oyunda PL/FR/ES eksik kalır)
+	var ep := ConfigFile.new()
+	if ep.load("res://export_presets.cfg") == OK:
+		check(String(ep.get_value("preset.0", "include_filter", "")).contains("data/i18n/*.json"), "dışa aktarım data/i18n/*.json içerir")
 	var expect := {"pl": "150 000", "fr": "150 000", "es": "150.000"}
 	for l in ["pl", "fr", "es"]:
 		check(I18n.missing_extra(l).is_empty(), "%s: eksik arayüz metni yok (%d eksik)" % [l, I18n.missing_extra(l).size()])
@@ -384,6 +388,33 @@ func test_rules() -> void:
 	var n := r.penalty_rounds(r.final_start_hp, 4)
 	check(n >= 7 and n <= 14, "4 kişilik masada 4500 can %d soruda biter" % n)
 
+## Kostüm odası: oyuncu podyumun ortasına gelir, yüzü kameraya döner; açıkken
+## sahneden düşse bile kenara değil yerine döner. Karttaki portre bakışı kopyalar.
+func test_wardrobe_spot() -> void:
+	var m: Node = await _get_main()
+	var p1: Plush = m.player_one()
+	p1.teleport(Vector3(5.0, 0.3, 1.0), 1.2)
+	await frames(5)
+	m.ui._open_wardrobe()
+	await frames(10)
+	check(p1.global_position.distance_to(m.WARD_POS) < 0.15 and p1.freeze, "Karakterim: pelüş ortada ve donmuş (%s)" % str(p1.global_position))
+	check(absf(p1.facing) < 0.01, "Karakterim: pelüş kameraya bakıyor")
+	m.wardrobe_spin(100.0)
+	check(absf(p1.facing) > 0.5, "Karakterim: sürükleyince döner")
+	await m._on_fell_out(p1)
+	await frames(5)
+	check(p1.global_position.distance_to(m.WARD_POS) < 0.15 and p1.freeze, "Karakterim açıkken düşen oyuncu kenara değil yerine döner")
+	m.ui._close_wardrobe()
+	await frames(5)
+	check(not p1.freeze, "Karakterim kapanınca pelüş serbest")
+	var look := {"color": "mustard", "hat": "none"}
+	var pp := PlushPortrait.new()
+	add_child(pp)
+	pp.set_look(look)
+	look["hat"] = "tophat"
+	check(String(pp.look.get("hat")) == "none", "portre bakışın kopyasını tutar (değişince yenilenir)")
+	pp.queue_free()
+
 func test_arena_match() -> void:
 	var m: Node = await _get_main()
 	Engine.time_scale = 4.0
@@ -396,11 +427,20 @@ func test_arena_match() -> void:
 	m.start_arena("arena")
 	var waited := 0.0
 	var saw := {}
+	var click_ok := false
+	var clicked := false
 	while (m.arena == null or m.arena.phase != "done") and waited < 260.0:
 		await get_tree().process_frame
 		waited += get_process_delta_time() / Engine.time_scale
 		if m.arena:
 			saw[m.arena.phase] = true
+			# fareyle kategoriye tıklamak 1. oyuncu için bir çekiş sayılır
+			if not clicked and m.arena.phase == "tug" and m.arena._tug_open and not m.arena._tug_pull.is_empty():
+				clicked = true
+				var before: int = m.arena._tug_pull[0]
+				m.ui.tug_clicked.emit(0)
+				click_ok = m.arena._tug_pull[0] == before + 1
+	check(click_ok, "kategori halatında fareyle tıklama çekiş sayılır")
 	var a = m.arena
 	check(a is ClassicShow and a.phase == "done", "klasik şov bitti (%.0f sn gerçek zaman)" % waited)
 	if not (a is ClassicShow):
@@ -544,6 +584,19 @@ func test_steam_local() -> void:
 	check(not SteamService.invite_remote_play() or SteamService.available, "Steam yokken davet sessizce reddedilir")
 
 func test_voice_and_audio() -> void:
+	# ses paketi: kullanıcı klasörüne bırakılan dosya aynı adlı sesin yerine geçer
+	AudioPack.user_dir()
+	var w := AudioStreamWAV.new()
+	w.format = AudioStreamWAV.FORMAT_16_BITS
+	w.mix_rate = 22050
+	var pcm := PackedByteArray()
+	pcm.resize(2205 * 2)
+	w.data = pcm
+	w.save_to_wav("user://audio/sfx/zz_pack_test.wav")
+	AudioPack.clear_cache()
+	check(AudioPack.find("sfx", "zz_pack_test") != null and AudioPack.find("sfx", "zz_yok") == null, "ses paketi: bırakılan dosya bulunur, olmayan boş döner")
+	DirAccess.remove_absolute("user://audio/sfx/zz_pack_test.wav")
+	AudioPack.clear_cache()
 	var missing := []
 	for lang in I18n.LANGS:
 		for key in ["welcome", "act1_cq", "act3_arena", "castle_fall", "winner", "duel", "five", "spot_on"]:

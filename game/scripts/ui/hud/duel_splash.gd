@@ -87,7 +87,7 @@ func _draw() -> void:
 	var inn := clampf(_t / 0.25, 0.0, 1.0)
 	# karartma bandı
 	var dim := Color(0.02, 0.0, 0.01, 0.62 * inn * (1.0 - out))
-	draw_rect(Rect2(0, cy - BAND_H * 0.5, 1920, BAND_H), dim)
+	draw_rect(Rect2(-1600, cy - BAND_H * 0.5, 5120, BAND_H), dim)
 	var ca: Color = a.get("color", Pal.GOLD)
 	var cd: Color = d.get("color", Pal.BAD)
 	var skew := 90.0

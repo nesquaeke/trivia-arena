@@ -12,6 +12,7 @@ extends Control
 
 signal reward_clicked(step: int, index: int)
 signal answer_clicked(index: int)
+signal tug_clicked(index: int)
 signal ruler_input(u: float, release: bool)
 signal again_pressed
 signal back_pressed
@@ -66,6 +67,7 @@ func _ready() -> void:
 	add_child(callout)
 	tug = TugMeter.new()
 	tug.position = Vector2((1920 - TugMeter.W) * 0.5, 22)
+	tug.clicked.connect(func(i): tug_clicked.emit(i))
 	add_child(tug)
 	mayhem = MayhemOverlay.new()
 	add_child(mayhem)

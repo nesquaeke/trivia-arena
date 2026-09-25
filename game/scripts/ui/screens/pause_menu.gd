@@ -102,7 +102,7 @@ func _process(_d: float) -> void:
 		_panel.queue_redraw()
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, size), Color(0.02, 0.0, 0.01, 0.72 * _k))
+	draw_rect(Pal.BLEED, Color(0.02, 0.0, 0.01, 0.72 * _k))
 
 func _draw_panel() -> void:
 	var k := _k

@@ -14,7 +14,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from compose import (SR, Track, hz, t_axis, adsr, lowpass, highpass, bandpass, noise,  # noqa: E402
-                     synth_bell, synth_bass_drum, synth_pizz, master, write)
+                     synth_bell, synth_bass_drum, synth_pizz, master, write, _sm, _cal)
 
 OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "assets", "audio", "mayhem"))
 
@@ -268,6 +268,52 @@ def _out(x, rev):
     return master(tr, False, (rev, 0.18), -3.0)
 
 
+# ── örneklenmiş sürümler (FluidR3 GM ses bankası varsa) ────────────
+PIANO = synth_piano
+if _sm:
+    _syn_piano = synth_piano
+
+    def PIANO(f, dur, vel=0.5):  # noqa: F811
+        k = _cal("piano", lambda: _syn_piano(440, 0.6, 1.0), lambda: _sm.note(0, 440, 0.6, 100, 1.0))
+        return _sm.note(0, f, dur, 100, 1.0) * k * vel
+
+    def _tubular(n, vel):
+        x = _sm.note(14, hz(n), 0.6, 110, 3.0)
+        return x / (np.max(np.abs(x)) + 1e-9) * vel
+
+    def s_doorbell():  # noqa: F811
+        """Kapı zili: ding-dong (borulu çan örneği)"""
+        tr = Track(3.2, 120)
+        tr.add(_tubular("E5", 0.7), 0.1)
+        tr.add(_tubular("C5", 0.7), 0.75)
+        return master(tr, False, (1.2, 0.25), -3.0)
+
+    def s_church():  # noqa: F811
+        """Kilise çanı: pes borulu çan, üç vuruş"""
+        tr = Track(6.0, 60)
+        for i in range(3):
+            tr.add(_tubular("G3", 0.8) + _tubular("G2", 0.5), i * 1.4)
+        return master(tr, False, (3.0, 0.35), -2.0)
+
+    def s_phone():  # noqa: F811
+        """Eski telefon zili (GM telefon örneği), iki kez"""
+        out = []
+        for _ in range(2):
+            x = _sm.note(124, hz("C5"), 1.1, 110, 0.2)
+            out.append(x / (np.max(np.abs(x)) + 1e-9) * 0.6)
+            out.append(np.zeros(int(0.6 * SR)))
+        return _out(np.concatenate(out), 0.8)
+
+    def s_cuckoo():  # noqa: F811
+        """Guguklu saat: okarina örneğiyle iki nota, üç kez"""
+        tr = Track(3.2, 120)
+        for i in range(3):
+            for n, off in (("E5", 0.0), ("C5", 0.28)):
+                x = _sm.note(79, hz(n), 0.24, 105, 0.2)
+                tr.add(x / (np.max(np.abs(x)) + 1e-9) * 0.5, i * 0.85 + off)
+        return master(tr, False, (1.0, 0.2), -3.0)
+
+
 SOUNDS = {
     "siren": s_siren, "doorbell": s_doorbell, "phone": s_phone, "clock": s_clock, "train": s_train,
     "rain": s_rain, "thunder": s_thunder, "church": s_church, "cuckoo": s_cuckoo, "car_horn": s_car_horn,
@@ -282,6 +328,6 @@ if __name__ == "__main__":
     for k in want:
         if k in MELODIES:
             notes, bpm, bass = MELODIES[k]
-            write(k, melody(notes, bpm, bass=bass), OUT)
+            write(k, melody(notes, bpm, voice=PIANO, bass=bass), OUT)
         else:
             write(k, SOUNDS[k](), OUT)

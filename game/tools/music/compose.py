@@ -193,6 +193,82 @@ def synth_cymbal(dur=2.5, vel=0.3):
     return (x + shim) * vel * adsr(len(t), 0.004, 0.01, 1.0, 0.2)
 
 
+# ── örneklenmiş enstrümanlar ────────────────────────────────────────
+# FluidSynth + FluidR3_GM ses bankası kuruluysa (tools/music/sampler.py) yukarıdaki
+# sentez enstrümanlarının yerine gerçek enstrüman örnekleri çalar. Her enstrüman,
+# eski sentezle aynı ortalama gürlüğe ayarlanır: besteler ve miks dengesi değişmez.
+# Yalnız sentezle üretmek için: TA_SYNTH_ONLY=1 python3 compose.py
+sys.path.insert(0, ROOT)
+try:
+    import sampler as _sm
+except ImportError:
+    _sm = None
+if os.environ.get("TA_SYNTH_ONLY") or (_sm and not _sm.available()):
+    _sm = None
+
+_CAL = {}
+
+
+def _rms(x):
+    return float(np.sqrt(np.mean(np.square(x)))) + 1e-9
+
+
+def _cal(name, synth_ref, sample_ref):
+    """örnek × oran ≈ sentez gürlüğü (vel 0.5, La4 ya da vuruş başına)"""
+    if name not in _CAL:
+        _CAL[name] = _rms(synth_ref()) / _rms(sample_ref())
+    return _CAL[name]
+
+
+if _sm:
+    _syn_strings, _syn_brass, _syn_horn, _syn_pizz = synth_strings, synth_brass, synth_horn, synth_pizz
+    _syn_bell, _syn_timpani, _syn_kick, _syn_snare = synth_bell, synth_timpani, synth_bass_drum, synth_snare
+    _syn_hat, _syn_cymbal = synth_hat, synth_cymbal
+
+    def synth_strings(f, dur, vel=0.5, bright=2400):
+        k = _cal("strings", lambda: _syn_strings(440, 1.0, 1.0), lambda: _sm.note(48, 440, 1.0, 96, 0.8))
+        x = _sm.note(49 if bright < 1800 else 48, f, dur, 96, 0.8)
+        return x * k * vel
+
+    def synth_brass(f, dur, vel=0.6, bright=1.0):
+        prog = 56 if f >= 380 else 61       # yüksekte trompet, altta bakır grubu
+        k = _cal("brass%d" % prog, lambda: _syn_brass(440 if prog == 56 else 147, 0.6, 1.0), lambda: _sm.note(prog, 440 if prog == 56 else 147, 0.6, 100, 0.4))
+        return _sm.note(prog, f, dur, 100, 0.4) * k * vel
+
+    def synth_horn(f, dur, vel=0.5):
+        k = _cal("horn", lambda: _syn_horn(330, 1.0, 1.0), lambda: _sm.note(60, 330, 1.0, 100, 0.6))
+        return _sm.note(60, f, dur, 100, 0.6) * k * vel
+
+    def synth_pizz(f, dur=0.5, vel=0.6):
+        k = _cal("pizz", lambda: _syn_pizz(220, 0.5, 1.0), lambda: _sm.note(45, 220, 0.4, 100, 0.5))
+        return _sm.note(45, f, min(dur, 0.4), 100, 0.5) * k * vel
+
+    def synth_bell(f, dur=1.6, vel=0.4):
+        k = _cal("bell", lambda: _syn_bell(880, 1.4, 1.0), lambda: _sm.note(8, 880, 0.3, 100, 1.1))
+        return _sm.note(8, f, 0.3, 100, max(0.3, dur - 0.3)) * k * vel
+
+    def synth_timpani(f, dur=1.4, vel=0.8):
+        k = _cal("timp", lambda: _syn_timpani(98, 1.4, 1.0), lambda: _sm.note(47, 98, 0.5, 110, 1.0))
+        return _sm.note(47, f, 0.5, 110, max(0.4, dur - 0.5)) * k * vel
+
+    def synth_bass_drum(dur=0.9, vel=0.9, f0=95, f1=42):
+        k = _cal("kick", lambda: _syn_kick(0.9, 1.0), lambda: _sm.drum(36, 110, 0.3, 0.6))
+        return _sm.drum(36, 110, 0.3, max(0.2, dur - 0.3)) * k * vel
+
+    def synth_snare(dur=0.35, vel=0.5):
+        k = _cal("snare", lambda: _syn_snare(0.35, 1.0), lambda: _sm.drum(38, 100, 0.15, 0.3))
+        return _sm.drum(38, 100, 0.15, max(0.1, dur - 0.1)) * k * vel
+
+    def synth_hat(dur=0.08, vel=0.25, open_=False):
+        key = 46 if open_ else 42
+        k = _cal("hat%d" % key, lambda: _syn_hat(dur, 1.0, open_), lambda: _sm.drum(key, 90, 0.08, 0.3))
+        return _sm.drum(key, 90, 0.08, 0.3 if open_ else 0.15) * k * vel
+
+    def synth_cymbal(dur=2.5, vel=0.3):
+        k = _cal("cym", lambda: _syn_cymbal(2.5, 1.0), lambda: _sm.drum(49, 100, 0.2, 2.3))
+        return _sm.drum(49, 100, 0.2, max(0.5, dur - 0.2)) * k * vel
+
+
 # ── karıştırıcı ─────────────────────────────────────────────────────
 class Track:
     """Stereo miks: add(ses, saniye, pan) — pan -1 sol, +1 sağ"""
@@ -618,6 +694,63 @@ def sfx_page():
     env = np.exp(-((t - 0.12) ** 2) / 0.004)
     tr.add(bandpass(noise(len(t)), 1500, 7000) * env * 0.6, 0)
     return master(tr, False, (0.6, 0.12), -8.0)
+
+
+# ── örneklenmiş seyirci ve jeton (ses bankası varsa) ───────────────
+def _glide(x, amount):
+    """perde kayması: sesi zamanla hızlanan/yavaşlayan okumayla yeniden örnekle"""
+    n = len(x)
+    rate = 1 + amount * np.linspace(0, 1, n)
+    pos = np.cumsum(rate)
+    pos = pos[pos < n - 1]
+    return np.interp(pos, np.arange(n), x)
+
+
+def _choir(prog, dur, f_lo, f_hi, n, glide, like):
+    """n kişilik koro (Voice Oohs / Choir Aahs örnekleri), her ses ayrı perde ve gecikmeyle;
+    gürlük, aynı çağrının sentez hâline eşitlenir"""
+    out = np.zeros(int((dur + 1.5) * SR))
+    for k in range(n):
+        d = RNG.uniform(0, 0.22)
+        x = _sm.note(prog, RNG.uniform(f_lo, f_hi), max(0.3, dur - d - 0.4), int(RNG.uniform(70, 105)), 0.6)
+        x = _glide(x, glide * RNG.uniform(0.6, 1.4))
+        i = int(d * SR)
+        out[i:i + len(x)] += x[: len(out) - i] * RNG.uniform(0.6, 1.0)
+    return out / _rms(out) * _rms(like)
+
+
+if _sm:
+    def sfx_ooh():
+        """Seyirci: "Ooooh!" — koro örnekleri, yukarı kayar"""
+        tr = Track(2.6, 120)
+        like = _crowd_voices(2.2, 140, 320, [(320, 160, 1.0), (800, 260, 0.6), (2400, 400, 0.12)], glide=0.25)
+        tr.add(_choir(53, 2.2, 140, 330, 22, 0.22, like), 0)
+        return master(tr, False, (1.8, 0.35), -3.0)
+
+    def sfx_aww():
+        """Seyirci: "Ahhh..." — koro örnekleri, aşağı kayar"""
+        tr = Track(2.4, 120)
+        like = _crowd_voices(2.0, 150, 300, [(700, 250, 1.0), (1150, 300, 0.6), (2500, 400, 0.1)], glide=-0.22)
+        tr.add(_choir(52, 2.0, 150, 300, 22, -0.2, like), 0)
+        return master(tr, False, (1.8, 0.35), -4.0)
+
+    def sfx_cheer():
+        """Seyirci tezahüratı + gerçek alkış örneği"""
+        tr = Track(3.0, 120)
+        like = _crowd_voices(2.4, 180, 420, [(750, 300, 1.0), (1300, 400, 0.7), (2700, 500, 0.2)], glide=0.1, vel=0.6)
+        tr.add(_choir(52, 2.2, 200, 440, 18, 0.12, like) * 0.8, 0)
+        for j, f in enumerate((220, 262, 330)):
+            clap = _sm.note(126, f, 2.4, 110, 0.6)
+            tr.add(clap / _rms(clap) * _rms(like) * 0.9, 0.05 * j, -0.6 + 0.6 * j)
+        return master(tr, False, (1.6, 0.3), -2.0)
+
+    def sfx_coin():
+        """Puan kazanıldı: glockenspiel iki nota"""
+        tr = Track(0.9, 120)
+        for k, f in enumerate(("B6", "E7")):
+            x = _sm.note(9, hz(f), 0.12, 110, 0.6)
+            tr.add(x * 0.5, k * 0.06, 0.2)
+        return master(tr, False, (0.7, 0.12), -6.0)
 
 
 PIECES = {

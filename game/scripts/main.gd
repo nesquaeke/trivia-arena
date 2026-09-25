@@ -117,7 +117,10 @@ func _physics_process(delta: float) -> void:
 	elif mode == Mode.WARDROBE:
 		var p1 := player_one()
 		if p1:
-			p1.facing = sin(_t * 0.7) * 0.75
+			# oyuncu sürüklediği açıda kalır; bir süre dokunmazsa hafifçe salınır
+			_ward_idle += delta
+			var sway := sin(_t * 0.7) * 0.35 * clampf((_ward_idle - 2.5) / 1.5, 0.0, 1.0)
+			p1.facing = _ward_yaw + sway
 	_update_streak_spot()
 
 # ── oyuncular ───────────────────────────────────────────────────────
@@ -184,6 +187,14 @@ func _on_fell_out(p: Plush) -> void:
 	Sfx.play("scream", -8.0, randf_range(0.9, 1.2))
 	await get_tree().create_timer(1.2).timeout
 	if is_instance_valid(p):
+		# kostüm odası açıkken düşen oyuncu kenara değil, podyumdaki yerine döner (donmuş kalır)
+		if mode == Mode.WARDROBE and p == player_one():
+			p.revive(WARD_POS)
+			p.frozen_input = true
+			p.freeze = true
+			p.teleport(WARD_POS, p.facing)
+			p.global_position = WARD_POS
+			return
 		var side := -1.0 if randf() < 0.5 else 1.0
 		p.revive(Vector3(side * 7.2, 0.3, randf_range(-3.5, 0.5)))
 
@@ -255,31 +266,48 @@ func wardrobe_conquest(on: bool) -> void:
 		_ward_castle = CastleModel.new(String(look.get("castle", "fairy")), PlushVisual.COLORS.get(String(look.get("color", "mustard")), Color.WHITE))
 		_ward_castle.banner = String(look.get("banner", "plain"))
 		add_child(_ward_castle)
-		_ward_castle.position = Vector3(-1.25, 0.02, 0.35)
-		_ward_castle.rotation.y = 0.35
+		_ward_castle.position = Vector3(-0.95, 0.02, 0.05)
+		_ward_castle.rotation.y = 0.45
 		_ward_castle.scale = Vector3.ONE * 0.05
-		create_tween().tween_property(_ward_castle, "scale", Vector3.ONE * 1.1, 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		create_tween().tween_property(_ward_castle, "scale", Vector3.ONE * 0.85, 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 func _bots_wander() -> void:
 	for b in bots:
 		b.controller.wander()
 
 # ── kostüm odası ────────────────────────────────────────────────────
+const WARD_POS := Vector3(0, 0.05, 0.7)
+
+var _ward_yaw := 0.0
+var _ward_idle := 0.0
+
+## Kostüm odasında fareyle sürükleyerek pelüşü döndür
+func wardrobe_spin(dx: float) -> void:
+	var p1 := player_one()
+	if p1 and mode == Mode.WARDROBE:
+		_ward_yaw = wrapf(p1.facing + dx * 0.012, -PI, PI)
+		_ward_idle = 0.0
+		p1.facing = _ward_yaw
+
 func enter_wardrobe() -> void:
 	if mode != Mode.LOBBY:
 		return
 	mode = Mode.WARDROBE
+	_ward_yaw = 0.0
+	_ward_idle = 0.0
 	var p1 := player_one()
 	if p1:
 		p1.frozen_input = true
-		p1.teleport(Vector3(0, 0.05, 0.7), 0.0)
-		# koşarken açılırsa adım pozunda donmasın
+		# önce dondur, sonra ışınla: aynı karede dondurulan gövdeye ışınlama işlemiyordu,
+		# pelüş lobide nerede kaldıysa orada, sırtı dönük donuyordu
 		p1.linear_velocity = Vector3.ZERO
 		p1.angular_velocity = Vector3.ZERO
 		p1.freeze = true
+		p1.teleport(WARD_POS, 0.0)
+		p1.global_position = WARD_POS
 	for b in bots:
 		b.controller.go_to(Vector3(randf_range(-6.0, 6.0), 0, randf_range(-4.2, -3.4)))
-	stage.set_solo(true)
+	stage.set_solo(true, true)
 	stage.set_gold_target(null)
 	cam.set_shot(BalconyCam.Shot.WARDROBE)
 	SteamService.presence("wardrobe")

@@ -14,6 +14,7 @@ extends CanvasLayer
 
 signal reward_clicked(step: int, index: int)
 signal answer_clicked(index: int)
+signal tug_clicked(index: int)
 signal ruler_input(u: float, release: bool)
 
 var game: Node = null
@@ -40,21 +41,35 @@ var _lobby := true
 var _card_tw: Tween
 
 const CARD_X := 1920.0 - ProfileCard.W - 34.0
+const DESIGN := Vector2(1920, 1080)
+
+func _fit_root() -> void:
+	var vs := get_viewport().get_visible_rect().size
+	root.position = ((vs - DESIGN) * 0.5).floor()
+	root.size = DESIGN
+	if grain:
+		grain.position = -root.position
+		grain.size = vs
 
 func setup(p_game: Node) -> void:
 	game = p_game
 	layer = 10
 	# duraklatınca da menü çalışsın; oyun içi HUD oyunla birlikte durur
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	# Arayüz 1920×1080 tasarım alanında çizilir ve ekranda ortalanır. 16:10, 4:3 ya da
+	# 21:9 ekranlarda kenarlar 3D sahneyle dolar, arayüz köşeye yapışıp boşluk bırakmaz.
 	root = Control.new()
-	root.set_anchors_preset(Control.PRESET_FULL_RECT)
+	root.size = DESIGN
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.theme = load("res://ui/theme/grand_stage.tres")
 	add_child(root)
+	get_viewport().size_changed.connect(_fit_root)
+	_fit_root()
 
 	hud = Hud.new()
 	hud.reward_clicked.connect(func(s, i): reward_clicked.emit(s, i))
 	hud.answer_clicked.connect(func(i): answer_clicked.emit(i))
+	hud.tug_clicked.connect(func(i): tug_clicked.emit(i))
 	hud.ruler_input.connect(func(u, r): ruler_input.emit(u, r))
 	hud.again_pressed.connect(func():
 		hud.hide_result()
@@ -173,6 +188,7 @@ func setup(p_game: Node) -> void:
 	gm.shader = preload("res://ui/shaders/grain.gdshader")
 	grain.material = gm
 	root.add_child(grain)
+	_fit_root()
 
 	I18n.changed.connect(func(_l): _retext())
 	Profile.changed.connect(_refresh_card)
@@ -203,7 +219,7 @@ func _refresh_card() -> void:
 
 func _build_rename() -> void:
 	rename_panel = GlassPanel.new()
-	rename_panel.position = Vector2(CARD_X, 290)
+	rename_panel.position = Vector2(CARD_X, ProfileCard.H + 50)
 	rename_panel.size = Vector2(ProfileCard.W, 150)
 	rename_panel.visible = false
 	root.add_child(rename_panel)
@@ -268,9 +284,23 @@ func show_lobby_chrome(on: bool) -> void:
 		rename_panel.visible = false
 
 # ── kostüm odası ────────────────────────────────────────────────────
+var _spin_hint: Label
+
 func _open_wardrobe() -> void:
 	menu.set_shown(false)
 	_card_to(false)
+	if _spin_hint == null:
+		_spin_hint = Label.new()
+		_spin_hint.add_theme_font_override("font", Pal.italic())
+		_spin_hint.add_theme_font_size_override("font_size", 24)
+		_spin_hint.add_theme_color_override("font_color", Color(Pal.CREAM, 0.8))
+		_spin_hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_spin_hint.position = Vector2(90, 1000)
+		root.add_child(_spin_hint)
+	_spin_hint.text = "⟲  " + I18n.t("wardrobe.spin")
+	_spin_hint.visible = true
+	_spin_hint.modulate.a = 0.0
+	Fx.fade(_spin_hint, 1.0, 0.6)
 	wardrobe.visible = true
 	wardrobe.open()
 	_slide(wardrobe, "position:x", 1920 - wardrobe.size.x - 70.0, 0.6)
@@ -278,6 +308,8 @@ func _open_wardrobe() -> void:
 
 func _close_wardrobe() -> void:
 	game.apply_look_to_player_one()   # denenen (satın alınmamış) öğeyi çıkar
+	if _spin_hint:
+		_spin_hint.visible = false
 	menu.set_shown(true)
 	_card_to(true)
 	_slide(wardrobe, "position:x", 1920 + 40.0)
@@ -444,6 +476,14 @@ func stage_curtain_then(cb: Callable) -> void:
 func _unhandled_input(e: InputEvent) -> void:
 	if settings.visible or online.visible or (word != null and word.visible):
 		return
+	# kostüm odası: boş alanda sürükleyerek (ya da sağ çubukla) pelüşü döndür
+	if game.mode == game.Mode.WARDROBE:
+		if e is InputEventMouseMotion and (e.button_mask & MOUSE_BUTTON_MASK_LEFT):
+			game.wardrobe_spin(e.relative.x)
+			get_viewport().set_input_as_handled()
+			return
+		if e is InputEventJoypadMotion and e.axis == JOY_AXIS_RIGHT_X and absf(e.axis_value) > 0.2:
+			game.wardrobe_spin(e.axis_value * 12.0)
 	var back: bool = e.is_action_pressed("ui_cancel") or (e is InputEventJoypadButton and e.pressed and e.button_index == JOY_BUTTON_START)
 	if back:
 		if get_tree().paused:
@@ -516,6 +556,9 @@ func prepare_shot(part: String) -> void:
 		"wardrobe":
 			_open_wardrobe()
 			await get_tree().create_timer(2.5).timeout
+		"card":
+			card.toggle(true)
+			await get_tree().create_timer(1.5).timeout
 		"wardrobe_cq":
 			_open_wardrobe()
 			await get_tree().create_timer(1.5).timeout

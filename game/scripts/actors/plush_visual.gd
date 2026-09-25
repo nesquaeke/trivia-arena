@@ -170,14 +170,8 @@ func _build() -> void:
 
 	# gövde
 	felt_parts.append(_mesh(body_root, _capsule(0.31, 0.76), base, Vector3(0, 0.57, 0)))
-	# karın yaması + dikişler
-	var belly := _mesh(body_root, _sphere(0.17), felt(Color("FFF3D6")), Vector3(0, 0.52, 0.2), Vector3.ZERO, Vector3(1.0, 1.15, 0.45))
-	belly.name = "Belly"
-	for i in 8:
-		var a := TAU * i / 8.0
-		_mesh(body_root, _capsule(0.008, 0.035), thread, Vector3(cos(a) * 0.16, 0.52 + sin(a) * 0.19, 0.265), Vector3(0, 0, a + PI / 2))
-	_mesh(body_root, _cyl(0.028, 0.028, 0.02, 12), mat("btn2", Color("7A1F24"), 0.3), Vector3(0, 0.6, 0.29), Vector3(PI / 2, 0, 0))
-	_mesh(body_root, _cyl(0.028, 0.028, 0.02, 12), mat("btn2", Color("7A1F24"), 0.3), Vector3(0, 0.47, 0.285), Vector3(PI / 2, 0, 0))
+	# (eski karın yaması ve dikişleri kaldırıldı: yama gövdenin içinde kalıyor,
+	# yalnız dikiş çizgileri görünüp göbekte kıl gibi duruyordu)
 
 	# kollar
 	for side: int in [-1, 1]:

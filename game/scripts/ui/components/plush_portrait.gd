@@ -104,7 +104,7 @@ func _ready() -> void:
 	set_look(look)
 
 func set_look(l: Dictionary) -> void:
-	look = l
+	look = l.duplicate()
 	if pivot == null:
 		return
 	if visual == null:

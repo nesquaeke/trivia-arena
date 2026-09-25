@@ -3,6 +3,8 @@ extends Control
 ## Kategori halatı göstergesi: üç sütun, her birinde kategori adı, çekiş
 ## sayısı ve pay çubuğu. Öndeki kategorinin üstünde taç sallanır.
 
+signal clicked(index: int)
+
 var names: Array = []
 var colors: Array = []
 var pulls: Array = []
@@ -14,13 +16,18 @@ var _nums: Array[RollingNumber] = []
 var _t := 0.0
 var _title := ""
 var _sub := ""
+var _hover_i := -1
+var _press := [0.0, 0.0, 0.0]     # tıklama parlaması
 
 const W := 1180.0
 const H := 236.0
 
 func _ready() -> void:
 	size = Vector2(W, H)
-	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	# fareyle kategoriye tıklamak zıplamakla aynı: her tık bir çekiş
+	mouse_filter = Control.MOUSE_FILTER_STOP
+	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	mouse_exited.connect(func(): _hover_i = -1)
 	for i in 3:
 		var n := RollingNumber.new()
 		n.font_size = 72
@@ -31,6 +38,20 @@ func _ready() -> void:
 		add_child(n)
 		_nums.append(n)
 	visible = false
+
+func _gui_input(e: InputEvent) -> void:
+	if e is InputEventMouseMotion:
+		_hover_i = _col_at(e.position.x) if e.position.y > 76 else -1
+	elif e is InputEventMouseButton and e.pressed and e.button_index == MOUSE_BUTTON_LEFT and winner < 0:
+		var i := _col_at(e.position.x)
+		if i >= 0 and e.position.y > 76:
+			_press[i] = 1.0
+			clicked.emit(i)
+			accept_event()
+
+func _col_at(x: float) -> int:
+	var i := int(floor((x - 40.0) / _col_w()))
+	return i if i >= 0 and i < mini(3, names.size()) else -1
 
 func _col_w() -> float:
 	return (W - 80) / 3.0
@@ -75,6 +96,8 @@ func _process(delta: float) -> void:
 	if not visible:
 		return
 	_t += delta
+	for i in 3:
+		_press[i] = maxf(0.0, _press[i] - delta * 5.0)
 	var tot := 0
 	for v in pulls:
 		tot += int(v)
@@ -108,8 +131,12 @@ func _draw() -> void:
 		draw_string(kf, Vector2(x, 36), ts.substr(i, 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 22, Pal.GOLD)
 		x += kf.get_char_size(ts.unicode_at(i), 22).x + 5
 	var sf := Pal.italic()
-	var sw := sf.get_string_size(_sub, HORIZONTAL_ALIGNMENT_LEFT, -1, 20).x
-	draw_string(sf, Vector2((W - sw) * 0.5, 64), _sub, HORIZONTAL_ALIGNMENT_LEFT, -1, 20, Color(Pal.CREAM, 0.8))
+	var sub_t := _sub + "  ·  " + Pal.t("tug.click")
+	var sfs := 20
+	while sfs > 14 and sf.get_string_size(sub_t, HORIZONTAL_ALIGNMENT_LEFT, -1, sfs).x > W - 60:
+		sfs -= 1
+	var sw := sf.get_string_size(sub_t, HORIZONTAL_ALIGNMENT_LEFT, -1, sfs).x
+	draw_string(sf, Vector2((W - sw) * 0.5, 64), sub_t, HORIZONTAL_ALIGNMENT_LEFT, -1, sfs, Color(Pal.CREAM, 0.8))
 	var lead := winner if winner >= 0 else _lead()
 	for i in mini(3, names.size()):
 		var cx := _col_x(i)
@@ -117,6 +144,9 @@ func _draw() -> void:
 		var col: Color = colors[i]
 		var dim := winner >= 0 and winner != i
 		var a := 0.35 if dim else 1.0
+		if winner < 0 and (i == _hover_i or _press[i] > 0.0):
+			var hr := Rect2(cx + 6, 76, cw - 12, 154)
+			draw_colored_polygon(Icons.notched(hr, 10.0), Color(col, 0.10 + 0.25 * _press[i]))
 		if i == lead:
 			var gr := Rect2(cx + 10, 80, cw - 20, 150)
 			draw_colored_polygon(Icons.notched(gr, 10.0), Color(col, 0.14 + 0.05 * sin(_t * 6.0)))

@@ -44,6 +44,11 @@ func _ready() -> void:
 			streams[n] = load(path)
 	if streams.has("war_drum"):
 		streams.drum = streams.war_drum
+	# profesyonel ses paketi: aynı adlı dosya sentezlenmiş sesin yerine geçer (AudioPack)
+	for n in streams.keys():
+		var pro: AudioStream = AudioPack.find("sfx", n)
+		if pro:
+			streams[n] = pro
 
 func play(name: String, db: float = 0.0, pitch: float = 1.0) -> void:
 	if muted or not streams.has(name):

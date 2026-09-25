@@ -72,8 +72,12 @@ func setup(p_game: Node, actors: Array[Plush], p_timer: float, p_level: String, 
 		st[p] = {"points": 0, "combo": 0, "best_combo": 0, "hp": 0, "max_hp": 1, "alive": true,
 			"correct": 0, "asked": 0, "stolen": 0, "sabotaged": 0, "debuff_left": {}, "elim": 0}
 		p.jumped.connect(_on_jumped)
+	if ui and ui.has_signal("tug_clicked"):
+		ui.tug_clicked.connect(_on_tug_click)
 
 func _exit_tree() -> void:
+	if ui and ui.has_signal("tug_clicked") and ui.tug_clicked.is_connected(_on_tug_click):
+		ui.tug_clicked.disconnect(_on_tug_click)
 	for p in contestants:
 		if is_instance_valid(p):
 			p.clear_debuffs()
@@ -254,6 +258,15 @@ func _tug() -> void:
 	for p in alive():
 		if p.controller is Controllers.Bot:
 			p.controller.go_to(Vector3(rng.randf_range(-3.0, 3.0), 0, rng.randf_range(-1.0, 1.5)))
+
+## Fareyle halat göstergesindeki kategoriye tıklamak: 1. oyuncu için bir çekiş (zıplamayla aynı)
+func _on_tug_click(i: int) -> void:
+	var p1: Plush = game.player_one() if game and game.has_method("player_one") else null
+	if not _tug_open or p1 == null or not st.has(p1) or not st[p1].alive or i < 0 or i >= _tug_cats.size():
+		return
+	_tug_pull[i] += 1
+	p1.float_text("+1", Questions.category_color(_tug_cats[i]).lightened(0.3))
+	Sfx.play("ui_hover", -8.0, randf_range(1.1, 1.3))
 
 func _on_jumped(p: Plush) -> void:
 	if not _tug_open or not st.has(p) or not st[p].alive:

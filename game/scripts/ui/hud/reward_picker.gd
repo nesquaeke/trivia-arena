@@ -97,7 +97,7 @@ func _process(delta: float) -> void:
 	queue_redraw()
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, size), Color(0.03, 0.01, 0.015, 0.72))
+	draw_rect(Pal.BLEED, Color(0.03, 0.01, 0.015, 0.72))
 	# başlık
 	var kf := Pal.kicker()
 	var head := Pal.upper(Pal.t("round.2"))

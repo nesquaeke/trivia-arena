@@ -121,6 +121,13 @@ func _build_sound() -> void:
 	_slider("sound", "sfx_vol", 0.9)
 	_slider("sound", "voice_vol", 0.9)
 	_seg("sound", "narrator", ["set.on", "set.off"], 300)
+	# profesyonel ses paketi: klasöre aynı adlı dosya bırakılır, oyun yeniden açılınca çalar
+	var pack := CtaButton.new()
+	pack.style = "velvet"
+	pack.custom_minimum_size = Vector2(360, 52)
+	pack.font_size = 22
+	pack.pressed.connect(func(): OS.shell_open(AudioPack.user_dir()))
+	_row("sound", "soundpack", pack)
 
 func _build_video() -> void:
 	_seg("video", "window", ["set.windowed", "set.borderless", "set.full"], 560)
@@ -278,6 +285,7 @@ func retext() -> void:
 			var defs := {"master_vol": 1.0, "music_vol": 0.7, "sfx_vol": 0.9, "voice_vol": 0.9}
 			r.ctrl.value = float(Profile.setting(key, defs.get(key, 1.0)))
 	(_rows.reset.ctrl as CtaButton).label = Pal.t("set.reset.btn")
+	(_rows.soundpack.ctrl as CtaButton).label = Pal.t("set.soundpack.btn")
 	var ctl := {
 		"kb1": ["WASD|" + Pal.t("hint.run"), Pal.t("key.space") + "|" + Pal.t("hint.jump"), "F|" + Pal.t("hint.shove"), "0–9|" + Pal.t("set.ctl.type"), "ESC|" + Pal.t("set.ctl.pause")],
 		"kb2": [Pal.t("key.arrows") + "|" + Pal.t("hint.run"), "ENTER|" + Pal.t("hint.jump"), "SHIFT|" + Pal.t("hint.shove")],
@@ -367,7 +375,7 @@ func _process(_d: float) -> void:
 
 # ── çizim ───────────────────────────────────────────────────────────
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, Vector2(1920, 1080)), Color(0.02, 0.0, 0.01, 0.7 * _k))
+	draw_rect(Pal.BLEED, Color(0.02, 0.0, 0.01, 0.7 * _k))
 
 func _draw_panel() -> void:
 	var k := _k

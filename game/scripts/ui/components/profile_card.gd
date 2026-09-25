@@ -24,12 +24,15 @@ var _t := 0.0
 var expanded := false
 var _k := 0.0                     # 0 = rozet, 1 = tam kart
 
-const W := 520.0
+const W := 580.0
 const CW := 262.0                 # rozet genişliği
 const CH := 78.0                  # rozet yüksekliği
-const H := 236.0
+const H := 280.0
 const PORTRAIT_W := 172.0
 const STUB := 62.0
+## karne sütunları (taç, seri, rekor): her biri SCOL genişliğinde, üst üste binmez
+const COLS := {"champs": 300.0, "streak": 376.0, "best": 452.0}
+const SCOL := 70.0
 
 func _ready() -> void:
 	size = Vector2(W, H)
@@ -40,14 +43,14 @@ func _ready() -> void:
 	portrait.position = Vector2(12, 12)
 	portrait.size = Vector2(PORTRAIT_W - 12, H - 24)
 	add_child(portrait)
-	var keys := [["champs", 300.0], ["streak", 354.0], ["best", 408.0]]
-	for k in keys:
+	for k0 in COLS:
+		var k := [k0, COLS[k0]]
 		var n := RollingNumber.new()
 		n.font_size = 38
 		n.align = 0
 		n.color = Pal.CHAMPAGNE
 		n.position = Vector2(k[1] - 2, 156)
-		n.size = Vector2(52, 44)
+		n.size = Vector2(SCOL - 4, 44)
 		n.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		add_child(n)
 		_nums[k[0]] = n
@@ -56,7 +59,10 @@ func _ready() -> void:
 	_lang.font_size = 15
 	_lang.custom_minimum_size = Vector2(210, 34)
 	_lang.size = Vector2(210, 34)
-	_lang.position = Vector2(W - STUB - 210 - 16, 16)
+	# dil seçici kartın altında kendi satırında (başlığın üstüne binmesin)
+	_lang.custom_minimum_size = Vector2(W - STUB - PORTRAIT_W - 42, 34)
+	_lang.size = _lang.custom_minimum_size
+	_lang.position = Vector2(PORTRAIT_W + 22, H - 54)
 	_lang.focus_mode = Control.FOCUS_NONE
 	_lang.changed.connect(func(i): lang_selected.emit(I18n.LANGS[i]))
 	add_child(_lang)
@@ -196,11 +202,15 @@ func _draw() -> void:
 	var f := Pal.kicker()
 	var admit := Pal.upper(Pal.t("ticket.admit"))
 	draw_set_transform(Vector2(sx + STUB * 0.5 + 7, H * 0.5), -PI / 2, Vector2.ONE)
-	var aw := f.get_string_size(admit, HORIZONTAL_ALIGNMENT_LEFT, -1, 17).x + admit.length() * 3.0
-	var x := -aw * 0.5
+	var afs := 17
+	var aw := f.get_string_size(admit, HORIZONTAL_ALIGNMENT_LEFT, -1, afs).x + admit.length() * 3.0
+	while afs > 10 and aw > H - 90.0:
+		afs -= 1
+		aw = f.get_string_size(admit, HORIZONTAL_ALIGNMENT_LEFT, -1, afs).x + admit.length() * 3.0
+	var x := -aw * 0.5 + 20.0
 	for i in admit.length():
-		draw_string(f, Vector2(x, 0), admit.substr(i, 1), HORIZONTAL_ALIGNMENT_LEFT, -1, 17, Color(Pal.GOLD, 0.85))
-		x += f.get_char_size(admit.unicode_at(i), 17).x + 3.0
+		draw_string(f, Vector2(x, 0), admit.substr(i, 1), HORIZONTAL_ALIGNMENT_LEFT, -1, afs, Color(Pal.GOLD, 0.85))
+		x += f.get_char_size(admit.unicode_at(i), afs).x + 3.0
 	draw_set_transform(Vector2.ZERO)
 	# koçan numarası (sahte seri no)
 	var serial := "Nº %04d" % (abs(player_name.hash()) % 10000)
@@ -224,15 +234,23 @@ func _draw() -> void:
 	if _name_hover:
 		draw_string(Pal.italic(), Vector2(x0, 128), Pal.t("ticket.rename"), HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(Pal.CREAM, 0.7))
 	# karne
-	var labels := [["ticket.wl", x0], ["ticket.champs", 300.0], ["ticket.streak", 354.0], ["ticket.best", 408.0]]
+	# her sütunun simgesi (taç/alev) kendi etiketinin önünde; etiket sütuna sığacak kadar küçülür
+	var labels := [["ticket.wl", x0, 108.0, ""], ["ticket.champs", COLS.champs, SCOL, "crown"], ["ticket.streak", COLS.streak, SCOL, "flame"], ["ticket.best", COLS.best, SCOL, ""]]
 	for l in labels:
 		var s: String = Pal.upper(_short(l[0]))
-		draw_string(f, Vector2(l[1], 158), s, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color(Pal.CREAM, 0.6))
-	draw_string(Pal.display(), Vector2(x0, 192), String(stats.get("wl", "0 / 0")), HORIZONTAL_ALIGNMENT_LEFT, 96, 38, Pal.CHAMPAGNE)
-	if int(stats.get("streak", 0)) >= 2:
-		Icons.draw(self, "flame", Vector2(392, 150), 13, Color("FF8A3C"))
-	if int(stats.get("champs", 0)) > 0:
-		Icons.draw(self, "crown", Vector2(340, 152), 13, Pal.GOLD)
+		var lx: float = l[1]
+		var room: float = l[2] - 6.0
+		var icon: String = l[3]
+		var lit := (icon == "crown" and int(stats.get("champs", 0)) > 0) or (icon == "flame" and int(stats.get("streak", 0)) >= 2)
+		if lit:
+			Icons.draw(self, icon, Vector2(lx + 6, 152), 11, Pal.GOLD if icon == "crown" else Color("FF8A3C"))
+			lx += 16.0
+			room -= 16.0
+		var lfs := 13
+		while lfs > 9 and f.get_string_size(s, HORIZONTAL_ALIGNMENT_LEFT, -1, lfs).x > room:
+			lfs -= 1
+		draw_string(f, Vector2(lx, 158), s, HORIZONTAL_ALIGNMENT_LEFT, room, lfs, Color(Pal.CREAM, 0.6))
+	draw_string(Pal.display(), Vector2(x0, 192), String(stats.get("wl", "0 / 0")), HORIZONTAL_ALIGNMENT_LEFT, 108, 38, Pal.CHAMPAGNE)
 
 ## Rozet ve geçiş hali: köşeleri kesik küçük bilet; portre, isim, kısa karne.
 func _draw_compact() -> void:

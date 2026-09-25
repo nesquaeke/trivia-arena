@@ -726,9 +726,10 @@ func _sound_q() -> Dictionary:
 
 func _play_sound(id: String) -> void:
 	var path := "res://assets/audio/mayhem/%s.ogg" % id
-	if not ResourceLoader.exists(path):
+	var pro: AudioStream = AudioPack.find("mayhem", id)
+	if pro == null and not ResourceLoader.exists(path):
 		return
-	_sound.stream = load(path)
+	_sound.stream = pro if pro else load(path)
 	_sound.volume_db = 0.0
 	_sound.play()
 

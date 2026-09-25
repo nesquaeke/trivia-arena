@@ -18,6 +18,8 @@ extends Button
 	set(v):
 		title = v
 		queue_redraw()
+## küçük düğmede alt yazı üstüne gelince sağda belirir; iki sütunlu menüde kapalı
+var side_caption := true
 @export var caption := "":
 	set(v):
 		caption = v
@@ -107,6 +109,9 @@ func _draw() -> void:
 	# başlık
 	var tcol := Pal.CREAM.lerp(Pal.CHAMPAGNE, h)
 	var ttl := Pal.upper(title)
+	# uzun dillerde düğme genişliğine sığdır (ok için pay bırak)
+	while fs > 20 and x0 + f_title.get_string_size(ttl, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x + 48 > size.x:
+		fs -= 1
 	draw_string(f_title, Vector2(x0, title_y + 4), ttl, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(0, 0, 0, 0.45 * ia))
 	draw_string(f_title, Vector2(x0, title_y), ttl, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(tcol, ia))
 	var tw := f_title.get_string_size(ttl, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x
@@ -120,7 +125,7 @@ func _draw() -> void:
 		if big:
 			var ca := (0.62 + 0.38 * h) * ia
 			draw_string(Pal.italic(), Vector2(x0 + 2, title_y + cap_fs + 7), caption, HORIZONTAL_ALIGNMENT_LEFT, size.x - x0, cap_fs, Color(Pal.CREAM, ca))
-		elif h > 0.02:
+		elif h > 0.02 and side_caption:
 			var cx := x0 + tw + 58 + 12 * h
 			draw_string(Pal.italic(), Vector2(cx, title_y - 8), caption, HORIZONTAL_ALIGNMENT_LEFT, -1, cap_fs, Color(Pal.CREAM, 0.85 * h * ia))
 
