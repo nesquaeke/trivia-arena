@@ -98,8 +98,35 @@ def export(n):
     print("çevrilecek", len(todo), "soru,", len(etodo), "tahmin →", out_dir)
 
 
+# Kategori adları: satır [tr, en, renk, pl, fr, es]
+CAT_NAMES = {
+    "geo": ("Podróż dookoła świata", "Tour du monde", "Vuelta al mundo"),
+    "sci": ("Mózg na pełnych obrotach", "Cerveau en ébullition", "Cerebro a tope"),
+    "hist": ("Za dawnych czasów", "Au bon vieux temps", "En aquellos tiempos"),
+    "film": ("Czas na popcorn", "C'est l'heure du pop-corn", "Hora de palomitas"),
+    "music": ("Zaufaj uszom", "Fais confiance à tes oreilles", "Confía en tu oído"),
+    "game": ("Gra się zaczyna", "Que le jeu commence", "Que empiece el juego"),
+    "sport": ("Sportowiec z kanapy", "Sportif de canapé", "Deportista de sofá"),
+    "art": ("Pociągnięcia pędzla", "Coups de pinceau", "Pinceladas"),
+    "lit": ("Mól książkowy", "Rat de bibliothèque", "Ratón de biblioteca"),
+    "nature": ("Dzikie stworzenia", "Bêtes sauvages", "Bichos salvajes"),
+    "food": ("Ślinka cieknie", "L'eau à la bouche", "Se te hace la boca agua"),
+    "tech": ("Roboty są mądrzejsze", "Les robots sont plus malins", "Los robots son más listos"),
+    "space": ("Zagubieni w kosmosie", "Perdus dans l'espace", "Perdidos en el espacio"),
+    "odd": ("Dziwne, ale prawdziwe", "Bizarre mais vrai", "Raro pero cierto"),
+    "lang": ("Łamańce językowe", "Langue de travers", "Trabalenguas"),
+    "brain": ("Łamigłówki", "Casse-têtes", "Rompecabezas"),
+    "life": ("To musisz wiedzieć", "Tu devrais savoir ça", "Esto deberías saberlo"),
+    "toons": ("Bajki i zabawki", "Dessins animés et jouets", "Dibujos y juguetes"),
+}
+
+
 def merge():
     d = json.load(open(DATA, encoding="utf-8"))
+    for k, row in d["categories"].items():
+        names = CAT_NAMES.get(k)
+        if names:
+            d["categories"][k] = row[:3] + list(names)
     mc, est = load_tr()
     miss = 0
     for q in all_mc(d):

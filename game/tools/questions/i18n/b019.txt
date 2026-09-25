@@ -1,0 +1,180 @@
+@9c6a0d9f
+Które polskie słowo zapożyczono z tureckiego?	Chleb	Dom	Pies	Kawa
+Quel mot polonais a été emprunté au turc ?	Chleb (pain)	Dom (maison)	Pies (chien)	Kawa (café)
+¿Qué palabra polaca se tomó prestada del turco?	Chleb (pan)	Dom (casa)	Pies (perro)	Kawa (café)
+@7459f228
+Do jakiej rodziny językowej należy baskijski?	Germańskiej	Żadnej (to język izolowany)	Słowiańskiej	Romańskiej
+À quelle famille de langues appartient le basque ?	Germanique	Aucune (c'est un isolat)	Slave	Romane
+¿A qué familia lingüística pertenece el euskera?	Germánica	Ninguna (es una lengua aislada)	Eslava	Romance
+@563b5db3
+W języku nahuatl słowo, od którego pochodzi „awokado”, oznaczało także…	Jądro	Masło	Słońce	Zielony kamień
+En nahuatl, le mot à l'origine d'« avocat » signifiait aussi…	Testicule	Beurre	Soleil	Pierre verte
+En náhuatl, ¿qué más significaba la palabra de la que viene «aguacate»?	Testículo	Mantequilla	Sol	Piedra verde
+@837d2988
+Który z tych systemów pisma należy do najstarszych?	Pismo klinowe	Runy	Cyrylica	Alfabet łaciński
+Lequel de ces systèmes d'écriture est parmi les plus anciens ?	Cunéiforme	Runique	Cyrillique	Latin
+¿Cuál de estos es uno de los sistemas de escritura más antiguos?	Cuneiforme	Rúnico	Cirílico	Latino
+@c6db020b
+Co jest wyjątkowego w zdaniu „The quick brown fox jumps over the lazy dog”?	Zawiera każdą literę	To palindrom	Używa tylko 3 liter	Nie ma samogłosek
+Qu'a de particulier la phrase « The quick brown fox jumps over the lazy dog » ?	Elle contient toutes les lettres	C'est un palindrome	Elle n'utilise que 3 lettres	Elle n'a pas de voyelles
+¿Qué tiene de especial la frase «The quick brown fox jumps over the lazy dog»?	Contiene todas las letras	Es un palíndromo	Usa solo 3 letras	No tiene vocales
+@ce379d0b
+Która litera jest w alfabecie polskim, ale nie w angielskim?	K	W	Ł	Q
+Quelle lettre existe dans l'alphabet polonais mais pas en anglais ?	K	W	Ł	Q
+¿Qué letra está en el alfabeto polaco pero no en el inglés?	K	W	Ł	Q
+@d746c3cf
+Z jakiego języka pochodzi hiszpańskie słowo „ojalá”?	Baskijskiego	Greckiego	Arabskiego	Łaciny
+De quelle langue vient le mot espagnol « ojalá » ?	Basque	Grec	Arabe	Latin
+¿De qué idioma viene la palabra española «ojalá»?	Euskera	Griego	Árabe	Latín
+@ee4b933f
+Jak nazywa się przestawienie liter wyrazu tak, by powstał inny wyraz?	Onomatopeja	Homonim	Palindrom	Anagram
+Comment appelle-t-on un mot obtenu en réarrangeant les lettres d'un autre ?	Onomatopée	Homonyme	Palindrome	Anagramme
+¿Cómo se llama reordenar las letras de una palabra para formar otra?	Onomatopeya	Homónimo	Palíndromo	Anagrama
+@ba4529ef
+Dla którego serialu językoznawca David J. Peterson stworzył język dothraki?	Wikingowie	Władca Pierścieni	Gra o tron	Wiedźmin
+Pour quelle série le linguiste David J. Peterson a-t-il créé la langue dothraki ?	Vikings	Le Seigneur des anneaux	Game of Thrones	The Witcher
+¿Para qué serie creó el lingüista David J. Peterson el idioma dothraki?	Vikingos	El Señor de los Anillos	Juego de tronos	The Witcher
+@cfdde910
+Ile języków urzędowych ma Republika Południowej Afryki?	8	3	12	5
+Combien de langues officielles l'Afrique du Sud compte-t-elle ?	8	3	12	5
+¿Cuántos idiomas oficiales tiene Sudáfrica?	8	3	12	5
+@00eeb2f6
+Jeśli 5 maszyn robi 5 części w 5 minut, ile czasu zajmie 100 maszynom zrobienie 100 części?	20 minut	100 minut	5 minut	1 minuta
+Si 5 machines font 5 pièces en 5 minutes, combien de temps faut-il à 100 machines pour 100 pièces ?	20 minutes	100 minutes	5 minutes	1 minute
+Si 5 máquinas hacen 5 piezas en 5 minutos, ¿cuánto tardan 100 máquinas en hacer 100 piezas?	20 minutos	100 minutos	5 minutos	1 minuto
+@29aa8b15
+Kij i piłka kosztują razem 1,10. Kij kosztuje o 1,00 więcej niż piłka. Ile kosztuje piłka?	0,01	0,05	0,10	0,15
+Une batte et une balle coûtent 1,10 au total. La batte coûte 1,00 de plus que la balle. Combien coûte la balle ?	0,01	0,05	0,10	0,15
+Un bate y una pelota cuestan 1,10 en total. El bate cuesta 1,00 más que la pelota. ¿Cuánto cuesta la pelota?	0,01	0,05	0,10	0,15
+@4029af2a
+Liście lilii wodnych podwajają się każdego dnia i pokrywają jezioro w 48 dni. Którego dnia pokrywają jego połowę?	47	12	46	24
+Des nénuphars doublent chaque jour et couvrent un lac en 48 jours. Quel jour en couvrent-ils la moitié ?	47	12	46	24
+Unos nenúfares se duplican cada día y cubren un lago en 48 días. ¿Qué día cubren la mitad?	47	12	46	24
+@71549b60
+Ile razy napiszesz cyfrę 9, wypisując liczby od 1 do 100?	11	20	19	10
+En écrivant les nombres de 1 à 100, combien de fois écrit-on le chiffre 9 ?	11	20	19	10
+Al escribir los números del 1 al 100, ¿cuántas veces escribes el dígito 9?	11	20	19	10
+@cd2be0b8
+Ile razy w ciągu 24 godzin wskazówka godzinowa i minutowa nakładają się na siebie?	12	24	23	22
+En 24 heures, combien de fois les aiguilles des heures et des minutes se superposent-elles ?	12	24	23	22
+En 24 horas, ¿cuántas veces se superponen las agujas de las horas y de los minutos?	12	24	23	22
+@e3459224
+Jaka liczba jest następna: 1, 4, 9, 16, 25, ?	30	49	35	36
+Quel nombre vient ensuite : 1, 4, 9, 16, 25, ?	30	49	35	36
+¿Qué número sigue: 1, 4, 9, 16, 25…?	30	49	35	36
+@8a062475
+Jaka liczba jest następna: 2, 3, 5, 7, 11, ?	14	15	13	12
+Quel nombre vient ensuite : 2, 3, 5, 7, 11, ?	14	15	13	12
+¿Qué número sigue: 2, 3, 5, 7, 11…?	14	15	13	12
+@132fddc5
+Problem Monty'ego Halla: jaka jest szansa wygranej, jeśli zmienisz drzwi?	2/3	1/2	1	1/3
+Problème de Monty Hall : si vous changez de porte, quelle est votre chance de gagner ?	2/3	1/2	1	1/3
+El problema de Monty Hall: si cambias de puerta, ¿qué probabilidad tienes de ganar?	2/3	1/2	1	1/3
+@ea47d7ef
+Ile osób musi być w pokoju, by szansa, że dwie mają urodziny tego samego dnia, przekroczyła 50%?	50	100	23	183
+Combien de personnes faut-il dans une pièce pour avoir plus de 50 % de chances que deux aient le même anniversaire ?	50	100	23	183
+¿Cuántas personas debe haber en una sala para que haya más de un 50 % de probabilidad de que dos cumplan años el mismo día?	50	100	23	183
+@905d8fb2
+Ile warstw grubości będzie miała kartka złożona na pół 10 razy?	20	1024	100	512
+Si l'on plie une feuille en deux 10 fois, combien de couches d'épaisseur obtient-on ?	20	1024	100	512
+Si doblas una hoja de papel por la mitad 10 veces, ¿cuántas capas de grosor tiene?	20	1024	100	512
+@207907b9
+Zegar wybija godziny (raz o 1, dwa razy o 2…). Ile uderzeń w ciągu 12 godzin?	72	78	144	66
+Une horloge sonne les heures (1 coup à 1 h, 2 coups à 2 h…). Combien de coups en 12 heures ?	72	78	144	66
+Un reloj da las horas (una campanada a la 1, dos a las 2…). ¿Cuántas campanadas en 12 horas?	72	78	144	66
+@3d3cb7ae
+Angielska nazwa której liczby ma litery w kolejności alfabetycznej?	Ten	Seven	Forty	Eight
+Quel nombre a un nom anglais dont les lettres sont dans l'ordre alphabétique ?	Ten	Seven	Forty	Eight
+¿El nombre en inglés de qué número tiene sus letras en orden alfabético?	Ten	Seven	Forty	Eight
+@2fdd709d
+Winda jedzie z 1. na 5. piętro w 20 sekund. Ile sekund zajmie jej jazda z 1. na 9. piętro?	45	30	40	36
+Un ascenseur va du 1er au 5e étage en 20 secondes. Combien de secondes du 1er au 9e ?	45	30	40	36
+Un ascensor va del piso 1 al 5 en 20 segundos. ¿Cuántos segundos tarda del 1 al 9?	45	30	40	36
+@c4182ff7
+Ile milisekund ma sekunda?	60	1000	100	10000
+Combien de millisecondes y a-t-il dans une seconde ?	60	1000	100	10000
+¿Cuántos milisegundos tiene un segundo?	60	1000	100	10000
+@fa98d013
+Ile cyfr ma standardowy numer karty kredytowej?	10	20	12	16
+Combien de chiffres compte un numéro de carte bancaire standard ?	10	20	12	16
+¿Cuántos dígitos tiene un número de tarjeta de crédito estándar?	10	20	12	16
+@1edb3abd
+Który kraj używa tej samej wtyczki (typ F) co Turcja i Hiszpania?	Wielka Brytania	USA	Niemcy	Japonia
+Quel pays utilise la même prise (type F) que la Turquie et l'Espagne ?	Royaume-Uni	États-Unis	Allemagne	Japon
+¿Qué país usa el mismo enchufe (tipo F) que Turquía y España?	Reino Unido	EE. UU.	Alemania	Japón
+@14210bbd
+O ile mniej więcej mniej energii zużywa żarówka LED niż tradycyjna?	O 30% mniej	Tyle samo	O 10% mniej	O 80% mniej
+Une ampoule LED consomme environ combien d'énergie en moins qu'une ancienne ampoule ?	30 % de moins	Autant	10 % de moins	80 % de moins
+¿Cuánta energía menos consume aproximadamente una bombilla LED que una antigua?	Un 30 % menos	Lo mismo	Un 10 % menos	Un 80 % menos
+@804cb416
+Która cyfra dzieli klawisz z literami „WXYZ” na klawiaturze telefonu?	0	7	8	9
+Quel chiffre partage sa touche avec « WXYZ » sur un clavier de téléphone ?	0	7	8	9
+¿Qué número comparte tecla con «WXYZ» en el teclado de un teléfono?	0	7	8	9
+@9bc79aa5
+Jaką część życia ludzie mniej więcej przesypiają?	Połowę	Jedną trzecią	Trzy czwarte	Jedną dziesiątą
+Quelle part de leur vie les gens passent-ils environ à dormir ?	La moitié	Un tiers	Trois quarts	Un dixième
+¿Qué parte de su vida pasan durmiendo aproximadamente las personas?	La mitad	Un tercio	Tres cuartos	Una décima parte
+@f2b35b85
+Ciśnienie w oponach samochodu podaje się zwykle w…	Kaloriach	Barach lub PSI	Litrach	Woltach
+La pression des pneus de voiture s'exprime couramment en…	Calories	Bars ou PSI	Litres	Volts
+¿En qué se expresa habitualmente la presión de los neumáticos?	Calorías	Bares o PSI	Litros	Voltios
+@2e1928b1
+Którą witaminę organizm wytwarza pod wpływem słońca?	B12	Witaminę D	Witaminę C	Witaminę A
+Quelle vitamine le corps fabrique-t-il grâce au soleil ?	B12	Vitamine D	Vitamine C	Vitamine A
+¿Qué vitamina produce el cuerpo con la luz del sol?	B12	Vitamina D	Vitamina C	Vitamina A
+@d8b65cf3
+Które domowe urządzenie zwykle zużywa najwięcej energii?	Radio	Zegar	Ładowarka do telefonu	Grzejnik lub klimatyzator
+Quel appareil ménager est généralement l'un des plus énergivores ?	Radio	Horloge	Chargeur de téléphone	Chauffage ou climatiseur
+¿Qué electrodoméstico suele ser de los que más energía consumen?	Radio	Reloj	Cargador del móvil	Calefactor o aire acondicionado
+@df1318c8
+Adres zaczynający się od „www” to adres czego?	Domu	Tylko skrzynki e-mail	Strony internetowej	Telefonu
+Une adresse commençant par « www » est l'adresse de quoi ?	Une maison	Une boîte mail seulement	Un site web	Un téléphone
+¿De qué es una dirección que empieza por «www»?	De una casa	Solo de un buzón de correo	De un sitio web	De un teléfono
+@71e5ebf0
+Jaka była pierwsza dźwiękowa kreskówka z Myszką Miki?	Plane Crazy	Parowiec Willie	The Band Concert	Fantazja
+Quel a été le premier dessin animé sonore de Mickey Mouse ?	Plane Crazy	Steamboat Willie	La Fanfare	Fantasia
+¿Cuál fue el primer dibujo animado sonoro de Mickey Mouse?	Plane Crazy	Steamboat Willie	El concierto de la banda	Fantasía
+@a1e20ca9
+Z jakiego kraju pochodzą Muminki?	Finlandia	Norwegia	Dania	Szwecja
+De quel pays viennent les Moomins ?	Finlande	Norvège	Danemark	Suède
+¿De qué país son los Mumin?	Finlandia	Noruega	Dinamarca	Suecia
+@f1644e18
+Jaki był pierwszy pełnometrażowy film animowany Disneya?	Pinokio	Dumbo	Bambi	Królewna Śnieżka
+Quel a été le premier long métrage d'animation de Disney ?	Pinocchio	Dumbo	Bambi	Blanche-Neige
+¿Cuál fue el primer largometraje de animación de Disney?	Pinocho	Dumbo	Bambi	Blancanieves
+@d7bbc98c
+Z jakiego kraju pochodził Hergé, twórca Tintina?	Holandia	Szwajcaria	Francja	Belgia
+De quel pays venait Hergé, le créateur de Tintin ?	Pays-Bas	Suisse	France	Belgique
+¿De qué país era Hergé, creador de Tintín?	Países Bajos	Suiza	Francia	Bélgica
+@b8714d01
+Czego słynnie nienawidzi Mafalda, bohaterka argentyńskiego komiksu?	Szkoły	Deszczu	Zupy	Psów
+Que déteste célèbrement Mafalda, l'héroïne de BD argentine ?	L'école	La pluie	La soupe	Les chiens
+¿Qué odia famosamente Mafalda, la niña de la historieta argentina?	La escuela	La lluvia	La sopa	Los perros
+@0e86a6f1
+W jakich górach Heidi mieszka z dziadkiem?	W Pirenejach	W Himalajach	W Karpatach	W Alpach
+Dans quelles montagnes Heidi vit-elle avec son grand-père ?	Les Pyrénées	L'Himalaya	Les Carpates	Les Alpes
+¿En qué montañas vive Heidi con su abuelo?	Los Pirineos	El Himalaya	Los Cárpatos	Los Alpes
+@d2b89ad8
+Jaki był pierwszy pełnometrażowy film Pixara?	Gdzie jest Nemo	Toy Story	Auta	Potwory i spółka
+Quel a été le premier long métrage de Pixar ?	Le Monde de Nemo	Toy Story	Cars	Monstres et Cie
+¿Cuál fue el primer largometraje de Pixar?	Buscando a Nemo	Toy Story	Cars	Monstruos, S.A.
+@f13ad10c
+W której starożytnej cywilizacji znano już jo-jo?	U wikingów	W starożytnej Grecji	U Azteków	U Inków
+Dans quelle civilisation antique le yo-yo était-il déjà connu ?	Les Vikings	La Grèce antique	Les Aztèques	Les Incas
+¿En qué civilización antigua ya se conocía el yoyó?	Los vikingos	La antigua Grecia	Los aztecas	Los incas
+@bf457b77
+Z jakiego kraju pochodził Peyo, twórca Smerfów?	Francja	Holandia	Włochy	Belgia
+De quel pays venait Peyo, le créateur des Schtroumpfs ?	France	Pays-Bas	Italie	Belgique
+¿De qué país era Peyo, creador de los Pitufos?	Francia	Países Bajos	Italia	Bélgica
+@fdde9136
+Co uwielbia robić Pepee, bohater tureckiej bajki dla dzieci?	Tańczyć i bawić się	Gotować	Spać	Latać
+Qu'adore faire Pepee, le personnage turc pour enfants ?	Danser et jouer	Cuisiner	Dormir	Voler
+¿Qué le encanta hacer a Pepee, el personaje infantil turco?	Bailar y jugar	Cocinar	Dormir	Volar
+@b53528da
+W której sadze filmowej używa się mieczy świetlnych?	Star Trek	Autostopem przez Galaktykę	Gwiezdne wojny	Diuna
+Dans quelle saga de films utilise-t-on des sabres laser ?	Star Trek	H2G2 : Le Guide du voyageur galactique	Star Wars	Dune
+¿En qué saga de películas se usan sables de luz?	Star Trek	Guía del autoestopista galáctico	Star Wars	Dune
+@502b079c
+Ile mniej więcej wody zużywa 10-minutowy prysznic?	Około 500 litrów	Około 1 litra	Około 5 litrów	Około 80 litrów
+Combien d'eau consomme environ une douche de 10 minutes ?	Environ 500 litres	Environ 1 litre	Environ 5 litres	Environ 80 litres
+¿Cuánta agua gasta aproximadamente una ducha de 10 minutos?	Unos 500 litros	Aproximadamente 1 litro	Unos 5 litros	Unos 80 litros

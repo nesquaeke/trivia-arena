@@ -33,6 +33,54 @@
      "1889",
      "2010"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Piramidy",
+     "Koloseum",
+     "Wieża Eiffla",
+     "Burj Khalifa"
+    ],
+    "labels": [
+     "2560 p.n.e.",
+     "80",
+     "1889",
+     "2010"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Les Pyramides",
+     "Le Colisée",
+     "Tour Eiffel",
+     "Burj Khalifa"
+    ],
+    "labels": [
+     "2560 av. J.-C.",
+     "80",
+     "1889",
+     "2010"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Las pirámides",
+     "El Coliseo",
+     "Torre Eiffel",
+     "Burj Khalifa"
+    ],
+    "labels": [
+     "2560 a. C.",
+     "80",
+     "1889",
+     "2010"
+    ]
    }
   },
   {
@@ -63,6 +111,54 @@
     ],
     "labels": [
      "3500 BC",
+     "1440",
+     "1876",
+     "1983"
+    ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Koło",
+     "Prasa drukarska",
+     "Telefon",
+     "Internet"
+    ],
+    "labels": [
+     "3500 p.n.e.",
+     "1440",
+     "1876",
+     "1983"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "La roue",
+     "L'imprimerie",
+     "Le téléphone",
+     "Internet"
+    ],
+    "labels": [
+     "3500 av. J.-C.",
+     "1440",
+     "1876",
+     "1983"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "La rueda",
+     "La imprenta",
+     "El teléfono",
+     "Internet"
+    ],
+    "labels": [
+     "3500 a. C.",
      "1440",
      "1876",
      "1983"
@@ -101,6 +197,54 @@
      "753 BC",
      "1969"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Koniec dinozaurów",
+     "Ostatnie mamuty",
+     "Założenie Rzymu",
+     "Lądowanie na Księżycu"
+    ],
+    "labels": [
+     "66 mln lat temu",
+     "2000 p.n.e.",
+     "753 p.n.e.",
+     "1969"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Fin des dinosaures",
+     "Derniers mammouths",
+     "Fondation de Rome",
+     "Premier pas sur la Lune"
+    ],
+    "labels": [
+     "Il y a 66 millions d'années",
+     "2000 av. J.-C.",
+     "753 av. J.-C.",
+     "1969"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Fin de los dinosaurios",
+     "Últimos mamuts",
+     "Fundación de Roma",
+     "Llegada a la Luna"
+    ],
+    "labels": [
+     "Hace 66 millones de años",
+     "2000 a. C.",
+     "753 a. C.",
+     "1969"
+    ]
    }
   },
   {
@@ -128,6 +272,54 @@
      "Don Quixote",
      "First Harry Potter",
      "First iPhone"
+    ],
+    "labels": [
+     "1503",
+     "1605",
+     "1997",
+     "2007"
+    ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Mona Lisa",
+     "Don Kichot",
+     "Pierwszy Harry Potter",
+     "Pierwszy iPhone"
+    ],
+    "labels": [
+     "1503",
+     "1605",
+     "1997",
+     "2007"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "La Joconde",
+     "Don Quichotte",
+     "Premier Harry Potter",
+     "Premier iPhone"
+    ],
+    "labels": [
+     "1503",
+     "1605",
+     "1997",
+     "2007"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "La Gioconda",
+     "Don Quijote",
+     "Primer Harry Potter",
+     "Primer iPhone"
     ],
     "labels": [
      "1503",
@@ -169,6 +361,54 @@
      "1789",
      "1914"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Kolumb w Ameryce",
+     "Niepodległość USA",
+     "Rewolucja francuska",
+     "I wojna światowa"
+    ],
+    "labels": [
+     "1492",
+     "1776",
+     "1789",
+     "1914"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Colomb atteint l'Amérique",
+     "Indépendance des États-Unis",
+     "Révolution française",
+     "Première Guerre mondiale"
+    ],
+    "labels": [
+     "1492",
+     "1776",
+     "1789",
+     "1914"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Colón llega a América",
+     "Independencia de EE. UU.",
+     "Revolución francesa",
+     "Primera Guerra Mundial"
+    ],
+    "labels": [
+     "1492",
+     "1776",
+     "1789",
+     "1914"
+    ]
    }
   },
   {
@@ -203,6 +443,54 @@
      "1954",
      "2005"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Pierwszy pokaz filmowy",
+     "Pierwszy film dźwiękowy",
+     "Telewizja kolorowa",
+     "YouTube"
+    ],
+    "labels": [
+     "1895",
+     "1927",
+     "1954",
+     "2005"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Première projection de cinéma",
+     "Premier film parlant",
+     "Télévision en couleur",
+     "YouTube"
+    ],
+    "labels": [
+     "1895",
+     "1927",
+     "1954",
+     "2005"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Primera proyección de cine",
+     "Primera película sonora",
+     "Televisión en color",
+     "YouTube"
+    ],
+    "labels": [
+     "1895",
+     "1927",
+     "1954",
+     "2005"
+    ]
    }
   },
   {
@@ -225,6 +513,54 @@
    "en": {
     "q": "Oldest to newest!",
     "first": "Which is the oldest?",
+    "items": [
+     "Pong",
+     "Pac-Man",
+     "Pokémon",
+     "Fortnite"
+    ],
+    "labels": [
+     "1972",
+     "1980",
+     "1996",
+     "2017"
+    ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Pong",
+     "Pac-Man",
+     "Pokémon",
+     "Fortnite"
+    ],
+    "labels": [
+     "1972",
+     "1980",
+     "1996",
+     "2017"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Pong",
+     "Pac-Man",
+     "Pokémon",
+     "Fortnite"
+    ],
+    "labels": [
+     "1972",
+     "1980",
+     "1996",
+     "2017"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
     "items": [
      "Pong",
      "Pac-Man",
@@ -271,6 +607,54 @@
      "1450",
      "1653"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Uniwersytet Oksfordzki",
+     "Tenochtitlán (Aztekowie)",
+     "Machu Picchu",
+     "Tadż Mahal"
+    ],
+    "labels": [
+     "1096",
+     "1325",
+     "1450",
+     "1653"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Université d'Oxford",
+     "Tenochtitlan (Aztèques)",
+     "Machu Picchu",
+     "Taj Mahal"
+    ],
+    "labels": [
+     "1096",
+     "1325",
+     "1450",
+     "1653"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Universidad de Oxford",
+     "Tenochtitlan (aztecas)",
+     "Machu Picchu",
+     "Taj Mahal"
+    ],
+    "labels": [
+     "1096",
+     "1325",
+     "1450",
+     "1653"
+    ]
    }
   },
   {
@@ -298,6 +682,54 @@
      "Car",
      "Aeroplane",
      "Moon rocket"
+    ],
+    "labels": [
+     "1817",
+     "1886",
+     "1903",
+     "1969"
+    ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Rower",
+     "Samochód",
+     "Samolot",
+     "Rakieta księżycowa"
+    ],
+    "labels": [
+     "1817",
+     "1886",
+     "1903",
+     "1969"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Vélo",
+     "Voiture",
+     "Avion",
+     "Fusée lunaire"
+    ],
+    "labels": [
+     "1817",
+     "1886",
+     "1903",
+     "1969"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Bicicleta",
+     "Coche",
+     "Avión",
+     "Cohete lunar"
     ],
     "labels": [
      "1817",
@@ -339,6 +771,54 @@
      "1810",
      "1960"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Narodziny Bacha",
+     "Narodziny Mozarta",
+     "Narodziny Chopina",
+     "Powstanie The Beatles"
+    ],
+    "labels": [
+     "1685",
+     "1756",
+     "1810",
+     "1960"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Naissance de Bach",
+     "Naissance de Mozart",
+     "Naissance de Chopin",
+     "Formation des Beatles"
+    ],
+    "labels": [
+     "1685",
+     "1756",
+     "1810",
+     "1960"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Nace Bach",
+     "Nace Mozart",
+     "Nace Chopin",
+     "Se forman los Beatles"
+    ],
+    "labels": [
+     "1685",
+     "1756",
+     "1810",
+     "1960"
+    ]
    }
   },
   {
@@ -361,6 +841,54 @@
    "en": {
     "q": "Oldest to newest!",
     "first": "Which is the oldest?",
+    "items": [
+     "Coca-Cola",
+     "Nintendo",
+     "LEGO",
+     "Google"
+    ],
+    "labels": [
+     "1886",
+     "1889",
+     "1932",
+     "1998"
+    ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Coca-Cola",
+     "Nintendo",
+     "LEGO",
+     "Google"
+    ],
+    "labels": [
+     "1886",
+     "1889",
+     "1932",
+     "1998"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Coca-Cola",
+     "Nintendo",
+     "LEGO",
+     "Google"
+    ],
+    "labels": [
+     "1886",
+     "1889",
+     "1932",
+     "1998"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
     "items": [
      "Coca-Cola",
      "Nintendo",
@@ -407,6 +935,54 @@
      "1930",
      "1955"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Pierwsze nowożytne igrzyska",
+     "Pierwszy Tour de France",
+     "Pierwszy mundial",
+     "Pierwszy Puchar Europy"
+    ],
+    "labels": [
+     "1896",
+     "1903",
+     "1930",
+     "1955"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Premiers JO modernes",
+     "Premier Tour de France",
+     "Première Coupe du monde",
+     "Première Coupe d'Europe"
+    ],
+    "labels": [
+     "1896",
+     "1903",
+     "1930",
+     "1955"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Primeros JJ. OO. modernos",
+     "Primer Tour de Francia",
+     "Primer Mundial",
+     "Primera Copa de Europa"
+    ],
+    "labels": [
+     "1896",
+     "1903",
+     "1930",
+     "1955"
+    ]
    }
   },
   {
@@ -434,6 +1010,54 @@
      "Microscope",
      "Telescope",
      "Light bulb"
+    ],
+    "labels": [
+     "1286",
+     "1590",
+     "1608",
+     "1879"
+    ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Okulary",
+     "Mikroskop",
+     "Teleskop",
+     "Żarówka"
+    ],
+    "labels": [
+     "1286",
+     "1590",
+     "1608",
+     "1879"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Lunettes",
+     "Microscope",
+     "Télescope",
+     "Ampoule"
+    ],
+    "labels": [
+     "1286",
+     "1590",
+     "1608",
+     "1879"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "Gafas",
+     "Microscopio",
+     "Telescopio",
+     "Bombilla"
     ],
     "labels": [
      "1286",
@@ -475,6 +1099,54 @@
      "1992",
      "2008"
     ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Igrzyska w Tokio",
+     "Igrzyska w Moskwie",
+     "Igrzyska w Barcelonie",
+     "Igrzyska w Pekinie"
+    ],
+    "labels": [
+     "1964",
+     "1980",
+     "1992",
+     "2008"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "JO de Tokyo",
+     "JO de Moscou",
+     "JO de Barcelone",
+     "JO de Pékin"
+    ],
+    "labels": [
+     "1964",
+     "1980",
+     "1992",
+     "2008"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "JJ. OO. de Tokio",
+     "JJ. OO. de Moscú",
+     "JJ. OO. de Barcelona",
+     "JJ. OO. de Pekín"
+    ],
+    "labels": [
+     "1964",
+     "1980",
+     "1992",
+     "2008"
+    ]
    }
   },
   {
@@ -502,6 +1174,54 @@
      "Newton's Principia",
      "Darwin's Origin",
      "Einstein's relativity"
+    ],
+    "labels": [
+     "1543",
+     "1687",
+     "1859",
+     "1905"
+    ]
+   },
+   "pl": {
+    "q": "Od najstarszego do najnowszego!",
+    "first": "Co jest najstarsze?",
+    "items": [
+     "Księga Kopernika",
+     "Principia Newtona",
+     "O powstawaniu gatunków",
+     "Teoria względności"
+    ],
+    "labels": [
+     "1543",
+     "1687",
+     "1859",
+     "1905"
+    ]
+   },
+   "fr": {
+    "q": "Du plus ancien au plus récent !",
+    "first": "Lequel est le plus ancien ?",
+    "items": [
+     "Le livre de Copernic",
+     "Les Principia de Newton",
+     "L'Origine des espèces",
+     "La relativité d'Einstein"
+    ],
+    "labels": [
+     "1543",
+     "1687",
+     "1859",
+     "1905"
+    ]
+   },
+   "es": {
+    "q": "¡Del más antiguo al más reciente!",
+    "first": "¿Cuál es el más antiguo?",
+    "items": [
+     "El libro de Copérnico",
+     "Los Principia de Newton",
+     "El origen de las especies",
+     "La relatividad de Einstein"
     ],
     "labels": [
      "1543",
@@ -543,6 +1263,54 @@
      "",
      ""
     ]
+   },
+   "pl": {
+    "q": "Od najmniejszego do największego!",
+    "first": "Co jest najmniejsze?",
+    "items": [
+     "Atom",
+     "Bakteria",
+     "Mrówka",
+     "Słoń"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "fr": {
+    "q": "Du plus petit au plus grand !",
+    "first": "Lequel est le plus petit ?",
+    "items": [
+     "Atome",
+     "Bactérie",
+     "Fourmi",
+     "Éléphant"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "es": {
+    "q": "¡Del más pequeño al más grande!",
+    "first": "¿Cuál es el más pequeño?",
+    "items": [
+     "Átomo",
+     "Bacteria",
+     "Hormiga",
+     "Elefante"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
    }
   },
   {
@@ -570,6 +1338,54 @@
      "Mercury",
      "Earth",
      "Jupiter"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "pl": {
+    "q": "Od najmniejszego do największego!",
+    "first": "Co jest najmniejsze?",
+    "items": [
+     "Księżyc",
+     "Merkury",
+     "Ziemia",
+     "Jowisz"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "fr": {
+    "q": "Du plus petit au plus grand !",
+    "first": "Lequel est le plus petit ?",
+    "items": [
+     "La Lune",
+     "Mercure",
+     "La Terre",
+     "Jupiter"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "es": {
+    "q": "¡Del más pequeño al más grande!",
+    "first": "¿Cuál es el más pequeño?",
+    "items": [
+     "La Luna",
+     "Mercurio",
+     "La Tierra",
+     "Júpiter"
     ],
     "labels": [
      "",
@@ -611,6 +1427,54 @@
      "22 cm",
      "65 cm"
     ]
+   },
+   "pl": {
+    "q": "Od najmniejszego do największego!",
+    "first": "Co jest najmniejsze?",
+    "items": [
+     "Piłeczka pingpongowa",
+     "Piłka tenisowa",
+     "Piłka nożna",
+     "Piłka do ćwiczeń"
+    ],
+    "labels": [
+     "4 cm",
+     "6,7 cm",
+     "22 cm",
+     "65 cm"
+    ]
+   },
+   "fr": {
+    "q": "Du plus petit au plus grand !",
+    "first": "Lequel est le plus petit ?",
+    "items": [
+     "Balle de ping-pong",
+     "Balle de tennis",
+     "Ballon de football",
+     "Ballon de gym"
+    ],
+    "labels": [
+     "4 cm",
+     "6,7 cm",
+     "22 cm",
+     "65 cm"
+    ]
+   },
+   "es": {
+    "q": "¡Del más pequeño al más grande!",
+    "first": "¿Cuál es el más pequeño?",
+    "items": [
+     "Pelota de ping-pong",
+     "Pelota de tenis",
+     "Balón de fútbol",
+     "Pelota de pilates"
+    ],
+    "labels": [
+     "4 cm",
+     "6,7 cm",
+     "22 cm",
+     "65 cm"
+    ]
    }
   },
   {
@@ -644,6 +1508,54 @@
      "2 km²",
      "316 km²",
      "2,586 km²"
+    ]
+   },
+   "pl": {
+    "q": "Od najmniejszego do największego!",
+    "first": "Co jest najmniejsze?",
+    "items": [
+     "Watykan",
+     "Monako",
+     "Malta",
+     "Luksemburg"
+    ],
+    "labels": [
+     "0,44 km²",
+     "2 km²",
+     "316 km²",
+     "2586 km²"
+    ]
+   },
+   "fr": {
+    "q": "Du plus petit au plus grand !",
+    "first": "Lequel est le plus petit ?",
+    "items": [
+     "Vatican",
+     "Monaco",
+     "Malta",
+     "Luxembourg"
+    ],
+    "labels": [
+     "0,44 km²",
+     "2 km²",
+     "316 km²",
+     "2 586 km²"
+    ]
+   },
+   "es": {
+    "q": "¡Del más pequeño al más grande!",
+    "first": "¿Cuál es el más pequeño?",
+    "items": [
+     "Ciudad del Vaticano",
+     "Mónaco",
+     "Malta",
+     "Luxemburgo"
+    ],
+    "labels": [
+     "0,44 km²",
+     "2 km²",
+     "316 km²",
+     "2.586 km²"
     ]
    }
   },
@@ -679,6 +1591,54 @@
      "783k km²",
      "2.78M km²"
     ]
+   },
+   "pl": {
+    "q": "Od najmniejszego do największego!",
+    "first": "Co jest najmniejsze?",
+    "items": [
+     "Polska",
+     "Hiszpania",
+     "Turcja",
+     "Argentyna"
+    ],
+    "labels": [
+     "312 tys. km²",
+     "506 tys. km²",
+     "783 tys. km²",
+     "2,78 mln km²"
+    ]
+   },
+   "fr": {
+    "q": "Du plus petit au plus grand !",
+    "first": "Lequel est le plus petit ?",
+    "items": [
+     "Pologne",
+     "Espagne",
+     "Turquie",
+     "Argentine"
+    ],
+    "labels": [
+     "312 000 km²",
+     "506 000 km²",
+     "783 000 km²",
+     "2,78 M km²"
+    ]
+   },
+   "es": {
+    "q": "¡Del más pequeño al más grande!",
+    "first": "¿Cuál es el más pequeño?",
+    "items": [
+     "Polonia",
+     "España",
+     "Turquía",
+     "Argentina"
+    ],
+    "labels": [
+     "312.000 km²",
+     "506.000 km²",
+     "783.000 km²",
+     "2,78 M km²"
+    ]
    }
   },
   {
@@ -713,6 +1673,54 @@
      "828 m",
      "8,849 m"
     ]
+   },
+   "pl": {
+    "q": "Od najmniejszego do największego!",
+    "first": "Co jest najmniejsze?",
+    "items": [
+     "Wieża Eiffla",
+     "Empire State",
+     "Burj Khalifa",
+     "Everest"
+    ],
+    "labels": [
+     "330 m",
+     "443 m",
+     "828 m",
+     "8849 m"
+    ]
+   },
+   "fr": {
+    "q": "Du plus petit au plus grand !",
+    "first": "Lequel est le plus petit ?",
+    "items": [
+     "Tour Eiffel",
+     "Empire State",
+     "Burj Khalifa",
+     "Everest"
+    ],
+    "labels": [
+     "330 m",
+     "443 m",
+     "828 m",
+     "8 849 m"
+    ]
+   },
+   "es": {
+    "q": "¡Del más pequeño al más grande!",
+    "first": "¿Cuál es el más pequeño?",
+    "items": [
+     "Torre Eiffel",
+     "Empire State",
+     "Burj Khalifa",
+     "Everest"
+    ],
+    "labels": [
+     "330 m",
+     "443 m",
+     "828 m",
+     "8.849 m"
+    ]
    }
   },
   {
@@ -740,6 +1748,54 @@
      "Indian Ocean",
      "Atlantic Ocean",
      "Pacific Ocean"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "pl": {
+    "q": "Od najmniejszego do największego!",
+    "first": "Co jest najmniejsze?",
+    "items": [
+     "Ocean Arktyczny",
+     "Ocean Indyjski",
+     "Ocean Atlantycki",
+     "Ocean Spokojny"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "fr": {
+    "q": "Du plus petit au plus grand !",
+    "first": "Lequel est le plus petit ?",
+    "items": [
+     "Océan Arctique",
+     "Océan Indien",
+     "Océan Atlantique",
+     "Océan Pacifique"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "es": {
+    "q": "¡Del más pequeño al más grande!",
+    "first": "¿Cuál es el más pequeño?",
+    "items": [
+     "Océano Ártico",
+     "Océano Índico",
+     "Océano Atlántico",
+     "Océano Pacífico"
     ],
     "labels": [
      "",
@@ -781,6 +1837,54 @@
      "2,850 km",
      "6,650 km"
     ]
+   },
+   "pl": {
+    "q": "Od najkrótszego do najdłuższego!",
+    "first": "Co jest najkrótsze?",
+    "items": [
+     "Tamiza",
+     "Ren",
+     "Dunaj",
+     "Nil"
+    ],
+    "labels": [
+     "346 km",
+     "1230 km",
+     "2850 km",
+     "6650 km"
+    ]
+   },
+   "fr": {
+    "q": "Du plus court au plus long !",
+    "first": "Lequel est le plus court ?",
+    "items": [
+     "Tamise",
+     "Rhin",
+     "Danube",
+     "Nil"
+    ],
+    "labels": [
+     "346 km",
+     "1 230 km",
+     "2 850 km",
+     "6 650 km"
+    ]
+   },
+   "es": {
+    "q": "¡Del más corto al más largo!",
+    "first": "¿Cuál es el más corto?",
+    "items": [
+     "Támesis",
+     "Rin",
+     "Danubio",
+     "Nilo"
+    ],
+    "labels": [
+     "346 km",
+     "1.230 km",
+     "2.850 km",
+     "6.650 km"
+    ]
    }
   },
   {
@@ -814,6 +1918,54 @@
      "~2 hours",
      "24 hours",
      "27 days"
+    ]
+   },
+   "pl": {
+    "q": "Od najkrótszego do najdłuższego!",
+    "first": "Co jest najkrótsze?",
+    "items": [
+     "Mecz piłkarski",
+     "Film pełnometrażowy",
+     "Jedna doba",
+     "Obieg Księżyca"
+    ],
+    "labels": [
+     "90 min",
+     "~2 godz.",
+     "24 godz.",
+     "27 dni"
+    ]
+   },
+   "fr": {
+    "q": "Du plus court au plus long !",
+    "first": "Lequel est le plus court ?",
+    "items": [
+     "Un match de foot",
+     "Un long métrage",
+     "Une journée",
+     "L'orbite de la Lune"
+    ],
+    "labels": [
+     "90 min",
+     "~2 heures",
+     "24 heures",
+     "27 jours"
+    ]
+   },
+   "es": {
+    "q": "¡Del más corto al más largo!",
+    "first": "¿Cuál es el más corto?",
+    "items": [
+     "Un partido de fútbol",
+     "Un largometraje",
+     "Un día",
+     "La órbita de la Luna"
+    ],
+    "labels": [
+     "90 min",
+     "~2 horas",
+     "24 horas",
+     "27 días"
     ]
    }
   },
@@ -849,6 +2001,54 @@
      "12 years",
      "100+ years"
     ]
+   },
+   "pl": {
+    "q": "Od najkrótszego do najdłuższego!",
+    "first": "Co jest najkrótsze?",
+    "items": [
+     "Mucha domowa",
+     "Mysz",
+     "Pies",
+     "Żółw olbrzymi"
+    ],
+    "labels": [
+     "4 tygodnie",
+     "2 lata",
+     "12 lat",
+     "100+ lat"
+    ]
+   },
+   "fr": {
+    "q": "Du plus court au plus long !",
+    "first": "Lequel est le plus court ?",
+    "items": [
+     "Mouche",
+     "Souris",
+     "Chien",
+     "Tortue géante"
+    ],
+    "labels": [
+     "4 semaines",
+     "2 ans",
+     "12 ans",
+     "100+ ans"
+    ]
+   },
+   "es": {
+    "q": "¡Del más corto al más largo!",
+    "first": "¿Cuál es el más corto?",
+    "items": [
+     "Mosca",
+     "Ratón",
+     "Perro",
+     "Tortuga gigante"
+    ],
+    "labels": [
+     "4 semanas",
+     "2 años",
+     "12 años",
+     "100+ años"
+    ]
    }
   },
   {
@@ -883,6 +2083,54 @@
      "150M km",
      "~600M km"
     ]
+   },
+   "pl": {
+    "q": "Od najbliższego do najdalszego!",
+    "first": "Co jest najbliżej?",
+    "items": [
+     "Księżyc",
+     "Mars (najbliżej)",
+     "Słońce",
+     "Jowisz"
+    ],
+    "labels": [
+     "384 tys. km",
+     "55 mln km",
+     "150 mln km",
+     "~600 mln km"
+    ]
+   },
+   "fr": {
+    "q": "Du plus proche au plus lointain !",
+    "first": "Lequel est le plus proche ?",
+    "items": [
+     "La Lune",
+     "Mars (au plus près)",
+     "Le Soleil",
+     "Jupiter"
+    ],
+    "labels": [
+     "384 000 km",
+     "55 M km",
+     "150 M km",
+     "~600 M km"
+    ]
+   },
+   "es": {
+    "q": "¡Del más cercano al más lejano!",
+    "first": "¿Cuál es el más cercano?",
+    "items": [
+     "La Luna",
+     "Marte (lo más cerca)",
+     "El Sol",
+     "Júpiter"
+    ],
+    "labels": [
+     "384.000 km",
+     "55 M km",
+     "150 M km",
+     "~600 M km"
+    ]
    }
   },
   {
@@ -910,6 +2158,54 @@
      "Mars",
      "Saturn",
      "Neptune"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "pl": {
+    "q": "Od najbliższego do najdalszego!",
+    "first": "Co jest najbliżej?",
+    "items": [
+     "Wenus",
+     "Mars",
+     "Saturn",
+     "Neptun"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "fr": {
+    "q": "Du plus proche au plus lointain !",
+    "first": "Lequel est le plus proche ?",
+    "items": [
+     "Vénus",
+     "Mars",
+     "Saturne",
+     "Neptune"
+    ],
+    "labels": [
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "es": {
+    "q": "¡Del más cercano al más lejano!",
+    "first": "¿Cuál es el más cercano?",
+    "items": [
+     "Venus",
+     "Marte",
+     "Saturno",
+     "Neptuno"
     ],
     "labels": [
      "",
@@ -951,6 +2247,54 @@
      "~70 km/h",
      "~110 km/h"
     ]
+   },
+   "pl": {
+    "q": "Od najwolniejszego do najszybszego!",
+    "first": "Co jest najwolniejsze?",
+    "items": [
+     "Ślimak",
+     "Biegnący człowiek",
+     "Koń",
+     "Gepard"
+    ],
+    "labels": [
+     "0,05 km/h",
+     "~20 km/h",
+     "~70 km/h",
+     "~110 km/h"
+    ]
+   },
+   "fr": {
+    "q": "Du plus lent au plus rapide !",
+    "first": "Lequel est le plus lent ?",
+    "items": [
+     "Escargot",
+     "Humain qui court",
+     "Cheval",
+     "Guépard"
+    ],
+    "labels": [
+     "0,05 km/h",
+     "~20 km/h",
+     "~70 km/h",
+     "~110 km/h"
+    ]
+   },
+   "es": {
+    "q": "¡Del más lento al más rápido!",
+    "first": "¿Cuál es el más lento?",
+    "items": [
+     "Caracol",
+     "Humano corriendo",
+     "Caballo",
+     "Guepardo"
+    ],
+    "labels": [
+     "0,05 km/h",
+     "~20 km/h",
+     "~70 km/h",
+     "~110 km/h"
+    ]
    }
   },
   {
@@ -978,6 +2322,54 @@
      "Car on a motorway",
      "High-speed train",
      "Airliner"
+    ],
+    "labels": [
+     "~20 km/h",
+     "~120 km/h",
+     "~300 km/h",
+     "~900 km/h"
+    ]
+   },
+   "pl": {
+    "q": "Od najwolniejszego do najszybszego!",
+    "first": "Co jest najwolniejsze?",
+    "items": [
+     "Rower",
+     "Auto na autostradzie",
+     "Szybki pociąg",
+     "Samolot pasażerski"
+    ],
+    "labels": [
+     "~20 km/h",
+     "~120 km/h",
+     "~300 km/h",
+     "~900 km/h"
+    ]
+   },
+   "fr": {
+    "q": "Du plus lent au plus rapide !",
+    "first": "Lequel est le plus lent ?",
+    "items": [
+     "Vélo",
+     "Voiture sur autoroute",
+     "TGV",
+     "Avion de ligne"
+    ],
+    "labels": [
+     "~20 km/h",
+     "~120 km/h",
+     "~300 km/h",
+     "~900 km/h"
+    ]
+   },
+   "es": {
+    "q": "¡Del más lento al más rápido!",
+    "first": "¿Cuál es el más lento?",
+    "items": [
+     "Bicicleta",
+     "Coche en autopista",
+     "Tren de alta velocidad",
+     "Avión de pasajeros"
     ],
     "labels": [
      "~20 km/h",
@@ -1019,6 +2411,54 @@
      "500 kg",
      "5,000 kg"
     ]
+   },
+   "pl": {
+    "q": "Od najlżejszego do najcięższego!",
+    "first": "Co jest najlżejsze?",
+    "items": [
+     "Królik",
+     "Owca",
+     "Koń",
+     "Słoń"
+    ],
+    "labels": [
+     "2 kg",
+     "80 kg",
+     "500 kg",
+     "5000 kg"
+    ]
+   },
+   "fr": {
+    "q": "Du plus léger au plus lourd !",
+    "first": "Lequel est le plus léger ?",
+    "items": [
+     "Lapin",
+     "Mouton",
+     "Cheval",
+     "Éléphant"
+    ],
+    "labels": [
+     "2 kg",
+     "80 kg",
+     "500 kg",
+     "5 000 kg"
+    ]
+   },
+   "es": {
+    "q": "¡Del más ligero al más pesado!",
+    "first": "¿Cuál es el más ligero?",
+    "items": [
+     "Conejo",
+     "Oveja",
+     "Caballo",
+     "Elefante"
+    ],
+    "labels": [
+     "2 kg",
+     "80 kg",
+     "500 kg",
+     "5.000 kg"
+    ]
    }
   },
   {
@@ -1052,6 +2492,54 @@
      "37M",
      "48M",
      "85M"
+    ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Norwegia",
+     "Polska",
+     "Hiszpania",
+     "Turcja"
+    ],
+    "labels": [
+     "5,5 mln",
+     "37 mln",
+     "48 mln",
+     "85 mln"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Norvège",
+     "Pologne",
+     "Espagne",
+     "Turquie"
+    ],
+    "labels": [
+     "5,5 M",
+     "37 M",
+     "48 M",
+     "85 M"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Noruega",
+     "Polonia",
+     "España",
+     "Turquía"
+    ],
+    "labels": [
+     "5,5 M",
+     "37 M",
+     "48 M",
+     "85 M"
     ]
    }
   },
@@ -1087,6 +2575,54 @@
      "3.3M",
      "15.6M"
     ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Kraków",
+     "Barcelona",
+     "Madrid",
+     "Stambuł"
+    ],
+    "labels": [
+     "0,8 mln",
+     "1,6 mln",
+     "3,3 mln",
+     "15,6 mln"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Cracovie",
+     "Barcelone",
+     "Madrid",
+     "Istanbul"
+    ],
+    "labels": [
+     "0,8 M",
+     "1,6 M",
+     "3,3 M",
+     "15,6 M"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Cracovia",
+     "Barcelona",
+     "Madrid",
+     "Estambul"
+    ],
+    "labels": [
+     "0,8 M",
+     "1,6 M",
+     "3,3 M",
+     "15,6 M"
+    ]
    }
   },
   {
@@ -1117,6 +2653,54 @@
     ],
     "labels": [
      "0 legs",
+     "2",
+     "6",
+     "8"
+    ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Wąż",
+     "Kura",
+     "Owad",
+     "Pająk"
+    ],
+    "labels": [
+     "0 nóg",
+     "2",
+     "6",
+     "8"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Serpent",
+     "Poule",
+     "Insecte",
+     "Araignée"
+    ],
+    "labels": [
+     "0 patte",
+     "2",
+     "6",
+     "8"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Serpiente",
+     "Gallina",
+     "Insecto",
+     "Araña"
+    ],
+    "labels": [
+     "0 patas",
      "2",
      "6",
      "8"
@@ -1155,6 +2739,54 @@
      "12",
      "47"
     ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Skrzypce",
+     "Gitara",
+     "Gitara 12-strunowa",
+     "Harfa"
+    ],
+    "labels": [
+     "4 struny",
+     "6",
+     "12",
+     "47"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Violon",
+     "Guitare",
+     "Guitare 12 cordes",
+     "Harpe"
+    ],
+    "labels": [
+     "4 cordes",
+     "6",
+     "12",
+     "47"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Violín",
+     "Guitarra",
+     "Guitarra de 12 cuerdas",
+     "Arpa"
+    ],
+    "labels": [
+     "4 cuerdas",
+     "6",
+     "12",
+     "47"
+    ]
    }
   },
   {
@@ -1185,6 +2817,54 @@
     ],
     "labels": [
      "1 player",
+     "5",
+     "6",
+     "11"
+    ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Tenis (singiel)",
+     "Koszykówka",
+     "Siatkówka",
+     "Piłka nożna"
+    ],
+    "labels": [
+     "1 zawodnik",
+     "5",
+     "6",
+     "11"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Tennis (simple)",
+     "Basket-ball",
+     "Volley-ball",
+     "Football"
+    ],
+    "labels": [
+     "1 joueur",
+     "5",
+     "6",
+     "11"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Tenis (individual)",
+     "Baloncesto",
+     "Voleibol",
+     "Fútbol"
+    ],
+    "labels": [
+     "1 jugador",
      "5",
      "6",
      "11"
@@ -1223,6 +2903,54 @@
      "32",
      "42"
     ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Kura",
+     "Kot",
+     "Człowiek",
+     "Pies"
+    ],
+    "labels": [
+     "0 zębów",
+     "30",
+     "32",
+     "42"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Poule",
+     "Chat",
+     "Humain",
+     "Chien"
+    ],
+    "labels": [
+     "0 dent",
+     "30",
+     "32",
+     "42"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Gallina",
+     "Gato",
+     "Humano",
+     "Perro"
+    ],
+    "labels": [
+     "0 dientes",
+     "30",
+     "32",
+     "42"
+    ]
    }
   },
   {
@@ -1257,6 +2985,54 @@
      "29",
      "32"
     ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Hawajski",
+     "Angielski",
+     "Turecki",
+     "Polski"
+    ],
+    "labels": [
+     "13 liter",
+     "26",
+     "29",
+     "32"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Hawaïen",
+     "Anglais",
+     "Turc",
+     "Polonais"
+    ],
+    "labels": [
+     "13 lettres",
+     "26",
+     "29",
+     "32"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Hawaiano",
+     "Inglés",
+     "Turco",
+     "Polaco"
+    ],
+    "labels": [
+     "13 letras",
+     "26",
+     "29",
+     "32"
+    ]
    }
   },
   {
@@ -1284,6 +3060,54 @@
      "Deck of cards",
      "Piano keys",
      "Bones in the body"
+    ],
+    "labels": [
+     "8",
+     "52",
+     "88",
+     "206"
+    ]
+   },
+   "pl": {
+    "q": "Od najmniej do najwięcej!",
+    "first": "Czego jest najmniej?",
+    "items": [
+     "Rząd szachownicy",
+     "Talia kart",
+     "Klawisze fortepianu",
+     "Kości w ciele"
+    ],
+    "labels": [
+     "8",
+     "52",
+     "88",
+     "206"
+    ]
+   },
+   "fr": {
+    "q": "Du moins au plus !",
+    "first": "Lequel en a le moins ?",
+    "items": [
+     "Rangée d'échiquier",
+     "Jeu de cartes",
+     "Touches de piano",
+     "Os du corps"
+    ],
+    "labels": [
+     "8",
+     "52",
+     "88",
+     "206"
+    ]
+   },
+   "es": {
+    "q": "¡De menos a más!",
+    "first": "¿Cuál tiene menos?",
+    "items": [
+     "Fila del tablero de ajedrez",
+     "Baraja de cartas",
+     "Teclas del piano",
+     "Huesos del cuerpo"
     ],
     "labels": [
      "8",
@@ -1325,6 +3149,54 @@
      "100 °C",
      "5,500 °C"
     ]
+   },
+   "pl": {
+    "q": "Od najzimniejszego do najgorętszego!",
+    "first": "Co jest najzimniejsze?",
+    "items": [
+     "Lód",
+     "Ludzkie ciało",
+     "Wrząca woda",
+     "Powierzchnia Słońca"
+    ],
+    "labels": [
+     "0 °C",
+     "37 °C",
+     "100 °C",
+     "5500 °C"
+    ]
+   },
+   "fr": {
+    "q": "Du plus froid au plus chaud !",
+    "first": "Lequel est le plus froid ?",
+    "items": [
+     "Glace",
+     "Corps humain",
+     "Eau bouillante",
+     "Surface du Soleil"
+    ],
+    "labels": [
+     "0 °C",
+     "37 °C",
+     "100 °C",
+     "5 500 °C"
+    ]
+   },
+   "es": {
+    "q": "¡Del más frío al más caliente!",
+    "first": "¿Cuál es el más frío?",
+    "items": [
+     "Hielo",
+     "Cuerpo humano",
+     "Agua hirviendo",
+     "Superficie del Sol"
+    ],
+    "labels": [
+     "0 °C",
+     "37 °C",
+     "100 °C",
+     "5.500 °C"
+    ]
    }
   },
   {
@@ -1359,6 +3231,54 @@
      "110 dB",
      "140 dB"
     ]
+   },
+   "pl": {
+    "q": "Od najcichszego do najgłośniejszego!",
+    "first": "Co jest najcichsze?",
+    "items": [
+     "Szept",
+     "Rozmowa",
+     "Koncert rockowy",
+     "Silnik odrzutowy"
+    ],
+    "labels": [
+     "30 dB",
+     "60 dB",
+     "110 dB",
+     "140 dB"
+    ]
+   },
+   "fr": {
+    "q": "Du plus silencieux au plus bruyant !",
+    "first": "Lequel est le plus silencieux ?",
+    "items": [
+     "Un murmure",
+     "Conversation",
+     "Concert de rock",
+     "Moteur à réaction"
+    ],
+    "labels": [
+     "30 dB",
+     "60 dB",
+     "110 dB",
+     "140 dB"
+    ]
+   },
+   "es": {
+    "q": "¡Del más silencioso al más ruidoso!",
+    "first": "¿Cuál es el más silencioso?",
+    "items": [
+     "Un susurro",
+     "Conversación",
+     "Concierto de rock",
+     "Motor a reacción"
+    ],
+    "labels": [
+     "30 dB",
+     "60 dB",
+     "110 dB",
+     "140 dB"
+    ]
    }
   }
  ],
@@ -1368,238 +3288,340 @@
    "kind": "melody",
    "tr": "Neşeye Övgü",
    "en": "Ode to Joy",
-   "composer": "Beethoven"
+   "composer": "Beethoven",
+   "pl": "Oda do radości",
+   "fr": "Hymne à la joie",
+   "es": "Himno de la alegría"
   },
   {
    "id": "twinkle",
    "kind": "melody",
    "tr": "Parla Parla Küçük Yıldız",
    "en": "Twinkle Twinkle Little Star",
-   "composer": ""
+   "composer": "",
+   "pl": "Błyszcz, gwiazdko, błyszcz",
+   "fr": "Ah ! vous dirai-je, maman",
+   "es": "Estrellita, ¿dónde estás?"
   },
   {
    "id": "frere",
    "kind": "melody",
    "tr": "Frère Jacques",
    "en": "Frère Jacques",
-   "composer": ""
+   "composer": "",
+   "pl": "Frère Jacques",
+   "fr": "Frère Jacques",
+   "es": "Frère Jacques"
   },
   {
    "id": "birthday",
    "kind": "melody",
    "tr": "İyi ki Doğdun",
    "en": "Happy Birthday",
-   "composer": ""
+   "composer": "",
+   "pl": "Sto lat (Happy Birthday)",
+   "fr": "Joyeux anniversaire",
+   "es": "Cumpleaños feliz"
   },
   {
    "id": "elise",
    "kind": "melody",
    "tr": "Für Elise",
    "en": "Für Elise",
-   "composer": "Beethoven"
+   "composer": "Beethoven",
+   "pl": "Für Elise",
+   "fr": "Für Elise",
+   "es": "Für Elise"
   },
   {
    "id": "fifth",
    "kind": "melody",
    "tr": "5. Senfoni",
    "en": "Symphony No. 5",
-   "composer": "Beethoven"
+   "composer": "Beethoven",
+   "pl": "V Symfonia",
+   "fr": "Symphonie n° 5",
+   "es": "Sinfonía n.º 5"
   },
   {
    "id": "jingle",
    "kind": "melody",
    "tr": "Jingle Bells",
    "en": "Jingle Bells",
-   "composer": ""
+   "composer": "",
+   "pl": "Jingle Bells",
+   "fr": "Jingle Bells",
+   "es": "Jingle Bells"
   },
   {
    "id": "mary",
    "kind": "melody",
    "tr": "Mary'nin Küçük Kuzusu",
    "en": "Mary Had a Little Lamb",
-   "composer": ""
+   "composer": "",
+   "pl": "Mary miała małą owieczkę",
+   "fr": "Mary avait un petit agneau",
+   "es": "María tenía un corderito"
   },
   {
    "id": "turca",
    "kind": "melody",
    "tr": "Türk Marşı",
    "en": "Turkish March",
-   "composer": "Mozart"
+   "composer": "Mozart",
+   "pl": "Marsz turecki",
+   "fr": "Marche turque",
+   "es": "Marcha turca"
   },
   {
    "id": "mountain",
    "kind": "melody",
    "tr": "Dağ Kralının Salonunda",
    "en": "In the Hall of the Mountain King",
-   "composer": "Grieg"
+   "composer": "Grieg",
+   "pl": "W grocie Króla Gór",
+   "fr": "Dans l'antre du roi de la montagne",
+   "es": "En la gruta del rey de la montaña"
   },
   {
    "id": "lullaby",
    "kind": "melody",
    "tr": "Brahms Ninnisi",
    "en": "Brahms' Lullaby",
-   "composer": "Brahms"
+   "composer": "Brahms",
+   "pl": "Kołysanka Brahmsa",
+   "fr": "Berceuse de Brahms",
+   "es": "Canción de cuna de Brahms"
   },
   {
    "id": "cucaracha",
    "kind": "melody",
    "tr": "La Cucaracha",
    "en": "La Cucaracha",
-   "composer": ""
+   "composer": "",
+   "pl": "La Cucaracha",
+   "fr": "La Cucaracha",
+   "es": "La Cucaracha"
   },
   {
    "id": "danube",
    "kind": "melody",
    "tr": "Mavi Tuna",
    "en": "The Blue Danube",
-   "composer": "Strauss"
+   "composer": "Strauss",
+   "pl": "Nad pięknym modrym Dunajem",
+   "fr": "Le Beau Danube bleu",
+   "es": "El Danubio azul"
   },
   {
    "id": "nacht",
    "kind": "melody",
    "tr": "Küçük Bir Gece Müziği",
    "en": "Eine kleine Nachtmusik",
-   "composer": "Mozart"
+   "composer": "Mozart",
+   "pl": "Mała nocna muzyka",
+   "fr": "Petite musique de nuit",
+   "es": "Pequeña serenata nocturna"
   },
   {
    "id": "wedding",
    "kind": "melody",
    "tr": "Gelin Korosu (Düğün Marşı)",
    "en": "Bridal Chorus (Here Comes the Bride)",
-   "composer": "Wagner"
+   "composer": "Wagner",
+   "pl": "Chór weselny (marsz weselny)",
+   "fr": "Chœur nuptial (marche nuptiale)",
+   "es": "Coro nupcial (marcha nupcial)"
   },
   {
    "id": "oldmac",
    "kind": "melody",
    "tr": "Old MacDonald'ın Çiftliği",
    "en": "Old MacDonald Had a Farm",
-   "composer": ""
+   "composer": "",
+   "pl": "Old MacDonald miał farmę",
+   "fr": "Old MacDonald avait une ferme",
+   "es": "El viejo MacDonald tenía una granja"
   },
   {
    "id": "london",
    "kind": "melody",
    "tr": "Londra Köprüsü Yıkılıyor",
    "en": "London Bridge Is Falling Down",
-   "composer": ""
+   "composer": "",
+   "pl": "London Bridge Is Falling Down",
+   "fr": "London Bridge Is Falling Down",
+   "es": "London Bridge Is Falling Down"
   },
   {
    "id": "habanera",
    "kind": "melody",
    "tr": "Habanera (Carmen)",
    "en": "Habanera (Carmen)",
-   "composer": "Bizet"
+   "composer": "Bizet",
+   "pl": "Habanera (Carmen)",
+   "fr": "Habanera (Carmen)",
+   "es": "Habanera (Carmen)"
   },
   {
    "id": "greensleeves",
    "kind": "melody",
    "tr": "Greensleeves",
    "en": "Greensleeves",
-   "composer": ""
+   "composer": "",
+   "pl": "Greensleeves",
+   "fr": "Greensleeves",
+   "es": "Greensleeves"
   },
   {
    "id": "siren",
    "kind": "sfx",
    "tr": "Ambulans sireni",
    "en": "Ambulance siren",
-   "composer": ""
+   "composer": "",
+   "pl": "Syrena karetki",
+   "fr": "Sirène d'ambulance",
+   "es": "Sirena de ambulancia"
   },
   {
    "id": "doorbell",
    "kind": "sfx",
    "tr": "Kapı zili",
    "en": "Doorbell",
-   "composer": ""
+   "composer": "",
+   "pl": "Dzwonek do drzwi",
+   "fr": "Sonnette",
+   "es": "Timbre"
   },
   {
    "id": "phone",
    "kind": "sfx",
    "tr": "Eski telefon zili",
    "en": "Old telephone ringing",
-   "composer": ""
+   "composer": "",
+   "pl": "Dzwonek starego telefonu",
+   "fr": "Sonnerie de vieux téléphone",
+   "es": "Timbre de teléfono antiguo"
   },
   {
    "id": "clock",
    "kind": "sfx",
    "tr": "Duvar saati",
    "en": "Wall clock",
-   "composer": ""
+   "composer": "",
+   "pl": "Zegar ścienny",
+   "fr": "Horloge murale",
+   "es": "Reloj de pared"
   },
   {
    "id": "train",
    "kind": "sfx",
    "tr": "Buharlı tren",
    "en": "Steam train",
-   "composer": ""
+   "composer": "",
+   "pl": "Parowóz",
+   "fr": "Train à vapeur",
+   "es": "Tren de vapor"
   },
   {
    "id": "rain",
    "kind": "sfx",
    "tr": "Yağmur",
    "en": "Rain",
-   "composer": ""
+   "composer": "",
+   "pl": "Deszcz",
+   "fr": "Pluie",
+   "es": "Lluvia"
   },
   {
    "id": "thunder",
    "kind": "sfx",
    "tr": "Gök gürültüsü",
    "en": "Thunder",
-   "composer": ""
+   "composer": "",
+   "pl": "Grzmot",
+   "fr": "Tonnerre",
+   "es": "Trueno"
   },
   {
    "id": "church",
    "kind": "sfx",
    "tr": "Kilise çanı",
    "en": "Church bell",
-   "composer": ""
+   "composer": "",
+   "pl": "Dzwon kościelny",
+   "fr": "Cloche d'église",
+   "es": "Campana de iglesia"
   },
   {
    "id": "cuckoo",
    "kind": "sfx",
    "tr": "Guguklu saat",
    "en": "Cuckoo clock",
-   "composer": ""
+   "composer": "",
+   "pl": "Zegar z kukułką",
+   "fr": "Coucou",
+   "es": "Reloj de cuco"
   },
   {
    "id": "car_horn",
    "kind": "sfx",
    "tr": "Araba kornası",
    "en": "Car horn",
-   "composer": ""
+   "composer": "",
+   "pl": "Klakson",
+   "fr": "Klaxon",
+   "es": "Claxon"
   },
   {
    "id": "ship_horn",
    "kind": "sfx",
    "tr": "Gemi düdüğü",
    "en": "Ship horn",
-   "composer": ""
+   "composer": "",
+   "pl": "Syrena statku",
+   "fr": "Corne de brume",
+   "es": "Sirena de barco"
   },
   {
    "id": "whistle",
    "kind": "sfx",
    "tr": "Hakem düdüğü",
    "en": "Referee whistle",
-   "composer": ""
+   "composer": "",
+   "pl": "Gwizdek sędziego",
+   "fr": "Sifflet d'arbitre",
+   "es": "Silbato del árbitro"
   },
   {
    "id": "heartbeat",
    "kind": "sfx",
    "tr": "Kalp atışı",
    "en": "Heartbeat",
-   "composer": ""
+   "composer": "",
+   "pl": "Bicie serca",
+   "fr": "Battements de cœur",
+   "es": "Latidos del corazón"
   },
   {
    "id": "popcorn",
    "kind": "sfx",
    "tr": "Patlayan mısır",
    "en": "Popcorn popping",
-   "composer": ""
+   "composer": "",
+   "pl": "Prażący się popcorn",
+   "fr": "Pop-corn qui éclate",
+   "es": "Palomitas estallando"
   },
   {
    "id": "typewriter",
    "kind": "sfx",
    "tr": "Daktilo",
    "en": "Typewriter",
-   "composer": ""
+   "composer": "",
+   "pl": "Maszyna do pisania",
+   "fr": "Machine à écrire",
+   "es": "Máquina de escribir"
   }
  ],
  "composers": [

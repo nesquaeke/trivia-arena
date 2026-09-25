@@ -3,6 +3,7 @@
 
   order   Sıralama setleri (Order Chaos): 4 öğe, DOĞRU SIRAYLA yazılır; oyun karıştırır.
           Satır: "TR soru | EN soru | TR ilk-adım | EN ilk-adım | tr~en=etiket ; ..."
+          PL/FR/ES metinleri mayhem_i18n.tsv'den gelir (EN metni anahtar; aynı EN iki anlamdaysa "tr:<TR metni>").
   sounds  Kulağına Güven: tools/music/mayhem_sounds.py'nin ürettiği dosyaların adları.
 
 Kullanım: python3 game/tools/questions/mayhem_pack.py
@@ -103,6 +104,28 @@ SOUNDS = [
     ("popcorn", "sfx", "Patlayan mısır", "Popcorn popping", ""),
     ("typewriter", "sfx", "Daktilo", "Typewriter", ""),
 ]
+XLANGS = ["pl", "fr", "es"]
+
+
+def load_i18n():
+    tab = {}
+    with open(os.path.join(ROOT, "mayhem_i18n.tsv"), encoding="utf-8") as f:
+        for line in f:
+            if not line.strip() or line.startswith("#"):
+                continue
+            p = line.rstrip("\n").split("\t")
+            assert len(p) == 4, line
+            tab[p[0]] = dict(zip(XLANGS, p[1:]))
+    return tab
+
+
+def tr_(tab, lang, en, tr=""):
+    """EN metnin çevirisi; yoksa (sayı, özel ad) EN aynen"""
+    row = tab.get("tr:" + tr) if tr else None
+    row = row or tab.get(en)
+    return row[lang] if row else en
+
+
 COMPOSERS = ["Beethoven", "Mozart", "Bach", "Chopin", "Grieg", "Brahms", "Strauss", "Wagner", "Bizet", "Vivaldi"]
 
 
@@ -126,15 +149,26 @@ def parse_item(tok):
 
 
 def main():
+    tab = load_i18n()
     order = []
     for (hdr, row) in ORDER:
         items = [parse_item(t) for t in row.split("|")]
         assert len(items) == 4, row
-        order.append({
+        o = {
             "tr": {"q": hdr[0], "first": hdr[2], "items": [i["tr"] for i in items], "labels": [i["ltr"] for i in items]},
             "en": {"q": hdr[1], "first": hdr[3], "items": [i["en"] for i in items], "labels": [i["len"] for i in items]},
-        })
-    sounds = [{"id": s[0], "kind": s[1], "tr": s[2], "en": s[3], "composer": s[4]} for s in SOUNDS]
+        }
+        for l in XLANGS:
+            o[l] = {"q": tr_(tab, l, hdr[1]), "first": tr_(tab, l, hdr[3]),
+                    "items": [tr_(tab, l, i["en"], i["tr"]) for i in items],
+                    "labels": [tr_(tab, l, i["len"]) for i in items]}
+        order.append(o)
+    sounds = []
+    for s in SOUNDS:
+        row = {"id": s[0], "kind": s[1], "tr": s[2], "en": s[3], "composer": s[4]}
+        for l in XLANGS:
+            row[l] = tr_(tab, l, s[3])
+        sounds.append(row)
     for s in sounds:
         path = os.path.join(ROOT, "..", "..", "assets", "audio", "mayhem", s["id"] + ".ogg")
         assert os.path.exists(path), "ses dosyası yok: " + s["id"]

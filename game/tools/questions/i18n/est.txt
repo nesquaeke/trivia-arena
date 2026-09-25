@@ -1,0 +1,392 @@
+@E56f918e1
+W którym roku wynaleziono prasę drukarską?	
+En quelle année l'imprimerie a-t-elle été inventée ?	
+¿En qué año se inventó la imprenta?	
+@E67c772b3
+W którym roku człowiek po raz pierwszy stanął na Księżycu?	
+En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?	
+¿En qué año pisó el ser humano la Luna por primera vez?	
+@E1d585c26
+W którym roku zdobyto Stambuł (Konstantynopol)?	
+En quelle année Istanbul (Constantinople) a-t-elle été conquise ?	
+¿En qué año fue conquistada Estambul (Constantinopla)?	
+@E17c6b3ab
+W którym roku wybuchła rewolucja francuska?	
+En quelle année la Révolution française a-t-elle commencé ?	
+¿En qué año comenzó la Revolución francesa?	
+@E3b8e6697
+Ile metrów wysokości ma Mount Everest?	m
+Combien de mètres mesure l'Everest ?	m
+¿Cuántos metros de altura tiene el Everest?	m
+@E6f31e84f
+Ile kości ma szkielet dorosłego człowieka?	
+Combien d'os compte le squelette d'un adulte ?	
+¿Cuántos huesos tiene el esqueleto humano adulto?	
+@E2e80d4ac
+Ile kilometrów liczy maraton?	km
+Combien de kilomètres fait un marathon ?	km
+¿Cuántos kilómetros tiene un maratón?	km
+@Ef2ea172e
+Ile minut potrzebuje światło słoneczne, by dotrzeć do Ziemi?	min
+Combien de minutes la lumière du Soleil met-elle pour atteindre la Terre ?	min
+¿Cuántos minutos tarda la luz del Sol en llegar a la Tierra?	min
+@E87e5d709
+Ile kilometrów wynosi obwód Ziemi na równiku?	km
+Combien de kilomètres mesure la circonférence de la Terre à l'équateur ?	km
+¿Cuántos kilómetros mide la circunferencia de la Tierra en el ecuador?	km
+@Ea32c7664
+Ile metrów wysokości ma wieża Eiffla?	m
+Combien de mètres mesure la tour Eiffel ?	m
+¿Cuántos metros de altura tiene la torre Eiffel?	m
+@E3ca2a9c8
+Ile godzin ma rok?	h
+Combien d'heures y a-t-il dans une année ?	h
+¿Cuántas horas tiene un año?	h
+@Ead1d3ed1
+Jak głęboki jest Pacyfik w najgłębszym miejscu (w metrach)?	m
+Quelle est la profondeur maximale du Pacifique, en mètres ?	m
+¿Qué profundidad tiene el Pacífico en su punto más hondo, en metros?	m
+@E9e6990ab
+Ile kilometrów średnio dzieli nas od Księżyca?	km
+À combien de kilomètres se trouve la Lune en moyenne ?	km
+¿A cuántos kilómetros está la Luna de media?	km
+@E57577649
+Ile razy na dobę bije ludzkie serce?	uderzeń
+Combien de fois le cœur humain bat-il par jour ?	battements
+¿Cuántas veces late el corazón humano en un día?	latidos
+@Eeb07ff8f
+Ile milionów ludzi mieszka w Turcji?	mln
+Quelle est la population de la Turquie, en millions ?	millions
+¿Cuál es la población de Turquía, en millones?	millones
+@E83a427b7
+Ile kilometrów długości ma Nil?	km
+Combien de kilomètres mesure le Nil ?	km
+¿Cuántos kilómetros de largo tiene el Nilo?	km
+@E40fc2cf4
+Jaka jest maksymalna długość boiska piłkarskiego (w metrach)?	m
+Quelle est la longueur maximale d'un terrain de football, en mètres ?	m
+¿Cuál es la longitud máxima de un campo de fútbol, en metros?	m
+@E776c99f2
+Jaka jest powierzchnia lądowa Turcji w kilometrach kwadratowych?	km²
+Quelle est la superficie terrestre de la Turquie, en kilomètres carrés ?	km²
+¿Cuál es la superficie terrestre de Turquía en kilómetros cuadrados?	km²
+@E412bd628
+Ile dni zajmuje Księżycowi okrążenie Ziemi?	dni
+En combien de jours la Lune fait-elle le tour de la Terre ?	jours
+¿Cuántos días tarda la Luna en dar la vuelta a la Tierra?	días
+@Ec56700c3
+Ile kręgów ma szyja żyrafy?	
+Combien de vertèbres compte le cou d'une girafe ?	
+¿Cuántas vértebras tiene el cuello de una jirafa?	
+@E75d0cd6a
+Ile kilometrów pokonuje światło w próżni w ciągu sekundy?	km
+Combien de kilomètres la lumière parcourt-elle par seconde dans le vide ?	km
+¿Cuántos kilómetros recorre la luz por segundo en el vacío?	km
+@E1cb3595f
+W którym roku zatonął Titanic?	
+En quelle année le Titanic a-t-il coulé ?	
+¿En qué año se hundió el Titanic?	
+@E6cad48d9
+Ile metrów wysokości ma najwyższy budynek świata?	m
+Combien de mètres mesure le plus haut bâtiment du monde ?	m
+¿Cuántos metros mide el edificio más alto del mundo?	m
+@E38fa2c78
+Ile litrów krwi ma ludzkie ciało?	litrów
+Combien de litres de sang contient le corps humain ?	litres
+¿Cuántos litros de sangre hay en el cuerpo humano?	litros
+@E5f495c4b
+Ile kilometrów długości ma Wielki Mur Chiński?	km
+Combien de kilomètres mesure la Grande Muraille de Chine ?	km
+¿Cuántos kilómetros de largo tiene la Gran Muralla china?	km
+@Ed41519de
+Jaka jest powierzchnia Polski w kilometrach kwadratowych?	km²
+Quelle est la superficie de la Pologne, en kilomètres carrés ?	km²
+¿Cuál es la superficie de Polonia en kilómetros cuadrados?	km²
+@E7d1d7fe0
+Ile państw należy do ONZ?	
+Combien de pays sont membres de l'ONU ?	
+¿Cuántos países son miembros de la ONU?	
+@E6f6dbfbb
+Ilu mieszkańców liczy Warszawa?	osób
+Quelle est la population de Varsovie ?	habitants
+¿Cuál es la población de Varsovia?	habitantes
+@Ee602d874
+Ilu mieszkańców liczy Stambuł?	osób
+Quelle est la population d'Istanbul ?	habitants
+¿Cuál es la población de Estambul?	habitantes
+@Ea558cf75
+Jak głębokie jest Morze Śródziemne w najgłębszym miejscu (w metrach)?	m
+Quelle est la profondeur maximale de la Méditerranée, en mètres ?	m
+¿Qué profundidad tiene el Mediterráneo en su punto más hondo, en metros?	m
+@Eafe1796c
+Ile kilometrów kwadratowych zajmowało Cesarstwo Rzymskie w szczytowym okresie?	km²
+À son apogée, combien de kilomètres carrés couvrait l'Empire romain ?	km²
+En su apogeo, ¿cuántos kilómetros cuadrados abarcaba el Imperio romano?	km²
+@Ea739343f
+Ile jest niepodległych państw wyspiarskich?	
+Combien y a-t-il de pays insulaires indépendants ?	
+¿Cuántos países insulares independientes hay?	
+@Eeacf8d4b
+Jaka jest średnia głębokość Morza Bałtyckiego w metrach?	m
+Quelle est la profondeur moyenne de la mer Baltique, en mètres ?	m
+¿Cuál es la profundidad media del mar Báltico en metros?	m
+@E6c82f36d
+Ile milionów ludzi mieszka w Japonii?	mln
+Combien de millions de personnes vivent au Japon ?	millions
+¿Cuántos millones de personas viven en Japón?	millones
+@E28c200bd
+Ile prowincji ma Turcja?	
+Combien de provinces compte la Turquie ?	
+¿Cuántas provincias tiene Turquía?	
+@E257a19ae
+W którym roku proklamowano Republikę Turcji?	
+En quelle année la République de Turquie a-t-elle été proclamée ?	
+¿En qué año se proclamó la República de Turquía?	
+@Eda351d74
+Ile dni ma rok nieprzestępny?	dni
+Combien de jours compte une année non bissextile ?	jours
+¿Cuántos días tiene un año no bisiesto?	días
+@E5bc8b5be
+Ile dni ma tydzień?	
+Combien de jours compte une semaine ?	
+¿Cuántos días tiene una semana?	
+@E9dbf780b
+Ilu zawodników wystawia drużyna piłkarska na boisko?	
+Combien de joueurs une équipe de football aligne-t-elle ?	
+¿Cuántos jugadores alinea un equipo de fútbol?	
+@Ee0c7715b
+Ile klawiszy ma standardowy fortepian?	
+Combien de touches compte un piano standard ?	
+¿Cuántas teclas tiene un piano estándar?	
+@E93700b7b
+W którym roku odbyła się bitwa pod Manzikertem?	
+En quelle année a eu lieu la bataille de Manzikert ?	
+¿En qué año fue la batalla de Manzikert?	
+@E099526d3
+W którym roku Kolumb dotarł do Ameryki?	
+En quelle année Christophe Colomb a-t-il atteint l'Amérique ?	
+¿En qué año llegó Colón a América?	
+@E1ffca72f
+W ilu °C wrze woda na poziomie morza?	°C
+Au niveau de la mer, l'eau bout à combien de °C ?	°C
+¿A cuántos °C hierve el agua al nivel del mar?	°C
+@E1d37f026
+Ile godzin ma doba?	godz.
+Combien d'heures compte une journée ?	heures
+¿Cuántas horas tiene un día?	horas
+@E8096169a
+Ile mniej więcej tygodni ma rok?	tygodni
+Combien de semaines environ compte une année ?	semaines
+¿Cuántas semanas tiene aproximadamente un año?	semanas
+@E10d90799
+Ile nóg ma pająk?	
+Combien de pattes a une araignée ?	
+¿Cuántas patas tiene una araña?	
+@Ee5070de3
+Ile zębów ma dorosły człowiek?	
+Combien de dents a un adulte ?	
+¿Cuántos dientes tiene un adulto?	
+@E739e4469
+W którym roku urodził się Atatürk?	
+En quelle année Atatürk est-il né ?	
+¿En qué año nació Atatürk?	
+@E613e5681
+Obawy przed pluskwą milenijną (Y2K) pojawiły się na przełomie którego roku?	
+Les craintes du bug de l'an 2000 (Y2K) sont apparues au passage de quelle année ?	
+¿En el cambio de qué año surgió el miedo al efecto 2000 (Y2K)?	
+@Efeed74ea
+Ile minut trwa zwykły mecz piłkarski?	min
+Combien de minutes dure un match de football normal ?	min
+¿Cuántos minutos dura un partido de fútbol normal?	min
+@E4ebb06aa
+Ile metrów wysokości ma Ararat?	m
+Combien de mètres mesure le mont Ararat ?	m
+¿Cuántos metros de altura tiene el monte Ararat?	m
+@E4a5b9f33
+Ile liter ma alfabet turecki?	
+Combien de lettres compte l'alphabet turc ?	
+¿Cuántas letras tiene el alfabeto turco?	
+@Ede20a55b
+Ile minut ma godzina?	min
+Combien de minutes y a-t-il dans une heure ?	min
+¿Cuántos minutos tiene una hora?	min
+@Ebdfa1451
+Ile miesięcy ma rok?	
+Combien de mois compte une année ?	
+¿Cuántos meses tiene un año?	
+@E1779ca8d
+Ile boków ma trójkąt?	
+Combien de côtés a un triangle ?	
+¿Cuántos lados tiene un triángulo?	
+@Eff3b84d2
+W którym roku wybuchła I wojna światowa?	
+En quelle année la Première Guerre mondiale a-t-elle commencé ?	
+¿En qué año comenzó la Primera Guerra Mundial?	
+@E68502308
+W którym roku wybuchła II wojna światowa?	
+En quelle année la Seconde Guerre mondiale a-t-elle commencé ?	
+¿En qué año comenzó la Segunda Guerra Mundial?	
+@E04488037
+Co ile lat odbywają się piłkarskie mistrzostwa świata?	lat
+Tous les combien d'années la Coupe du monde de football a-t-elle lieu ?	ans
+¿Cada cuántos años se celebra el Mundial de fútbol?	años
+@E8da75280
+Ile stanów mają Stany Zjednoczone?	
+Combien d'États comptent les États-Unis ?	
+¿Cuántos estados tiene EE. UU.?	
+@Ea7592bd6
+Ile planet jest w Układzie Słonecznym?	
+Combien de planètes compte le Système solaire ?	
+¿Cuántos planetas hay en el sistema solar?	
+@E3d30fa92
+Ile godzin dziennie śpi średnio kot?	godz.
+Combien d'heures par jour un chat dort-il en moyenne ?	heures
+¿Cuántas horas al día duerme de media un gato?	horas
+@Ee10a566b
+W którym roku ukończono wieżę Eiffla?	
+En quelle année la tour Eiffel a-t-elle été achevée ?	
+¿En qué año se terminó la torre Eiffel?	
+@Ee83acf84
+Ile metrów wysokości ma wieża Eiffla razem z antenami?	metrów
+Combien de mètres mesure la tour Eiffel avec ses antennes ?	mètres
+¿Cuántos metros mide la torre Eiffel con sus antenas?	metros
+@E643a2571
+Ile mniej więcej metrów pokonuje ślimak winniczek w ciągu godziny?	metrów
+Combien de mètres environ un escargot de jardin parcourt-il en une heure ?	mètres
+¿Cuántos metros recorre aproximadamente un caracol de jardín en una hora?	metros
+@E24b40fb9
+Jaka jest maksymalna prędkość skaczącego kangura (w km/h)?	km/h
+Quelle est la vitesse maximale d'un kangourou en bondissant, en km/h ?	km/h
+¿Cuál es la velocidad máxima de un canguro saltando, en km/h?	km/h
+@E43d37054
+Ile ramion ma ośmiornica?	ramion
+Combien de bras a une pieuvre ?	bras
+¿Cuántos brazos tiene un pulpo?	brazos
+@E98781e45
+Ile kości ma ciało dorosłego człowieka?	kości
+Combien d'os compte le corps d'un adulte ?	os
+¿Cuántos huesos tiene el cuerpo humano adulto?	huesos
+@Ebca930ca
+Z iloma mniej więcej kośćmi rodzi się niemowlę?	kości
+Avec combien d'os environ un bébé naît-il ?	os
+¿Con cuántos huesos nace aproximadamente un bebé?	huesos
+@E0d12e33d
+W którym roku ukazała się pierwsza książka o Harrym Potterze?	
+En quelle année le premier livre d'Harry Potter a-t-il été publié ?	
+¿En qué año se publicó el primer libro de Harry Potter?	
+@E6f17f9d3
+W którym roku ukazała się pierwsza gra „Super Mario Bros.”?	
+En quelle année le premier « Super Mario Bros. » est-il sorti ?	
+¿En qué año salió el primer «Super Mario Bros.»?	
+@Eadaff71a
+W którym roku w Japonii zadebiutowało pierwsze PlayStation?	
+En quelle année la première PlayStation est-elle sortie au Japon ?	
+¿En qué año se lanzó la primera PlayStation en Japón?	
+@E600ba115
+Ile kilogramów czekolady zjada rocznie przeciętny Szwajcar?	kg
+Combien de kilos de chocolat un Suisse moyen mange-t-il par an ?	kg
+¿Cuántos kilos de chocolate come al año un suizo medio?	kg
+@Ed871b595
+Ile sekund trwał najdłuższy zarejestrowany lot kury?	sekund
+Combien de secondes a duré le plus long vol de poule jamais enregistré ?	secondes
+¿Cuántos segundos duró el vuelo de gallina más largo registrado?	segundos
+@Edb07a76e
+Ile mniej więcej lat żyje chomik?	lat
+Combien d'années environ vit un hamster ?	ans
+¿Cuántos años vive aproximadamente un hámster?	años
+@E190c686c
+Ile lat średnio żyje pies?	lat
+Combien d'années un chien vit-il en moyenne ?	ans
+¿Cuántos años vive un perro de media?	años
+@E22ba6148
+W którym roku Barcelona gościła letnie igrzyska olimpijskie?	
+En quelle année Barcelone a-t-elle accueilli les Jeux olympiques d'été ?	
+¿En qué año acogió Barcelona los Juegos Olímpicos de verano?	
+@Ecbfdc67f
+W którym roku opublikowano w Polsce pierwsze opowiadanie o Wiedźminie?	
+En quelle année la première nouvelle du Sorceleur a-t-elle été publiée en Pologne ?	
+¿En qué año se publicó en Polonia el primer relato de The Witcher?	
+@Ec082d694
+W którym roku ukazała się pierwsza część „Don Kichota”?	
+En quelle année la première partie de « Don Quichotte » a-t-elle été publiée ?	
+¿En qué año se publicó la primera parte del «Quijote»?	
+@Ebdb68075
+W którym roku urodził się papież Jan Paweł II (Karol Wojtyła)?	
+En quelle année le pape Jean-Paul II (Karol Wojtyła) est-il né ?	
+¿En qué año nació el papa Juan Pablo II (Karol Wojtyła)?	
+@Ec007f317
+W którym roku po raz pierwszy pojawiła się Myszka Miki?	
+En quelle année Mickey Mouse est-il apparu pour la première fois ?	
+¿En qué año apareció Mickey Mouse por primera vez?	
+@E55360d27
+W którym roku odbył się festiwal Woodstock?	
+En quelle année le festival de Woodstock a-t-il eu lieu ?	
+¿En qué año se celebró el festival de Woodstock?	
+@E573adc14
+Jaka jest maksymalna prędkość geparda (w km/h)?	km/h
+Quelle est la vitesse maximale d'un guépard, en km/h ?	km/h
+¿Cuál es la velocidad máxima de un guepardo, en km/h?	km/h
+@E5402fe2c
+Ile mniej więcej włosów człowiek traci dziennie?	włosów
+Combien de cheveux environ perd-on par jour ?	cheveux
+¿Cuántos pelos pierde aproximadamente una persona al día?	pelos
+@Ef9c6328c
+Ile mniej więcej tysięcy włosów ma dorosły na głowie?	tys.
+Combien de milliers de cheveux environ un adulte a-t-il sur la tête ?	milliers
+¿Cuántos miles de pelos tiene aproximadamente un adulto en la cabeza?	mil
+@Eb2f14641
+Ile mniej więcej tygodni żyje mucha domowa?	tygodni
+Combien de semaines environ vit une mouche domestique ?	semaines
+¿Cuántas semanas vive aproximadamente una mosca doméstica?	semanas
+@Eea5c0de8
+Ile minut ma doba?	minut
+Combien de minutes compte une journée ?	minutes
+¿Cuántos minutos tiene un día?	minutos
+@E7287d8dc
+Ile mniej więcej centymetrów mierzy nowonarodzony kangur?	cm
+Combien de centimètres environ mesure un kangourou nouveau-né ?	cm
+¿Cuántos centímetros mide aproximadamente un canguro recién nacido?	cm
+@E74fb959d
+Ile minut trwa pomidorowa bitwa La Tomatina?	minut
+Combien de minutes dure la bataille de tomates de La Tomatina ?	minutes
+¿Cuántos minutos dura la batalla de tomates de La Tomatina?	minutos
+@E30827050
+Tona pierza kontra tona żelaza: o ile kilogramów żelazo jest cięższe?	kg
+Une tonne de plumes contre une tonne de fer : de combien de kilos le fer est-il plus lourd ?	kg
+Una tonelada de plumas contra una de hierro: ¿cuántos kilos pesa más el hierro?	kg
+@Eca707122
+Do ilu godzin na dobę może spać koala?	godz.
+Jusqu'à combien d'heures par jour un koala peut-il dormir ?	heures
+¿Hasta cuántas horas al día puede dormir un koala?	horas
+@E5c005db6
+Ile mniej więcej ton jedzenia człowiek zjada w ciągu życia?	ton
+Combien de tonnes de nourriture environ une personne mange-t-elle dans sa vie ?	tonnes
+¿Cuántas toneladas de comida come aproximadamente una persona en su vida?	toneladas
+@E7b9a0205
+Ile mniej więcej tysięcy kroków dziennie stawia przeciętny człowiek?	tys. kroków
+Combien de milliers de pas une personne fait-elle environ par jour ?	milliers de pas
+¿Cuántos miles de pasos da aproximadamente una persona al día?	mil pasos
+@E17788ae9
+Ile mniej więcej trylionów (10^18) układów ma kostka Rubika?	trylionów
+Le Rubik's Cube compte environ combien de trillions (10^18) de positions ?	trillions
+¿Cuántos trillones (10^18) de posiciones tiene aproximadamente el cubo de Rubik?	trillones
+@E52867082
+Ile razy w tygodniu leniwiec schodzi z drzewa, by zrobić kupę?	razy
+Combien de fois par semaine un paresseux descend-il pour faire ses besoins ?	fois
+¿Cuántas veces por semana baja un perezoso a hacer caca?	veces
+@E7fc45d10
+Ile kręgów szyjnych ma żyrafa? (podpowiedź: tyle co ty)	kręgów
+Combien de vertèbres cervicales a une girafe ? (indice : autant que vous)	vertèbres
+¿Cuántas vértebras cervicales tiene una jirafa? (pista: las mismas que tú)	vértebras
+@Edac68d33
+Ile kręgów ma ludzka szyja?	kręgów
+Combien de vertèbres compte le cou humain ?	vertèbres
+¿Cuántas vértebras tiene el cuello humano?	vértebras
+@E536b4f25
+W którym roku Kolumb wypłynął z Hiszpanii i dotarł do Ameryki?	
+En quelle année Christophe Colomb est-il parti d'Espagne et a-t-il atteint l'Amérique ?	
+¿En qué año zarpó Colón de España y llegó a América?	
+@E94e81e5a
+W którym roku ukazała się heliocentryczna księga Kopernika?	
+En quelle année le livre héliocentrique de Copernic a-t-il été publié ?	
+¿En qué año se publicó el libro heliocéntrico de Copérnico?	
