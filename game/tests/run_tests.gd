@@ -70,6 +70,12 @@ func test_i18n() -> void:
 	check(I18n.t("menu.howto") == "How to play", "EN çeviri çalışıyor")
 	I18n.set_lang("tr")
 	check(I18n.t("arena.alive", {"n": 3}) == "Sahnede 3 kişi", "yer tutucu dolduruluyor")
+	var expect := {"pl": "150 000", "fr": "150 000", "es": "150.000"}
+	for l in ["pl", "fr", "es"]:
+		check(I18n.missing_extra(l).is_empty(), "%s: eksik arayüz metni yok (%d eksik)" % [l, I18n.missing_extra(l).size()])
+		I18n.set_lang(l)
+		check(I18n.t("menu.howto") != "How to play" and I18n.fmt_int(150000) == expect[l], "%s: çeviri ve sayı biçimi (%s)" % [l, I18n.fmt_int(150000)])
+	I18n.set_lang("tr")
 
 func test_questions() -> void:
 	check(Questions.count() >= 2100, "2100+ soru yüklendi (%d)" % Questions.count())
@@ -79,6 +85,17 @@ func test_questions() -> void:
 			if q.tr.o.size() != 4 or q.en.o.size() != 4 or int(q.a) < 0 or int(q.a) > 3:
 				bad += 1
 	check(bad == 0, "her sorunun 4 şıkkı ve geçerli cevabı var")
+	var untranslated := 0
+	for k in Questions.tiers:
+		for q in Questions.tiers[k]:
+			for l in ["pl", "fr", "es"]:
+				if not q.has(l) or q[l].o.size() != 4 or String(q[l].q).is_empty():
+					untranslated += 1
+	check(untranslated == 0, "her soru PL/FR/ES dillerinde de var (%d eksik)" % untranslated)
+	var est_bad := Questions.estimate.filter(func(e): return ["pl", "fr", "es"].any(func(l): return not e.has(l) or String(e[l].q).is_empty()))
+	check(est_bad.is_empty(), "tahmin soruları PL/FR/ES dillerinde de var (%d eksik)" % est_bad.size())
+	var cats_ok := Questions.categories.keys().all(func(c): return Questions.category_name(c, "pl") != Questions.category_name(c, "en") or c == "")
+	check(cats_ok, "kategori adları yeni dillerde çevrilmiş")
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 42
 	var item := Questions.draw(0, rng)
@@ -198,6 +215,10 @@ func test_daily_word() -> void:
 	check(DailyWord.answer("en").length() == 5, "İngilizce kelime var")
 	check(DailyWord.answer("tr", "2026-03-01") != DailyWord.answer("tr", "2026-03-02"), "her gün farklı kelime")
 	check(DailyWord.lower("IŞIK", "tr") == "ışık" and DailyWord.upper("iyi", "tr") == "İYİ", "Türkçe büyük/küçük harf")
+	for l in ["pl", "fr", "es"]:
+		var w := DailyWord.answer(l)
+		check(w.length() == 5 and DailyWord.is_valid(w, l), "%s: bugünün kelimesi geçerli (%s)" % [l, w])
+	check(DailyWord.lower("ÉCOLE", "fr") == "ecole" and DailyWord.lower("NIÑOS", "es") == "niños", "FR/ES aksanları atılır, ñ kalır")
 	Profile.data.daily = {}
 	Profile.data.coins = 0
 	var r0 := DailyWord.submit("tr", "abc")
@@ -419,6 +440,8 @@ func test_mayhem_data() -> void:
 	check(order.size() >= 30, "sıralama setleri yüklendi (%d)" % order.size())
 	var ok_sets := order.all(func(o): return o.tr.items.size() == 4 and o.en.items.size() == 4 and o.tr.labels.size() == 4)
 	check(ok_sets, "her sıralama setinde 4 öğe ve etiket var")
+	var ok_langs := order.all(func(o): return ["pl", "fr", "es"].all(func(l): return o.has(l) and o[l].items.size() == 4 and o[l].labels.size() == 4 and not String(o[l].q).is_empty()))
+	check(ok_langs, "sıralama setleri PL/FR/ES dillerinde de var")
 	var sounds: Array = d.get("sounds", [])
 	var missing := sounds.filter(func(x): return not ResourceLoader.exists("res://assets/audio/mayhem/%s.ogg" % x.id))
 	check(sounds.size() >= 30 and missing.is_empty(), "ses dosyaları mevcut (%d, eksik %d)" % [sounds.size(), missing.size()])
@@ -522,11 +545,11 @@ func test_steam_local() -> void:
 
 func test_voice_and_audio() -> void:
 	var missing := []
-	for lang in ["tr", "en"]:
+	for lang in I18n.LANGS:
 		for key in ["welcome", "act1_cq", "act3_arena", "castle_fall", "winner", "duel", "five", "spot_on"]:
 			if not ResourceLoader.exists("res://assets/audio/voice/%s/%s.ogg" % [lang, key]):
 				missing.append(lang + "/" + key)
-	check(missing.is_empty(), "sunucu replikleri iki dilde var " + str(missing))
+	check(missing.is_empty(), "sunucu replikleri tüm dillerde var " + str(missing))
 	for n in ["ooh", "aww", "cheer", "ui_confirm", "curtain", "heartbeat", "war_drum", "collapse"]:
 		check(Sfx.streams.has(n), "efekt yüklü: " + n)
 	check(AudioServer.get_bus_index("Voice") != -1 and AudioServer.get_bus_index("Music") != -1, "ses veri yolları (Music, SFX, Voice)")

@@ -255,7 +255,14 @@ func _draw_compact() -> void:
 		fs -= 2
 	draw_string(nf, Vector2(x0, 40), nm, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(Pal.CHAMPAGNE, a))
 	var sub := "%s  ·  %s  ·  %s %d" % [Pal.upper(Pal.t("rank.level", {"n": Progress.level()})), Pal.upper(Pal.t("coins.n", {"n": Progress.coins()})), Pal.upper(Pal.t("ticket.streak_s")), int(stats.get("streak", 0))]
-	draw_string(Pal.kicker(), Vector2(x0, 62), sub, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(Pal.CREAM, 0.7 * a))
+	# uzun dillerde (PL/FR/ES) karta sığana dek küçült; yine sığmazsa seriyi at
+	var kf := Pal.kicker()
+	var sfs := 14
+	while sfs > 11 and kf.get_string_size(sub, HORIZONTAL_ALIGNMENT_LEFT, -1, sfs).x > CW - 110:
+		sfs -= 1
+	if kf.get_string_size(sub, HORIZONTAL_ALIGNMENT_LEFT, -1, sfs).x > CW - 110:
+		sub = sub.substr(0, sub.rfind("  ·  "))
+	draw_string(kf, Vector2(x0, 62), sub, HORIZONTAL_ALIGNMENT_LEFT, -1, sfs, Color(Pal.CREAM, 0.7 * a))
 	# aç/kapa oku
 	Icons.draw(self, "arrow_r", Vector2(W - 24, CH * 0.5 + sin(_t * 3.0) * 2.0 * _h), 18, Color(Pal.GOLD, a * (0.6 + 0.4 * _h)), 2.5)
 

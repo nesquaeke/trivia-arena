@@ -132,7 +132,7 @@ Ortada tek pano, beş sekme (Q/E ya da LB/RB ile geçilir):
 
 - **Ses:** ana ses, müzik, efektler, sunucu sesi, sunucu açık/kapalı
 - **Görüntü:** pencere / kenarlıksız / tam ekran, kalite (düşük: sis, SSAO ve MSAA kapanır, 3D çözünürlük %75), dikey senkron, kare sınırı, kamera sarsıntısı, film greni
-- **Oynanış:** dil, tuş ipuçları, istatistikleri sıfırlama (iki kez basınca)
+- **Oynanış:** dil (TR, EN, PL, FR, ES), tuş ipuçları, istatistikleri sıfırlama (iki kez basınca)
 - **Kontroller:** klavye 1–2, gamepad, telefon tuş şeması
 - **Hakkında:** sürüm ve emeği geçenler
 
@@ -214,6 +214,9 @@ Godot'da `game/project.godot`'u aç. En sık dokunulacak yerler:
 | Işık/parıltı efektleri | `ui/shaders/*.gdshader` (her dosyanın başında ne yaptığı yazar) |
 | Arayüz parçalarını denemek | `scenes/ui_gallery.tscn`: logo, düğmeler, seçiciler; Inspector'dan metin/renk değiştir |
 | Metinler (TR/EN) | `scripts/core/i18n.gd` |
+| Metinler (PL/FR/ES) | `tools/i18n/*.tsv` → `python3 game/tools/i18n/build_ui.py` → `data/i18n/{pl,fr,es}.json` |
+| Soru çevirileri (PL/FR/ES) | `tools/questions/i18n/*.txt` → `python3 game/tools/questions/i18n_merge.py` (önce `check`). `build_pack.py`'den sonra yeniden çalıştırın. |
+| Mayhem metinleri (PL/FR/ES) | `tools/questions/mayhem_i18n.tsv` → `python3 game/tools/questions/mayhem_pack.py` |
 | Sorular | `tools/questions/packs/*.txt` (satır başına bir soru) → `python3 game/tools/questions/build_pack.py` → `data/questions.json` |
 | Kostümler | `scripts/actors/plush_visual.gd` (`HATS`, `MUSTACHES`, `BOWTIES`, `GLASSES`, `COLORS`) |
 | Kilitler, XP, jeton fiyatları | `scripts/core/progress.gd` (`LEVEL_UNLOCKS`, `LEVEL_UNLOCKS_2`, `SHOP_ONLY`) |
@@ -292,12 +295,13 @@ game/
   scenes/main.tscn        oyunun sahne ağacı (Stage, Props, Actors, Camera, UI)
   scenes/ui_gallery.tscn  arayüz parçaları vitrini
   data/rules.tres         bütün oyun sayıları
-  data/questions.json     2135 çift dilli soru, 18 kategori × kolay/orta/zor (+ 98 tahmin sorusu)
-  data/words.json         Günlük Kelime sözlükleri (TR/EN)
+  data/questions.json     2135 soru, 5 dilde (TR/EN/PL/FR/ES), 18 kategori × kolay/orta/zor (+ 98 tahmin sorusu)
+  data/i18n/              PL/FR/ES arayüz metinleri (TR/EN i18n.gd içinde)
+  data/words.json         Günlük Kelime sözlükleri (5 dil)
   ui/fonts/               yazı tipi ayarları (Big Shoulders, Fraunces)
   ui/theme/               Godot teması
   ui/shaders/             parıltı, ampul, halka sayaç, kadife perde, gren, spot
-  scripts/core/           dil (TR/EN), profil ve karne, soru bankası, kurallar, kodla üretilen sesler
+  scripts/core/           dil (TR/EN/PL/FR/ES), profil ve karne, soru bankası, kurallar, kodla üretilen sesler
   scripts/stage/          sahne, perdeler, ışık, kapaklar, dekorlar
   scripts/actors/         pelüş fizik + görünüş, kontrolcüler (klavye, gamepad, telefon, bot)
   scripts/camera/         balkon kamerası

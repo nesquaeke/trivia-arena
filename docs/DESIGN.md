@@ -54,7 +54,7 @@ Hepsi fizikli (`RigidBody3D`, `prop` grubu). Karakterler çarpınca devrilir, om
 
 **Ekranlar:**
 - **Lobi:** Soldan karartma; "Trivia" el yazısı + ampullü "ARENA" logosu (ampuller sırayla yanar, harfler titreyerek açılır). Menü satırları numaralı; üstüne gelince kadife ışık bandı süzülür, başlık kayar, altın ok belirir. Kurulumda logo çekilir, yerine gösteri başlığı, bot sayacı, zorluk/süre seçicileri ve altın "Perde açılsın" düğmesi gelir.
-- **Profil kartı:** Bilet biçimi (oyuklu kenar, delikli koçan, seri no). Solda **canlı 3D pelüş portresi**: kendi küçük dünyasında spot altında nefes alır, göz kırpar, fareye bakar, arada zıplar; kostüm değişince anında giyinir. Karne sayıları döner. TR/EN kayan anahtar.
+- **Profil kartı:** Bilet biçimi (oyuklu kenar, delikli koçan, seri no). Solda **canlı 3D pelüş portresi**: kendi küçük dünyasında spot altında nefes alır, göz kırpar, fareye bakar, arada zıplar; kostüm değişince anında giyinir. Karne sayıları döner. Beş dilli dil seçici (TR · EN · PL · FR · ES).
 - **HUD:** sol üstte perde rozeti; solda skor şeridi (sıralama değişince kartlar yer değiştirir; can turunda gecikmeli erimeli can çubuğu; seri alevi; sabotaj simgeleri; +/− farkı uçar); üstte kategori renkli soru kartı (metin kelime kelime yazılır, şıklar yerdeki kapak renkleriyle aynı); sağ üstte halka sayaç (son 5 saniyede kırmızı ve vuruşlu); altta duyuru bandı.
 - **Perde kartı:** kadife perde iner, Roma rakamı parlar, tur adı harf harf düşer, kural çipleri belirir.
 - **Ödül seçici:** yelpaze gibi kartlar; seçili kart havaya kalkar. Kumanda, telefon ya da fareyle.
@@ -147,6 +147,13 @@ Henüz yok (GDD'nin sonraki fazları): çevrimiçi analitik ve soru metrikleri, 
 `tools/questions/packs/*.txt` satır başına bir soru içerir: `kategori|zorluk(1-3)|TR|EN|doğru|yanlış|yanlış|yanlış`. Şık `tr~en` biçiminde iki dilde yazılabilir. Tahmin satırlarının biçimi `E|cevap|min|max|yıl|TR soru|birim|EN soru|unit`. `build_pack.py` bu paketleri tekrarları ayıklayıp `data/questions.json`'a ekler.
 
 Banka yaklaşık 2000 soru ve 98 tahmin sorusundan oluşur. 15 kategori var, bunların arasında Uzay, Tuhaf ama Gerçek ve Diller ve Kelimeler yeni. Sorular evrenseldir, İspanyol ve Polonyalı oyuncular için de yerel dokunuşlar içerir.
+
+### Diller
+Oyun beş dilde oynanır: Türkçe, İngilizce, Lehçe, Fransızca, İspanyolca. Arayüz, 2135 soru, 98 tahmin sorusu, Mayhem sıralama setleri ve ses adları, kategori adları, başarımlar, Günlük Kelime (dile özel sözlük ve klavye: Lehçe harf sırası, Fransızca AZERTY, İspanyolca Ñ), anlatıcı sesi (MBROLA pl1/fr1/es2) ve telefon kumandası hepsi çevrilidir. Sayılar dile göre biçimlenir: TR/ES `150.000`, PL/FR `150 000`, EN `150,000`; ondalık virgül EN dışında. Bir çeviri eksikse metin İngilizceye düşer. Soru çevirilerinde şıklar İngilizcedeki sırayla yazılır, böylece doğru cevabın yeri bütün dillerde aynı kalır.
+
+![Lehçe lobi](screenshots/lang_pl_lobby.png)
+![İspanyolca Mayhem](screenshots/lang_es_mayhem.png)
+![Fransızca Günlük Kelime](screenshots/lang_fr_daily.png)
 
 ### Dayanıklılık
 - **Profil:** sürümlü göç (`_migrate`), geçici dosya → yedek → yer değiştirme sırasıyla atomik kayıt, bozuk dosyada yedekten kurtarma.

@@ -24,9 +24,13 @@ var reveal := -1            # doğru şık (açılınca)
 var banner := ""
 var stake := 0
 var _t := 0.0
+var _lobby_text := false     # kayan yazı lobi metniyse dil değişince yenilenir
 
 func _ready() -> void:
 	size = Vector2(W, H)
+	I18n.changed.connect(func(_l: String):
+		if mode == "marquee" and _lobby_text:
+			marquee_text = I18n.t("arena.lobby_board"))
 
 func _process(delta: float) -> void:
 	_t += delta
@@ -35,6 +39,7 @@ func _process(delta: float) -> void:
 func show_marquee(text: String) -> void:
 	mode = "marquee"
 	marquee_text = text
+	_lobby_text = text == I18n.t("arena.lobby_board")
 	banner = ""
 
 func show_question(p_index: int, p_prompt: String, p_options: Array, p_cat: String, p_color: Color, total: float) -> void:
