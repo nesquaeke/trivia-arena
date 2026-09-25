@@ -1,0 +1,56 @@
+# Uzay
+space|1|Güneş sistemimizin merkezinde ne vardır?|What is at the centre of our Solar System?|Güneş~The Sun|Dünya~Earth|Ay~The Moon|Jüpiter~Jupiter
+space|1|"Kızıl Gezegen" olarak bilinen gezegen hangisidir?|Which planet is known as the Red Planet?|Mars|Venüs~Venus|Jüpiter~Jupiter|Merkür~Mercury
+space|1|Güneş sistemindeki en büyük gezegen hangisidir?|What is the largest planet in the Solar System?|Jüpiter~Jupiter|Satürn~Saturn|Neptün~Neptune|Dünya~Earth
+space|1|Belirgin halkalarıyla en ünlü gezegen hangisidir?|Which planet is most famous for its rings?|Satürn~Saturn|Mars|Venüs~Venus|Merkür~Mercury
+space|1|Ay'a ilk ayak basan insan kimdir?|Who was the first person to walk on the Moon?|Neil Armstrong|Yuri Gagarin|Buzz Aldrin|Michael Collins
+space|1|Uzaya giden ilk insan kimdir?|Who was the first human in space?|Yuri Gagarin|Neil Armstrong|John Glenn|Alan Shepard
+space|1|Astronotların giydiği özel kıyafete ne denir?|What do astronauts wear outside the spacecraft?|Uzay giysisi~Spacesuit|Dalgıç kıyafeti~Diving suit|Pijama~Pyjamas|Yağmurluk~Raincoat
+space|1|Gece gökyüzünde en parlak doğal nesne hangisidir?|What is the brightest natural object in the night sky?|Ay~The Moon|Kutup Yıldızı~The North Star|Mars|Samanyolu~The Milky Way
+space|1|Galaksimizin adı nedir?|What is the name of our galaxy?|Samanyolu~The Milky Way|Andromeda|Orion|Büyük Ayı~Great Bear
+space|1|Güneş aslında nedir?|What is the Sun?|Bir yıldız~A star|Bir gezegen~A planet|Bir uydu~A moon|Bir kuyruklu yıldız~A comet
+space|1|Uzayda ağırlığı hissetmemeye ne denir?|Feeling weightless in orbit is called…|Ağırlıksızlık~Weightlessness|Hafiflik~Lightness|Uçuculuk~Flightiness|Süzülme hastalığı~Floating sickness
+space|1|NASA hangi ülkenin uzay ajansıdır?|NASA is the space agency of which country?|ABD~USA|Rusya~Russia|Kanada~Canada|Birleşik Krallık~UK
+space|1|Güneşe en yakın gezegen hangisidir?|Which planet is closest to the Sun?|Merkür~Mercury|Venüs~Venus|Mars|Dünya~Earth
+space|1|Bir yıldız kayar gibi görünen şey aslında nedir?|What is a "shooting star" really?|Atmosferde yanan göktaşı~A meteor burning up|Düşen yıldız~A falling star|Uçak~A plane|Uydu~A satellite
+space|1|Uzaya gönderilen ilk canlılardan biri olan ünlü köpeğin adı nedir?|What was the name of the famous dog sent into orbit in 1957?|Laika|Rex|Lassie|Bobik
+space|1|Ay'ın Dünya etrafında dönmesi yaklaşık ne kadar sürer?|About how long does the Moon take to orbit Earth?|Bir ay~About a month|Bir gün~A day|Bir hafta~A week|Bir yıl~A year
+space|1|Teleskop ne işe yarar?|What does a telescope do?|Uzaktaki şeyleri yakın gösterir~Makes distant things look closer|Sesi kaydeder~Records sound|Isı ölçer~Measures heat|Zamanı ölçer~Measures time
+space|1|Hangi gezegende yaşıyoruz?|Which planet do we live on?|Dünya~Earth|Mars|Venüs~Venus|Pluton~Pluto
+space|1|Uzayda astronotlar genelde nasıl uyur?|How do astronauts usually sleep in orbit?|Duvara bağlı uyku tulumunda~In a sleeping bag strapped to a wall|Yatakta~In a bed|Ayakta dengede~Balanced upright|Hiç uyumazlar~They never sleep
+space|1|Kuyruklu yıldızın kuyruğu hep neyin ters yönünü gösterir?|A comet's tail always points away from…|Güneş~The Sun|Dünya~Earth|Ay~The Moon|Jüpiter~Jupiter
+space|2|2006'da "cüce gezegen" ilan edilen eski gezegen hangisidir?|Which former planet was reclassified as a dwarf planet in 2006?|Pluton~Pluto|Neptün~Neptune|Ceres|Eris
+space|2|Güneş sistemindeki en sıcak gezegen hangisidir?|Which is the hottest planet in the Solar System?|Venüs~Venus|Merkür~Mercury|Mars|Jüpiter~Jupiter
+space|2|Jüpiter'deki dev fırtınaya ne denir?|What is Jupiter's giant storm called?|Büyük Kırmızı Leke~Great Red Spot|Büyük Göz~Great Eye|Kara Delik~Black Hole|Mavi Girdap~Blue Vortex
+space|2|Güneş ışığının Dünya'ya ulaşması yaklaşık ne kadar sürer?|About how long does sunlight take to reach Earth?|8 dakika~8 minutes|8 saniye~8 seconds|8 saat~8 hours|8 gün~8 days
+space|2|Uluslararası Uzay İstasyonu'nun kısaltması nedir?|What is the International Space Station's abbreviation?|ISS|IUS|SSI|NSS
+space|2|Işığın bile kaçamadığı uzay bölgesine ne denir?|What region of space lets not even light escape?|Kara delik~Black hole|Beyaz cüce~White dwarf|Nebula|Kuasar~Quasar
+space|2|Uzay istasyonundaki astronotlar günde yaklaşık kaç gün doğumu görür?|About how many sunrises do ISS astronauts see each day?|16|1|4|100
+space|2|Mars'ın kaç uydusu vardır?|How many moons does Mars have?|2|0|1|5
+space|2|Hangi gezegen yan yatmış gibi döner?|Which planet spins lying on its side?|Uranüs~Uranus|Neptün~Neptune|Satürn~Saturn|Venüs~Venus
+space|2|Ay'da yürüyen astronotların ayak izleri neden hâlâ duruyor olabilir?|Why might footprints on the Moon still be there?|Rüzgâr yok~There is no wind|Beton döküldü~They were cemented|Koruma çiti var~There's a fence|Buz tuttu~They froze over
+space|2|İspanya ve Polonya'nın da üyesi olduğu Avrupa uzay ajansının kısaltması nedir?|What is the abbreviation of Europe's space agency (Spain and Poland are members)?|ESA|EUSA|ESPA|EURA
+space|2|Satürn'ün ortalama yoğunluğu sudan azdır. Bu ne anlama gelir?|Saturn is less dense than water. What does that mean in theory?|Dev bir küvette yüzerdi~It would float in a giant bathtub|Hemen batardı~It would sink|Buharlaşırdı~It would evaporate|Donardı~It would freeze
+space|2|"Kutup Yıldızı" hangi yönü gösterir?|Which direction does the North Star show?|Kuzey~North|Güney~South|Doğu~East|Batı~West
+space|2|Galileo teleskopla Jüpiter'in kaç büyük uydusunu keşfetti?|How many of Jupiter's large moons did Galileo discover?|4|2|7|12
+space|2|Astronotlar uzayda boylarına ne olduğunu fark eder?|What happens to astronauts' height in space?|Birkaç santim uzarlar~They grow a few cm taller|Kısalırlar~They shrink|Değişmez~No change|İkiye katlanır~It doubles
+space|2|Güneş sistemindeki en rüzgârlı gezegen hangisidir?|Which planet has the fastest winds in the Solar System?|Neptün~Neptune|Dünya~Earth|Mars|Merkür~Mercury
+space|2|Dünya'nın tek doğal uydusu hangisidir?|What is Earth's only natural satellite?|Ay~The Moon|Phobos|Titan|Europa
+space|2|"Houston, bir sorunumuz var" repliği hangi göreve aittir?|"Houston, we've had a problem" comes from which mission?|Apollo 13|Apollo 11|Gemini 4|Challenger
+space|2|Evrende "yıldız doğum yeri" olan gaz ve toz bulutlarına ne denir?|What are the gas-and-dust clouds where stars are born called?|Bulutsu~Nebula|Kuyruklu yıldız~Comet|Asteroit~Asteroid|Meteor
+space|2|Ay'ın hep aynı yüzünü görmemizin sebebi nedir?|Why do we always see the same side of the Moon?|Kendi ekseni etrafında da aynı sürede döner~It spins once per orbit|Hiç dönmez~It doesn't rotate|Arka yüzü karanlık~The back is always dark|Dünya onu çeker~Earth pulls one side only
+space|3|Işık yılı neyin ölçüsüdür?|What does a light-year measure?|Uzaklık~Distance|Zaman~Time|Parlaklık~Brightness|Hız~Speed
+space|3|Güneş sistemindeki en yüksek yanardağ Olympus Mons hangi gezegendedir?|Olympus Mons, the tallest volcano in the Solar System, is on…|Mars|Venüs~Venus|Io|Dünya~Earth
+space|3|Satürn'ün en büyük uydusu hangisidir?|What is Saturn's largest moon?|Titan|Enceladus|Rhea|Mimas
+space|3|Venüs'te bir gün (kendi etrafında dönüş) bir yıldan uzun mudur?|Is a day on Venus longer than its year?|Evet~Yes|Hayır, çok kısa~No, much shorter|Eşittir~They're equal|Venüs dönmez~Venus doesn't rotate
+space|3|Uzaya ilk çıkan kadın kimdir?|Who was the first woman in space?|Valentina Tereshkova|Sally Ride|Svetlana Savitskaya|Mae Jemison
+space|3|Güneş sistemindeki asteroit kuşağı hangi iki gezegen arasındadır?|The main asteroid belt lies between which two planets?|Mars ve Jüpiter~Mars and Jupiter|Dünya ve Mars~Earth and Mars|Jüpiter ve Satürn~Jupiter and Saturn|Venüs ve Dünya~Venus and Earth
+space|3|Güneş merkezli evren modelini öneren Polonyalı astronom kimdir?|Which Polish astronomer proposed the Sun-centred model?|Nikolaus Kopernik~Nicolaus Copernicus|Johannes Kepler|Tycho Brahe|Galileo Galilei
+space|3|Ay'a en son ayak basılan görev hangisidir?|Which was the last crewed Moon landing mission?|Apollo 17|Apollo 14|Apollo 20|Artemis I
+space|3|Bize en yakın yıldız (Güneş hariç) hangisidir?|Which is the nearest star to us after the Sun?|Proxima Centauri|Sirius|Betelgeuse|Vega
+space|3|1990'da fırlatılan ünlü uzay teleskobu hangisidir?|Which famous space telescope launched in 1990?|Hubble|James Webb|Kepler|Spitzer
+space|3|Mars'taki toz fırtınaları bazen ne kadar büyük olabilir?|How big can Martian dust storms get?|Tüm gezegeni kaplar~Planet-wide|Bir şehir kadar~City-sized|Bir oda kadar~Room-sized|Hiç olmaz~They never happen
+space|3|Uzayın genel olarak kokusu astronotlara göre neye benzer?|Astronauts say space smells a bit like…|Yanık et ve metal~Seared steak and hot metal|Çilek~Strawberries|Deniz~The sea|Hiçbir şey~Nothing at all
+space|3|Kanarya Adaları'ndaki (İspanya) dev teleskobun adı nedir?|What is the giant telescope on La Palma (Spain) called?|Gran Telescopio Canarias|Very Large Telescope|Arecibo|Keck
+space|3|Evrenin yaşı yaklaşık kaç milyar yıldır?|About how old is the universe, in billions of years?|13,8~13.8|4,5~4.5|100|1
+space|3|Neptün'ü keşfetmek için önce ne kullanıldı?|How was Neptune first found?|Matematik hesapları~Mathematical predictions|Çıplak göz~The naked eye|Radyo sinyali~A radio signal|Uzay sondası~A space probe

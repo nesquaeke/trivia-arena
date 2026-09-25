@@ -10,7 +10,11 @@ extends Node3D
 ##   steppe   Bozkır kağanlığı (otağ çadırları, tuğ)
 ## Kaide ve sancak oyuncunun renginde; sahibi uzaktan okunur.
 
-const STYLES := ["himeji", "pyramid", "alhambra", "fairy", "gothic", "steppe"]
+##   onion    Soğan kubbeli saray (renkli, çizgili kubbeler)
+##   lighthouse Deniz kalesi (ortada çizgili deniz feneri, yanık lambası)
+const STYLES := ["himeji", "pyramid", "alhambra", "fairy", "gothic", "steppe", "onion", "lighthouse"]
+## Sancak desenleri (oyuncunun renginde)
+const BANNERS := ["plain", "stripes", "chevron", "star", "cross", "checker", "sun"]
 const PALETTE := {
 	"himeji": {"wall": Color("F4EBDA"), "roof": Color("2E2438"), "trim": Color("B9A98C")},
 	"pyramid": {"wall": Color("DCBE86"), "roof": Color("C08A3E"), "trim": Color("B99A62")},
@@ -18,12 +22,15 @@ const PALETTE := {
 	"fairy": {"wall": Color("F2EFE6"), "roof": Color("2C6187"), "trim": Color("A9B7C4")},
 	"gothic": {"wall": Color("7A6F86"), "roof": Color("2A2238"), "trim": Color("4A4458")},
 	"steppe": {"wall": Color("E9D8B4"), "roof": Color("1E6F8C"), "trim": Color("C2A470")},
+	"onion": {"wall": Color("E8D6C0"), "roof": Color("2E8C6A"), "trim": Color("C9303C")},
+	"lighthouse": {"wall": Color("D9D2C4"), "roof": Color("B8322E"), "trim": Color("6E6A64")},
 }
 const SPOTS := [Vector3(-0.34, 0, 0.02), Vector3(0.0, 0, -0.1), Vector3(0.34, 0, 0.02)]
 const HEIGHTS := [0.5, 0.72, 0.5]
 
 var style := "fairy"
 var color := Color.WHITE
+var banner := "plain"
 var towers := 3
 var _towers: Array[Node3D] = []
 var _pips: Array[MeshInstance3D] = []
@@ -44,6 +51,29 @@ static func m(key: String, c: Color, rough := 0.75, metal := 0.0, emit := 0.0) -
 		mt.emission_enabled = true
 		mt.emission = c
 		mt.emission_energy_multiplier = emit
+	_mats[k] = mt
+	return mt
+
+## Taş duvar (stone.gdshader) ve kiremit çatı (roof_tiles.gdshader) malzemeleri
+static func stone(c: Color, brick := Vector2(0.085, 0.045)) -> ShaderMaterial:
+	var k := "stone" + c.to_html() + str(brick)
+	if _mats.has(k):
+		return _mats[k]
+	var mt := ShaderMaterial.new()
+	mt.shader = preload("res://ui/shaders/stone.gdshader")
+	mt.set_shader_parameter("tint", c)
+	mt.set_shader_parameter("brick_w", brick.x)
+	mt.set_shader_parameter("brick_h", brick.y)
+	_mats[k] = mt
+	return mt
+
+static func tiles(c: Color) -> ShaderMaterial:
+	var k := "tiles" + c.to_html()
+	if _mats.has(k):
+		return _mats[k]
+	var mt := ShaderMaterial.new()
+	mt.shader = preload("res://ui/shaders/roof_tiles.gdshader")
+	mt.set_shader_parameter("tint", c)
 	_mats[k] = mt
 	return mt
 
@@ -91,8 +121,9 @@ func _dome(r: float, seg := 18) -> SphereMesh:
 # ── kurulum ─────────────────────────────────────────────────────────
 func _build() -> void:
 	var pal: Dictionary = PALETTE[style]
-	var wall := m("wall", pal.wall, 0.85)
-	var roof := m("roof", pal.roof, 0.5)
+	# steppe (keçe otağ) dışında duvarlar taş örgü, sivri/kubbe çatılar kiremit
+	var wall: Material = m("wall", pal.wall, 0.85) if style == "steppe" else stone(pal.wall)
+	var roof: Material = tiles(pal.roof) if style in ["fairy", "gothic", "alhambra", "lighthouse"] else m("roof", pal.roof, 0.5)
 	var trim := m("trim", pal.trim, 0.7)
 	var gold := m("gold", Color("D6A93F"), 0.3, 1.0)
 	# kaide: oyuncunun renginde sekizgen, altın şerit
@@ -193,6 +224,36 @@ func _build_tower(t: Node3D, i: int, pal: Dictionary, wall: Material, roof: Mate
 			for k in 4:
 				var a := TAU * k / 4.0 + PI / 4
 				_mi(t, _cyl(0.0, 0.025, 0.14, 6), roof, Vector3(cos(a) * tw * 0.5, top + 0.07, sin(a) * tw * 0.5))
+		"onion":
+			# soğan kubbe: şişkin küre + sivri tepe, kuleye göre farklı renk ve çizgi
+			var cols := [Color("2E8C6A"), Color("C9303C"), Color("2F5AA8")]
+			var dm := m("onion_%d" % i, cols[i % 3], 0.45)
+			var bulb := _mi(t, _sphere(tw * 0.62), dm, Vector3(0, top + tw * 0.5, 0))
+			bulb.scale = Vector3(1, 1.15, 1)
+			for k in 4:
+				var a := TAU * k / 4.0
+				var st := _mi(t, _box(0.012, tw * 1.1, 0.012), m("onion_s", Color("F2C230"), 0.4, 0.4), Vector3(cos(a) * tw * 0.58, top + tw * 0.5, sin(a) * tw * 0.58), Vector3(0, -a, 0))
+				st.rotation.z = 0.0
+			_mi(t, _cyl(0.0, tw * 0.3, tw * 0.9, 12), dm, Vector3(0, top + tw * 1.4, 0))
+			_mi(t, _sphere(0.022), gold, Vector3(0, top + tw * 1.9, 0))
+		"lighthouse":
+			if i == 1:
+				# fener: kule gövdesinin üstüne çizgili uzantı, cam oda, yanık lamba
+				for k in 3:
+					_mi(t, _cyl(tw * (0.44 - k * 0.05), tw * (0.48 - k * 0.05), 0.12, 16), m("lh_%d" % (k % 2), Color("B8322E") if k % 2 == 0 else Color("F4F0E6"), 0.6), Vector3(0, top + 0.06 + k * 0.12, 0))
+				var lamp_y := top + 0.42
+				_mi(t, _cyl(tw * 0.3, tw * 0.3, 0.1, 12), m("lamp", Color("FFE08A"), 0.2, 0.0, 3.0), Vector3(0, lamp_y, 0))
+				_mi(t, _cyl(0.0, tw * 0.38, 0.1, 12), roof, Vector3(0, lamp_y + 0.1, 0))
+				var beam := OmniLight3D.new()
+				beam.light_color = Color("FFD27A")
+				beam.light_energy = 0.8
+				beam.omni_range = 1.2
+				beam.position = Vector3(0, lamp_y, 0)
+				t.add_child(beam)
+			else:
+				for k in 6:
+					var a := TAU * k / 6.0
+					_mi(t, _box(0.05, 0.06, 0.05), trim, Vector3(cos(a) * tw * 0.5, top + 0.05, sin(a) * tw * 0.5))
 		"alhambra":
 			_mi(t, _dome(tw * 0.55), roof, Vector3(0, top, 0))
 			_mi(t, _cyl(0.008, 0.008, 0.12, 6), gold, Vector3(0, top + tw * 0.55 + 0.05, 0))
@@ -202,7 +263,61 @@ func _build_tower(t: Node3D, i: int, pal: Dictionary, wall: Material, roof: Mate
 	if i == 1:
 		# sancak: oyuncunun renginde, rüzgârda dalgalanır
 		_mi(t, _cyl(0.008, 0.008, 0.36, 6), m("pole", Color("3A2A1A")), Vector3(0.0, top + 0.5, 0))
-		_flag = _mi(t, _box(0.2, 0.12, 0.008), m("flag", color, 0.8, 0.0, 0.25), Vector3(0.1, top + 0.62, 0))
+		var fm := StandardMaterial3D.new()
+		fm.albedo_texture = banner_texture(banner, color)
+		fm.roughness = 0.8
+		fm.emission_enabled = true
+		fm.emission_texture = fm.albedo_texture
+		fm.emission_energy_multiplier = 0.25
+		var flag_h := top + (0.62 if style != "lighthouse" else 0.8)
+		if style == "lighthouse":
+			_mi(t, _cyl(0.008, 0.008, 0.36, 6), m("pole", Color("3A2A1A")), Vector3(0.0, flag_h - 0.12, 0))
+		_flag = _mi(t, _box(0.2, 0.12, 0.008), fm, Vector3(0.1, flag_h, 0))
+
+static var _banner_cache := {}
+
+## Sancak kumaşı: desen oyuncunun renginde, açık/koyu tonlarla (64×40 doku)
+static func banner_texture(pattern: String, col: Color) -> ImageTexture:
+	var key := pattern + col.to_html()
+	if _banner_cache.has(key):
+		return _banner_cache[key]
+	var w := 64
+	var h := 40
+	var img := Image.create(w, h, false, Image.FORMAT_RGBA8)
+	var base := col
+	var hi := col.lightened(0.55)
+	var lo := col.darkened(0.35)
+	for y in h:
+		for x in w:
+			var c := base
+			var u := float(x) / w
+			var v := float(y) / h
+			match pattern:
+				"stripes":
+					c = hi if int(y / 8) % 2 == 0 else base
+				"chevron":
+					c = hi if absf(v - 0.5) * 1.6 + 0.2 > u and absf(v - 0.5) * 1.6 + 0.02 < u else base
+				"star":
+					var p := Vector2(u - 0.5, (v - 0.5) * 0.625)
+					var ang := atan2(p.y, p.x)
+					var r := 0.16 + 0.1 * cos(5.0 * ang)
+					c = hi if p.length() < r * 1.1 else base
+				"cross":
+					c = hi if absf(u - 0.38) < 0.08 or absf(v - 0.5) < 0.12 else base
+				"checker":
+					c = hi if (int(x / 8) + int(y / 8)) % 2 == 0 else base
+				"sun":
+					var q := Vector2(u - 0.5, (v - 0.5) * 0.625)
+					var d := q.length()
+					var rays := 0.5 + 0.5 * cos(atan2(q.y, q.x) * 12.0)
+					c = hi if d < 0.1 else (hi.lerp(base, 0.4) if d < 0.24 and rays > 0.6 else base)
+			# kenar dikişi
+			if x < 2 or y < 2 or y >= h - 2:
+				c = lo
+			img.set_pixel(x, y, c)
+	var tex := ImageTexture.create_from_image(img)
+	_banner_cache[key] = tex
+	return tex
 
 func _sphere(r: float) -> SphereMesh:
 	var s := SphereMesh.new()

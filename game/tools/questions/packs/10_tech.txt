@@ -1,0 +1,56 @@
+# Teknoloji
+tech|1|Bilgisayarda "kopyala" kısayolu genelde hangisidir (Windows)?|What is the usual "copy" shortcut on Windows?|Ctrl+C|Ctrl+V|Ctrl+X|Ctrl+Z
+tech|1|Akıllı telefonların çoğunda hangi iki işletim sisteminden biri vardır?|Most smartphones run one of which two systems?|Android ve iOS~Android and iOS|Windows ve Linux~Windows and Linux|macOS ve DOS~macOS and DOS|Symbian ve Palm~Symbian and Palm
+tech|1|Bilgisayarın "beyni" olarak bilinen parça hangisidir?|Which part is known as the computer's "brain"?|İşlemci (CPU)~Processor (CPU)|Fare~Mouse|Ekran~Monitor|Hoparlör~Speaker
+tech|1|Wi-Fi ne işe yarar?|What is Wi-Fi used for?|Kablosuz internet~Wireless internet|Yemek ısıtmak~Heating food|Fotoğraf basmak~Printing photos|Pil şarj etmek~Charging batteries
+tech|1|"Geri al" kısayolu genelde hangisidir (Windows)?|What is the usual "undo" shortcut on Windows?|Ctrl+Z|Ctrl+U|Ctrl+Y|Ctrl+B
+tech|1|Bir e-posta adresinde mutlaka hangi işaret bulunur?|Which symbol is always in an email address?|@|#|&|%
+tech|1|YouTube en çok neyi paylaşmak için kullanılır?|YouTube is mainly used for sharing what?|Video|Müzik notası~Sheet music|Tarif kartı~Recipe cards|Harita~Maps
+tech|1|Bilgisayar faresinin adı nereden gelir?|Why is a computer mouse called a mouse?|Kablosu kuyruğa benzediği için~Its cable looks like a tail|Sessiz olduğu için~Because it is quiet|Peynir sevdiği için~It likes cheese|Mucidi fareleri sevdiği için~Its inventor loved mice
+tech|1|Hangi cihaz kâğıda çıktı alır?|Which device puts things on paper?|Yazıcı~Printer|Tarayıcı~Scanner|Router|Webcam
+tech|1|Emoji'ler ilk olarak hangi ülkede yaygınlaştı?|Emoji first became popular in which country?|Japonya~Japan|ABD~USA|Güney Kore~South Korea|Finlandiya~Finland
+tech|1|Bir telefonu "uçak modu"na almak ne yapar?|What does "airplane mode" do on a phone?|Kablosuz bağlantıları kapatır~Turns off wireless connections|Telefonu uçurur~Makes the phone fly|Sesi açar~Turns the volume up|Pili doldurur~Charges the battery
+tech|1|Klavyede genelde en uzun tuş hangisidir?|Which is usually the longest key on a keyboard?|Boşluk~Space bar|Enter|Shift|Tab
+tech|1|"www" ne demektir?|What does "www" stand for?|World Wide Web|Wide World Wifi|Web With Words|World Web Window
+tech|1|Hangi şirketin logosu ısırılmış bir elmadır?|Which company's logo is a bitten apple?|Apple|Samsung|Microsoft|Nokia
+tech|1|Bluetooth genelde ne için kullanılır?|Bluetooth is commonly used for…|Kısa mesafe kablosuz bağlantı~Short-range wireless links|Televizyon yayını~TV broadcasting|Uydu telefonu~Satellite calls|Mikrodalga pişirme~Microwave cooking
+tech|1|Bir dosyayı sıkıştırılmış halde saklayan yaygın uzantı hangisidir?|Which common file extension means a compressed archive?|.zip|.jpg|.txt|.mp3
+tech|1|Robot süpürgeler en çok nerede takılıp kalmasıyla ünlüdür?|Robot vacuums are famous for getting stuck on what?|Kablolar ve çoraplar~Cables and socks|Tavanda~The ceiling|Buzdolabında~The fridge|Bahçede~In the garden
+tech|1|"Selfie" nedir?|What is a "selfie"?|Kendi çektiğin fotoğrafın~A photo you take of yourself|Bir robot türü~A type of robot|Bir uygulama~An app|Bir kablo~A cable
+tech|1|QR kodu okutmak için genelde ne kullanılır?|What do people usually scan QR codes with?|Telefon kamerası~A phone camera|Mikrofon~A microphone|Klavye~A keyboard|Kulaklık~Headphones
+tech|1|Bir bilgisayarı yeniden başlatmaya ne denir (İngilizce)?|What is restarting a computer called in English?|Reboot|Rewind|Rebuild|Refill
+tech|2|İlk iPhone hangi yıl tanıtıldı?|In which year was the first iPhone introduced?|2007|2004|2010|2001
+tech|2|"Bit"lerden oluşan 8'li gruba ne denir?|What is a group of 8 bits called?|Bayt~Byte|Nibble|Kilobit|Word
+tech|2|İlk bilgisayar "böceği" (bug) gerçekten neydi?|The first computer "bug" was literally what?|Bir güve~A moth|Bir karınca~An ant|Bir hamamböceği~A cockroach|Bir örümcek~A spider
+tech|2|Wikipedia hangi yıl kuruldu?|In which year was Wikipedia launched?|2001|1995|2005|1998
+tech|2|"Spotify" hangi ülkede kuruldu?|In which country was Spotify founded?|İsveç~Sweden|ABD~USA|Norveç~Norway|Almanya~Germany
+tech|2|"Linux" çekirdeğinin maskotu olan hayvan hangisidir?|What animal is the Linux mascot?|Penguen~Penguin|Tilki~Fox|Kaplumbağa~Turtle|Baykuş~Owl
+tech|2|Google'ın ilk adı neydi?|What was Google's original name?|BackRub|SearchBot|Googol|WebCrawler
+tech|2|"CAPTCHA"nın amacı nedir?|What is the purpose of a CAPTCHA?|İnsan mı robot mu ayırt etmek~Telling humans from bots|Parolayı hatırlamak~Remembering passwords|İnterneti hızlandırmak~Speeding up the internet|Ekranı temizlemek~Cleaning the screen
+tech|2|Firefox tarayıcısının logosundaki hayvan aslında hangisidir?|Which animal is actually on the Firefox logo?|Kızıl panda (tilki gibi görünür)~Red panda (looks like a fox)|Kurt~Wolf|Kedi~Cat|Sincap~Squirrel
+tech|2|"Skype" ilk olarak hangi ülkede geliştirildi?|Skype was first developed in which country?|Estonya~Estonia|Finlandiya~Finland|İsveç~Sweden|Danimarka~Denmark
+tech|2|Yaygın bir parola olarak en çok kullanılanlardan biri hangisidir?|Which is one of the most common (and worst) passwords?|123456|Q7#pZ!2m|elephant_2049|Xy9$Lk
+tech|2|Hangi şirket "Galaxy" telefonlarını üretir?|Which company makes Galaxy phones?|Samsung|LG|Sony|Huawei
+tech|2|"USB"deki "U" neyi ifade eder?|What does the "U" in USB stand for?|Universal|Unique|Ultra|User
+tech|2|İlk SMS mesajı neydi (1992)?|What did the first SMS message say (1992)?|Merry Christmas|Hello World|Can you hear me?|Test 1 2 3
+tech|2|Bir yazılımın deneme sürümüne ne denir?|What is an early test version of software called?|Beta|Omega|Delta|Final
+tech|2|Hangi şirket "Windows"u üretir?|Which company makes Windows?|Microsoft|Apple|IBM|Intel
+tech|2|"Hello, World!" genelde neyin ilk örneğidir?|"Hello, World!" is usually the first example of what?|Programlama dili öğrenmek~Learning a programming language|Telefon açmak~Making a call|Web sitesi satın almak~Buying a website|Uzaya sinyal göndermek~Signalling space
+tech|2|Bir web adresi (URL) genelde nasıl başlar?|How does a web address usually start?|https://|ftp:\\|www//|http@
+tech|2|"Nokia 3310" en çok neyiyle ünlüdür?|The Nokia 3310 is famous for being…|Neredeyse kırılmaz~Nearly indestructible|Katlanabilir~Foldable|Su altında çalışması~Working underwater|Hologram ekranı~Holographic
+tech|2|Polonyalı matematikçiler hangi Alman şifre makinesini ilk çözenlerdendi?|Polish mathematicians were among the first to crack which German cipher machine?|Enigma|Lorenz|Purple|Hagelin
+tech|3|"Bilgisayar biliminin babası" olarak anılan ve Enigma çalışmalarıyla bilinen İngiliz kimdir?|Which British scientist is called a father of computer science and worked on Enigma?|Alan Turing|Charles Babbage|Tim Berners-Lee|John von Neumann
+tech|3|World Wide Web'i kim icat etti?|Who invented the World Wide Web?|Tim Berners-Lee|Bill Gates|Steve Jobs|Vint Cerf
+tech|3|İlk programcı olarak kabul edilen kadın kimdir?|Who is considered the first computer programmer?|Ada Lovelace|Grace Hopper|Marie Curie|Hedy Lamarr
+tech|3|Bir kilobayt (geleneksel olarak) kaç bayttır?|How many bytes is a kilobyte (traditionally)?|1024|1000|512|2048
+tech|3|"Python" programlama dili adını nereden alır?|Where did the Python language get its name?|Monty Python'dan~From Monty Python|Bir yılandan~From a snake|Bir Yunan tanrısından~From a Greek god|Mucidin kedisinden~The inventor's cat
+tech|3|Hangi dil web tarayıcılarında en yaygın çalışan programlama dilidir?|Which programming language runs natively in almost every web browser?|JavaScript|Java|C++|Python
+tech|3|"Kablosuz internetin annesi" sayılan buluşa katkıda bulunan Hollywood yıldızı kimdir?|Which Hollywood star co-invented a technology behind Wi-Fi and Bluetooth?|Hedy Lamarr|Marilyn Monroe|Audrey Hepburn|Grace Kelly
+tech|3|İlk web sitesi hangi kurumda yayınlandı?|At which organisation was the first website published?|CERN|NASA|MIT|IBM
+tech|3|Moore Yasası neyin yaklaşık iki yılda bir ikiye katlanacağını söyler?|Moore's Law says what doubles roughly every two years?|Çipteki transistör sayısı~Transistors on a chip|İnternet kullanıcıları~Internet users|Pil ömrü~Battery life|Ekran boyutu~Screen size
+tech|3|"Spam" kelimesi e-postalar için hangi komik skeçten gelir?|The word "spam" for junk email comes from a sketch by…|Monty Python|Mr. Bean|The Simpsons|Saturday Night Live
+tech|3|Bitcoin'in yaratıcısının takma adı nedir?|What is the pseudonym of Bitcoin's creator?|Satoshi Nakamoto|Hal Finney|Vitalik Buterin|Nick Szabo
+tech|3|QR kodunu hangi ülkeden bir şirket icat etti?|A company from which country invented the QR code?|Japonya~Japan|Güney Kore~South Korea|Çin~China|Almanya~Germany
+tech|3|İlk video YouTube'a ne zaman yüklendi ve konusu neydi?|What was the first YouTube video about (2005)?|Hayvanat bahçesinde filler~Elephants at a zoo|Bir kedi~A cat|Bir doğum günü~A birthday|Bir şarkı~A song
+tech|3|İkili sistemde "10" onluk sistemde kaça eşittir?|In binary, "10" equals what in decimal?|2|10|1|4
+tech|3|Unix zamanı hangi tarihten itibaren saniye sayar?|Unix time counts seconds since which date?|1 Ocak 1970~1 January 1970|1 Ocak 1900~1 January 1900|1 Ocak 2000~1 January 2000|1 Ocak 1980~1 January 1980

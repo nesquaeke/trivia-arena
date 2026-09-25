@@ -1,0 +1,56 @@
+# Spor
+sport|1|Bir futbol takımında sahada kaç oyuncu vardır?|How many players does a football team have on the pitch?|11|9|10|12
+sport|1|Basketbolda topun geçtiği halkaya ne denir?|What is the ring you shoot through in basketball?|Pota~Hoop|Kale~Goal|File~Net|Direk~Post
+sport|1|Tenis maçında skor "0" yerine hangi kelimeyle söylenir (İngilizce)?|In tennis, what word means zero?|Love|Nil|Zero|Duck
+sport|1|Olimpiyat halkaları kaç tanedir?|How many Olympic rings are there?|5|4|6|7
+sport|1|Hangi sporda "strike" ve "spare" terimleri kullanılır?|Which sport uses the terms "strike" and "spare"?|Bowling|Golf|Beyzbol~Baseball|Kriket~Cricket
+sport|1|Tour de France hangi spor yarışıdır?|What kind of race is the Tour de France?|Bisiklet~Cycling|Koşu~Running|Yelken~Sailing|Otomobil~Motor racing
+sport|1|Golfta topu deliğe sokmak için kullanılan alete ne denir?|What do you hit the ball with in golf?|Sopa~Club|Raket~Racket|Kürek~Paddle|Bat
+sport|1|Futbolda eliyle topa dokunabilen oyuncu kimdir?|Which football player may touch the ball with their hands?|Kaleci~Goalkeeper|Forvet~Striker|Defans~Defender|Orta saha~Midfielder
+sport|1|Maraton kaç kilometreye yakındır?|A marathon is about how many kilometres?|42|21|30|50
+sport|1|Hangi spor buz üzerinde disk (puck) ile oynanır?|Which sport is played on ice with a puck?|Buz hokeyi~Ice hockey|Curling|Artistik patinaj~Figure skating|Kayak~Skiing
+sport|1|Voleybolda bir takımda sahada kaç oyuncu vardır?|How many players per side are on court in volleyball?|6|5|7|4
+sport|1|Hangi sporda oyuncular "smaç" vurur?|In which sport do players "spike" the ball over a net?|Voleybol~Volleyball|Golf|Hentbol~Handball|Futbol~Football
+sport|1|Boks maçları hangi alanda yapılır?|Where do boxing matches take place?|Ring|Pist~Track|Saha~Pitch|Havuz~Pool
+sport|1|Kış Olimpiyatlarında hangi spor yapılır?|Which sport is part of the Winter Olympics?|Kayak~Skiing|Sörf~Surfing|Voleybol~Volleyball|Maraton~Marathon
+sport|1|Formula 1 hangi spordur?|What is Formula 1?|Otomobil yarışı~Motor racing|Uçak yarışı~Air racing|Tekne yarışı~Boat racing|At yarışı~Horse racing
+sport|1|Sumo güreşi hangi ülkenin ulusal sporudur?|Sumo wrestling is the national sport of which country?|Japonya~Japan|Çin~China|Moğolistan~Mongolia|Kore~Korea
+sport|1|Masa tenisinde top hangi renkte olur genelde?|What colour is a table tennis ball usually?|Beyaz ya da turuncu~White or orange|Sarı-yeşil~Yellow-green|Kırmızı~Red|Siyah~Black
+sport|1|Bir basketbol takımında sahada kaç oyuncu vardır?|How many players per team are on a basketball court?|5|6|7|4
+sport|1|Hangi sporda "offside" (ofsayt) kuralı vardır?|Which sport has the offside rule?|Futbol~Football|Basketbol~Basketball|Tenis~Tennis|Voleybol~Volleyball
+sport|1|Dünya Kupası hangi sporun en büyük turnuvasıdır (en ünlüsü)?|The most famous World Cup is in which sport?|Futbol~Football|Basketbol~Basketball|Tenis~Tennis|Golf
+sport|2|Wimbledon hangi zeminde oynanır?|On which surface is Wimbledon played?|Çim~Grass|Toprak~Clay|Sert kort~Hard court|Halı~Carpet
+sport|2|En çok Dünya Kupası kazanan ülke hangisidir?|Which country has won the most football World Cups?|Brezilya~Brazil|Almanya~Germany|İtalya~Italy|Arjantin~Argentina
+sport|2|Usain Bolt hangi ülkedendir?|Which country is Usain Bolt from?|Jamaika~Jamaica|ABD~USA|Kenya|Kanada~Canada
+sport|2|Real Madrid ve Barcelona arasındaki maça ne ad verilir?|What is the match between Real Madrid and Barcelona called?|El Clásico|Derby della Madonnina|Der Klassiker|Old Firm
+sport|2|Polonyalı golcü Robert Lewandowski'nin uzun süre oynadığı Alman kulübü hangisidir?|Which German club did Robert Lewandowski play for for many years?|Bayern Münih~Bayern Munich|Hamburg|Schalke 04|Wolfsburg
+sport|2|Basketbolda üç sayılık çizgiden atılan başarılı atış kaç sayıdır?|How many points is a shot from behind the arc in basketball?|3|2|4|1
+sport|2|Hangi ülke Rugby Dünya Kupası'ndaki "haka" dansıyla ünlüdür?|Which rugby team is famous for performing the haka?|Yeni Zelanda~New Zealand|Avustralya~Australia|Fiji|Güney Afrika~South Africa
+sport|2|Tenis tarihinde en çok Roland Garros kazanan İspanyol oyuncu kimdir?|Which Spanish player has won the most French Open titles?|Rafael Nadal|Carlos Alcaraz|David Ferrer|Carlos Moyá
+sport|2|Olimpiyat meşalesi her seferinde hangi ülkede yakılır?|In which country is the Olympic flame lit each time?|Yunanistan~Greece|Ev sahibi ülke~The host country|İsviçre~Switzerland|Fransa~France
+sport|2|Hangi sporda "birdie" ve "eagle" skorları vardır?|Which sport has scores called "birdie" and "eagle"?|Golf|Badminton|Okçuluk~Archery|Kriket~Cricket
+sport|2|NBA hangi sporun ligidir?|The NBA is a league for which sport?|Basketbol~Basketball|Beyzbol~Baseball|Amerikan futbolu~American football|Buz hokeyi~Ice hockey
+sport|2|Badmintonda top yerine kullanılan tüylü nesneye ne denir?|What is the feathered projectile in badminton called?|Tüylü top~Shuttlecock|Disk~Puck|Pinpon~Ping|Kuş~Birdie ball
+sport|2|Hangi oyuncu 8 kez Ballon d'Or kazandı?|Which player has won the Ballon d'Or eight times?|Lionel Messi|Cristiano Ronaldo|Pelé|Johan Cruyff
+sport|2|Yüzmede en hızlı stil hangisidir?|Which swimming stroke is usually the fastest?|Serbest~Freestyle (front crawl)|Kurbağalama~Breaststroke|Sırtüstü~Backstroke|Kelebek~Butterfly
+sport|2|Hangi sporda "Grand Slam" turnuvaları vardır?|Which sport has "Grand Slam" tournaments?|Tenis~Tennis|Futbol~Football|Bisiklet~Cycling|Boks~Boxing
+sport|2|Bir futbol maçının normal süresi kaç dakikadır?|How long is a regular football match?|90 dakika~90 minutes|80 dakika~80 minutes|100 dakika~100 minutes|60 dakika~60 minutes
+sport|2|Dart tahtasının merkezine ne denir?|What is the centre of a dartboard called?|Bullseye|Center|Hedef~Target|Nokta~Dot
+sport|2|Michael Phelps hangi sporda olimpiyat rekoru sahibidir?|In which sport does Michael Phelps hold Olympic records?|Yüzme~Swimming|Atletizm~Athletics|Jimnastik~Gymnastics|Kürek~Rowing
+sport|2|Hangi ülke en çok Tour de France kazanan bisikletçiye sahiptir?|Which country has produced the most Tour de France winners?|Fransa~France|İspanya~Spain|İtalya~Italy|Belçika~Belgium
+sport|2|Kayakla atlama gibi, kayak ve atıcılığı birleştiren kış sporu hangisidir?|Which winter sport combines skiing and rifle shooting?|Biatlon~Biathlon|Kızak~Luge|Slalom|Bobsleigh
+sport|3|Modern Olimpiyatlar hangi yıl başladı?|In which year did the modern Olympics begin?|1896|1900|1924|1888
+sport|3|Futbol sahasında ceza sahası noktası kaleden kaç metre uzaktadır?|How far is the penalty spot from the goal line?|11 metre~11 metres|9 metre~9 metres|12 metre~12 metres|16 metre~16 metres
+sport|3|Hangi ülke ilk FIFA Dünya Kupası'nı (1930) kazandı?|Who won the first FIFA World Cup in 1930?|Uruguay|Brezilya~Brazil|Arjantin~Argentina|İtalya~Italy
+sport|3|Bir golf sahasında standart olarak kaç delik vardır?|How many holes are on a standard golf course?|18|9|12|20
+sport|3|Tenis kortunun ağının ortadaki yüksekliği yaklaşık kaç santimetredir?|How high is a tennis net at the centre, roughly?|91 cm|75 cm|107 cm|120 cm
+sport|3|Hangi boksör "Kelebek gibi uç, arı gibi sok" sözüyle ünlüdür?|Which boxer said "Float like a butterfly, sting like a bee"?|Muhammad Ali|Mike Tyson|Joe Frazier|George Foreman
+sport|3|Polonyalı kayakla atlama yıldızı Adam Małysz hangi sporda ün kazandı?|Adam Małysz became a star in which sport?|Kayakla atlama~Ski jumping|Biatlon~Biathlon|Futbol~Football|Voleybol~Volleyball
+sport|3|Maratonun hikâyesi hangi antik savaşla ilişkilidir?|The marathon's story is linked to which ancient battle?|Maraton Savaşı~Battle of Marathon|Truva Savaşı~Trojan War|Salamis Savaşı~Battle of Salamis|Termopil~Thermopylae
+sport|3|Satranç Dünya Şampiyonu Magnus Carlsen hangi ülkedendir?|Which country is chess champion Magnus Carlsen from?|Norveç~Norway|İsveç~Sweden|Danimarka~Denmark|Hollanda~Netherlands
+sport|3|Avrupa Futbol Şampiyonası'nı en çok kazanan ülke hangisidir?|Which country has won the most European Championships in football?|İspanya~Spain|Almanya~Germany|Fransa~France|İtalya~Italy
+sport|3|"Curling" oyununda taşın gideceği yolu süpürenler ne kullanır?|In curling, what do sweepers use?|Fırça~Brooms|Kürek~Paddles|Sopa~Sticks|Eldiven~Gloves
+sport|3|Bir voleybol setini kazanmak için genellikle kaç sayı gerekir?|How many points usually win a volleyball set?|25|21|15|30
+sport|3|Serena Williams kaç Grand Slam tekler şampiyonluğu kazandı?|How many Grand Slam singles titles did Serena Williams win?|23|18|20|25
+sport|3|Hangi şehir hem Yaz hem Kış Olimpiyatlarına ev sahipliği yapan ilk şehirdir?|Which was the first city to host both Summer and Winter Olympics?|Pekin~Beijing|Londra~London|Tokyo|Los Angeles
+sport|3|Polonya erkek milli takımı hangi sporda birden çok dünya şampiyonluğu kazandı?|In which sport has Poland's men's team won multiple world titles?|Voleybol~Volleyball|Hentbol~Handball|Basketbol~Basketball|Buz hokeyi~Ice hockey

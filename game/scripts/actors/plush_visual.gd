@@ -9,12 +9,18 @@ const COLORS := {
 	"mustard": Color("F2C230"), "butter": Color("F6DD7C"), "tangerine": Color("EE8A33"),
 	"rose": Color("E77C95"), "mint": Color("7ACFAE"), "sky": Color("77B3E6"),
 	"lilac": Color("B49BE0"), "charcoal": Color("4B4553"),
+	"cherry": Color("C9303C"), "navy": Color("33508F"), "forest": Color("3F7D4E"), "plum": Color("7A3E6E"),
+	"coral": Color("F07B5B"), "snow": Color("EFEDE6"), "cocoa": Color("7B4B32"), "gold": Color("E1B23E"),
 	"teddy": Color("CFA877"),
 }
-const COLOR_KEYS := ["mustard", "butter", "tangerine", "rose", "mint", "sky", "lilac", "charcoal"]
-const HATS := ["none", "tophat", "bowler", "fez", "boater", "crown", "cone"]
-const MUSTACHES := ["none", "handlebar", "chevron", "pencil", "walrus"]
-const BOWTIES := ["none", "classic", "dotted", "big"]
+const COLOR_KEYS := ["mustard", "butter", "tangerine", "rose", "mint", "sky", "lilac", "charcoal",
+	"cherry", "navy", "forest", "plum", "coral", "snow", "cocoa", "gold"]
+## Oyuncu rengi olarak seçilebilenler (ilk 8'i herkese açık, diğerleri Sahne Rütbesi ile)
+const HATS := ["none", "tophat", "bowler", "fez", "boater", "crown", "cone",
+	"beret", "party", "tricorn", "wizard", "chef", "jester", "cowboy", "propeller", "flowers", "laurel"]
+const MUSTACHES := ["none", "handlebar", "chevron", "pencil", "walrus", "imperial", "goatee", "horseshoe", "curly", "beard"]
+const BOWTIES := ["none", "classic", "dotted", "big", "scarf", "medal", "pearls", "ascot", "rose", "bell"]
+const GLASSES := ["none", "round", "monocle", "star", "shades", "domino", "eyepatch"]
 
 static var _felt_normal: NoiseTexture2D
 static var _mats := {}
@@ -31,6 +37,7 @@ var leg_r: Node3D
 var hat_anchor: Node3D
 var face_anchor: Node3D
 var neck_anchor: Node3D
+var glasses_anchor: Node3D
 var eyes: Array[Node3D] = []
 var felt_parts: Array[MeshInstance3D] = []
 
@@ -74,8 +81,11 @@ static func felt(c: Color) -> StandardMaterial3D:
 	m.uv1_triplanar = true
 	m.uv1_scale = Vector3(4, 4, 4)
 	m.rim_enabled = true
-	m.rim = 0.25
-	m.rim_tint = 0.5
+	m.rim = 0.4
+	m.rim_tint = 0.55
+	# kumaş tüyü: ışığın arkasından hafif sızma
+	m.backlight_enabled = true
+	m.backlight = c.darkened(0.55)
 	_mats[key] = m
 	return m
 
@@ -215,6 +225,9 @@ func _build() -> void:
 	neck_anchor = Node3D.new()
 	neck_anchor.position = Vector3(0, 0.86, 0.23)
 	body_root.add_child(neck_anchor)
+	glasses_anchor = Node3D.new()
+	glasses_anchor.position = Vector3(0, 0.19, 0.29)
+	head_pivot.add_child(glasses_anchor)
 
 # ── kostüm ──────────────────────────────────────────────────────────
 func apply_look(l: Dictionary) -> void:
@@ -224,7 +237,9 @@ func apply_look(l: Dictionary) -> void:
 	var fm := felt(c if culture == "" else COLORS.teddy)
 	for mi in felt_parts:
 		mi.material_override = fm
-	for a in [hat_anchor, face_anchor, neck_anchor]:
+	for a in [hat_anchor, face_anchor, neck_anchor, glasses_anchor]:
+		if a == null:
+			continue
 		for ch in a.get_children():
 			ch.queue_free()
 	CultureCostume.undress(self)
@@ -234,6 +249,7 @@ func apply_look(l: Dictionary) -> void:
 	_build_hat(String(look.get("hat", "none")))
 	_build_mustache(String(look.get("mustache", "none")))
 	_build_bowtie(String(look.get("bowtie", "none")))
+	_build_glasses(String(look.get("glasses", "none")))
 
 ## Fetih kostümünü giy ("" verilirse Trivia kostümüne döner)
 func set_culture(c: String) -> void:
@@ -275,6 +291,80 @@ func _build_hat(kind: String) -> void:
 		"cone":
 			_mesh(hat_anchor, _cyl(0.0, 0.14, 0.34, 20), mat("cone", Color("3C8DDB"), 0.6), Vector3(0, 0.1, 0), Vector3(-0.15, 0, 0.12))
 			_mesh(hat_anchor, _sphere(0.045), mat("pom", Color("FFF1C4"), 1.0), Vector3(0.04, 0.28, -0.05))
+		"beret":
+			var bf := felt(Color("2A2A33"))
+			_mesh(hat_anchor, _sphere(0.23), bf, Vector3(0.05, -0.02, 0), Vector3(0, 0, -0.25), Vector3(1.1, 0.32, 1.05))
+			_mesh(hat_anchor, _cyl(0.01, 0.018, 0.05, 8), bf, Vector3(0.03, 0.06, 0))
+		"party":
+			var pm := mat("party", Color("F04E8C"), 0.55)
+			_mesh(hat_anchor, _cyl(0.0, 0.13, 0.32, 20), pm, Vector3(0, 0.1, 0))
+			for k in 4:
+				_mesh(hat_anchor, _cyl(0.132 - k * 0.03, 0.135 - k * 0.03, 0.02, 20), mat("party_s", Color("FFD84A"), 0.5), Vector3(0, -0.02 + k * 0.075, 0))
+			_mesh(hat_anchor, _sphere(0.05), mat("pom2", Color("7CE0FF"), 1.0), Vector3(0, 0.27, 0))
+		"tricorn":
+			var tc := mat("tricorn", Color("1E1A20"), 0.6)
+			_mesh(hat_anchor, _cyl(0.16, 0.17, 0.12, 24), tc, Vector3(0, 0.02, 0))
+			for i in 3:
+				var a := TAU * i / 3.0 + PI / 2
+				_mesh(hat_anchor, BoxMesh.new(), tc, Vector3(cos(a) * 0.17, 0.02, sin(a) * 0.17), Vector3(0, -a, 0.35), Vector3(0.05, 0.14, 0.34))
+			_mesh(hat_anchor, _cyl(0.175, 0.175, 0.015, 24), gold, Vector3(0, 0.07, 0))
+			var skull := _mesh(hat_anchor, _sphere(0.03), mat("bone", Color("F2EAD8"), 0.8), Vector3(0, 0.04, 0.2))
+			skull.scale = Vector3(1, 0.9, 0.5)
+		"wizard":
+			var wz := mat("wizard", Color("3B2C8C"), 0.7)
+			_mesh(hat_anchor, _cyl(0.3, 0.3, 0.02, 30), wz, Vector3(0, -0.06, 0))
+			_mesh(hat_anchor, _cyl(0.02, 0.17, 0.46, 20), wz, Vector3(0.03, 0.18, -0.02), Vector3(-0.2, 0, -0.18))
+			for k in 5:
+				var a := k * 1.3
+				_mesh(hat_anchor, _sphere(0.02), gold, Vector3(cos(a) * 0.13, 0.02 + k * 0.07, sin(a) * 0.13))
+		"chef":
+			var wt := mat("chef", Color("F8F6F0"), 0.95)
+			_mesh(hat_anchor, _cyl(0.17, 0.17, 0.12, 24), wt, Vector3(0, 0.0, 0))
+			for i in 5:
+				var a := TAU * i / 5.0
+				_mesh(hat_anchor, _sphere(0.1), wt, Vector3(cos(a) * 0.09, 0.14, sin(a) * 0.09))
+			_mesh(hat_anchor, _sphere(0.12), wt, Vector3(0, 0.18, 0))
+		"jester":
+			for side: int in [-1, 1]:
+				var jm := mat("jester_%d" % side, Color("C9303C") if side < 0 else Color("2E7D4F"), 0.6)
+				_mesh(hat_anchor, _cyl(0.02, 0.1, 0.32, 14), jm, Vector3(0.12 * side, 0.12, 0), Vector3(0, 0, -0.9 * side))
+				_mesh(hat_anchor, _sphere(0.04), gold, Vector3(0.27 * side, 0.21, 0))
+			_mesh(hat_anchor, _cyl(0.17, 0.17, 0.07, 24), mat("jester_b", Color("F2C230"), 0.6), Vector3(0, -0.03, 0))
+		"cowboy":
+			var cb := mat("cowboy", Color("8A5A33"), 0.8)
+			_mesh(hat_anchor, _cyl(0.34, 0.34, 0.02, 32), cb, Vector3(0, -0.06, 0), Vector3.ZERO, Vector3(1, 1, 0.85))
+			for side: int in [-1, 1]:
+				_mesh(hat_anchor, _cyl(0.1, 0.1, 0.02, 20), cb, Vector3(0.27 * side, -0.02, 0), Vector3(0, 0, 0.6 * side), Vector3(1, 1, 2.2))
+			_mesh(hat_anchor, _cyl(0.14, 0.17, 0.18, 24), cb, Vector3(0, 0.04, 0))
+			_mesh(hat_anchor, _cyl(0.172, 0.172, 0.03, 24), mat("cowboy_b", Color("3A2416"), 0.6), Vector3(0, -0.02, 0))
+		"propeller":
+			var cap_m := felt(Color("3C8DDB"))
+			var dome2 := SphereMesh.new()
+			dome2.radius = 0.2
+			dome2.height = 0.2
+			dome2.is_hemisphere = true
+			_mesh(hat_anchor, dome2, cap_m, Vector3(0, -0.07, 0), Vector3.ZERO, Vector3(1, 0.8, 1))
+			_mesh(hat_anchor, _cyl(0.012, 0.012, 0.08, 8), gold, Vector3(0, 0.1, 0))
+			var prop := Node3D.new()
+			prop.name = "Propeller"
+			prop.position = Vector3(0, 0.14, 0)
+			hat_anchor.add_child(prop)
+			for side: int in [-1, 1]:
+				_mesh(prop, BoxMesh.new(), mat("prop_%d" % side, Color("F24E4E") if side < 0 else Color("FFD84A"), 0.5), Vector3(0.09 * side, 0, 0), Vector3(0.3 * side, 0, 0), Vector3(0.16, 0.012, 0.05))
+			_propeller = prop
+		"flowers":
+			var cols := [Color("F27BA8"), Color("FFD84A"), Color("A98BEA"), Color("FFFFFF"), Color("F2994A")]
+			for i in 9:
+				var a := TAU * i / 9.0
+				var fp := Vector3(cos(a) * 0.2, -0.04, sin(a) * 0.2)
+				_mesh(hat_anchor, _sphere(0.045), mat("flw_%d" % (i % 5), cols[i % 5], 0.7), fp)
+				_mesh(hat_anchor, _sphere(0.02), mat("flw_c", Color("F2C230"), 0.6), fp + Vector3(0, 0.03, 0))
+			_mesh(hat_anchor, _cyl(0.2, 0.2, 0.02, 24), mat("leaf", Color("4E9A45"), 0.8), Vector3(0, -0.07, 0))
+		"laurel":
+			for side: int in [-1, 1]:
+				for k in 6:
+					var a := PI / 2 + side * (0.3 + k * 0.38)
+					_mesh(hat_anchor, _sphere(0.04), gold, Vector3(cos(a) * 0.2, -0.05 + k * 0.012, sin(a) * 0.2), Vector3(0, -a, 0.5 * side), Vector3(1.6, 0.5, 0.8))
 
 func _build_mustache(kind: String) -> void:
 	var hair := mat("hair", Color("2A1A10"), 0.9)
@@ -290,9 +380,33 @@ func _build_mustache(kind: String) -> void:
 		"walrus":
 			for i in 3:
 				_mesh(face_anchor, _sphere(0.055), hair, Vector3((i - 1) * 0.06, -0.02 - abs(i - 1) * 0.01, 0.0), Vector3.ZERO, Vector3(1, 1.1, 0.5))
+		"imperial":
+			for side: int in [-1, 1]:
+				_mesh(face_anchor, _capsule(0.018, 0.12), hair, Vector3(0.055 * side, 0.005, 0.012), Vector3(0, 0, PI / 2 - 0.1 * side))
+				_mesh(face_anchor, _capsule(0.012, 0.09), hair, Vector3(0.12 * side, 0.05, 0.0), Vector3(0, 0, -0.3 * side))
+		"goatee":
+			_mesh(face_anchor, _capsule(0.012, 0.13), hair, Vector3(0, 0.005, 0.012), Vector3(0, 0, PI / 2))
+			_mesh(face_anchor, _sphere(0.045), hair, Vector3(0, -0.12, -0.01), Vector3.ZERO, Vector3(0.7, 1.2, 0.55))
+		"horseshoe":
+			_mesh(face_anchor, _capsule(0.018, 0.14), hair, Vector3(0, 0.005, 0.012), Vector3(0, 0, PI / 2))
+			for side: int in [-1, 1]:
+				_mesh(face_anchor, _capsule(0.017, 0.14), hair, Vector3(0.07 * side, -0.06, 0.0))
+		"curly":
+			for side: int in [-1, 1]:
+				_mesh(face_anchor, _capsule(0.02, 0.12), hair, Vector3(0.05 * side, 0, 0.012), Vector3(0, 0, PI / 2))
+				var t := TorusMesh.new()
+				t.inner_radius = 0.018
+				t.outer_radius = 0.034
+				_mesh(face_anchor, t, hair, Vector3(0.12 * side, 0.025, 0.0), Vector3(PI / 2, 0, 0))
+		"beard":
+			var bm := felt(Color("3A2616"))
+			_mesh(face_anchor, _capsule(0.022, 0.18), hair, Vector3(0, 0.005, 0.015), Vector3(0, 0, PI / 2))
+			_mesh(face_anchor, _sphere(0.13), bm, Vector3(0, -0.13, -0.05), Vector3.ZERO, Vector3(1.25, 0.8, 0.6))
 
 func _build_bowtie(kind: String) -> void:
 	if kind == "none":
+		return
+	if _build_neck_extra(kind):
 		return
 	var c := mat("bt_classic", Color("B21E2C"), 0.45)
 	var s := 1.0
@@ -312,6 +426,84 @@ func _build_bowtie(kind: String) -> void:
 	if kind == "dotted":
 		for side: int in [-1, 1]:
 			_mesh(neck_anchor, _sphere(0.012), mat("dot", Color(1, 1, 1), 0.5), Vector3(0.06 * side, 0.01, 0.03))
+
+var _propeller: Node3D
+
+## Yeni boyun süsleri (atkı, madalya, inci, fular, gül, çıngırak)
+func _build_neck_extra(kind: String) -> bool:
+	var gold := mat("gold", Color("D6A93F"), 0.28, 1.0)
+	match kind:
+		"scarf":
+			var sc := felt(Color("C9303C"))
+			var t := TorusMesh.new()
+			t.inner_radius = 0.2
+			t.outer_radius = 0.28
+			_mesh(neck_anchor, t, sc, Vector3(0, 0.0, -0.2), Vector3(0.2, 0, 0))
+			_mesh(neck_anchor, BoxMesh.new(), sc, Vector3(0.1, -0.16, 0.02), Vector3(0, 0, 0.15), Vector3(0.09, 0.26, 0.04))
+			for k in 3:
+				_mesh(neck_anchor, BoxMesh.new(), felt(Color("F2E6CC")), Vector3(0.1 + k * 0.0, -0.1 - k * 0.06, 0.045), Vector3(0, 0, 0.15), Vector3(0.095, 0.015, 0.01))
+		"medal":
+			_mesh(neck_anchor, BoxMesh.new(), mat("ribbon", Color("2F4A8A"), 0.6), Vector3(0, -0.05, 0.005), Vector3.ZERO, Vector3(0.06, 0.12, 0.01))
+			_mesh(neck_anchor, _cyl(0.05, 0.05, 0.015, 20), gold, Vector3(0, -0.14, 0.02), Vector3(PI / 2, 0, 0))
+			_mesh(neck_anchor, _cyl(0.0, 0.03, 0.01, 5), mat("medal_s", Color("FFF1C4"), 0.4, 0.5), Vector3(0, -0.14, 0.03), Vector3(PI / 2, 0, 0))
+		"pearls":
+			for i in 13:
+				var a := PI * i / 12.0
+				_mesh(neck_anchor, _sphere(0.025), mat("pearl", Color("F6F1E6"), 0.2, 0.1), Vector3(cos(a) * 0.2, -0.05 - sin(a) * 0.08, -0.08 + sin(a) * 0.08))
+		"ascot":
+			var am := mat("ascot", Color("7A3E6E"), 0.4)
+			_mesh(neck_anchor, _sphere(0.05), am, Vector3(0, -0.01, 0.0))
+			_mesh(neck_anchor, _sphere(0.07), am, Vector3(0, -0.09, 0.0), Vector3.ZERO, Vector3(0.8, 1.3, 0.4))
+			_mesh(neck_anchor, _sphere(0.012), gold, Vector3(0, -0.07, 0.03))
+		"rose":
+			for i in 5:
+				var a := TAU * i / 5.0
+				_mesh(neck_anchor, _sphere(0.03), mat("rose_p", Color("C9183A"), 0.6), Vector3(0.14 + cos(a) * 0.022, -0.06 + sin(a) * 0.022, 0.02))
+			_mesh(neck_anchor, _sphere(0.022), mat("rose_c", Color("8E0F28"), 0.6), Vector3(0.14, -0.06, 0.04))
+			_mesh(neck_anchor, _capsule(0.006, 0.08), mat("stem", Color("4E9A45"), 0.8), Vector3(0.15, -0.11, 0.02))
+		"bell":
+			_mesh(neck_anchor, _cyl(0.2, 0.2, 0.03, 24), mat("collar", Color("C9303C"), 0.6), Vector3(0, 0, -0.18))
+			_mesh(neck_anchor, _sphere(0.045), gold, Vector3(0, -0.04, 0.02))
+			_mesh(neck_anchor, BoxMesh.new(), mat("bell_slit", Color("3A2A10"), 0.6), Vector3(0, -0.055, 0.06), Vector3.ZERO, Vector3(0.05, 0.008, 0.01))
+		_:
+			return false
+	return true
+
+## Gözlükler ve yüz aksesuarları (göz hizasında)
+func _build_glasses(kind: String) -> void:
+	if glasses_anchor == null or kind == "none":
+		return
+	var frame := mat("frame", Color("2A1D14"), 0.5)
+	var gold := mat("gold", Color("D6A93F"), 0.28, 1.0)
+	match kind:
+		"round":
+			for side: int in [-1, 1]:
+				var t := TorusMesh.new()
+				t.inner_radius = 0.055
+				t.outer_radius = 0.068
+				_mesh(glasses_anchor, t, frame, Vector3(0.1 * side, 0, 0), Vector3(PI / 2, 0, 0))
+			_mesh(glasses_anchor, _capsule(0.008, 0.07), frame, Vector3(0, 0.005, 0), Vector3(0, 0, PI / 2))
+		"monocle":
+			var t2 := TorusMesh.new()
+			t2.inner_radius = 0.058
+			t2.outer_radius = 0.07
+			_mesh(glasses_anchor, t2, gold, Vector3(0.1, 0, 0.005), Vector3(PI / 2, 0, 0))
+			_mesh(glasses_anchor, _capsule(0.004, 0.24), gold, Vector3(0.15, -0.14, -0.02), Vector3(0, 0, 0.3))
+		"star":
+			for side: int in [-1, 1]:
+				_mesh(glasses_anchor, _cyl(0.085, 0.085, 0.02, 5), mat("star_g", Color("F04E8C"), 0.4), Vector3(0.1 * side, 0, 0), Vector3(PI / 2, 0, PI / 10))
+				_mesh(glasses_anchor, _cyl(0.06, 0.06, 0.022, 5), mat("star_l", Color("2A1A2A"), 0.2), Vector3(0.1 * side, 0, 0.004), Vector3(PI / 2, 0, PI / 10))
+		"shades":
+			_mesh(glasses_anchor, BoxMesh.new(), mat("shades", Color("111114"), 0.15, 0.3), Vector3(0, 0, 0.005), Vector3.ZERO, Vector3(0.32, 0.075, 0.02))
+			_mesh(glasses_anchor, BoxMesh.new(), mat("shades_hi", Color("5A6A8A"), 0.1, 0.5), Vector3(-0.08, 0.02, 0.016), Vector3(0, 0, 0.3), Vector3(0.05, 0.01, 0.005))
+		"domino":
+			var dm := mat("domino", Color("1E1A2E"), 0.4)
+			_mesh(glasses_anchor, _sphere(0.1), dm, Vector3(0, 0, -0.015), Vector3.ZERO, Vector3(1.75, 0.6, 0.35))
+			for side: int in [-1, 1]:
+				_mesh(glasses_anchor, _sphere(0.035), mat("domino_eye", Color("F2C230"), 0.3, 0.3), Vector3(0.1 * side, 0, 0.012), Vector3.ZERO, Vector3(1.2, 0.9, 0.3))
+		"eyepatch":
+			_mesh(glasses_anchor, _cyl(0.06, 0.06, 0.02, 16), mat("patch", Color("141014"), 0.6), Vector3(-0.1, 0, 0.006), Vector3(PI / 2, 0, 0))
+			_mesh(glasses_anchor, _capsule(0.006, 0.42), mat("patch", Color("141014"), 0.6), Vector3(0, 0.03, -0.02), Vector3(0, 0, PI / 2 - 0.3))
 
 # ── sabotaj görünüşleri ─────────────────────────────────────────────
 var _boots: Array[MeshInstance3D] = []
@@ -350,6 +542,8 @@ func land(impact: float) -> void:
 ## Her fizik karesinde Plush tarafından çağrılır.
 ## state: 0 normal, 1 sendeleme, 2 yuvarlanma, 3 kalkma, 4 elendi
 func animate(delta: float, vel: Vector3, grounded: bool, state: int) -> void:
+	if _propeller and is_instance_valid(_propeller):
+		_propeller.rotation.y += delta * (5.0 + vel.length() * 4.0)
 	_t += delta
 	var hv := Vector2(vel.x, vel.z)
 	var speed := hv.length()

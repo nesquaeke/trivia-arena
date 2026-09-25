@@ -1,0 +1,112 @@
+# Doğa
+nature|1|Dünyanın en büyük hayvanı hangisidir?|What is the largest animal on Earth?|Mavi balina~Blue whale|Fil~Elephant|Beyaz köpekbalığı~Great white shark|Zürafa~Giraffe
+nature|1|Arılar hangi tatlı besini üretir?|What sweet food do bees make?|Bal~Honey|Reçel~Jam|Şeker~Sugar|Pekmez~Syrup
+nature|1|Kutup ayısının kürkü altındaki derisi ne renktir?|What colour is a polar bear's skin under its fur?|Siyah~Black|Beyaz~White|Pembe~Pink|Sarı~Yellow
+nature|1|Hangi hayvan uzun boynuyla ünlüdür?|Which animal is famous for its long neck?|Zürafa~Giraffe|Deve~Camel|Zebra|Kanguru~Kangaroo
+nature|1|Tırtıl büyüyünce neye dönüşür?|What does a caterpillar become?|Kelebek~Butterfly|Arı~Bee|Örümcek~Spider|Karınca~Ant
+nature|1|Pandaların en sevdiği besin nedir?|What do pandas mostly eat?|Bambu~Bamboo|Balık~Fish|Meyve~Fruit|Et~Meat
+nature|1|Kurbağa yavrusuna ne denir?|What is a baby frog called?|İribaş~Tadpole|Kuzu~Lamb|Tay~Foal|Civciv~Chick
+nature|1|Hangi kuş uçamaz ama çok hızlı koşar?|Which bird can't fly but runs very fast?|Devekuşu~Ostrich|Kartal~Eagle|Serçe~Sparrow|Martı~Seagull
+nature|1|Ahtapotun kaç kolu vardır?|How many arms does an octopus have?|8|6|10|12
+nature|1|Hangi hayvan "ormanların kralı" olarak anılır?|Which animal is called the "king of the jungle"?|Aslan~Lion|Kaplan~Tiger|Fil~Elephant|Goril~Gorilla
+nature|1|Yapraklarını sonbaharda döken ağaçlara ne denir?|Trees that drop their leaves in autumn are called…|Yaprak döken~Deciduous|Her dem yeşil~Evergreen|Palmiye~Palms|Kaktüs~Cacti
+nature|1|Deve hörgücünde ne depolar?|What does a camel store in its hump?|Yağ~Fat|Su~Water|Kum~Sand|Hava~Air
+nature|1|Zebraların çizgileri hangi renklerdedir?|What colours are a zebra's stripes?|Siyah ve beyaz~Black and white|Kahverengi ve beyaz~Brown and white|Sarı ve siyah~Yellow and black|Gri ve beyaz~Grey and white
+nature|1|Penguenlerin çoğu hangi yarımkürede yaşar?|Most penguins live in which hemisphere?|Güney~Southern|Kuzey~Northern|Her ikisi eşit~Both equally|Doğu~Eastern
+nature|1|Kaktüsler en çok nerede yetişir?|Where do cacti typically grow?|Çöllerde~In deserts|Buzullarda~On glaciers|Göllerde~In lakes|Yağmur ormanında~In rainforests
+nature|1|Hangi hayvan yavrusunu karnındaki kesede taşır?|Which animal carries its baby in a pouch?|Kanguru~Kangaroo|Maymun~Monkey|Ayı~Bear|Tavşan~Rabbit
+nature|1|Örümceklerin kaç bacağı vardır?|How many legs does a spider have?|8|6|10|4
+nature|1|Balinalar hangi hayvan grubundandır?|Whales belong to which animal group?|Memeliler~Mammals|Balıklar~Fish|Sürüngenler~Reptiles|Amfibiler~Amphibians
+nature|1|Hangi hayvan yaşamının çoğunu baş aşağı asılı geçirir ve çok yavaştır?|Which slow animal spends most of its life hanging upside down?|Tembel hayvan~Sloth|Koala|Lemur|Rakun~Raccoon
+nature|1|Bukalemunlar neyi değiştirmesiyle ünlüdür?|What are chameleons famous for changing?|Renk~Colour|Boy~Size|Ses~Voice|Şekil~Shape
+nature|2|Dünyanın en hızlı kara hayvanı hangisidir?|What is the fastest land animal?|Çita~Cheetah|Aslan~Lion|Antilop~Antelope|At~Horse
+nature|2|Koalaların neredeyse tek besini hangi ağacın yapraklarıdır?|Koalas almost only eat leaves of which tree?|Okaliptüs~Eucalyptus|Meşe~Oak|Çam~Pine|Söğüt~Willow
+nature|2|Yunuslar birbirleriyle nasıl iletişim kurar?|How do dolphins communicate?|Islık ve tıkırtılarla~Clicks and whistles|Renk değiştirerek~Changing colour|Işık yayarak~Glowing|İşaretle~Hand signs
+nature|2|Hangi hayvanın parmak izleri insanlarınkine çok benzer?|Which animal has fingerprints very similar to humans?|Koala|Köpek~Dog|Kedi~Cat|Papağan~Parrot
+nature|2|Bir arı kolonisinde yumurtlayan tek dişi kimdir?|Which bee lays the eggs in a hive?|Kraliçe arı~The queen|İşçi arı~A worker|Erkek arı~A drone|Bekçi arı~A guard
+nature|2|Hangi ağaç en uzun boylu ağaçlar arasındadır?|Which tree species includes the tallest trees on Earth?|Sekoya~Redwood|Baobab|Meşe~Oak|Palmiye~Palm
+nature|2|Flamingolar pembe rengini neyden alır?|Where do flamingos get their pink colour?|Yedikleri besinlerden~Their food|Güneşten~The sun|Genlerinden~Only their genes|Sudan~The water
+nature|2|Baykuşlar başlarını yaklaşık kaç derece çevirebilir?|About how far can an owl turn its head?|270 derece~270 degrees|90 derece~90 degrees|180 derece~180 degrees|360 derece~360 degrees
+nature|2|Hangi hayvanın üç kalbi vardır?|Which animal has three hearts?|Ahtapot~Octopus|Denizanası~Jellyfish|Yengeç~Crab|Köpekbalığı~Shark
+nature|2|Deniz yıldızı kolunu kaybederse ne olur?|What happens if a starfish loses an arm?|Yeniden çıkar~It can regrow|Ölür~It dies|Yüzemez~It can't swim|Renk değiştirir~It changes colour
+nature|2|Dünyadaki oksijenin önemli bir kısmını hangi canlılar üretir?|Which organisms produce a large share of Earth's oxygen?|Okyanustaki fitoplanktonlar~Ocean phytoplankton|Mantarlar~Fungi|Böcekler~Insects|Balinalar~Whales
+nature|2|Kışın uzun uykuya yatmaya ne denir?|What is the long winter sleep of some animals called?|Kış uykusu~Hibernation|Göç~Migration|Tüy dökümü~Moulting|Metamorfoz~Metamorphosis
+nature|2|Hangi hayvan en uzun yaşayan kara omurgalıları arasındadır?|Which animal is among the longest-living land vertebrates?|Dev kaplumbağa~Giant tortoise|Fil~Elephant|Papağan~Parrot|At~Horse
+nature|2|Karıncalar yuvalarını bulmak için çoğunlukla neyi kullanır?|What do ants mostly use to find their way home?|Koku izleri~Scent trails|Yıldızları~Stars|Sesi~Sound|Rüzgârı~Wind
+nature|2|Ağaçların yaşını anlamak için ne sayılır?|What do you count to tell a tree's age?|Gövde halkaları~Rings in the trunk|Dalları~Branches|Yaprakları~Leaves|Kökleri~Roots
+nature|2|Kelebekler tadı nereleriyle alır?|What do butterflies taste with?|Ayaklarıyla~Their feet|Kanatlarıyla~Their wings|Antenleriyle~Their antennae only|Gözleriyle~Their eyes
+nature|2|Dünyanın en büyük kuşu hangisidir?|What is the largest bird in the world?|Devekuşu~Ostrich|Kartal~Eagle|Albatros~Albatross|Kondor~Condor
+nature|2|Hangi hayvanın dili mavidir?|Which animal has a blue tongue?|Zürafa~Giraffe|Aslan~Lion|Ayı~Bear|Kedi~Cat
+nature|2|Yarasalar hangi hayvan grubundandır?|Bats belong to which group?|Memeliler~Mammals|Kuşlar~Birds|Böcekler~Insects|Sürüngenler~Reptiles
+nature|2|Deniz atlarında yavruları kim taşır?|In seahorses, who carries the babies?|Erkek~The male|Dişi~The female|İkisi de~Both|Hiçbiri~Neither
+nature|3|Hangi hayvan dünyada en çok insan ölümüne yol açar?|Which animal causes the most human deaths worldwide?|Sivrisinek~Mosquito|Köpekbalığı~Shark|Yılan~Snake|Timsah~Crocodile
+nature|3|Axolotl (aksolotl) doğal olarak hangi ülkede yaşar?|The axolotl lives in the wild in which country?|Meksika~Mexico|Brezilya~Brazil|Avustralya~Australia|Japonya~Japan
+nature|3|Kuşların dinozorlarla akraba olduğu fikrini güçlendiren ünlü fosil hangisidir?|Which famous fossil links birds to dinosaurs?|Archaeopteryx|Pterodaktil~Pterodactyl|Mamut~Mammoth|Trilobit~Trilobite
+nature|3|Hangi ağaç Afrika'nın simgesidir ve gövdesinde su depolar?|Which African tree stores water in its huge trunk?|Baobab|Akasya~Acacia|Palmiye~Palm|Mango
+nature|3|Tardigradlar (su ayıları) neyle ünlüdür?|What are tardigrades (water bears) famous for?|Aşırı dayanıklılık~Surviving extreme conditions|Çok hızlı koşmak~Running very fast|Işık yaymak~Glowing|Çok büyük olmak~Being huge
+nature|3|Mercan resifleri hangi canlılar tarafından oluşturulur?|Coral reefs are built by…|Mercan polipleri~Coral polyps|Algler~Algae only|Balıklar~Fish|Yengeçler~Crabs
+nature|3|Venüs sinekkapan nedir?|What is a Venus flytrap?|Böcek yiyen bir bitki~A plant that eats insects|Bir kuş~A bird|Bir örümcek~A spider|Bir kurbağa~A frog
+nature|3|Hangi hayvan dünyanın en hızlısıdır (dalış sırasında)?|Which is the fastest animal (when diving)?|Gökdoğan~Peregrine falcon|Çita~Cheetah|Kılıç balığı~Swordfish|Kartal~Eagle
+nature|3|Bir karıncanın kendi ağırlığının yaklaşık kaç katını taşıyabildiği söylenir?|Ants can carry about how many times their body weight?|10–50 kat~10–50 times|2 kat~2 times|500 kat~500 times|1000 kat~1000 times
+nature|3|Białowieża Ormanı'nın simge hayvanı olan Avrupa bizonu hangi ülkelerde yaşar?|The European bison of Białowieża Forest lives on the border of Poland and…|Belarus|Almanya~Germany|Litvanya~Lithuania|Ukrayna~Ukraine
+nature|3|Hangi mantar türü ormanda ağaç köklerini birbirine bağlayan "ağ"ın parçasıdır?|Which fungi form networks connecting tree roots?|Mikoriza~Mycorrhizal fungi|Maya~Yeast|Küf~Mould|Kav~Tinder fungus
+nature|3|Ay balığının (Mola mola) en bilinen özelliği nedir?|What is the ocean sunfish (Mola mola) known for?|En ağır kemikli balık~Heaviest bony fish|En hızlı balık~Fastest fish|Uçabilmesi~It can fly|Tatlı suda yaşaması~Living in fresh water
+nature|3|Salyangozlar yaklaşık kaç yıl uyuyabilir diye bilinir (kurak havada)?|Snails can sleep for up to about how long in dry weather?|3 yıl~3 years|3 gün~3 days|3 ay~3 months|30 yıl~30 years
+nature|3|Hangi hayvanın yavrusuna "kit" denir (İngilizce)?|Which animal's baby is called a "kit"?|Tilki~Fox|Ayı~Bear|Kartal~Eagle|Geyik~Deer
+nature|3|Kuzey ışıkları (aurora) neden oluşur?|What causes the northern lights?|Güneş parçacıklarının atmosfere çarpması~Solar particles hitting the atmosphere|Ay ışığı~Moonlight|Volkanlar~Volcanoes|Buzulların yansıması~Reflections off glaciers
+# Mutfak
+food|1|Guacamole hangi meyveden yapılır?|Guacamole is made from which fruit?|Avokado~Avocado|Muz~Banana|Mango|Kivi~Kiwi
+food|1|Sushi hangi ülkenin mutfağındandır?|Sushi comes from which country's cuisine?|Japonya~Japan|Çin~China|Tayland~Thailand|Kore~Korea
+food|1|Paella hangi ülkenin yemeğidir?|Paella is a dish from which country?|İspanya~Spain|İtalya~Italy|Meksika~Mexico|Portekiz~Portugal
+food|1|Pierogi hangi ülkenin meşhur hamur işidir?|Pierogi are famous dumplings from which country?|Polonya~Poland|İtalya~Italy|Çin~China|Fransa~France
+food|1|Patlamış mısır neyden yapılır?|What is popcorn made from?|Mısır~Corn|Pirinç~Rice|Buğday~Wheat|Arpa~Barley
+food|1|Pizza hangi ülkeden dünyaya yayıldı?|Pizza spread to the world from which country?|İtalya~Italy|ABD~USA|Yunanistan~Greece|Fransa~France
+food|1|Çikolata hangi bitkinin çekirdeklerinden yapılır?|Chocolate is made from the beans of which plant?|Kakao~Cacao|Kahve~Coffee|Vanilya~Vanilla|Fındık~Hazelnut
+food|1|Kruvasan hangi ülkeyle en çok anılır?|The croissant is most associated with which country?|Fransa~France|İtalya~Italy|Belçika~Belgium|İsviçre~Switzerland
+food|1|Taco hangi ülkenin yemeğidir?|Tacos are from which country?|Meksika~Mexico|İspanya~Spain|Arjantin~Argentina|Peru
+food|1|Peynir neyden yapılır?|What is cheese made from?|Süt~Milk|Un~Flour|Yumurta~Eggs|Şeker~Sugar
+food|1|Hangi meyve maymunlarla özdeşleşmiştir?|Which fruit is associated with monkeys?|Muz~Banana|Elma~Apple|Portakal~Orange|Üzüm~Grape
+food|1|Makarna çeşidi olan "spagetti" hangi şekildedir?|What shape is spaghetti?|Uzun ince çubuk~Long thin strands|Kelebek~Bow ties|Kabuk~Shells|Tüp~Tubes
+food|1|Kızarmış patatese İngilizcede ne denir (ABD)?|What are fried potato strips called in American English?|French fries|Chips only|Crisps|Wedges only
+food|1|Kahve çekirdeği hangi renkte kavrulur genelde?|What colour are roasted coffee beans?|Kahverengi~Brown|Yeşil~Green|Kırmızı~Red|Beyaz~White
+food|1|Limonun tadı nasıldır?|How does a lemon taste?|Ekşi~Sour|Tatlı~Sweet|Acı~Bitter|Tuzlu~Salty
+food|1|Hangi yiyecek arılar tarafından yapılır ve bozulmadan binlerce yıl dayanabilir?|Which bee-made food can last thousands of years without spoiling?|Bal~Honey|Reçel~Jam|Tereyağı~Butter|Ekmek~Bread
+food|1|Tortilla (İspanyol) ne ile yapılır?|A Spanish tortilla is made mainly with…|Yumurta ve patates~Eggs and potatoes|Mısır unu~Corn flour|Pirinç~Rice|Balık~Fish
+food|1|Hamburger köftesi genellikle neyden yapılır?|A burger patty is usually made of…|Kıyma~Minced beef|Balık~Fish|Peynir~Cheese|Mantar~Mushroom
+food|1|Çay yaprakları hangi bitkiden gelir?|Tea leaves come from which plant?|Çay bitkisi~The tea plant|Nane~Mint|Defne~Bay|Ihlamur~Linden
+food|1|Mayonez yapmak için hangi iki ana malzeme gerekir?|Mayonnaise is mainly made from which two ingredients?|Yumurta sarısı ve yağ~Egg yolk and oil|Süt ve un~Milk and flour|Domates ve şeker~Tomato and sugar|Peynir ve tuz~Cheese and salt
+food|2|Hangi baharat dünyanın en pahalısıdır?|Which spice is the most expensive in the world?|Safran~Saffron|Vanilya~Vanilla|Tarçın~Cinnamon|Karabiber~Black pepper
+food|2|Kimchi hangi ülkenin mutfağındandır?|Kimchi is from which country?|Kore~Korea|Japonya~Japan|Vietnam|Çin~China
+food|2|Tiramisu hangi ülkenin tatlısıdır?|Tiramisu is a dessert from which country?|İtalya~Italy|Fransa~France|Avusturya~Austria|İspanya~Spain
+food|2|Churros genellikle neyle servis edilir (İspanya'da)?|In Spain, churros are usually dipped in…|Sıcak çikolata~Hot chocolate|Ketçap~Ketchup|Yoğurt~Yogurt|Bal~Honey
+food|2|Gazpacho nasıl bir çorbadır?|What kind of soup is gazpacho?|Soğuk sebze çorbası~A cold vegetable soup|Sıcak et çorbası~A hot meat soup|Tatlı çorba~A sweet soup|Balık çorbası~A fish soup
+food|2|Wasabi ne renktir?|What colour is wasabi?|Yeşil~Green|Kırmızı~Red|Sarı~Yellow|Beyaz~White
+food|2|Hangi ülke dünyada en çok peynir çeşidiyle ünlüdür?|Which country is famous for having hundreds of cheeses, like Brie and Camembert?|Fransa~France|İtalya~Italy|İsviçre~Switzerland|Hollanda~Netherlands
+food|2|Bigos, Polonya'da hangi ana malzemeyle yapılır?|Bigos, a Polish stew, is made mainly with…|Lahana ve et~Cabbage and meat|Pirinç ve balık~Rice and fish|Patates ve peynir~Potatoes and cheese|Fasulye ve mısır~Beans and corn
+food|2|Hangi meyvenin içinde tek büyük çekirdek bulunur?|Which fruit has a single large stone inside?|Şeftali~Peach|Muz~Banana|Çilek~Strawberry|Üzüm~Grape
+food|2|"Fish and chips" hangi ülkenin klasiğidir?|"Fish and chips" is a classic of which country?|İngiltere~England|İrlanda~Ireland|Norveç~Norway|İskoçya~Scotland
+food|2|Mozzarella peyniri geleneksel olarak hangi hayvanın sütünden yapılır?|Traditional mozzarella is made from the milk of which animal?|Manda~Water buffalo|Keçi~Goat|Koyun~Sheep|Deve~Camel
+food|2|Pad Thai hangi ülkenin yemeğidir?|Pad Thai is from which country?|Tayland~Thailand|Vietnam|Endonezya~Indonesia|Malezya~Malaysia
+food|2|Kinoa hangi kıtadan gelir?|Quinoa comes from which continent?|Güney Amerika~South America|Afrika~Africa|Asya~Asia|Avrupa~Europe
+food|2|Bir pizza Margherita'nın renkleri hangi ülkenin bayrağını temsil eder?|The colours of a Margherita pizza represent which flag?|İtalya~Italy|Meksika~Mexico|Macaristan~Hungary|İrlanda~Ireland
+food|2|Belçika en çok hangi yiyeceğiyle ünlüdür?|Belgium is famous for which of these?|Waffle ve çikolata~Waffles and chocolate|Sushi|Taco|Pizza
+food|2|Hangi sebze ağlatır?|Which vegetable makes you cry when you cut it?|Soğan~Onion|Havuç~Carrot|Salatalık~Cucumber|Patates~Potato
+food|2|Chili (acı biber) acılığı hangi ölçekle ölçülür?|Chilli heat is measured on which scale?|Scoville|Richter|Kelvin|Beaufort
+food|2|Espresso hangi ülkenin kahve geleneğidir?|Espresso comes from which country's coffee tradition?|İtalya~Italy|Brezilya~Brazil|Kolombiya~Colombia|Fransa~France
+food|2|Hangi meyve dışında çekirdek taşır?|Which fruit has its seeds on the outside?|Çilek~Strawberry|Elma~Apple|Kiraz~Cherry|Karpuz~Watermelon
+food|2|Paskalya yumurtaları geleneksel olarak neyden yapılır (tatlı olanlar)?|Sweet Easter eggs are traditionally made of…|Çikolata~Chocolate|Peynir~Cheese|Pirinç~Rice|Hamur~Dough
+food|3|Hangi ülke dünyada en çok çay tüketir (kişi başı)?|Which country drinks the most tea per person?|Türkiye~Türkiye|İngiltere~UK|Çin~China|Hindistan~India
+food|3|Beşinci temel tat olarak bilinen "umami" hangi dilden gelir?|"Umami", the fifth basic taste, is a word from which language?|Japonca~Japanese|Çince~Chinese|Korece~Korean|Tay dili~Thai
+food|3|Hangi peynir içindeki büyük deliklerle ünlüdür?|Which cheese is famous for its big holes?|Emmental|Brie|Cheddar|Parmesan
+food|3|Jamón ibérico hangi hayvandan elde edilir?|Jamón ibérico comes from which animal?|Domuz~Pig|İnek~Cow|Kuzu~Lamb|Ördek~Duck
+food|3|Vanilya hangi bitki ailesindendir?|Vanilla comes from which plant family?|Orkide~Orchid|Gül~Rose|Nane~Mint|Zambak~Lily
+food|3|Kaju fıstığı hangi meyvenin ucunda büyür?|Cashew nuts grow at the end of which fruit?|Kaju elması~Cashew apple|Hindistan cevizi~Coconut|Mango|Papaya
+food|3|Sriracha sosu adını hangi ülkedeki bir kasabadan alır?|Sriracha sauce is named after a town in which country?|Tayland~Thailand|ABD~USA|Vietnam|Meksika~Mexico
+food|3|Polonya'nın çorbası żurek hangi tadıyla bilinir?|Poland's żurek soup is known for being…|Ekşi~Sour|Çok tatlı~Very sweet|Çok acı~Very spicy|Soğuk~Cold
+food|3|Tereyağı yapmak için krema ne yapılır?|How is cream turned into butter?|Çalkalanır~It is churned|Kaynatılır~It is boiled|Dondurulur~It is frozen|Tuzlanır~It is salted
+food|3|Hangi meyve "meyvelerin kralı" olarak anılır ve kokusuyla ünlüdür?|Which smelly fruit is called the "king of fruits"?|Durian|Ananas~Pineapple|Mango|Papaya
+food|3|Soya sosu neyin mayalanmasıyla yapılır?|Soy sauce is made by fermenting…|Soya fasulyesi ve buğday~Soybeans and wheat|Balık~Fish|Pirinç~Rice only|Mantar~Mushrooms
+food|3|Parmesan peynirinin İtalyanca tam adı nedir?|What is Parmesan's full Italian name?|Parmigiano Reggiano|Grana Padano|Pecorino Romano|Gorgonzola
+food|3|Kahvenin keşfi efsaneye göre hangi hayvanlar sayesinde olmuştur?|Legend says coffee was discovered thanks to which animals?|Keçiler~Goats|Kuşlar~Birds|Maymunlar~Monkeys|Develer~Camels
+food|3|Hangi ülke bir tür kaz ciğeri olan "foie gras" ile ünlüdür?|Which country is famous for foie gras?|Fransa~France|İtalya~Italy|İspanya~Spain|Belçika~Belgium
+food|3|Pesto sosunun temel yeşil malzemesi nedir?|What is the main green ingredient in pesto?|Fesleğen~Basil|Maydanoz~Parsley|Ispanak~Spinach|Nane~Mint

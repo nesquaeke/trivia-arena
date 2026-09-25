@@ -1,0 +1,56 @@
+# Diller ve Kelimeler
+lang|1|İspanyolcada "merhaba" ne demektir?|How do you say "hello" in Spanish?|Hola|Ciao|Hallo|Cześć
+lang|1|Lehçede (Polonyaca) "merhaba/selam" nasıl denir (samimi)?|How do you say a casual "hi" in Polish?|Cześć|Hola|Salut|Hej hej hej
+lang|1|İngilizcede "teşekkürler" nasıl denir?|What is "thank you" in English?|Thank you|Please|Sorry|Hello
+lang|1|İspanyolcada "gracias" ne demektir?|What does the Spanish word "gracias" mean?|Teşekkürler~Thank you|Lütfen~Please|Merhaba~Hello|Hoşça kal~Goodbye
+lang|1|Polonyacada "dziękuję" ne demektir?|What does the Polish word "dziękuję" mean?|Teşekkürler~Thank you|Günaydın~Good morning|Evet~Yes|Hayır~No
+lang|1|Türkçede "merhaba" nasıl denir?|How do you say "hello" in Turkish?|Merhaba|Hola|Ahoj|Salve
+lang|1|İspanyolcada "uno, dos, tres" neyi sayar?|What do "uno, dos, tres" count in Spanish?|1, 2, 3|A, B, C|Pazartesi, Salı, Çarşamba~Mon, Tue, Wed|Kırmızı, mavi, yeşil~Red, blue, green
+lang|1|Dünyada en çok anadil konuşanı olan dil hangisidir?|Which language has the most native speakers?|Çince (Mandarin)~Mandarin Chinese|İngilizce~English|İspanyolca~Spanish|Hintçe~Hindi
+lang|1|"Pizza" kelimesi hangi dilden gelir?|The word "pizza" comes from which language?|İtalyanca~Italian|Yunanca~Greek|İspanyolca~Spanish|Fransızca~French
+lang|1|"Kindergarten" (anaokulu) kelimesi hangi dilden gelir?|"Kindergarten" comes from which language?|Almanca~German|Hollandaca~Dutch|İsveççe~Swedish|Lehçe~Polish
+lang|1|İspanyolcada "adiós" ne demektir?|What does "adiós" mean in Spanish?|Hoşça kal~Goodbye|Merhaba~Hello|Afiyet olsun~Enjoy your meal|Lütfen~Please
+lang|1|Türk alfabesinde kaç harf vardır?|How many letters are in the Turkish alphabet?|29|26|28|32
+lang|1|İngiliz alfabesinde kaç harf vardır?|How many letters are in the English alphabet?|26|24|28|29
+lang|1|"Karaoke" kelimesi hangi dildendir?|Which language does "karaoke" come from?|Japonca~Japanese|Çince~Chinese|Korece~Korean|Tayca~Thai
+lang|1|Brezilya'da hangi dil konuşulur?|What language is spoken in Brazil?|Portekizce~Portuguese|İspanyolca~Spanish|Brezilyaca~Brazilian|İtalyanca~Italian
+lang|1|İspanyolcada "gato" hangi hayvandır?|What animal is "gato" in Spanish?|Kedi~Cat|Köpek~Dog|Ördek~Duck|At~Horse
+lang|1|Polonyacada "tak" ne demektir?|What does "tak" mean in Polish?|Evet~Yes|Hayır~No|Belki~Maybe|Teşekkürler~Thanks
+lang|1|"Robot" kelimesi hangi dilden gelir?|The word "robot" comes from which language?|Çekçe~Czech|Rusça~Russian|İngilizce~English|Almanca~German
+lang|1|"Ketçap" kelimesinin kökeni hangi bölge dillerine dayanır?|The word "ketchup" originally comes from…|Güneydoğu Asya/Çin~Southeast Asia/China|ABD~USA|İtalya~Italy|Meksika~Mexico
+lang|1|"Tsunami" kelimesi hangi dildendir?|"Tsunami" comes from which language?|Japonca~Japanese|Hawaii dili~Hawaiian|Endonezce~Indonesian|Çince~Chinese
+lang|2|İspanyolcadaki "ñ" harfi hangi sesi verir?|What sound does the Spanish letter "ñ" make?|"Ny" (nya)~"Ny" as in canyon|"N" ile aynı~Same as "n"|"G"|Sessizdir~It's silent
+lang|2|Polonyacadaki "szcz" harf öbeği nasıl okunur yaklaşık?|Roughly how is Polish "szcz" pronounced?|"Şç"~"Shch"|"Sks"|"Z"|"Ts"
+lang|2|Hangi ülke İspanyolcayı resmî dil olarak en çok konuşan ülkedir?|Which country has the most Spanish speakers?|Meksika~Mexico|İspanya~Spain|Arjantin~Argentina|Kolombiya~Colombia
+lang|2|İngilizcede en sık kullanılan harf hangisidir?|What is the most common letter in English?|E|A|T|S
+lang|2|"Chocolate" (çikolata) kelimesi hangi dilden gelir?|"Chocolate" comes from which language?|Nahuatl (Aztek)~Nahuatl (Aztec)|İspanyolca~Spanish|Fransızca~French|İsviçre Almancası~Swiss German
+lang|2|Türkçeden İngilizceye geçmiş kelime hangisidir?|Which English word comes from Turkish?|Yogurt|Pajamas|Shampoo|Robot
+lang|2|"Pijama" kelimesi hangi dilden gelir?|"Pyjamas" comes from which language?|Farsça/Hintçe~Persian/Hindi|Fransızca~French|İngilizce~English|Japonca~Japanese
+lang|2|Polonyacanın ünlü tekerlemesi "W Szczebrzeszynie chrząszcz brzmi w trzcinie" neyi anlatır?|The Polish tongue-twister "W Szczebrzeszynie chrząszcz brzmi w trzcinie" is about…|Kamışta vızıldayan bir böcek~A beetle buzzing in the reeds|Şarkı söyleyen bir balık~A singing fish|Uçan bir kedi~A flying cat|Kayan bir kaşık~A sliding spoon
+lang|2|İspanyolcada soru cümlesinin başına hangi işaret konur?|What mark begins a question in Spanish?|¿|?|!|¡¡
+lang|2|"Esperanto" nedir?|What is Esperanto?|Uydurma evrensel bir dil~A constructed universal language|Bir İtalyan yemeği~An Italian dish|Bir dans~A dance|Bir şehir~A city
+lang|2|"Selfie" kelimesi hangi yıl Oxford'da "Yılın Kelimesi" seçildi?|In which year was "selfie" Oxford's Word of the Year?|2013|2008|2016|2020
+lang|2|Hangi dil "tık" sesleri (click) içerir?|Which language uses click sounds?|Xhosa|Fince~Finnish|İzlandaca~Icelandic|Macarca~Hungarian
+lang|2|İspanyolcada "mañana" ne demektir?|What does "mañana" mean in Spanish?|Yarın / sabah~Tomorrow / morning|Dün~Yesterday|Akşam~Evening|Asla~Never
+lang|2|"Hygge" kelimesi (rahatlık, sıcaklık hissi) hangi dildendir?|"Hygge" (cosy contentment) comes from which language?|Danca~Danish|İsveççe~Swedish|Fince~Finnish|Hollandaca~Dutch
+lang|2|Dünyada yaklaşık kaç dil konuşulmaktadır?|About how many languages are spoken in the world?|7.000|700|70.000|70
+lang|2|Tersten de aynı okunan kelimeye ne denir?|What is a word that reads the same backwards called?|Palindrom~Palindrome|Anagram|Eş anlamlı~Synonym|Akronim~Acronym
+lang|2|Polonyacada "pies" hangi hayvandır?|What animal is "pies" in Polish?|Köpek~Dog|Kedi~Cat|Domuz~Pig|Kuş~Bird
+lang|2|İspanyolcada "embarazada" ne demektir (İngilizce "embarrassed" değil!)?|What does Spanish "embarazada" really mean (not "embarrassed"!)?|Hamile~Pregnant|Utangaç~Shy|Sarhoş~Drunk|Yorgun~Tired
+lang|2|"Sushi" kelimesi aslında neyi ifade eder?|What does "sushi" actually refer to?|Sirkeli pirinç~Vinegared rice|Çiğ balık~Raw fish|Deniz yosunu~Seaweed|Soya sosu~Soy sauce
+lang|2|Hangi alfabe Rusça yazmak için kullanılır?|Which alphabet is used to write Russian?|Kiril~Cyrillic|Latin|Yunan~Greek|Arap~Arabic
+lang|3|Polonya dilinde kaç "hâl" (grammatical case) vardır?|How many grammatical cases does Polish have?|7|3|4|12
+lang|3|Türkçedeki "ğ" harfinin adı nedir?|What is the Turkish letter "ğ" called?|Yumuşak g~Soft g|Sert g~Hard g|Kısa g~Short g|Uzun g~Long g
+lang|3|İspanya'da İspanyolcanın (Kastilyaca) dışında resmî olan dillerden biri hangisidir?|Besides Castilian, which language is co-official in parts of Spain?|Katalanca~Catalan|Portekizce~Portuguese|Occitan~Provençal|İtalyanca~Italian
+lang|3|Dünyanın en uzun alfabesine sahip olduğu kabul edilen dil hangisidir?|Which language is often said to have the longest alphabet?|Khmer|Arapça~Arabic|Rusça~Russian|Yunanca~Greek
+lang|3|Türkçeden Lehçeye geçmiş kelimelerden biri hangisidir?|Which Polish word was borrowed from Turkish?|Kawa (kahve)~Kawa (coffee)|Pies (köpek)~Pies (dog)|Chleb (ekmek)~Chleb (bread)|Dom (ev)~Dom (house)
+lang|3|Bask dili (Euskara) hangi dil ailesine aittir?|Which language family does Basque belong to?|Hiçbirine (izole dil)~None (a language isolate)|Latin~Romance|Germen~Germanic|Slav~Slavic
+lang|3|"Avokado" kelimesi Aztek dilinde aslında ne anlama gelir?|In Nahuatl, the word behind "avocado" also meant…|Testis~Testicle|Yeşil taş~Green stone|Tereyağı~Butter|Güneş~Sun
+lang|3|Dünyadaki en eski yazı sistemlerinden biri hangisidir?|Which is one of the oldest writing systems?|Çivi yazısı~Cuneiform|Latin|Kiril~Cyrillic|Runik~Runic
+lang|3|İngilizcede "The quick brown fox jumps over the lazy dog" cümlesinin özelliği nedir?|What is special about "The quick brown fox jumps over the lazy dog"?|Tüm harfleri içerir~It contains every letter|Palindromdur~It's a palindrome|Hiç sesli harf yok~It has no vowels|Sadece 3 harf var~It uses only 3 letters
+lang|3|Leh alfabesinde olup İngilizcede olmayan harf hangisidir?|Which letter is in the Polish alphabet but not English?|Ł|Q|W|K
+lang|3|İspanyolcada "ojalá" kelimesinin kökeni hangi dile dayanır?|The Spanish word "ojalá" comes from which language?|Arapça~Arabic|Latince~Latin|Yunanca~Greek|Bask~Basque
+lang|3|Bir kelimenin harfleri yer değiştirerek başka kelime yapılmasına ne denir?|What is it called when you rearrange a word's letters into another word?|Anagram|Palindrom~Palindrome|Homonim~Homonym|Onomatope~Onomatopoeia
+lang|3|Dil bilimci David J. Peterson Dothraki dilini hangi dizi için yarattı?|Linguist David J. Peterson built the Dothraki language for which series?|Game of Thrones|The Witcher|Vikings|Lord of the Rings
+lang|3|Güney Afrika'nın kaç resmî dili vardır?|How many official languages does South Africa have?|12|3|5|8
+lang|1|Hangi hayvan sesi dillere göre çok farklı yazılır: Türkçe "hav hav", İspanyolca "guau guau", Lehçe "hau hau"?|Which animal says "hav hav" in Turkish, "guau guau" in Spanish and "hau hau" in Polish?|Köpek~Dog|Kedi~Cat|Ördek~Duck|İnek~Cow

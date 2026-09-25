@@ -18,7 +18,7 @@ func _ready() -> void:
 			_only = a.substr(7)
 	await get_tree().process_frame
 	var tests := [
-		"test_i18n", "test_questions", "test_profile",
+		"test_i18n", "test_questions", "test_profile", "test_save_file", "test_error_reporter", "test_progress", "test_round_track",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
 		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
 	]
@@ -72,7 +72,7 @@ func test_i18n() -> void:
 	check(I18n.t("arena.alive", {"n": 3}) == "Sahnede 3 kişi", "yer tutucu dolduruluyor")
 
 func test_questions() -> void:
-	check(Questions.count() == 1200, "1200 soru yüklendi (%d)" % Questions.count())
+	check(Questions.count() >= 1990, "~2000 soru yüklendi (%d)" % Questions.count())
 	var bad := 0
 	for k in Questions.tiers:
 		for q in Questions.tiers[k]:
@@ -95,6 +95,80 @@ func test_profile() -> void:
 	Profile.record_match(["Diğer", "TestKişi"], "arena")
 	check(Profile.record("TestKişi").streak == 0, "yenilince seri sıfırlanır")
 	check(Profile.streak_leader(["TestKişi", "Diğer"]) == "Diğer", "seri lideri bulunur")
+
+## Kayıt dosyası: göç, atomik yazım, bozuk dosyada yedekten kurtarma.
+## Oyuncunun gerçek profili test başında saklanır, sonunda geri yazılır.
+func test_save_file() -> void:
+	var paths := [Profile.PATH, Profile.BACKUP]
+	var keep := {}
+	for p in paths:
+		keep[p] = FileAccess.get_file_as_string(p) if FileAccess.file_exists(p) else null
+	var old_data: Dictionary = Profile.data.duplicate(true)
+	var v1 := {"version": 1, "name": "Eski", "settings": {"fullscreen": true}, "stats": {"matches": 5}}
+	var m: Dictionary = Profile._migrate(v1.duplicate(true))
+	check(m.settings.get("window") == "fullscreen", "v1 → v3: fullscreen ayarı window'a dönüşür")
+	check(int(m.xp) == 300 and m.version == Profile.SAVE_VERSION, "v1 → v3: geçmiş maçlar kadar XP verilir")
+	Profile.save_enabled = true
+	Profile.data = Profile._defaults()
+	Profile.data.name = "Birinci"
+	Profile.save()
+	Profile.data.name = "İkinci"
+	Profile.save()
+	check(FileAccess.file_exists(Profile.BACKUP) and not FileAccess.file_exists(Profile.TMP), "kayıt yedek bırakır, geçici dosya kalmaz")
+	var f := FileAccess.open(Profile.PATH, FileAccess.WRITE)
+	f.store_string("{bozuk json")
+	f.close()
+	Profile.load_data()
+	check(Profile.recovered == "backup" and Profile.data.name == "Birinci", "bozuk kayıt yedekten kurtarılır")
+	check(FileAccess.file_exists("user://profile.corrupt.json"), "bozuk dosya incelemek için saklanır")
+	Profile.save_enabled = false
+	DirAccess.remove_absolute(ProjectSettings.globalize_path("user://profile.corrupt.json"))
+	for p in paths:
+		if keep[p] == null:
+			DirAccess.remove_absolute(ProjectSettings.globalize_path(p))
+		else:
+			var w := FileAccess.open(p, FileAccess.WRITE)
+			w.store_string(keep[p])
+			w.close()
+	Profile.data = old_data
+	Profile.recovered = ""
+
+func test_error_reporter() -> void:
+	var n := ErrorReporter.error_count
+	push_error("test: kasıtlı hata")
+	await frames(2)
+	check(ErrorReporter.error_count >= n + 1, "push_error yakalanır")
+	check(ErrorReporter.entries.any(func(e): return String(e).contains("kasıtlı hata")), "hata metni kayda girer")
+	var rep := ErrorReporter.report_text()
+	check(rep.contains("kasıtlı hata") and rep.length() > 40, "rapor metni üretilir")
+
+func test_progress() -> void:
+	var old_data: Dictionary = Profile.data.duplicate(true)
+	check(Progress.level_of(0) == 1 and Progress.level_of(Progress.xp_for(2)) == 2, "seviye eşikleri")
+	check(Progress.xp_for(Progress.MAX_LEVEL) > Progress.xp_for(Progress.MAX_LEVEL - 1), "XP eğrisi artar")
+	Profile.data.xp = 0
+	Profile.data.unlocked = []
+	Profile.data.achievements = {}
+	check(Progress.is_unlocked("hat", "tophat") and not Progress.is_unlocked("hat", "wizard"), "ücretsiz açık, sihirbaz şapkası kilitli")
+	check(int(Progress.requirement("hat", "wizard").get("level", 0)) == 16, "kilit şartı seviye 16")
+	Progress.begin_match()
+	Profile.data.daily_win = ""
+	var a := Progress.award(0, {"correct": 6, "captures": 4, "toppled": 1}, "conquest")
+	check(a.gain == 50 + 120 + 60 + 60 + 40 + 100, "XP dökümü toplanır (%d)" % a.gain)
+	check(a.level_after > a.level_before and not a.new.is_empty(), "seviye atlanır, yeni öğe açılır")
+	check(Progress.is_unlocked("hat", "beret"), "seviye 2 ödülü açıldı")
+	var b := Progress.award(0, {}, "trivia")
+	check(b.gain == 50 + 120, "günlük ikramiye günde bir kez")
+	Profile.data = old_data
+
+func test_round_track() -> void:
+	var t := RoundTrack.new()
+	add_child(t)
+	for kind in ["flags", "hex", "castles", "dots"]:
+		t.set_track(2, 3, kind, 5, 2.5, [Color.RED, Color.BLUE])
+		await get_tree().process_frame
+	check(t.kind == "dots" and t.done == 2.5 and t.visible, "tur çubuğu tüm türlerde çizilir")
+	t.queue_free()
 
 # ── fizik ───────────────────────────────────────────────────────────
 func test_plush_run() -> void:

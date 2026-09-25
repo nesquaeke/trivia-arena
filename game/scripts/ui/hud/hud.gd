@@ -19,6 +19,7 @@ signal back_pressed
 var badge: RoundBadge
 var rail: ScoreRail
 var war_rail: WarRail
+var track: RoundTrack
 var duel_splash: DuelSplash
 var timer: RingTimer
 var question: QuestionCard
@@ -38,11 +39,15 @@ func _ready() -> void:
 	badge.position = Vector2(30, 26)
 	add_child(badge)
 	rail = ScoreRail.new()
-	rail.position = Vector2(30, 150)
+	track = RoundTrack.new()
+	track.position = Vector2(28, 116)
+	track.visible = false
+	add_child(track)
+	rail.position = Vector2(30, 196)
 	rail.size = Vector2(340, 800)
 	add_child(rail)
 	war_rail = WarRail.new()
-	war_rail.position = Vector2(26, 142)
+	war_rail.position = Vector2(26, 196)
 	war_rail.size = Vector2(340, 800)
 	add_child(war_rail)
 	timer = RingTimer.new()
@@ -80,6 +85,7 @@ func reset() -> void:
 	rail.clear()
 	war_rail.clear()
 	duel_splash.visible = false
+	track.visible = false
 	for c in [rail, war_rail, badge]:
 		Fx.cancel_fade(c)
 		c.visible = true
@@ -109,6 +115,9 @@ func hud_scores(rows: Array) -> void:
 		war_rail.update_rows(rows)
 	else:
 		rail.update_rows(rows)
+
+func hud_track(act: int, acts: int, kind: String, total: int, done: float, colors: Array = []) -> void:
+	track.set_track(act, acts, kind, total, done, colors)
 
 func hud_duel_splash(a: Dictionary, d: Dictionary, place: String) -> void:
 	question.hide_card()
@@ -201,6 +210,7 @@ func show_result(title: String, names: Array, rows: Array = []) -> void:
 	Fx.fade(rail, 0.0, 0.4)
 	Fx.fade(war_rail, 0.0, 0.4)
 	Fx.fade(badge, 0.0, 0.4)
+	Fx.fade(track, 0.0, 0.4)
 	result.open(title, names, rows)
 
 func hide_result() -> void:

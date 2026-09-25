@@ -1,0 +1,56 @@
+# Tarih
+hist|1|Mısır piramitleri hangi amaçla yapıldı?|What were the Egyptian pyramids mainly built as?|Firavun mezarı~Tombs for pharaohs|Tahıl ambarı~Grain stores|Kale~Fortresses|Rasathane~Observatories
+hist|1|Kristof Kolomb 1492'de hangi okyanusu geçti?|Which ocean did Columbus cross in 1492?|Atlas Okyanusu~Atlantic|Büyük Okyanus~Pacific|Hint Okyanusu~Indian|Arktik~Arctic
+hist|1|Ay'a ayak basan ilk insan kimdir?|Who was the first person to walk on the Moon?|Neil Armstrong|Buzz Aldrin|Yuri Gagarin|Michael Collins
+hist|1|Titanik hangi yılda battı?|In which year did the Titanic sink?|1912|1905|1920|1898
+hist|1|Romalıların gladyatör dövüşleri izlediği ünlü yapı hangisidir?|Which famous building hosted Roman gladiator fights?|Kolezyum~The Colosseum|Panteon~The Pantheon|Partenon~The Parthenon|Forum
+hist|1|Mumyalar en çok hangi antik uygarlıkla anılır?|Mummies are most associated with which ancient civilisation?|Antik Mısır~Ancient Egypt|Antik Yunan~Ancient Greece|Vikingler~The Vikings|Aztekler~The Aztecs
+hist|1|Vikingler ağırlıklı olarak nereden gelir?|Where did the Vikings mainly come from?|İskandinavya~Scandinavia|İspanya~Spain|İtalya~Italy|Mısır~Egypt
+hist|1|Berlin Duvarı hangi yıl yıkıldı?|In which year did the Berlin Wall fall?|1989|1979|1991|1961
+hist|1|Olimpiyat Oyunları ilk olarak hangi ülkede başladı?|Where did the ancient Olympic Games begin?|Yunanistan~Greece|İtalya~Italy|Mısır~Egypt|Türkiye~Türkiye
+hist|1|Çin Seddi ne amaçla inşa edildi?|Why was the Great Wall of China built?|Savunma için~For defence|Sulama için~For irrigation|Yol olarak~As a road|Süs için~For decoration
+hist|1|Samuraylar hangi ülkenin savaşçılarıdır?|Samurai were warriors of which country?|Japonya~Japan|Çin~China|Kore~Korea|Moğolistan~Mongolia
+hist|1|Mona Lisa'yı yapan ressam aynı zamanda hangi alanda ünlüdür?|The painter of the Mona Lisa was also famous as a…|Mucit~Inventor|Kaşif~Explorer|Kral~King|Şair~Poet
+hist|1|İlk uçuşu 1903'te gerçekleştiren kardeşler kimlerdir?|Which brothers made the first powered flight in 1903?|Wright kardeşler~The Wright brothers|Lumière kardeşler~The Lumière brothers|Grimm kardeşler~The Brothers Grimm|Marx kardeşler~The Marx Brothers
+hist|1|Şövalyeler en çok hangi dönemle anılır?|Knights are most associated with which period?|Orta Çağ~The Middle Ages|Taş Devri~The Stone Age|Sanayi Devrimi~The Industrial Revolution|Uzay Çağı~The Space Age
+hist|1|Napolyon hangi ülkenin imparatoruydu?|Napoleon was emperor of which country?|Fransa~France|İspanya~Spain|Rusya~Russia|İtalya~Italy
+hist|1|İkinci Dünya Savaşı hangi yıl sona erdi?|In which year did World War II end?|1945|1939|1918|1950
+hist|1|Hangi uygarlık Machu Picchu'yu inşa etti?|Which civilisation built Machu Picchu?|İnkalar~The Incas|Mayalar~The Maya|Aztekler~The Aztecs|Olmekler~The Olmecs
+hist|1|Matbaayı Avrupa'ya yayan mucit kimdir?|Which inventor spread the printing press in Europe?|Johannes Gutenberg|Thomas Edison|Leonardo da Vinci|Galileo Galilei
+hist|1|Korsanların ünlü bayrağının adı nedir?|What is the famous pirate flag called?|Jolly Roger|Union Jack|Black Pearl|Skull Cross
+hist|1|Tutankamon'un mezarı hangi yüzyılda bulundu?|In which century was Tutankhamun's tomb found?|20. yüzyıl~20th century|18. yüzyıl~18th century|19. yüzyıl~19th century|21. yüzyıl~21st century
+hist|2|Magna Carta hangi ülkede imzalandı?|In which country was the Magna Carta signed?|İngiltere~England|Fransa~France|İskoçya~Scotland|İspanya~Spain
+hist|2|Roma İmparatorluğu'nun ilk imparatoru kimdir?|Who was the first Roman emperor?|Augustus|Jül Sezar~Julius Caesar|Neron~Nero|Konstantin~Constantine
+hist|2|Fransız Devrimi hangi yıl başladı?|In which year did the French Revolution begin?|1789|1799|1776|1815
+hist|2|Amerika Birleşik Devletleri'nin ilk başkanı kimdir?|Who was the first President of the United States?|George Washington|Abraham Lincoln|Thomas Jefferson|John Adams
+hist|2|Hangi imparatorluk "üzerinde güneş batmayan imparatorluk" olarak anıldı?|Which empire was called "the empire on which the sun never sets"?|Britanya İmparatorluğu~The British Empire|Roma İmparatorluğu~The Roman Empire|Moğol İmparatorluğu~The Mongol Empire|Pers İmparatorluğu~The Persian Empire
+hist|2|Cengiz Han hangi imparatorluğu kurdu?|Which empire did Genghis Khan found?|Moğol İmparatorluğu~The Mongol Empire|Osmanlı İmparatorluğu~The Ottoman Empire|Pers İmparatorluğu~The Persian Empire|Çin İmparatorluğu~The Chinese Empire
+hist|2|Kleopatra hangi ülkenin kraliçesiydi?|Cleopatra was queen of which land?|Mısır~Egypt|Yunanistan~Greece|Roma~Rome|Pers~Persia
+hist|2|Uzaya çıkan ilk insan kimdir?|Who was the first human in space?|Yuri Gagarin|Neil Armstrong|John Glenn|Valentina Tereşkova~Valentina Tereshkova
+hist|2|Sanayi Devrimi ilk olarak hangi ülkede başladı?|Where did the Industrial Revolution begin?|Britanya~Britain|Almanya~Germany|ABD~USA|Fransa~France
+hist|2|Maya uygarlığı bugünkü hangi bölgede yaşadı?|Where did the Maya civilisation live?|Orta Amerika~Central America|Güney Afrika~Southern Africa|Kuzey Avrupa~Northern Europe|Orta Asya~Central Asia
+hist|2|Truva Atı hangi destanda geçer?|The Trojan Horse appears in stories connected to which epic?|İlyada / Odysseia~The Iliad / Odyssey|Gılgamış~Gilgamesh|Beowulf|Mahabharata
+hist|2|Nelson Mandela hangi ülkenin devlet başkanı oldu?|Nelson Mandela became president of which country?|Güney Afrika~South Africa|Kenya|Nijerya~Nigeria|Zimbabve~Zimbabwe
+hist|2|Rönesans ilk olarak hangi ülkede başladı?|Where did the Renaissance begin?|İtalya~Italy|Fransa~France|İngiltere~England|Hollanda~Netherlands
+hist|2|Aztek başkenti Tenochtitlan'ın yerinde bugün hangi şehir var?|Which modern city stands on the site of the Aztec capital Tenochtitlan?|Meksiko~Mexico City|Lima|Havana|Bogota~Bogotá
+hist|2|Polonya'nın ünlü bilim kadını Maria Skłodowska hangi adla tanınır?|Poland's famous scientist Maria Skłodowska is known as…|Marie Curie|Ada Lovelace|Rosalind Franklin|Lise Meitner
+hist|2|Ay'a insan indiren görev programının adı nedir?|What was the programme that landed humans on the Moon?|Apollo|Gemini|Mercury|Artemis
+hist|2|Hangi kraliçe İngiltere'yi 70 yıl yönetti?|Which queen reigned over the UK for 70 years?|II. Elizabeth~Elizabeth II|Victoria|I. Elizabeth~Elizabeth I|Anne
+hist|2|Soğuk Savaş hangi iki güç arasındaydı?|The Cold War was mainly between which two powers?|ABD ve SSCB~USA and USSR|İngiltere ve Fransa~UK and France|Çin ve Japonya~China and Japan|Almanya ve İtalya~Germany and Italy
+hist|2|Kristof Kolomb'un yolculuklarını hangi ülke destekledi?|Which country sponsored Columbus's voyages?|İspanya~Spain|Portekiz~Portugal|İtalya~Italy|İngiltere~England
+hist|2|Antik Yunan'da demokrasinin doğduğu şehir hangisidir?|Which ancient Greek city is called the birthplace of democracy?|Atina~Athens|Sparta|Korint~Corinth|Teb~Thebes
+hist|3|Ünlü Rosetta Taşı hangi yazıyı çözmeyi sağladı?|Which script did the Rosetta Stone help decipher?|Hiyeroglif~Hieroglyphs|Çivi yazısı~Cuneiform|Runik~Runes|Maya yazısı~Maya glyphs
+hist|3|Yüz Yıl Savaşları hangi iki ülke arasında geçti?|The Hundred Years' War was fought between…|İngiltere ve Fransa~England and France|İspanya ve Portekiz~Spain and Portugal|Rusya ve İsveç~Russia and Sweden|Prusya ve Avusturya~Prussia and Austria
+hist|3|Dünyanın çevresini ilk dolaşan seferi kimin filosu başlattı?|Whose expedition made the first voyage around the world?|Macellan~Magellan|Vasco da Gama|James Cook|Francis Drake
+hist|3|Rus Çarlığı'nı bitiren devrim hangi yıl oldu?|In which year did the revolution that ended Tsarist Russia happen?|1917|1905|1922|1939
+hist|3|Polonya'da 1980'de kurulan ünlü sendikanın adı nedir?|What was the famous trade union founded in Poland in 1980?|Dayanışma~Solidarity|Birlik~Unity|Özgürlük~Freedom|Emek~Labour
+hist|3|İspanyol Armadası 1588'de hangi ülkeye karşı yenildi?|The Spanish Armada was defeated in 1588 by which country?|İngiltere~England|Fransa~France|Hollanda~Netherlands|Portekiz~Portugal
+hist|3|Antik dünyanın yedi harikasından bugün ayakta kalan tek yapı hangisidir?|Which of the Seven Wonders of the Ancient World still stands?|Giza Büyük Piramidi~The Great Pyramid of Giza|İskenderiye Feneri~The Lighthouse of Alexandria|Babil'in Asma Bahçeleri~The Hanging Gardens of Babylon|Rodos Heykeli~The Colossus of Rhodes
+hist|3|Vezüv Yanardağı hangi Roma şehrini küller altında bıraktı?|Mount Vesuvius buried which Roman city?|Pompeii|Ostia|Napoli~Naples|Verona
+hist|3|Kraliçe Victoria hangi yüzyılda hüküm sürdü?|In which century did Queen Victoria mainly reign?|19. yüzyıl~19th century|17. yüzyıl~17th century|18. yüzyıl~18th century|20. yüzyıl~20th century
+hist|3|İlk yazıyı (çivi yazısı) geliştiren uygarlık hangisidir?|Which civilisation developed cuneiform, one of the first writing systems?|Sümerler~The Sumerians|Mısırlılar~The Egyptians|Fenikeliler~The Phoenicians|Hititler~The Hittites
+hist|3|Amerika Bağımsızlık Bildirgesi hangi yıl ilan edildi?|In which year was the US Declaration of Independence signed?|1776|1789|1812|1754
+hist|3|Hangi ünlü gemi 1620'de Amerika'ya göçmenler taşıdı?|Which famous ship carried the Pilgrims to America in 1620?|Mayflower|Santa Maria|Endeavour|Beagle
+hist|3|Barut ilk olarak hangi ülkede icat edildi?|Where was gunpowder first invented?|Çin~China|Hindistan~India|Pers~Persia|Mısır~Egypt
+hist|3|Birinci Dünya Savaşı'nı başlatan suikast hangi şehirde oldu?|The assassination that sparked WWI happened in which city?|Saraybosna~Sarajevo|Viyana~Vienna|Belgrad~Belgrade|Berlin
+hist|3|Avrupa Birliği'nin ortak para birimi Euro nakit olarak hangi yıl kullanılmaya başlandı?|In which year did euro banknotes and coins come into use?|2002|1999|1995|2008

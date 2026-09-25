@@ -1,0 +1,40 @@
+# Tahmin — eğlenceli, evrensel
+E|15|0|24|0|Bir kedi günde ortalama kaç saat uyur?|saat|How many hours a day does a cat sleep on average?|hours
+E|1889|1800|2000|1|Eyfel Kulesi hangi yılda tamamlandı?||In what year was the Eiffel Tower completed?|
+E|330|100|600|0|Eyfel Kulesi anteniyle birlikte kaç metredir?|metre|How tall is the Eiffel Tower with its antennas, in metres?|metres
+E|50|0|200|0|Bir bahçe salyangozu bir saatte kaç metre ilerler (yaklaşık)?|metre|About how many metres can a garden snail travel in an hour?|metres
+E|70|10|150|0|Bir kanguru en fazla saatte kaç km hızla zıplayabilir?|km/sa|What is a kangaroo's top hopping speed, in km/h?|km/h
+E|8|1|20|0|Bir ahtapotun kaç kolu vardır?|kol|How many arms does an octopus have?|arms
+E|206|100|400|0|Yetişkin bir insanın vücudunda kaç kemik vardır?|kemik|How many bones are in an adult human body?|bones
+E|300|100|500|0|Bir bebek yaklaşık kaç kemikle doğar?|kemik|About how many bones is a baby born with?|bones
+E|1997|1980|2010|1|İlk Harry Potter kitabı hangi yıl yayımlandı?||In what year was the first Harry Potter book published?|
+E|1985|1970|2000|1|İlk "Super Mario Bros." oyunu hangi yıl çıktı?||In what year did the first "Super Mario Bros." come out?|
+E|1994|1980|2010|1|İlk PlayStation Japonya'da hangi yıl çıktı?||In what year did the first PlayStation launch in Japan?|
+E|11|0|40|0|Ortalama bir İsviçreli yılda kaç kg çikolata yer?|kg|How many kilograms of chocolate does the average Swiss person eat per year?|kg
+E|13|0|60|0|Bir tavuğun kayıtlı en uzun uçuşu kaç saniye sürdü?|saniye|How many seconds did the longest recorded chicken flight last?|seconds
+E|3|0|15|0|Bir hamster yaklaşık kaç yıl yaşar?|yıl|About how many years does a hamster live?|years
+E|12|1|30|0|Bir köpek ortalama kaç yıl yaşar?|yıl|On average, how many years does a dog live?|years
+E|1992|1970|2010|1|Barcelona hangi yıl Yaz Olimpiyatlarına ev sahipliği yaptı?||In what year did Barcelona host the Summer Olympics?|
+E|1986|1970|2010|1|İlk "Witcher" öyküsü Polonya'da hangi yıl yayımlandı?||In what year was the first Witcher story published in Poland?|
+E|1605|1500|1700|1|"Don Kişot"un ilk cildi hangi yıl yayımlandı?||In what year was the first part of "Don Quixote" published?|
+E|1920|1880|1960|1|Papa II. Jan Paweł (Karol Wojtyła) hangi yıl doğdu?||In what year was Pope John Paul II (Karol Wojtyła) born?|
+E|1928|1900|1960|1|Mickey Mouse ilk kez hangi yıl ekrana çıktı?||In what year did Mickey Mouse first appear?|
+E|1969|1950|1990|1|Woodstock festivali hangi yıl yapıldı?||In what year was the Woodstock festival held?|
+E|110|30|250|0|Bir çita saatte en fazla kaç km koşabilir?|km/sa|What is a cheetah's top speed, in km/h?|km/h
+E|8849|5000|12000|0|Everest Dağı kaç metre yüksekliğindedir?|metre|How tall is Mount Everest, in metres?|metres
+E|100|10|300|0|Bir insan günde ortalama kaç saç teli döker?|tel|About how many hairs does a person shed per day?|hairs
+E|100|20|300|0|Bir yetişkinin kafasında yaklaşık kaç bin saç teli vardır?|bin|About how many thousand hairs are on an adult's head?|thousand
+E|4|1|20|0|Bir karasinek yaklaşık kaç hafta yaşar?|hafta|About how many weeks does a housefly live?|weeks
+E|1440|500|3000|0|Bir günde kaç dakika vardır?|dakika|How many minutes are there in a day?|minutes
+E|2|1|20|0|Yeni doğmuş bir kanguru yavrusu yaklaşık kaç santimetredir?|cm|About how many centimetres long is a newborn kangaroo?|cm
+E|60|5|180|0|La Tomatina domates savaşı kaç dakika sürer?|dakika|How many minutes does the La Tomatina tomato fight last?|minutes
+E|0|0|10|0|Bir ton tüy ile bir ton demir: demir kaç kilo daha ağırdır?|kg|A tonne of feathers vs a tonne of iron: how many kg heavier is the iron?|kg
+E|22|5|24|0|Bir koala günde kaç saate kadar uyuyabilir?|saat|Up to how many hours a day can a koala sleep?|hours
+E|50|10|200|0|Bir insan ömrü boyunca yaklaşık kaç ton yemek yer?|ton|About how many tonnes of food does a person eat in a lifetime?|tonnes
+E|5|0|30|0|Ortalama bir insan günde kaç bin adım atar?|bin adım|About how many thousand steps does the average person take per day?|thousand steps
+E|43|10|100|0|Standart bir Rubik küpünün kaç kentilyon (10^18) farklı dizilişi vardır?|kentilyon|A Rubik's Cube has about how many quintillion (10^18) positions?|quintillion
+E|2|0|10|0|Bir tembel hayvan (sloth) haftada kaç kez tuvalete iner?|kez|How many times a week does a sloth come down to poo?|times
+E|7|1|50|0|Bir zürafanın boynunda kaç omur vardır? (ipucu: senin kadar)|omur|How many neck vertebrae does a giraffe have? (hint: same as you)|vertebrae
+E|7|1|50|0|İnsanın boynunda kaç omur vardır?|omur|How many vertebrae are in the human neck?|vertebrae
+E|1492|1400|1600|1|Kolomb İspanya'dan yola çıkıp Amerika'ya hangi yıl ulaştı?||In what year did Columbus sail from Spain and reach the Americas?|
+E|1543|1450|1650|1|Kopernik'in Güneş merkezli kitabı hangi yıl yayımlandı?||In what year was Copernicus's Sun-centred book published?|

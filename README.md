@@ -112,9 +112,45 @@ Oyun içinde **Esc** ya da gamepad **Start** perde arası menüsünü açar (dev
 
 `game/export_presets.cfg` Windows ve Linux dışa aktarma ayarlarını içerir (çıktı `build/`).
 
+### İlerleme: Sahne Rütbesi
+
+Her maç XP kazandırır (`scripts/core/progress.gd`). 30 seviye ve dokuz ünvan var: Figüran, Suflör, Gardıropçu … Tiyatro Sahibi.
+
+- **XP:**
+
+  | Kaynak | XP |
+  |---|---|
+  | Katılım | 50 |
+  | 1./2./3. | 120/70/40 |
+  | Her doğru | 10 |
+  | Conquest: her ele geçirme | 15 |
+  | Conquest: her kale yıkma | 40 |
+  | Trivia: çalınan her 100 puan | 5 |
+  | Günün ilk galibiyeti | +100 |
+
+- **Açılanlar:** 46 öğe. Seviyeler ve 12 başarım yeni şapka, bıyık, papyon/boyun aksesuarı, gözlük, renk, kültür kostümü, kale üslubu ve sancak deseni açar. Tablolar `progress.gd` içindeki `LEVEL_UNLOCKS` ve `ACH_UNLOCKS`.
+- **Maç sonu:** sonuç ekranında rütbe paneli çıkar. Madalyon, dolan XP çubuğu, döküm, seviye atlama patlaması ve "Yeni açılanlar".
+- **Karakterim:** kilitli öğeler asma kilitle ve şartıyla ("Rütbe 16'da açılır") görünür. Üstte rütbe ve XP çubuğu yer alır.
+
+### Tur çubuğu
+
+Sol üstte kaçıncı turda olduğunu gösteren şerit (`scripts/ui/hud/round_track.gd`). Üstte perdeler (I · II · III) var, altta o perdenin ilerlemesi:
+
+- **Conquest 1. perde:** ipte bayraklar, her tahmin turunda biri boyanır.
+- **Conquest 2. perde:** altıgenler, bölgeler sahiplerinin rengine döner.
+- **Conquest 3. perde:** kaleler.
+- **Trivia:** soru noktaları.
+
+### Kayıt dosyası ve hata raporu
+
+- **Profil:** `user://profile.json`, sürümlü (`SAVE_VERSION`). Kayıt önce geçici dosyaya yazılır, eskisi `profile.bak.json` olarak saklanır, sonra yer değiştirir. Dosya bozulursa yedekten kurtarılır. Bozuk dosya `profile.corrupt.json` olarak durur ve oyuncuya haber verilir. Eski sürüm kayıtları `_migrate()` ile güncellenir.
+- **Hata raporu:** `scripts/core/error_reporter.gd`, motorun tüm hata ve uyarılarını yakalar. Oyun çökerse bir sonraki açılışta günlükten `user://reports/crash-*.txt` çıkarılır ve bildirim gösterilir. **Ayarlar → Hakkında**'da iki düğme var: "Hata raporunu kopyala" ve "Rapor klasörü". Raporlar hiçbir yere kendiliğinden gönderilmez.
+
 ### Diğerleri
 
-- **Karakterim:** iki sekme. Trivia için şapka/bıyık/papyon, Fetih için kültür kostümü ve kale üslubu.
+- **Karakterim:** iki sekme.
+  - **Trivia:** 17 şapka, 10 bıyık, 10 boyun aksesuarı, 7 gözlük, 16 renk.
+  - **Fetih:** 13 kültür kostümü, 8 kale üslubu, 8 sancak deseni.
 - **İzleyici:** yan duvardaki locadan izle; sahneye gül, domates ya da şapka fırlat.
 - **Ev partisi:** evde tek ekran, diğer oyuncular telefonlarını kumanda olarak kullanır.
 
@@ -132,8 +168,9 @@ Godot'da `game/project.godot`'u aç. En sık dokunulacak yerler:
 | Işık/parıltı efektleri | `ui/shaders/*.gdshader` (her dosyanın başında ne yaptığı yazar) |
 | Arayüz parçalarını denemek | `scenes/ui_gallery.tscn`: logo, düğmeler, seçiciler; Inspector'dan metin/renk değiştir |
 | Metinler (TR/EN) | `scripts/core/i18n.gd` |
-| Sorular | `data/questions.json` (1200 çift dilli soru) |
-| Kostümler | `scripts/actors/plush_visual.gd` (`HATS`, `MUSTACHES`, `BOWTIES`, `COLORS`) |
+| Sorular | `tools/questions/packs/*.txt` (satır başına bir soru) → `python3 game/tools/questions/build_pack.py` → `data/questions.json` |
+| Kostümler | `scripts/actors/plush_visual.gd` (`HATS`, `MUSTACHES`, `BOWTIES`, `GLASSES`, `COLORS`) |
+| Kilitler, XP | `scripts/core/progress.gd` |
 | Bot zekâsı | `scripts/modes/classic_show.gd` (`BOT_ACC`, `BOT_READ`), `conquest_war.gd` (`BOT_ACC`, `BOT_SPREAD`) |
 | Conquest sayıları (puan, süreler) | `scripts/modes/conquest_war.gd` → `CFG` |
 | Kaleler, kostümler | `scripts/conquest/castle_model.gd`, `culture_costume.gd` (her üslup tek bir `match` dalı) |
@@ -184,6 +221,7 @@ godot --headless --path game -s res://tools/check_scripts.gd   # bütün betikle
 Testlerin kapsamı:
 
 - Sözlük, soru bankası ve profil karnesi.
+- Kayıt dosyası: sürüm göçü, yedek, bozuk dosyadan kurtarma. Hata raporlayıcı. Rütbe/XP/kilitler. Tur çubuğu.
 - Kurallar: kombo merdiveni, tur 3 bedel formülü, zorluk sırası.
 - Pelüş fiziği: koşma, zıplama, omuz yiyip devrilme ve kalkma, düşünce elenme.
 - Sahne kurulumu ve kapaktan düşme.
@@ -204,7 +242,7 @@ game/
   scenes/main.tscn        oyunun sahne ağacı (Stage, Props, Actors, Camera, UI)
   scenes/ui_gallery.tscn  arayüz parçaları vitrini
   data/rules.tres         bütün oyun sayıları
-  data/questions.json     1200 çift dilli soru (+ 34 tahmin sorusu)
+  data/questions.json     ~2000 çift dilli soru, 15 kategori × kolay/orta/zor (+ 98 tahmin sorusu)
   ui/fonts/               yazı tipi ayarları (Big Shoulders, Fraunces)
   ui/theme/               Godot teması
   ui/shaders/             parıltı, ampul, halka sayaç, kadife perde, gren, spot
@@ -221,7 +259,7 @@ game/
     hud/                  skor şeridi, soru kartı, sayaç, halat, perde kartı, ödül, final
   scripts/net/            telefon köprüsü
   tests/                  başsız testler
-  tools/                  betik derleme denetimi
+  tools/                  betik derleme denetimi, soru paketleri (questions/), müzik ve anlatıcı üretimi
 server/                   telefon kumandası sunucusu (Node, ws)
 docs/                     tasarım belgesi, ekran görüntüleri
 ```

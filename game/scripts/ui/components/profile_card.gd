@@ -253,7 +253,7 @@ func _draw_compact() -> void:
 	while fs > 20 and nf.get_string_size(nm, HORIZONTAL_ALIGNMENT_LEFT, -1, fs).x > CW - 120:
 		fs -= 2
 	draw_string(nf, Vector2(x0, 40), nm, HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(Pal.CHAMPAGNE, a))
-	var sub := "%s  ·  %s %d" % [String(stats.get("wl", "0 / 0")), Pal.upper(Pal.t("ticket.streak_s")), int(stats.get("streak", 0))]
+	var sub := "%s  ·  %s  ·  %s %d" % [Pal.upper(Pal.t("rank.level", {"n": Progress.level()})), String(stats.get("wl", "0 / 0")), Pal.upper(Pal.t("ticket.streak_s")), int(stats.get("streak", 0))]
 	draw_string(Pal.kicker(), Vector2(x0, 62), sub, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(Pal.CREAM, 0.7 * a))
 	# aç/kapa oku
 	Icons.draw(self, "arrow_r", Vector2(W - 24, CH * 0.5 + sin(_t * 3.0) * 2.0 * _h), 18, Color(Pal.GOLD, a * (0.6 + 0.4 * _h)), 2.5)

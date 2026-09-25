@@ -186,7 +186,28 @@ func _cheer(p: Plush) -> void:
 	if is_instance_valid(p) and p.state == Plush.State.NORMAL:
 		p.apply_central_impulse(Vector3.UP * p.mass * 4.2)
 
+## Perde şeridi: kaleler / bölgeler / savaş sancakları
+var _turn_idx := 0
+var _turn_count := 1
+
+func _refresh_track() -> void:
+	match act:
+		1:
+			var cols := []
+			for p in contestants:
+				cols.append(pcolor(p) if capital_of(p) != "" else null)
+			_hud("hud_track", [1, 3, "castles", contestants.size(), float(capital.size()), cols])
+		2:
+			var cols2 := []
+			for id in board.order:
+				cols2.append(pcolor(holder[id]) if holder[id] != null else null)
+			_hud("hud_track", [2, 3, "hex", board.order.size(), float(board.order.size() - free_regions().size()), cols2])
+		3:
+			var frac := float(_turn_idx) / maxf(1.0, _turn_count)
+			_hud("hud_track", [3, 3, "flags", war_rounds, minf(float(war_rounds), war_round + frac)])
+
 func _refresh_scores(deltas := {}) -> void:
+	_refresh_track()
 	var rows := []
 	var turn_p = null
 	if phase == "turn" and _turn_of != null:
@@ -212,6 +233,10 @@ func _ranked() -> Array[Plush]:
 			return sa.points > sb.points
 		return owned(a).size() > owned(b).size())
 	return r
+
+## İlerleme için bir oyuncunun maç istatistikleri
+func stats_for(p: Plush) -> Dictionary:
+	return P.get(p, {})
 
 func ranking() -> Array[Plush]:
 	return _ranked()
@@ -311,6 +336,8 @@ func _act_card(n: int) -> void:
 	var chips := [I18n.t("cq.%d.chip1" % n), I18n.t("cq.%d.chip2" % n), I18n.t("cq.%d.chip3" % n)]
 	_hud("hud_round_card", [n, title, I18n.t("cq.act%dd" % n), chips])
 	_hud("hud_set_top", [title, I18n.t("round.kicker") + " " + Pal.roman(n)])
+	if board:
+		_refresh_track()
 	_notify_all(title)
 	Narrator.say("act%d_cq" % clampi(n, 1, 3))
 	Sfx.play("sting", -3.0)
@@ -698,6 +725,7 @@ func _build_castle(p: Plush, id: String) -> void:
 	shields[id] = 3
 	board.set_owner_color(id, pcolor(p))
 	var c := CastleModel.new(String(P[p].castle), pcolor(p))
+	c.banner = String(p.look.get("banner", "plain"))
 	c.set_meta("base_scale", Vector3.ONE * 1.05)
 	board.set_piece(id, c)
 	Sfx.play("war_drum", -2.0, 1.1)
@@ -763,6 +791,8 @@ var _turn_of: Plush = null
 func _war() -> void:
 	for rr in war_rounds:
 		war_round = rr
+		_turn_idx = 0
+		_turn_count = maxi(1, alive().size())
 		if rr == war_rounds - 1:
 			Narrator.say("last_round")
 		var order := alive()
@@ -772,6 +802,8 @@ func _war() -> void:
 			if P[p].dead:
 				continue
 			await _turn(p, rr)
+			_turn_idx += 1
+			_refresh_track()
 		if alive().size() <= 1:
 			return
 
@@ -1009,6 +1041,7 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 			_cam_orbit(id)
 			Music.play("", 0.8)
 			await _wait(0.6)
+			P[a].toppled = int(P[a].get("toppled", 0)) + 1
 			if not is_bot(a):
 				SteamService.unlock("CASTLE_BREAKER")
 			if castle:

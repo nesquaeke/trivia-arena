@@ -92,6 +92,32 @@ Web sürümünün planı, sahneye serilen 3D bir Türkiye haritasında:
 - **Kamera:** genel bakış (proscenium kirişinin içinden), seçimde tepeden, saldırıda iki bölgeye yakın, düelloda orta plan, kale düşüşünde yörünge çekimi (`BalconyCam.set_custom` + `orbit`). Generaller maçta gizli; sol sütunda kostümlü canlı portreli sancak kartları (`hud/war_rail.gd`), düello açılışı (`hud/duel_splash.gd`), finalde selam.
 - **Ses:** müzikler ve orkestral efektler `tools/music/compose.py` ile notadan üretilir (`assets/audio`); `Music` autoload'ı parçalar arasında geçiş yapar (soru = gerilim yatağı).
 
+### İlerleme ve kozmetik (v0.4)
+- **Sahne Rütbesi** (`core/progress.gd`, statik): 30 seviye. `xp_for(n) = Σ(120 + 30k)`. Maç sonunda `Progress.award(rank, stats, kind)` bir döküm üretir, sonuç ekranındaki `hud/rank_panel.gd` bunu canlandırır. `begin_match()` maç başındaki kilit durumunun anlık görüntüsünü alır. Böylece maç içinde başarımla açılanlar da "Yeni açılanlar"da görünür.
+- **Kilitler:** `FREE`, `LEVEL_UNLOCKS` ve `ACH_UNLOCKS` tabloları. Karakterim'de kilitli öğe gezilebilir ama giyilemez: asma kilit, soluk ad ve şart gösterilir.
+- **Tur çubuğu** (`hud/round_track.gd`): perde pipleri ile perdeye göre değişen bir ilerleme gösterir.
+  - Conquest tahmin turları: ipte bayraklar, her turda biri boyanır.
+  - Toprak: sahip rengindeki 16 altıgen.
+  - Savaş: kaleler.
+  - Trivia: soru noktaları.
+- **Modeller:**
+  - Kaleler: taş (`ui/shaders/stone.gdshader`) ve kiremit (`roof_tiles.gdshader`) prosedürel shaderları, iki yeni üslup (soğan kubbe, deniz feneri) ve oyuncunun sancak deseni (`CastleModel.banner_texture`).
+  - Pelüşler: keçe kenar ışığı, 10 yeni şapka, 5 bıyık/sakal, 6 boyun aksesuarı, 7 gözlük, 8 renk.
+  - Kültürler: şövalye, korsan (papağan, kanca) ve kâşif.
+
+### Soru bankası
+`tools/questions/packs/*.txt` satır başına bir soru içerir: `kategori|zorluk(1-3)|TR|EN|doğru|yanlış|yanlış|yanlış`. Şık `tr~en` biçiminde iki dilde yazılabilir. Tahmin satırlarının biçimi `E|cevap|min|max|yıl|TR soru|birim|EN soru|unit`. `build_pack.py` bu paketleri tekrarları ayıklayıp `data/questions.json`'a ekler.
+
+Banka yaklaşık 2000 soru ve 98 tahmin sorusundan oluşur. 15 kategori var, bunların arasında Uzay, Tuhaf ama Gerçek ve Diller ve Kelimeler yeni. Sorular evrenseldir, İspanyol ve Polonyalı oyuncular için de yerel dokunuşlar içerir.
+
+### Dayanıklılık
+- **Profil:** sürümlü göç (`_migrate`), geçici dosya → yedek → yer değiştirme sırasıyla atomik kayıt, bozuk dosyada yedekten kurtarma.
+- **`ErrorReporter`** (ilk autoload):
+  - `OS.add_logger` ile motor hatalarını halka tampona alır.
+  - Oturum kilidi ile çökmeyi algılar. Kilit kalmışsa, `user://logs` içindeki son günlükten `user://reports/crash-*.txt` üretir.
+  - Hatalı oturumun raporunu kapanışta yazar.
+  - Raporlar yereldir, bir yere gönderilmez.
+
 ---
 
 ## 4. Oyuncular ve bağlantı
@@ -132,10 +158,11 @@ Web sürümünün planı, sahneye serilen 3D bir Türkiye haritasında:
 |---|---|
 | `v1.0-web` | Web prototipi (`web-archive` dalı). Render'da canlı. |
 | `v0.1.0-3d-stage` | Büyük Sahne, pelüş fizik, diegetik arayüz, Trivia Arena (eleme), Conquest Quiz, Ev partisi, 47 başsız test |
-| **v0.2 (bu sürüm)** | Klasik şov (web kuralları), yeni arayüz (kinetik tipografi, shaderlar, canlı 3D portre), düzenlenebilir sahne ağacı, 63 başsız test |
+| v0.2 | Klasik şov (web kuralları), yeni arayüz (kinetik tipografi, shaderlar, canlı 3D portre), düzenlenebilir sahne ağacı, 63 başsız test |
 | v0.3 | Gerçek sanat: pelüş karakter modeli + kumaş dokuları, tiyatro dekor modelleri, müzik, gamepad ile menü gezinme, ayarlar (ses, görüntü kalitesi) |
-| v0.4 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
-| v0.5 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
+| **v0.4 (bu sürüm)** | Sahne Rütbesi ve 46 açılabilir öğe, tur çubuğu, ~2000 soru, taş/kiremit shaderları, kayıt dosyası dayanıklılığı, hata raporu |
+| v0.5 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
+| v0.6 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
 
 ### Performans notları
 - Hacimsel sis ve gölgeli spotlar Forward+ gerektirir. Zayıf makineler için "Sade" kalite ayarı (v0.3) sisi ve ikincil gölgeleri kapatacak.

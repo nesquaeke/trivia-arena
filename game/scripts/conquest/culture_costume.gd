@@ -8,7 +8,7 @@ extends RefCounted
 ## Yeni kostüm: CULTURES'a ekle, aşağıdaki match'e bir dal yaz.
 
 const CULTURES := ["viking", "centurion", "pharaoh", "samurai", "mariachi",
-	"musketeer", "highlander", "janissary", "hussar", "frontier"]
+	"musketeer", "highlander", "janissary", "hussar", "frontier", "knight", "pirate", "explorer"]
 
 const STEEL := Color("C3CEDC")
 const STEEL_D := Color("8D99AA")
@@ -361,6 +361,61 @@ static func dress(v: PlushVisual, culture: String, accent: Color) -> void:
 			hand_r.add_child(ls)
 			_add(ls, _torus(0.12, 0.145), rope, Vector3(0, 0.12, 0), Vector3(0, 0, PI / 2))
 			_add(ls, _torus(0.1, 0.125), rope, Vector3(0.02, 0.12, 0), Vector3(0, 0.3, PI / 2))
+		"knight":
+			# zırhlı şövalye: parlak miğfer (yüz açık), omuzluk, göğüste arma
+			_shirt(body, steel, 0.6, 0.46, 0.02)
+			_add(body, _box(0.3, 0.3, 0.02), cloth, Vector3(0, 0.62, 0.33))
+			_add(body, _cyl(0.05, 0.05, 0.01, 3), gold, Vector3(0, 0.64, 0.345), Vector3(PI / 2, 0, PI))
+			for s: float in [-1.0, 1.0]:
+				_add(body, _sph(0.12, true), steel, Vector3(0.3 * s, 0.8, 0.0), Vector3(0, 0, -0.5 * s), Vector3(1, 0.7, 1))
+			_add(hat, _sph(0.3, true), steel, Vector3(0, -0.17, 0), Vector3.ZERO, Vector3(1.02, 1.15, 1.02))
+			_add(hat, _box(0.04, 0.14, 0.26), cloth, Vector3(0, 0.14, -0.02))
+			for k in 4:
+				_add(hat, _sph(0.035), cloth, Vector3(0, 0.2 - k * 0.02, -0.12 + k * 0.08))
+			var sword := Node3D.new()
+			sword.add_to_group("costume")
+			hand_r.add_child(sword)
+			_add(sword, _box(0.03, 0.4, 0.012), steel, Vector3(0, 0.22, 0))
+			_add(sword, _box(0.14, 0.025, 0.03), gold, Vector3(0, 0.03, 0))
+			_add(hand_l, _box(0.05, 0.36, 0.28), cloth, Vector3(-0.09, 0.02, 0.06))
+			_add(hand_l, _cyl(0.05, 0.05, 0.02, 3), gold, Vector3(-0.12, 0.05, 0.06), Vector3(0, 0, PI / 2))
+		"pirate":
+			# korsan: çizgili gömlek, kuşak, üç köşeli şapka, göz bandı, kanca
+			var stripe := PlushVisual.felt(Color("F2EEE4"))
+			_shirt(body, stripe, 0.6, 0.44)
+			for k in 4:
+				_add(body, _torus(0.32, 0.336), cloth, Vector3(0, 0.44 + k * 0.1, 0))
+			_add(body, _torus(0.325, 0.36), PlushVisual.felt(Color("C9303C")), Vector3(0, 0.4, 0))
+			var tc := _mat("tricorn", INK, 0.6)
+			_add(hat, _cyl(0.16, 0.17, 0.12, 24), tc, Vector3(0, 0.02, 0))
+			for i in 3:
+				var a := TAU * i / 3.0 + PI / 2
+				_add(hat, _box(0.05, 0.14, 0.34), tc, Vector3(cos(a) * 0.17, 0.02, sin(a) * 0.17), Vector3(0, -a, 0.35))
+			_add(hat, _sph(0.032), _mat("bone", Color("F2EAD8"), 0.8), Vector3(0, 0.04, 0.2), Vector3.ZERO, Vector3(1, 0.9, 0.5))
+			_add(face, _cyl(0.055, 0.055, 0.02, 16), ink, Vector3(-0.1, 0.09, 0.0), Vector3(PI / 2, 0, 0))
+			_add(face, _cap(0.006, 0.4), ink, Vector3(0, 0.12, -0.02), Vector3(0, 0, PI / 2 - 0.3))
+			var hook := _torus(0.03, 0.045)
+			_add(hand_r, hook, steel, Vector3(0, -0.02, 0.02), Vector3(0, 0, PI / 2))
+			var parrot := _add(body, _sph(0.07), PlushVisual.felt(Color("3FA55A")), Vector3(0.27, 0.9, -0.02))
+			_add(parrot, _cyl(0.0, 0.025, 0.05, 6), _mat("beak", Color("F2C230"), 0.5), Vector3(0, 0, 0.07), Vector3(PI / 2, 0, 0))
+			_add(parrot, _sph(0.02), PlushVisual.felt(Color("C9303C")), Vector3(0, 0.06, 0))
+		"explorer":
+			# kaşif: haki ceket, cepler, mantar şapka, dürbün
+			var khaki := PlushVisual.felt(Color("C8B07A"))
+			_shirt(body, khaki, 0.6, 0.46, 0.02)
+			for s: float in [-1.0, 1.0]:
+				_add(body, _box(0.1, 0.08, 0.02), PlushVisual.felt(Color("B39A62")), Vector3(0.14 * s, 0.68, 0.325))
+			_add(body, _torus(0.325, 0.35), leather, Vector3(0, 0.44, 0))
+			_add(neck, _box(0.26, 0.04, 0.03), cloth, Vector3(0, -0.02, 0.0))
+			var pith := PlushVisual.felt(Color("E9DCB8"))
+			_add(hat, _sph(0.24, true), pith, Vector3(0, -0.1, 0), Vector3.ZERO, Vector3(1.05, 1.0, 1.1))
+			_add(hat, _cyl(0.33, 0.33, 0.02, 30), pith, Vector3(0, -0.09, 0), Vector3.ZERO, Vector3(1, 1, 1.1))
+			_add(hat, _cyl(0.245, 0.245, 0.04, 28), cloth, Vector3(0, -0.06, 0))
+			var bino := Node3D.new()
+			bino.add_to_group("costume")
+			hand_r.add_child(bino)
+			for s: float in [-1.0, 1.0]:
+				_add(bino, _cyl(0.03, 0.035, 0.12, 12), ink, Vector3(0.035 * s, 0.05, 0.04), Vector3(PI / 2, 0, 0))
 
 	_details(v, culture, accent)
 
@@ -372,7 +427,8 @@ static func _details(v: PlushVisual, culture: String, accent: Color) -> void:
 	var trim := PlushVisual.felt(accent.lightened(0.35))
 	var thread := _mat("thread", accent.darkened(0.55), 0.9)
 	var hem_y := {"viking": 0.31, "centurion": 0.36, "pharaoh": 0.34, "samurai": 0.36, "mariachi": 0.39,
-		"musketeer": 0.37, "highlander": 0.33, "janissary": 0.3, "hussar": 0.38, "frontier": 0.39}
+		"musketeer": 0.37, "highlander": 0.33, "janissary": 0.3, "hussar": 0.38, "frontier": 0.39,
+		"knight": 0.37, "pirate": 0.38, "explorer": 0.37}
 	var y: float = hem_y.get(culture, 0.38)
 	_add(body, _torus(0.325, 0.352), trim, Vector3(0, y, 0))
 	for i in 18:
@@ -381,7 +437,7 @@ static func _details(v: PlushVisual, culture: String, accent: Color) -> void:
 	if not ["samurai", "pharaoh", "centurion"].has(culture):
 		for k in 2:
 			_add(body, _cyl(0.022, 0.022, 0.012, 10), _mat("button", Color("E9D6A8"), 0.5, 0.2), Vector3(0, 0.58 + k * 0.1, 0.335), Vector3(PI / 2, 0, 0))
-	if ["centurion", "musketeer", "hussar", "highlander", "janissary"].has(culture):
+	if ["centurion", "musketeer", "hussar", "highlander", "janissary", "knight"].has(culture):
 		var cape_col := accent.darkened(0.2) if culture != "centurion" else Color("A81E2A")
 		var cape := PlushVisual.felt(cape_col)
 		var lining := PlushVisual.felt(cape_col.lightened(0.3) if culture != "highlander" else Color("2F5A3A"))

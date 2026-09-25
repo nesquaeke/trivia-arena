@@ -1,0 +1,56 @@
+# Müzik
+music|1|Bir piyanonun tuşları hangi iki renktedir?|What two colours are piano keys?|Siyah ve beyaz~Black and white|Kırmızı ve beyaz~Red and white|Mavi ve beyaz~Blue and white|Altın ve siyah~Gold and black
+music|1|"Bohemian Rhapsody" hangi grubun şarkısıdır?|"Bohemian Rhapsody" is a song by which band?|Queen|The Beatles|Rolling Stones|Pink Floyd
+music|1|The Beatles hangi şehirden çıktı?|Which city did The Beatles come from?|Liverpool|Londra~London|Manchester|Dublin
+music|1|Kaç telli bir gitar "standart" gitardır?|How many strings does a standard guitar have?|6|4|5|8
+music|1|"Pop'un Kralı" lakaplı şarkıcı kimdir?|Which singer was called the "King of Pop"?|Michael Jackson|Elvis Presley|Prince|Freddie Mercury
+music|1|"Rock'n Roll'un Kralı" olarak bilinen şarkıcı kimdir?|Who is known as the "King of Rock and Roll"?|Elvis Presley|Chuck Berry|Little Richard|Johnny Cash
+music|1|Keman hangi enstrüman ailesindendir?|Which instrument family does the violin belong to?|Yaylılar~Strings|Nefesliler~Woodwind|Vurmalılar~Percussion|Bakır üflemeliler~Brass
+music|1|Trampet (davul) hangi tür enstrümandır?|What type of instrument is a snare drum?|Vurmalı~Percussion|Yaylı~String|Nefesli~Wind|Tuşlu~Keyboard
+music|1|Bir müzik grubunu yöneten kişiye ne denir?|What is the person leading an orchestra called?|Şef~Conductor|Kaptan~Captain|Yazar~Author|Pilot
+music|1|"Mamma Mia" şarkısı hangi İsveç grubunundur?|"Mamma Mia" is by which Swedish band?|ABBA|Roxette|Ace of Base|Europe
+music|1|Hangi enstrümanın pedalı, tuşları ve telleri vardır?|Which instrument has pedals, keys and strings inside?|Piyano~Piano|Trompet~Trumpet|Flüt~Flute|Arp~Harp
+music|1|Mozart hangi ülkede doğdu?|In which country was Mozart born?|Avusturya~Austria|Almanya~Germany|İtalya~Italy|Fransa~France
+music|1|Şarkı sözlerinin adı nedir?|What are a song's words called?|Söz~Lyrics|Nota~Notes|Ritim~Rhythm|Tempo
+music|1|Flamenko müziği en çok hangi ülkeyle anılır?|Flamenco is most associated with which country?|İspanya~Spain|Portekiz~Portugal|Meksika~Mexico|Arjantin~Argentina
+music|1|Chopin hangi ülkenin en ünlü bestecisidir?|Chopin is the most famous composer from which country?|Polonya~Poland|Fransa~France|Macaristan~Hungary|Avusturya~Austria
+music|1|Karaoke hangi ülkede doğmuştur?|In which country did karaoke originate?|Japonya~Japan|ABD~USA|Kore~Korea|Filipinler~Philippines
+music|1|Tango en çok hangi ülkeyle anılır?|The tango is most associated with which country?|Arjantin~Argentina|Brezilya~Brazil|İspanya~Spain|Küba~Cuba
+music|1|Reggae müziği hangi ülkeden çıktı?|Reggae music comes from which country?|Jamaika~Jamaica|Küba~Cuba|Brezilya~Brazil|Nijerya~Nigeria
+music|1|Ünlü "Doğum günün kutlu olsun" şarkısı genelde ne zaman söylenir?|When is "Happy Birthday" usually sung?|Doğum günlerinde~On birthdays|Düğünlerde~At weddings|Maç başında~Before matches|Yılbaşında~On New Year
+music|1|Hangi enstrüman üflenerek çalınır?|Which instrument do you blow into?|Flüt~Flute|Keman~Violin|Davul~Drum|Arp~Harp
+music|2|Beethoven hayatının sonlarında hangi duyusunu büyük ölçüde kaybetti?|Which sense did Beethoven largely lose later in life?|İşitme~Hearing|Görme~Sight|Koku~Smell|Tat~Taste
+music|2|"Dört Mevsim"in bestecisi kimdir?|Who composed "The Four Seasons"?|Vivaldi|Bach|Mozart|Haydn
+music|2|Standart bir piyanoda kaç tuş vardır?|How many keys are on a standard piano?|88|76|92|64
+music|2|Madonna'nın lakabı nedir?|What is Madonna's famous nickname?|Pop'un Kraliçesi~Queen of Pop|Soul'un Kraliçesi~Queen of Soul|Rock'ın Kraliçesi~Queen of Rock|Diskonun Kraliçesi~Queen of Disco
+music|2|"Thriller" albümü hangi sanatçınındır?|Whose album is "Thriller"?|Michael Jackson|Prince|Madonna|Whitney Houston
+music|2|Eurovision Şarkı Yarışması'nı en çok kazanan ülkelerden biri hangisidir?|Which country is among the most frequent Eurovision winners?|İrlanda~Ireland|Portekiz~Portugal|İspanya~Spain|Polonya~Poland
+music|2|Gitarını sahnede yakmasıyla ünlü gitarist kimdir?|Which guitarist famously set his guitar on fire on stage?|Jimi Hendrix|Eric Clapton|Jimmy Page|Slash
+music|2|Bir oktavda kaç nota (beyaz tuş) vardır?|How many white-key notes are in an octave?|7|5|8|12
+music|2|"Imagine" şarkısını kim yazdı ve söyledi?|Who wrote and sang "Imagine"?|John Lennon|Paul McCartney|Bob Dylan|David Bowie
+music|2|Opera "Carmen" hangi ülkede geçer?|In which country is the opera "Carmen" set?|İspanya~Spain|İtalya~Italy|Fransa~France|Portekiz~Portugal
+music|2|K-pop hangi ülkenin pop müziğidir?|K-pop is pop music from which country?|Güney Kore~South Korea|Japonya~Japan|Çin~China|Tayland~Thailand
+music|2|Salsa dansı ve müziği en çok hangi şehirle ilişkilendirilir (modern haliyle)?|Modern salsa is strongly linked with which city?|New York|Madrid|Lizbon~Lisbon|Rio de Janeiro
+music|2|Ziggy Stardust karakterini yaratan sanatçı kimdir?|Which artist created the character Ziggy Stardust?|David Bowie|Elton John|Mick Jagger|Freddie Mercury
+music|2|Bir şarkının hızına ne ad verilir?|What is the speed of a piece of music called?|Tempo|Tını~Timbre|Armoni~Harmony|Melodi~Melody
+music|2|"Despacito" şarkısı hangi dilde söylenir?|In which language is "Despacito" sung?|İspanyolca~Spanish|Portekizce~Portuguese|İtalyanca~Italian|Fransızca~French
+music|2|Viyolonsel mi keman mı daha büyüktür?|Which is larger: the cello or the violin?|Viyolonsel~Cello|Keman~Violin|Aynı boyda~Same size|Değişir~It varies
+music|2|Hangi grubun albümünde dört üye yaya geçidinde yürür?|Which band's album cover shows the members on a zebra crossing?|The Beatles|Queen|The Who|Oasis
+music|2|Polonyalı piyanist ve besteci Chopin en çok hangi enstrüman için yazdı?|Chopin wrote mostly for which instrument?|Piyano~Piano|Keman~Violin|Org~Organ|Gitar~Guitar
+music|2|Bob Marley'nin grubunun adı nedir?|What was the name of Bob Marley's band?|The Wailers|The Rockers|The Specials|The Skatalites
+music|2|"Macarena" hangi ülkeden bir gruba aittir?|"Macarena" was made by a duo from which country?|İspanya~Spain|Meksika~Mexico|Küba~Cuba|Kolombiya~Colombia
+music|3|Bach hangi dönemin bestecisidir?|Bach is a composer of which period?|Barok~Baroque|Romantik~Romantic|Klasik~Classical|Modern
+music|3|Bir yaylı çalgı dörtlüsünde hangi çalgılar vardır?|What instruments are in a string quartet?|2 keman, viyola, viyolonsel~2 violins, viola, cello|4 keman~4 violins|Keman, gitar, bas, davul~Violin, guitar, bass, drums|Piyano ve 3 keman~Piano and 3 violins
+music|3|"Sihirli Flüt" operasının bestecisi kimdir?|Who composed the opera "The Magic Flute"?|Mozart|Verdi|Wagner|Puccini
+music|3|Saksafonu kim icat etti?|Who invented the saxophone?|Adolphe Sax|Antonio Stradivari|Johann Denner|Theobald Böhm
+music|3|Freddie Mercury'nin doğduğu yer neresidir?|Where was Freddie Mercury born?|Zanzibar|Londra~London|Mumbai|Kahire~Cairo
+music|3|"Nessun dorma" aryası hangi operadandır?|The aria "Nessun dorma" comes from which opera?|Turandot|La Bohème|Tosca|Aida
+music|3|Grammy ödülleri hangi ülkede verilir?|In which country are the Grammy Awards held?|ABD~USA|İngiltere~UK|Kanada~Canada|Fransa~France
+music|3|Bir senfoni orkestrasında genellikle en çok hangi çalgı vardır?|Which instrument usually has the most players in a symphony orchestra?|Keman~Violin|Trompet~Trumpet|Flüt~Flute|Klarnet~Clarinet
+music|3|Stradivari hangi çalgıların ustası olarak ünlüdür?|Stradivari is famous for making which instruments?|Yaylı çalgılar~String instruments|Piyanolar~Pianos|Davullar~Drums|Borular~Brass horns
+music|3|Nirvana grubunun solisti kimdir?|Who was the frontman of Nirvana?|Kurt Cobain|Eddie Vedder|Chris Cornell|Dave Grohl
+music|3|Hangi besteci "Boléro"yu yazdı?|Who composed "Boléro"?|Maurice Ravel|Claude Debussy|Erik Satie|Hector Berlioz
+music|3|Polonyalı besteci Krzysztof Penderecki en çok hangi tür eserleriyle bilinir?|Polish composer Krzysztof Penderecki is known mainly for…|Çağdaş klasik müzik~Contemporary classical music|Caz~Jazz|Pop|Halk dansları~Folk dances
+music|3|"Like a Rolling Stone" şarkısının sahibi kimdir?|Who recorded "Like a Rolling Stone"?|Bob Dylan|The Rolling Stones|Bruce Springsteen|Neil Young
+music|3|Shakira hangi ülkedendir?|Shakira comes from which country?|Kolombiya~Colombia|Meksika~Mexico|Venezuela|Arjantin~Argentina
+music|3|Hangi enstrümana "çalgıların kralı" denir?|Which instrument is called the "king of instruments"?|Org~Pipe organ|Piyano~Piano|Keman~Violin|Arp~Harp

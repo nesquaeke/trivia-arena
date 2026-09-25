@@ -93,6 +93,11 @@ func _ready() -> void:
 		elif a.begins_with("--ff="):
 			debug_ff = float(a.substr(5))
 	if _shot_mode != "":
+		Profile.save_enabled = false
+		if _shot_mode.contains("result_rank"):
+			Profile.data.xp = Progress.xp_for(9) - 150   # maç sonunda seviye atlasın
+		elif _shot_mode.contains("unlock") or _shot_mode.contains("rank"):
+			Profile.data.xp = 99999
 		_run_shot_script()
 	else:
 		Music.play("lobby", 2.5)
@@ -217,7 +222,7 @@ func apply_look_to_player_one() -> void:
 	var p1 := player_one()
 	if p1:
 		p1.set_look(Profile.look())
-	if _ward_castle and is_instance_valid(_ward_castle) and _ward_castle.style != String(Profile.look().get("castle", "fairy")):
+	if _ward_castle and is_instance_valid(_ward_castle) and (_ward_castle.style != String(Profile.look().get("castle", "fairy")) or _ward_castle.banner != String(Profile.look().get("banner", "plain"))):
 		wardrobe_conquest(true)
 
 ## Kostüm odasında Fetih sekmesi: pelüş kültür kostümünü giyer, yanında kalesi belirir
@@ -234,6 +239,7 @@ func wardrobe_conquest(on: bool) -> void:
 		_ward_castle = null
 	if on:
 		_ward_castle = CastleModel.new(String(look.get("castle", "fairy")), PlushVisual.COLORS.get(String(look.get("color", "mustard")), Color.WHITE))
+		_ward_castle.banner = String(look.get("banner", "plain"))
 		add_child(_ward_castle)
 		_ward_castle.position = Vector3(-1.25, 0.02, 0.35)
 		_ward_castle.rotation.y = 0.35
@@ -415,6 +421,7 @@ func start_arena(kind := "") -> void:
 	stage.set_curtain(true)
 	Music.play("conquest" if match_kind == "conquest" else "trivia", 2.0)
 	SteamService.presence("conquest" if match_kind == "conquest" else "trivia")
+	Progress.begin_match()
 	Narrator.say("ready")
 	await stage.curtain_done
 	if match_kind == "conquest":
@@ -566,7 +573,13 @@ func on_match_finished(kind: String, names: Array, extra := {}) -> void:
 	if all_actors().size() >= 8:
 		SteamService.unlock("FULL_HOUSE")
 	var p1 := player_one()
-	if p1 == null or names.is_empty() or String(names[0]) != p1.player_name:
+	if p1 == null or names.is_empty():
+		return
+	# Sahne Rütbesi: XP ve açılanlar (sonuç ekranı gösterir)
+	var rank := names.find(p1.player_name)
+	var stats: Dictionary = arena.stats_for(p1) if arena and arena.has_method("stats_for") else {}
+	Progress.award(rank, stats, kind)
+	if String(names[0]) != p1.player_name:
 		return
 	SteamService.add_stat("wins", 1)
 	SteamService.unlock("FIRST_WIN")
@@ -639,6 +652,12 @@ func prepare_game_shot(part: String) -> void:
 			while arena == null or arena.phase != "reward":
 				await get_tree().process_frame
 			await get_tree().create_timer(0.7).timeout
+		"result_rank":
+			# maç sonu: sonuç ekranı + rütbe paneli (XP dökümü, açılanlar)
+			start_arena("conquest")
+			while arena == null or arena.phase != "done":
+				await get_tree().process_frame
+			await get_tree().create_timer(3.5).timeout
 		"post_a", "post_c":
 			# maçı bitir, lobiye dön, Karakterim'i aç (maç sonrası hataları için)
 			start_arena("conquest" if part == "post_c" else "arena")
@@ -700,6 +719,55 @@ func prepare_game_shot(part: String) -> void:
 			await get_tree().create_timer(0.6).timeout
 			(_demo_map.piece(id) as CastleModel).collapse()
 			await get_tree().create_timer(1.25).timeout
+		"hats_demo", "faces_demo":
+			# yeni kozmetik vitrini: 10 pelüş, her birinde farklı açılan öğe
+			props.clear()
+			for a in all_actors():
+				a.visible = false
+				a.freeze = true
+			var root2 := Node3D.new()
+			add_child(root2)
+			var hats := ["beret", "party", "tricorn", "wizard", "chef", "jester", "cowboy", "propeller", "flowers", "laurel"]
+			var must := ["imperial", "goatee", "horseshoe", "curly", "beard", "handlebar", "walrus", "imperial", "curly", "goatee"]
+			var neck := ["scarf", "medal", "pearls", "ascot", "rose", "bell", "scarf", "medal", "pearls", "ascot"]
+			var gl := ["round", "monocle", "star", "shades", "domino", "eyepatch", "round", "star", "shades", "monocle"]
+			var cols := ["cherry", "navy", "forest", "plum", "coral", "snow", "cocoa", "gold", "sky", "rose"]
+			for i in 10:
+				var look := {"color": cols[i], "hat": hats[i], "mustache": must[i], "bowtie": neck[i], "glasses": gl[i]}
+				var pv := PlushVisual.new(look)
+				root2.add_child(pv)
+				var row := i / 5
+				pv.position = Vector3((i % 5 - 2) * 1.05, 0.02, -0.4 + row * 1.3)
+				pv.rotation.y = 0.0
+			cam.set_custom({"pos": Vector3(0, 1.9, 5.6), "look": Vector3(0, 0.8, 0.2), "fov": 42.0, "h": 0.0, "sway": 0.0}, true)
+			stage.set_solo(true)
+			if ui:
+				ui.show_lobby_chrome(false)
+			await get_tree().create_timer(2.0).timeout
+		"cult_demo":
+			props.clear()
+			for a in all_actors():
+				a.visible = false
+				a.freeze = true
+			var root3 := Node3D.new()
+			add_child(root3)
+			var cs := ["knight", "pirate", "explorer"]
+			for i in 3:
+				var fig := ConquestPiece.new({"color": ["navy", "cherry", "forest"][i]}, cs[i])
+				root3.add_child(fig)
+				fig.position = Vector3(-2.3 + i * 1.1, 0.02, 0.6)
+				fig.scale = Vector3.ONE * 1.4
+			for j in 2:
+				var c := CastleModel.new(["onion", "lighthouse"][j], PlushVisual.COLORS[["plum", "sky"][j]])
+				c.banner = ["star", "sun"][j]
+				root3.add_child(c)
+				c.position = Vector3(1.4 + j * 1.5, 0.02, 0.2)
+				c.scale = Vector3.ONE * 1.3
+			cam.set_custom({"pos": Vector3(0.3, 2.0, 5.2), "look": Vector3(0.3, 0.8, 0.2), "fov": 42.0, "h": 0.0, "sway": 0.0}, true)
+			stage.set_solo(true)
+			if ui:
+				ui.show_lobby_chrome(false)
+			await get_tree().create_timer(2.0).timeout
 		"costume_demo", "costume_demo2", "castle_demo":
 			props.clear()
 			for a in all_actors():

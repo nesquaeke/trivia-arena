@@ -1,0 +1,69 @@
+# Coğrafya — evrensel, eğlenceli
+geo|1|Dünyanın en büyük okyanusu hangisidir?|Which is the largest ocean on Earth?|Büyük Okyanus~Pacific Ocean|Atlas Okyanusu~Atlantic Ocean|Hint Okyanusu~Indian Ocean|Arktik Okyanusu~Arctic Ocean
+geo|1|Kanguruların doğal olarak yaşadığı kıta hangisidir?|On which continent do kangaroos live in the wild?|Avustralya~Australia|Afrika~Africa|Güney Amerika~South America|Asya~Asia
+geo|1|Eyfel Kulesi hangi şehirdedir?|Which city is home to the Eiffel Tower?|Paris|Londra~London|Roma~Rome|Madrid
+geo|1|Japonya'nın başkenti neresidir?|What is the capital of Japan?|Tokyo|Kyoto|Osaka|Seul~Seoul
+geo|1|Hangi ülke çizme şeklindedir?|Which country is shaped like a boot?|İtalya~Italy|Portekiz~Portugal|Yunanistan~Greece|Şili~Chile
+geo|1|Sahra Çölü hangi kıtadadır?|Which continent is the Sahara Desert on?|Afrika~Africa|Asya~Asia|Avustralya~Australia|Güney Amerika~South America
+geo|1|Kanada'nın bayrağında hangi yaprak vardır?|Which leaf appears on Canada's flag?|Akçaağaç~Maple|Meşe~Oak|Çınar~Plane tree|Palmiye~Palm
+geo|1|Dünyanın en yüksek dağı hangisidir?|What is the tallest mountain in the world?|Everest|K2|Kilimanjaro|Mont Blanc
+geo|1|Özgürlük Heykeli hangi şehirdedir?|Which city is the Statue of Liberty in?|New York|Washington|Chicago|Boston
+geo|1|İspanya'nın başkenti neresidir?|What is the capital of Spain?|Madrid|Barselona~Barcelona|Sevilla~Seville|Valensiya~Valencia
+geo|1|Polonya'nın başkenti neresidir?|What is the capital of Poland?|Varşova~Warsaw|Krakov~Kraków|Gdansk~Gdańsk|Poznan~Poznań
+geo|1|Big Ben saat kulesi hangi şehirdedir?|Which city is Big Ben in?|Londra~London|Dublin|Edinburgh|Manchester
+geo|1|Brezilya'da en çok konuşulan dil hangisidir?|What language is mostly spoken in Brazil?|Portekizce~Portuguese|İspanyolca~Spanish|Brezilyaca~Brazilian|Fransızca~French
+geo|1|Piramitleriyle ünlü Giza hangi ülkededir?|Which country is Giza, famous for its pyramids, in?|Mısır~Egypt|Meksika~Mexico|Peru|Sudan
+geo|1|Buzullarla kaplı en soğuk kıta hangisidir?|Which is the coldest, ice-covered continent?|Antarktika~Antarctica|Arktik~The Arctic|Grönland~Greenland|Sibirya~Siberia
+geo|1|Hangi ülke hem Avrupa'da hem Asya'da toprağa sahiptir?|Which country has land in both Europe and Asia?|Türkiye~Türkiye|Yunanistan~Greece|İran~Iran|Mısır~Egypt
+geo|1|Venedik şehri kanallarıyla ünlüdür. Hangi ülkededir?|Venice is famous for its canals. Which country is it in?|İtalya~Italy|Hollanda~Netherlands|Fransa~France|Hırvatistan~Croatia
+geo|1|Amazon yağmur ormanlarının büyük kısmı hangi ülkededir?|Most of the Amazon rainforest is in which country?|Brezilya~Brazil|Kolombiya~Colombia|Peru|Venezuela
+geo|1|Dünyada kaç kıta vardır (yaygın sayıma göre)?|How many continents are there (in the common count)?|7|5|6|9
+geo|1|Meksika'nın başkenti neresidir?|What is the capital of Mexico?|Meksiko~Mexico City|Cancun~Cancún|Guadalajara|Tijuana
+geo|1|Kutup ayıları doğal olarak nerede yaşar?|Where do polar bears live in the wild?|Kuzey Kutbu çevresi~Around the North Pole|Güney Kutbu~Antarctica|Himalayalar~The Himalayas|Alpler~The Alps
+geo|1|İsviçre en çok hangi yiyeceğiyle ünlüdür?|Switzerland is especially famous for which food?|Çikolata ve peynir~Chocolate and cheese|Pirinç~Rice|Sushi|Taco
+geo|1|Nil Nehri hangi denize dökülür?|Into which sea does the Nile flow?|Akdeniz~Mediterranean Sea|Kızıldeniz~Red Sea|Karadeniz~Black Sea|Arap Denizi~Arabian Sea
+geo|1|Hangi şehir "Büyük Elma" lakabıyla bilinir?|Which city is nicknamed "The Big Apple"?|New York|Los Angeles|Londra~London|Paris
+geo|1|Hollanda en çok hangi çiçeğiyle ünlüdür?|The Netherlands is best known for which flower?|Lale~Tulip|Gül~Rose|Papatya~Daisy|Orkide~Orchid
+geo|2|Dünyanın en uzun nehri olarak en sık hangisi gösterilir?|Which river is most often named the longest in the world?|Nil~Nile|Amazon|Mississippi|Yangtze
+geo|2|Avustralya'nın başkenti neresidir?|What is the capital of Australia?|Kanberra~Canberra|Sidney~Sydney|Melbourne|Perth
+geo|2|Yüzölçümüne göre dünyanın en büyük ülkesi hangisidir?|Which is the largest country by area?|Rusya~Russia|Kanada~Canada|Çin~China|ABD~USA
+geo|2|Machu Picchu hangi ülkededir?|Which country is Machu Picchu in?|Peru|Bolivya~Bolivia|Şili~Chile|Ekvador~Ecuador
+geo|2|Hangi ülkede en çok ada vardır?|Which country has the most islands?|İsveç~Sweden|Endonezya~Indonesia|Filipinler~Philippines|Japonya~Japan
+geo|2|Kanada'nın başkenti neresidir?|What is the capital of Canada?|Ottawa|Toronto|Montreal|Vancouver
+geo|2|Tek bir kıtayı kaplayan tek ülke hangisidir?|Which is the only country that covers a whole continent?|Avustralya~Australia|Grönland~Greenland|Antarktika~Antarctica|Brezilya~Brazil
+geo|2|İzlanda'nın ünlü sıcak su kaynaklarına ne ad verilir?|What are Iceland's famous erupting hot springs called?|Gayzer~Geysers|Fiyort~Fjords|Buzul~Glaciers|Delta~Deltas
+geo|2|Hangi ülke "Bin Göller Ülkesi" olarak anılır?|Which country is called the "Land of a Thousand Lakes"?|Finlandiya~Finland|Kanada~Canada|İsveç~Sweden|Norveç~Norway
+geo|2|Dünyanın en küçük ülkesi hangisidir?|What is the world's smallest country?|Vatikan~Vatican City|Monako~Monaco|San Marino|Lihtenştayn~Liechtenstein
+geo|2|Arjantin'in başkenti neresidir?|What is the capital of Argentina?|Buenos Aires|Santiago|Lima|Montevideo
+geo|2|Norveç kıyılarındaki derin, dar deniz vadilerine ne denir?|What are the deep, narrow sea inlets along Norway's coast called?|Fiyort~Fjords|Lagün~Lagoons|Delta~Deltas|Kanyon~Canyons
+geo|2|Hangi ülkenin bayrağında kırmızı bir daire vardır?|Which country's flag is a red circle on white?|Japonya~Japan|Çin~China|Kore~Korea|Vietnam
+geo|2|Kilimanjaro Dağı hangi ülkededir?|Which country is Mount Kilimanjaro in?|Tanzanya~Tanzania|Kenya|Etiyopya~Ethiopia|Uganda
+geo|2|Tokyo, Japonya'nın hangi adasındadır?|Tokyo is on which island?|Honşu~Honshu|Hokkaido|Kyuşu~Kyushu|Şikoku~Shikoku
+geo|2|Hangi iki ülke dünyanın en uzun kara sınırını paylaşır?|Which two countries share the world's longest land border?|Kanada ve ABD~Canada and USA|Rusya ve Çin~Russia and China|Arjantin ve Şili~Argentina and Chile|Hindistan ve Çin~India and China
+geo|2|Barselona hangi bölgenin başkentidir?|Barcelona is the capital of which region?|Katalonya~Catalonia|Endülüs~Andalusia|Bask Bölgesi~Basque Country|Galiçya~Galicia
+geo|2|Kraków şehrinin içinden hangi nehir geçer?|Which river flows through Kraków?|Vistül~Vistula|Oder|Tuna~Danube|Elbe
+geo|2|Dünyanın en büyük sıcak çölü hangisidir?|What is the world's largest hot desert?|Sahra~Sahara|Gobi|Kalahari|Atacama
+geo|2|Hangi ülke yaklaşık 17.000 adadan oluşur?|Which country is made up of roughly 17,000 islands?|Endonezya~Indonesia|Japonya~Japan|Yunanistan~Greece|Yeni Zelanda~New Zealand
+geo|2|Grand Canyon hangi ülkededir?|Which country is the Grand Canyon in?|ABD~USA|Meksika~Mexico|Kanada~Canada|Avustralya~Australia
+geo|2|Yeni Zelanda'nın yerli halkının adı nedir?|What are the Indigenous people of New Zealand called?|Maori|İnuit~Inuit|Aborjin~Aboriginal|Sami
+geo|2|Danimarka'nın başkenti neresidir?|What is the capital of Denmark?|Kopenhag~Copenhagen|Oslo|Stockholm|Helsinki
+geo|2|Hangi ülke dünyada en çok kahve üretir?|Which country produces the most coffee in the world?|Brezilya~Brazil|Kolombiya~Colombia|Etiyopya~Ethiopia|Vietnam
+geo|2|Dünyanın en derin gölü hangisidir?|Which is the deepest lake in the world?|Baykal~Baikal|Tanganika~Tanganyika|Superior|Victoria
+geo|2|Tuna Nehri hangi denize dökülür?|Into which sea does the Danube flow?|Karadeniz~Black Sea|Adriyatik~Adriatic Sea|Baltık Denizi~Baltic Sea|Kuzey Denizi~North Sea
+geo|2|Hangi şehir yedi tepe üzerine kurulmuş diye bilinir (antik efsane)?|Which city is famously said to be built on seven hills?|Roma~Rome|Atina~Athens|Lizbon~Lisbon|Kahire~Cairo
+geo|2|Eski adı Birmanya olan ülkenin bugünkü adı nedir?|What is the country formerly called Burma now called?|Myanmar|Tayland~Thailand|Kamboçya~Cambodia|Laos
+geo|3|Hangi ülkenin başkenti La Paz ile Sucre arasında paylaşılır?|Which country splits its capital functions between La Paz and Sucre?|Bolivya~Bolivia|Peru|Ekvador~Ecuador|Paraguay
+geo|3|Dünyanın en kurak yerlerinden Atacama Çölü hangi ülkededir?|The Atacama, one of the driest places on Earth, is mainly in which country?|Şili~Chile|Peru|Arjantin~Argentina|Meksika~Mexico
+geo|3|Hangi ülkenin denize kıyısı yoktur?|Which of these countries is landlocked?|İsviçre~Switzerland|Portekiz~Portugal|Belçika~Belgium|Danimarka~Denmark
+geo|3|Dünyanın en yüksek şelalesi hangisidir?|What is the world's tallest waterfall?|Angel Şelalesi~Angel Falls|Niagara Şelalesi~Niagara Falls|Victoria Şelalesi~Victoria Falls|İguazu~Iguazu Falls
+geo|3|Hangi Avrupa ülkesinin resmi adı "Hellenik Cumhuriyeti"dir?|Which European country is officially the "Hellenic Republic"?|Yunanistan~Greece|Kıbrıs~Cyprus|Arnavutluk~Albania|Bulgaristan~Bulgaria
+geo|3|Hangi ülke en çok ülkeyle kara sınırı paylaşır?|Which country borders the most other countries?|Çin~China|Rusya~Russia|Brezilya~Brazil|Almanya~Germany
+geo|3|Dünyanın en büyük adası (kıta sayılmayan) hangisidir?|What is the world's largest island that isn't a continent?|Grönland~Greenland|Yeni Gine~New Guinea|Borneo|Madagaskar~Madagascar
+geo|3|Kazakistan'ın başkenti neresidir?|What is the capital of Kazakhstan?|Astana|Almatı~Almaty|Taşkent~Tashkent|Bişkek~Bishkek
+geo|3|Hangi boğaz Avrupa ile Afrika'yı ayırır?|Which strait separates Europe from Africa?|Cebelitarık~Gibraltar|Hürmüz~Hormuz|Bering|Malakka~Malacca
+geo|3|Ölü Deniz'in en belirgin özelliği nedir?|What is the Dead Sea best known for?|Çok tuzlu olması~Extremely salty water|Çok derin olması~Being very deep|Donması~Freezing over|Tatlı su~Fresh water
+geo|3|Hangi başkent neredeyse tam ekvator üzerindedir?|Which of these capitals lies almost exactly on the equator?|Quito|Lima|Bogota~Bogotá|Caracas
+geo|3|Madagaskar hangi okyanustadır?|Which ocean is Madagascar in?|Hint Okyanusu~Indian Ocean|Atlas Okyanusu~Atlantic Ocean|Büyük Okyanus~Pacific Ocean|Güney Okyanusu~Southern Ocean
+geo|3|Avrupa'nın en uzun nehri hangisidir?|What is the longest river in Europe?|Volga|Tuna~Danube|Ren~Rhine|Dinyeper~Dnieper
+geo|3|Hangi ülkenin bayrağı kare şeklindedir?|Which country has a square flag?|İsviçre~Switzerland|Nepal|Japonya~Japan|Danimarka~Denmark
+geo|3|Dünyanın en alçak kara noktası neresidir?|Where is the lowest point on land?|Ölü Deniz kıyısı~The Dead Sea shore|Ölüm Vadisi~Death Valley|Hazar Denizi~Caspian Sea|Afar Çukuru~Afar Depression

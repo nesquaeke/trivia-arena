@@ -1,0 +1,56 @@
+# Tuhaf ama Gerçek
+odd|1|Ahtapotun kaç kalbi vardır?|How many hearts does an octopus have?|3|1|2|8
+odd|1|Hangi hayvan geriye doğru yürüyemez?|Which animal cannot walk backwards?|Kanguru~Kangaroo|Kedi~Cat|Yengeç~Crab|At~Horse
+odd|1|Muzlar teknik olarak nedir?|Botanically, what is a banana?|Bir meyve (dut türü)~A berry|Bir sebze~A vegetable|Bir tahıl~A grain|Bir çiçek~A flower
+odd|1|İnekler en iyi hangi durumda daha fazla süt verir?|Studies suggest cows give more milk when they…|Müzik dinlediğinde~Listen to music|Koştuğunda~Run|Yalnız kaldığında~Are alone|Karanlıkta~Are in darkness
+odd|1|Bal arıları iletişim için ne yapar?|How do honeybees share directions?|Dans eder~They dance|Şarkı söyler~They sing|Yazı yazar~They write|Işık yakar~They flash lights
+odd|1|Hangi hayvan uyurken bir gözünü açık tutabilir?|Which animal can sleep with one eye open?|Yunus~Dolphin|İnek~Cow|Tavşan~Rabbit|Kaplumbağa~Tortoise
+odd|1|Flamingolar neden pembedir?|Why are flamingos pink?|Yedikleri yiyecekler yüzünden~Because of what they eat|Güneşte yandıkları için~Sunburn|Utandıkları için~They are embarrassed|Doğuştan boyalı~They are born pink
+odd|1|İnsanlar günde ortalama kaç kez göz kırpar?|Roughly how many times does a person blink a day?|15.000|150|1.500|150.000
+odd|1|Deniz atlarında yavruları kim taşır?|In seahorses, who carries the babies?|Baba~The father|Anne~The mother|İkisi de~Both|Büyükanne~The grandmother
+odd|1|Salyangozlar kaç saat boyunca uyuyabilir (en uzun)?|How long can some snails sleep?|3 yıl~Up to 3 years|3 dakika~3 minutes|3 saat~3 hours|Hiç uyumazlar~They never sleep
+odd|1|Kediler hayatlarının ne kadarını uyuyarak geçirir?|About how much of their lives do cats spend asleep?|Üçte ikisi~Two-thirds|Onda biri~A tenth|Yarısı~Half|Hiç~None
+odd|1|Hangi meyvenin çekirdekleri dışındadır?|Which fruit wears its seeds on the outside?|Çilek~Strawberry|Elma~Apple|Kiraz~Cherry|Muz~Banana
+odd|1|Zürafaların dili hangi renktir?|What colour is a giraffe's tongue?|Mor-mavi~Purple-blue|Pembe~Pink|Sarı~Yellow|Beyaz~White
+odd|1|Kuşlardan hangisi uçamaz ama çok hızlı koşar?|Which bird can't fly but runs very fast?|Devekuşu~Ostrich|Serçe~Sparrow|Kartal~Eagle|Kırlangıç~Swallow
+odd|1|Bir salyangozun kaç dişi olabilir?|How many teeth can a snail have?|Binlerce~Thousands|Hiç~None|2|32
+odd|1|İspanya'daki "La Tomatina" festivalinde insanlar birbirine ne atar?|At Spain's "La Tomatina", people throw what at each other?|Domates~Tomatoes|Portakal~Oranges|Un~Flour|Su balonu~Water balloons
+odd|1|Karıncalar hiç uyur mu?|Do ants ever sleep?|Evet, kısa kestirmelerle~Yes, in short naps|Asla~Never|Sadece kışın~Only in winter|Sadece Pazar~Only on Sundays
+odd|1|Kutup ayılarının derisi hangi renktir?|What colour is a polar bear's skin?|Siyah~Black|Beyaz~White|Pembe~Pink|Sarı~Yellow
+odd|1|İnsan vücudundaki en küçük kemik nerededir?|Where is the smallest bone in the human body?|Kulakta~In the ear|Parmakta~In a finger|Burunda~In the nose|Ayak başparmağında~In the big toe
+odd|1|Wombatların dışkısı ne şekildedir?|What shape is wombat poo?|Küp~Cube|Yıldız~Star|Kalp~Heart|Spiral
+odd|2|İsviçre'de tek başına bir kobay beslemek neden yasaktır?|Why is it illegal to keep just one guinea pig in Switzerland?|Yalnız kalınca üzüldükleri için~They get lonely|Çok gürültülü oldukları için~They're too noisy|Tehlikeli oldukları için~They're dangerous|Vergi yüzünden~Tax reasons
+odd|2|Kleopatra hangisine zaman olarak daha yakın yaşadı?|Cleopatra lived closer in time to which?|Ay'a inişe~The Moon landing|Piramitlerin yapımına~The building of the Great Pyramid|İkisine eşit~Equally to both|Dinozorlara~The dinosaurs
+odd|2|Oxford Üniversitesi mi daha eski, Aztek İmparatorluğu mu?|Which is older: Oxford University or the Aztec Empire?|Oxford Üniversitesi~Oxford University|Aztek İmparatorluğu~The Aztec Empire|Aynı yıl~Same year|İkisi de yok~Neither existed
+odd|2|Araştırmalara göre "en iyi arkadaşı" olan inekler nasıldır?|Studies show cows with a best friend are…|Daha az stresli~Less stressed|Daha çok kilo alır~Heavier|Daha gürültülü~Louder|Daha hızlı~Faster
+odd|2|Polonya'da Wrocław şehri hangi küçük heykelleriyle ünlüdür?|Wrocław in Poland is famous for hundreds of tiny statues of…|Cüceler~Dwarfs|Kediler~Cats|Ördekler~Ducks|Şövalyeler~Knights
+odd|2|Bal neden bozulmadan binlerce yıl kalabilir?|Why can honey last thousands of years?|Çok az su içerir ve asidiktir~Low water and acidic|Çok soğuktur~It's very cold|Arılar korur~Bees guard it|Tuzludur~It's salty
+odd|2|Hangi hayvanın parmak izleri insanınkine çok benzer?|Which animal has fingerprints very similar to humans?|Koala|Köpek~Dog|Kedi~Cat|Papağan~Parrot
+odd|2|İspanya'da Buñol'daki domates savaşından sonra sokaklar neden tertemiz olur?|Why are Buñol's streets cleaner after La Tomatina?|Domatesin asidi taşları temizler~Tomato acid cleans the stones|Yağmur yağar~It rains|Kimse temizlemez~Nobody cleans|Tavuklar yer~Chickens eat it
+odd|2|Bir istakozun kanı hangi renktir?|What colour is lobster blood?|Mavi~Blue|Kırmızı~Red|Yeşil~Green|Siyah~Black
+odd|2|ABD'de bir mahkeme vergi için hangi meyveyi "sebze" saydı?|A US court once ruled which fruit a vegetable (for tax)?|Domates~Tomato|Elma~Apple|Muz~Banana|Kiraz~Cherry
+odd|2|Dünyadaki tavuk sayısı insan sayısından fazla mı?|Are there more chickens than people on Earth?|Evet, çok daha fazla~Yes, far more|Hayır~No|Tam eşit~Exactly equal|Hiç tavuk kalmadı~No chickens left
+odd|2|Edinburgh Hayvanat Bahçesi'ndeki Sir Nils Olav adlı penguen Norveç ordusunda neyin sahibidir?|What does Sir Nils Olav, a penguin at Edinburgh Zoo, hold in the Norwegian army?|General rütbesi ve şövalyelik~A general's rank and a knighthood|Bir tank~A tank|Bir madalya koleksiyonu~A medal collection|Hiçbir şey~Nothing
+odd|2|Bir sümüklüböcek kaç burna sahiptir?|How many noses does a slug have?|4|1|2|0
+odd|2|Hangi ülkenin milli hayvanı tek boynuzlu attır?|Which country's national animal is the unicorn?|İskoçya~Scotland|İrlanda~Ireland|Galler~Wales|Danimarka~Denmark
+odd|2|Ördeklerin ötüşü yankı yapmaz mı?|Is it true that a duck's quack doesn't echo?|Hayır, bu bir efsane~No, that's a myth|Evet, hiç~Yes, never|Sadece suda~Only near water|Sadece gece~Only at night
+odd|2|İnsanlar hayatları boyunca uyurken yaklaşık ne yer? (şehir efsanesi)|The popular myth says people swallow what in their sleep each year?|Örümcek~Spiders|Sinek~Flies|Toz~Dust|Karınca~Ants
+odd|2|Hangi hayvan günde 22 saate kadar uyuyabilir?|Which animal can sleep up to 22 hours a day?|Koala|Aslan~Lion|Kedi~Cat|Köpek~Dog
+odd|2|Bir ahtapot kendi kolunu kaybederse ne olur?|What happens if an octopus loses an arm?|Yeniden çıkar~It grows back|Ölür~It dies|Yüzemez~It can't swim|Renk değiştiremez~It can't change colour
+odd|2|Havai fişeklerde mavi renk neden en zor elde edilen renktir?|Which firework colour is the hardest to make?|Mavi~Blue|Kırmızı~Red|Yeşil~Green|Sarı~Yellow
+odd|2|Bir "blobfish" en çok neyiyle ünlüdür?|The blobfish is famous for…|Dünyanın en çirkin hayvanı seçilmesi~Being voted the ugliest animal|En hızlı balık olması~Being the fastest fish|Uçabilmesi~Flying|Şarkı söylemesi~Singing
+odd|3|Bir günde yeryüzüne ortalama kaç ton uzay tozu düşer?|Roughly how much space dust falls on Earth each day?|Onlarca ton~Tens of tonnes|Bir kilo~One kilogram|Hiç~None|Bir milyon ton~A million tonnes
+odd|3|Hangi ünlü ressam yalnızca tek bir tablosunu hayattayken sattığı söylenir?|Which famous painter is said to have sold only one painting in his lifetime?|Vincent van Gogh|Pablo Picasso|Claude Monet|Salvador Dalí
+odd|3|Nintendo şirketi kurulduğunda ne üretiyordu (1889)?|What did Nintendo make when it was founded in 1889?|Oyun kartları~Playing cards|Oyuncak araba~Toy cars|Radyo~Radios|Şemsiye~Umbrellas
+odd|3|Avustralya 1932'de hangi hayvanlara karşı "savaş" kaybetti?|Australia lost a 1932 "war" against which animals?|Emu kuşları~Emus|Kangurular~Kangaroos|Tavşanlar~Rabbits|Timsahlar~Crocodiles
+odd|3|İlk çalar saat sadece hangi saatte çalabiliyordu?|The first mechanical alarm clock could ring only at…|Sabah 4'te~4 a.m.|Öğlen~Noon|Gece yarısı~Midnight|Her saat~Every hour
+odd|3|Polonya'daki Wieliczka tuz madeninde yeraltında ne vardır?|What can you find underground in Poland's Wieliczka Salt Mine?|Tuzdan yapılmış bir şapel~A chapel carved from salt|Bir havaalanı~An airport|Bir hayvanat bahçesi~A zoo|Bir stadyum~A stadium
+odd|3|Hangi yiyecek arkeolojik kazılarda binlerce yıl sonra yenilebilir bulundu?|Which food was found still edible in ancient tombs?|Bal~Honey|Ekmek~Bread|Peynir~Cheese|Süt~Milk
+odd|3|İspanya'daki "El Colacho" festivalinde şeytan kılığındaki adamlar neyin üzerinden atlar?|At Spain's "El Colacho", men dressed as devils jump over…|Bebekler~Babies|Boğalar~Bulls|Ateş~Fire|Arabalar~Cars
+odd|3|Bir tardigrad ("su ayısı") nerede hayatta kalabildi?|Where have tardigrades ("water bears") survived?|Uzay boşluğunda~In outer space|Sadece akvaryumda~Only in aquariums|Sadece çölde~Only in deserts|Hiçbir yerde~Nowhere
+odd|3|Eyfel Kulesi yazın sıcakta ne olur?|What happens to the Eiffel Tower in summer heat?|Yaklaşık 15 cm uzar~It grows about 15 cm|Kısalır~It shrinks|Renk değiştirir~It changes colour|Eğilir~It leans
+odd|3|Hangi ülkenin başkentinde bir kedi müzesi (Kattenkabinet) vardır?|Which capital has a museum dedicated to cats in art (Kattenkabinet)?|Amsterdam|Madrid|Varşova~Warsaw|Roma~Rome
+odd|3|Bir tavuğun kafası kesildikten sonra 18 ay yaşadığı iddia edilen ünlü tavuğun adı nedir?|What was the name of the US chicken that lived 18 months without a head?|Mike|Bob|Henny|Chucky
+odd|3|Bir istakoz aslında ne kadar yaşayabilir?|How long can a lobster live?|100 yıldan fazla~Over 100 years|5 yıl~5 years|1 yıl~1 year|20 gün~20 days
+odd|3|Kaplumbağalar hangi bölgeleriyle nefes alabilir (bazı türler)?|Some turtles can breathe through their…|Popoları~Bottoms|Kabukları~Shells|Kulakları~Ears|Ayakları~Feet
+odd|3|İngiltere'de Kraliyet ailesi kanunen hangi hayvanların sahibi sayılır?|In England, which wild animals legally belong to the Crown?|Açık sulardaki kuğular~Unmarked mute swans|Tüm kediler~All cats|Güvercinler~Pigeons|Tilkiler~Foxes

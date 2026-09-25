@@ -173,8 +173,29 @@ func _build_about() -> void:
 	lab.add_theme_font_size_override("italics_font_size", 20)
 	lab.add_theme_color_override("default_color", Pal.CREAM)
 	lab.name = "About"
+	lab.custom_minimum_size = Vector2(880, 330)
 	page.add_child(lab)
 	_rows["about"] = {"row": lab, "label": null, "ctrl": lab}
+	var rrow := HBoxContainer.new()
+	rrow.add_theme_constant_override("separation", 14)
+	for k in ["copy", "folder"]:
+		var b := CtaButton.new()
+		b.style = "velvet"
+		b.custom_minimum_size = Vector2(300, 52)
+		b.font_size = 21
+		b.name = "Rep_" + k
+		b.pressed.connect(func():
+			if k == "copy":
+				ErrorReporter.copy_to_clipboard()
+				b.label = Pal.t("set.report.copied")
+			else:
+				ErrorReporter.open_folder())
+		b.focus_entered.connect(func():
+			_desc = Pal.t("set.report.d")
+			_panel.queue_redraw())
+		rrow.add_child(b)
+	page.add_child(rrow)
+	_rows["report"] = {"row": rrow, "label": null, "ctrl": rrow}
 
 # ── uygulama ────────────────────────────────────────────────────────
 func _apply_seg(key: String, i: int) -> void:
@@ -243,7 +264,7 @@ func retext() -> void:
 		_tab_btns[i].queue_redraw()
 	for key in _rows:
 		var r: Dictionary = _rows[key]
-		if key.begins_with("ctl_") or key == "about":
+		if key.begins_with("ctl_") or key == "about" or key == "report":
 			continue
 		(r.label as Label).text = Pal.t("set." + key)
 		if r.ctrl is Segmented:
@@ -270,6 +291,9 @@ func retext() -> void:
 	var about: RichTextLabel = _rows.about.ctrl
 	about.text = "[b]TRIVIA ARENA: THE GRAND STAGE[/b]\n[i]%s %s[/i]\n\n%s" % [Pal.t("set.version"), ProjectSettings.get_setting("application/config/version", "0"), Pal.t("set.credits")]
 	(_panel.get_node("Back") as CtaButton).label = Pal.t("common.back")
+	var rr: HBoxContainer = _rows.report.row
+	(rr.get_node("Rep_copy") as CtaButton).label = Pal.t("set.report.copy")
+	(rr.get_node("Rep_folder") as CtaButton).label = Pal.t("set.report.folder")
 
 # ── açılış / kapanış / gezinme ─────────────────────────────────────
 func open(start_tab := 0) -> void:

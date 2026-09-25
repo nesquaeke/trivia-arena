@@ -1,0 +1,56 @@
+# Sinema ve dizi
+film|1|"Toy Story" filminde kovboy oyuncağın adı nedir?|What is the cowboy toy's name in "Toy Story"?|Woody|Buzz|Jessie|Rex
+film|1|Harry Potter hangi büyücülük okuluna gider?|Which school of magic does Harry Potter attend?|Hogwarts|Durmstrang|Beauxbatons|Ilvermorny
+film|1|"Buz Devri" filmindeki palamut peşindeki sincap benzeri hayvanın adı nedir?|What is the acorn-chasing sabre-toothed squirrel in "Ice Age" called?|Scrat|Sid|Manny|Diego
+film|1|"Aslan Kral"ın kahramanı genç aslanın adı nedir?|What is the young lion's name in "The Lion King"?|Simba|Mufasa|Scar|Nala
+film|1|Işın kılıçlarıyla bilinen film serisi hangisidir?|Which film series is known for lightsabers?|Yıldız Savaşları~Star Wars|Star Trek|Matrix~The Matrix|Dune
+film|1|"Karlar Ülkesi"nde (Frozen) buz gücüne sahip kraliçe kimdir?|In "Frozen", which queen has ice powers?|Elsa|Anna|Ariel|Moana
+film|1|Örümcek Adam'ın gerçek adı nedir?|What is Spider-Man's real name?|Peter Parker|Bruce Wayne|Clark Kent|Tony Stark
+film|1|"Shrek" filmindeki konuşan eşek karakterin adı nedir?|What is the talking donkey called in "Shrek"?|Eşek~Donkey|Puss|Lord Farquaad|Gingy
+film|1|Batman hangi şehri korur?|Which city does Batman protect?|Gotham|Metropolis|Star City|Central City
+film|1|"Titanik" filminde başrolde hangi erkek oyuncu vardır?|Which actor starred in "Titanic" (1997)?|Leonardo DiCaprio|Brad Pitt|Tom Cruise|Johnny Depp
+film|1|Minyonlar hangi rengin baskın olduğu karakterlerdir?|Minions are mostly which colour?|Sarı~Yellow|Mavi~Blue|Yeşil~Green|Mor~Purple
+film|1|"Nemo'yu Bulmak"ta Nemo hangi balık türüdür?|What kind of fish is Nemo?|Palyaço balığı~Clownfish|Japon balığı~Goldfish|Köpekbalığı~Shark|Vatoz~Stingray
+film|1|James Bond'un kod numarası nedir?|What is James Bond's code number?|007|001|700|070
+film|1|Süpermen'in zayıf noktası olan madde hangisidir?|Which substance is Superman's weakness?|Kriptonit~Kryptonite|Vibranyum~Vibranium|Adamantiyum~Adamantium|Altın~Gold
+film|1|Oscar ödülleri hangi ülkede verilir?|In which country are the Oscars awarded?|ABD~USA|Fransa~France|İngiltere~UK|İtalya~Italy
+film|1|"Harry Potter"da Harry'nin baykuşunun adı nedir?|What is Harry Potter's owl called?|Hedwig|Errol|Fawkes|Crookshanks
+film|1|"Arabalar" (Cars) filminin kırmızı yarış arabası kimdir?|Who is the red race car in "Cars"?|Şimşek McQueen~Lightning McQueen|Mater|Doc Hudson|Sally
+film|1|Hangi filmde bir robot çöp toplar ve EVE'e aşık olur?|In which film does a trash-collecting robot fall for EVE?|WALL-E|Robotlar~Robots|Iron Giant|Big Hero 6
+film|1|"Jurassic Park" filminde hangi canlılar yeniden yaratılır?|What is brought back to life in "Jurassic Park"?|Dinozorlar~Dinosaurs|Mamutlar~Mammoths|Ejderhalar~Dragons|Uzaylılar~Aliens
+film|1|Chaplin'in ünlü karakteri hangi aksesuarla bilinir?|Charlie Chaplin's Tramp is known for which accessory?|Melon şapka ve baston~Bowler hat and cane|Tepe tacı~Crown|Göz bandı~Eyepatch|Pelerin~Cape
+film|2|"Yüzüklerin Efendisi"nde yüzüğü yok etmek için yolculuğa çıkan hobbit kimdir?|Which hobbit sets out to destroy the Ring in "The Lord of the Rings"?|Frodo|Sam|Bilbo|Pippin
+film|2|"Matrix"te Neo'ya kırmızı hap mı mavi hap mı teklif edilir?|In "The Matrix", Neo is offered a red pill or a…|Mavi hap~Blue pill|Yeşil hap~Green pill|Sarı hap~Yellow pill|Beyaz hap~White pill
+film|2|"Kara Şövalye"de Joker'i oynayan oyuncu kimdir?|Who played the Joker in "The Dark Knight"?|Heath Ledger|Joaquin Phoenix|Jack Nicholson|Jared Leto
+film|2|Pixar'ın "Yukarı Bak" (Up) filminde ev neyle uçar?|In Pixar's "Up", what lifts the house into the sky?|Balonlar~Balloons|Roket~A rocket|Kanatlar~Wings|Kuşlar~Birds
+film|2|Hangi yönetmen "Jaws" ve "E.T."yi çekmiştir?|Which director made "Jaws" and "E.T."?|Steven Spielberg|George Lucas|James Cameron|Ridley Scott
+film|2|"Forrest Gump"ın ünlü sözü: Hayat bir kutu … gibidir?|Forrest Gump: "Life is like a box of…"|Çikolata~Chocolates|Mektup~Letters|Oyuncak~Toys|Kurabiye~Cookies
+film|2|Demir Adam'ın gerçek adı nedir?|What is Iron Man's real name?|Tony Stark|Steve Rogers|Bruce Banner|Nick Fury
+film|2|"Ratatouille"da yemek yapan fare hangi şehirde yaşar?|In "Ratatouille", the cooking rat lives in which city?|Paris|Roma~Rome|Londra~London|New York
+film|2|Hangi film serisinde Jack Sparrow adlı bir korsan vardır?|Which series features a pirate called Jack Sparrow?|Karayip Korsanları~Pirates of the Caribbean|Kanca~Hook|Hazine Adası~Treasure Island|Moana
+film|2|İspanyol yönetmen Pedro Almodóvar'ın ülkesi hangisidir?|Director Pedro Almodóvar comes from which country?|İspanya~Spain|Meksika~Mexico|Arjantin~Argentina|İtalya~Italy
+film|2|"Ruhların Kaçışı" (Spirited Away) hangi stüdyonun filmidir?|Which studio made "Spirited Away"?|Studio Ghibli|Pixar|DreamWorks|Aardman
+film|2|"Kuzuların Sessizliği"ndeki ünlü kötü karakter kimdir?|Who is the famous villain of "The Silence of the Lambs"?|Hannibal Lecter|Norman Bates|Freddy Krueger|Darth Vader
+film|2|"Geleceğe Dönüş"te zaman makinesine dönüştürülen araba hangisidir?|Which car becomes the time machine in "Back to the Future"?|DeLorean|Mustang|Beetle|Cadillac
+film|2|Wallace ve Gromit'te Gromit hangi hayvandır?|In "Wallace & Gromit", what animal is Gromit?|Köpek~Dog|Kedi~Cat|Koyun~Sheep|Penguen~Penguin
+film|2|"Mamma Mia!" filminin şarkıları hangi grubun şarkılarıdır?|Whose songs make up "Mamma Mia!"?|ABBA|Queen|The Beatles|Bee Gees
+film|2|Darth Vader'ın Luke'a söylediği ünlü söz hangisidir?|What does Darth Vader famously reveal to Luke?|Ben senin babanım~I am your father|Ben seni tanırım~I know you|Seni bekliyordum~I was waiting|Güç seninle~The Force is with you
+film|2|Hangi animasyon filmde bir kız tekneyle okyanusa açılır ve yarı tanrı Maui ile tanışır?|In which film does a girl sail the ocean and meet the demigod Maui?|Moana|Brave|Coco|Encanto
+film|2|"Coco" filmi hangi Meksika bayramını anlatır?|Which Mexican holiday is "Coco" about?|Ölüler Günü~Day of the Dead|Bağımsızlık Günü~Independence Day|Noel~Christmas|Karnaval~Carnival
+film|2|"Evde Tek Başına" filminde evde unutulan çocuğun adı nedir?|What is the boy's name in "Home Alone"?|Kevin|Kyle|Kenny|Carl
+film|2|Polonyalı yönetmen Roman Polański hangi filmle En İyi Yönetmen Oscar'ı kazandı?|For which film did Roman Polański win the Best Director Oscar?|Piyanist~The Pianist|Çinatown~Chinatown|Rosemary'nin Bebeği~Rosemary's Baby|Oliver Twist
+film|3|En İyi Film Oscar'ını kazanan ilk İngilizce olmayan film "Parazit" hangi ülkedendir?|"Parasite", the first non-English film to win Best Picture, is from…|Güney Kore~South Korea|Japonya~Japan|Çin~China|Tayvan~Taiwan
+film|3|Hitchcock'un "Sapık" (Psycho) filmindeki ünlü sahne nerede geçer?|Where does the famous scene in Hitchcock's "Psycho" take place?|Duşta~In a shower|Asansörde~In a lift|Trende~On a train|Kulede~In a tower
+film|3|"Yedinci Mühür"ün yönetmeni İsveçli usta kimdir?|Which Swedish master directed "The Seventh Seal"?|Ingmar Bergman|Lars von Trier|Andrei Tarkovsky|Federico Fellini
+film|3|İlk uzun metrajlı sesli film sayılan yapım hangisidir?|Which is usually called the first feature-length "talkie"?|Caz Şarkıcısı~The Jazz Singer|Metropolis|Nosferatu|Modern Zamanlar~Modern Times
+film|3|Cannes Film Festivali'nin büyük ödülünün adı nedir?|What is the top prize at the Cannes Film Festival?|Altın Palmiye~Palme d'Or|Altın Ayı~Golden Bear|Altın Aslan~Golden Lion|Altın Küre~Golden Globe
+film|3|"Titanik" kaç Oscar kazandı?|How many Oscars did "Titanic" win?|11|7|9|14
+film|3|Kieślowski'nin "Üç Renk" üçlemesindeki renkler hangileridir?|What are the colours in Kieślowski's "Three Colours" trilogy?|Mavi, Beyaz, Kırmızı~Blue, White, Red|Kırmızı, Yeşil, Sarı~Red, Green, Yellow|Siyah, Beyaz, Gri~Black, White, Grey|Mavi, Altın, Mor~Blue, Gold, Purple
+film|3|"Pan'ın Labirenti" filminin yönetmeni kimdir?|Who directed "Pan's Labyrinth"?|Guillermo del Toro|Alfonso Cuarón|Alejandro González Iñárritu|Pedro Almodóvar
+film|3|Mickey Mouse ilk kez hangi kısa filmle sesli olarak göründü?|In which short did Mickey Mouse debut with sound?|Steamboat Willie|Fantasia|Plane Crazy|The Band Concert
+film|3|En çok Oscar adaylığı alan oyuncu kimdir?|Which actor has received the most Oscar nominations?|Meryl Streep|Katharine Hepburn|Jack Nicholson|Denzel Washington
+film|3|"Yıldız Savaşları"nın ilk filmi hangi yıl vizyona girdi?|In which year was the first "Star Wars" film released?|1977|1980|1971|1983
+film|3|Hangi üçlemenin son filmi En İyi Film dahil 11 Oscar kazandı?|Which trilogy finale won 11 Oscars, including Best Picture?|Kralın Dönüşü~The Return of the King|İmparator Geri Dönüyor~The Empire Strikes Back|Baba III~The Godfather Part III|Matrix Revolutions
+film|3|Lumière kardeşlerin ilk film gösterimi hangi şehirde yapıldı (1895)?|Where did the Lumière brothers hold their first public screening in 1895?|Paris|Lyon|Berlin|Londra~London
+film|3|"Amélie" filmi hangi Paris semtinde geçer?|Which Paris district is "Amélie" set in?|Montmartre|Le Marais|Saint-Germain|La Défense
+film|3|"Heat" (1995) filminde Robert De Niro'nun karşısında kim oynadı?|Who starred opposite Robert De Niro in "Heat" (1995)?|Al Pacino|Joe Pesci|Harvey Keitel|Jack Nicholson

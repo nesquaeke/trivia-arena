@@ -1,0 +1,56 @@
+# Bilim
+sci|1|Suyun kimyasal formülü nedir?|What is the chemical formula for water?|H2O|CO2|O2|NaCl
+sci|1|Bitkiler güneş ışığıyla besin üretirken hangi gazı alır?|Which gas do plants take in to make food using sunlight?|Karbondioksit~Carbon dioxide|Oksijen~Oxygen|Azot~Nitrogen|Helyum~Helium
+sci|1|İnsan vücudundaki en büyük organ hangisidir?|What is the largest organ of the human body?|Deri~Skin|Karaciğer~Liver|Beyin~Brain|Akciğer~Lungs
+sci|1|Suyun deniz seviyesindeki donma noktası kaç °C'dir?|At sea level, water freezes at how many °C?|0|10|-10|32
+sci|1|Güneş sistemimizin merkezinde ne vardır?|What is at the centre of our solar system?|Güneş~The Sun|Dünya~Earth|Jüpiter~Jupiter|Ay~The Moon
+sci|1|Mıknatıslar hangi metali güçlü şekilde çeker?|Which metal do magnets strongly attract?|Demir~Iron|Altın~Gold|Bakır~Copper|Alüminyum~Aluminium
+sci|1|Gökkuşağında kaç renk sayılır (klasik sayım)?|How many colours are traditionally counted in a rainbow?|7|5|6|9
+sci|1|Kalbimiz vücuda ne pompalar?|What does the heart pump around the body?|Kan~Blood|Hava~Air|Su~Water|Safra~Bile
+sci|1|Sesin boşlukta yayılması mümkün müdür?|Can sound travel through empty space (a vacuum)?|Hayır~No|Evet, çok hızlı~Yes, very fast|Evet, yavaş~Yes, slowly|Sadece gece~Only at night
+sci|1|Buz ısıtıldığında neye dönüşür?|What does ice turn into when heated?|Su~Water|Kum~Sand|Tuz~Salt|Cam~Glass
+sci|1|İnsanların nefes alırken ihtiyaç duyduğu gaz hangisidir?|Which gas do humans need to breathe?|Oksijen~Oxygen|Karbondioksit~Carbon dioxide|Helyum~Helium|Metan~Methane
+sci|1|Diş hekimleri dişleri korumak için hangi maddeyi önerir?|Which substance do dentists recommend to protect teeth?|Florür~Fluoride|Şeker~Sugar|Tuz~Salt|Kafein~Caffeine
+sci|1|Termometre neyi ölçer?|What does a thermometer measure?|Sıcaklık~Temperature|Ağırlık~Weight|Hız~Speed|Nem~Humidity
+sci|1|Yıldırım düştükten sonra duyduğumuz ses nedir?|What sound follows a lightning flash?|Gök gürültüsü~Thunder|Rüzgâr~Wind|Yankı~Echo|Dolu~Hail
+sci|1|Dinozorların fosilleri hangi bilim dalının konusudur?|Studying dinosaur fossils belongs to which science?|Paleontoloji~Palaeontology|Astronomi~Astronomy|Botanik~Botany|Meteoroloji~Meteorology
+sci|1|Tuzun kimyasal adı nedir?|What is the chemical name of table salt?|Sodyum klorür~Sodium chloride|Kalsiyum karbonat~Calcium carbonate|Potasyum nitrat~Potassium nitrate|Sodyum bikarbonat~Sodium bicarbonate
+sci|1|İnsan iskeletinde en uzun kemik hangisidir?|What is the longest bone in the human body?|Uyluk kemiği~Femur|Kaval kemiği~Tibia|Kol kemiği~Humerus|Omurga~Spine
+sci|1|Aşağıdakilerden hangisi bir memeli değildir?|Which of these is NOT a mammal?|Timsah~Crocodile|Yunus~Dolphin|Yarasa~Bat|Balina~Whale
+sci|1|Kalp atışını dinlemek için doktorlar ne kullanır?|What do doctors use to listen to a heartbeat?|Stetoskop~Stethoscope|Mikroskop~Microscope|Teleskop~Telescope|Termometre~Thermometer
+sci|1|Dünya'nın doğal uydusu hangisidir?|What is Earth's natural satellite?|Ay~The Moon|Mars|Güneş~The Sun|Venüs~Venus
+sci|2|Periyodik tabloda "Au" hangi elementtir?|Which element has the symbol "Au"?|Altın~Gold|Gümüş~Silver|Alüminyum~Aluminium|Argon
+sci|2|Işık mı ses mi daha hızlıdır?|Which travels faster: light or sound?|Işık~Light|Ses~Sound|Aynı hızda~The same|Havaya bağlı~Depends on the weather
+sci|2|İnsan kanına kırmızı rengini veren nedir?|What gives human blood its red colour?|Hemoglobin|Plazma~Plasma|Trombosit~Platelets|İnsülin~Insulin
+sci|2|Yerçekimini elma düşerken fark ettiği anlatılan bilim insanı kimdir?|Which scientist is said to have been inspired by a falling apple?|Isaac Newton|Albert Einstein|Galileo Galilei|Nikola Tesla
+sci|2|Bir atomun merkezine ne ad verilir?|What is the centre of an atom called?|Çekirdek~Nucleus|Elektron~Electron|Molekül~Molecule|Kabuk~Shell
+sci|2|İnsan vücudunda kaç akciğer vardır?|How many lungs does a human have?|2|1|3|4
+sci|2|Hangi vitamin güneş ışığıyla deride üretilir?|Which vitamin does skin make with sunlight?|D vitamini~Vitamin D|C vitamini~Vitamin C|A vitamini~Vitamin A|B12 vitamini~Vitamin B12
+sci|2|E=mc² denklemi hangi bilim insanına aittir?|Who is famous for the equation E=mc²?|Albert Einstein|Isaac Newton|Marie Curie|Stephen Hawking
+sci|2|Marie Curie hangi alanda iki Nobel ödülü kazanmıştır?|In which fields did Marie Curie win Nobel Prizes?|Fizik ve kimya~Physics and chemistry|Tıp ve fizik~Medicine and physics|Kimya ve barış~Chemistry and peace|Sadece fizik~Physics only
+sci|2|pH değeri 7 olan bir sıvı nasıldır?|A liquid with a pH of 7 is…|Nötr~Neutral|Çok asidik~Very acidic|Çok bazik~Very basic|Radyoaktif~Radioactive
+sci|2|Hangi gaz balonları havada yükseltir ve sesi inceltir?|Which gas makes balloons float and voices squeaky?|Helyum~Helium|Oksijen~Oxygen|Azot~Nitrogen|Karbondioksit~Carbon dioxide
+sci|2|İnsan DNA'sı kaç kromozom çiftinden oluşur?|How many pairs of chromosomes do humans have?|23|21|46|12
+sci|2|Elmas hangi elementten oluşur?|Diamonds are made of which element?|Karbon~Carbon|Silisyum~Silicon|Kuvars~Quartz|Demir~Iron
+sci|2|Penisilini kim keşfetti?|Who discovered penicillin?|Alexander Fleming|Louis Pasteur|Edward Jenner|Robert Koch
+sci|2|Normal insan vücut sıcaklığı yaklaşık kaç °C'dir?|Normal human body temperature is about how many °C?|37|35|39|40
+sci|2|Aşağıdakilerden hangisi bir soy gazdır?|Which of these is a noble gas?|Neon|Klor~Chlorine|Oksijen~Oxygen|Hidrojen~Hydrogen
+sci|2|Bir yıl, Dünya'nın neyi tamamlamasıdır?|A year is the time it takes Earth to…|Güneş'in etrafında dönmek~Orbit the Sun|Kendi etrafında dönmek~Spin once|Ay'ı çekmek~Pull the Moon|Mevsim değiştirmek~Change season
+sci|2|Hangi organ insülin üretir?|Which organ produces insulin?|Pankreas~Pancreas|Karaciğer~Liver|Böbrek~Kidney|Mide~Stomach
+sci|2|Ses dalgalarını kullanarak yön bulan hayvan hangisidir?|Which animal finds its way using echoes?|Yarasa~Bat|Baykuş~Owl|Köstebek~Mole|Kartal~Eagle
+sci|2|Evrimi doğal seçilimle açıklayan bilim insanı kimdir?|Who explained evolution by natural selection?|Charles Darwin|Gregor Mendel|Carl Linnaeus|Jean-Baptiste Lamarck
+sci|3|Periyodik tablodaki ilk element hangisidir?|What is the first element on the periodic table?|Hidrojen~Hydrogen|Helyum~Helium|Lityum~Lithium|Oksijen~Oxygen
+sci|3|Işığın boşluktaki hızı saniyede yaklaşık kaç kilometredir?|Roughly how fast is light in a vacuum, in km per second?|300.000~300,000|30.000~30,000|3.000.000~3,000,000|150.000~150,000
+sci|3|Kemiklerimizin sertliğini asıl hangi mineral sağlar?|Which mineral mainly makes our bones hard?|Kalsiyum~Calcium|Demir~Iron|Sodyum~Sodium|Magnezyum~Magnesium
+sci|3|Hangi gezegenin bir günü, kendi yılından daha uzundur?|On which planet is a day longer than its year?|Venüs~Venus|Merkür~Mercury|Mars|Neptün~Neptune
+sci|3|Kuantum fiziğinde ünlü kutudaki kedi hangi bilim insanıyla anılır?|The famous cat-in-a-box thought experiment belongs to…|Erwin Schrödinger|Werner Heisenberg|Niels Bohr|Max Planck
+sci|3|İnsan vücudundaki en küçük kemik nerededir?|Where is the smallest bone in the human body?|Kulakta~In the ear|Parmak ucunda~In a fingertip|Burunda~In the nose|Ayak başparmağında~In the big toe
+sci|3|Hangi metal oda sıcaklığında sıvıdır?|Which metal is liquid at room temperature?|Cıva~Mercury|Kurşun~Lead|Kalay~Tin|Galyum~Gallium
+sci|3|Kanın pıhtılaşmasını sağlayan kan hücreleri hangileridir?|Which blood cells help blood clot?|Trombositler~Platelets|Alyuvarlar~Red cells|Akyuvarlar~White cells|Nöronlar~Neurons
+sci|3|DNA'nın çift sarmal yapısını 1953'te kimler tanımladı?|Who described the double helix of DNA in 1953?|Watson ve Crick~Watson and Crick|Curie ve Curie~The Curies|Darwin ve Wallace~Darwin and Wallace|Bohr ve Rutherford~Bohr and Rutherford
+sci|3|Hangi bilim insanı ilk aşıyı (çiçek) geliştirmesiyle bilinir?|Who is known for developing the first vaccine (smallpox)?|Edward Jenner|Louis Pasteur|Jonas Salk|Robert Koch
+sci|3|Atomun negatif yüklü parçacığı hangisidir?|Which particle in an atom has a negative charge?|Elektron~Electron|Proton|Nötron~Neutron|Foton~Photon
+sci|3|Dünya atmosferinde en bol bulunan gaz hangisidir?|Which gas is most abundant in Earth's atmosphere?|Azot~Nitrogen|Oksijen~Oxygen|Karbondioksit~Carbon dioxide|Argon
+sci|3|Sıcaklık birimi "Kelvin"de mutlak sıfır kaç °C'dir?|Absolute zero (0 Kelvin) is about how many °C?|-273|-100|-459|0
+sci|3|İnsan beyninin yaklaşık yüzde kaçı sudur?|Roughly what share of the human brain is water?|%75~75%|%25~25%|%50~50%|%95~95%
+sci|3|Aşağıdakilerden hangisi bir virüs hastalığıdır?|Which of these is caused by a virus?|Grip~Flu|Verem~Tuberculosis|Kolera~Cholera|Tetanoz~Tetanus

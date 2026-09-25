@@ -94,7 +94,7 @@ func setup(p_game: Node) -> void:
 
 
 	wardrobe = WardrobePanel.new()
-	wardrobe.position = Vector2(1920 + 40, 190)
+	wardrobe.position = Vector2(1920 + 40, 110)
 	wardrobe.visible = false
 	root.add_child(wardrobe)
 	wardrobe.look_changed.connect(func(k, v):
@@ -143,6 +143,12 @@ func setup(p_game: Node) -> void:
 	online.house_requested.connect(_open_house)
 	toast = AchievementToast.new()
 	root.add_child(toast)
+	ErrorReporter.crash_detected.connect(func(_path):
+		toast.show_toast(Pal.t("crash.title"), Pal.t("crash.desc")))
+	if Profile.recovered == "backup":
+		toast.call_deferred("show_toast", Pal.t("profile.recovered"), "")
+	if ErrorReporter.last_crash_report != "":
+		toast.call_deferred("show_toast", Pal.t("crash.title"), Pal.t("crash.desc"))
 	SteamService.achievement_unlocked.connect(func(id, title):
 		var row: Array = SteamService.ACHIEVEMENTS[id]
 		toast.show_toast(title, String(row[2] if Pal.tr_lang() else row[3]))
@@ -374,6 +380,7 @@ func hud_estimate_entry(i: int, value: int, locked: bool) -> void: hud.hud_estim
 func hud_estimate_reveal(answer: int, answer_text: String, ranked: Array) -> void: hud.hud_estimate_reveal(answer, answer_text, ranked)
 func hud_estimate_close() -> void: hud.hud_estimate_close()
 func hud_duel_marks(marks: Array, clickable: bool) -> void: hud.hud_duel_marks(marks, clickable)
+func hud_track(act: int, acts: int, kind: String, total: int, done: float, colors: Array = []) -> void: hud.hud_track(act, acts, kind, total, done, colors)
 func hud_duel_splash(a: Dictionary, d: Dictionary, place: String) -> void: hud.hud_duel_splash(a, d, place)
 
 # ── duraklatma, geri, gamepad odağı ────────────────────────────────

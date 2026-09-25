@@ -13,6 +13,7 @@ var _list: VBoxContainer
 var _again: CtaButton
 var _back: CtaButton
 var _confetti: CPUParticles2D
+var rank: RankPanel
 
 func _ready() -> void:
 	size = Vector2(1920, 1080)
@@ -102,6 +103,9 @@ func _ready() -> void:
 	grad.colors = PackedColorArray([Pal.GOLD, Pal.ZONE[1], Pal.ZONE[2], Pal.CHAMPAGNE, Pal.ZONE[3]])
 	_confetti.color_initial_ramp = grad
 	add_child(_confetti)
+	rank = RankPanel.new()
+	rank.position = Vector2(1920 - RankPanel.W - 50, 1080 - RankPanel.H - 50)
+	add_child(rank)
 	visible = false
 
 func open(title: String, names: Array, rows: Array) -> void:
@@ -133,6 +137,8 @@ func open(title: String, names: Array, rows: Array) -> void:
 		j += 1
 	_confetti.restart()
 	_confetti.emitting = true
+	rank.play(Progress.last_award)
+	Progress.last_award = {}
 	_again.grab_focus()
 
 func close() -> void:

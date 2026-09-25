@@ -1,0 +1,56 @@
+# Oyun
+game|1|Mario'nun kardeşinin adı nedir?|What is the name of Mario's brother?|Luigi|Wario|Toad|Yoshi
+game|1|Mario genellikle hangi prensesi kurtarır?|Which princess does Mario usually rescue?|Peach|Zelda|Daisy|Rosalina
+game|1|"Pac-Man" labirentte ne yer?|What does Pac-Man eat in the maze?|Noktalar~Dots|Mantarlar~Mushrooms|Paralar~Coins|Elmalar~Apples
+game|1|Satrançta sadece çapraz hareket eden taş hangisidir?|Which chess piece moves only diagonally?|Fil~Bishop|Kale~Rook|At~Knight|Vezir~Queen
+game|1|"Minecraft"ta dünya neyden oluşur?|What is the world made of in "Minecraft"?|Bloklar~Blocks|Küreler~Spheres|Kartlar~Cards|Altıgenler~Hexagons
+game|1|Sonic hangi hayvandır?|What animal is Sonic?|Kirpi~Hedgehog|Tilki~Fox|Kedi~Cat|Tavşan~Rabbit
+game|1|"Tetris"te hangi şekilli parçalar düşer?|What falls from the top in "Tetris"?|Dörtlü bloklar~Four-block shapes|Toplar~Balls|Yıldızlar~Stars|Kartlar~Cards
+game|1|Pikachu hangi oyun/anime serisindendir?|Which series is Pikachu from?|Pokémon|Digimon|Zelda|Kirby
+game|1|Satranç tahtasında kaç kare vardır?|How many squares are on a chessboard?|64|48|81|100
+game|1|Bir zarın karşılıklı yüzlerinin toplamı kaçtır?|Opposite faces of a standard die always add up to…|7|6|8|12
+game|1|"Angry Birds"te kuşlar neye saldırır?|In "Angry Birds", what do the birds attack?|Domuzlar~Pigs|Kediler~Cats|Timsahlar~Crocodiles|Robotlar~Robots
+game|1|Monopoly'de hapisten çıkmak için hangi kartı kullanabilirsin?|In Monopoly, which card can get you out of jail?|Hapisten ücretsiz çıkış~Get Out of Jail Free|Başlangıç~Go|Şans~Chance|Vergi~Tax
+game|1|Satrançta hangi taş "L" şeklinde hareket eder?|Which chess piece moves in an "L" shape?|At~Knight|Fil~Bishop|Şah~King|Piyon~Pawn
+game|1|"Among Us" oyununda gizli düşmana ne denir?|What is the hidden enemy called in "Among Us"?|Sahtekâr~Impostor|Casus~Spy|Hain~Traitor|Hırsız~Thief
+game|1|Nintendo'nun ünlü yeşil elbiseli kahramanı kimdir?|Who is Nintendo's hero in a green tunic?|Link|Mario|Kirby|Fox
+game|1|Domino taşlarında hangi şekil vardır?|What marks are on dominoes?|Noktalar~Dots|Harfler~Letters|Yıldızlar~Stars|Kalpler~Hearts
+game|1|"Fortnite"ın klasik modunda son hayatta kalan ne kazanır?|What does the last player standing win in classic "Fortnite"?|Victory Royale|Altın Kupa~Gold Cup|Yıldız~Star Medal|Ejderha~Dragon Crown
+game|1|Kart oyunlarında bir destede genelde kaç kart vardır (jokersiz)?|How many cards are in a standard deck (no jokers)?|52|48|54|60
+game|1|Rubik küpünün kaç yüzü vardır?|How many faces does a Rubik's Cube have?|6|4|8|9
+game|1|"Candy Crush" oyununda ne eşleştirilir?|What do you match in "Candy Crush"?|Şekerler~Sweets|Taşlar~Gems|Meyveler~Fruit|Hayvanlar~Animals
+game|2|"The Legend of Zelda"da oyuncunun kontrol ettiği karakterin adı nedir?|In "The Legend of Zelda", what is the player character's name?|Link|Zelda|Ganon|Epona
+game|2|Hangi şirket PlayStation'ı üretir?|Which company makes the PlayStation?|Sony|Microsoft|Nintendo|Sega
+game|2|Scrabble'da en değerli harflerden biri hangisidir (İngilizce)?|In English Scrabble, which is one of the highest-scoring letters?|Q|E|A|S
+game|2|"The Witcher" oyunlarının kaynağı olan kitapların yazarı hangi ülkedendir?|The author of the books behind "The Witcher" is from which country?|Polonya~Poland|Çekya~Czechia|Ukrayna~Ukraine|Macaristan~Hungary
+game|2|Pokémon'da Pikachu hangi türdendir?|What type is Pikachu in Pokémon?|Elektrik~Electric|Ateş~Fire|Su~Water|Çimen~Grass
+game|2|"Tetris" oyununun mucidi hangi ülkedendir?|The inventor of "Tetris" came from which country?|Sovyetler Birliği~Soviet Union|Japonya~Japan|ABD~USA|Macaristan~Hungary
+game|2|Xbox hangi şirketin konsoludur?|Which company makes the Xbox?|Microsoft|Sony|Apple|Nintendo
+game|2|"Minecraft"ta geceleri gelip patlayan yeşil yaratığın adı nedir?|What is the green mob in "Minecraft" that explodes?|Creeper|Enderman|Zombie|Ghast
+game|2|Satrançta oyunu bitiren hamlenin adı nedir?|What is the game-ending move in chess called?|Şah mat~Checkmate|Rok~Castling|Pat~Stalemate|Terfi~Promotion
+game|2|"Super Mario"da Mario'yu büyüten nesne hangisidir?|Which item makes Mario grow in "Super Mario"?|Mantar~Mushroom|Yıldız~Star|Çiçek~Flower|Para~Coin
+game|2|Hangi oyun serisinde "Master Chief" adlı bir asker vardır?|Which series features a soldier called Master Chief?|Halo|Call of Duty|Gears of War|Doom
+game|2|"Street Fighter"ın ünlü "Hadouken" hareketini kim yapar?|Who is famous for the "Hadouken" in "Street Fighter"?|Ryu|Chun-Li|Guile|Blanka
+game|2|Monopoly oyunundaki sokak adları orijinal olarak hangi şehirden alınmıştır?|The original Monopoly street names come from which city?|Atlantic City|New York|Londra~London|Chicago
+game|2|"GTA" oyun serisinin açılımı nedir?|What does "GTA" stand for?|Grand Theft Auto|Great Travel Adventure|Global Tactical Arena|Giant Truck Attack
+game|2|Hangi Polonyalı stüdyo "Cyberpunk 2077"yi yaptı?|Which Polish studio made "Cyberpunk 2077"?|CD Projekt Red|Techland|People Can Fly|11 bit studios
+game|2|"Donkey Kong" oyunlarında Kong hangi hayvandır?|What animal is Donkey Kong?|Goril~Gorilla|Eşek~Donkey|Ayı~Bear|Maymun (şempanze)~Chimpanzee
+game|2|Taş-kâğıt-makasta makası hangisi yener?|In rock-paper-scissors, which beats scissors?|Taş~Rock|Kâğıt~Paper|Makas~Scissors|Hiçbiri~None
+game|2|"Pong" hangi sporu taklit eden bir oyundur?|"Pong" imitates which sport?|Masa tenisi~Table tennis|Futbol~Football|Golf|Beyzbol~Baseball
+game|2|Nintendo Switch hangi yıl çıktı?|In which year was the Nintendo Switch released?|2017|2014|2019|2012
+game|2|"Dying Light" oyununu hangi ülkeden bir stüdyo geliştirdi?|"Dying Light" was developed by a studio from which country?|Polonya~Poland|İsveç~Sweden|Almanya~Germany|Finlandiya~Finland
+game|3|Satrançta şahın kaleyle yer değiştirdiği özel hamlenin adı nedir?|What is the special move where the king and rook swap positions?|Rok~Castling|Geçerken alma~En passant|Terfi~Promotion|Gambit
+game|3|İlk ticari başarılı video oyunlarından "Pong"u hangi şirket çıkardı?|Which company released "Pong"?|Atari|Nintendo|Sega|Magnavox
+game|3|"Angry Birds" hangi ülkede geliştirildi?|Which country was "Angry Birds" developed in?|Finlandiya~Finland|İsveç~Sweden|Kanada~Canada|Japonya~Japan
+game|3|"Minecraft"ın yaratıcısı Markus Persson'un lakabı nedir?|What is Minecraft creator Markus Persson's nickname?|Notch|Jeb|Herobrine|Steve
+game|3|Pokémon'da 1 numaralı Pokédex kaydı hangisidir?|Which Pokémon is number 001 in the national Pokédex?|Bulbasaur|Pikachu|Charmander|Mew
+game|3|Bir satranç oyunun başında her oyuncunun kaç piyonu vardır?|How many pawns does each player start with in chess?|8|6|10|16
+game|3|"The Sims" serisinin karakterleri hangi uydurma dili konuşur?|What made-up language do "The Sims" characters speak?|Simlish|Sims Speak|Plumbob|Sim-tongue
+game|3|Sega'nın maskotu Sonic hangi yıl ilk oyununda göründü?|In which year did Sonic first appear in a game?|1991|1986|1995|1989
+game|3|Bir zar setinde "d20" kaç yüzlü zardır?|How many sides does a "d20" die have?|20|12|10|24
+game|3|"Resident Evil" serisinin Japonya'daki adı nedir?|What is "Resident Evil" called in Japan?|Biohazard|Deadly Silence|Outbreak|Survivor
+game|3|"League of Legends"ı geliştiren şirket hangisidir?|Which company developed "League of Legends"?|Riot Games|Blizzard|Valve|Epic Games
+game|3|Scrabble tahtası kaç kareye kaç karedir?|How big is a Scrabble board?|15×15|12×12|19×19|20×20
+game|3|Valve'ın oyun mağazasının adı nedir?|What is Valve's game store called?|Steam|Origin|Uplay|GOG
+game|3|"This War of Mine" oyununu yapan Polonyalı stüdyo hangisidir?|Which Polish studio made "This War of Mine"?|11 bit studios|CD Projekt|Techland|Flying Wild Hog
+game|3|Go oyununda taşlar hangi iki renktedir?|What colours are the stones in the game of Go?|Siyah ve beyaz~Black and white|Kırmızı ve mavi~Red and blue|Yeşil ve sarı~Green and yellow|Altın ve gümüş~Gold and silver

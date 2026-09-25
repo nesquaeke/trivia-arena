@@ -186,6 +186,7 @@ func _round(r: int) -> void:
 	await _tug()
 	var n := rules.questions_in(r)
 	while q_index < n and phase != "done":
+		_hud("hud_track", [r, 3, "dots", n, float(q_index)])
 		await _ask()
 		await _resolve()
 		if r == 2:
@@ -194,6 +195,7 @@ func _round(r: int) -> void:
 			_finish()
 			return
 		q_index += 1
+		_hud("hud_track", [r, 3, "dots", n, float(q_index)])
 	if r == 3 and phase != "done":
 		_finish()
 
@@ -625,6 +627,10 @@ func _standings() -> void:
 	_hud("hud_standings_hide")
 
 # ── final ───────────────────────────────────────────────────────────
+## İlerleme için bir oyuncunun maç istatistikleri
+func stats_for(p: Plush) -> Dictionary:
+	return st.get(p, {})
+
 func ranking() -> Array[Plush]:
 	return _ranked()
 

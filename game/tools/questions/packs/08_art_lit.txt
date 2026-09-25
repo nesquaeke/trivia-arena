@@ -1,0 +1,76 @@
+# Sanat
+art|1|Kırmızı ve sarı boya karışınca hangi renk olur?|Mixing red and yellow paint makes which colour?|Turuncu~Orange|Yeşil~Green|Mor~Purple|Kahverengi~Brown
+art|1|Mavi ve sarı boya karışınca hangi renk olur?|Blue and yellow paint make which colour?|Yeşil~Green|Mor~Purple|Turuncu~Orange|Pembe~Pink
+art|1|Van Gogh'un ünlü çiçek tablosu hangisidir?|Which flowers did Van Gogh famously paint?|Ayçiçekleri~Sunflowers|Laleler~Tulips|Güller~Roses|Nilüferler~Water lilies
+art|1|Heykel yapan sanatçıya ne denir?|What do you call an artist who makes statues?|Heykeltıraş~Sculptor|Ressam~Painter|Mimar~Architect|Çömlekçi~Potter
+art|1|Mona Lisa hangi müzede sergilenir?|In which museum is the Mona Lisa displayed?|Louvre|Prado|British Museum|Uffizi
+art|1|Ressamların boyalarını karıştırdığı tahtaya ne denir?|What is the board painters mix their paints on?|Palet~Palette|Tuval~Canvas|Şövale~Easel|Fırça~Brush
+art|1|Tablonun durduğu üç ayaklı sehpaya ne ad verilir?|What is the stand that holds a painting while you paint?|Şövale~Easel|Palet~Palette|Çerçeve~Frame|Tuval~Canvas
+art|1|Kilden kap yapma sanatına ne denir?|What is the art of making pots from clay?|Çömlekçilik~Pottery|Heykel~Sculpture|Resim~Painting|Hat~Calligraphy
+art|1|Pablo Picasso hangi ülkedendi?|Which country was Pablo Picasso from?|İspanya~Spain|Fransa~France|İtalya~Italy|Portekiz~Portugal
+art|1|Kâğıt katlama sanatının adı nedir?|What is the art of paper folding called?|Origami|Kirigami|Ikebana|Bonsai
+art|2|Sistina Şapeli'nin tavanını kim boyadı?|Who painted the ceiling of the Sistine Chapel?|Michelangelo|Leonardo da Vinci|Raffaello~Raphael|Botticelli
+art|2|"Yıldızlı Gece" tablosunun ressamı kimdir?|Who painted "The Starry Night"?|Vincent van Gogh|Claude Monet|Salvador Dalí|Edvard Munch
+art|2|"Çığlık" tablosu hangi ressama aittir?|Who painted "The Scream"?|Edvard Munch|Gustav Klimt|Egon Schiele|Wassily Kandinsky
+art|2|Eriyen saatlerle ünlü sürrealist ressam kimdir?|Which surrealist painter is famous for melting clocks?|Salvador Dalí|René Magritte|Joan Miró|Frida Kahlo
+art|2|Frida Kahlo hangi ülkenin ressamıdır?|Frida Kahlo was an artist from which country?|Meksika~Mexico|İspanya~Spain|Arjantin~Argentina|Küba~Cuba
+art|2|"İnci Küpeli Kız"ın ressamı kimdir?|Who painted "Girl with a Pearl Earring"?|Johannes Vermeer|Rembrandt|Frans Hals|Jan van Eyck
+art|2|Barselona'daki Sagrada Familia'nın mimarı kimdir?|Who designed the Sagrada Família in Barcelona?|Antoni Gaudí|Le Corbusier|Frank Gehry|Santiago Calatrava
+art|2|Andy Warhol'un ünlü eserinde hangi konserve vardır?|Which canned food appears in a famous Andy Warhol work?|Çorba~Soup|Fasulye~Beans|Ton balığı~Tuna|Mısır~Corn
+art|2|Nilüferler serisini hangi izlenimci ressam yaptı?|Which Impressionist painted the Water Lilies series?|Claude Monet|Edgar Degas|Paul Cézanne|Pierre-Auguste Renoir
+art|2|"Düşünen Adam" heykelinin yaratıcısı kimdir?|Who made the sculpture "The Thinker"?|Auguste Rodin|Michelangelo|Donatello|Bernini
+art|2|Madrid'deki ünlü sanat müzesinin adı nedir?|What is Madrid's famous art museum called?|Prado|Louvre|Hermitage|Rijksmuseum
+art|2|Rembrandt hangi ülkenin ressamıdır?|Rembrandt was from which country?|Hollanda~Netherlands|Belçika~Belgium|Almanya~Germany|İngiltere~England
+art|2|Grafiti sanatçısı Banksy hangi ülkedendir?|Graffiti artist Banksy is from which country?|İngiltere~UK|ABD~USA|Fransa~France|Almanya~Germany
+art|2|Klimt'in altın yapraklı ünlü tablosu hangisidir?|Which golden painting is Gustav Klimt famous for?|Öpücük~The Kiss|Çığlık~The Scream|Doğuş~The Birth|Rüya~The Dream
+art|2|Sıvı ile yapılan, kâğıtta yayılan saydam boya türüne ne denir?|What is transparent paint thinned with water called?|Suluboya~Watercolour|Yağlıboya~Oil paint|Pastel|Akrilik~Acrylic
+art|3|Polonyalı ressam Tamara de Lempicka hangi akımın simgesidir?|Tamara de Lempicka is an icon of which style?|Art Deco|Barok~Baroque|Kübizm~Cubism|Dada
+art|3|"Guernica" tablosu hangi savaşı anlatır?|Which war does "Guernica" depict?|İspanya İç Savaşı~Spanish Civil War|I. Dünya Savaşı~World War I|Napolyon Savaşları~Napoleonic Wars|Kore Savaşı~Korean War
+art|3|Kübizmi Picasso ile birlikte kuran ressam kimdir?|Who co-founded Cubism with Picasso?|Georges Braque|Henri Matisse|Paul Klee|Marc Chagall
+art|3|"Venüs'ün Doğuşu" tablosunun ressamı kimdir?|Who painted "The Birth of Venus"?|Sandro Botticelli|Tiziano~Titian|Caravaggio|Giotto
+art|3|"Gece Devriyesi" hangi ressamın eseridir?|Who painted "The Night Watch"?|Rembrandt|Vermeer|Rubens|Bruegel
+art|3|Pointilizm tekniğinde resim neyle yapılır?|In Pointillism, pictures are made with…|Küçük noktalar~Small dots|Çizgiler~Lines|Kolaj~Collage|Heykel~Sculpture
+art|3|Vitruvius Adamı çizimi kime aittir?|Who drew the Vitruvian Man?|Leonardo da Vinci|Albrecht Dürer|Michelangelo|Raffaello~Raphael
+art|3|Hangi sanatçı resimlerinde tuvale boya damlatıp sıçratmasıyla (drip) bilinir?|Which artist is famous for drip painting?|Jackson Pollock|Mark Rothko|Roy Lichtenstein|Keith Haring
+art|3|Magritte'in ünlü "Bu bir pipo değildir" yazılı tablosunun adı nedir?|What is Magritte's "This is not a pipe" painting called?|İmgelerin İhaneti~The Treachery of Images|İnsanın Oğlu~The Son of Man|Golconda|Işık İmparatorluğu~Empire of Light
+art|3|Kraków'daki Czartoryski Müzesi'nde hangi Leonardo tablosu bulunur?|Which Leonardo painting is in Kraków's Czartoryski Museum?|Kakımlı Kadın~Lady with an Ermine|Mona Lisa|Son Akşam Yemeği~The Last Supper|Kayalıklar Meryemi~Virgin of the Rocks
+# Edebiyat
+lit|1|"Pinokyo" yalan söyleyince burnuna ne olur?|What happens to Pinocchio's nose when he lies?|Uzar~It grows|Kızarır~It turns red|Küçülür~It shrinks|Kaşınır~It itches
+lit|1|Sherlock Holmes'un yardımcısı doktorun adı nedir?|What is the name of Sherlock Holmes's doctor friend?|Watson|Moriarty|Lestrade|Hudson
+lit|1|"Kırmızı Başlıklı Kız" masalında kötü karakter hangi hayvandır?|In "Little Red Riding Hood", which animal is the villain?|Kurt~Wolf|Ayı~Bear|Tilki~Fox|Aslan~Lion
+lit|1|Külkedisi baloda neyini kaybeder?|What does Cinderella lose at the ball?|Cam ayakkabı~Glass slipper|Tacı~Her crown|Yüzüğü~Her ring|Eldiveni~Her glove
+lit|1|"Romeo ve Juliet"i kim yazdı?|Who wrote "Romeo and Juliet"?|William Shakespeare|Charles Dickens|Jane Austen|Oscar Wilde
+lit|1|Don Kişot hangi dev şeylere savaş açar?|What does Don Quixote famously attack, thinking they're giants?|Yel değirmenleri~Windmills|Ağaçlar~Trees|Kaleler~Castles|Dağlar~Mountains
+lit|1|"Alice Harikalar Diyarında"da Alice kimin peşinden deliğe düşer?|Whom does Alice follow down the hole in "Alice in Wonderland"?|Beyaz Tavşan~The White Rabbit|Şapkacı~The Mad Hatter|Kedi~The Cat|Kraliçe~The Queen
+lit|1|Harry Potter kitaplarının yazarı kimdir?|Who wrote the Harry Potter books?|J. K. Rowling|J. R. R. Tolkien|Roald Dahl|C. S. Lewis
+lit|1|"Pamuk Prenses"te kaç cüce vardır?|How many dwarfs are in "Snow White"?|7|5|6|9
+lit|1|Peter Pan hangi ülkede yaşar?|Where does Peter Pan live?|Varolmayan Ülke~Neverland|Oz|Narnia|Harikalar Diyarı~Wonderland
+lit|1|"Küçük Prens" hangi gezegenden gelir?|Where does the Little Prince come from?|Bir asteroitten~An asteroid|Mars|Ay'dan~The Moon|Venüs~Venus
+lit|1|Robinson Crusoe nerede mahsur kalır?|Where is Robinson Crusoe stranded?|Issız bir ada~A desert island|Bir mağara~A cave|Bir gemi~A ship|Bir çöl~A desert
+lit|1|Hangi masalda bir kız, üç ayının evine girer?|In which tale does a girl visit the house of three bears?|Goldilocks|Pamuk Prenses~Snow White|Rapunzel|Hansel ve Gretel~Hansel and Gretel
+lit|2|"Don Kişot"un yazarı kimdir?|Who wrote "Don Quixote"?|Miguel de Cervantes|Lope de Vega|Federico García Lorca|Gabriel García Márquez
+lit|2|"Yüzyıllık Yalnızlık" romanının yazarı kimdir?|Who wrote "One Hundred Years of Solitude"?|Gabriel García Márquez|Isabel Allende|Mario Vargas Llosa|Jorge Luis Borges
+lit|2|"1984" romanındaki gözetleyen liderin adı nedir?|Who is the watching leader in "1984"?|Büyük Birader~Big Brother|Napolyon~Napoleon|Kaptan~The Captain|Şef~The Chief
+lit|2|Tolkien'in "Hobbit" kitabındaki ejderhanın adı nedir?|What is the dragon called in "The Hobbit"?|Smaug|Glaurung|Ancalagon|Drogon
+lit|2|"Hayvan Çiftliği"nde çiftliği ele geçiren hayvanlar hangileridir?|Which animals take over in "Animal Farm"?|Domuzlar~Pigs|Atlar~Horses|Tavuklar~Hens|Köpekler~Dogs
+lit|2|Drakula hangi bölgeden gelir?|Where is Count Dracula from?|Transilvanya~Transylvania|Bavyera~Bavaria|Toskana~Tuscany|Sibirya~Siberia
+lit|2|"Sefiller"in yazarı kimdir?|Who wrote "Les Misérables"?|Victor Hugo|Alexandre Dumas|Émile Zola|Gustave Flaubert
+lit|2|Polonyalı yazar Wisława Szymborska hangi ödülü kazandı?|Which prize did Polish poet Wisława Szymborska win?|Nobel Edebiyat~Nobel Prize in Literature|Pulitzer|Booker|Goncourt
+lit|2|"Üç Silahşorlar"ın yazarı kimdir?|Who wrote "The Three Musketeers"?|Alexandre Dumas|Victor Hugo|Jules Verne|Molière
+lit|2|"Seksen Günde Devrialem"in yazarı kimdir?|Who wrote "Around the World in Eighty Days"?|Jules Verne|H. G. Wells|Mark Twain|Daniel Defoe
+lit|2|Hangi dedektif "küçük gri hücrelerini" kullanır?|Which detective uses his "little grey cells"?|Hercule Poirot|Sherlock Holmes|Miss Marple|Philip Marlowe
+lit|2|"Narnia Günlükleri"nde aslanın adı nedir?|What is the lion called in "The Chronicles of Narnia"?|Aslan|Simba|Leo|Mufasa
+lit|2|"Moby Dick"teki beyaz balinanın peşindeki kaptan kimdir?|Which captain hunts the white whale in "Moby-Dick"?|Kaptan Ahab~Captain Ahab|Kaptan Kanca~Captain Hook|Kaptan Nemo~Captain Nemo|Kaptan Flint~Captain Flint
+lit|2|"Frankenstein"ı kim yazdı?|Who wrote "Frankenstein"?|Mary Shelley|Bram Stoker|Edgar Allan Poe|Emily Brontë
+lit|3|"Gurur ve Önyargı"da Elizabeth'in sevdiği adam kimdir?|Whom does Elizabeth fall for in "Pride and Prejudice"?|Bay Darcy~Mr Darcy|Bay Bingley~Mr Bingley|Bay Wickham~Mr Wickham|Bay Collins~Mr Collins
+lit|3|Kafka'nın "Dönüşüm"ünde Gregor Samsa neye dönüşür?|What does Gregor Samsa turn into in Kafka's "The Metamorphosis"?|Böcek~An insect|Kuş~A bird|Kurt~A wolf|Taş~A stone
+lit|3|Polonyalı yazar Henryk Sienkiewicz'in dünyada en ünlü romanı hangisidir?|Which Henryk Sienkiewicz novel is most famous worldwide?|Quo Vadis|Tufan~The Deluge|Çöl ve Orman~In Desert and Wilderness|Haçlılar~The Knights of the Cross
+lit|3|"Suç ve Ceza"nın yazarı kimdir?|Who wrote "Crime and Punishment"?|Fyodor Dostoyevski~Fyodor Dostoevsky|Lev Tolstoy~Leo Tolstoy|Anton Çehov~Anton Chekhov|Nikolay Gogol~Nikolai Gogol
+lit|3|"İlahi Komedya"nın yazarı kimdir?|Who wrote "The Divine Comedy"?|Dante Alighieri|Petrarca~Petrarch|Boccaccio|Virgil
+lit|3|Stanisław Lem'in ünlü bilimkurgu romanı hangisidir?|Which is Stanisław Lem's famous science-fiction novel?|Solaris|Vakıf~Foundation|Dune|Neuromancer
+lit|3|"Yüzüklerin Efendisi"nde Gandalf hangi renkten hangi renge dönüşür?|In "The Lord of the Rings", Gandalf changes from which colour to which?|Griden beyaza~Grey to white|Maviden beyaza~Blue to white|Siyahtan griye~Black to grey|Kahverengiden griye~Brown to grey
+lit|3|"Odysseia"da Odysseus'un evine dönüşü yaklaşık kaç yıl sürer?|How long does Odysseus take to get home in "The Odyssey"?|10 yıl~10 years|1 yıl~1 year|5 yıl~5 years|20 yıl~20 years
+lit|3|Hangi yazar "Tom Sawyer"ı yarattı?|Who created Tom Sawyer?|Mark Twain|Charles Dickens|Jack London|Herman Melville
+lit|3|"Şeker Portakalı"nın küçük kahramanı Zezé hangi ülkede yaşar?|Where does little Zezé live in "My Sweet Orange Tree"?|Brezilya~Brazil|Portekiz~Portugal|Meksika~Mexico|Arjantin~Argentina
+lit|3|Haiku hangi ülkenin şiir türüdür?|Haiku is a poetry form from which country?|Japonya~Japan|Çin~China|Kore~Korea|Hindistan~India
+lit|3|"Sineklerin Tanrısı"nda çocuklar nerede mahsur kalır?|Where are the boys stranded in "Lord of the Flies"?|Issız bir ada~A desert island|Bir dağ~A mountain|Bir orman~A forest|Bir gemi~A ship
