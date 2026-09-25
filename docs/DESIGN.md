@@ -151,9 +151,9 @@ Banka yaklaşık 2000 soru ve 98 tahmin sorusundan oluşur. 15 kategori var, bun
 ### Diller
 Oyun beş dilde oynanır: Türkçe, İngilizce, Lehçe, Fransızca, İspanyolca. Arayüz, 2135 soru, 98 tahmin sorusu, Mayhem sıralama setleri ve ses adları, kategori adları, başarımlar, Günlük Kelime (dile özel sözlük ve klavye: Lehçe harf sırası, Fransızca AZERTY, İspanyolca Ñ), anlatıcı sesi (MBROLA pl1/fr1/es2) ve telefon kumandası hepsi çevrilidir. Sayılar dile göre biçimlenir: TR/ES `150.000`, PL/FR `150 000`, EN `150,000`; ondalık virgül EN dışında. Bir çeviri eksikse metin İngilizceye düşer. Soru çevirilerinde şıklar İngilizcedeki sırayla yazılır, böylece doğru cevabın yeri bütün dillerde aynı kalır.
 
-![Lehçe lobi](screenshots/lang_pl_lobby.png)
-![İspanyolca Mayhem](screenshots/lang_es_mayhem.png)
-![Fransızca Günlük Kelime](screenshots/lang_fr_daily.png)
+![Lehçe lobi](screenshots/lang_pl_lobby.jpg)
+![İspanyolca Mayhem](screenshots/lang_es_mayhem.jpg)
+![Fransızca Günlük Kelime](screenshots/lang_fr_daily.jpg)
 
 ### Dayanıklılık
 - **Profil:** sürümlü göç (`_migrate`), geçici dosya → yedek → yer değiştirme sırasıyla atomik kayıt, bozuk dosyada yedekten kurtarma.
