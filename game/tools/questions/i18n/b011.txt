@@ -1,0 +1,440 @@
+@a9febe84
+Ile płuc ma człowiek?	1	4	2	3
+Combien de poumons a un être humain ?	1	4	2	3
+¿Cuántos pulmones tiene una persona?	1	4	2	3
+@24899585
+Którą witaminę skóra wytwarza pod wpływem słońca?	Witaminę D	Witaminę B12	Witaminę C	Witaminę A
+Quelle vitamine la peau fabrique-t-elle grâce au soleil ?	Vitamine D	Vitamine B12	Vitamine C	Vitamine A
+¿Qué vitamina fabrica la piel con la luz del sol?	Vitamina D	Vitamina B12	Vitamina C	Vitamina A
+@a7946440
+Kto słynie z równania E=mc²?	Stephen Hawking	Maria Skłodowska-Curie	Izaak Newton	Albert Einstein
+Qui est célèbre pour l'équation E=mc² ?	Stephen Hawking	Marie Curie	Isaac Newton	Albert Einstein
+¿Quién es famoso por la ecuación E=mc²?	Stephen Hawking	Marie Curie	Isaac Newton	Albert Einstein
+@92814e3d
+W jakich dziedzinach Maria Skłodowska-Curie zdobyła Nagrody Nobla?	Fizyka i chemia	Tylko fizyka	Chemia i pokój	Medycyna i fizyka
+Dans quels domaines Marie Curie a-t-elle reçu des prix Nobel ?	Physique et chimie	Physique seulement	Chimie et paix	Médecine et physique
+¿En qué campos ganó Marie Curie premios Nobel?	Física y química	Solo física	Química y paz	Medicina y física
+@27de5dbc
+Ciecz o pH 7 jest…	Bardzo kwaśna	Obojętna	Bardzo zasadowa	Radioaktywna
+Un liquide de pH 7 est…	Très acide	Neutre	Très basique	Radioactif
+Un líquido con pH 7 es…	Muy ácido	Neutro	Muy básico	Radiactivo
+@b419734c
+Jaki gaz sprawia, że balony latają, a głos staje się piskliwy?	Hel	Tlen	Dwutlenek węgla	Azot
+Quel gaz fait flotter les ballons et rend la voix aiguë ?	Hélium	Oxygène	Dioxyde de carbone	Azote
+¿Qué gas hace flotar los globos y pone la voz aguda?	Helio	Oxígeno	Dióxido de carbono	Nitrógeno
+@83fa9773
+Ile par chromosomów ma człowiek?	23	46	21	12
+Combien de paires de chromosomes possède l'être humain ?	23	46	21	12
+¿Cuántos pares de cromosomas tiene el ser humano?	23	46	21	12
+@1d045f09
+Z jakiego pierwiastka zbudowane są diamenty?	Z żelaza	Z krzemu	Z kwarcu	Z węgla
+De quel élément sont faits les diamants ?	Fer	Silicium	Quartz	Carbone
+¿De qué elemento están hechos los diamantes?	Hierro	Silicio	Cuarzo	Carbono
+@02c0eafd
+Kto odkrył penicylinę?	Robert Koch	Edward Jenner	Ludwik Pasteur	Aleksander Fleming
+Qui a découvert la pénicilline ?	Robert Koch	Edward Jenner	Louis Pasteur	Alexander Fleming
+¿Quién descubrió la penicilina?	Robert Koch	Edward Jenner	Louis Pasteur	Alexander Fleming
+@5f46f09d
+Ile mniej więcej °C wynosi normalna temperatura ciała człowieka?	35	37	40	39
+La température normale du corps humain est d'environ combien de °C ?	35	37	40	39
+¿Cuántos °C tiene aproximadamente la temperatura normal del cuerpo humano?	35	37	40	39
+@9b006c92
+Który z tych gazów jest gazem szlachetnym?	Neon	Wodór	Chlor	Tlen
+Lequel de ces gaz est un gaz noble ?	Néon	Hydrogène	Chlore	Oxygène
+¿Cuál de estos es un gas noble?	Neón	Hidrógeno	Cloro	Oxígeno
+@b2122c6f
+Rok to czas, w którym Ziemia…	Zmienia porę roku	Obraca się raz	Przyciąga Księżyc	Okrąża Słońce
+Une année est le temps qu'il faut à la Terre pour…	Changer de saison	Tourner une fois sur elle-même	Attirer la Lune	Faire le tour du Soleil
+Un año es el tiempo que tarda la Tierra en…	Cambiar de estación	Girar una vez	Atraer a la Luna	Dar la vuelta al Sol
+@72261407
+Który narząd wytwarza insulinę?	Żołądek	Trzustka	Nerka	Wątroba
+Quel organe produit l'insuline ?	L'estomac	Le pancréas	Le rein	Le foie
+¿Qué órgano produce la insulina?	Estómago	Páncreas	Riñón	Hígado
+@c4b51af6
+Które zwierzę orientuje się w przestrzeni za pomocą echa?	Sowa	Kret	Orzeł	Nietoperz
+Quel animal s'oriente grâce à l'écho ?	Le hibou	La taupe	L'aigle	La chauve-souris
+¿Qué animal se orienta mediante ecos?	Búho	Topo	Águila	Murciélago
+@d329f2ba
+Kto wyjaśnił ewolucję przez dobór naturalny?	Grzegorz Mendel	Karol Linneusz	Jean-Baptiste Lamarck	Karol Darwin
+Qui a expliqué l'évolution par la sélection naturelle ?	Gregor Mendel	Carl von Linné	Jean-Baptiste Lamarck	Charles Darwin
+¿Quién explicó la evolución por selección natural?	Gregor Mendel	Carlos Linneo	Jean-Baptiste Lamarck	Charles Darwin
+@fee44351
+W którym kraju podpisano Wielką Kartę Swobód?	W Anglii	W Szkocji	We Francji	W Hiszpanii
+Dans quel pays la Magna Carta a-t-elle été signée ?	Angleterre	Écosse	France	Espagne
+¿En qué país se firmó la Carta Magna?	Inglaterra	Escocia	Francia	España
+@7a216602
+Kto był pierwszym cesarzem rzymskim?	Konstantyn	August	Neron	Juliusz Cezar
+Qui fut le premier empereur romain ?	Constantin	Auguste	Néron	Jules César
+¿Quién fue el primer emperador romano?	Constantino	Augusto	Nerón	Julio César
+@f8aa1373
+W którym roku wybuchła rewolucja francuska?	1776	1789	1815	1799
+En quelle année la Révolution française a-t-elle commencé ?	1776	1789	1815	1799
+¿En qué año empezó la Revolución francesa?	1776	1789	1815	1799
+@573870c5
+Które imperium nazywano „imperium, nad którym nigdy nie zachodzi słońce”?	Imperium perskie	Imperium mongolskie	Imperium brytyjskie	Imperium rzymskie
+Quel empire était appelé « l'empire sur lequel le soleil ne se couche jamais » ?	L'Empire perse	L'Empire mongol	L'Empire britannique	L'Empire romain
+¿Qué imperio fue llamado «el imperio donde nunca se pone el sol»?	El Imperio persa	El Imperio mongol	El Imperio británico	El Imperio romano
+@727aae66
+Jakie imperium założył Czyngis-chan?	Perskie	Chińskie	Osmańskie	Mongolskie
+Quel empire Gengis Khan a-t-il fondé ?	L'Empire perse	L'Empire chinois	L'Empire ottoman	L'Empire mongol
+¿Qué imperio fundó Gengis Kan?	El Imperio persa	El Imperio chino	El Imperio otomano	El Imperio mongol
+@fc35e475
+Kleopatra była królową którego kraju?	Persji	Egiptu	Grecji	Rzymu
+Cléopâtre était reine de quel pays ?	La Perse	L'Égypte	La Grèce	Rome
+¿De qué tierra fue reina Cleopatra?	Persia	Egipto	Grecia	Roma
+@7eab2036
+Kto był pierwszym człowiekiem w kosmosie?	Walentina Tierieszkowa	Jurij Gagarin	John Glenn	Neil Armstrong
+Qui fut le premier humain dans l'espace ?	Valentina Terechkova	Youri Gagarine	John Glenn	Neil Armstrong
+¿Quién fue el primer ser humano en el espacio?	Valentina Tereshkova	Yuri Gagarin	John Glenn	Neil Armstrong
+@c9549a35
+Gdzie zaczęła się rewolucja przemysłowa?	W USA	We Francji	W Wielkiej Brytanii	W Niemczech
+Où la révolution industrielle a-t-elle commencé ?	Aux États-Unis	En France	En Grande-Bretagne	En Allemagne
+¿Dónde empezó la Revolución Industrial?	EE. UU.	Francia	Gran Bretaña	Alemania
+@1f0c2252
+Gdzie żyła cywilizacja Majów?	W Afryce Południowej	W Europie Północnej	W Ameryce Środkowej	W Azji Środkowej
+Où vivait la civilisation maya ?	En Afrique australe	En Europe du Nord	En Amérique centrale	En Asie centrale
+¿Dónde vivió la civilización maya?	África austral	Norte de Europa	Centroamérica	Asia central
+@018874f2
+Koń trojański pojawia się w opowieściach związanych z którym eposem?	Iliada / Odyseja	Beowulf	Gilgamesz	Mahabharata
+Le cheval de Troie apparaît dans les récits liés à quelle épopée ?	L'Iliade / L'Odyssée	Beowulf	Gilgamesh	Le Mahabharata
+El caballo de Troya aparece en relatos ligados a ¿qué epopeya?	La Ilíada / La Odisea	Beowulf	Gilgamesh	Mahabharata
+@dbbcd6e1
+Prezydentem którego kraju został Nelson Mandela?	Zimbabwe	Nigerii	Kenii	RPA
+Nelson Mandela est devenu président de quel pays ?	Zimbabwe	Nigeria	Kenya	Afrique du Sud
+¿De qué país fue presidente Nelson Mandela?	Zimbabue	Nigeria	Kenia	Sudáfrica
+@90a777f0
+Gdzie zaczął się renesans?	We Francji	W Anglii	We Włoszech	W Niderlandach
+Où la Renaissance a-t-elle commencé ?	En France	En Angleterre	En Italie	Aux Pays-Bas
+¿Dónde empezó el Renacimiento?	Francia	Inglaterra	Italia	Países Bajos
+@bd750bdf
+Które współczesne miasto stoi w miejscu azteckiej stolicy Tenochtitlán?	Meksyk	Lima	Bogota	Hawana
+Quelle ville moderne se dresse sur le site de Tenochtitlan, la capitale aztèque ?	Mexico	Lima	Bogota	La Havane
+¿Qué ciudad moderna se alza donde estaba Tenochtitlan, la capital azteca?	Ciudad de México	Lima	Bogotá	La Habana
+@571b712a
+Słynna polska uczona Maria Skłodowska jest znana na świecie jako…	Ada Lovelace	Lise Meitner	Marie Curie	Rosalind Franklin
+La célèbre scientifique polonaise Maria Skłodowska est connue sous le nom de…	Ada Lovelace	Lise Meitner	Marie Curie	Rosalind Franklin
+La famosa científica polaca Maria Skłodowska es conocida como…	Ada Lovelace	Lise Meitner	Marie Curie	Rosalind Franklin
+@22c098b1
+Jak nazywał się program, który wysłał ludzi na Księżyc?	Artemis	Mercury	Gemini	Apollo
+Comment s'appelait le programme qui a posé des humains sur la Lune ?	Artemis	Mercury	Gemini	Apollo
+¿Cómo se llamaba el programa que llevó a seres humanos a la Luna?	Artemis	Mercury	Gemini	Apolo
+@52ae5f08
+Która królowa panowała w Wielkiej Brytanii przez 70 lat?	Wiktoria	Elżbieta II	Anna	Elżbieta I
+Quelle reine a régné sur le Royaume-Uni pendant 70 ans ?	Victoria	Élisabeth II	Anne	Élisabeth Ire
+¿Qué reina reinó en el Reino Unido durante 70 años?	Victoria	Isabel II	Ana	Isabel I
+@2a7489a0
+Między którymi dwoma mocarstwami toczyła się głównie zimna wojna?	USA i ZSRR	Chinami i Japonią	Niemcami i Włochami	Wielką Brytanią i Francją
+Entre quelles deux puissances la guerre froide a-t-elle principalement eu lieu ?	États-Unis et URSS	Chine et Japon	Allemagne et Italie	Royaume-Uni et France
+¿Entre qué dos potencias fue principalmente la Guerra Fría?	EE. UU. y la URSS	China y Japón	Alemania e Italia	Reino Unido y Francia
+@5da6a40b
+Który kraj sfinansował wyprawy Kolumba?	Hiszpania	Anglia	Portugalia	Włochy
+Quel pays a financé les voyages de Christophe Colomb ?	Espagne	Angleterre	Portugal	Italie
+¿Qué país financió los viajes de Colón?	España	Inglaterra	Portugal	Italia
+@52ab1605
+Które starożytne greckie miasto nazywa się kolebką demokracji?	Korynt	Ateny	Sparta	Teby
+Quelle cité grecque antique est appelée le berceau de la démocratie ?	Corinthe	Athènes	Sparte	Thèbes
+¿Qué ciudad de la antigua Grecia se considera la cuna de la democracia?	Corinto	Atenas	Esparta	Tebas
+@75454483
+Który hobbit wyrusza, by zniszczyć Pierścień we „Władcy Pierścieni”?	Frodo	Bilbo	Sam	Pippin
+Quel hobbit part détruire l'Anneau dans « Le Seigneur des anneaux » ?	Frodon	Bilbon	Sam	Pippin
+¿Qué hobbit parte a destruir el Anillo en «El Señor de los Anillos»?	Frodo	Bilbo	Sam	Pippin
+@2150401d
+W „Matrixie” Neo może wybrać czerwoną pigułkę albo…	Żółtą	Zieloną	Niebieską	Białą
+Dans « Matrix », on propose à Neo une pilule rouge ou une…	Jaune	Verte	Bleue	Blanche
+En «Matrix», a Neo le ofrecen una pastilla roja o una…	Amarilla	Verde	Azul	Blanca
+@345fd931
+Kto zagrał Jokera w „Mrocznym Rycerzu”?	Heath Ledger	Joaquin Phoenix	Jared Leto	Jack Nicholson
+Qui a joué le Joker dans « The Dark Knight » ?	Heath Ledger	Joaquin Phoenix	Jared Leto	Jack Nicholson
+¿Quién interpretó al Joker en «El caballero oscuro»?	Heath Ledger	Joaquin Phoenix	Jared Leto	Jack Nicholson
+@dced589c
+Co unosi dom w powietrze w „Odlocie” Pixara?	Rakieta	Ptaki	Balony	Skrzydła
+Dans « Là-haut » de Pixar, qu'est-ce qui soulève la maison dans le ciel ?	Une fusée	Des oiseaux	Des ballons	Des ailes
+En «Up» de Pixar, ¿qué eleva la casa hacia el cielo?	Un cohete	Pájaros	Globos	Alas
+@86db3003
+Który reżyser nakręcił „Szczęki” i „E.T.”?	James Cameron	George Lucas	Steven Spielberg	Ridley Scott
+Quel réalisateur a signé « Les Dents de la mer » et « E.T. » ?	James Cameron	George Lucas	Steven Spielberg	Ridley Scott
+¿Qué director hizo «Tiburón» y «E.T.»?	James Cameron	George Lucas	Steven Spielberg	Ridley Scott
+@25766699
+Forrest Gump: „Życie jest jak pudełko…”	Listów	Czekoladek	Zabawek	Ciasteczek
+Forrest Gump : « La vie, c'est comme une boîte de… »	Lettres	Chocolats	Jouets	Biscuits
+Forrest Gump: «La vida es como una caja de…»	Cartas	Bombones	Juguetes	Galletas
+@eb8aa244
+Jak naprawdę nazywa się Iron Man?	Tony Stark	Nick Fury	Steve Rogers	Bruce Banner
+Quel est le vrai nom d'Iron Man ?	Tony Stark	Nick Fury	Steve Rogers	Bruce Banner
+¿Cuál es el verdadero nombre de Iron Man?	Tony Stark	Nick Fury	Steve Rogers	Bruce Banner
+@c75396f2
+W którym mieście mieszka gotujący szczur z „Ratatuja”?	W Nowym Jorku	W Paryżu	W Rzymie	W Londynie
+Dans « Ratatouille », dans quelle ville vit le rat cuisinier ?	New York	Paris	Rome	Londres
+En «Ratatouille», ¿en qué ciudad vive la rata cocinera?	Nueva York	París	Roma	Londres
+@663937d8
+W której serii występuje pirat Jack Sparrow?	Hook	Vaiana	Wyspa skarbów	Piraci z Karaibów
+Quelle saga met en scène un pirate nommé Jack Sparrow ?	Hook	Vaiana	L'Île au trésor	Pirates des Caraïbes
+¿Qué saga tiene a un pirata llamado Jack Sparrow?	Hook	Vaiana	La isla del tesoro	Piratas del Caribe
+@83c3eedc
+Z którego kraju pochodzi reżyser Pedro Almodóvar?	Z Hiszpanii	Z Meksyku	Z Włoch	Z Argentyny
+De quel pays vient le réalisateur Pedro Almodóvar ?	Espagne	Mexique	Italie	Argentine
+¿De qué país es el director Pedro Almodóvar?	España	México	Italia	Argentina
+@9a024945
+Które studio stworzyło „Spirited Away: W krainie bogów”?	Pixar	Aardman	DreamWorks	Studio Ghibli
+Quel studio a produit « Le Voyage de Chihiro » ?	Pixar	Aardman	DreamWorks	Studio Ghibli
+¿Qué estudio hizo «El viaje de Chihiro»?	Pixar	Aardman	DreamWorks	Studio Ghibli
+@69fdb4c6
+Kto jest słynnym czarnym charakterem „Milczenia owiec”?	Freddy Krueger	Darth Vader	Norman Bates	Hannibal Lecter
+Qui est le célèbre méchant du « Silence des agneaux » ?	Freddy Krueger	Dark Vador	Norman Bates	Hannibal Lecter
+¿Quién es el famoso villano de «El silencio de los corderos»?	Freddy Krueger	Darth Vader	Norman Bates	Hannibal Lecter
+@d1301860
+Który samochód staje się wehikułem czasu w „Powrocie do przyszłości”?	Garbus	DeLorean	Cadillac	Mustang
+Quelle voiture devient la machine à voyager dans le temps dans « Retour vers le futur » ?	Coccinelle	DeLorean	Cadillac	Mustang
+¿Qué coche se convierte en máquina del tiempo en «Regreso al futuro»?	Escarabajo	DeLorean	Cadillac	Mustang
+@d083c32f
+Jakim zwierzęciem jest Gromit w „Wallace i Gromit”?	Psem	Owcą	Pingwinem	Kotem
+Dans « Wallace et Gromit », quel animal est Gromit ?	Un chien	Un mouton	Un pingouin	Un chat
+En «Wallace y Gromit», ¿qué animal es Gromit?	Perro	Oveja	Pingüino	Gato
+@5c21be3b
+Czyje piosenki tworzą „Mamma Mia!”?	ABBA	Bee Gees	The Beatles	Queen
+Les chansons de quel groupe composent « Mamma Mia! » ?	ABBA	Bee Gees	The Beatles	Queen
+¿De quién son las canciones de «Mamma Mia!»?	ABBA	Bee Gees	The Beatles	Queen
+@62e32d25
+Co słynnie wyjawia Luke'owi Darth Vader?	Jestem twoim ojcem	Znam cię	Moc jest z tobą	Czekałem
+Que révèle Dark Vador à Luke dans la scène culte ?	Je suis ton père	Je te connais	La Force est avec toi	Je t'attendais
+¿Qué le revela Darth Vader a Luke en la famosa escena?	Yo soy tu padre	Te conozco	La Fuerza está contigo	Te esperaba
+@6212d706
+W którym filmie dziewczyna płynie przez ocean i poznaje półboga Maui?	Nasze magiczne Encanto	Coco	Vaiana: Skarb oceanu	Merida Waleczna
+Dans quel film une jeune fille traverse l'océan et rencontre le demi-dieu Maui ?	Encanto	Coco	Vaiana	Rebelle
+¿En qué película una chica navega por el océano y conoce al semidiós Maui?	Encanto	Coco	Vaiana	Brave (Indomable)
+@b4e5a1d3
+Którego meksykańskiego święta dotyczy „Coco”?	Karnawału	Bożego Narodzenia	Dnia Zmarłych	Dnia Niepodległości
+Quelle fête mexicaine est au cœur de « Coco » ?	Le carnaval	Noël	Le Jour des morts	La fête de l'Indépendance
+¿Sobre qué fiesta mexicana trata «Coco»?	Carnaval	Navidad	Día de Muertos	Día de la Independencia
+@6ab58687
+Jak ma na imię chłopiec z „Kevina samego w domu”?	Carl	Kenny	Kyle	Kevin
+Comment s'appelle le garçon de « Maman, j'ai raté l'avion » ?	Carl	Kenny	Kyle	Kevin
+¿Cómo se llama el niño de «Solo en casa»?	Carl	Kenny	Kyle	Kevin
+@5ecc75c7
+Za który film Roman Polański zdobył Oscara dla najlepszego reżysera?	Dziecko Rosemary	Oliver Twist	Pianista	Chinatown
+Pour quel film Roman Polanski a-t-il reçu l'Oscar du meilleur réalisateur ?	Rosemary's Baby	Oliver Twist	Le Pianiste	Chinatown
+¿Por qué película ganó Roman Polanski el Óscar al mejor director?	La semilla del diablo	Oliver Twist	El pianista	Chinatown
+@8e63bd8f
+Który zmysł Beethoven w dużej mierze utracił w późniejszym życiu?	Wzrok	Węch	Smak	Słuch
+Quel sens Beethoven a-t-il en grande partie perdu à la fin de sa vie ?	La vue	L'odorat	Le goût	L'ouïe
+¿Qué sentido perdió Beethoven en gran parte en su madurez?	La vista	El olfato	El gusto	El oído
+@fe56db01
+Kto skomponował „Cztery pory roku”?	Haydn	Bach	Mozart	Vivaldi
+Qui a composé « Les Quatre Saisons » ?	Haydn	Bach	Mozart	Vivaldi
+¿Quién compuso «Las cuatro estaciones»?	Haydn	Bach	Mozart	Vivaldi
+@e0c7715b
+Ile klawiszy ma standardowy fortepian?	64	92	76	88
+Combien de touches compte un piano standard ?	64	92	76	88
+¿Cuántas teclas tiene un piano estándar?	64	92	76	88
+@8558c390
+Jaki jest słynny przydomek Madonny?	Królowa soulu	Królowa popu	Królowa rocka	Królowa disco
+Quel est le célèbre surnom de Madonna ?	Reine de la soul	Reine de la pop	Reine du rock	Reine du disco
+¿Cuál es el famoso apodo de Madonna?	Reina del soul	Reina del pop	Reina del rock	Reina de la música disco
+@7971fefe
+Czyim albumem jest „Thriller”?	Madonny	Michaela Jacksona	Whitney Houston	Prince'a
+« Thriller » est l'album de quel artiste ?	Madonna	Michael Jackson	Whitney Houston	Prince
+¿De quién es el álbum «Thriller»?	Madonna	Michael Jackson	Whitney Houston	Prince
+@9f89a5ab
+Który kraj należy do najczęstszych zwycięzców Eurowizji?	Hiszpania	Portugalia	Polska	Irlandia
+Quel pays fait partie des plus fréquents vainqueurs de l'Eurovision ?	Espagne	Portugal	Pologne	Irlande
+¿Qué país está entre los que más veces han ganado Eurovisión?	España	Portugal	Polonia	Irlanda
+@04cb8cf0
+Który gitarzysta słynnie podpalił gitarę na scenie?	Jimmy Page	Eric Clapton	Slash	Jimi Hendrix
+Quel guitariste a mis le feu à sa guitare sur scène ?	Jimmy Page	Eric Clapton	Slash	Jimi Hendrix
+¿Qué guitarrista prendió fuego a su guitarra en el escenario?	Jimmy Page	Eric Clapton	Slash	Jimi Hendrix
+@af198da2
+Ile dźwięków na białych klawiszach mieści się w oktawie?	5	8	12	7
+Combien de notes sur touches blanches y a-t-il dans une octave ?	5	8	12	7
+¿Cuántas notas de teclas blancas hay en una octava?	5	8	12	7
+@d69d6dfe
+Kto napisał i zaśpiewał „Imagine”?	David Bowie	Paul McCartney	Bob Dylan	John Lennon
+Qui a écrit et chanté « Imagine » ?	David Bowie	Paul McCartney	Bob Dylan	John Lennon
+¿Quién escribió y cantó «Imagine»?	David Bowie	Paul McCartney	Bob Dylan	John Lennon
+@eaf38154
+W którym kraju rozgrywa się akcja opery „Carmen”?	W Hiszpanii	We Francji	W Portugalii	We Włoszech
+Dans quel pays se déroule l'opéra « Carmen » ?	Espagne	France	Portugal	Italie
+¿En qué país transcurre la ópera «Carmen»?	España	Francia	Portugal	Italia
+@ba682dc2
+K-pop to muzyka pop z którego kraju?	Korei Południowej	Chin	Tajlandii	Japonii
+La K-pop est la musique pop de quel pays ?	Corée du Sud	Chine	Thaïlande	Japon
+El K-pop es música pop de ¿qué país?	Corea del Sur	China	Tailandia	Japón
+@00a033ab
+Z którym miastem jest mocno związana współczesna salsa?	Lizboną	Nowym Jorkiem	Rio de Janeiro	Madrytem
+À quelle ville la salsa moderne est-elle fortement liée ?	Lisbonne	New York	Rio de Janeiro	Madrid
+¿Con qué ciudad está muy ligada la salsa moderna?	Lisboa	Nueva York	Río de Janeiro	Madrid
+@05e93ac8
+Który artysta stworzył postać Ziggy'ego Stardusta?	Freddie Mercury	David Bowie	Elton John	Mick Jagger
+Quel artiste a créé le personnage de Ziggy Stardust ?	Freddie Mercury	David Bowie	Elton John	Mick Jagger
+¿Qué artista creó el personaje de Ziggy Stardust?	Freddie Mercury	David Bowie	Elton John	Mick Jagger
+@3fd24043
+Jak nazywa się szybkość utworu muzycznego?	Barwa	Harmonia	Tempo	Melodia
+Comment appelle-t-on la vitesse d'un morceau de musique ?	Le timbre	L'harmonie	Le tempo	La mélodie
+¿Cómo se llama la velocidad de una pieza musical?	Timbre	Armonía	Tempo	Melodía
+@e960ce86
+W jakim języku śpiewane jest „Despacito”?	Po portugalsku	Po włosku	Po hiszpańsku	Po francusku
+Dans quelle langue est chantée « Despacito » ?	Portugais	Italien	Espagnol	Français
+¿En qué idioma se canta «Despacito»?	Portugués	Italiano	Español	Francés
+@37ccd6a9
+Co jest większe: wiolonczela czy skrzypce?	Wiolonczela	Skrzypce	Są tej samej wielkości	To zależy
+Lequel est le plus grand : le violoncelle ou le violon ?	Le violoncelle	Le violon	Même taille	Ça dépend
+¿Qué es más grande: el violonchelo o el violín?	Violonchelo	Violín	Mismo tamaño	Depende
+@983f6903
+Na okładce albumu którego zespołu członkowie przechodzą po pasach?	Queen	The Beatles	The Who	Oasis
+Sur la pochette de quel groupe voit-on les membres traverser un passage piéton ?	Queen	The Beatles	The Who	Oasis
+¿En la portada de qué grupo aparecen sus miembros cruzando un paso de cebra?	Queen	The Beatles	The Who	Oasis
+@1331d55f
+Na jaki instrument Chopin komponował głównie?	Organy	Skrzypce	Fortepian	Gitarę
+Pour quel instrument Chopin a-t-il surtout composé ?	L'orgue	Le violon	Le piano	La guitare
+¿Para qué instrumento compuso sobre todo Chopin?	Órgano	Violín	Piano	Guitarra
+@cc191d98
+Jak nazywał się zespół Boba Marleya?	The Skatalites	The Rockers	The Specials	The Wailers
+Comment s'appelait le groupe de Bob Marley ?	The Skatalites	The Rockers	The Specials	The Wailers
+¿Cómo se llamaba el grupo de Bob Marley?	The Skatalites	The Rockers	The Specials	The Wailers
+@e689cfef
+Z którego kraju pochodzi duet, który stworzył „Macarenę”?	Z Kuby	Z Hiszpanii	Z Kolumbii	Z Meksyku
+De quel pays vient le duo qui a créé la « Macarena » ?	Cuba	Espagne	Colombie	Mexique
+¿De qué país es el dúo que creó la «Macarena»?	Cuba	España	Colombia	México
+@4e348c65
+Jak nazywa się postać gracza w „The Legend of Zelda”?	Link	Zelda	Ganon	Epona
+Dans « The Legend of Zelda », comment s'appelle le personnage du joueur ?	Link	Zelda	Ganon	Epona
+En «The Legend of Zelda», ¿cómo se llama el personaje del jugador?	Link	Zelda	Ganon	Epona
+@093fed57
+Która firma produkuje PlayStation?	Microsoft	Sega	Sony	Nintendo
+Quelle entreprise fabrique la PlayStation ?	Microsoft	Sega	Sony	Nintendo
+¿Qué empresa fabrica la PlayStation?	Microsoft	Sega	Sony	Nintendo
+@35ae33b7
+Która litera w angielskim Scrabble jest jedną z najwyżej punktowanych?	E	S	Q	A
+Au Scrabble anglais, quelle lettre fait partie de celles qui rapportent le plus ?	E	S	Q	A
+En el Scrabble en inglés, ¿qué letra es de las que más puntos dan?	E	S	Q	A
+@c21dcdd4
+Z którego kraju pochodzi autor książek, na których oparto „Wiedźmina”?	Z Ukrainy	Z Czech	Z Polski	Z Węgier
+De quel pays vient l'auteur des livres à l'origine de « The Witcher » ?	Ukraine	Tchéquie	Pologne	Hongrie
+¿De qué país es el autor de los libros en los que se basa «The Witcher»?	Ucrania	Chequia	Polonia	Hungría
+@ba7aa0a8
+Jakiego typu jest Pikachu w Pokémonach?	Wodny	Elektryczny	Trawiasty	Ognisty
+De quel type est Pikachu dans Pokémon ?	Eau	Électrik	Plante	Feu
+¿De qué tipo es Pikachu en Pokémon?	Agua	Eléctrico	Planta	Fuego
+@be9de9b3
+Z którego kraju pochodził twórca „Tetrisa”?	Z USA	Z Węgier	Z Japonii	Ze Związku Radzieckiego
+De quel pays venait l'inventeur de « Tetris » ?	États-Unis	Hongrie	Japon	Union soviétique
+¿De qué país era el inventor del «Tetris»?	EE. UU.	Hungría	Japón	Unión Soviética
+@2051a29b
+Która firma produkuje Xboxa?	Sony	Microsoft	Apple	Nintendo
+Quelle entreprise fabrique la Xbox ?	Sony	Microsoft	Apple	Nintendo
+¿Qué empresa fabrica la Xbox?	Sony	Microsoft	Apple	Nintendo
+@ff3da15b
+Jak nazywa się zielony, wybuchający potwór w „Minecrafcie”?	Creeper	Ghast	Zombie	Enderman
+Comment s'appelle le monstre vert qui explose dans « Minecraft » ?	Creeper	Ghast	Zombie	Enderman
+¿Cómo se llama la criatura verde que explota en «Minecraft»?	Creeper	Ghast	Zombi	Enderman
+@a1ae9fae
+Jak nazywa się ruch kończący partię szachów?	Mat	Promocja	Pat	Roszada
+Comment s'appelle le coup qui termine une partie d'échecs ?	Échec et mat	Promotion	Pat	Roque
+¿Cómo se llama la jugada que termina una partida de ajedrez?	Jaque mate	Coronación	Ahogado	Enroque
+@90e0a89f
+Który przedmiot sprawia, że Mario rośnie w „Super Mario”?	Gwiazdka	Kwiat	Moneta	Grzybek
+Quel objet fait grandir Mario dans « Super Mario » ?	L'étoile	La fleur	La pièce	Le champignon
+¿Qué objeto hace crecer a Mario en «Super Mario»?	Estrella	Flor	Moneda	Champiñón
+@c55586f7
+W której serii występuje żołnierz Master Chief?	Doom	Call of Duty	Gears of War	Halo
+Quelle série met en scène un soldat appelé Master Chief ?	Doom	Call of Duty	Gears of War	Halo
+¿Qué saga tiene a un soldado llamado Jefe Maestro?	Doom	Call of Duty	Gears of War	Halo
+@bfbbaa86
+Kto słynie z „Hadoukena” w „Street Fighterze”?	Ryu	Guile	Blanka	Chun-Li
+Qui est célèbre pour le « Hadouken » dans « Street Fighter » ?	Ryu	Guile	Blanka	Chun-Li
+¿Quién es famoso por el «Hadouken» en «Street Fighter»?	Ryu	Guile	Blanka	Chun-Li
+@a7b92e24
+Z którego miasta pochodzą oryginalne nazwy ulic w Monopoly?	Chicago	Londyn	Nowy Jork	Atlantic City
+De quelle ville viennent les noms de rues du Monopoly original ?	Chicago	Londres	New York	Atlantic City
+¿De qué ciudad son los nombres de calles del Monopoly original?	Chicago	Londres	Nueva York	Atlantic City
+@5b1c677a
+Co oznacza skrót „GTA”?	Global Tactical Arena	Grand Theft Auto	Giant Truck Attack	Great Travel Adventure
+Que signifie « GTA » ?	Global Tactical Arena	Grand Theft Auto	Giant Truck Attack	Great Travel Adventure
+¿Qué significa «GTA»?	Global Tactical Arena	Grand Theft Auto	Giant Truck Attack	Great Travel Adventure
+@6418cbc4
+Które polskie studio stworzyło „Cyberpunk 2077”?	Techland	CD Projekt Red	People Can Fly	11 bit studios
+Quel studio polonais a créé « Cyberpunk 2077 » ?	Techland	CD Projekt Red	People Can Fly	11 bit studios
+¿Qué estudio polaco creó «Cyberpunk 2077»?	Techland	CD Projekt Red	People Can Fly	11 bit studios
+@82a8ee5a
+Jakim zwierzęciem jest Donkey Kong?	Niedźwiedziem	Osłem	Szympansem	Gorylem
+Quel animal est Donkey Kong ?	Un ours	Un âne	Un chimpanzé	Un gorille
+¿Qué animal es Donkey Kong?	Oso	Burro	Chimpancé	Gorila
+@0b382e17
+Co w papierze, kamieniu i nożycach pokonuje nożyce?	Nożyce	Papier	Kamień	Nic
+À pierre-feuille-ciseaux, qu'est-ce qui bat les ciseaux ?	Les ciseaux	La feuille	La pierre	Rien
+En piedra, papel o tijera, ¿qué gana a la tijera?	Tijera	Papel	Piedra	Nada
+@179af2e3
+Jaki sport naśladuje „Pong”?	Tenis stołowy	Baseball	Piłkę nożną	Golf
+Quel sport « Pong » imite-t-il ?	Le tennis de table	Le baseball	Le football	Le golf
+¿Qué deporte imita «Pong»?	Tenis de mesa	Béisbol	Fútbol	Golf
+@2b6f8b99
+W którym roku wydano Nintendo Switch?	2017	2012	2014	2019
+En quelle année la Nintendo Switch est-elle sortie ?	2017	2012	2014	2019
+¿En qué año salió la Nintendo Switch?	2017	2012	2014	2019
+@e3d548c1
+Z którego kraju pochodzi studio, które stworzyło „Dying Light”?	Z Polski	Z Niemiec	Ze Szwecji	Z Finlandii
+De quel pays vient le studio qui a développé « Dying Light » ?	Pologne	Allemagne	Suède	Finlande
+¿De qué país es el estudio que desarrolló «Dying Light»?	Polonia	Alemania	Suecia	Finlandia
+@757bd8b1
+Na jakiej nawierzchni gra się Wimbledon?	Na mączce	Na trawie	Na wykładzinie	Na twardej
+Sur quelle surface se joue Wimbledon ?	Terre battue	Gazon	Moquette	Dur
+¿Sobre qué superficie se juega Wimbledon?	Tierra batida	Hierba	Moqueta	Pista dura
+@5da3b37e
+Który kraj wygrał najwięcej piłkarskich mistrzostw świata?	Włochy	Niemcy	Argentyna	Brazylia
+Quel pays a remporté le plus de Coupes du monde de football ?	Italie	Allemagne	Argentine	Brésil
+¿Qué país ha ganado más Mundiales de fútbol?	Italia	Alemania	Argentina	Brasil
+@df96e233
+Z którego kraju pochodzi Usain Bolt?	Z Kenii	Z Kanady	Z Jamajki	Z USA
+De quel pays vient Usain Bolt ?	Kenya	Canada	Jamaïque	États-Unis
+¿De qué país es Usain Bolt?	Kenia	Canadá	Jamaica	EE. UU.
+@907287a1
+Jak nazywa się mecz Realu Madryt z Barceloną?	Der Klassiker	Derby della Madonnina	El Clásico	Old Firm
+Comment s'appelle le match entre le Real Madrid et le FC Barcelone ?	Der Klassiker	Derby della Madonnina	El Clásico	Old Firm
+¿Cómo se llama el partido entre el Real Madrid y el Barcelona?	Der Klassiker	Derbi della Madonnina	El Clásico	Old Firm
+@6388c91d
+W którym niemieckim klubie przez wiele lat grał Robert Lewandowski?	Wolfsburg	Schalke 04	Bayern Monachium	Hamburger SV
+Dans quel club allemand Robert Lewandowski a-t-il joué de nombreuses années ?	Wolfsburg	Schalke 04	Bayern Munich	Hambourg
+¿En qué club alemán jugó Robert Lewandowski durante muchos años?	Wolfsburgo	Schalke 04	Bayern de Múnich	Hamburgo
+@b9936fb3
+Ile punktów daje w koszykówce rzut zza łuku?	4	3	2	1
+Combien de points vaut un tir derrière l'arc au basket ?	4	3	2	1
+¿Cuántos puntos vale en baloncesto un tiro desde detrás del arco?	4	3	2	1
+@08448345
+Która drużyna rugby słynie z wykonywania haki?	Fidżi	Nowa Zelandia	Australia	RPA
+Quelle équipe de rugby est célèbre pour son haka ?	Fidji	Nouvelle-Zélande	Australie	Afrique du Sud
+¿Qué selección de rugby es famosa por bailar la haka?	Fiyi	Nueva Zelanda	Australia	Sudáfrica
+@a38bab0b
+Który hiszpański zawodnik wygrał najwięcej turniejów Roland Garros?	Rafael Nadal	David Ferrer	Carlos Alcaraz	Carlos Moyá
+Quel joueur espagnol a remporté le plus de titres à Roland-Garros ?	Rafael Nadal	David Ferrer	Carlos Alcaraz	Carlos Moyá
+¿Qué jugador español ha ganado más veces Roland Garros?	Rafael Nadal	David Ferrer	Carlos Alcaraz	Carlos Moyá
+@21ca99c5
+W którym kraju za każdym razem zapala się ogień olimpijski?	W Szwajcarii	W kraju gospodarza	We Francji	W Grecji
+Dans quel pays la flamme olympique est-elle allumée à chaque fois ?	Suisse	Le pays hôte	France	Grèce
+¿En qué país se enciende cada vez la llama olímpica?	Suiza	El país anfitrión	Francia	Grecia
+@b1899f84
+W którym sporcie są wyniki „birdie” i „eagle”?	Łucznictwo	Golf	Krykiet	Badminton
+Quel sport utilise les scores « birdie » et « eagle » ?	Tir à l'arc	Golf	Cricket	Badminton
+¿Qué deporte tiene resultados llamados «birdie» y «eagle»?	Tiro con arco	Golf	Críquet	Bádminton
+@d7cf0454
+NBA to liga którego sportu?	Baseballu	Koszykówki	Hokeja na lodzie	Futbolu amerykańskiego
+La NBA est une ligue de quel sport ?	Baseball	Basket	Hockey sur glace	Football américain
+La NBA es una liga de ¿qué deporte?	Béisbol	Baloncesto	Hockey sobre hielo	Fútbol americano
+@f3d7299d
+Jak nazywa się pierzasty pocisk w badmintonie?	Ping	Krążek	Lotka	Ptaszek-piłka
+Comment s'appelle le projectile à plumes du badminton ?	Ping	Palet	Volant	Balle-oiseau
+¿Cómo se llama el proyectil con plumas del bádminton?	Ping	Disco	Volante	Pelota pájaro
+@44829947
+Który piłkarz zdobył Złotą Piłkę osiem razy?	Johan Cruyff	Pelé	Lionel Messi	Cristiano Ronaldo
+Quel joueur a remporté le Ballon d'or huit fois ?	Johan Cruyff	Pelé	Lionel Messi	Cristiano Ronaldo
+¿Qué jugador ha ganado el Balón de Oro ocho veces?	Johan Cruyff	Pelé	Lionel Messi	Cristiano Ronaldo
+@25ac4b54
+Który styl pływacki jest zwykle najszybszy?	Dowolny (kraul)	Motylkowy	Klasyczny	Grzbietowy
+Quelle nage est généralement la plus rapide ?	Nage libre (crawl)	Papillon	Brasse	Dos
+¿Qué estilo de natación suele ser el más rápido?	Libre (crol)	Mariposa	Braza	Espalda
+@8daba987
+W którym sporcie są turnieje „Wielkiego Szlema”?	Piłka nożna	Boks	Kolarstwo	Tenis
+Quel sport a des tournois du « Grand Chelem » ?	Football	Boxe	Cyclisme	Tennis
+¿Qué deporte tiene torneos de «Grand Slam»?	Fútbol	Boxeo	Ciclismo	Tenis
+@feed74ea
+Ile trwa zwykły mecz piłki nożnej?	60 minut	80 minut	90 minut	100 minut
+Combien de temps dure un match de football classique ?	60 minutes	80 minutes	90 minutes	100 minutes
+¿Cuánto dura un partido de fútbol normal?	60 minutos	80 minutos	90 minutos	100 minutos

@@ -1,0 +1,440 @@
+@4cce3102
+Z której misji pochodzą słowa „Houston, mieliśmy problem”?	Apollo 11	Challenger	Apollo 13	Gemini 4
+De quelle mission vient la phrase « Houston, nous avons eu un problème » ?	Apollo 11	Challenger	Apollo 13	Gemini 4
+¿De qué misión es la frase «Houston, hemos tenido un problema»?	Apolo 11	Challenger	Apolo 13	Gemini 4
+@25c86564
+Jak nazywają się obłoki gazu i pyłu, w których rodzą się gwiazdy?	Mgławice	Meteory	Komety	Planetoidy
+Comment appelle-t-on les nuages de gaz et de poussière où naissent les étoiles ?	Nébuleuses	Météores	Comètes	Astéroïdes
+¿Cómo se llaman las nubes de gas y polvo donde nacen las estrellas?	Nebulosas	Meteoros	Cometas	Asteroides
+@5e85ab44
+Dlaczego zawsze widzimy tę samą stronę Księżyca?	Ziemia przyciąga tylko jedną stronę	Tył jest zawsze ciemny	Księżyc się nie obraca	Obraca się raz na jedno okrążenie
+Pourquoi voit-on toujours la même face de la Lune ?	La Terre n'attire qu'un côté	La face cachée est toujours sombre	Elle ne tourne pas sur elle-même	Elle fait un tour sur elle-même par orbite
+¿Por qué vemos siempre la misma cara de la Luna?	La Tierra solo atrae un lado	La otra cara siempre está oscura	No gira	Gira una vez por cada órbita
+@a67f9f76
+Dlaczego w Szwajcarii nielegalne jest trzymanie tylko jednej świnki morskiej?	Są niebezpieczne	Czują się samotne	Z powodów podatkowych	Są za głośne
+Pourquoi est-il interdit en Suisse de n'avoir qu'un seul cochon d'Inde ?	Ils sont dangereux	Ils se sentent seuls	Pour des raisons fiscales	Ils sont trop bruyants
+¿Por qué es ilegal en Suiza tener un solo cobaya?	Son peligrosos	Se sienten solos	Por impuestos	Hacen demasiado ruido
+@df5215df
+Do którego wydarzenia Kleopatra żyła bliżej w czasie?	Lądowania na Księżycu	Budowy Wielkiej Piramidy	Dinozaurów	Tak samo blisko do obu
+De quel événement Cléopâtre était-elle la plus proche dans le temps ?	Les premiers pas sur la Lune	La construction de la Grande Pyramide	Les dinosaures	À égale distance des deux
+¿De qué estuvo Cleopatra más cerca en el tiempo?	La llegada a la Luna	La construcción de la Gran Pirámide	Los dinosaurios	Igual de cerca de ambos
+@3ef7c297
+Co jest starsze: Uniwersytet Oksfordzki czy imperium Azteków?	Imperium Azteków	Żadne nie istniało	Ten sam rok	Uniwersytet Oksfordzki
+Qu'est-ce qui est le plus ancien : l'université d'Oxford ou l'Empire aztèque ?	L'Empire aztèque	Aucun n'existait	La même année	L'université d'Oxford
+¿Qué es más antiguo: la Universidad de Oxford o el Imperio azteca?	El Imperio azteca	Ninguno existía	El mismo año	La Universidad de Oxford
+@aea65ad4
+Badania pokazują, że krowy mające najlepszą przyjaciółkę są…	Szybsze	Głośniejsze	Cięższe	Mniej zestresowane
+Selon des études, les vaches qui ont une meilleure amie sont…	Plus rapides	Plus bruyantes	Plus lourdes	Moins stressées
+Los estudios muestran que las vacas con una mejor amiga están…	Más rápidas	Más ruidosas	Más pesadas	Menos estresadas
+@364d43d5
+Wrocław słynie z setek małych figurek…	Kotów	Rycerzy	Krasnali	Kaczek
+Wrocław, en Pologne, est célèbre pour ses centaines de petites statues de…	Chats	Chevaliers	Nains	Canards
+Breslavia (Polonia) es famosa por sus cientos de estatuillas de…	Gatos	Caballeros	Enanitos	Patos
+@604ea0d1
+Dlaczego miód może przetrwać tysiące lat?	Jest bardzo zimny	Jest słony	Pilnują go pszczoły	Ma mało wody i jest kwaśny
+Pourquoi le miel peut-il se conserver des milliers d'années ?	Il est très froid	Il est salé	Les abeilles le gardent	Il contient peu d'eau et il est acide
+¿Por qué la miel puede durar miles de años?	Está muy fría	Es salada	La vigilan las abejas	Tiene poca agua y es ácida
+@b6324a11
+Które zwierzę ma odciski palców bardzo podobne do ludzkich?	Pies	Koala	Papuga	Kot
+Quel animal a des empreintes digitales très proches des nôtres ?	Le chien	Le koala	Le perroquet	Le chat
+¿Qué animal tiene huellas dactilares muy parecidas a las humanas?	Perro	Koala	Loro	Gato
+@b709b99d
+Dlaczego po La Tomatinie ulice Buñol są czystsze?	Nikt nie sprząta	Kwas z pomidorów czyści kamienie	Pada deszcz	Kury wszystko zjadają
+Pourquoi les rues de Buñol sont-elles plus propres après La Tomatina ?	Personne ne nettoie	L'acide des tomates nettoie les pavés	Il pleut	Les poules mangent tout
+¿Por qué quedan más limpias las calles de Buñol después de La Tomatina?	Nadie limpia	El ácido del tomate limpia las piedras	Llueve	Las gallinas se lo comen
+@cb16ccbc
+Jakiego koloru jest krew homara?	Czerwona	Zielona	Czarna	Niebieska
+De quelle couleur est le sang du homard ?	Rouge	Vert	Noir	Bleu
+¿De qué color es la sangre de la langosta?	Roja	Verde	Negra	Azul
+@17dd7aba
+Który owoc amerykański sąd uznał kiedyś za warzywo (dla celów podatkowych)?	Pomidor	Banan	Jabłko	Wiśnię
+Quel fruit un tribunal américain a-t-il un jour déclaré légume (pour des raisons fiscales) ?	La tomate	La banane	La pomme	La cerise
+¿Qué fruta declaró un tribunal de EE. UU. verdura (por impuestos)?	Tomate	Plátano	Manzana	Cereza
+@21b8e6c4
+Czy na Ziemi jest więcej kur niż ludzi?	Nie	Nie ma już kur	Tak, znacznie więcej	Dokładnie tyle samo
+Y a-t-il plus de poulets que d'humains sur Terre ?	Non	Il n'y a plus de poulets	Oui, bien plus	Exactement autant
+¿Hay más gallinas que personas en la Tierra?	No	Ya no quedan gallinas	Sí, muchísimas más	Exactamente las mismas
+@1a00c666
+Co ma w armii norweskiej Sir Nils Olav, pingwin z zoo w Edynburgu?	Stopień generała i tytuł szlachecki	Kolekcję medali	Nic	Czołg
+Que détient dans l'armée norvégienne Sir Nils Olav, un manchot du zoo d'Édimbourg ?	Un grade de général et un titre de chevalier	Une collection de médailles	Rien	Un char
+¿Qué tiene en el ejército noruego Sir Nils Olav, un pingüino del zoo de Edimburgo?	Rango de general y título de caballero	Una colección de medallas	Nada	Un tanque
+@6de5678d
+Ile nosów ma ślimak nagi?	0	4	1	2
+Combien de nez a une limace ?	0	4	1	2
+¿Cuántas narices tiene una babosa?	0	4	1	2
+@ef0afdae
+Którego kraju zwierzęciem narodowym jest jednorożec?	Irlandii	Walii	Szkocji	Danii
+Quel pays a pour animal national la licorne ?	Irlande	Pays de Galles	Écosse	Danemark
+¿Qué país tiene como animal nacional el unicornio?	Irlanda	Gales	Escocia	Dinamarca
+@2b621de0
+Czy to prawda, że kwakanie kaczki nie odbija się echem?	Nie, to mit	Tylko przy wodzie	Tak, nigdy	Tylko w nocy
+Est-il vrai que le coin-coin du canard ne fait pas d'écho ?	Non, c'est un mythe	Seulement près de l'eau	Oui, jamais	Seulement la nuit
+¿Es cierto que el graznido del pato no tiene eco?	No, es un mito	Solo cerca del agua	Sí, nunca	Solo de noche
+@79cce372
+Co według popularnego mitu ludzie połykają co roku we śnie?	Mrówki	Pająki	Kurz	Muchy
+Selon un mythe populaire, qu'avalent les gens chaque année en dormant ?	Des fourmis	Des araignées	De la poussière	Des mouches
+Según un mito popular, ¿qué se traga la gente cada año mientras duerme?	Hormigas	Arañas	Polvo	Moscas
+@4edcb7f8
+Które zwierzę potrafi spać nawet 22 godziny na dobę?	Kot	Koala	Pies	Lew
+Quel animal peut dormir jusqu'à 22 heures par jour ?	Le chat	Le koala	Le chien	Le lion
+¿Qué animal puede dormir hasta 22 horas al día?	Gato	Koala	Perro	León
+@c10924fc
+Co się dzieje, gdy ośmiornica straci ramię?	Nie może zmieniać koloru	Nie może pływać	Odrasta jej	Umiera
+Que se passe-t-il si une pieuvre perd un bras ?	Elle ne peut plus changer de couleur	Elle ne peut plus nager	Il repousse	Elle meurt
+¿Qué pasa si un pulpo pierde un brazo?	No puede cambiar de color	No puede nadar	Le vuelve a crecer	Muere
+@932fe37c
+Który kolor fajerwerków najtrudniej uzyskać?	Zielony	Żółty	Czerwony	Niebieski
+Quelle couleur de feu d'artifice est la plus difficile à obtenir ?	Vert	Jaune	Rouge	Bleu
+¿Qué color de fuegos artificiales es el más difícil de conseguir?	Verde	Amarillo	Rojo	Azul
+@a483c3bf
+Z czego słynie ryba blobfish (psychrolutes)?	Ze śpiewu	Z wyboru na najbrzydsze zwierzę	Z bycia najszybszą rybą	Z latania
+Pour quoi le blobfish est-il célèbre ?	Il chante	Il a été élu animal le plus laid	C'est le poisson le plus rapide	Il vole
+¿Por qué es famoso el pez borrón (blobfish)?	Por cantar	Por ser elegido el animal más feo	Por ser el pez más rápido	Por volar
+@b4bf6733
+Jak brzmi hiszpańska litera „ñ”?	Tak samo jak „n”	Jest niema	Jak „ń”	Jak „g”
+Quel son fait la lettre espagnole « ñ » ?	Comme « n »	Elle est muette	« gn » comme dans montagne	« g »
+¿Cómo suena la letra «ñ» del español?	Igual que «n»	Es muda	Como «ni» en «niño»	Como «g»
+@f29e6c18
+Jak mniej więcej wymawia się polskie „szcz”?	„Sks”	„Z”	„Ts”	„Szcz” (jak w „szczypta”)
+Comment se prononce à peu près le « szcz » polonais ?	« Sks »	« Z »	« Ts »	« Chtch »
+¿Cómo se pronuncia aproximadamente el «szcz» polaco?	«Sks»	«Z»	«Ts»	«Shch»
+@9071a356
+Który kraj ma najwięcej użytkowników języka hiszpańskiego?	Kolumbia	Hiszpania	Meksyk	Argentyna
+Quel pays compte le plus d'hispanophones ?	Colombie	Espagne	Mexique	Argentine
+¿Qué país tiene más hablantes de español?	Colombia	España	México	Argentina
+@be080920
+Jaka jest najczęstsza litera w języku angielskim?	S	E	T	A
+Quelle est la lettre la plus fréquente en anglais ?	S	E	T	A
+¿Cuál es la letra más frecuente en inglés?	S	E	T	A
+@ccbd8699
+Z którego języka pochodzi słowo „czekolada”?	Ze szwajcarskiego niemieckiego	Z hiszpańskiego	Z nahuatl (język Azteków)	Z francuskiego
+De quelle langue vient le mot « chocolat » ?	Le suisse allemand	L'espagnol	Le nahuatl (langue aztèque)	Le français
+¿De qué idioma viene la palabra «chocolate»?	Alemán suizo	Español	Náhuatl (azteca)	Francés
+@6977751f
+Które słowo używane w wielu językach pochodzi z tureckiego?	Robot	Szampon	Jogurt	Piżama
+Quel mot, présent dans de nombreuses langues, vient du turc ?	Robot	Shampoing	Yaourt	Pyjama
+¿Qué palabra, presente en muchos idiomas, viene del turco?	Robot	Champú	Yogur	Pijama
+@96da4326
+Z którego języka pochodzi słowo „piżama”?	Z japońskiego	Z perskiego/hindi	Z francuskiego	Z angielskiego
+De quelle langue vient le mot « pyjama » ?	Le japonais	Le persan / l'hindi	Le français	L'anglais
+¿De qué idioma viene la palabra «pijama»?	Japonés	Persa / hindi	Francés	Inglés
+@f0afa518
+O czym jest polski łamaniec językowy „W Szczebrzeszynie chrząszcz brzmi w trzcinie”?	O ślizgającej się łyżce	O chrząszczu brzęczącym w trzcinie	O latającym kocie	O śpiewającej rybie
+De quoi parle le virelangue polonais « W Szczebrzeszynie chrząszcz brzmi w trzcinie » ?	D'une cuillère qui glisse	D'un scarabée qui bourdonne dans les roseaux	D'un chat volant	D'un poisson qui chante
+¿De qué trata el trabalenguas polaco «W Szczebrzeszynie chrząszcz brzmi w trzcinie»?	De una cuchara que resbala	De un escarabajo que zumba entre los juncos	De un gato volador	De un pez que canta
+@5a8fb713
+Jakim znakiem zaczyna się pytanie po hiszpańsku?	¿	?	!	¡¡
+Par quel signe commence une question en espagnol ?	¿	?	!	¡¡
+¿Con qué signo empieza una pregunta en español?	¿	?	!	¡¡
+@c23c8da1
+Czym jest esperanto?	Sztucznym językiem uniwersalnym	Miastem	Włoską potrawą	Tańcem
+Qu'est-ce que l'espéranto ?	Une langue universelle construite	Une ville	Un plat italien	Une danse
+¿Qué es el esperanto?	Una lengua universal artificial	Una ciudad	Un plato italiano	Un baile
+@fb9bbcd3
+W którym roku „selfie” zostało słowem roku słownika Oxford?	2013	2016	2008	2020
+En quelle année « selfie » a-t-il été élu mot de l'année par le dictionnaire d'Oxford ?	2013	2016	2008	2020
+¿En qué año fue «selfie» la palabra del año del diccionario Oxford?	2013	2016	2008	2020
+@d17f0da2
+Który język używa dźwięków mlaskowych (kliknięć)?	Węgierski	Xhosa	Fiński	Islandzki
+Quelle langue utilise des sons à clics ?	Le hongrois	Le xhosa	Le finnois	L'islandais
+¿Qué idioma usa sonidos de chasquido (clics)?	Húngaro	Xhosa	Finés	Islandés
+@3c0cd609
+Co znaczy hiszpańskie „mañana”?	Wczoraj	Wieczór	Jutro / rano	Nigdy
+Que signifie « mañana » en espagnol ?	Hier	Le soir	Demain / le matin	Jamais
+¿Qué significa «mañana» en español?	Ayer	Tarde-noche	El día siguiente / la mañana	Nunca
+@58d14389
+Z którego języka pochodzi słowo „hygge” (przytulne zadowolenie)?	Z duńskiego	Z fińskiego	Ze szwedzkiego	Z niderlandzkiego
+De quelle langue vient le mot « hygge » (bien-être douillet) ?	Le danois	Le finnois	Le suédois	Le néerlandais
+¿De qué idioma viene la palabra «hygge» (bienestar acogedor)?	Danés	Finés	Sueco	Neerlandés
+@cf21adc6
+W ilu mniej więcej językach mówi się na świecie?	70 000	700	7000	70
+Combien de langues parle-t-on environ dans le monde ?	70 000	700	7 000	70
+¿Cuántos idiomas se hablan aproximadamente en el mundo?	70.000	700	7.000	70
+@e9a73747
+Jak nazywa się słowo, które czyta się tak samo od tyłu?	Palindrom	Anagram	Akronim	Synonim
+Comment appelle-t-on un mot qui se lit de la même façon à l'envers ?	Palindrome	Anagramme	Acronyme	Synonyme
+¿Cómo se llama una palabra que se lee igual al revés?	Palíndromo	Anagrama	Acrónimo	Sinónimo
+@79056cb5
+Jakie zwierzę to po angielsku polski „pies”?	Cat	Bird	Dog	Pig
+Quel animal est « pies » en polonais ?	Le chat	L'oiseau	Le chien	Le cochon
+¿Qué animal es «pies» en polaco?	Gato	Pájaro	Perro	Cerdo
+@49714021
+Co naprawdę znaczy hiszpańskie „embarazada” (a nie „zawstydzona”!)?	Pijana	Nieśmiała	W ciąży	Zmęczona
+Que signifie vraiment l'espagnol « embarazada » (et non « embarrassée » !) ?	Ivre	Timide	Enceinte	Fatiguée
+En español, ¿qué significa «embarazada» (¡no «embarrassed» en inglés!)?	Borracha	Tímida	Encinta	Cansada
+@f3ff98fa
+Do czego właściwie odnosi się słowo „sushi”?	Do surowej ryby	Do ryżu z octem	Do wodorostów	Do sosu sojowego
+À quoi le mot « sushi » fait-il réellement référence ?	Au poisson cru	Au riz vinaigré	Aux algues	À la sauce soja
+¿A qué se refiere realmente la palabra «sushi»?	Pescado crudo	Arroz avinagrado	Alga	Salsa de soja
+@0d734290
+Którym alfabetem zapisuje się język rosyjski?	Cyrylicą	Arabskim	Łacińskim	Greckim
+Quel alphabet sert à écrire le russe ?	Cyrillique	Arabe	Latin	Grec
+¿Qué alfabeto se usa para escribir el ruso?	Cirílico	Árabe	Latino	Griego
+@570c1158
+Jaki dzień jest 100 dni po poniedziałku?	Poniedziałek	Czwartek	Wtorek	Środa
+Quel jour sera-t-on 100 jours après un lundi ?	Lundi	Jeudi	Mardi	Mercredi
+¿Qué día es 100 días después de un lunes?	Lunes	Jueves	Martes	Miércoles
+@9496dfed
+Następna liczba: 100, 90, 81, 73, ?	67	64	66	65
+Nombre suivant : 100, 90, 81, 73, ?	67	64	66	65
+¿Qué número sigue: 100, 90, 81, 73…?	67	64	66	65
+@e579eb90
+Następna liczba: 3, 6, 12, 24, ?	30	48	36	42
+Nombre suivant : 3, 6, 12, 24, ?	30	48	36	42
+¿Qué número sigue: 3, 6, 12, 24…?	30	48	36	42
+@bf32ccb2
+W szufladzie są 3 czerwone i 3 niebieskie skarpetki. Ile trzeba wyjąć po ciemku, by mieć pewność, że masz parę?	2	4	3	6
+Un tiroir contient 3 chaussettes rouges et 3 bleues. Dans le noir, combien faut-il en prendre pour être sûr d'avoir une paire ?	2	4	3	6
+Un cajón tiene 3 calcetines rojos y 3 azules. A oscuras, ¿cuántos debes sacar para asegurarte un par?	2	4	3	6
+@f80abe19
+Ślimak w 10-metrowej studni wspina się w dzień 3 m, a w nocy zsuwa 2 m. Którego dnia wydostanie się na zewnątrz?	8	10	7	9
+Un escargot dans un puits de 10 m monte de 3 m le jour et redescend de 2 m la nuit. Quel jour en sort-il ?	8	10	7	9
+Un caracol en un pozo de 10 m sube 3 m de día y resbala 2 m de noche. ¿Qué día sale?	8	10	7	9
+@80ed28c5
+Jeśli odetniesz wszystkie cztery rogi prostokąta, ile będzie miał rogów?	8	4	12	0
+Si tu coupes les quatre coins d'un rectangle, combien de coins a-t-il ?	8	4	12	0
+Si cortas las cuatro esquinas de un rectángulo, ¿cuántas esquinas tiene?	8	4	12	0
+@ae6d5029
+Ile to jest pół tuzina tuzinów?	72	6	144	36
+Combien font une demi-douzaine de douzaines ?	72	6	144	36
+¿Cuánto es media docena de docenas?	72	6	144	36
+@4e438860
+Jestem 2 lata starszy od siostry. Ile lat różnicy będzie między nami za 10 lat?	10	2	12	20
+J'ai 2 ans de plus que ma sœur. Combien d'années d'écart aurons-nous dans 10 ans ?	10	2	12	20
+Tengo 2 años más que mi hermana. ¿Cuántos años de diferencia tendremos dentro de 10 años?	10	2	12	20
+@ba987d70
+Co tu nie pasuje: 2, 3, 5, 9, 11?	11	9	2	5
+Quel est l'intrus : 2, 3, 5, 9, 11 ?	11	9	2	5
+¿Cuál es el intruso: 2, 3, 5, 9, 11?	11	9	2	5
+@ca521576
+Ile czarnych pól ma szachownica?	16	64	30	32
+Combien de cases noires compte un échiquier ?	16	64	30	32
+¿Cuántas casillas negras tiene un tablero de ajedrez?	16	64	30	32
+@e53bd13d
+Następna litera: Z, Y, X, W, ?	T	V	U	A
+Lettre suivante : Z, Y, X, W, ?	T	V	U	A
+¿Qué letra sigue: Z, Y, X, W…?	T	V	U	A
+@77212f39
+Zegar widziany w lustrze zdaje się pokazywać 3:00. Która jest naprawdę godzina?	9:00	3:00	12:00	6:00
+Une horloge vue dans un miroir semble indiquer 3 h. Quelle heure est-il vraiment ?	9 h	3 h	12 h	6 h
+Un reloj visto en un espejo parece marcar las 3:00. ¿Qué hora es en realidad?	9:00	3:00	12:00	6:00
+@f48d9a85
+Piekarnik piecze 3 bochenki w 3 minuty. Jeśli mieści 6 naraz, ile potrwa upieczenie 6 bochenków?	3 minuty	6 minut	12 minut	9 minut
+Un four cuit 3 pains en 3 minutes. S'il peut en contenir 6 à la fois, combien de temps pour 6 pains ?	3 minutes	6 minutes	12 minutes	9 minutes
+Un horno hace 3 panes en 3 minutos. Si caben 6 a la vez, ¿cuánto se tarda en hacer 6 panes?	3 minutos	6 minutos	12 minutos	9 minutos
+@8e73bc38
+Jeśli 5 osób poda sobie ręce każdy z każdym raz, ile będzie uścisków dłoni?	20	10	25	5
+Si 5 personnes se serrent la main une fois chacune avec toutes les autres, combien de poignées de main y a-t-il ?	20	10	25	5
+Si 5 personas se dan la mano una vez con cada una de las demás, ¿cuántos apretones de manos hay?	20	10	25	5
+@c6adb6c9
+Które angielskie słowo można ułożyć z liter słowa „LEMON”?	MELON	LEMUR	LEMONS	SOLEMN
+Quel mot anglais peut-on former avec les lettres de « LEMON » ?	MELON	LEMUR	LEMONS	SOLEMN
+¿Qué palabra inglesa se puede formar con las letras de «LEMON»?	MELON	LEMUR	LEMONS	SOLEMN
+@564f8f0f
+Ile wynosi suma wszystkich oczek na standardowej kostce do gry?	36	24	18	21
+Quel est le total de tous les points d'un dé standard ?	36	24	18	21
+¿Cuánto suman todos los puntos de un dado estándar?	36	24	18	21
+@dc6a7738
+Połowa której liczby równa się podwójnej jej ćwiartce?	Tylko 4	Tylko 0	Każdej liczby	Żadnej
+Pour quel nombre la moitié est-elle égale au double de son quart ?	Seulement 4	Seulement 0	Tous les nombres	Aucun
+¿De qué número la mitad es igual al doble de su cuarta parte?	Solo del 4	Solo del 0	De todos	De ninguno
+@ed180150
+Na ile kawałków kroi się zwykle standardową okrągłą pizzę?	8	10	5	12
+En combien de parts coupe-t-on habituellement une pizza ronde standard ?	8	10	5	12
+¿En cuántas porciones se suele cortar una pizza redonda estándar?	8	10	5	12
+@8574d444
+Ile mniej więcej ma długości kartka A4?	40 cm	20 cm	30 cm	50 cm
+Quelle est la longueur approximative d'une feuille A4 ?	40 cm	20 cm	30 cm	50 cm
+¿Cuánto mide aproximadamente de largo una hoja A4?	40 cm	20 cm	30 cm	50 cm
+@d7fcbb5e
+Które z tych źródeł energii jest odnawialne?	Gaz ziemny	Węgiel	Wiatr	Ropa
+Laquelle de ces sources d'énergie est renouvelable ?	Le gaz naturel	Le charbon	Le vent	Le pétrole
+¿Cuál es una fuente de energía renovable?	Gas natural	Carbón	Viento	Petróleo
+@90dc72b8
+Na jakiej mniej więcej wysokości wisi kosz do koszykówki?	3 m	4 m	5 m	2 m
+À quelle hauteur environ se trouve un panier de basket ?	3 m	4 m	5 m	2 m
+¿A qué altura aproximada está una canasta de baloncesto?	3 m	4 m	5 m	2 m
+@9b67285e
+Czego używają kuchenki mikrofalowe do podgrzewania jedzenia?	Mikrofal	Pary	Ognia	Lodu
+Qu'utilisent les fours à micro-ondes pour chauffer les aliments ?	Des micro-ondes	De la vapeur	Du feu	De la glace
+¿Qué usan los microondas para calentar la comida?	Microondas	Vapor	Fuego	Hielo
+@1d68ba94
+Jakie mniej więcej napięcie mają domowe gniazdka w Europie?	12 V	110 V	230 V	400 V
+Quelle est à peu près la tension des prises domestiques en Europe ?	12 V	110 V	230 V	400 V
+¿Qué tensión tienen aproximadamente los enchufes domésticos en Europa?	12 V	110 V	230 V	400 V
+@aa573252
+Która grupa krwi jest znana jako uniwersalny dawca?	A Rh+	0 Rh−	AB Rh+	B Rh−
+Quel groupe sanguin est connu comme donneur universel ?	A positif	O négatif	AB positif	B négatif
+¿Qué grupo sanguíneo es el donante universal?	A positivo	0 negativo	AB positivo	B negativo
+@6bb5dd8f
+Jakie jest typowe tętno spoczynkowe dorosłego na minutę?	20–40	180–200	60–100	120–160
+Quelle est la fréquence cardiaque au repos typique d'un adulte par minute ?	20–40	180–200	60–100	120–160
+¿Cuál es la frecuencia cardiaca en reposo típica de un adulto por minuto?	20–40	180–200	60–100	120–160
+@056c87e2
+Do czego służą cyfry pod kodem kreskowym?	Do podania kalorii	Do czasu produkcji	To kod produktu	Tylko do ceny
+À quoi servent les chiffres sous un code-barres ?	Aux calories	À l'heure de fabrication	Au code du produit	Seulement au prix
+¿Para qué sirven los números bajo un código de barras?	Calorías	Hora de fabricación	Código del producto	Solo el precio
+@80909a46
+Czego zwykle NIE ma na metce z ceną?	Daty urodzin sprzedawcy	Ceny	Nazwy produktu	Kodu kreskowego
+Qu'est-ce qu'on ne trouve généralement PAS sur une étiquette de prix ?	L'anniversaire du vendeur	Le prix	Le nom du produit	Le code-barres
+¿Qué NO suele aparecer en una etiqueta de precio?	El cumpleaños del vendedor	El precio	El nombre del producto	El código de barras
+@c49f9992
+Jeśli tydzień zaczyna się w poniedziałek, który dzień jest w środku?	Środa	Czwartek	Wtorek	Piątek
+Si la semaine commence le lundi, quel jour est au milieu ?	Mercredi	Jeudi	Mardi	Vendredi
+Si la semana empieza el lunes, ¿qué día queda en medio?	Miércoles	Jueves	Martes	Viernes
+@37f70d5a
+Co NIE jest programem pralki?	Bawełna	Wirowanie	Delikatne	Grill
+Lequel n'est PAS un programme de lave-linge ?	Coton	Essorage	Délicat	Gril
+¿Cuál NO es un programa de lavadora?	Algodón	Centrifugado	Delicado	Grill
+@7fbddc7c
+Co robi większość telefonów, gdy bateria spada poniżej 20%?	Wyłącza się	Wyświetla ostrzeżenie	Wibruje bez przerwy	Nagrzewa się
+Que font la plupart des téléphones quand la batterie passe sous 20 % ?	Ils s'éteignent	Ils affichent une alerte	Ils vibrent sans arrêt	Ils chauffent
+¿Qué hacen la mayoría de los móviles cuando la batería baja del 20 %?	Se apagan	Muestran un aviso	Vibran sin parar	Se calientan
+@dfbb7e79
+Ile mniej więcej kroków dziennie robi przeciętny dorosły?	500 000	500	50 000	5000
+Combien de pas un adulte fait-il en moyenne par jour ?	500 000	500	50 000	5 000
+¿Cuántos pasos da un adulto medio al día, aproximadamente?	500.000	500	50.000	5000
+@aacbe48e
+Ile zwykle waży w Europie standardowe opakowanie makaronu?	500 g	50 g	2 kg	100 g
+En Europe, combien pèse généralement un paquet de pâtes standard ?	500 g	50 g	2 kg	100 g
+En Europa, ¿cuánto suele pesar un paquete de pasta estándar?	500 g	50 g	2 kg	100 g
+@6bbae1f3
+Jaka substancja pobudzająca jest w kawie?	Cukier	Kofeina	Witamina C	Sól
+Quel stimulant contient le café ?	Le sucre	La caféine	La vitamine C	Le sel
+¿Qué estimulante contiene el café?	Azúcar	Cafeína	Vitamina C	Sal
+@7855ce85
+Jaki jest słynny tekst Królika Bugsa?	Jaba-daba-du!	Jazda!	Co jest, doktorku?	D'oh!
+Quelle est la réplique culte de Bugs Bunny ?	Yabba dabba doo !	C'est parti !	Quoi de neuf, docteur ?	D'oh !
+¿Cuál es la frase famosa de Bugs Bunny?	¡Yabba dabba doo!	¡Vamos!	¿Qué hay de nuevo, viejo?	¡D'oh!
+@a0b60e37
+Za czym wiecznie goni Wiewiór w „Epoce lodowcowej”?	Za rybą	Za bananem	Za żołędziem	Za serem
+Que poursuit toujours Scrat dans « L'Âge de glace » ?	Un poisson	Une banane	Un gland	Du fromage
+¿Qué persigue siempre Scrat en «Ice Age»?	Un pez	Un plátano	Una bellota	Queso
+@8916a87e
+Jak nazywa się kot Gargamela?	Garfield	Tabby	Kitty	Klakier
+Comment s'appelle le chat de Gargamel ?	Garfield	Tabby	Kitty	Azraël
+¿Cómo se llama el gato de Gargamel?	Garfield	Tabby	Kitty	Azrael
+@534e5d8c
+Z którego kraju pochodził wynalazca kostki Rubika?	Z Rosji	Z Niemiec	Z Węgier	Z Japonii
+De quel pays venait l'inventeur du Rubik's Cube ?	Russie	Allemagne	Hongrie	Japon
+¿De qué país era el inventor del cubo de Rubik?	Rusia	Alemania	Hungría	Japón
+@f6707631
+Jak ma na imię Kung Fu Panda?	Tai Lung	Shifu	Oogway	Po
+Comment s'appelle Kung Fu Panda ?	Tai Lung	Shifu	Oogway	Po
+¿Cómo se llama Kung Fu Panda?	Tai Lung	Shifu	Oogway	Po
+@50b3dc4d
+Jak nazywa się pies Tintina?	Milu	Pluto	Reks	Odie
+Comment s'appelle le chien de Tintin ?	Milou	Pluto	Rex	Odie
+¿Cómo se llama el perro de Tintín?	Milú	Pluto	Rex	Odie
+@9b31267e
+Co daje Asteriksowi siłę?	Szpinak	Słońce	Magiczny napój	Mięso z dzika
+Qu'est-ce qui donne sa force à Astérix ?	Les épinards	Le soleil	La potion magique	La viande de sanglier
+¿Qué le da la fuerza a Astérix?	Espinacas	El sol	La poción mágica	Carne de jabalí
+@2f498080
+Kto jest właścicielem Snoopy'ego?	Garfield	Charlie Brown	Lucy	Linus
+Qui est le maître de Snoopy ?	Garfield	Charlie Brown	Lucy	Linus
+¿Quién es el dueño de Snoopy?	Garfield	Charlie Brown	Lucy	Linus
+@00938e2a
+Który słynny duet to polska kreskówka?	Bolek i Lolek	Max i Moritz	Tom i Jerry	Chip i Dale
+Lequel de ces duos est un célèbre dessin animé polonais ?	Bolek et Lolek	Max et Moritz	Tom et Jerry	Tic et Tac
+¿Qué famoso dúo es de dibujos animados polacos?	Bolek y Lolek	Max y Moritz	Tom y Jerry	Chip y Chop
+@cd7f1508
+Kim jest Reksio, bohater polskiej kreskówki?	Kotem	Robotem	Niedźwiedziem	Psem
+Qu'est-ce que Reksio, le héros d'un dessin animé polonais ?	Un chat	Un robot	Un ours	Un chien
+¿Qué es Reksio, el héroe de dibujos animados polaco?	Un gato	Un robot	Un oso	Un perro
+@f9ff6340
+Kim są Mortadelo i Filemón, hiszpański duet komiksowy?	Piłkarzami	Tajnymi agentami	Piratami	Kucharzami
+Que sont Mortadel et Filémon, le duo de BD espagnol ?	Des footballeurs	Des agents secrets	Des pirates	Des chefs
+¿Qué son Mortadelo y Filemón, el dúo de cómic español?	Futbolistas	Agentes secretos	Piratas	Cocineros
+@4af63d60
+Jakim zwierzęciem jest Różowa Pantera?	Tygrysem	Panterą	Kotem domowym	Lwem
+Quel animal est la Panthère rose ?	Un tigre	Une panthère	Un chat domestique	Un lion
+¿Qué animal es la Pantera Rosa?	Tigre	Pantera	Gato doméstico	León
+@ed2e74e2
+Jak ma na imię tata w „Simpsonach”?	Homer	Bart	Ned	Moe
+Comment s'appelle le père dans « Les Simpson » ?	Homer	Bart	Ned	Moe
+¿Cómo se llama el padre en «Los Simpson»?	Homer	Bart	Ned	Moe
+@6cbac609
+Co mają na brzuszkach Teletubisie?	Ekran	Lusterko	Zegar	Kieszeń
+Qu'ont les Télétubbies sur le ventre ?	Un écran	Un miroir	Une horloge	Une poche
+¿Qué tienen los Teletubbies en la barriga?	Una pantalla	Un espejo	Un reloj	Un bolsillo
+@042dd0ca
+Czyja podróż odbywa się pod hasłem „Złap je wszystkie” w anime Pokémon?	Gary'ego	Brocka	Asha (Asha Ketchuma)	Misty
+Dans l'anime Pokémon, quel voyage suit la devise « Attrapez-les tous » ?	Celui de Régis	Celui de Pierre	Celui de Sacha (Sacha Ketchum)	Celui d'Ondine
+En el anime de Pokémon, ¿de quién es el viaje de «¡Hazte con todos!»?	Gary	Brock	Ash (Ash Ketchum)	Misty
+@65a5f72c
+Doraemon to robot wyglądający jak jakie zwierzę?	Kot	Pingwin	Pies	Królik
+Doraemon est un robot qui ressemble à quel animal ?	Un chat	Un manchot	Un chien	Un lapin
+Doraemon es un robot que parece ¿qué animal?	Gato	Pingüino	Perro	Conejo
+@83589afa
+Gdzie zwykle spotykają się dzieci z tureckiej kreskówki „Rafadan Tayfa”?	W swojej okolicy	W kosmosie	W oceanie	W zamku
+Où se retrouvent habituellement les enfants du dessin animé turc « Rafadan Tayfa » ?	Dans leur quartier	Dans l'espace	Dans l'océan	Dans un château
+¿Dónde suelen reunirse los niños de los dibujos turcos «Rafadan Tayfa»?	En su barrio	En el espacio	En el océano	En un castillo
+@37ec3ad1
+W którym roku wprowadzono lalkę Barbie?	1979	1999	1959	1939
+En quelle année la poupée Barbie a-t-elle été lancée ?	1979	1999	1959	1939
+¿En qué año se lanzó la muñeca Barbie?	1979	1999	1959	1939
+@1e6d52ca
+Który podwójny portret Jana van Eycka z 1434 roku ma w tle wypukłe lustro odbijające samego artystę?	Portret małżonków Arnolfinich	Madonna kanclerza Rolin	Ołtarz Gandawski	Portret mężczyzny (autoportret?)
+Quel double portrait de Jan van Eyck (1434) montre au fond un miroir convexe reflétant l'artiste lui-même ?	Les Époux Arnolfini	La Vierge du chancelier Rolin	L'Agneau mystique	Portrait d'homme (autoportrait ?)
+¿Qué doble retrato de Jan van Eyck de 1434 tiene al fondo un espejo convexo que refleja al propio artista?	El matrimonio Arnolfini	La Virgen del canciller Rolin	El retablo de Gante	Retrato de hombre (¿autorretrato?)
+@7669ba8e
+Która złożona kompozycja Diega Velázqueza z 1656 roku przedstawia infantkę Małgorzatę Teresę, dworzan oraz króla i królową w lustrze?	Panny dworskie (Las Meninas)	Poddanie Bredy	Prządki	Wenus z lustrem
+Quelle composition complexe de Diego Vélasquez (1656) montre la jeune infante Marguerite-Thérèse, des courtisans, et le roi et la reine dans un miroir ?	Les Ménines	La Reddition de Breda	Les Fileuses	La Vénus au miroir
+¿Qué compleja composición de Diego Velázquez de 1656 muestra a la infanta Margarita Teresa, sus sirvientes y a los reyes en un espejo?	Las meninas	La rendición de Breda	Las hilanderas	Venus del espejo
+@3613cb28
+Jaka wyjątkowa cecha dzieła sztuki zanika w epoce reprodukcji mechanicznej według eseju Waltera Benjamina z 1935 roku?	Wartość rynkowa	Aura	Forma estetyczna	Funkcja historyczna
+Selon l'essai de Walter Benjamin de 1935, quelle qualité unique de l'œuvre d'art dépérit à l'ère de la reproduction mécanique ?	Sa valeur marchande	Son aura	Sa forme esthétique	Sa fonction historique
+Según el ensayo de Walter Benjamin de 1935, ¿qué cualidad única de la obra de arte se marchita en la era de la reproducción mecánica?	Su valor de mercado	Su aura	Su forma estética	Su función histórica
+@7cd09e02
+Który genialny architekt renesansu zbudował ogromną samonośną ceglaną kopułę katedry we Florencji bez drewnianych krążyn?	Filippo Brunelleschi	Leon Battista Alberti	Donato Bramante	Michelozzo
+Quel génial architecte de la Renaissance a construit l'immense coupole autoportante en briques de la cathédrale de Florence sans cintre en bois ?	Filippo Brunelleschi	Leon Battista Alberti	Donato Bramante	Michelozzo
+¿Qué genial arquitecto renacentista construyó la enorme cúpula autoportante de ladrillo de la catedral de Florencia sin cimbra de madera?	Filippo Brunelleschi	Leon Battista Alberti	Donato Bramante	Michelozzo
+@99b20536
+Jak nazywa się rzeźbiona postać kobieca, która w architekturze greckiej zastępuje kolumnę lub filar?	Atlant / Telamon	Kariatyda	Kore	Kuros
+Comment appelle-t-on la statue féminine qui remplace une colonne comme support dans l'architecture grecque ?	Télamon / Atlante	Caryatide	Korè	Kouros
+¿Cómo se llama la figura femenina esculpida que sustituye a una columna como soporte en la arquitectura griega?	Telamón / Atlante	Cariátide	Kore	Kurós
+@3ef26e0e
+Który rywal Berniniego zaprojektował rzymski kościół San Carlo alle Quattro Fontane z falującą barokową fasadą?	Francesco Borromini	Baldassarre Longhena	Pietro da Cortona	Carlo Maderno
+Quel rival du Bernin a conçu l'église romaine de Saint-Charles-aux-Quatre-Fontaines à la façade baroque ondulante ?	Francesco Borromini	Baldassarre Longhena	Pierre de Cortone	Carlo Maderno
+¿Qué rival de Bernini diseñó la iglesia romana de San Carlo alle Quattro Fontane, con su fachada barroca ondulante?	Francesco Borromini	Baldassarre Longhena	Pietro da Cortona	Carlo Maderno
+@1ded06d1
+Który pionier architektury nowoczesnej sformułował „Pięć punktów nowej architektury”, m.in. słupy (pilotis), tarasy na dachu i okna taśmowe?	Ludwig Mies van der Rohe	Le Corbusier	Frank Lloyd Wright	Alvar Aalto
+Quel pionnier de l'architecture moderne a formulé les « Cinq points de l'architecture nouvelle », dont les pilotis, le toit-terrasse et la fenêtre en bandeau ?	Ludwig Mies van der Rohe	Le Corbusier	Frank Lloyd Wright	Alvar Aalto
+¿Qué pionero de la arquitectura moderna formuló los «Cinco puntos de una nueva arquitectura», como los pilotis, la terraza jardín y la ventana corrida?	Ludwig Mies van der Rohe	Le Corbusier	Frank Lloyd Wright	Alvar Aalto
+@1e64eb96
+Który włoski nurt artystyczny, zapoczątkowany przez Giorgia de Chirico, wykorzystywał puste place, wydłużone cienie i manekiny, by wywołać surrealną melancholię?	Malarstwo metafizyczne	Worticyzm	Suprematyzm	Rayonizm
+Quel mouvement italien lancé par Giorgio De Chirico utilisait places désertes, ombres allongées et mannequins pour évoquer une mélancolie surréelle ?	Peinture métaphysique	Vorticisme	Suprématisme	Rayonnisme
+¿Qué movimiento italiano iniciado por Giorgio de Chirico usaba plazas desiertas, sombras alargadas y maniquíes para evocar una melancolía surreal?	Pintura metafísica	Vorticismo	Suprematismo	Rayonismo
+@320241e1
+Który artysta i biograf renesansu jest uznawany za ojca historii sztuki dzięki dziełu „Żywoty najsławniejszych malarzy, rzeźbiarzy i architektów”?	Giorgio Vasari	Cennino Cennini	Leon Battista Alberti	Pietro Aretino
+Quel artiste et biographe de la Renaissance est reconnu comme le père de l'histoire de l'art pour ses « Vies des meilleurs peintres, sculpteurs et architectes » ?	Giorgio Vasari	Cennino Cennini	Leon Battista Alberti	L'Arétin
+¿Qué artista y biógrafo renacentista es considerado el padre de la historia del arte por sus «Vidas de los más excelentes pintores, escultores y arquitectos»?	Giorgio Vasari	Cennino Cennini	Leon Battista Alberti	Pietro Aretino
+@8aa978a4
+Jakim terminem złudzenia optycznego określa się zniekształconą czaszkę na pierwszym planie „Ambasadorów” Hansa Holbeina Młodszego?	Trompe-l'œil	Anamorfoza	Grisaille	Plamka ślepa
+Quel terme d'illusion d'optique désigne le crâne déformé peint au premier plan des « Ambassadeurs » de Hans Holbein le Jeune ?	Trompe-l'œil	Anamorphose	Grisaille	Tache aveugle
+¿Qué término de ilusión óptica describe la calavera deformada pintada en primer plano de «Los embajadores» de Hans Holbein el Joven?	Trampantojo	Anamorfosis	Grisalla	Punto ciego
+@8d8142b7
+Które prowokacyjne płótno Édouarda Maneta z 1863 roku wywołało skandal na Salonie Odrzuconych, pokazując nagą kobietę na pikniku z ubranymi mężczyznami?	Olimpia	Śniadanie na trawie	Bar w Folies-Bergère	Balkon
+Quelle toile provocante d'Édouard Manet (1863) a fait scandale au Salon des refusés en montrant une femme nue pique-niquant avec des hommes habillés ?	Olympia	Le Déjeuner sur l'herbe	Un bar aux Folies Bergère	Le Balcon
+¿Qué provocador lienzo de Édouard Manet de 1863 escandalizó en el Salón de los Rechazados al mostrar a una mujer desnuda de pícnic con hombres vestidos?	Olympia	Almuerzo sobre la hierba	Un bar del Folies-Bergère	El balcón
+@c9aef496
+Który wielki romantyczny obraz Théodore'a Géricaulta przedstawia makabryczne skutki katastrofy francuskiej fregaty Meduza z 1816 roku?	Tratwa Meduzy	Masakra na Chios	Śmierć Sardanapala	Koronacja Napoleona
+Quelle grande toile romantique de Théodore Géricault montre les suites effroyables du naufrage de la frégate française la Méduse en 1816 ?	Le Radeau de La Méduse	Scènes des massacres de Scio	La Mort de Sardanapale	Le Sacre de Napoléon
+¿Qué gran óleo romántico de Théodore Géricault retrata las horribles consecuencias del naufragio de la fragata francesa Medusa en 1816?	La balsa de la Medusa	La matanza de Quíos	La muerte de Sardanápalo	La coronación de Napoleón
+@fa0d7bca
+Jak nazywa się ozdobny, przypominający plaster miodu element sklepienia stosowany w islamskich, seldżuckich i osmańskich niszach portali i przejściach kopuł?	Łuk	Mukarnas	Portyk / riwak	Portal
+Quel élément de voûte orné en nid d'abeilles utilise-t-on dans les niches de portails et les transitions de coupoles islamiques, seldjoukides et ottomanes ?	Arc	Muqarnas	Portique / riwaq	Portail
+¿Qué elemento decorativo de bóveda en forma de panal se usa en los nichos de portadas y transiciones de cúpulas islámicas, selyúcidas y otomanas?	Arco	Mocárabe (muqarnas)	Pórtico / riwaq	Portada
+@5bd8da19
+Jakie trzy łacińskie zasady starożytnego architekta Witruwiusza określają podstawowe kryteria udanej budowli?	Firmitas, utilitas, venustas (trwałość, użyteczność, piękno)	Ratio, mensura, ordo	Forma, materia, lux	Locus, tempus, spatium
+Quels trois principes latins énoncés par l'architecte antique Vitruve définissent les critères d'un bon bâtiment ?	Firmitas, utilitas, venustas (solidité, utilité, beauté)	Ratio, mensura, ordo	Forma, materia, lux	Locus, tempus, spatium
+¿Qué tres principios latinos del arquitecto antiguo Vitruvio definen los criterios de un buen edificio?	Firmitas, utilitas, venustas (firmeza, utilidad, belleza)	Ratio, mensura, ordo	Forma, materia, lux	Locus, tempus, spatium
+@c7ba484f
+Jak nazywa się duże, okrągłe okno witrażowe z misternym kamiennym maswerkiem na fasadach katedr gotyckich?	Rozeta	Wykusz	Okno ostrołukowe	Okno klerestorium
+Comment appelle-t-on le grand vitrail circulaire orné d'un réseau de pierre complexe sur les façades des cathédrales gothiques ?	Rosace	Oriel	Lancette	Fenêtre haute
+¿Cómo se llama la gran vidriera circular con fina tracería de piedra en las fachadas de las catedrales góticas?	Rosetón	Mirador	Lanceta	Ventana del claristorio
+@5e41968e
+Które arcydzieło wczesnego renesansu Piera della Francesca słynie z geometrycznej, matematycznej kompozycji przestrzeni i stoickich postaci?	Biczowanie Chrystusa	Dyptyk księcia i księżnej Urbino	Grób Święty	Sen Konstantyna
+Quel chef-d'œuvre de la première Renaissance de Piero della Francesca est célèbre pour sa composition géométrique et mathématique et ses figures stoïques ?	La Flagellation du Christ	Diptyque des ducs d'Urbino	Le Saint-Sépulcre	Le Songe de Constantin
+¿Qué obra maestra del primer Renacimiento de Piero della Francesca es célebre por su composición espacial geométrica y matemática y sus figuras estoicas?	La flagelación de Cristo	Díptico de los duques de Urbino	El Santo Sepulcro	El sueño de Constantino

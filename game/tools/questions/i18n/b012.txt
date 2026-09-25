@@ -1,0 +1,440 @@
+@0c25eef8
+Jak nazywa się środek tarczy do rzutek?	Kropka	Centrum	Cel	Bullseye (dziesiątka)
+Comment s'appelle le centre d'une cible de fléchettes ?	Le point	Le centre	La cible	Le bullseye (mille)
+¿Cómo se llama el centro de una diana de dardos?	Punto	Centro	Blanco	Diana (bullseye)
+@cbd64724
+W którym sporcie Michael Phelps ma rekordy olimpijskie?	Pływanie	Wioślarstwo	Lekkoatletyka	Gimnastyka
+Dans quel sport Michael Phelps détient-il des records olympiques ?	Natation	Aviron	Athlétisme	Gymnastique
+¿En qué deporte tiene Michael Phelps récords olímpicos?	Natación	Remo	Atletismo	Gimnasia
+@62c5de3f
+Z którego kraju pochodzi najwięcej zwycięzców Tour de France?	Belgia	Francja	Włochy	Hiszpania
+Quel pays compte le plus de vainqueurs du Tour de France ?	Belgique	France	Italie	Espagne
+¿Qué país tiene más ganadores del Tour de Francia?	Bélgica	Francia	Italia	España
+@54be7440
+Który sport zimowy łączy narciarstwo ze strzelaniem z karabinu?	Slalom	Biathlon	Saneczkarstwo	Bobsleje
+Quel sport d'hiver combine ski et tir à la carabine ?	Slalom	Biathlon	Luge	Bobsleigh
+¿Qué deporte de invierno combina esquí y tiro con rifle?	Eslalon	Biatlón	Luge	Bobsleigh
+@6250a20b
+Kto namalował sklepienie Kaplicy Sykstyńskiej?	Leonardo da Vinci	Botticelli	Michał Anioł	Rafael
+Qui a peint le plafond de la chapelle Sixtine ?	Léonard de Vinci	Botticelli	Michel-Ange	Raphaël
+¿Quién pintó el techo de la Capilla Sixtina?	Leonardo da Vinci	Botticelli	Miguel Ángel	Rafael
+@2a3d9ee5
+Kto namalował „Gwiaździstą noc”?	Claude Monet	Salvador Dalí	Vincent van Gogh	Edvard Munch
+Qui a peint « La Nuit étoilée » ?	Claude Monet	Salvador Dalí	Vincent van Gogh	Edvard Munch
+¿Quién pintó «La noche estrellada»?	Claude Monet	Salvador Dalí	Vincent van Gogh	Edvard Munch
+@0ddae43c
+Kto namalował „Krzyk”?	Gustav Klimt	Egon Schiele	Wassily Kandinsky	Edvard Munch
+Qui a peint « Le Cri » ?	Gustav Klimt	Egon Schiele	Vassily Kandinsky	Edvard Munch
+¿Quién pintó «El grito»?	Gustav Klimt	Egon Schiele	Vasili Kandinski	Edvard Munch
+@6043aff3
+Który malarz surrealista słynie z topniejących zegarów?	René Magritte	Joan Miró	Salvador Dalí	Frida Kahlo
+Quel peintre surréaliste est célèbre pour ses montres molles ?	René Magritte	Joan Miró	Salvador Dalí	Frida Kahlo
+¿Qué pintor surrealista es famoso por sus relojes derretidos?	René Magritte	Joan Miró	Salvador Dalí	Frida Kahlo
+@53bcacae
+Z którego kraju pochodziła Frida Kahlo?	Z Hiszpanii	Z Meksyku	Z Argentyny	Z Kuby
+De quel pays était l'artiste Frida Kahlo ?	Espagne	Mexique	Argentine	Cuba
+¿De qué país era la artista Frida Kahlo?	España	México	Argentina	Cuba
+@6247f496
+Kto namalował „Dziewczynę z perłą”?	Johannes Vermeer	Jan van Eyck	Rembrandt	Frans Hals
+Qui a peint « La Jeune Fille à la perle » ?	Johannes Vermeer	Jan van Eyck	Rembrandt	Frans Hals
+¿Quién pintó «La joven de la perla»?	Johannes Vermeer	Jan van Eyck	Rembrandt	Frans Hals
+@1cb10338
+Kto zaprojektował Sagrada Família w Barcelonie?	Le Corbusier	Frank Gehry	Antoni Gaudí	Santiago Calatrava
+Qui a conçu la Sagrada Família à Barcelone ?	Le Corbusier	Frank Gehry	Antoni Gaudí	Santiago Calatrava
+¿Quién diseñó la Sagrada Familia de Barcelona?	Le Corbusier	Frank Gehry	Antoni Gaudí	Santiago Calatrava
+@0ab8ba08
+Jaka żywność w puszce pojawia się w słynnym dziele Andy'ego Warhola?	Tuńczyk	Zupa	Fasola	Kukurydza
+Quelle conserve apparaît dans une œuvre célèbre d'Andy Warhol ?	Du thon	De la soupe	Des haricots	Du maïs
+¿Qué comida enlatada aparece en una famosa obra de Andy Warhol?	Atún	Sopa	Judías	Maíz
+@887225bf
+Który impresjonista namalował cykl „Lilie wodne”?	Edgar Degas	Claude Monet	Pierre-Auguste Renoir	Paul Cézanne
+Quel impressionniste a peint la série des « Nymphéas » ?	Edgar Degas	Claude Monet	Pierre-Auguste Renoir	Paul Cézanne
+¿Qué impresionista pintó la serie de los «Nenúfares»?	Edgar Degas	Claude Monet	Pierre-Auguste Renoir	Paul Cézanne
+@f9072b73
+Kto wykonał rzeźbę „Myśliciel”?	Michał Anioł	Auguste Rodin	Donatello	Bernini
+Qui a sculpté « Le Penseur » ?	Michel-Ange	Auguste Rodin	Donatello	Le Bernin
+¿Quién hizo la escultura «El pensador»?	Miguel Ángel	Auguste Rodin	Donatello	Bernini
+@5697270a
+Jak nazywa się słynne muzeum sztuki w Madrycie?	Rijksmuseum	Ermitaż	Luwr	Prado
+Comment s'appelle le célèbre musée d'art de Madrid ?	Rijksmuseum	Ermitage	Louvre	Prado
+¿Cómo se llama el famoso museo de arte de Madrid?	Rijksmuseum	Hermitage	Louvre	Prado
+@2cc2706f
+Z którego kraju pochodził Rembrandt?	Z Niemiec	Z Holandii	Z Belgii	Z Anglii
+De quel pays était Rembrandt ?	Allemagne	Pays-Bas	Belgique	Angleterre
+¿De qué país era Rembrandt?	Alemania	Países Bajos	Bélgica	Inglaterra
+@f127f414
+Z którego kraju pochodzi artysta graffiti Banksy?	Z Francji	Z Niemiec	Z USA	Z Wielkiej Brytanii
+De quel pays vient l'artiste de graffiti Banksy ?	France	Allemagne	États-Unis	Royaume-Uni
+¿De qué país es el grafitero Banksy?	Francia	Alemania	EE. UU.	Reino Unido
+@2a60a575
+Z jakiego złotego obrazu słynie Gustav Klimt?	Narodziny	Pocałunek	Sen	Krzyk
+Pour quel tableau doré Gustav Klimt est-il célèbre ?	La Naissance	Le Baiser	Le Rêve	Le Cri
+¿Por qué cuadro dorado es famoso Gustav Klimt?	El nacimiento	El beso	El sueño	El grito
+@3fcb3d5b
+Jak nazywa się przezroczysta farba rozcieńczana wodą?	Akwarela	Farba olejna	Akryl	Pastel
+Comment s'appelle la peinture transparente diluée à l'eau ?	L'aquarelle	La peinture à l'huile	L'acrylique	Le pastel
+¿Cómo se llama la pintura transparente diluida en agua?	Acuarela	Óleo	Acrílico	Pastel
+@6c3ced3e
+Kto napisał „Don Kichota”?	Miguel de Cervantes	Lope de Vega	Gabriel García Márquez	Federico García Lorca
+Qui a écrit « Don Quichotte » ?	Miguel de Cervantes	Lope de Vega	Gabriel García Márquez	Federico García Lorca
+¿Quién escribió el «Quijote»?	Miguel de Cervantes	Lope de Vega	Gabriel García Márquez	Federico García Lorca
+@6833b497
+Kto napisał „Sto lat samotności”?	Jorge Luis Borges	Mario Vargas Llosa	Isabel Allende	Gabriel García Márquez
+Qui a écrit « Cent ans de solitude » ?	Jorge Luis Borges	Mario Vargas Llosa	Isabel Allende	Gabriel García Márquez
+¿Quién escribió «Cien años de soledad»?	Jorge Luis Borges	Mario Vargas Llosa	Isabel Allende	Gabriel García Márquez
+@d9ee3afe
+Kim jest obserwujący wszystko przywódca w „Roku 1984”?	Wódz	Wielki Brat	Napoleon	Kapitan
+Qui est le chef qui surveille tout dans « 1984 » ?	Le Chef	Big Brother	Napoléon	Le Capitaine
+¿Quién es el líder que lo vigila todo en «1984»?	El Jefe	El Gran Hermano	Napoleón	El Capitán
+@b18fa458
+Jak nazywa się smok w „Hobbicie”?	Ancalagon	Glaurung	Drogon	Smaug
+Comment s'appelle le dragon du « Hobbit » ?	Ancalagon	Glaurung	Drogon	Smaug
+¿Cómo se llama el dragón de «El hobbit»?	Ancalagon	Glaurung	Drogon	Smaug
+@954c23cd
+Które zwierzęta przejmują władzę w „Folwarku zwierzęcym”?	Konie	Kury	Świnie	Psy
+Quels animaux prennent le pouvoir dans « La Ferme des animaux » ?	Les chevaux	Les poules	Les cochons	Les chiens
+¿Qué animales toman el poder en «Rebelión en la granja»?	Caballos	Gallinas	Cerdos	Perros
+@4eb34680
+Skąd pochodzi hrabia Drakula?	Z Syberii	Z Transylwanii	Z Toskanii	Z Bawarii
+D'où vient le comte Dracula ?	De Sibérie	De Transylvanie	De Toscane	De Bavière
+¿De dónde es el conde Drácula?	Siberia	Transilvania	Toscana	Baviera
+@c1e35d0a
+Kto napisał „Nędzników”?	Émile Zola	Gustave Flaubert	Aleksander Dumas	Wiktor Hugo
+Qui a écrit « Les Misérables » ?	Émile Zola	Gustave Flaubert	Alexandre Dumas	Victor Hugo
+¿Quién escribió «Los miserables»?	Émile Zola	Gustave Flaubert	Alejandro Dumas	Victor Hugo
+@a8265b0c
+Jaką nagrodę zdobyła polska poetka Wisława Szymborska?	Goncourtów	Pulitzera	Bookera	Literacką Nagrodę Nobla
+Quel prix la poétesse polonaise Wisława Szymborska a-t-elle reçu ?	Le Goncourt	Le Pulitzer	Le Booker	Le prix Nobel de littérature
+¿Qué premio ganó la poeta polaca Wisława Szymborska?	Goncourt	Pulitzer	Booker	Nobel de Literatura
+@aaea68d8
+Kto napisał „Trzech muszkieterów”?	Molier	Juliusz Verne	Wiktor Hugo	Aleksander Dumas
+Qui a écrit « Les Trois Mousquetaires » ?	Molière	Jules Verne	Victor Hugo	Alexandre Dumas
+¿Quién escribió «Los tres mosqueteros»?	Molière	Julio Verne	Victor Hugo	Alejandro Dumas
+@abd7cfbb
+Kto napisał „W 80 dni dookoła świata”?	Juliusz Verne	H.G. Wells	Mark Twain	Daniel Defoe
+Qui a écrit « Le Tour du monde en quatre-vingts jours » ?	Jules Verne	H.G. Wells	Mark Twain	Daniel Defoe
+¿Quién escribió «La vuelta al mundo en ochenta días»?	Julio Verne	H.G. Wells	Mark Twain	Daniel Defoe
+@755fae1f
+Który detektyw używa swoich „małych szarych komórek”?	Panna Marple	Philip Marlowe	Herkules Poirot	Sherlock Holmes
+Quel détective utilise ses « petites cellules grises » ?	Miss Marple	Philip Marlowe	Hercule Poirot	Sherlock Holmes
+¿Qué detective usa sus «pequeñas células grises»?	Miss Marple	Philip Marlowe	Hércules Poirot	Sherlock Holmes
+@0f11eb41
+Jak nazywa się lew w „Opowieściach z Narnii”?	Aslan	Simba	Leo	Mufasa
+Comment s'appelle le lion du « Monde de Narnia » ?	Aslan	Simba	Léo	Mufasa
+¿Cómo se llama el león de «Las crónicas de Narnia»?	Aslan	Simba	Leo	Mufasa
+@fa079beb
+Który kapitan poluje na białego wieloryba w „Moby Dicku”?	Kapitan Nemo	Kapitan Hak	Kapitan Ahab	Kapitan Flint
+Quel capitaine chasse la baleine blanche dans « Moby Dick » ?	Le capitaine Nemo	Le capitaine Crochet	Le capitaine Achab	Le capitaine Flint
+¿Qué capitán persigue a la ballena blanca en «Moby Dick»?	El capitán Nemo	El capitán Garfio	El capitán Ahab	El capitán Flint
+@d410a174
+Kto napisał „Frankensteina”?	Emily Brontë	Bram Stoker	Mary Shelley	Edgar Allan Poe
+Qui a écrit « Frankenstein » ?	Emily Brontë	Bram Stoker	Mary Shelley	Edgar Allan Poe
+¿Quién escribió «Frankenstein»?	Emily Brontë	Bram Stoker	Mary Shelley	Edgar Allan Poe
+@0146e402
+Jakie jest najszybsze zwierzę lądowe?	Koń	Lew	Gepard	Antylopa
+Quel est l'animal terrestre le plus rapide ?	Le cheval	Le lion	Le guépard	L'antilope
+¿Cuál es el animal terrestre más rápido?	Caballo	León	Guepardo	Antílope
+@861511ba
+Liście jakiego drzewa jedzą prawie wyłącznie koale?	Wierzby	Dębu	Eukaliptusa	Sosny
+Les koalas mangent presque exclusivement les feuilles de quel arbre ?	Le saule	Le chêne	L'eucalyptus	Le pin
+¿Las hojas de qué árbol comen casi exclusivamente los koalas?	Sauce	Roble	Eucalipto	Pino
+@be865895
+Jak porozumiewają się delfiny?	Kliknięciami i gwizdami	Gestami rąk	Świeceniem	Zmianą koloru
+Comment les dauphins communiquent-ils ?	Par clics et sifflements	Par des signes de la main	En brillant	En changeant de couleur
+¿Cómo se comunican los delfines?	Con chasquidos y silbidos	Con señas	Brillando	Cambiando de color
+@4c70e262
+Które zwierzę ma odciski palców bardzo podobne do ludzkich?	Koala	Kot	Pies	Papuga
+Quel animal a des empreintes digitales très proches de celles des humains ?	Le koala	Le chat	Le chien	Le perroquet
+¿Qué animal tiene huellas dactilares muy parecidas a las humanas?	Koala	Gato	Perro	Loro
+@6ecf6ab4
+Która pszczoła składa jaja w ulu?	Robotnica	Strażniczka	Truteń	Królowa
+Quelle abeille pond les œufs dans la ruche ?	Une ouvrière	Une gardienne	Un faux bourdon	La reine
+¿Qué abeja pone los huevos en la colmena?	Una obrera	Una guardiana	Un zángano	La reina
+@f65e8bd6
+Do którego gatunku należą najwyższe drzewa na Ziemi?	Sekwoja	Palma	Baobab	Dąb
+Quelle espèce compte les plus grands arbres de la Terre ?	Le séquoia	Le palmier	Le baobab	Le chêne
+¿A qué especie pertenecen los árboles más altos de la Tierra?	Secuoya	Palmera	Baobab	Roble
+@40a4ff8e
+Skąd flamingi mają różowy kolor?	Tylko z genów	Ze słońca	Z wody	Z pożywienia
+D'où les flamants tirent-ils leur couleur rose ?	Uniquement de leurs gènes	Du soleil	De l'eau	De leur nourriture
+¿De dónde sacan los flamencos su color rosa?	Solo de sus genes	Del sol	Del agua	De su comida
+@f130446a
+O ile mniej więcej sowa może obrócić głowę?	360 stopni	90 stopni	180 stopni	270 stopni
+De combien de degrés environ une chouette peut-elle tourner la tête ?	360 degrés	90 degrés	180 degrés	270 degrés
+¿Cuánto puede girar la cabeza un búho, aproximadamente?	360 grados	90 grados	180 grados	270 grados
+@67c88bc8
+Które zwierzę ma trzy serca?	Meduza	Ośmiornica	Krab	Rekin
+Quel animal a trois cœurs ?	La méduse	La pieuvre	Le crabe	Le requin
+¿Qué animal tiene tres corazones?	Medusa	Pulpo	Cangrejo	Tiburón
+@3fbaa119
+Co się dzieje, gdy rozgwiazda straci ramię?	Umiera	Nie może pływać	Zmienia kolor	Może je odtworzyć
+Que se passe-t-il si une étoile de mer perd un bras ?	Elle meurt	Elle ne peut plus nager	Elle change de couleur	Il peut repousser
+¿Qué pasa si una estrella de mar pierde un brazo?	Muere	No puede nadar	Cambia de color	Puede regenerarlo
+@3df4f204
+Które organizmy wytwarzają dużą część tlenu na Ziemi?	Grzyby	Wieloryby	Owady	Fitoplankton oceaniczny
+Quels organismes produisent une grande partie de l'oxygène de la Terre ?	Les champignons	Les baleines	Les insectes	Le phytoplancton océanique
+¿Qué organismos producen una gran parte del oxígeno de la Tierra?	Hongos	Ballenas	Insectos	Fitoplancton marino
+@c746d1bd
+Jak nazywa się długi zimowy sen niektórych zwierząt?	Migracja	Hibernacja	Metamorfoza	Linienie
+Comment s'appelle le long sommeil hivernal de certains animaux ?	Migration	Hibernation	Métamorphose	Mue
+¿Cómo se llama el largo sueño invernal de algunos animales?	Migración	Hibernación	Metamorfosis	Muda
+@c3d5bf27
+Które zwierzę należy do najdłużej żyjących kręgowców lądowych?	Papuga	Słoń	Koń	Żółw olbrzymi
+Quel animal fait partie des vertébrés terrestres qui vivent le plus longtemps ?	Le perroquet	L'éléphant	Le cheval	La tortue géante
+¿Qué animal está entre los vertebrados terrestres más longevos?	Loro	Elefante	Caballo	Tortuga gigante
+@b58a728e
+Czego mrówki używają głównie, by trafić do domu?	Gwiazd	Dźwięku	Wiatru	Śladów zapachowych
+Qu'utilisent surtout les fourmis pour retrouver le chemin du nid ?	Les étoiles	Le son	Le vent	Des pistes odorantes
+¿Qué usan sobre todo las hormigas para volver a casa?	Las estrellas	El sonido	El viento	Rastros de olor
+@b9b8ceb1
+Co się liczy, by poznać wiek drzewa?	Gałęzie	Liście	Słoje w pniu	Korzenie
+Que compte-t-on pour connaître l'âge d'un arbre ?	Les branches	Les feuilles	Les cernes du tronc	Les racines
+¿Qué se cuenta para saber la edad de un árbol?	Ramas	Hojas	Anillos del tronco	Raíces
+@d5aec92a
+Czym motyle odczuwają smak?	Tylko czułkami	Nogami	Oczami	Skrzydłami
+Avec quoi les papillons goûtent-ils ?	Seulement leurs antennes	Leurs pattes	Leurs yeux	Leurs ailes
+¿Con qué saborean las mariposas?	Solo con las antenas	Con las patas	Con los ojos	Con las alas
+@3e65898b
+Jaki jest największy ptak na świecie?	Albatros	Kondor	Struś	Orzeł
+Quel est le plus grand oiseau du monde ?	L'albatros	Le condor	L'autruche	L'aigle
+¿Cuál es el ave más grande del mundo?	Albatros	Cóndor	Avestruz	Águila
+@1515557b
+Które zwierzę ma niebieski język?	Lew	Niedźwiedź	Żyrafa	Kot
+Quel animal a la langue bleue ?	Le lion	L'ours	La girafe	Le chat
+¿Qué animal tiene la lengua azul?	León	Oso	Jirafa	Gato
+@38ea77d4
+Do jakiej grupy należą nietoperze?	Gadów	Owadów	Ptaków	Ssaków
+À quel groupe appartiennent les chauves-souris ?	Les reptiles	Les insectes	Les oiseaux	Les mammifères
+¿A qué grupo pertenecen los murciélagos?	Reptiles	Insectos	Aves	Mamíferos
+@a58ffaf6
+Kto u koników morskich nosi młode?	Samica	Samiec	Oboje	Żadne
+Chez les hippocampes, qui porte les petits ?	La femelle	Le mâle	Les deux	Aucun
+En los caballitos de mar, ¿quién lleva a las crías?	La hembra	El macho	Ambos	Ninguno
+@9464a666
+Która przyprawa jest najdroższa na świecie?	Pieprz czarny	Szafran	Cynamon	Wanilia
+Quelle épice est la plus chère du monde ?	Le poivre noir	Le safran	La cannelle	La vanille
+¿Cuál es la especia más cara del mundo?	Pimienta negra	Azafrán	Canela	Vainilla
+@e3860a7d
+Z którego kraju pochodzi kimchi?	Z Chin	Z Wietnamu	Z Korei	Z Japonii
+De quel pays vient le kimchi ?	Chine	Viêt Nam	Corée	Japon
+¿De qué país es el kimchi?	China	Vietnam	Corea	Japón
+@377e4221
+Z którego kraju pochodzi deser tiramisu?	Z Francji	Z Hiszpanii	Z Włoch	Z Austrii
+Le tiramisu est un dessert de quel pays ?	France	Espagne	Italie	Autriche
+¿De qué país es el postre tiramisú?	Francia	España	Italia	Austria
+@0c075992
+W czym w Hiszpanii zwykle macza się churros?	W miodzie	W keczupie	W jogurcie	W gorącej czekoladzie
+En Espagne, dans quoi trempe-t-on généralement les churros ?	Du miel	Du ketchup	Du yaourt	Du chocolat chaud
+En España, ¿en qué se suelen mojar los churros?	Miel	Kétchup	Yogur	Chocolate caliente
+@0d6b5a54
+Jaką zupą jest gazpacho?	Słodką	Zimną zupą warzywną	Rybną	Gorącą mięsną
+Quel type de soupe est le gaspacho ?	Une soupe sucrée	Une soupe froide de légumes	Une soupe de poisson	Une soupe chaude à la viande
+¿Qué tipo de sopa es el gazpacho?	Una sopa dulce	Una sopa fría de verduras	Una sopa de pescado	Una sopa caliente de carne
+@3c12e1af
+Jakiego koloru jest wasabi?	Żółte	Zielone	Białe	Czerwone
+De quelle couleur est le wasabi ?	Jaune	Vert	Blanc	Rouge
+¿De qué color es el wasabi?	Amarillo	Verde	Blanco	Rojo
+@5632c2a0
+Który kraj słynie z setek serów, takich jak brie i camembert?	Holandia	Włochy	Francja	Szwajcaria
+Quel pays est célèbre pour ses centaines de fromages, comme le brie et le camembert ?	Pays-Bas	Italie	France	Suisse
+¿Qué país es famoso por sus cientos de quesos, como el brie y el camembert?	Países Bajos	Italia	Francia	Suiza
+@35712c43
+Bigos, polska potrawa, robi się głównie z…	Ryżu i ryby	Fasoli i kukurydzy	Ziemniaków i sera	Kapusty i mięsa
+Le bigos, un ragoût polonais, se prépare surtout avec…	Du riz et du poisson	Des haricots et du maïs	Des pommes de terre et du fromage	Du chou et de la viande
+El bigos, un guiso polaco, se hace sobre todo con…	Arroz y pescado	Alubias y maíz	Patatas y queso	Col y carne
+@e70c5b0f
+Który owoc ma w środku jedną dużą pestkę?	Truskawka	Banan	Brzoskwinia	Winogrono
+Quel fruit contient un seul gros noyau ?	La fraise	La banane	La pêche	Le raisin
+¿Qué fruta tiene un solo hueso grande dentro?	Fresa	Plátano	Melocotón	Uva
+@d2199238
+„Fish and chips” to klasyka którego kraju?	Norwegii	Szkocji	Irlandii	Anglii
+Le « fish and chips » est un classique de quel pays ?	Norvège	Écosse	Irlande	Angleterre
+El «fish and chips» es un clásico de ¿qué país?	Noruega	Escocia	Irlanda	Inglaterra
+@abbee7cf
+Z mleka jakiego zwierzęcia robi się tradycyjną mozzarellę?	Kozy	Bawolicy	Owcy	Wielbłądzicy
+Avec le lait de quel animal fait-on la mozzarella traditionnelle ?	La chèvre	La bufflonne	La brebis	La chamelle
+¿Con leche de qué animal se hace la mozzarella tradicional?	Cabra	Búfala	Oveja	Camella
+@a628098b
+Z którego kraju pochodzi pad thai?	Z Wietnamu	Z Indonezji	Z Malezji	Z Tajlandii
+De quel pays vient le pad thaï ?	Viêt Nam	Indonésie	Malaisie	Thaïlande
+¿De qué país es el pad thai?	Vietnam	Indonesia	Malasia	Tailandia
+@55502e0a
+Z którego kontynentu pochodzi komosa ryżowa (quinoa)?	Z Azji	Z Ameryki Południowej	Z Europy	Z Afryki
+De quel continent vient le quinoa ?	Asie	Amérique du Sud	Europe	Afrique
+¿De qué continente procede la quinoa?	Asia	América del Sur	Europa	África
+@3e775882
+Kolory pizzy Margherita odpowiadają której fladze?	Włoch	Meksyku	Węgier	Irlandii
+Les couleurs de la pizza Margherita représentent quel drapeau ?	Italie	Mexique	Hongrie	Irlande
+Los colores de la pizza Margarita representan ¿qué bandera?	Italia	México	Hungría	Irlanda
+@6124755e
+Z czego słynie Belgia?	Z sushi	Z gofrów i czekolady	Z taco	Z pizzy
+Pour quoi la Belgique est-elle célèbre ?	Les sushis	Les gaufres et le chocolat	Les tacos	La pizza
+¿Por qué es famosa Bélgica?	Sushi	Gofres y chocolate	Tacos	Pizza
+@068814f2
+Przy krojeniu którego warzywa się płacze?	Marchewki	Cebuli	Ogórka	Ziemniaka
+Quel légume fait pleurer quand on le coupe ?	La carotte	L'oignon	Le concombre	La pomme de terre
+¿Qué verdura te hace llorar al cortarla?	Zanahoria	Cebolla	Pepino	Patata
+@05c82e80
+W jakiej skali mierzy się ostrość papryczek chili?	Kelvina	Scoville'a	Richtera	Beauforta
+Sur quelle échelle mesure-t-on le piquant des piments ?	Kelvin	Scoville	Richter	Beaufort
+¿En qué escala se mide el picante de los chiles?	Kelvin	Scoville	Richter	Beaufort
+@9084c896
+Z tradycji kawowej którego kraju pochodzi espresso?	Kolumbii	Francji	Włoch	Brazylii
+L'expresso vient de la tradition du café de quel pays ?	Colombie	France	Italie	Brésil
+¿De la tradición cafetera de qué país procede el expreso?	Colombia	Francia	Italia	Brasil
+@5424c1a8
+Który owoc ma nasiona na zewnątrz?	Jabłko	Wiśnia	Arbuz	Truskawka
+Quel fruit a ses graines à l'extérieur ?	La pomme	La cerise	La pastèque	La fraise
+¿Qué fruta tiene las semillas por fuera?	Manzana	Cereza	Sandía	Fresa
+@589e9017
+Z czego tradycyjnie robi się słodkie jajka wielkanocne?	Z czekolady	Z ciasta	Z ryżu	Z sera
+Les œufs de Pâques sucrés sont traditionnellement faits en…	Chocolat	Pâte	Riz	Fromage
+Los huevos de Pascua dulces se hacen tradicionalmente de…	Chocolate	Masa	Arroz	Queso
+@2fb80591
+W którym roku zaprezentowano pierwszego iPhone'a?	2004	2010	2007	2001
+En quelle année le premier iPhone a-t-il été présenté ?	2004	2010	2007	2001
+¿En qué año se presentó el primer iPhone?	2004	2010	2007	2001
+@6836574e
+Jak nazywa się grupa 8 bitów?	Bajt	Półbajt	Kilobit	Słowo
+Comment appelle-t-on un groupe de 8 bits ?	Octet	Quartet	Kilobit	Mot
+¿Cómo se llama un grupo de 8 bits?	Byte	Nibble	Kilobit	Palabra
+@3a888e87
+Czym dosłownie był pierwszy komputerowy „bug” (robak)?	Ćmą	Mrówką	Pająkiem	Karaluchem
+Qu'était littéralement le premier « bug » informatique ?	Un papillon de nuit	Une fourmi	Une araignée	Un cafard
+¿Qué fue literalmente el primer «bug» (bicho) informático?	Una polilla	Una hormiga	Una araña	Una cucaracha
+@ecc6d31a
+W którym roku uruchomiono Wikipedię?	2001	1995	1998	2005
+En quelle année Wikipédia a-t-elle été lancée ?	2001	1995	1998	2005
+¿En qué año se lanzó Wikipedia?	2001	1995	1998	2005
+@2669dbe1
+W którym kraju założono Spotify?	W Norwegii	W Szwecji	W USA	W Niemczech
+Dans quel pays Spotify a-t-il été fondé ?	Norvège	Suède	États-Unis	Allemagne
+¿En qué país se fundó Spotify?	Noruega	Suecia	EE. UU.	Alemania
+@628fa58e
+Jakie zwierzę jest maskotką Linuksa?	Sowa	Pingwin	Lis	Żółw
+Quel animal est la mascotte de Linux ?	Un hibou	Un manchot	Un renard	Une tortue
+¿Qué animal es la mascota de Linux?	Búho	Pingüino	Zorro	Tortuga
+@0b6c72f5
+Jak pierwotnie nazywał się Google?	Googol	SearchBot	WebCrawler	BackRub
+Quel était le nom d'origine de Google ?	Googol	SearchBot	WebCrawler	BackRub
+¿Cuál era el nombre original de Google?	Googol	SearchBot	WebCrawler	BackRub
+@9c60bb73
+Do czego służy CAPTCHA?	Do przyspieszenia internetu	Do odróżniania ludzi od botów	Do zapamiętywania haseł	Do czyszczenia ekranu
+À quoi sert un CAPTCHA ?	À accélérer Internet	À distinguer les humains des robots	À retenir les mots de passe	À nettoyer l'écran
+¿Para qué sirve un CAPTCHA?	Acelerar internet	Distinguir humanos de bots	Recordar contraseñas	Limpiar la pantalla
+@eaebb930
+Jakie zwierzę naprawdę jest na logo Firefoksa?	Panda mała (wygląda jak lis)	Wilk	Wiewiórka	Kot
+Quel animal figure réellement sur le logo de Firefox ?	Un panda roux (qui ressemble à un renard)	Un loup	Un écureuil	Un chat
+¿Qué animal aparece realmente en el logotipo de Firefox?	Panda rojo (parece un zorro)	Lobo	Ardilla	Gato
+@ce04359e
+W którym kraju pierwotnie stworzono Skype'a?	W Estonii	W Finlandii	W Szwecji	W Danii
+Dans quel pays Skype a-t-il d'abord été développé ?	Estonie	Finlande	Suède	Danemark
+¿En qué país se desarrolló originalmente Skype?	Estonia	Finlandia	Suecia	Dinamarca
+@e9ffff6a
+Które z tych haseł jest jednym z najpopularniejszych (i najgorszych)?	Q7#pZ!2m	123456	elephant_2049	Xy9$Lk
+Lequel de ces mots de passe est l'un des plus courants (et des pires) ?	Q7#pZ!2m	123456	elephant_2049	Xy9$Lk
+¿Cuál es una de las contraseñas más comunes (y peores)?	Q7#pZ!2m	123456	elephant_2049	Xy9$Lk
+@c8cb230d
+Która firma produkuje telefony Galaxy?	Samsung	Huawei	LG	Sony
+Quelle entreprise fabrique les téléphones Galaxy ?	Samsung	Huawei	LG	Sony
+¿Qué empresa fabrica los móviles Galaxy?	Samsung	Huawei	LG	Sony
+@30aaa8b1
+Co oznacza litera „U” w USB?	User	Ultra	Unique	Universal
+Que signifie le « U » de USB ?	User	Ultra	Unique	Universal
+¿Qué significa la «U» de USB?	User	Ultra	Unique	Universal
+@ccb36664
+Co brzmiał pierwszy SMS (1992)?	Czy mnie słyszysz?	Hello World	Wesołych Świąt (Merry Christmas)	Test 1 2 3
+Que disait le premier SMS (1992) ?	Tu m'entends ?	Hello World	Joyeux Noël (Merry Christmas)	Test 1 2 3
+¿Qué decía el primer SMS (1992)?	¿Me oyes?	Hello World	Feliz Navidad (Merry Christmas)	Prueba 1 2 3
+@2f8a5039
+Jak nazywa się wczesna, testowa wersja oprogramowania?	Delta	Omega	Beta	Finalna
+Comment appelle-t-on une première version de test d'un logiciel ?	Delta	Oméga	Bêta	Finale
+¿Cómo se llama una versión de prueba temprana de un programa?	Delta	Omega	Beta	Final
+@28e996cf
+Która firma tworzy Windows?	IBM	Microsoft	Apple	Intel
+Quelle entreprise développe Windows ?	IBM	Microsoft	Apple	Intel
+¿Qué empresa hace Windows?	IBM	Microsoft	Apple	Intel
+@e6319b01
+Czego pierwszym przykładem jest zwykle „Hello, World!”?	Nauki języka programowania	Sygnałów w kosmos	Kupna strony internetowej	Wykonania połączenia
+De quoi « Hello, World! » est-il généralement le premier exemple ?	L'apprentissage d'un langage de programmation	Un signal envoyé dans l'espace	L'achat d'un site web	Un appel téléphonique
+¿De qué suele ser el primer ejemplo «Hello, World!»?	Aprender un lenguaje de programación	Enviar señales al espacio	Comprar una web	Hacer una llamada
+@a9882c9f
+Jak zwykle zaczyna się adres strony internetowej?	www//	https://	http@	ftp:\\
+Par quoi commence généralement une adresse web ?	www//	https://	http@	ftp:\\
+¿Cómo empieza normalmente una dirección web?	www//	https://	http@	ftp:\\
+@c352ab44
+Nokia 3310 słynie z tego, że jest…	Wodoodporna pod wodą	Składana	Holograficzna	Niemal niezniszczalna
+Le Nokia 3310 est célèbre pour être…	Utilisable sous l'eau	Pliable	Holographique	Quasi indestructible
+El Nokia 3310 es famoso por ser…	Sumergible	Plegable	Holográfico	Casi indestructible
+@44164882
+Polscy matematycy jako jedni z pierwszych złamali szyfr której niemieckiej maszyny?	Lorenz	Hagelin	Purple	Enigma
+Des mathématiciens polonais ont été parmi les premiers à casser quelle machine de chiffrement allemande ?	Lorenz	Hagelin	Purple	Enigma
+Unos matemáticos polacos fueron de los primeros en descifrar ¿qué máquina de cifrado alemana?	Lorenz	Hagelin	Purple	Enigma
+@d184451c
+Która dawna planeta została w 2006 roku przeklasyfikowana na planetę karłowatą?	Pluton	Neptun	Ceres	Eris
+Quelle ancienne planète a été reclassée en planète naine en 2006 ?	Pluton	Neptune	Cérès	Éris
+¿Qué antiguo planeta se reclasificó como planeta enano en 2006?	Plutón	Neptuno	Ceres	Eris
+@788ed47d
+Która planeta jest najgorętsza w Układzie Słonecznym?	Merkury	Wenus	Mars	Jowisz
+Quelle est la planète la plus chaude du Système solaire ?	Mercure	Vénus	Mars	Jupiter
+¿Cuál es el planeta más caliente del sistema solar?	Mercurio	Venus	Marte	Júpiter
+@ad166d01
+Jak nazywa się gigantyczna burza na Jowiszu?	Czarna Dziura	Niebieski Wir	Wielkie Oko	Wielka Czerwona Plama
+Comment s'appelle la tempête géante de Jupiter ?	Le Trou noir	Le Vortex bleu	Le Grand Œil	La Grande Tache rouge
+¿Cómo se llama la gigantesca tormenta de Júpiter?	Agujero Negro	Vórtice Azul	Gran Ojo	Gran Mancha Roja
+@13c7c2b0
+Ile mniej więcej czasu światło słoneczne leci do Ziemi?	8 sekund	8 minut	8 dni	8 godzin
+Combien de temps environ la lumière du Soleil met-elle pour atteindre la Terre ?	8 secondes	8 minutes	8 jours	8 heures
+¿Cuánto tarda aproximadamente la luz del Sol en llegar a la Tierra?	8 segundos	8 minutos	8 días	8 horas
+@5cf5410d
+Jaki jest angielski skrót Międzynarodowej Stacji Kosmicznej?	NSS	IUS	SSI	ISS
+Quelle est l'abréviation anglaise de la Station spatiale internationale ?	NSS	IUS	SSI	ISS
+¿Cuál es la abreviatura en inglés de la Estación Espacial Internacional?	NSS	IUS	SSI	ISS
+@380d1b35
+Z jakiego obszaru kosmosu nie ucieka nawet światło?	Czarna dziura	Kwazar	Mgławica	Biały karzeł
+De quelle région de l'espace même la lumière ne peut-elle s'échapper ?	Un trou noir	Un quasar	Une nébuleuse	Une naine blanche
+¿De qué región del espacio no puede escapar ni la luz?	Agujero negro	Cuásar	Nebulosa	Enana blanca
+@7b7d4d55
+Ile mniej więcej wschodów słońca widzą każdego dnia astronauci na ISS?	1	16	100	4
+Combien de levers de soleil les astronautes de l'ISS voient-ils environ par jour ?	1	16	100	4
+¿Cuántos amaneceres ven aproximadamente al día los astronautas de la ISS?	1	16	100	4
+@718e2876
+Ile księżyców ma Mars?	1	5	0	2
+Combien de lunes a Mars ?	1	5	0	2
+¿Cuántas lunas tiene Marte?	1	5	0	2
+@2e0bec1b
+Która planeta obraca się, leżąc na boku?	Neptun	Saturn	Uran	Wenus
+Quelle planète tourne couchée sur le côté ?	Neptune	Saturne	Uranus	Vénus
+¿Qué planeta gira tumbado de lado?	Neptuno	Saturno	Urano	Venus
+@0970418b
+Dlaczego ślady stóp na Księżycu mogą wciąż tam być?	Jest tam płot	Zamarzły	Zostały zabetonowane	Nie ma tam wiatru
+Pourquoi les empreintes de pas sur la Lune pourraient-elles encore y être ?	Il y a une clôture	Elles ont gelé	Elles ont été cimentées	Il n'y a pas de vent
+¿Por qué podrían seguir ahí las huellas en la Luna?	Hay una valla	Se congelaron	Las cementaron	No hay viento
+@caa268ea
+Jaki jest skrót Europejskiej Agencji Kosmicznej (Hiszpania i Polska są jej członkami)?	EURA	EUSA	ESPA	ESA
+Quelle est l'abréviation de l'Agence spatiale européenne (dont la France est membre) ?	EURA	EUSA	ESPA	ESA
+¿Cuál es la abreviatura de la Agencia Espacial Europea (de la que España es miembro)?	EURA	EUSA	ESPA	ESA
+@4ed8efeb
+Saturn ma mniejszą gęstość niż woda. Co to teoretycznie oznacza?	Zatonąłby	Unosiłby się w gigantycznej wannie	Zamarzłby	Wyparowałby
+Saturne est moins dense que l'eau. Qu'est-ce que cela signifie en théorie ?	Elle coulerait	Elle flotterait dans une baignoire géante	Elle gèlerait	Elle s'évaporerait
+Saturno es menos denso que el agua. ¿Qué significa eso en teoría?	Se hundiría	Flotaría en una bañera gigante	Se congelaría	Se evaporaría
+@529cdb7f
+Jaki kierunek wskazuje Gwiazda Polarna?	Zachód	Północ	Południe	Wschód
+Quelle direction l'étoile polaire indique-t-elle ?	L'ouest	Le nord	Le sud	L'est
+¿Qué dirección indica la estrella polar?	Oeste	Norte	Sur	Este
+@d225bc84
+Ile dużych księżyców Jowisza odkrył Galileusz?	12	4	2	7
+Combien de grandes lunes de Jupiter Galilée a-t-il découvertes ?	12	4	2	7
+¿Cuántas lunas grandes de Júpiter descubrió Galileo?	12	4	2	7
+@5fb85bc7
+Co się dzieje ze wzrostem astronautów w kosmosie?	Podwaja się	Nic się nie zmienia	Maleją	Rosną o kilka cm
+Qu'arrive-t-il à la taille des astronautes dans l'espace ?	Elle double	Aucun changement	Ils rapetissent	Ils grandissent de quelques cm
+¿Qué les pasa a los astronautas en el espacio con su estatura?	Se duplica	No cambia	Encogen	Crecen unos centímetros
+@7cf9fd8d
+Na której planecie wieją najszybsze wiatry w Układzie Słonecznym?	Na Ziemi	Na Marsie	Na Neptunie	Na Merkurym
+Quelle planète a les vents les plus rapides du Système solaire ?	La Terre	Mars	Neptune	Mercure
+¿Qué planeta tiene los vientos más rápidos del sistema solar?	La Tierra	Marte	Neptuno	Mercurio
+@2192b131
+Jaki jest jedyny naturalny satelita Ziemi?	Fobos	Tytan	Europa	Księżyc
+Quel est le seul satellite naturel de la Terre ?	Phobos	Titan	Europe	La Lune
+¿Cuál es el único satélite natural de la Tierra?	Fobos	Titán	Europa	La Luna
