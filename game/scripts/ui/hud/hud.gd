@@ -30,6 +30,7 @@ var reward: RewardPicker
 var standings: StandingsBoard
 var result: ResultScreen
 var estimate: EstimatePanel
+var mayhem: MayhemOverlay
 var _tug_open := false
 
 func _ready() -> void:
@@ -66,6 +67,8 @@ func _ready() -> void:
 	tug = TugMeter.new()
 	tug.position = Vector2((1920 - TugMeter.W) * 0.5, 22)
 	add_child(tug)
+	mayhem = MayhemOverlay.new()
+	add_child(mayhem)
 	standings = StandingsBoard.new()
 	add_child(standings)
 	reward = RewardPicker.new()
@@ -101,6 +104,8 @@ func reset() -> void:
 	result.visible = false
 	callout.say("")
 	timer.set_time(0.0, 1.0)
+	mayhem.reset()
+	mayhem.visible = false
 
 # ── modların çağırdığı API ─────────────────────────────────────────
 func hud_message(text: String, accent := Pal.GOLD, sub := "") -> void:

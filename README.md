@@ -30,6 +30,12 @@ Fizik motoruyla çalışan, kaotik bir 3D parti bilgi yarışması. Kırmızı k
 | **On kültür kostümü** | **Altı kale üslubu, 3 kule = 3 can** |
 | ![Kostüm odası](docs/screenshots/wardrobe_cq.jpg) | ![Ev partisi](docs/screenshots/house.jpg) |
 | **Kostüm odası:** Trivia ve Fetih sekmeleri | **Ev partisi:** QR'ı okut, telefonun kumanda olsun |
+| ![Mayhem: Dört Kapı](docs/screenshots/mh_reveal.jpg) | ![Mayhem: Zoom Panik](docs/screenshots/mh_zoom.jpg) |
+| **Mayhem · Dört Kapı:** yanlış kapaktakiler havaya uçar | **Mayhem · Zoom Panik:** "BU NE?!" |
+| ![Mayhem: En Yakın](docs/screenshots/mh_nearest.jpg) | ![Mayhem: Yağan Cevaplar](docs/screenshots/mh_falling.jpg) |
+| **Mayhem · En Yakın Kazanır:** sahne bir sayı doğrusu | **Mayhem · Yağan Cevaplar:** doğrusunu yakala |
+| ![Mayhem: Kaos](docs/screenshots/mh_chaos.jpg) | ![Mayhem: Ödüller](docs/screenshots/mh_awards.jpg) |
+| **Kaos olayı:** Mayhem Metre dolunca | **Ödül töreni:** herkese bir ödül |
 
 ## Çalıştırma
 
@@ -75,6 +81,29 @@ Tahminler **tahmin cetveli** ile girilir: sorunun aralığını kapsayan pirinç
 Generaller maç boyunca kulistedir: harita onların taşlarıyla konuşur, soldaki sancak kartlarında kostümlü canlı portreleri durur. Saldırıda kamera iki bölgeye iner, düello açılışında iki general karşı karşıya gelir; kale düşünce kamera yıkılan kalenin çevresinde döner. Finalde herkes selama çıkar.
 
 Her oyuncunun bir **kültür kostümü** (Viking, Romalı, firavun, samuray, mariachi, silahşor, İskoç, yeniçeri, kanatlı hüsar, sınır avcısı) ve bir **kale üslubu** (Beyaz Balıkçıl, basamaklı piramit, Elhamra, masal şatosu, gotik katedral, bozkır otağı) vardır. Haritadaki her bölgede sahibinin kostümlü pelüş taşı durur.
+
+### Mayhem Turu: her soru bir mini oyun
+
+`scripts/modes/mayhem_tour.gd`. "Trivia Mayhem" tasarım belgesinin MVP'si, aynı sahnede. Kimse elenmez: yanlış cevap oyundan atmaz, komik bir şey olur.
+
+1. **Dört Kapı:** doğru kapağa koş. Yanlış kapaktakileri kapak yay gibi havaya fırlatır.
+2. **Zoom Panik:** sağdaki pencerede bir oyuncak nesne çok yakından başlar, yavaşça açılır. Erken bilen daha çok alır. 18 prosedürel nesne var (`scripts/mayhem/prop_icons.gd`).
+3. **En Yakın Kazanır:** sahne bir sayı doğrusu olur (`scripts/mayhem/number_line.gd`). Durduğun yer tahminindir, değer başının üstünde yazar. İlk üç 150/100/50 alır, tam isabet +50.
+4. **Sıralama Kaosu:** dört şeyi sırayla seç (eskiden yeniye, küçükten büyüğe…). Seçilen kapaklar kapanır. 40 set var.
+5. **Kulağına Güven:** telif dışı bir melodi (Neşeye Övgü, Türk Marşı, Für Elise…) ya da gündelik bir ses (siren, guguklu saat, daktilo…) çalar. Ya adını bulursun ya bestecisini. Hepsi notadan sentezlenir (`tools/music/mayhem_sounds.py`).
+6. **Yağan Cevaplar:** şıklar gökten düşer, doğrusunu yakalarsın. Yanlışlar ve kırmızı dev "SAHTE" blokları seni devirir.
+7. **Hafıza Paniği:** dört nesneyi ezberle. Sonra kaybolurlar ya da kutulara girip karışırlar.
+8. **Final Mayhem:** her 8 saniyede başka bir tür gelir (Doğru/Yanlış, kapı, zoom, tahmin, ses). Puanlar ×1.5.
+
+Diğer kurallar:
+
+- **Puan:** doğru 100, hız 0–50. Üst üste 3 doğruya +25, 5 doğruya +50.
+- **Mayhem Metre:** doğrular ve hızlı cevaplar doldurur. Dolunca bir sonraki tura bir kaos olayı gelir: buz pisti, dev kafalar, ters kumanda, minikler ya da kaçan cevaplar (şıklar sürenin yarısında yer değiştirir).
+- **Joker:** sonuncu, lidere 150+ puan uzaksa o tur ×2 puan alır.
+- **Sunucu:** her cevaptan önce "Ve doğru cevap…" diye bekletir, ardından kısa bir yorum yapar ("Zeynep farklı bir evrende yaşıyor.").
+- **Tepkiler:** telefonla oynayanın ekranında HAHA / OHA! / NOOO / EZ düğmeleri var. Basınca sahnede başının üstünde çıkar.
+- **Ödül töreni:** maç sonunda herkes bir ödül alır: Beyin, Panik Butonu, Tahmin Ustası, Tam Bir Bela, Son Saniye Kahramanı, Büyük Dönüş, Zıp Zıp, Sahnenin Işığı.
+- **Süre:** Hızlı (~10 dk, 3 oyun + final) ya da Tam tur (~20 dk, 6 oyun + final). Kurulum ekranından seçilir.
 
 ### Müzik ve ses
 
@@ -171,6 +200,8 @@ Godot'da `game/project.godot`'u aç. En sık dokunulacak yerler:
 | Sorular | `tools/questions/packs/*.txt` (satır başına bir soru) → `python3 game/tools/questions/build_pack.py` → `data/questions.json` |
 | Kostümler | `scripts/actors/plush_visual.gd` (`HATS`, `MUSTACHES`, `BOWTIES`, `GLASSES`, `COLORS`) |
 | Kilitler, XP | `scripts/core/progress.gd` |
+| Mayhem: sıralama setleri, ses listesi | `tools/questions/mayhem_pack.py` → `data/mayhem.json`; sesler `tools/music/mayhem_sounds.py` |
+| Mayhem: mini oyunlar, puanlar, kaos olayları | `scripts/modes/mayhem_tour.gd` (başındaki sabitler) |
 | Bot zekâsı | `scripts/modes/classic_show.gd` (`BOT_ACC`, `BOT_READ`), `conquest_war.gd` (`BOT_ACC`, `BOT_SPREAD`) |
 | Conquest sayıları (puan, süreler) | `scripts/modes/conquest_war.gd` → `CFG` |
 | Kaleler, kostümler | `scripts/conquest/castle_model.gd`, `culture_costume.gd` (her üslup tek bir `match` dalı) |
@@ -225,6 +256,7 @@ Testlerin kapsamı:
 - Kurallar: kombo merdiveni, tur 3 bedel formülü, zorluk sırası.
 - Pelüş fiziği: koşma, zıplama, omuz yiyip devrilme ve kalkma, düşünce elenme.
 - Sahne kurulumu ve kapaktan düşme.
+- Botlarla baştan sona tam bir Mayhem Turu (8 mini oyunun hepsi, kaos olayı, ödüller) ve Mayhem verisi.
 - Botlarla baştan sona tam bir klasik şov (halat, soygun/sabotaj, can turu, ölüm) ve tam bir Conquest maçı.
 
 Telefon kumandasının uçtan uca testi: sunucuyu çalıştır, sonra `godot --headless --path game res://tests/phone_host.tscn -- --relay=ws://localhost:3000/ws`.
@@ -250,7 +282,8 @@ game/
   scripts/stage/          sahne, perdeler, ışık, kapaklar, dekorlar
   scripts/actors/         pelüş fizik + görünüş, kontrolcüler (klavye, gamepad, telefon, bot)
   scripts/camera/         balkon kamerası
-  scripts/modes/          Trivia Arena (classic_show.gd), Conquest (conquest_war.gd)
+  scripts/modes/          Trivia Arena (classic_show.gd), Conquest (conquest_war.gd), Mayhem Turu (mayhem_tour.gd)
+  scripts/mayhem/         oyuncak nesneler (Zoom/Hafıza), sayı doğrusu
   scripts/conquest/       harita tahtası, kaleler, kültür kostümleri, taşlar
   data/maps/turkiye.json  Conquest haritası (web sürümünden)
   scripts/ui/             arayüz: pal.gd (renk/yazı), fx.gd (hareket), icons.gd (simgeler)

@@ -427,6 +427,9 @@ func start_arena(kind := "") -> void:
 	if match_kind == "conquest":
 		props.clear()
 		arena = ConquestWar.new()
+	elif match_kind == "mayhem":
+		props.build_arena_set()
+		arena = MayhemTour.new()
 	else:
 		props.build_arena_set()
 		arena = ClassicShow.new()
@@ -583,7 +586,8 @@ func on_match_finished(kind: String, names: Array, extra := {}) -> void:
 		return
 	SteamService.add_stat("wins", 1)
 	SteamService.unlock("FIRST_WIN")
-	SteamService.unlock("CONQUEROR" if kind == "conquest" else "TRIVIA_CHAMP")
+	if kind != "mayhem":
+		SteamService.unlock("CONQUEROR" if kind == "conquest" else "TRIVIA_CHAMP")
 	if kind == "conquest" and bool(extra.get("untouched", false)):
 		SteamService.unlock("UNTOUCHED")
 	if int(Profile.record(p1.player_name).streak) >= 3:
@@ -593,6 +597,9 @@ func start_conquest() -> void:
 	start_arena("conquest")
 
 func prepare_game_shot(part: String) -> void:
+	if part.begins_with("mh_"):
+		await _mayhem_shot(part.substr(3))
+		return
 	match part:
 		"cq_estimate":
 			start_arena("conquest")
@@ -827,6 +834,46 @@ func prepare_game_shot(part: String) -> void:
 			await get_tree().create_timer(2.6).timeout
 		_:
 			await get_tree().create_timer(1.0).timeout
+
+## Mayhem ekran görüntüleri: mh_<oyun> (soru anı), mh_chaos, mh_awards, mh_result, mh_menu
+func _mayhem_shot(what: String) -> void:
+	if what == "menu":
+		ui.menu._open_setup("mayhem")
+		await _wait(1.6)
+		return
+	var games := ["doors", "zoom", "nearest", "order", "sound", "falling", "memory", "final"]
+	if mode == Mode.LOBBY:
+		start_arena("mayhem")
+		while arena == null:
+			await get_tree().process_frame
+		arena.plan = [what if what in games else ("memory" if what == "memlook" else "doors")]
+		if what == "chaos":
+			arena.chaos_next = "tiny"
+	match what:
+		"chaos":
+			while arena.chaos_now == "":
+				await get_tree().process_frame
+			await _wait(1.0)
+		"awards":
+			while arena.phase != "awards":
+				await get_tree().process_frame
+			await _wait(2.2)
+		"result":
+			while arena.phase != "done":
+				await get_tree().process_frame
+			await _wait(4.0)
+		"memlook":
+			while arena.phase != "memorize":
+				await get_tree().process_frame
+			await _wait(1.6)
+		"reveal":
+			while arena.phase != "reveal":
+				await get_tree().process_frame
+			await _wait(1.2)
+		_:
+			var into: float = {"zoom": 6.0, "memory": 1.0, "falling": 5.0, "nearest": 7.0, "order": 5.0}.get(what, 5.0)
+			while arena.phase != "question" or arena.timer_total - arena.time_left < into:
+				await get_tree().process_frame
 
 # ── ekran görüntüsü senaryoları (araç) ─────────────────────────────
 func _run_shot_script() -> void:

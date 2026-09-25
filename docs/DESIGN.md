@@ -105,6 +105,28 @@ Web sürümünün planı, sahneye serilen 3D bir Türkiye haritasında:
   - Pelüşler: keçe kenar ışığı, 10 yeni şapka, 5 bıyık/sakal, 6 boyun aksesuarı, 7 gözlük, 8 renk.
   - Kültürler: şövalye, korsan (papağan, kanca) ve kâşif.
 
+### Mayhem Turu (`modes/mayhem_tour.gd`, v0.5)
+"Trivia Mayhem" GDD'sinin MVP'si, aynı Büyük Sahne'de. GDD'den eşleşenler ve farklar:
+
+| GDD | Bu oyunda |
+|---|---|
+| Four Doors | Dört kapak. Yanlış kapak oyuncuyu fırlatır (`_launch`) |
+| Zoom Panic | `hud/mayhem_overlay.gd` içinde ayrı dünyalı SubViewport. FOV üstel olarak 4°→24° açılır; hız bonusu ×2 |
+| Nearest Wins / Crowd Guess | Sahne sayı doğrusu (`mayhem/number_line.gd`, geniş aralıkta logaritmik). Tahminler herkesin başının üstünde görünür |
+| Order Chaos | Telefonda sürükleme yerine adım adım seçim (3 adım, kullanılan kapak "✓") |
+| Sound Hunt | 19 telif dışı melodi + 15 gündelik ses, hepsi sentez. Soru adı ya da besteciyi sorar |
+| Falling Answers | Harf ve renkli bloklar düşer. Yanlış blok ve dev SAHTE blok sersemletir |
+| Memory Panic / Don't Get Fooled | 1. tur: nesneler kaybolur. 2. tur: kutulara girip 3–4 kez yer değiştirir |
+| Final Mayhem | 6 × 8 sn: D/Y, kapı, zoom, tahmin, ses, D/Y; ×1.5 |
+| Mayhem Meter + Chaos Events | Metre sağ altta. Olaylar: buz, dev kafa, ters kumanda, minikler, kaçan cevaplar |
+| Comeback | Joker ×2 (sonuncu, 150+ puan geride) |
+| No elimination | Kimse düşmez; sahneden düşen kulisten döner |
+| Reveal system | Seçimler kafaların üstünde → "Ve doğru cevap…" + davul → patlama + sunucu yorumu |
+| Winner ceremony | 8 ödül, herkese bir tane; sonuç ekranında yıldızla |
+| Reactions | Telefonda 6 tepki düğmesi (`rx` mesajı, 0,7 sn sınır) |
+
+Henüz yok (GDD'nin sonraki fazları): çevrimiçi analitik ve soru metrikleri, günlük görevler, aile filtresi, renk körlüğü şekilleri, soru kaynağı/doğrulama alanları, soru editörü.
+
 ### Soru bankası
 `tools/questions/packs/*.txt` satır başına bir soru içerir: `kategori|zorluk(1-3)|TR|EN|doğru|yanlış|yanlış|yanlış`. Şık `tr~en` biçiminde iki dilde yazılabilir. Tahmin satırlarının biçimi `E|cevap|min|max|yıl|TR soru|birim|EN soru|unit`. `build_pack.py` bu paketleri tekrarları ayıklayıp `data/questions.json`'a ekler.
 
@@ -160,9 +182,10 @@ Banka yaklaşık 2000 soru ve 98 tahmin sorusundan oluşur. 15 kategori var, bun
 | `v0.1.0-3d-stage` | Büyük Sahne, pelüş fizik, diegetik arayüz, Trivia Arena (eleme), Conquest Quiz, Ev partisi, 47 başsız test |
 | v0.2 | Klasik şov (web kuralları), yeni arayüz (kinetik tipografi, shaderlar, canlı 3D portre), düzenlenebilir sahne ağacı, 63 başsız test |
 | v0.3 | Gerçek sanat: pelüş karakter modeli + kumaş dokuları, tiyatro dekor modelleri, müzik, gamepad ile menü gezinme, ayarlar (ses, görüntü kalitesi) |
-| **v0.4 (bu sürüm)** | Sahne Rütbesi ve 46 açılabilir öğe, tur çubuğu, ~2000 soru, taş/kiremit shaderları, kayıt dosyası dayanıklılığı, hata raporu |
-| v0.5 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
-| v0.6 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
+| v0.4 | Sahne Rütbesi ve 46 açılabilir öğe, tur çubuğu, ~2000 soru, taş/kiremit shaderları, kayıt dosyası dayanıklılığı, hata raporu |
+| **v0.5 (bu sürüm)** | Mayhem Turu: 8 mini oyun, Mayhem Metre, kaos olayları, ödül töreni, telefon tepkileri |
+| v0.6 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
+| v0.7 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
 
 ### Performans notları
 - Hacimsel sis ve gölgeli spotlar Forward+ gerektirir. Zayıf makineler için "Sade" kalite ayarı (v0.3) sisi ve ikincil gölgeleri kapatacak.

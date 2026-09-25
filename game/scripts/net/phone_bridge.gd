@@ -108,6 +108,8 @@ func _handle(m: Dictionary) -> void:
 			_push(String(m.get("pid", "")), "num", {"v": int(m.get("v", 0)), "lock": bool(m.get("lock", false))})
 		"ans":
 			_push(String(m.get("pid", "")), "ans", {"i": int(m.get("i", -1))})
+		"rx":
+			_push(String(m.get("pid", "")), "rx", {"r": String(m.get("r", "HAHA"))})
 
 func _push(pid: String, kind: String, e: Dictionary) -> void:
 	if pid == "":

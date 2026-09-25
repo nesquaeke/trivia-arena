@@ -174,6 +174,8 @@ class _Row extends Control:
 		draw_string(nf, Vector2(150, h * 0.5 + (4 if data.has("points") else 14)), nm, HORIZONTAL_ALIGNMENT_LEFT, 360, 50 if big else 34, Pal.CHAMPAGNE if alive or big else Color(Pal.CREAM, 0.75))
 		if data.has("points"):
 			var bits := []
+			if String(data.get("award", "")) != "":
+				bits.append("★ " + Pal.upper(String(data.award)))
 			if data.has("correct"):
 				bits.append(Pal.t("result.correct_n", {"n": data.correct, "m": data.get("asked", 0)}))
 			if int(data.get("best_combo", 0)) >= 2:

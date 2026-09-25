@@ -67,6 +67,8 @@ func show_question(p_label: String, prompt: String, options: Array, p_cat: Strin
 	pips = p_pips
 	reveal = -1
 	_texts = options
+	for i in 4:
+		_answers[i].visible = not options.is_empty()   # tahmin sorusunda şık yok
 	_q.text = prompt
 	var fs := 36
 	if prompt.length() > 110:

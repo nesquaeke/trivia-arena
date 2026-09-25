@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile", "test_save_file", "test_error_reporter", "test_progress", "test_round_track",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -346,6 +346,86 @@ func test_arena_match() -> void:
 	var clean: bool = m.all_actors().all(func(p): return p.debuffs.is_empty() and p.collision_layer == 1)
 	check(clean, "sabotajlar ve çarpışma katmanları temizlendi")
 	Engine.time_scale = 1.0
+
+# ── Mayhem Turu ─────────────────────────────────────────────────────
+func test_mayhem_data() -> void:
+	var d := MayhemTour.load_data()
+	var order: Array = d.get("order", [])
+	check(order.size() >= 30, "sıralama setleri yüklendi (%d)" % order.size())
+	var ok_sets := order.all(func(o): return o.tr.items.size() == 4 and o.en.items.size() == 4 and o.tr.labels.size() == 4)
+	check(ok_sets, "her sıralama setinde 4 öğe ve etiket var")
+	var sounds: Array = d.get("sounds", [])
+	var missing := sounds.filter(func(x): return not ResourceLoader.exists("res://assets/audio/mayhem/%s.ogg" % x.id))
+	check(sounds.size() >= 30 and missing.is_empty(), "ses dosyaları mevcut (%d, eksik %d)" % [sounds.size(), missing.size()])
+	var built := 0
+	for id in PropIcons.ids():
+		var n := PropIcons.build(id)
+		if n.get_child_count() > 0:
+			built += 1
+		n.free()
+	check(built == PropIcons.ids().size(), "bütün oyuncak nesneler kuruldu (%d)" % built)
+	var line := NumberLine.new()
+	add_child(line)
+	line.setup(1.0, 10000.0, false)
+	check(line.log_scale and abs(line.x_of(line.value_at(1.0)) - 1.0) < 0.2, "sayı doğrusu logaritmik ve tutarlı")
+	line.setup(1900.0, 2000.0, true)
+	check(not line.log_scale and int(line.value_at(NumberLine.X1)) == 2000, "yıl doğrusu uçta 2000")
+	line.queue_free()
+	var r := RandomNumberGenerator.new()
+	r.seed = 5
+	var plan := MayhemTour.build_plan("tour", r)
+	check(plan[0] == "doors" and plan[plan.size() - 1] == "final" and plan.size() == 7, "tam tur planı: Four Doors ile başlar, finalle biter")
+	check(MayhemTour.build_plan("quick", r).size() == 4, "hızlı tur 3 oyun + final")
+
+func test_mayhem_match() -> void:
+	var m: Node = await _get_main()
+	Engine.time_scale = 4.0
+	m.debug_ff = 2.5
+	var names_before := []
+	for a in m.all_actors():
+		names_before.append(a.player_name)
+	m.start_arena("mayhem")
+	var waited := 0.0
+	var saw := {}
+	var injected := false
+	while (m.arena == null or m.arena.phase != "done") and waited < 420.0:
+		await get_tree().process_frame
+		waited += get_process_delta_time() / Engine.time_scale
+		if m.arena and m.arena is MayhemTour:
+			if not injected:
+				injected = true
+				# her mini oyun bir kez + final; ilk turdan sonra kaos
+				m.arena.plan = ["doors", "zoom", "nearest", "order", "sound", "falling", "memory", "final"]
+				m.arena.chaos_next = "moving"
+			saw[m.arena.phase] = true
+	var a = m.arena
+	check(a is MayhemTour and a.phase == "done", "Mayhem Turu bitti (%.0f sn gerçek zaman)" % waited)
+	if not (a is MayhemTour):
+		Engine.time_scale = 1.0
+		m.debug_ff = 1.0
+		return
+	var games: Array = a.log_lines.filter(func(l): return l.begins_with("GAME ")).map(func(l): return l.substr(5))
+	check(games.size() == 8, "sekiz tur oynandı: %s" % ", ".join(games))
+	check(a.log_lines.any(func(l): return l.begins_with("CHAOS ")), "kaos olayı oldu")
+	var awards: Array = a.log_lines.filter(func(l): return l.begins_with("AWARD "))
+	check(awards.size() == names_before.size(), "herkese bir ödül (%d)" % awards.size())
+	var asked_ok: bool = a.st.values().all(func(s): return s.asked >= 15)
+	check(asked_ok, "herkes bütün soruları oynadı (eleme yok)")
+	var scored: bool = a.st.values().any(func(s): return s.points > 0)
+	check(scored, "puan kazanıldı")
+	check(a.st.values().any(func(s): return s.est_n >= 2), "tahmin turu sayıldı")
+	check(a.st.values().any(func(s): return s.caught > 0), "yağan cevaplardan doğru yakalandı")
+	for p in a.ranking():
+		var s: Dictionary = a.st[p]
+		print("     %s: %d puan, %d/%d doğru, yakalama %d, sersem %d, tahmin sırası %.1f, zıplama %d" % [p.player_name, s.points, s.correct, s.asked, s.caught, s.stunned, s.est_sum / max(1, s.est_n), s.jumps])
+	await get_tree().create_timer(1.0).timeout
+	m.end_arena()
+	await seconds(4.0)
+	check(m.mode == 0 and m.arena == null, "lobiye dönüldü")
+	var clean: bool = m.all_actors().all(func(p): return p.debuffs.is_empty() and p.visible)
+	check(clean, "kaos etkileri temizlendi")
+	Engine.time_scale = 1.0
+	m.debug_ff = 1.0
 
 func test_estimate_ruler() -> void:
 	# logaritmik cetvel: gidiş-dönüş aynı değeri verir, uçlar 0 ve 1

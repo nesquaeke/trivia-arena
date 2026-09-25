@@ -381,6 +381,10 @@ func hud_estimate_reveal(answer: int, answer_text: String, ranked: Array) -> voi
 func hud_estimate_close() -> void: hud.hud_estimate_close()
 func hud_duel_marks(marks: Array, clickable: bool) -> void: hud.hud_duel_marks(marks, clickable)
 func hud_track(act: int, acts: int, kind: String, total: int, done: float, colors: Array = []) -> void: hud.hud_track(act, acts, kind, total, done, colors)
+## Mayhem Turu parçaları (hud/mayhem_overlay.gd)
+func hud_mayhem(method: String, args: Array = []) -> void:
+	if hud.mayhem.has_method(method):
+		hud.mayhem.callv(method, args)
 func hud_duel_splash(a: Dictionary, d: Dictionary, place: String) -> void: hud.hud_duel_splash(a, d, place)
 
 # ── duraklatma, geri, gamepad odağı ────────────────────────────────

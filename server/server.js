@@ -190,6 +190,16 @@ wss.on("connection", (ws) => {
       send(room.host, { t: "ans", pid: ws.pid, i });
       return;
     }
+    if (ws.role === "pad" && m.t === "rx") {
+      // tepki (HAHA, OHA!…): kısa, yalnız izinli metinler
+      const ok = ["HAHA", "OHA!", "NOOO", "EZ", "?!", "WOW"];
+      const r = ok.includes(String(m.r)) ? String(m.r) : "HAHA";
+      const now = Date.now();
+      if (now - (ws.lastRx || 0) < 700) return;
+      ws.lastRx = now;
+      send(room.host, { t: "rx", pid: ws.pid, r });
+      return;
+    }
     if (ws.role === "host" && room.host === ws) {
       if (m.t === "to" && m.msg) send(room.pads.get(String(m.pid)), m.msg);
       else if (m.t === "all" && m.msg) for (const pad of room.pads.values()) send(pad, m.msg);

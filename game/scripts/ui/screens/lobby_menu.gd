@@ -14,7 +14,7 @@ signal online_requested
 
 const COL_X := 88.0
 const COL_W := 600.0
-const MENU_ORDER := ["trivia", "conquest", "house", "online", "customize", "spectate", "howto", "settings", "quit"]
+const MENU_ORDER := ["trivia", "conquest", "mayhem", "house", "online", "customize", "spectate", "howto", "settings", "quit"]
 
 var game: Node
 var logo: MarqueeLogo
@@ -59,14 +59,15 @@ func setup(p_game: Node) -> void:
 	add_child(logo)
 
 	menu_col = VBoxContainer.new()
-	menu_col.position = Vector2(COL_X, 392)
-	menu_col.size = Vector2(COL_W, 560)
+	menu_col.position = Vector2(COL_X, 372)
+	menu_col.size = Vector2(COL_W + 160, 560)
 	menu_col.add_theme_constant_override("separation", 2)
 	add_child(menu_col)
 	_add_btn("trivia", "masks", true, func(): _open_setup("arena"))
 	_add_btn("conquest", "swords", true, func(): _open_setup("conquest"))
+	_add_btn("mayhem", "bolt", true, func(): _open_setup("mayhem"))
 	var gap := Control.new()
-	gap.custom_minimum_size.y = 18
+	gap.custom_minimum_size.y = 10
 	menu_col.add_child(gap)
 	_add_btn("house", "phone", false, func(): house_requested.emit())
 	_add_btn("online", "globe", false, func(): online_requested.emit())
@@ -157,6 +158,8 @@ func _build_setup() -> void:
 	_timer.changed.connect(func(i):
 		if kind == "conquest":
 			Profile.set_setting("cq_length", ["short", "normal", "long"][i])
+		elif kind == "mayhem":
+			Profile.set_setting("mh_length", ["quick", "tour"][i])
 		else:
 			Profile.set_setting("timer", [8, 10, 12][i]))
 	setup_col.add_child(_timer)
@@ -198,7 +201,7 @@ func _spacer(h: float) -> Control:
 	return c
 
 func retext() -> void:
-	var map := {"trivia": ["menu.trivia", "menu.trivia.sub"], "conquest": ["menu.conquest", "menu.conquest.sub"],
+	var map := {"trivia": ["menu.trivia", "menu.trivia.sub"], "conquest": ["menu.conquest", "menu.conquest.sub"], "mayhem": ["menu.mayhem", "menu.mayhem.sub"],
 		"house": ["menu.house", "menu.house.sub"], "online": ["menu.online", "menu.online.sub"], "customize": ["menu.customize", "menu.customize.sub"],
 		"spectate": ["menu.spectate", "menu.spectate.sub"], "howto": ["menu.howto", "menu.howto.sub"],
 		"settings": ["menu.settings", "menu.settings.sub"], "quit": ["menu.quit", "menu.quit.sub"]}
@@ -220,9 +223,11 @@ func retext() -> void:
 	refresh_setup()
 
 func refresh_setup() -> void:
-	_setup_title.text = Pal.upper(I18n.t("menu.conquest" if kind == "conquest" else "menu.trivia"))
-	_setup_caption.text = I18n.t("menu.conquest.sub" if kind == "conquest" else "menu.trivia.sub")
-	_setup_rules.text = Pal.upper(I18n.t("setup.rules_c" if kind == "conquest" else "setup.rules"))
+	var km := {"conquest": ["menu.conquest", "menu.conquest.sub", "setup.rules_c"], "mayhem": ["menu.mayhem", "menu.mayhem.sub", "setup.rules_m"]}
+	var keys: Array = km.get(kind, ["menu.trivia", "menu.trivia.sub", "setup.rules"])
+	_setup_title.text = Pal.upper(I18n.t(keys[0]))
+	_setup_caption.text = I18n.t(keys[1])
+	_setup_rules.text = Pal.upper(I18n.t(keys[2]))
 	_bots.min_value = 0 if game.players.size() > 1 else 1
 	_bots.max_value = 8 - game.players.size()
 	_bots.value = int(Profile.setting("bots", 3))
@@ -231,6 +236,10 @@ func refresh_setup() -> void:
 		_k_timer.text = I18n.t("setup.length")
 		_timer.options = [I18n.t("setup.len.short"), I18n.t("setup.len.normal"), I18n.t("setup.len.long")]
 		_timer.selected = maxi(0, ["short", "normal", "long"].find(String(Profile.setting("cq_length", "normal"))))
+	elif kind == "mayhem":
+		_k_timer.text = I18n.t("setup.length")
+		_timer.options = [I18n.t("setup.len.quick"), I18n.t("setup.len.tour")]
+		_timer.selected = maxi(0, ["quick", "tour"].find(String(Profile.setting("mh_length", "tour"))))
 	else:
 		_k_timer.text = I18n.t("setup.timer")
 		_timer.options = [I18n.t("setup.seconds", {"n": 8}), I18n.t("setup.seconds", {"n": 10}), I18n.t("setup.seconds", {"n": 12})]
@@ -307,7 +316,7 @@ func show_menu() -> void:
 	buttons["settings" if from_settings else kind_button()].grab_focus()
 
 func kind_button() -> String:
-	return "conquest" if kind == "conquest" else "trivia"
+	return kind if kind in ["conquest", "mayhem"] else "trivia"
 
 ## Kurulumda logo yukarı süzülüp söner; kurulum paneli onun yerine çıkar.
 func _logo_away(away: bool) -> void:

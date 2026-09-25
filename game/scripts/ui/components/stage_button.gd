@@ -25,7 +25,7 @@ extends Button
 @export var big := true:
 	set(v):
 		big = v
-		custom_minimum_size.y = 112.0 if big else 54.0
+		custom_minimum_size.y = 92.0 if big else 50.0
 		queue_redraw()
 @export var accent := Color("F6CF7B")
 
@@ -40,7 +40,7 @@ func _init() -> void:
 	text = ""
 	focus_mode = Control.FOCUS_ALL
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	custom_minimum_size.y = 112.0
+	custom_minimum_size.y = 92.0
 
 func _ready() -> void:
 	mouse_entered.connect(_on_enter)
@@ -92,15 +92,15 @@ func _draw() -> void:
 	if _press > 0.0:
 		draw_rect(Rect2(-48, 2, size.x + 90, size.y - 4), Color(1, 0.9, 0.7, 0.18 * _press))
 	var f_title := Pal.display()
-	var fs := 72 if big else 38
-	var cap_fs := 21 if big else 19
+	var fs := 62 if big else 36
+	var cap_fs := 20 if big else 19
 	var x0 := (84.0 if emblem != "" else 64.0) + 18.0 * h + slide
-	var title_y := 74.0 if big else 41.0
+	var title_y := 58.0 if big else 38.0
 	# madalyon (ya da numara)
 	var idx_col := Pal.MUTED.lerp(accent, h)
 	var iy := title_y - fs * 0.5
 	if emblem != "":
-		_draw_medallion(Vector2(slide + 30, title_y - fs * 0.36), 27.0 if big else 18.0, h, ia)
+		_draw_medallion(Vector2(slide + 30, title_y - fs * 0.36), 24.0 if big else 17.0, h, ia)
 	else:
 		draw_string(Pal.italic(), Vector2(slide + 4, iy), index, HORIZONTAL_ALIGNMENT_LEFT, -1, 24 if big else 19, Color(idx_col, ia))
 		draw_line(Vector2(slide + 6, iy + 8), Vector2(slide + 38 + 10 * h, iy + 8), Color(idx_col, 0.6 * ia), 1.0)
@@ -119,7 +119,7 @@ func _draw() -> void:
 	if caption != "":
 		if big:
 			var ca := (0.62 + 0.38 * h) * ia
-			draw_string(Pal.italic(), Vector2(x0 + 2, title_y + cap_fs + 9), caption, HORIZONTAL_ALIGNMENT_LEFT, size.x - x0, cap_fs, Color(Pal.CREAM, ca))
+			draw_string(Pal.italic(), Vector2(x0 + 2, title_y + cap_fs + 7), caption, HORIZONTAL_ALIGNMENT_LEFT, size.x - x0, cap_fs, Color(Pal.CREAM, ca))
 		elif h > 0.02:
 			var cx := x0 + tw + 58 + 12 * h
 			draw_string(Pal.italic(), Vector2(cx, title_y - 8), caption, HORIZONTAL_ALIGNMENT_LEFT, -1, cap_fs, Color(Pal.CREAM, 0.85 * h * ia))

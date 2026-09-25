@@ -56,6 +56,9 @@
     background:radial-gradient(circle at 35% 28%,var(--brass-hi),var(--brass) 55%,var(--brass-lo));box-shadow:0 8px 0 #3a2408,0 12px 20px rgba(0,0,0,.5)}
   .btn.red{background:radial-gradient(circle at 35% 28%,#e0737a,#9a1a26 58%,#4a060c);color:var(--gold)}
   .btn.down{transform:translateY(6px);box-shadow:0 2px 0 #3a2408,0 4px 10px rgba(0,0,0,.5)}
+  .rx{position:absolute;left:0;right:0;top:0;z-index:2;display:flex;justify-content:center;gap:8px;padding:6px;pointer-events:auto}
+  .rx div{padding:8px 12px;border:2px solid var(--brass);background:rgba(20,9,5,.85);font:400 18px Limelight,serif;color:var(--gold);border-radius:6px}
+  .rx div:active{transform:translateY(2px);background:var(--brass);color:var(--ink)}
   .out{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:rgba(10,4,4,.8);text-align:center;padding:20px}
   .out b{font-family:Limelight,serif;font-weight:400;font-size:36px;color:#ff8a6a}
   /* sayı klavyesi ve şıklar (Conquest) */
@@ -106,6 +109,7 @@
       <div class="btn" id="bJump" data-t="jump">ZIPLA</div>
       <div class="btn red" id="bShove" data-t="shove">OMUZ</div>
     </div>
+    <div class="rx" id="rxBar"></div>
     <div class="out" id="outCard" hidden><b data-t="out">Elendin!</b><p data-t="outSub">Kuyudan izle. Bir sonraki maçta sahnedesin.</p></div>
     <div class="sheet" id="numSheet" hidden>
       <div class="q" id="numQ"></div>
@@ -197,6 +201,19 @@ function onMsg(m){
   }
 }
 
+
+// ── tepkiler: sahnede başının üstünde çıkar ──
+(function buildRx(){
+  const bar = $('rxBar');
+  ['HAHA','OHA!','NOOO','EZ','?!','WOW'].forEach(r => {
+    const b = document.createElement('div');
+    b.textContent = r;
+    const send = (e) => { e.preventDefault(); buzz(15); if (ws && ws.readyState === 1) ws.send(JSON.stringify({ t:'rx', r })); };
+    b.addEventListener('touchstart', send, { passive:false });
+    b.addEventListener('mousedown', send);
+    bar.appendChild(b);
+  });
+})();
 
 // ── Conquest: sayı klavyesi ve şık düğmeleri ──
 const ZONE = ['#F2B83C','#3FC4B2','#EE5C86','#9A7CF2'];
