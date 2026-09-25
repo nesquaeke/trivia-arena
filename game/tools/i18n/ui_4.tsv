@@ -4,3 +4,6 @@ tug.click	lub klikaj kategorię myszką	ou clique sur une catégorie	o haz clic 
 set.soundpack	Pakiet dźwięków	Pack sonore	Paquete de sonido
 set.soundpack.d	Wrzuć do folderu plik .ogg/.wav/.mp3 o tej samej nazwie, a zastąpi dźwięk, muzykę lub kwestię narratora. Uruchom grę ponownie.	Dépose dans le dossier un .ogg/.wav/.mp3 du même nom pour remplacer un son, une musique ou une réplique. Relance le jeu.	Suelta en la carpeta un .ogg/.wav/.mp3 con el mismo nombre para sustituir un sonido, música o frase del presentador. Reinicia el juego.
 set.soundpack.btn	Otwórz folder	Ouvrir le dossier	Abrir carpeta
+setup.map	Mapa	Carte	Mapa
+setup.map.turkiye	Turcja	Turquie	Turquía
+setup.map.polska	Polska	Pologne	Polonia

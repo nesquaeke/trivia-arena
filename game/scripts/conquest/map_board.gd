@@ -7,7 +7,10 @@ extends Node3D
 ## Çevresi mavi saten deniz; önünde ve arkasında eski tiyatroların "dalga
 ## makinesi" gibi sallanan boyalı dalga kesikleri.
 ##
-## Veri: res://data/maps/turkiye.json (web sürümündeki 15 bölge, gerçek il sınırları).
+## Veri: res://data/maps/turkiye.json (web sürümündeki 15 bölge, gerçek il sınırları)
+## ya da res://data/maps/polska.json (16 voyvodalık; tools/maps/build_poland.py üretir).
+## Harita verisi isteğe bağlı: shore (kıyı şeridi), ships (gemiler), land (komşu ülkeler
+## keçesi), decor (ülke/deniz yazıları), label_scale/label_offset (bölge adı boyutu).
 
 signal region_clicked(id: String)
 signal region_hovered(id: String)
@@ -19,6 +22,8 @@ const GAP := 0.028           ## bölgeler arası dikiş boşluğu
 const RIM := 0.075           ## kenardaki koyu şerit genişliği
 const SEA_D := 7.1            ## deniz (masa) derinliği — arka duvara girmesin
 const SEA_Z := -1.3           ## denizin merkezi
+const DEPTH_MAX := 6.6       ## haritanın sahnedeki en büyük derinliği (dar/uzun haritalar sığsın)
+const MAPS := {"turkiye": "res://data/maps/turkiye.json", "polska": "res://data/maps/polska.json"}
 const NEUTRAL := [Color("E9DCC0"), Color("E3D2B0"), Color("EEE3CA"), Color("DDCDA9")]
 
 var data := {}
@@ -40,7 +45,7 @@ var _ships: Array[Node3D] = []
 func load_map(path := "res://data/maps/turkiye.json") -> void:
 	var f := FileAccess.open(path, FileAccess.READ)
 	data = JSON.parse_string(f.get_as_text())
-	S = WIDTH / float(data.cols)
+	S = minf(WIDTH / float(data.cols), DEPTH_MAX / float(data.rows))
 
 func to_world(mx: float, my: float) -> Vector3:
 	return Vector3((mx - data.cols * 0.5) * S, 0.0, CENTER_Z + (my - data.rows * 0.5) * S)
@@ -61,6 +66,7 @@ func build() -> void:
 	regions.clear()
 	order.clear()
 	_build_sea()
+	_build_land()
 	_build_waves()
 	var i := 0
 	for r in data.regions:
@@ -142,17 +148,17 @@ func _build_region(r: Dictionary, col: Color) -> void:
 	var lab := Label3D.new()
 	lab.font = Pal.italic_black()
 	lab.font_size = 64
-	lab.pixel_size = 0.0034
-	lab.text = String(r.tr)
+	lab.pixel_size = 0.0034 * float(data.get("label_scale", 1.0))
+	lab.text = String(r.get("label", r.tr))
 	lab.modulate = Color("3A1C10")
 	lab.outline_size = 10
 	lab.outline_modulate = Color(1, 0.96, 0.86, 0.85)
 	lab.rotation = Vector3(-PI / 2, 0, 0)
-	lab.position = Vector3(seat.x, H + 0.012, seat.z + 0.42)
+	lab.position = Vector3(seat.x, H + 0.012, seat.z + float(data.get("label_offset", 0.42)))
 	lab.double_sided = false
 	node.add_child(lab)
 	regions[id] = {
-		"id": id, "name_tr": r.tr, "name_en": r.en, "adj": (r.adj as Array).duplicate(),
+		"id": id, "name_tr": r.tr, "name_en": r.en, "names": r, "adj": (r.adj as Array).duplicate(),
 		"seat": Vector3(seat.x, H, seat.z), "polys": polys, "node": node, "top_mat": top_mat, "rim_mat": rim_mat,
 		"base_col": col, "label": lab, "owner_col": null, "rich": false,
 		"lift": 0.0, "lift_target": 0.0, "glow": 0.0, "glow_target": 0.0, "piece": null, "badge": null,
@@ -265,6 +271,10 @@ func _build_sea() -> void:
 			continue
 		for halo in Geometry2D.offset_polygon(raw, 0.16, Geometry2D.JOIN_ROUND):
 			_add_cap(st, halo, 0.018)
+	for line in data.get("shore", []):
+		var pl := _pts(line)
+		for i in range(pl.size() - 1):
+			_quad_line(st, pl[i], pl[i + 1], 0.3, 0.018)
 	var shallow := MeshInstance3D.new()
 	shallow.mesh = st.commit()
 	var sm := StandardMaterial3D.new()
@@ -273,6 +283,37 @@ func _build_sea() -> void:
 	sm.metallic_specular = 0.8
 	shallow.material_override = sm
 	add_child(shallow)
+
+## Komşu ülkeler: denizin üstüne serilen soluk keçe (Polonya haritasında Baltık dışında her yer kara)
+func _build_land() -> void:
+	var land: Array = data.get("land", [])
+	if land.is_empty():
+		return
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	for loop in land:
+		var poly := _pts(loop)
+		if poly.size() >= 3:
+			_add_cap(st, poly, 0.04)   # sahne zeminindeki kapak çerçevelerinin üstünde kalsın
+	var mi := MeshInstance3D.new()
+	mi.mesh = st.commit()
+	mi.name = "Neighbours"
+	var m := _felt(Color("5E6446"))
+	m.uv1_scale = Vector3(1.4, 1.4, 1.4)
+	mi.material_override = m
+	add_child(mi)
+	for d in data.get("decor", []):
+		var lab := Label3D.new()
+		lab.font = Pal.italic_black() if bool(d[3]) else Pal.display_bold()
+		lab.font_size = 64
+		lab.pixel_size = 0.0036 if bool(d[3]) else 0.0028
+		lab.text = String(d[0])
+		lab.modulate = Color(0.85, 0.93, 1.0, 0.75) if bool(d[3]) else Color(0.95, 0.9, 0.78, 0.7)
+		lab.rotation = Vector3(-PI / 2, 0, 0)
+		var w := to_world(float(d[1]), float(d[2]))
+		lab.position = Vector3(w.x, 0.05, w.z)
+		lab.render_priority = 6      # yarı saydam saten denizin üstünde çizilsin
+		add_child(lab)
 
 func _build_waves() -> void:
 	_waves.clear()
@@ -471,11 +512,18 @@ func _build_ships() -> void:
 	sail_m.cull_mode = BaseMaterial3D.CULL_DISABLED
 	var red := PlushVisual.mat("ship_flag", Color("B8263A"), 0.6)
 	# [başlangıç x, z, yön]: Karadeniz'de doğuya, Akdeniz'de batıya
-	for spec in [[-2.6, -4.5, 1.0], [-1.4, 1.72, -1.0]]:
+	var specs: Array = [[-2.6, -4.5, 1.0], [-1.4, 1.72, -1.0]]
+	if data.has("ships"):
+		specs = []
+		for sp in data.ships:
+			var w := to_world(float(sp[0]), float(sp[1]))
+			specs.append([w.x, w.z, float(sp[2])])
+	for spec in specs:
 		var ship := Node3D.new()
 		ship.position = Vector3(float(spec[0]), 0.03, float(spec[1]))
 		ship.set_meta("dir", float(spec[2]))
 		ship.set_meta("x0", float(spec[0]))
+		ship.set_meta("roam", float(data.get("ship_roam", 1.8)))
 		ship.rotation.y = 0.0 if float(spec[2]) > 0 else PI
 		add_child(ship)
 		var hull := MeshInstance3D.new()
@@ -531,6 +579,11 @@ func region_name(id: String) -> String:
 	var r := region(id)
 	if r.is_empty():
 		return id
+	# haritada o dilde ad varsa o (Polonya: pl/fr/es/tr/en), yoksa TR/EN
+	var l := Pal.lang()
+	var names: Dictionary = r.get("names", {})
+	if names.has(l):
+		return String(names[l])
 	return String(r.name_en if not Pal.tr_lang() else r.name_tr)
 
 func seat(id: String) -> Vector3:
@@ -674,9 +727,13 @@ func set_piece(id: String, piece: Node3D) -> void:
 		r.node.add_child(piece)
 		piece.position = r.seat + Vector3(0, 0.0, -0.05)
 		piece.scale = Vector3(0.01, 0.01, 0.01)
-		var s: Vector3 = piece.get_meta("base_scale", Vector3.ONE)
+		# küçük ölçekli haritalarda (Polonya) kale ve taşlar bölgeye sığacak kadar küçülür
+		var s: Vector3 = piece.get_meta("base_scale", Vector3.ONE) * piece_scale()
 		var tw2 := piece.create_tween()
 		tw2.tween_property(piece, "scale", s, 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+func piece_scale() -> float:
+	return clampf(S / (WIDTH / 1437.0), 0.6, 1.0)
 
 func piece(id: String) -> Node3D:
 	var r := region(id)
@@ -741,7 +798,7 @@ func _process(delta: float) -> void:
 	for sh in _ships:
 		var dir: float = sh.get_meta("dir")
 		var x0: float = sh.get_meta("x0")
-		sh.position.x = x0 + sin(_t * 0.05 * dir) * 1.8
+		sh.position.x = x0 + sin(_t * 0.05 * dir) * float(sh.get_meta("roam", 1.8))
 		sh.position.y = 0.03 + sin(_t * 1.7 + x0) * 0.012
 		sh.rotation.x = sin(_t * 1.3 + x0) * 0.06
 		sh.rotation.z = sin(_t * 1.1 + x0 * 2.0) * 0.05

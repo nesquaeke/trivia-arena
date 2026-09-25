@@ -148,6 +148,11 @@ Henüz yok (GDD'nin sonraki fazları): çevrimiçi analitik ve soru metrikleri, 
 
 Banka yaklaşık 2000 soru ve 98 tahmin sorusundan oluşur. 15 kategori var, bunların arasında Uzay, Tuhaf ama Gerçek ve Diller ve Kelimeler yeni. Sorular evrenseldir, İspanyol ve Polonyalı oyuncular için de yerel dokunuşlar içerir.
 
+### Haritalar
+Conquest iki haritada oynanır; kurulum ekranında seçilir. **Türkiye:** 16 bölge, gerçek il sınırları, çevresi saten deniz. **Polonya:** 16 voyvodalık, resmî Lehçe adlarıyla (Mazowieckie, Wielkopolskie…). Kuzeyi Baltık, diğer yönleri komşu ülkelerin (Niemcy, Czechy, Słowacja, Ukraina, Białoruś, Litwa, Rosja) keçesi. Komşuluklar sınırlardan hesaplanır ve gerçekle birebir aynıdır (34 sınır). Mesajlarda voyvodalık oyuncunun dilindeki adıyla geçer (TR "Mazovya", EN "Masovia", PL "Mazowieckie"). Kaleler ve taşlar haritanın ölçeğine göre küçülür. Harita verisi: Simplemaps.com (ticari kullanım serbest).
+
+![Polonya haritası](screenshots/map_poland.jpg)
+
 ### Diller
 Oyun beş dilde oynanır: Türkçe, İngilizce, Lehçe, Fransızca, İspanyolca. Arayüz, 2135 soru, 98 tahmin sorusu, Mayhem sıralama setleri ve ses adları, kategori adları, başarımlar, Günlük Kelime (dile özel sözlük ve klavye: Lehçe harf sırası, Fransızca AZERTY, İspanyolca Ñ), anlatıcı sesi (MBROLA pl1/fr1/es2) ve telefon kumandası hepsi çevrilidir. Sayılar dile göre biçimlenir: TR/ES `150.000`, PL/FR `150 000`, EN `150,000`; ondalık virgül EN dışında. Bir çeviri eksikse metin İngilizceye düşer. Soru çevirilerinde şıklar İngilizcedeki sırayla yazılır, böylece doğru cevabın yeri bütün dillerde aynı kalır.
 

@@ -94,6 +94,8 @@ func _ready() -> void:
 			debug_ff = float(a.substr(5))
 		elif a.begins_with("--lang="):
 			I18n.set_lang(a.substr(7))
+		elif a.begins_with("--cqmap="):
+			Profile.data.settings["cq_map"] = a.substr(8)
 	if _shot_mode != "":
 		Profile.save_enabled = false
 		if _shot_mode.contains("result_rank"):
@@ -730,6 +732,7 @@ func prepare_game_shot(part: String) -> void:
 			stage.set_map_light(true)
 			var mb := MapBoard.new()
 			add_child(mb)
+			mb.load_map(MapBoard.MAPS.get(String(Profile.setting("cq_map", "turkiye")), MapBoard.MAPS.turkiye))
 			mb.build()
 			for a in all_actors():
 				a.visible = false

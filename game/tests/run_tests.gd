@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile", "test_save_file", "test_error_reporter", "test_progress", "test_shop", "test_daily_word", "test_round_track",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_rules", "test_wardrobe_spot", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_wardrobe_spot", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_conquest_match_pl", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -642,8 +642,46 @@ func test_conquest_map() -> void:
 	check(c.towers == 1, "kale kulesi düşer")
 	c.queue_free()
 	mb.queue_free()
+	# Polonya: 16 voyvodalık, gerçek komşuluklar, beş dilde adlar
+	var pl := MapBoard.new()
+	add_child(pl)
+	pl.load_map(MapBoard.MAPS.polska)
+	pl.build()
+	check(pl.order.size() == 16, "Polonya haritası 16 voyvodalık (%d)" % pl.order.size())
+	var sym2 := true
+	var inside2 := true
+	for id in pl.order:
+		for n in pl.region(id).adj:
+			if not pl.region(n).adj.has(id):
+				sym2 = false
+		if pl.region_at(pl.region(id).seat) != id:
+			inside2 = false
+	check(sym2 and inside2, "Polonya: komşuluklar iki yönlü, taş yerleri bölge içinde")
+	check(pl.region("pl14").adj.size() == 6 and pl.region("pl30").adj.size() == 7, "Mazowieckie 6, Wielkopolskie 7 komşulu")
+	# hepsi birbirine yoldan bağlı (savaşta her yere ulaşılabilir)
+	var seen := {"pl14": true}
+	var q := ["pl14"]
+	while not q.is_empty():
+		for n in pl.region(q.pop_back()).adj:
+			if not seen.has(n):
+				seen[n] = true
+				q.append(n)
+	check(seen.size() == 16, "Polonya: bütün voyvodalıklar bağlı")
+	I18n.set_lang("pl")
+	var n_pl := pl.region_name("pl14")
+	I18n.set_lang("tr")
+	check(n_pl == "Mazowieckie" and pl.region_name("pl14") == "Mazovya", "voyvodalık adları dile göre (%s)" % n_pl)
+	pl.queue_free()
 
 func test_conquest_match() -> void:
+	await _conquest_match("turkiye")
+
+func test_conquest_match_pl() -> void:
+	await _conquest_match("polska")
+
+func _conquest_match(map_id: String) -> void:
+	var old_map = Profile.setting("cq_map", "turkiye")
+	Profile.data.settings["cq_map"] = map_id
 	var m: Node = await _get_main()
 	await seconds(1.0)
 	Engine.time_scale = 4.0
@@ -657,7 +695,10 @@ func test_conquest_match() -> void:
 		if m.arena:
 			saw[m.arena.phase] = true
 	var c = m.arena
-	check(c is ConquestWar and c.phase == "done", "Conquest maçı bitti (%.0f sn gerçek zaman)" % waited)
+	Profile.data.settings["cq_map"] = old_map
+	check(c is ConquestWar and c.phase == "done", "Conquest maçı bitti: %s (%.0f sn gerçek zaman)" % [map_id, waited])
+	if c is ConquestWar:
+		check(String(c.board.data.get("name", "turkiye")) == map_id or (map_id == "turkiye" and not c.board.data.has("name")), "maç seçilen haritada oynandı (%s)" % map_id)
 	if not (c is ConquestWar):
 		Engine.time_scale = 1.0
 		m.debug_ff = 1.0

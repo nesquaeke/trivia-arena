@@ -39,6 +39,9 @@ var _back: CtaButton
 var _k_bots: KickerLabel
 var _k_level: KickerLabel
 var _k_timer: KickerLabel
+var _k_map: KickerLabel
+var _map: Segmented
+const MAP_IDS := ["turkiye", "polska"]
 var _k_setup: KickerLabel
 
 func setup(p_game: Node) -> void:
@@ -175,6 +178,17 @@ func _build_setup() -> void:
 		else:
 			Profile.set_setting("timer", [8, 10, 12][i]))
 	setup_col.add_child(_timer)
+	# Conquest: harita seçimi (Türkiye / Polonya)
+	_k_map = KickerLabel.new()
+	_k_map.rules = false
+	_k_map.color = Color(Pal.CREAM, 0.75)
+	_k_map.font_size = 17
+	setup_col.add_child(_k_map)
+	_map = Segmented.new()
+	_map.custom_minimum_size = Vector2(420, 54)
+	_map.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	_map.changed.connect(func(i): Profile.set_setting("cq_map", MAP_IDS[i]))
+	setup_col.add_child(_map)
 	setup_col.add_child(_spacer(26))
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 16)
@@ -253,6 +267,11 @@ func refresh_setup() -> void:
 	_bots.max_value = 8 - game.players.size()
 	_bots.value = int(Profile.setting("bots", 3))
 	_level.selected = ["easy", "normal", "hard"].find(String(Profile.setting("bot_level", "normal")))
+	_k_map.visible = kind == "conquest"
+	_map.visible = kind == "conquest"
+	_k_map.text = I18n.t("setup.map")
+	_map.options = [I18n.t("setup.map.turkiye"), I18n.t("setup.map.polska")]
+	_map.selected = maxi(0, MAP_IDS.find(String(Profile.setting("cq_map", "turkiye"))))
 	if kind == "conquest":
 		_k_timer.text = I18n.t("setup.length")
 		_timer.options = [I18n.t("setup.len.short"), I18n.t("setup.len.normal"), I18n.t("setup.len.long")]

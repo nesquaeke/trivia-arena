@@ -230,6 +230,8 @@ Godot'da `game/project.godot`'u aç. En sık dokunulacak yerler:
 | Sorular | `tools/questions/packs/*.txt` (satır başına bir soru) → `python3 game/tools/questions/build_pack.py` → `data/questions.json` |
 | Kostümler | `scripts/actors/plush_visual.gd` (`HATS`, `MUSTACHES`, `BOWTIES`, `GLASSES`, `COLORS`) |
 | Kilitler, XP, jeton fiyatları | `scripts/core/progress.gd` (`LEVEL_UNLOCKS`, `LEVEL_UNLOCKS_2`, `SHOP_ONLY`) |
+| Conquest haritaları | `data/maps/turkiye.json`, `data/maps/polska.json`. Polonya `tools/pl.svg`'den üretilir: `python3 game/tools/maps/build_poland.py` (voyvodalık adları, komşuluk, kıyı, komşu ülkeler) |
+| Suno müzikleri | `tools/audio/suno_in/<parça>.mp3` → `python3 game/tools/audio/music_import.py` → `assets/audio_pro/music/` |
 | Kategori adları | `tools/questions/build_pack.py` → `FUN_NAMES` ("Beynini Yak", "Ağzın Sulanacak"…) |
 | Mayhem: sıralama setleri, ses listesi | `tools/questions/mayhem_pack.py` → `data/mayhem.json`; sesler `tools/music/mayhem_sounds.py` |
 | Mayhem: mini oyunlar, puanlar, kaos olayları | `scripts/modes/mayhem_tour.gd` (başındaki sabitler) |

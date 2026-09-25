@@ -68,6 +68,7 @@ func setup(p_game: Node, actors: Array[Plush], _p_timer: float, p_level: String,
 	board = MapBoard.new()
 	board.name = "MapBoard"
 	game.add_child(board)
+	board.load_map(MapBoard.MAPS.get(String(Profile.setting("cq_map", "turkiye")), MapBoard.MAPS.turkiye))
 	board.build()
 	for id in board.order:
 		holder[id] = null

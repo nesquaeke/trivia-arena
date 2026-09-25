@@ -248,7 +248,14 @@ func jury_table(pos: Vector3) -> StaticBody3D:
 	plate.text = _jury_word()
 	var i18n: Node = Engine.get_main_loop().root.get_node_or_null("/root/I18n") if Engine.get_main_loop() is SceneTree else null
 	if i18n:
-		i18n.changed.connect(func(_l): plate.text = _jury_word())
+		# tabela silinince (sahne yeniden kurulunca) bağlantı da kopsun
+		var cb := func(_l):
+			if is_instance_valid(plate):
+				plate.text = _jury_word()
+		i18n.changed.connect(cb)
+		plate.tree_exiting.connect(func():
+			if i18n.changed.is_connected(cb):
+				i18n.changed.disconnect(cb))
 	plate.font = Pal.display()
 	plate.font_size = 96
 	plate.pixel_size = 0.004
