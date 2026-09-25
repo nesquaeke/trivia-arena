@@ -49,6 +49,11 @@ func _ready() -> void:
 		var pro: AudioStream = AudioPack.find("sfx", n)
 		if pro:
 			streams[n] = pro
+	# yalnız ses paketinde olan efektler (sentez karşılığı yok)
+	for n in ["pop"]:
+		var extra: AudioStream = AudioPack.find("sfx", n)
+		if extra:
+			streams[n] = extra
 
 func play(name: String, db: float = 0.0, pitch: float = 1.0) -> void:
 	if muted or not streams.has(name):
