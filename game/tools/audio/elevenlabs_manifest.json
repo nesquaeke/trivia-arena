@@ -1,0 +1,1360 @@
+{
+ "sfx/tick": {
+  "prompt": "A single crisp wooden tick of a vintage game show countdown clock, dry, very short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:20"
+ },
+ "sfx/ding": {
+  "prompt": "Bright cheerful correct-answer chime of a 1950s TV quiz show, sparkling bells and glockenspiel, short and triumphant. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.2,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:20"
+ },
+ "sfx/buzz": {
+  "prompt": "Retro TV quiz show wrong-answer buzzer, a short comedic double 'eh-eh' buzz. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.68,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:20"
+ },
+ "sfx/whoosh": {
+  "prompt": "Quick theatrical whoosh, a velvet curtain swish passing by, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.8,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:20"
+ },
+ "sfx/jump": {
+  "prompt": "A soft springy cartoon hop of a small plush teddy bear jumping, light boing with a fabric flutter, very short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/land": {
+  "prompt": "Soft muffled thump of a plush stuffed toy landing on a wooden theatre stage, very short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/bump": {
+  "prompt": "Two plush stuffed toys bumping into each other, a squishy soft pillow bump, very short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/shove": {
+  "prompt": "A playful cartoon shove, quick fabric swoosh ending in a padded pillow push, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/click": {
+  "prompt": "A soft vintage brass button click, subtle, very short user interface sound. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/ui_hover": {
+  "prompt": "A tiny soft brass bell tink, elegant and subtle menu hover sound, very short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/ui_confirm": {
+  "prompt": "Warm elegant rising two-note chime, soft brass bells, a menu confirm sound, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.8,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/ui_back": {
+  "prompt": "Gentle descending two-note chime, soft brass bells, a menu back sound, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.8,
+  "credits": 120,
+  "alts": 0,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/scream": {
+  "prompt": "A comedic high-pitched cartoon scream of a tiny plush toy falling down a deep hole, fading away, funny, no words. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.36,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/trapdoor": {
+  "prompt": "A wooden theatre stage trapdoor springing open, creak and clunk with a spring rattle, cartoon style. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.0,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/applause": {
+  "prompt": "Enthusiastic theatre audience applause with a few whistles and cheers, warm concert hall. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 2.4,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/coin": {
+  "prompt": "Cheerful reward sound: gold coins clinking with a bright sparkle chime, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.0,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/fanfare": {
+  "prompt": "Short triumphant brass fanfare for a quiz show winner, trumpets and a timpani hit. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 2.0,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/drumroll": {
+  "prompt": "A tense snare drum roll building up in volume, vintage game show suspense, ends abruptly. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.76,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/sting": {
+  "prompt": "A dramatic orchestral stinger hit, brass and strings with a timpani boom, theatrical reveal. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 2.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/cheer": {
+  "prompt": "A happy theatre crowd cheering and clapping, excited 'yay', warm hall. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 3.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:21"
+ },
+ "sfx/ooh": {
+  "prompt": "A theatre audience going 'ooooh' together in amazement, rising, warm hall. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 2.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/aww": {
+  "prompt": "A theatre audience going 'awww' together in disappointment, falling, warm hall. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 2.4,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/curtain": {
+  "prompt": "Heavy red velvet theatre curtains sweeping open with a soft rustle and a pulley rattle. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.91,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/oof": {
+  "prompt": "A cute comedic 'oof' grunt of a small plush toy character getting knocked over, no words. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.6,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/thud": {
+  "prompt": "A soft heavy thud of a stuffed toy hitting a wooden floor, padded, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/pop": {
+  "prompt": "A cute cartoon pop, like a cork popping out of a toy bottle, very short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.48,
+  "credits": 317,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/heartbeat": {
+  "prompt": "Two deep tense heartbeats, suspenseful, cinematic. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/stamp": {
+  "prompt": "A wooden flag pole stamped firmly into a wooden board with a small metal ring, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.8,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/claim": {
+  "prompt": "Short heroic two-note brass call with a small bell ring, territory captured, board game. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.36,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/page": {
+  "prompt": "A single paper poster page flip, crisp, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.68,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/roll": {
+  "prompt": "A snare drum tremolo roll rising in tension, ending with a soft cymbal swell. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 2.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:22"
+ },
+ "sfx/war_drum": {
+  "prompt": "One powerful deep war drum hit, taiko and timpani, epic board game battle. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.76,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "sfx/war_horn": {
+  "prompt": "A medieval war horn call, two long brassy notes, epic but toy-like board game battle. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 3.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "sfx/collapse": {
+  "prompt": "A toy castle tower collapsing: stone blocks crumbling, rumble and falling rubble, cartoonish, not violent. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 3.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "mayhem/siren": {
+  "prompt": "An ambulance siren passing by, clear and recognizable, no other sounds.",
+  "dur": 5.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "mayhem/doorbell": {
+  "prompt": "A classic home doorbell ringing 'ding-dong' twice, clear and recognizable.",
+  "dur": 3.48,
+  "credits": 192,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "mayhem/phone": {
+  "prompt": "An old rotary telephone ringing with a mechanical bell, two rings, clear and recognizable.",
+  "dur": 4.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "mayhem/clock": {
+  "prompt": "A wall clock ticking steadily, tick-tock, clear and recognizable.",
+  "dur": 3.74,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "mayhem/train": {
+  "prompt": "A steam train chugging and blowing its whistle, clear and recognizable.",
+  "dur": 3.66,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "mayhem/rain": {
+  "prompt": "Steady rain falling on a window and roof, clear and recognizable.",
+  "dur": 4.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:23"
+ },
+ "mayhem/thunder": {
+  "prompt": "A loud thunder clap followed by a long rumble, clear and recognizable.",
+  "dur": 5.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/church": {
+  "prompt": "A large church bell tolling three times, clear and recognizable.",
+  "dur": 5.88,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/cuckoo": {
+  "prompt": "A cuckoo clock calling 'cuckoo' three times, clear and recognizable.",
+  "dur": 3.32,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/car_horn": {
+  "prompt": "A car horn honking twice in traffic, clear and recognizable.",
+  "dur": 2.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/ship_horn": {
+  "prompt": "A big ship's foghorn blowing one long deep blast, clear and recognizable.",
+  "dur": 4.03,
+  "credits": 415,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/whistle": {
+  "prompt": "A football referee whistle: two short blasts and one long blast, clear and recognizable.",
+  "dur": 2.4,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/heartbeat": {
+  "prompt": "A human heartbeat, steady lub-dub, clear and recognizable.",
+  "dur": 3.2,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/popcorn": {
+  "prompt": "Popcorn popping in a pot, many quick pops, clear and recognizable.",
+  "dur": 4.0,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "mayhem/typewriter": {
+  "prompt": "An old mechanical typewriter typing quickly, ending with the carriage return bell ding.",
+  "dur": 2.28,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "voice/tr/welcome": {
+  "prompt": "Büyük Sahneye hoş geldiniz!",
+  "dur": 2.11,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "voice/tr/ready": {
+  "prompt": "Hazır mısınız? Perde açılıyor!",
+  "dur": 2.29,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:24"
+ },
+ "voice/tr/act1_arena": {
+  "prompt": "Perde bir! Kategori avı.",
+  "dur": 2.32,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/act2_arena": {
+  "prompt": "Perde iki! Güç turu.",
+  "dur": 2.47,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/act3_arena": {
+  "prompt": "Perde üç! Son ayakta kalan kazanır.",
+  "dur": 3.29,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/act1_cq": {
+  "prompt": "Perde bir! Kalelerinizi kurun.",
+  "dur": 2.91,
+  "credits": 292,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/act2_cq": {
+  "prompt": "Perde iki! Toprak paylaşımı.",
+  "dur": 2.3,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/act3_cq": {
+  "prompt": "Perde üç! Savaş çağı başlıyor.",
+  "dur": 2.97,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/estimate": {
+  "prompt": "Tahminler gelsin!",
+  "dur": 1.63,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/reveal": {
+  "prompt": "Ve doğru cevap...",
+  "dur": 1.51,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/spot_on": {
+  "prompt": "Tam isabet!",
+  "dur": 1.46,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:25"
+ },
+ "voice/tr/question": {
+  "prompt": "Soru geliyor!",
+  "dur": 3.19,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/correct": {
+  "prompt": "Doğru cevap!",
+  "dur": 3.43,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/nobody": {
+  "prompt": "Kimse bilemedi!",
+  "dur": 1.83,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/five": {
+  "prompt": "Son beş saniye!",
+  "dur": 1.99,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/duel": {
+  "prompt": "Düello!",
+  "dur": 1.36,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/attack": {
+  "prompt": "Saldırı!",
+  "dur": 3.38,
+  "credits": 173,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/tower": {
+  "prompt": "Bir kule yıkıldı!",
+  "dur": 1.76,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/castle_fall": {
+  "prompt": "Kale düştü!",
+  "dur": 1.65,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/repel": {
+  "prompt": "Saldırı püskürtüldü!",
+  "dur": 2.06,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/capture": {
+  "prompt": "Toprak el değiştirdi!",
+  "dur": 1.93,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/tie": {
+  "prompt": "Beraberlik! Tahminle bozuyoruz.",
+  "dur": 2.6,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:26"
+ },
+ "voice/tr/castle_pick": {
+  "prompt": "Kalenin yerini seç!",
+  "dur": 1.7,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/tr/last_round": {
+  "prompt": "Son tur!",
+  "dur": 1.58,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/tr/eliminated": {
+  "prompt": "Elendi!",
+  "dur": 1.36,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/tr/winner": {
+  "prompt": "Ve gecenin galibi...",
+  "dur": 2.06,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/tr/applause": {
+  "prompt": "Büyük bir alkış!",
+  "dur": 1.65,
+  "credits": 170,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/tr/steal": {
+  "prompt": "Soygun!",
+  "dur": 1.37,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/tr/sabotage": {
+  "prompt": "Sabotaj!",
+  "dur": 1.3,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/en/welcome": {
+  "prompt": "Welcome to the Grand Stage!",
+  "dur": 2.02,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/en/ready": {
+  "prompt": "Are you ready? Curtain up!",
+  "dur": 1.89,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:27"
+ },
+ "voice/en/act1_arena": {
+  "prompt": "Act one! The category hunt.",
+  "dur": 2.4,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/act2_arena": {
+  "prompt": "Act two! The power round.",
+  "dur": 1.94,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/act3_arena": {
+  "prompt": "Act three! Last one standing wins.",
+  "dur": 2.64,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/act1_cq": {
+  "prompt": "Act one! Raise your castles.",
+  "dur": 2.21,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/act2_cq": {
+  "prompt": "Act two! The land grab.",
+  "dur": 1.9,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/act3_cq": {
+  "prompt": "Act three! The age of war begins.",
+  "dur": 2.54,
+  "credits": 238,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/estimate": {
+  "prompt": "Place your guesses!",
+  "dur": 1.55,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/reveal": {
+  "prompt": "And the answer is...",
+  "dur": 1.65,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/spot_on": {
+  "prompt": "Spot on!",
+  "dur": 1.49,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:28"
+ },
+ "voice/en/question": {
+  "prompt": "Here comes the question!",
+  "dur": 1.69,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/correct": {
+  "prompt": "That's correct!",
+  "dur": 1.65,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/nobody": {
+  "prompt": "Nobody got it!",
+  "dur": 1.57,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/five": {
+  "prompt": "Five seconds left!",
+  "dur": 1.67,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/duel": {
+  "prompt": "Duel!",
+  "dur": 1.35,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/attack": {
+  "prompt": "Attack!",
+  "dur": 1.35,
+  "credits": 130,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/tower": {
+  "prompt": "A tower falls!",
+  "dur": 1.71,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/castle_fall": {
+  "prompt": "The castle has fallen!",
+  "dur": 1.98,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/repel": {
+  "prompt": "The attack is repelled!",
+  "dur": 1.89,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/capture": {
+  "prompt": "The land changes hands!",
+  "dur": 2.15,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:29"
+ },
+ "voice/en/tie": {
+  "prompt": "A tie! A guess will settle it.",
+  "dur": 2.29,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/en/castle_pick": {
+  "prompt": "Choose where your castle stands!",
+  "dur": 2.29,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/en/last_round": {
+  "prompt": "Final round!",
+  "dur": 1.51,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/en/eliminated": {
+  "prompt": "Eliminated!",
+  "dur": 1.55,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/en/winner": {
+  "prompt": "And tonight's winner is...",
+  "dur": 1.91,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/en/applause": {
+  "prompt": "A big round of applause!",
+  "dur": 2.09,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/en/steal": {
+  "prompt": "A heist!",
+  "dur": 1.39,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/en/sabotage": {
+  "prompt": "Sabotage!",
+  "dur": 1.47,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/pl/welcome": {
+  "prompt": "Witajcie na Wielkiej Scenie!",
+  "dur": 2.28,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/pl/ready": {
+  "prompt": "Gotowi? Kurtyna w górę!",
+  "dur": 1.91,
+  "credits": 285,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/pl/act1_arena": {
+  "prompt": "Akt pierwszy! Polowanie na kategorie.",
+  "dur": 2.97,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:30"
+ },
+ "voice/pl/act2_arena": {
+  "prompt": "Akt drugi! Runda mocy.",
+  "dur": 2.66,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/act3_arena": {
+  "prompt": "Akt trzeci! Wygrywa ostatni na scenie.",
+  "dur": 3.14,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/act1_cq": {
+  "prompt": "Akt pierwszy! Wznieście swoje zamki.",
+  "dur": 3.19,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/act2_cq": {
+  "prompt": "Akt drugi! Wyścig o ziemię.",
+  "dur": 2.44,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/act3_cq": {
+  "prompt": "Akt trzeci! Nadchodzi czas wojny.",
+  "dur": 3.04,
+  "credits": 193,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/estimate": {
+  "prompt": "Czas na wasze typy!",
+  "dur": 3.86,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/reveal": {
+  "prompt": "A prawidłowa odpowiedź to...",
+  "dur": 2.55,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/spot_on": {
+  "prompt": "W dziesiątkę!",
+  "dur": 1.6,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/question": {
+  "prompt": "Nadchodzi pytanie!",
+  "dur": 2.6,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/correct": {
+  "prompt": "Prawidłowa odpowiedź!",
+  "dur": 1.99,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/nobody": {
+  "prompt": "Nikt nie zgadł!",
+  "dur": 1.61,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:31"
+ },
+ "voice/pl/five": {
+  "prompt": "Zostało pięć sekund!",
+  "dur": 2.03,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/duel": {
+  "prompt": "Pojedynek!",
+  "dur": 1.64,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/attack": {
+  "prompt": "Atak!",
+  "dur": 1.5,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/tower": {
+  "prompt": "Wieża upada!",
+  "dur": 1.61,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/castle_fall": {
+  "prompt": "Zamek upadł!",
+  "dur": 1.43,
+  "credits": 173,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/repel": {
+  "prompt": "Atak odparty!",
+  "dur": 1.51,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/capture": {
+  "prompt": "Ziemia zmienia właściciela!",
+  "dur": 1.99,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/tie": {
+  "prompt": "Remis! Rozstrzygnie szacunek.",
+  "dur": 2.27,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/castle_pick": {
+  "prompt": "Wybierz miejsce na swój zamek!",
+  "dur": 2.22,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:32"
+ },
+ "voice/pl/last_round": {
+  "prompt": "Ostatnia runda!",
+  "dur": 1.86,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/pl/eliminated": {
+  "prompt": "Odpada!",
+  "dur": 1.43,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/pl/winner": {
+  "prompt": "A zwycięzcą tego wieczoru jest...",
+  "dur": 2.65,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/pl/applause": {
+  "prompt": "Wielkie brawa!",
+  "dur": 1.85,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/pl/steal": {
+  "prompt": "Skok na kasę!",
+  "dur": 1.55,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/pl/sabotage": {
+  "prompt": "Sabotaż!",
+  "dur": 1.37,
+  "credits": 189,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/fr/welcome": {
+  "prompt": "Bienvenue sur la Grande Scène !",
+  "dur": 3.14,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/fr/ready": {
+  "prompt": "Vous êtes prêts ? Lever de rideau !",
+  "dur": 3.33,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/fr/act1_arena": {
+  "prompt": "Premier acte ! La chasse aux catégories.",
+  "dur": 3.09,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/fr/act2_arena": {
+  "prompt": "Deuxième acte ! La manche de pouvoir.",
+  "dur": 2.74,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/fr/act3_arena": {
+  "prompt": "Troisième acte ! Le dernier debout gagne.",
+  "dur": 3.14,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:33"
+ },
+ "voice/fr/act1_cq": {
+  "prompt": "Premier acte ! Bâtissez vos châteaux.",
+  "dur": 2.83,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/act2_cq": {
+  "prompt": "Deuxième acte ! La conquête des terres.",
+  "dur": 2.79,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/act3_cq": {
+  "prompt": "Troisième acte ! L'ère de la guerre commence.",
+  "dur": 3.07,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/estimate": {
+  "prompt": "À vos estimations !",
+  "dur": 4.1,
+  "credits": 324,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/reveal": {
+  "prompt": "Et la bonne réponse est...",
+  "dur": 2.16,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/spot_on": {
+  "prompt": "En plein dans le mille !",
+  "dur": 1.76,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/question": {
+  "prompt": "Voici la question !",
+  "dur": 1.77,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/correct": {
+  "prompt": "Bonne réponse !",
+  "dur": 1.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/nobody": {
+  "prompt": "Personne n'a trouvé !",
+  "dur": 2.16,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:34"
+ },
+ "voice/fr/five": {
+  "prompt": "Plus que cinq secondes !",
+  "dur": 4.04,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/duel": {
+  "prompt": "Duel !",
+  "dur": 2.76,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/attack": {
+  "prompt": "À l'attaque !",
+  "dur": 4.36,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/tower": {
+  "prompt": "Une tour s'effondre !",
+  "dur": 1.74,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/castle_fall": {
+  "prompt": "Le château est tombé !",
+  "dur": 1.86,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/repel": {
+  "prompt": "L'attaque est repoussée !",
+  "dur": 2.2,
+  "credits": 216,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/capture": {
+  "prompt": "La terre change de mains !",
+  "dur": 1.78,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/tie": {
+  "prompt": "Égalité ! Une estimation va trancher.",
+  "dur": 2.88,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/castle_pick": {
+  "prompt": "Choisis l'emplacement de ton château !",
+  "dur": 2.41,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/last_round": {
+  "prompt": "Dernière manche !",
+  "dur": 3.78,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/eliminated": {
+  "prompt": "Éliminé !",
+  "dur": 1.54,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:35"
+ },
+ "voice/fr/winner": {
+  "prompt": "Et le gagnant de la soirée est...",
+  "dur": 2.98,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/fr/applause": {
+  "prompt": "Une grande salve d'applaudissements !",
+  "dur": 2.71,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/fr/steal": {
+  "prompt": "Un braquage !",
+  "dur": 1.49,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/fr/sabotage": {
+  "prompt": "Sabotage !",
+  "dur": 1.43,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/es/welcome": {
+  "prompt": "¡Bienvenidos al Gran Escenario!",
+  "dur": 2.36,
+  "credits": 251,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/es/ready": {
+  "prompt": "¿Estáis listos? ¡Se levanta el telón!",
+  "dur": 2.93,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/es/act1_arena": {
+  "prompt": "¡Primer acto! La caza de categorías.",
+  "dur": 2.98,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/es/act2_arena": {
+  "prompt": "¡Segundo acto! La ronda de poder.",
+  "dur": 2.61,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/es/act3_arena": {
+  "prompt": "¡Tercer acto! Gana el último en pie.",
+  "dur": 2.57,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:36"
+ },
+ "voice/es/act1_cq": {
+  "prompt": "¡Primer acto! Levantad vuestros castillos.",
+  "dur": 2.84,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/act2_cq": {
+  "prompt": "¡Segundo acto! El reparto de tierras.",
+  "dur": 2.85,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/act3_cq": {
+  "prompt": "¡Tercer acto! Comienza la era de la guerra.",
+  "dur": 3.15,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/estimate": {
+  "prompt": "¡Haced vuestras apuestas!",
+  "dur": 1.76,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/reveal": {
+  "prompt": "Y la respuesta correcta es...",
+  "dur": 2.02,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/spot_on": {
+  "prompt": "¡Clavado!",
+  "dur": 1.39,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/question": {
+  "prompt": "¡Ahí va la pregunta!",
+  "dur": 1.74,
+  "credits": 347,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/correct": {
+  "prompt": "¡Respuesta correcta!",
+  "dur": 1.9,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/nobody": {
+  "prompt": "¡Nadie la ha acertado!",
+  "dur": 2.12,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/five": {
+  "prompt": "¡Quedan cinco segundos!",
+  "dur": 2.11,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:37"
+ },
+ "voice/es/duel": {
+  "prompt": "¡Duelo!",
+  "dur": 1.48,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/attack": {
+  "prompt": "¡Al ataque!",
+  "dur": 1.41,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/tower": {
+  "prompt": "¡Cae una torre!",
+  "dur": 1.47,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/castle_fall": {
+  "prompt": "¡El castillo ha caído!",
+  "dur": 2.56,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/repel": {
+  "prompt": "¡Ataque rechazado!",
+  "dur": 1.77,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/capture": {
+  "prompt": "¡La tierra cambia de manos!",
+  "dur": 1.92,
+  "credits": 165,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/tie": {
+  "prompt": "¡Empate! Lo decidirá una estimación.",
+  "dur": 2.99,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/castle_pick": {
+  "prompt": "¡Elige dónde se alza tu castillo!",
+  "dur": 2.29,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/last_round": {
+  "prompt": "¡Última ronda!",
+  "dur": 1.51,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/eliminated": {
+  "prompt": "¡Eliminado!",
+  "dur": 2.01,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:38"
+ },
+ "voice/es/winner": {
+  "prompt": "Y el ganador de esta noche es...",
+  "dur": 2.8,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:39"
+ },
+ "voice/es/applause": {
+  "prompt": "¡Un gran aplauso!",
+  "dur": 1.71,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:39"
+ },
+ "voice/es/steal": {
+  "prompt": "¡Un atraco!",
+  "dur": 1.58,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:39"
+ },
+ "voice/es/sabotage": {
+  "prompt": "¡Sabotaje!",
+  "dur": 1.53,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 21:39"
+ }
+}
