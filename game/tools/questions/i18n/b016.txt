@@ -1,0 +1,440 @@
+@eacacd5e
+Który system strojenia dzieli oktawę na dwanaście równych interwałów, ze stosunkiem częstotliwości półtonu 2^(1/12)?	Strój pitagorejski	Strój średniotonowy	Strój równomiernie temperowany	Strój naturalny
+Quel système d'accordage divise l'octave en douze intervalles égaux, avec un rapport de demi-ton de 2^(1/12) ?	Accord pythagoricien	Tempérament mésotonique	Tempérament égal	Intonation juste
+¿Qué sistema de afinación divide la octava en doce intervalos iguales, con una razón de semitono de 2^(1/12)?	Afinación pitagórica	Temperamento mesotónico	Temperamento igual	Entonación justa
+@a9d78cda
+Który awangardowy poemat dźwiękowy Krzysztofa Pendereckiego z 1960 roku na 52 instrumenty smyczkowe używa ostrych klasterów mikrotonowych i rozszerzonych technik?	Pasja według św. Łukasza	Tren – Ofiarom Hiroszimy	Polskie Requiem	Anaklasis
+Quel poème sonore d'avant-garde de Krzysztof Penderecki (1960) pour 52 cordes utilise des clusters microtonaux et des modes de jeu étendus ?	Passion selon saint Luc	Thrène à la mémoire des victimes d'Hiroshima	Requiem polonais	Anaklasis
+¿Qué poema sonoro vanguardista de Krzysztof Penderecki de 1960 para 52 cuerdas usa ásperos clústeres microtonales y técnicas extendidas?	Pasión según san Lucas	Treno a las víctimas de Hiroshima	Réquiem polaco	Anaklasis
+@4d033992
+Która „favola in musica” Claudia Monteverdiego z 1607 roku, skomponowana dla dworu w Mantui, uchodzi za pierwsze trwałe arcydzieło opery?	Orfeusz	Koronacja Poppei	Powrót Ulissesa do ojczyzny	Dafne
+Quelle « favola in musica » de Claudio Monteverdi (1607), composée pour la cour de Mantoue, est considérée comme le premier chef-d'œuvre durable de l'opéra ?	L'Orfeo	Le Couronnement de Poppée	Le Retour d'Ulysse dans sa patrie	Dafne
+¿Qué «favola in musica» de Claudio Monteverdi de 1607, compuesta para la corte de Mantua, es la primera gran obra maestra perdurable de la ópera?	L'Orfeo	La coronación de Popea	El regreso de Ulises a la patria	Dafne
+@b6cdd4b4
+Jak nazywa się tradycyjna jednogłosowa, bezakompaniamentowa muzyka sakralna Kościoła rzymskokatolickiego?	Chorał gregoriański	Madrygał	Motet	Chorał protestancki
+Comment appelle-t-on le chant sacré monodique et a cappella traditionnel de l'Église catholique romaine ?	Chant grégorien	Madrigal	Motet	Choral
+¿Cómo se llama la música vocal sacra monódica y sin acompañamiento de la Iglesia católica romana?	Canto gregoriano	Madrigal	Motete	Coral
+@c69ae581
+Który przyrodnik stworzył binominalny system nazewnictwa organizmów według rodzaju i gatunku?	Karol Linneusz	Karol Darwin	Grzegorz Mendel	Jean-Baptiste Lamarck
+Quel naturaliste a créé la nomenclature binominale qui classe les organismes par genre et espèce ?	Carl von Linné	Charles Darwin	Gregor Mendel	Jean-Baptiste Lamarck
+¿Qué naturalista creó la nomenclatura binomial para clasificar los organismos por género y especie?	Carlos Linneo	Charles Darwin	Gregor Mendel	Jean-Baptiste Lamarck
+@399f897c
+Który ekolog eksperymentalnie wykazał koncepcję „gatunku zwornikowego”, usuwając rozgwiazdy ze strefy pływów?	Robert Paine	Eugene Odum	E.O. Wilson	Rachel Carson
+Quel écologue a démontré expérimentalement le concept d'« espèce clé de voûte » en retirant des étoiles de mer de l'estran ?	Robert Paine	Eugene Odum	E.O. Wilson	Rachel Carson
+¿Qué ecólogo demostró experimentalmente el concepto de «especie clave» retirando estrellas de mar de la zona intermareal?	Robert Paine	Eugene Odum	E.O. Wilson	Rachel Carson
+@fc017cfb
+Która ryba mięśniopłetwa, „żywa skamieniałość” uznawana za wymarłą od 66 mln lat, została złowiona żywa u wybrzeży RPA w 1938 roku?	Latimeria (trzonopłetwa)	Tiktaalik	Dunkleosteus	Plakoderm
+Quel poisson à nageoires charnues, « fossile vivant » cru disparu depuis 66 millions d'années, a été pêché vivant au large de l'Afrique du Sud en 1938 ?	Cœlacanthe (Latimeria)	Tiktaalik	Dunkleosteus	Placoderme
+¿Qué pez de aletas lobuladas, «fósil viviente» que se creía extinto hacía 66 millones de años, se pescó vivo frente a Sudáfrica en 1938?	Celacanto (Latimeria)	Tiktaalik	Dunkleosteus	Placodermo
+@e3a2d143
+Która zasada ekologiczna mówi, że dwa gatunki konkurujące o te same ograniczone zasoby nie mogą trwale współistnieć?	Zasada wykluczania konkurencyjnego Gausego	Prawo minimum Liebiga	Prawo tolerancji Shelforda	Prawo Hardy'ego-Weinberga
+Quel principe écologique affirme que deux espèces en compétition pour les mêmes ressources limitantes ne peuvent pas coexister durablement ?	Principe d'exclusion compétitive de Gause	Loi du minimum de Liebig	Loi de tolérance de Shelford	Principe de Hardy-Weinberg
+¿Qué principio ecológico afirma que dos especies que compiten por los mismos recursos limitantes no pueden coexistir de forma estable?	Principio de exclusión competitiva de Gause	Ley del mínimo de Liebig	Ley de tolerancia de Shelford	Principio de Hardy-Weinberg
+@e243c8d2
+Jaki rodzaj mimikry zachodzi, gdy nieszkodliwy organizm upodabnia się barwami ostrzegawczymi do trującego, niesmacznego wzorca?	Mimikra batesowska	Mimikra müllerowska	Kamuflaż kryptyczny	Aposematyzm
+Quelle forme de mimétisme apparaît quand un organisme inoffensif imite les couleurs d'avertissement d'un modèle nocif ?	Mimétisme batésien	Mimétisme müllérien	Camouflage cryptique	Aposématisme
+¿Qué tipo de mimetismo se da cuando un organismo inofensivo imita la coloración de advertencia de un modelo nocivo?	Mimetismo batesiano	Mimetismo mülleriano	Camuflaje críptico	Aposematismo
+@cdae3921
+Która reguła ekogeograficzna mówi, że szeroko rozprzestrzenione grupy zwierząt stałocieplnych są większe w zimniejszym klimacie?	Reguła Bergmanna	Reguła Allena	Reguła Glogera	Reguła Haldane'a
+Quelle règle écogéographique dit que les animaux endothermes largement répartis sont plus grands dans les climats froids ?	Règle de Bergmann	Règle d'Allen	Règle de Gloger	Règle de Haldane
+¿Qué regla ecogeográfica dice que los grupos de animales endotermos muy extendidos tienden a ser más grandes en climas fríos?	Regla de Bergmann	Regla de Allen	Regla de Gloger	Regla de Haldane
+@2f6281e0
+Która reguła mówi, że wystające części ciała (uszy, ogony, kończyny) zwierząt stałocieplnych są krótsze w zimnym klimacie?	Reguła Allena	Reguła Bergmanna	Reguła Cope'a	Prawo Dolbeara
+Quelle règle dit que les extrémités (oreilles, queue, membres) des endothermes sont plus courtes dans les climats froids ?	Règle d'Allen	Règle de Bergmann	Règle de Cope	Loi de Dolbear
+¿Qué regla dice que los apéndices (orejas, colas, extremidades) de los endotermos tienden a ser más cortos en climas fríos?	Regla de Allen	Regla de Bergmann	Regla de Cope	Ley de Dolbear
+@b709a1ff
+Jaka granica faunistyczna wyznacza przejściowy podział zoogeograficzny między fauną Azji a Australazji?	Linia Wallace'a	Linia Webera	Linia Huxleya	Linia Lydekkera
+Quelle ligne biogéographique marque la transition entre la faune asiatique et la faune australasienne ?	Ligne Wallace	Ligne Weber	Ligne Huxley	Ligne Lydekker
+¿Qué línea faunística marca la transición zoogeográfica entre la fauna asiática y la australasiática?	Línea de Wallace	Línea de Weber	Línea de Huxley	Línea de Lydekker
+@c7b19a64
+Jak nazywa się klonalna kolonia topoli osikowej w Utah, licząca ponad 40 000 pni połączonych jednym ogromnym systemem korzeni?	Pando	Generał Sherman	Matuzalem	Hyperion
+Comment s'appelle la colonie clonale de trembles de l'Utah, plus de 40 000 troncs partageant un seul immense système racinaire ?	Pando	General Sherman	Mathusalem	Hyperion
+¿Cómo se llama la colonia clonal de álamos temblones de Utah, con más de 40.000 troncos que comparten un único y enorme sistema de raíces?	Pando	General Sherman	Matusalén	Hyperion
+@a7040549
+Jaka unikalna struktura anatomiczna odróżnia nowozelandzką hatterię (Sphenodon) od innych żyjących gadów?	Światłoczułe trzecie oko ciemieniowe na czubku czaszki	Czterokomorowe serce	Kanały słuchowe tryskające jadem	Skostniałe szczątki skrzydeł
+Quelle structure anatomique unique distingue le sphénodon (tuatara) de Nouvelle-Zélande des autres reptiles actuels ?	Un troisième œil pariétal photosensible sur le crâne	Un cœur à quatre cavités	Des conduits auditifs qui projettent du venin	Des vestiges d'ailes ossifiés
+¿Qué estructura anatómica única distingue al tuátara de Nueva Zelanda (Sphenodon) de los demás reptiles actuales?	Un tercer ojo parietal fotosensible en lo alto del cráneo	Un corazón de cuatro cámaras	Conductos auditivos que rocían veneno	Vestigios de alas osificados
+@98fb3f87
+Które mikroskopijne organizmy morskie wytwarzają ponad 50% tlenu w atmosferze Ziemi?	Fitoplankton	Zooplankton	Lasy wodorostów	Polipy koralowe
+Quels organismes marins microscopiques produisent plus de 50 % de l'oxygène de l'atmosphère terrestre ?	Le phytoplancton	Le zooplancton	Les forêts de varech	Les polypes coralliens
+¿Qué organismos marinos microscópicos producen más del 50 % del oxígeno de la atmósfera terrestre?	Fitoplancton	Zooplancton	Bosques de kelp	Pólipos de coral
+@c7269d06
+Jak nazywają się warstwowe skały osadowe tworzone przez sinice, będące jednymi z najstarszych skamieniałości na Ziemi?	Stromatolity	Trylobity	Amonity	Radiolity
+Comment s'appellent les roches sédimentaires en couches formées par des cyanobactéries, parmi les plus anciens fossiles de la Terre ?	Stromatolithes	Trilobites	Ammonites	Radiolites
+¿Cómo se llaman las rocas sedimentarias estratificadas formadas por cianobacterias, algunos de los fósiles más antiguos de la Tierra?	Estromatolitos	Trilobites	Amonites	Radiolitos
+@656937d4
+Jak nazywają się niepasożytnicze rośliny rosnące nieszkodliwie na innych drzewach wyłącznie jako na podporze?	Epifity	Saprofity	Kserofity	Halofity
+Comment appelle-t-on les plantes non parasites qui poussent sur d'autres arbres uniquement pour s'y appuyer ?	Épiphytes	Saprophytes	Xérophytes	Halophytes
+¿Cómo se llaman las plantas no parásitas que crecen sobre otros árboles solo como soporte físico?	Epífitas	Saprofitas	Xerófitas	Halófitas
+@c1163d9b
+Który morski skorupiak wykazuje znikome starzenie biologiczne dzięki stałej aktywności telomerazy w komórkach?	Homar amerykański	Krab królewski	Niebieska krewetka	Kaczeniec
+Quel crustacé marin montre une sénescence négligeable grâce à une télomérase active en permanence ?	Homard américain	Crabe royal	Crevette bleue	Pouce-pied
+¿Qué crustáceo marino apenas envejece gracias a la expresión continua de telomerasa en sus células?	Bogavante americano	Cangrejo real	Gamba azul	Percebe
+@a4949c47
+Jaki złożony paraliżujący koktajl neurotoksyn wstrzykuje stożek geograficzny (Conus geographus) specjalnymi harpunami?	Konotoksyna	Tetrodotoksyna	Saksytoksyna	Batrachotoksyna
+Quel cocktail neurotoxique paralysant le cône géographe (Conus geographus) injecte-t-il avec ses harpons ?	Conotoxine	Tétrodotoxine	Saxitoxine	Batrachotoxine
+¿Qué cóctel neurotóxico paralizante inyecta el caracol cono geográfico (Conus geographus) con sus arpones?	Conotoxina	Tetrodotoxina	Saxitoxina	Batracotoxina
+@3c52c8ab
+Jaki proces ewolucyjny zachodzi, gdy bariera geograficzna dzieli populację przodków, prowadząc do izolacji rozrodczej?	Specjacja allopatryczna	Specjacja sympatryczna	Specjacja parapatryczna	Specjacja perypatryczna
+Quel processus évolutif se produit quand une barrière géographique sépare une population ancestrale et entraîne un isolement reproductif ?	Spéciation allopatrique	Spéciation sympatrique	Spéciation parapatrique	Spéciation péripatrique
+¿Qué proceso evolutivo ocurre cuando una barrera geográfica divide una población ancestral y provoca aislamiento reproductivo?	Especiación alopátrica	Especiación simpátrica	Especiación parapátrica	Especiación peripátrica
+@6c70c9d7
+Który gatunek wędrownej gęsi wznosi się na ekstremalne wysokości, przelatując nad Himalajami i Everestem?	Gęś tybetańska (Anser indicus)	Rybitwa popielata	Sokół wędrowny	Orzeł przedni
+Quelle espèce d'oie migratrice monte à des altitudes extrêmes pour franchir l'Himalaya et l'Everest ?	Oie à tête barrée (Anser indicus)	Sterne arctique	Faucon pèlerin	Aigle royal
+¿Qué especie de ganso migratorio asciende a altitudes extremas para cruzar el Himalaya y el Everest?	Ánsar indio (Anser indicus)	Charrán ártico	Halcón peregrino	Águila real
+@999d90d1
+Jaki mechanizm pozwala populacjom bakterii koordynować ekspresję genów i działania zbiorowe za pomocą stężenia autoinduktorów?	Quorum sensing	Tworzenie biofilmu	Chemotaksja	Sporulacja
+Quel mécanisme permet aux bactéries de coordonner l'expression de leurs gènes et leurs activités collectives via la concentration d'auto-inducteurs ?	Quorum sensing	Formation de biofilm	Chimiotactisme	Sporulation
+¿Qué mecanismo permite a las bacterias coordinar su expresión génica y actividades colectivas mediante la concentración de autoinductores?	Detección de quórum	Formación de biopelículas	Quimiotaxis	Esporulación
+@469d0a7b
+Która odrębna grupa naczelnych z podrzędu lemurokształtnych występuje wyłącznie na Madagaskarze?	Lemury	Szympansy	Makaki	Wyraki
+Quel groupe de primates strepsirrhiniens est entièrement endémique de Madagascar ?	Les lémuriens	Les chimpanzés	Les macaques	Les tarsiers
+¿Qué grupo de primates estrepsirrinos es completamente endémico de Madagascar?	Lémures	Chimpancés	Macacos	Tarseros
+@88c398a6
+Jaka cecha budowy odróżnia mszaki od roślin naczyniowych?	Brak tkanek przewodzących (ksylemu i floemu) i prawdziwych korzeni	Brak zdolności fotosyntezy	Brak celulozowych ścian komórkowych	Rozmnażanie przez prawdziwe nasiona
+Quelle caractéristique distingue les bryophytes (mousses) des plantes vasculaires ?	L'absence de tissus conducteurs (xylème et phloème) et de vraies racines	L'incapacité à faire la photosynthèse	L'absence de parois cellulosiques	La reproduction par de vraies graines
+¿Qué rasgo estructural separa a los briófitos (musgos) de las plantas vasculares?	Carecen de tejidos vasculares (xilema y floema) y de raíces verdaderas	No pueden hacer la fotosíntesis	No tienen paredes de celulosa	Se reproducen por semillas verdaderas
+@b9c7a246
+Która dziedzina nauki opracowała rzepy (Velcro), inspirując się haczykowatymi nasionami łopianu?	Biomimetyka	Bioinformatyka	Biomechanika	Biosynteza
+Quelle discipline scientifique a créé le Velcro en s'inspirant des graines crochues de la bardane ?	Biomimétisme	Bio-informatique	Biomécanique	Biosynthèse
+¿Qué disciplina científica creó el velcro inspirándose en las semillas con ganchos de la bardana?	Biomímesis	Bioinformática	Biomecánica	Biosíntesis
+@70bb3723
+Ile mniej więcej kilometrów pokonuje co roku rybitwa popielata w wędrówce od bieguna do bieguna i z powrotem?	Ok. 70 000–90 000 km	Ok. 10 000 km	Ok. 25 000 km	Ok. 5000 km
+Combien de kilomètres environ la sterne arctique parcourt-elle chaque année lors de sa migration d'un pôle à l'autre ?	Environ 70 000 à 90 000 km	Environ 10 000 km	Environ 25 000 km	Environ 5 000 km
+¿Cuántos kilómetros recorre aproximadamente cada año el charrán ártico en su migración de polo a polo?	Unos 70.000-90.000 km	Unos 10.000 km	Unos 25.000 km	Unos 5000 km
+@841840fd
+Który rodzaj wewnątrzkomórkowych bakterii endosymbiotycznych manipuluje układem rozrodczym stawonogów na korzyść przekazywania przez samice?	Wolbachia	Rickettsia	Borrelia	Agrobacterium
+Quel genre de bactéries endosymbiotiques intracellulaires manipule la reproduction des arthropodes pour favoriser la transmission par les femelles ?	Wolbachia	Rickettsia	Borrelia	Agrobacterium
+¿Qué género de bacterias endosimbióticas intracelulares manipula la reproducción de los artrópodos a favor de la transmisión por hembras?	Wolbachia	Rickettsia	Borrelia	Agrobacterium
+@a5a801e5
+Jaki typ sukcesji ekologicznej zachodzi na świeżej skale wulkanicznej pozbawionej gleby?	Sukcesja pierwotna	Sukcesja wtórna	Zbiorowisko klimaksowe	Obieg troficzny
+Quel type de succession écologique se produit sur une roche volcanique récente dépourvue de sol ?	Succession primaire	Succession secondaire	Communauté climacique	Cycle trophique
+¿Qué tipo de sucesión ecológica se da sobre roca volcánica reciente sin suelo previo?	Sucesión primaria	Sucesión secundaria	Comunidad clímax	Ciclo trófico
+@83855646
+Jaka budowa wiązek przewodzących w liściach pozwala roślinom C4, jak kukurydza i trzcina cukrowa, unikać fotooddychania w upale?	Anatomia typu Kranz	Szlak CAM	Miękisz palisadowy	Kawitacja szparkowa
+Quelle anatomie foliaire permet aux plantes en C4 comme le maïs et la canne à sucre d'éviter la photorespiration par forte chaleur ?	Anatomie de Kranz	Métabolisme CAM	Parenchyme palissadique	Cavitation stomatique
+¿Qué anatomía foliar permite a plantas C4 como el maíz y la caña de azúcar evitar la fotorrespiración en climas cálidos?	Anatomía Kranz	Metabolismo CAM	Parénquima en empalizada	Cavitación estomática
+@60ba7b78
+Jak nazywa się najwyższy stopień organizacji społecznej z podziałem pracy rozrodczej, nakładającymi się pokoleniami i wspólną opieką nad potomstwem?	Eusocjalność	Presocjalność	Mutualizm kolonijny	Monogamia
+Quel niveau le plus élevé d'organisation sociale comprend division reproductive du travail, générations qui se chevauchent et soin coopératif du couvain ?	Eusocialité	Présocialité	Mutualisme colonial	Monogamie
+¿Qué nivel superior de organización social incluye división reproductiva del trabajo, generaciones solapadas y cuidado cooperativo de las crías?	Eusocialidad	Presocialidad	Mutualismo colonial	Monogamia
+@29716856
+Który olbrzymi organizm z kominów hydrotermalnych nie ma przewodu pokarmowego i polega wyłącznie na chemosyntetyzujących bakteriach?	Riftia (olbrzymi rurkoczułkowiec)	Matronica	Kałamarnica kolosalna	Ośmiornica Dumbo
+Quel organisme géant des sources hydrothermales n'a pas de tube digestif et dépend entièrement de bactéries chimiosynthétiques ?	Ver tubicole géant (Riftia pachyptila)	Baudroie des abysses	Calmar colossal	Pieuvre Dumbo
+¿Qué organismo gigante de las fuentes hidrotermales carece de tubo digestivo y depende por completo de bacterias quimiosintéticas?	Gusano tubícola gigante (Riftia pachyptila)	Rape abisal	Calamar colosal	Pulpo Dumbo
+@06f51b03
+Jakim terminem biologicznym opisuje się jaskrawe barwy ostrzegawcze sygnalizujące drapieżnikom toksyczność lub niebezpieczeństwo?	Aposematyzm	Kryptyzm	Mimikra	Termoregulacja
+Quel terme biologique désigne les couleurs d'avertissement voyantes qui signalent aux prédateurs la toxicité ou le danger ?	Aposématisme	Cryptisme	Mimétisme	Thermorégulation
+¿Qué término biológico describe los colores de advertencia llamativos que indican toxicidad o peligro a los depredadores?	Aposematismo	Cripsis	Mimetismo	Termorregulación
+@b262d17e
+Jaki typ mimikry polega na tym, że dwa lub więcej chronionych, niesmacznych gatunków ma podobne wzory ostrzegawcze, wzmacniając unikanie przez drapieżniki?	Mimikra müllerowska	Mimikra batesowska	Mimikra agresywna	Mimikra wawiłowska
+Quel type de mimétisme réunit plusieurs espèces défendues et immangeables partageant des motifs d'avertissement semblables ?	Mimétisme müllérien	Mimétisme batésien	Mimétisme agressif	Mimétisme vavilovien
+¿Qué tipo de mimetismo implica que dos o más especies defendidas e incomibles compartan patrones de advertencia similares?	Mimetismo mülleriano	Mimetismo batesiano	Mimetismo agresivo	Mimetismo vaviloviano
+@ab9cd7db
+Jakie wyspecjalizowane wybuchowe organella wystrzeliwują mikroskopijne jadowe harpuny z komórek czułków meduz i parzydełkowców?	Nematocysty (knidocyty)	Choanocyty	Amebocyty	Pinakocyty
+Quels organites explosifs spécialisés projettent des harpons venimeux microscopiques depuis les cellules des tentacules des méduses ?	Nématocystes (cnidocytes)	Choanocytes	Amœbocytes	Pinacocytes
+¿Qué orgánulos explosivos especializados disparan arpones venenosos microscópicos desde las células de los tentáculos de medusas y cnidarios?	Nematocistos (cnidocitos)	Coanocitos	Amebocitos	Pinacocitos
+@e4908a7b
+Która zasada kwantowa mówi, że układ fizyczny pozostaje w liniowej kombinacji wszystkich możliwych stanów aż do pomiaru?	Superpozycja	Splątanie	Tunelowanie	Skok kwantowy
+Quel principe quantique dit qu'un système physique reste dans une combinaison linéaire de tous ses états possibles jusqu'à une mesure ?	Superposition	Intrication	Effet tunnel	Saut quantique
+¿Qué principio cuántico dice que un sistema físico permanece en una combinación lineal de todos sus estados posibles hasta que se observa?	Superposición	Entrelazamiento	Efecto túnel	Salto cuántico
+@7ba39272
+Która samotna kość w kształcie podkowy na szyi człowieka nie łączy się bezpośrednio z żadną inną kością?	Kość ogonowa	Kość gnykowa	Rzepka	Strzemiączko
+Quel os en fer à cheval du cou humain ne s'articule directement avec aucun autre os ?	Coccyx	Os hyoïde	Rotule	Étrier
+¿Qué hueso con forma de herradura del cuello humano no se articula directamente con ningún otro hueso?	Cóccix	Hueso hioides	Rótula	Estribo
+@128d59a5
+Jaki ułamek całkowitej gęstości masy-energii Wszechświata stanowi zwykła materia atomowa (barionowa)?	25%	5%	50%	0,1%
+Quelle part de la densité totale de masse-énergie de l'Univers la matière ordinaire (baryonique) représente-t-elle ?	25 %	5 %	50 %	0,1 %
+¿Qué fracción de la densidad total de masa-energía del universo representa la materia ordinaria (bariónica)?	25 %	5 %	50 %	0,1 %
+@71ffacfc
+Jaki piąty stan skupienia uzyskuje się, gdy rozrzedzony gaz bozonów schłodzi się niemal do zera absolutnego i zapadnie w jedną funkcję falową?	Kryształ plazmowy	Plazma kwarkowo-gluonowa	Kondensat fermionowy	Kondensat Bosego-Einsteina
+Quel cinquième état de la matière obtient-on en refroidissant un gaz de bosons près du zéro absolu, qui se fond en une seule fonction d'onde ?	Cristal plasma	Plasma quarks-gluons	Condensat fermionique	Condensat de Bose-Einstein
+¿Qué quinto estado de la materia se obtiene al enfriar un gas de bosones cerca del cero absoluto, que colapsa en una sola función de onda?	Cristal de plasma	Plasma de quarks y gluones	Condensado fermiónico	Condensado de Bose-Einstein
+@519c69a9
+Jakie teoretyczne promieniowanie cieplne ciała doskonale czarnego ma emitować horyzont zdarzeń czarnej dziury w wyniku kwantowych fluktuacji próżni?	Promieniowanie Hawkinga	Promieniowanie Czerenkowa	Promieniowanie synchrotronowe	Promieniowanie hamowania
+Quel rayonnement thermique théorique serait émis par l'horizon d'un trou noir à cause des fluctuations quantiques du vide ?	Rayonnement de Hawking	Rayonnement Tcherenkov	Rayonnement synchrotron	Rayonnement de freinage
+¿Qué radiación térmica teórica emitiría el horizonte de sucesos de un agujero negro debido a las fluctuaciones cuánticas del vacío?	Radiación de Hawking	Radiación de Cherenkov	Radiación sincrotrón	Radiación de frenado
+@ce57c707
+Który fundamentalny eksperyment fizyczny dowiódł dualizmu korpuskularno-falowego światła i materii za pomocą obrazu interferencyjnego?	Doświadczenie Michelsona-Morleya	Doświadczenie Rutherforda	Doświadczenie Cavendisha	Doświadczenie z dwiema szczelinami (Younga)
+Quelle expérience fondamentale a prouvé la dualité onde-particule de la lumière et de la matière grâce à une figure d'interférence ?	Expérience de Michelson-Morley	Expérience de Rutherford	Expérience de Cavendish	Expérience des fentes de Young
+¿Qué experimento fundamental demostró la dualidad onda-partícula de la luz y la materia mediante un patrón de interferencia?	Experimento de Michelson-Morley	Experimento de Rutherford	Experimento de Cavendish	Experimento de la doble rendija (Young)
+@ef025829
+Który gaz szlachetny zidentyfikowano spektroskopowo w chromosferze Słońca w 1868 roku, dekady przed wyodrębnieniem go na Ziemi?	Hel	Wodór	Neon	Krypton
+Quel gaz noble a été identifié par spectroscopie dans la chromosphère solaire en 1868, des décennies avant d'être isolé sur Terre ?	Hélium	Hydrogène	Néon	Krypton
+¿Qué gas noble se identificó por espectroscopia en la cromosfera solar en 1868, décadas antes de aislarlo en la Tierra?	Helio	Hidrógeno	Neón	Kriptón
+@d0a6ca4b
+Jaka odwracalna temperatura termodynamiczna oznacza przejście materiałów amorficznych ze stanu twardego i kruchego w lepki, gumowaty?	Punkt potrójny	Opalescencja krytyczna	Temperatura zeszklenia (T_g)	Temperatura Curie
+Quelle température marque le passage réversible des matériaux amorphes d'un état dur et cassant à un état visqueux et caoutchouteux ?	Point triple	Opalescence critique	Température de transition vitreuse (T_g)	Température de Curie
+¿Qué temperatura marca el paso reversible de los materiales amorfos de un estado duro y frágil a uno viscoso y gomoso?	Punto triple	Opalescencia crítica	Temperatura de transición vítrea (T_g)	Temperatura de Curie
+@f947b2e0
+Jaką charakterystyczną niebieską poświatę emitują naładowane cząstki poruszające się w ośrodku szybciej niż światło w tym ośrodku?	Promieniowanie Czerenkowa	Emisja rentgenowska	Poświata Van Allena	Rozbłysk plazmy
+Quelle luminescence bleue caractéristique émettent des particules chargées se déplaçant dans un milieu plus vite que la lumière dans ce milieu ?	Rayonnement Tcherenkov	Émission de rayons X	Lueur de Van Allen	Éruption de plasma
+¿Qué luminiscencia azul característica emiten las partículas cargadas que atraviesan un medio más rápido que la luz en ese medio?	Radiación de Cherenkov	Emisión de rayos X	Resplandor de Van Allen	Fulguración de plasma
+@3324ebc3
+Które organellum eukariotyczne ma własny kolisty chromosom i aparat translacji, co wspiera teorię endosymbiozy?	Aparat Golgiego	Lizosom	Retikulum endoplazmatyczne	Mitochondrium
+Quel organite eucaryote possède son propre chromosome circulaire et sa machinerie de traduction, ce qui appuie la théorie endosymbiotique ?	Appareil de Golgi	Lysosome	Réticulum endoplasmique	Mitochondrie
+¿Qué orgánulo eucariota tiene su propio cromosoma circular y maquinaria de traducción, lo que apoya la teoría endosimbiótica?	Aparato de Golgi	Lisosoma	Retículo endoplasmático	Mitocondria
+@deb535cf
+Jak nazywają się powtarzalne, niekodujące sekwencje zakańczające liniowe chromosomy eukariotów i chroniące je przed degradacją?	Centromery	Kinetochory	Nukleosomy	Telomery
+Comment s'appellent les séquences répétitives non codantes qui coiffent les extrémités des chromosomes eucaryotes et les protègent ?	Centromères	Kinétochores	Nucléosomes	Télomères
+¿Cómo se llaman las secuencias repetitivas no codificantes que protegen los extremos de los cromosomas eucariotas?	Centrómeros	Cinetocoros	Nucleosomas	Telómeros
+@fab5aa51
+Które prawo fizyki mówi, że całkowita entropia układu izolowanego nigdy nie maleje?	Druga zasada termodynamiki	Pierwsza zasada termodynamiki	Zerowa zasada termodynamiki	Trzecia zasada termodynamiki
+Quelle loi physique affirme que l'entropie totale d'un système isolé ne peut jamais diminuer ?	Deuxième principe de la thermodynamique	Premier principe de la thermodynamique	Principe zéro de la thermodynamique	Troisième principe de la thermodynamique
+¿Qué ley física afirma que la entropía total de un sistema aislado nunca puede disminuir?	Segundo principio de la termodinámica	Primer principio de la termodinámica	Principio cero de la termodinámica	Tercer principio de la termodinámica
+@d3343a1b
+Jakie zjawisko zachodzi, gdy silne zakrzywienie czasoprzestrzeni wokół masywnych obiektów odchyla i powiększa światło z tła?	Przesunięcie Dopplera	Paradoks Olbersa	Dyfrakcja kosmiczna	Soczewkowanie grawitacyjne
+Quel phénomène se produit quand la forte courbure de l'espace-temps autour d'objets massifs dévie et amplifie la lumière d'arrière-plan ?	Décalage Doppler	Paradoxe d'Olbers	Diffraction cosmique	Lentille gravitationnelle
+¿Qué fenómeno se da cuando la intensa curvatura del espacio-tiempo alrededor de objetos masivos desvía y amplifica la luz de fondo?	Desplazamiento Doppler	Paradoja de Olbers	Difracción cósmica	Lente gravitacional
+@f0843e0f
+Jaki genetycznie regulowany szlak odpowiada za uporządkowaną, niezapalną programowaną śmierć komórek?	Martwica	Apoptoza	Autoimmunizacja	Fagocytoza
+Quelle voie génétiquement régulée assure la mort cellulaire programmée, ordonnée et non inflammatoire ?	Nécrose	Apoptose	Auto-immunité	Phagocytose
+¿Qué vía regulada genéticamente produce la muerte celular programada, ordenada y no inflamatoria?	Necrosis	Apoptosis	Autoinmunidad	Fagocitosis
+@04a6724f
+Które pasmo promieniowania elektromagnetycznego ma najkrótsze fale, najwyższe częstotliwości i największą energię fotonów?	Promienie gamma	Promienie rentgenowskie	Ultrafiolet	Mikrofale kosmiczne
+Quelle bande du rayonnement électromagnétique a les plus courtes longueurs d'onde, les plus hautes fréquences et la plus forte énergie ?	Rayons gamma	Rayons X	Ultraviolets	Micro-ondes cosmiques
+¿Qué banda de radiación electromagnética tiene las longitudes de onda más cortas, las frecuencias más altas y la mayor energía?	Rayos gamma	Rayos X	Ultravioleta	Microondas cósmicas
+@ef4e33a4
+Jaka hipotetyczna, wszechobecna forma energii o ujemnym ciśnieniu ma napędzać przyspieszające rozszerzanie się Wszechświata?	Ciemna materia	Magnetyzm kosmiczny	Ciemna energia	Wielki Atraktor
+Quelle forme hypothétique d'énergie à pression négative serait responsable de l'accélération de l'expansion de l'Univers ?	Matière noire	Magnétisme cosmique	Énergie noire	Grand Attracteur
+¿Qué forma hipotética de energía de presión negativa impulsaría la expansión acelerada del universo?	Materia oscura	Magnetismo cósmico	Energía oscura	Gran Atractor
+@47c15f5b
+Jak nazywa się całkowite wypchnięcie strumienia magnetycznego z wnętrza materiału przechodzącego w stan nadprzewodnictwa?	Efekt Zeemana	Efekt Meissnera	Efekt Halla	Efekt Faradaya
+Comment s'appelle l'expulsion totale du champ magnétique de l'intérieur d'un matériau qui devient supraconducteur ?	Effet Zeeman	Effet Meissner	Effet Hall	Effet Faraday
+¿Cómo se llama la expulsión total del campo magnético del interior de un material que pasa a ser superconductor?	Efecto Zeeman	Efecto Meissner	Efecto Hall	Efecto Faraday
+@1bde19f8
+Która odmiana węgla o grubości jednego atomu, ułożona w dwuwymiarową sieć plastra miodu, ma niezwykłą wytrzymałość i przewodnictwo?	Grafen	Nanorurka węglowa	Fulleren	Karbin
+Quelle forme de carbone d'un seul atome d'épaisseur, en réseau hexagonal en nid d'abeille, a une résistance et une conductivité extraordinaires ?	Graphène	Nanotube de carbone	Fullerène	Carbyne
+¿Qué alótropo del carbono de un solo átomo de grosor, en red hexagonal de panal, tiene una resistencia y conductividad extraordinarias?	Grafeno	Nanotubo de carbono	Fullereno	Carbino
+@45063c79
+Który fizyk teoretyczny sformułował zasadę nieoznaczoności, określającą granicę jednoczesnego pomiaru wielkości sprzężonych?	Max Planck	Werner Heisenberg	Louis de Broglie	Wolfgang Pauli
+Quel physicien théoricien a formulé le principe d'incertitude, qui fixe une limite à la mesure simultanée de grandeurs conjuguées ?	Max Planck	Werner Heisenberg	Louis de Broglie	Wolfgang Pauli
+¿Qué físico teórico formuló el principio de incertidumbre, que limita la medición simultánea de variables conjugadas?	Max Planck	Werner Heisenberg	Louis de Broglie	Wolfgang Pauli
+@6f4152d0
+Jakie parametry temperatury i ciśnienia oznaczają równowagę współistnienia fazy stałej, ciekłej i gazowej?	Punkt krytyczny	Punkt potrójny	Faza nadkrytyczna	Punkt eutektyczny
+Quels paramètres de température et de pression correspondent à la coexistence à l'équilibre des phases solide, liquide et gazeuse ?	Point critique	Point triple	Phase supercritique	Point eutectique
+¿Qué parámetros de temperatura y presión corresponden a la coexistencia en equilibrio de las fases sólida, líquida y gaseosa?	Punto crítico	Punto triple	Fase supercrítica	Punto eutéctico
+@e4d17dba
+Który skalarny bozon elementarny, potwierdzony w CERN w 2012 roku, odpowiada za mechanizm nadawania masy bozonom cechowania?	Bozon Higgsa	Foton	Gluon	Bozon Z
+Quel boson scalaire, confirmé au CERN en 2012, est lié au mécanisme qui donne leur masse aux bosons de jauge ?	Boson de Higgs	Photon	Gluon	Boson Z
+¿Qué bosón escalar confirmado en el CERN en 2012 media el mecanismo que da masa a los bosones gauge?	Bosón de Higgs	Fotón	Gluon	Bosón Z
+@cf05aaa8
+Jak nazywa się mały fizjologiczny ubytek pola widzenia w miejscu, gdzie włókna nerwowe opuszczają siatkówkę przez tarczę nerwu wzrokowego bez fotoreceptorów?	Plamka żółta	Plamka ślepa (mroczek fizjologiczny)	Dołek środkowy	Ora serrata
+Comment s'appelle le petit défaut physiologique du champ visuel là où les fibres nerveuses quittent la rétine par la papille, sans photorécepteurs ?	Macula	Tache aveugle (scotome physiologique)	Fovéa	Ora serrata
+¿Cómo se llama el pequeño defecto visual fisiológico donde las fibras nerviosas salen de la retina por el disco óptico, sin fotorreceptores?	Mácula	Punto ciego (escotoma fisiológico)	Fóvea	Ora serrata
+@986d4bce
+Jak nazywa się ciągła sekwencja trzech nukleotydów w mRNA kodująca konkretny aminokwas lub sygnał końca translacji?	Kodon	Antykodon	Egzon	Intron
+Comment appelle-t-on une séquence de trois nucléotides de l'ARNm codant un acide aminé ou un signal d'arrêt ?	Codon	Anticodon	Exon	Intron
+¿Cómo se llama una secuencia de tres nucleótidos del ARNm que codifica un aminoácido o una señal de parada?	Codón	Anticodón	Exón	Intrón
+@1b75bc32
+Jak nazywa się granica orbity, wewnątrz której satelita utrzymywany tylko własną grawitacją zostaje rozerwany przez siły pływowe?	Promień Schwarzschilda	Granica Chandrasekhara	Granica Roche'a	Odległość Hubble'a
+Comment appelle-t-on la distance orbitale en deçà de laquelle un satellite tenu par sa seule gravité est disloqué par les forces de marée ?	Rayon de Schwarzschild	Limite de Chandrasekhar	Limite de Roche	Distance de Hubble
+¿Cómo se llama el límite orbital dentro del cual un satélite unido solo por su gravedad se rompe por las fuerzas de marea?	Radio de Schwarzschild	Límite de Chandrasekhar	Límite de Roche	Distancia de Hubble
+@00a1865a
+Jak nazywa się teoretyczna górna granica masy (ok. 1,4 masy Słońca), powyżej której ciśnienie zdegenerowanych elektronów nie zapobiega zapadnięciu białego karła?	Granica Chandrasekhara	Granica Tolmana-Oppenheimera-Volkoffa	Granica Eddingtona	Granica Oorta
+Comment s'appelle la masse limite théorique (environ 1,4 masse solaire) au-delà de laquelle une naine blanche s'effondre ?	Limite de Chandrasekhar	Limite de Tolman-Oppenheimer-Volkoff	Limite d'Eddington	Limite d'Oort
+¿Cómo se llama el límite teórico de masa (unas 1,4 masas solares) por encima del cual una enana blanca colapsa?	Límite de Chandrasekhar	Límite de Tolman-Oppenheimer-Volkoff	Límite de Eddington	Límite de Oort
+@7db960f5
+Jak nazywają się izomery o identycznym wzorze sumarycznym i kolejności wiązań, różniące się przestrzennym ułożeniem atomów?	Stereoizomery	Odmiany alotropowe	Izobary	Polimery
+Comment appelle-t-on les isomères de même formule et même enchaînement d'atomes, mais d'orientation spatiale différente ?	Stéréoisomères	Allotropes	Isobares	Polymères
+¿Cómo se llaman los isómeros con la misma fórmula y secuencia de enlaces pero distinta orientación espacial?	Estereoisómeros	Alótropos	Isóbaros	Polímeros
+@4053f1ef
+W jakiej temperaturze w skali Celsjusza zdefiniowano zero absolutne?	-100 °C	-273,15 °C	-459,67 °C	-212,00 °C
+À quelle température en degrés Celsius est défini le zéro absolu ?	-100 °C	-273,15 °C	-459,67 °C	-212,00 °C
+¿A qué temperatura en grados Celsius se define el cero absoluto?	-100 °C	-273,15 °C	-459,67 °C	-212,00 °C
+@1f64d0b5
+W którym „cudownym roku” ukazała się przełomowa praca Alberta Einsteina o szczególnej teorii względności?	1895	1905	1915	1923
+En quelle « année miraculeuse » a été publié l'article fondateur d'Einstein sur la relativité restreinte ?	1895	1905	1915	1923
+¿En qué «año milagroso» se publicó el artículo fundamental de Einstein sobre la relatividad especial?	1895	1905	1915	1923
+@a18869ed
+Jaki początkowy, beztlenowy szlak metaboliczny w cytozolu rozkłada glukozę do pirogronianu podczas oddychania komórkowego?	Cykl Krebsa	Glikoliza	Łańcuch oddechowy	Fosforylacja oksydacyjna
+Quelle voie métabolique anaérobie initiale, dans le cytosol, dégrade le glucose en pyruvate lors de la respiration cellulaire ?	Cycle de Krebs	Glycolyse	Chaîne respiratoire	Phosphorylation oxydative
+¿Qué vía metabólica anaerobia inicial en el citosol descompone la glucosa en piruvato durante la respiración celular?	Ciclo de Krebs	Glucólisis	Cadena de transporte de electrones	Fosforilación oxidativa
+@5322539c
+Od jakiego angielskiego wyrażenia pochodzi skrót „LASER”?	Light Amplification by Stimulated Emission of Radiation	Linear Atomic System for Emission Rays	Light Absorption through Special Electronic Rays	Luminescent Acceleration of Stimulated Electron Radiation
+De quelle expression anglaise vient l'acronyme « LASER » ?	Light Amplification by Stimulated Emission of Radiation	Linear Atomic System for Emission Rays	Light Absorption through Special Electronic Rays	Luminescent Acceleration of Stimulated Electron Radiation
+¿De qué expresión inglesa procede el acrónimo «LÁSER»?	Light Amplification by Stimulated Emission of Radiation	Linear Atomic System for Emission Rays	Light Absorption through Special Electronic Rays	Luminescent Acceleration of Stimulated Electron Radiation
+@4dff1d9b
+Który skoczek wzwyż zrewolucjonizował dyscyplinę, stosując skok plecami (flop) na igrzyskach w Meksyku w 1968 roku?	Walerij Brumel	Dick Fosbury	Javier Sotomayor	Dwight Stones
+Quel sauteur en hauteur a révolutionné la discipline en inaugurant le saut dorsal aux Jeux de Mexico en 1968 ?	Valeri Broumel	Dick Fosbury	Javier Sotomayor	Dwight Stones
+¿Qué saltador de altura revolucionó la disciplina con el salto de espaldas en los Juegos de México 1968?	Valeri Brúmel	Dick Fosbury	Javier Sotomayor	Dwight Stones
+@16d13d8a
+Który Etiopczyk wygrał maraton olimpijski w Rzymie w 1960 roku, biegnąc całkowicie boso, i dał Afryce Wschodniej pierwsze złoto?	Haile Gebrselassie	Kenenisa Bekele	Abebe Bikila	Mamo Wolde
+Quel Éthiopien a remporté le marathon olympique de Rome en 1960 entièrement pieds nus, offrant à l'Afrique de l'Est son premier or ?	Haile Gebrselassie	Kenenisa Bekele	Abebe Bikila	Mamo Wolde
+¿Qué etíope ganó la maratón olímpica de Roma 1960 corriendo totalmente descalzo, dando a África oriental su primer oro?	Haile Gebrselassie	Kenenisa Bekele	Abebe Bikila	Mamo Wolde
+@53ee295b
+Który kierowca F1 przeżył niemal śmiertelny, płonący wypadek na Nürburgringu w 1976 roku i wrócił do ścigania na Monzy już po sześciu tygodniach?	James Hunt	Niki Lauda	Jackie Stewart	Emerson Fittipaldi
+Quel pilote de F1 a survécu à un terrible accident en flammes au Nürburgring en 1976 et est revenu courir à Monza six semaines plus tard ?	James Hunt	Niki Lauda	Jackie Stewart	Emerson Fittipaldi
+¿Qué piloto de F1 sobrevivió a un casi mortal accidente en llamas en Nürburgring en 1976 y volvió a correr en Monza solo seis semanas después?	James Hunt	Niki Lauda	Jackie Stewart	Emerson Fittipaldi
+@6f24b4ab
+Która reprezentacja zaszokowała prawie 200 000 kibiców na Maracanie, pokonując Brazylię 2:1 w decydującym meczu mundialu 1950?	Urugwaj	Szwecja	Węgry	Hiszpania
+Quelle sélection a stupéfié près de 200 000 spectateurs au Maracanã en battant le Brésil 2-1 lors du match décisif du Mondial 1950 ?	Uruguay	Suède	Hongrie	Espagne
+¿Qué selección dejó helados a casi 200.000 espectadores en Maracaná al ganar 2-1 a Brasil en el partido decisivo del Mundial de 1950?	Uruguay	Suecia	Hungría	España
+@9559aeab
+Ile trwał najdłuższy mecz tenisowy w historii między Johnem Isnerem a Nicolasem Mahutem na Wimbledonie 2010?	8 godz. 20 min	9 godz. 45 min	11 godz. 5 min	13 godz. 12 min
+Combien de temps a duré le plus long match de tennis de l'histoire entre John Isner et Nicolas Mahut à Wimbledon en 2010 ?	8 h 20	9 h 45	11 h 05	13 h 12
+¿Cuánto duró el partido de tenis más largo de la historia, entre John Isner y Nicolas Mahut en Wimbledon 2010?	8 h 20 min	9 h 45 min	11 h 5 min	13 h 12 min
+@6345671c
+Który afroamerykański lekkoatleta obalił nazistowskie teorie o wyższości aryjskiej, zdobywając cztery złote medale na igrzyskach w Berlinie w 1936 roku?	Ralph Metcalfe	Jesse Owens	Mack Robinson	Cornelius Johnson
+Quel athlète afro-américain a ruiné les théories nazies de supériorité aryenne en remportant quatre médailles d'or aux Jeux de Berlin en 1936 ?	Ralph Metcalfe	Jesse Owens	Mack Robinson	Cornelius Johnson
+¿Qué atleta afroamericano echó por tierra las teorías nazis de supremacía aria al ganar cuatro oros en los Juegos de Berlín 1936?	Ralph Metcalfe	Jesse Owens	Mack Robinson	Cornelius Johnson
+@01dfc644
+Który skoczek w dal ustanowił w Meksyku w 1968 roku zdumiewający rekord świata 8,90 m, niepobity przez 23 lata?	Carl Lewis	Bob Beamon	Mike Powell	Dwight Phillips
+Quel sauteur en longueur a établi à Mexico en 1968 un record du monde stupéfiant de 8,90 m, invaincu pendant 23 ans ?	Carl Lewis	Bob Beamon	Mike Powell	Dwight Phillips
+¿Qué saltador de longitud fijó en México 1968 un asombroso récord mundial de 8,90 m que duró 23 años?	Carl Lewis	Bob Beamon	Mike Powell	Dwight Phillips
+@4a14351e
+Jaki przesąd obwiniano za 86-letnią przerwę Boston Red Sox w tytułach World Series po sprzedaży Babe'a Rutha do Yankees?	Klątwa Bambino	Klątwa Kozła Billy'ego	Klątwa Black Sox	Pech Fenway
+Quelle superstition a-t-on accusée des 86 ans sans titre en World Series des Red Sox de Boston après la vente de Babe Ruth aux Yankees ?	La malédiction du Bambino	La malédiction de la chèvre	La malédiction des Black Sox	Le sort de Fenway
+¿Qué superstición se culpó de los 86 años sin Serie Mundial de los Red Sox de Boston tras vender a Babe Ruth a los Yankees?	La maldición del Bambino	La maldición de la cabra	La maldición de los Black Sox	El gafe de Fenway
+@da7e97cb
+Jaką strategię zastosował Muhammad Ali, by zmęczyć George'a Foremana w „Rumble in the Jungle” (1974), opierając się o liny?	Peek-a-boo	Rope-a-dope	Philly Shell	Cios bolo
+Quelle stratégie Mohamed Ali a-t-il utilisée pour épuiser George Foreman lors du « Rumble in the Jungle » (1974) en s'appuyant dans les cordes ?	Peek-a-boo	Rope-a-dope	Philly Shell	Coup de bolo
+¿Qué estrategia usó Muhammad Ali para agotar a George Foreman en el «Rumble in the Jungle» (1974) apoyándose en las cuerdas?	Peek-a-boo	Rope-a-dope	Philly Shell	Golpe bolo
+@f33e3c78
+Który sprinter wygrał finał 100 m w Seulu w 1988 roku w 9,79 s, by trzy dni później stracić złoto za pozytywny test na stanozolol?	Carl Lewis	Ben Johnson	Linford Christie	Dennis Mitchell
+Quel sprinteur a remporté la finale du 100 m de Séoul 1988 en 9"79 avant d'être déchu trois jours plus tard pour un contrôle positif au stanozolol ?	Carl Lewis	Ben Johnson	Linford Christie	Dennis Mitchell
+¿Qué velocista ganó la final de 100 m de Seúl 1988 en 9,79 s y tres días después perdió el oro por dar positivo en estanozolol?	Carl Lewis	Ben Johnson	Linford Christie	Dennis Mitchell
+@06b101de
+Jakie pięć konkurencji tradycyjnie tworzy olimpijski pięciobój nowoczesny?	Szermierka, pływanie, jeździectwo, bieg, strzelanie	Wioślarstwo, kolarstwo, bieg, pływanie, łucznictwo	Zapasy, boks, podnoszenie ciężarów, bieg, pływanie	Judo, szermierka, jeździectwo, gimnastyka, bieg
+Quelles cinq épreuves composent traditionnellement le pentathlon moderne olympique ?	Escrime, natation, saut d'obstacles, course, tir	Aviron, cyclisme, course, natation, tir à l'arc	Lutte, boxe, haltérophilie, course, natation	Judo, escrime, équitation, gymnastique, course
+¿Qué cinco pruebas forman tradicionalmente el pentatlón moderno olímpico?	Esgrima, natación, salto ecuestre, carrera, tiro	Remo, ciclismo, carrera, natación, tiro con arco	Lucha, boxeo, halterofilia, carrera, natación	Judo, esgrima, hípica, gimnasia, carrera
+@dc0062f5
+Który brytyjski kolarz tragicznie zmarł niedaleko szczytu Mont Ventoux podczas Tour de France 1967 z powodu wyczerpania i amfetaminy?	Tom Simpson	Tommy Simpson	Robert Millar	Bradley Wiggins
+Quel coureur britannique est mort tragiquement près du sommet du mont Ventoux pendant le Tour de France 1967, épuisé et sous amphétamines ?	Tom Simpson	Tommy Simpson	Robert Millar	Bradley Wiggins
+¿Qué ciclista británico murió trágicamente cerca de la cima del Mont Ventoux en el Tour de Francia de 1967 por agotamiento y anfetaminas?	Tom Simpson	Tommy Simpson	Robert Millar	Bradley Wiggins
+@8b9fac0d
+Który trzykrotny mistrz świata F1 z Brazylii zginął w wypadku na torze Imola 1 maja 1994 roku?	Nelson Piquet	Ayrton Senna	Rubens Barrichello	Felipe Massa
+Quel triple champion du monde de F1 brésilien a été mortellement blessé dans un accident à Imola le 1er mai 1994 ?	Nelson Piquet	Ayrton Senna	Rubens Barrichello	Felipe Massa
+¿Qué tricampeón mundial de F1 brasileño murió en un accidente en el circuito de Imola el 1 de mayo de 1994?	Nelson Piquet	Ayrton Senna	Rubens Barrichello	Felipe Massa
+@7b54ae0c
+Który radziecki zawodnik zdobył kontrowersyjny kosz w ostatnich trzech sekundach finału olimpijskiego w koszykówce w Monachium 1972 przeciw USA?	Siergiej Biełow	Aleksandr Biełow	Modestas Paulauskas	Ałżan Żarmuchamiedow
+Quel joueur soviétique a marqué le panier controversé des trois dernières secondes de la finale olympique de basket de Munich 1972 contre les États-Unis ?	Sergueï Belov	Alexandre Belov	Modestas Paulauskas	Alzhan Zharmukhamedov
+¿Qué jugador soviético anotó la polémica canasta en los tres últimos segundos de la final olímpica de baloncesto de Múnich 1972 contra EE. UU.?	Serguéi Bélov	Aleksandr Bélov	Modestas Paulauskas	Alzhan Zharmujamédov
+@b773f576
+W którym roku IFAB wprowadził przepis zakazujący bramkarzom łapania rękami celowych podań nogą od partnerów?	1986	1990	1992	1996
+En quelle année l'IFAB a-t-il introduit la règle interdisant aux gardiens de prendre à la main une passe en retrait volontaire du pied ?	1986	1990	1992	1996
+¿En qué año introdujo la IFAB la regla que prohíbe al portero coger con las manos una cesión voluntaria con el pie?	1986	1990	1992	1996
+@314b7874
+Która 14-letnia rumuńska gimnastyczka otrzymała pierwszą w historii olimpijskiej gimnastyki idealną notę 10,0 w Montrealu w 1976 roku?	Olga Korbut	Nadia Comăneci	Nellie Kim	Mary Lou Retton
+Quelle gymnaste roumaine de 14 ans a obtenu le premier 10 parfait de l'histoire de la gymnastique olympique à Montréal en 1976 ?	Olga Korbut	Nadia Comăneci	Nellie Kim	Mary Lou Retton
+¿Qué gimnasta rumana de 14 años obtuvo el primer 10 perfecto de la historia de la gimnasia olímpica en Montreal 1976?	Olga Korbut	Nadia Comăneci	Nellie Kim	Mary Lou Retton
+@c350c31a
+Jak nazywa się osławiony mecz mundialu 1982, w którym RFN i Austria ustaliły dogodny dla obu wynik 1:0, eliminując Algierię?	Hańba z Gijón	Skandal w Sewilli	Trauma z Córdoby	Pakt z Gijón
+Quel match tristement célèbre du Mondial 1982 a vu la RFA et l'Autriche s'arranger sur un 1-0 pour éliminer l'Algérie ?	Le match de la honte de Gijón	Le scandale de Séville	Le traumatisme de Córdoba	Le pacte de Gijón
+¿Qué infame partido del Mundial de 1982 vio a Alemania Occidental y Austria pactar un 1-0 conveniente para eliminar a Argelia?	La vergüenza de Gijón	El escándalo de Sevilla	El trauma de Córdoba	El pacto de Gijón
+@fe078eea
+Który amerykański biegacz jako pierwszy przekroczył metę maratonu olimpijskiego w 1904 roku, ale został zdyskwalifikowany, gdy wyszło na jaw, że 11 mil przejechał samochodem?	Thomas Hicks	Fred Lorz	Arthur Newton	Félix Carvajal
+Quel coureur américain a franchi le premier la ligne du marathon olympique de 1904 avant d'être disqualifié pour avoir fait 11 miles en voiture ?	Thomas Hicks	Fred Lorz	Arthur Newton	Félix Carvajal
+¿Qué corredor estadounidense cruzó primero la meta de la maratón olímpica de 1904 y fue descalificado al saberse que hizo 11 millas en coche?	Thomas Hicks	Fred Lorz	Arthur Newton	Félix Carvajal
+@ec750209
+Jaką karę przyznaje się w polu karnym, jeśli bramkarz trzyma piłkę w rękach dłużej niż sześć sekund?	Rzut karny	Rzut wolny pośredni	Rzut wolny bezpośredni	Rzut sędziowski
+Selon les lois du football, quelle sanction est accordée dans la surface si le gardien garde le ballon en main plus de six secondes ?	Penalty	Coup franc indirect	Coup franc direct	Balle à terre
+Según las reglas del fútbol, ¿qué se concede dentro del área si el portero retiene el balón con las manos más de seis segundos?	Penalti	Tiro libre indirecto	Tiro libre directo	Balón a tierra
+@a9f2ebc1
+Kto jest jedynym tenisistą w historii, który dwukrotnie zdobył Wielkiego Szlema w roku kalendarzowym (1962 i 1969)?	Björn Borg	Rod Laver	Roy Emerson	Ken Rosewall
+Qui est le seul joueur de tennis de l'histoire à avoir réalisé deux fois le Grand Chelem sur une année civile (1962 et 1969) ?	Björn Borg	Rod Laver	Roy Emerson	Ken Rosewall
+¿Quién es el único tenista de la historia que ganó dos veces el Grand Slam en un mismo año natural (1962 y 1969)?	Björn Borg	Rod Laver	Roy Emerson	Ken Rosewall
+@3d44ff23
+Ile punktów mistrzostw zdobyła Lella Lombardi w skróconym Grand Prix Hiszpanii 1975, pozostając jedyną kobietą, która punktowała w F1?	0,5 punktu	1 punkt	2 punkty	3 punkty
+Combien de points Lella Lombardi a-t-elle marqués au Grand Prix d'Espagne 1975, écourté, restant la seule femme à avoir marqué en F1 ?	0,5 point	1 point	2 points	3 points
+¿Cuántos puntos sumó Lella Lombardi en el acortado Gran Premio de España de 1975, única mujer que ha puntuado en la F1?	0,5 puntos	1 punto	2 puntos	3 puntos
+@c3fbf251
+Która legendarna reprezentacja pokonała Anglię 6:3 na Wembley w 1953 roku, zadając jej pierwszą domową porażkę z drużyną z Europy kontynentalnej?	Węgry (Złota Jedenastka)	Austria (Wunderteam)	Urugwaj	Brazylia
+Quelle sélection légendaire a battu l'Angleterre 6-3 à Wembley en 1953, sa première défaite à domicile contre une équipe d'Europe continentale ?	La Hongrie (l'Équipe d'or)	L'Autriche (Wunderteam)	L'Uruguay	Le Brésil
+¿Qué legendaria selección ganó 6-3 a Inglaterra en Wembley en 1953, su primera derrota en casa ante un equipo de Europa continental?	Hungría (el Equipo de Oro)	Austria (Wunderteam)	Uruguay	Brasil
+@d49ef4ea
+Jakie pięć konkurencji rozgrywa się kolejno pierwszego dnia męskiego dziesięcioboju?	100 m, skok w dal, pchnięcie kulą, skok wzwyż, 400 m	100 m, rzut oszczepem, skok o tyczce, rzut dyskiem, 1500 m	110 m ppł, skok w dal, rzut dyskiem, skok wzwyż, 400 m	200 m, pchnięcie kulą, trójskok, rzut oszczepem, 800 m
+Quelles cinq épreuves se disputent dans l'ordre le premier jour d'un décathlon masculin ?	100 m, longueur, poids, hauteur, 400 m	100 m, javelot, perche, disque, 1 500 m	110 m haies, longueur, disque, hauteur, 400 m	200 m, poids, triple saut, javelot, 800 m
+¿Qué cinco pruebas se disputan por orden el primer día del decatlón masculino?	100 m, longitud, peso, altura, 400 m	100 m, jabalina, pértiga, disco, 1500 m	110 m vallas, longitud, disco, altura, 400 m	200 m, peso, triple salto, jabalina, 800 m
+@a5cc72b4
+Na ile lat UEFA wykluczyła angielskie kluby z europejskich rozgrywek po tragedii na stadionie Heysel w 1985 roku?	3 lata	5 lat	7 lat	10 lat
+Après le drame du Heysel en 1985, pendant combien d'années l'UEFA a-t-elle exclu les clubs anglais des coupes d'Europe ?	3 ans	5 ans	7 ans	10 ans
+Tras la tragedia de Heysel en 1985, ¿cuántos años excluyó la UEFA a los clubes ingleses de las competiciones europeas?	3 años	5 años	7 años	10 años
+@172d1f94
+Które dwie drużyny rozegrały najwyżej punktowany mecz w historii NBA (łącznie 370 punktów) po trzech dogrywkach w 1983 roku?	Detroit Pistons – Denver Nuggets	Boston Celtics – Los Angeles Lakers	Golden State Warriors – San Antonio Spurs	Phoenix Suns – New York Knicks
+Quelles deux équipes ont disputé le match le plus prolifique de l'histoire de la NBA (370 points au total) après trois prolongations en 1983 ?	Detroit Pistons – Denver Nuggets	Boston Celtics – Los Angeles Lakers	Golden State Warriors – San Antonio Spurs	Phoenix Suns – New York Knicks
+¿Qué dos equipos jugaron el partido con más puntos de la historia de la NBA (370 en total) tras tres prórrogas en 1983?	Detroit Pistons – Denver Nuggets	Boston Celtics – Los Angeles Lakers	Golden State Warriors – San Antonio Spurs	Phoenix Suns – New York Knicks
+@61587e8e
+Jaki brutalny sport walki niemal bez zasad, łączący boks i zapasy, wprowadzono do starożytnych igrzysk olimpijskich w 648 roku p.n.e.?	Pankration	Hoplitodromos	Pygme	Pale
+Quel sport de combat brutal, presque sans règles, mêlant boxe et lutte, a été introduit aux Jeux olympiques antiques en 648 av. J.-C. ?	Pancrace	Hoplitodromos	Pygmé	Palé
+¿Qué brutal deporte de combate casi sin reglas, mezcla de boxeo y lucha, se introdujo en los antiguos Juegos Olímpicos en el 648 a. C.?	Pancracio	Hoplitodromos	Pygmé	Palé
+@9c97f9c7
+Jak w krykiecie nazywa się wyeliminowanie przez rzucającego trzech odbijających w kolejnych rzutach w jednym meczu?	Potrójna bramka	Hat trick	Złoty over	Stumping
+Au cricket, comment appelle-t-on l'élimination de trois batteurs par un lanceur sur trois balles consécutives ?	Triple guichet	Coup du chapeau (hat-trick)	Over d'or	Stumping
+En críquet, ¿cómo se llama que un lanzador elimine a tres bateadores con tres lanzamientos seguidos?	Triple wicket	Hat-trick	Over de oro	Stumping
+@04209443
+Kto strzelił dramatycznego gola na wagę zwycięstwa w 93. minucie dla Manchesteru United przeciw Bayernowi w finale Ligi Mistrzów 1999?	Teddy Sheringham	Ole Gunnar Solskjær	David Beckham	Ryan Giggs
+Qui a marqué le but décisif à la 93e minute pour Manchester United contre le Bayern en finale de la Ligue des champions 1999 ?	Teddy Sheringham	Ole Gunnar Solskjær	David Beckham	Ryan Giggs
+¿Quién marcó el dramático gol de la victoria en el minuto 93 para el Manchester United ante el Bayern en la final de la Champions de 1999?	Teddy Sheringham	Ole Gunnar Solskjær	David Beckham	Ryan Giggs
+@f90943e2
+Jaka jest oficjalna średnica wewnętrzna koła do pchnięcia kulą i rzutu młotem?	2,135 m	2,500 m	1,850 m	3,000 m
+Quel est le diamètre intérieur officiel du cercle de lancer du poids et du marteau ?	2,135 m	2,500 m	1,850 m	3,000 m
+¿Cuál es el diámetro interior oficial del círculo de lanzamiento de peso y martillo?	2,135 m	2,500 m	1,850 m	3,000 m
+@1f57f6e3
+Który ukraiński tyczkarz dominował przez dekady, ustanawiając 35 rekordów świata i skacząc 6,14 m na stadionie i 6,15 m w hali?	Armand Duplantis	Serhij Bubka	Renaud Lavillenie	Maksim Tarasow
+Quel perchiste ukrainien a dominé la discipline pendant des décennies, avec 35 records du monde, 6,14 m en plein air et 6,15 m en salle ?	Armand Duplantis	Sergueï Bubka	Renaud Lavillenie	Maksim Tarassov
+¿Qué pertiguista ucraniano dominó durante décadas, con 35 récords mundiales y saltos de 6,14 m al aire libre y 6,15 m en pista cubierta?	Armand Duplantis	Serguéi Bubka	Renaud Lavillenie	Maksim Tarásov
+@2408ebb5
+Który brytyjski matematyk położył w 1936 roku teoretyczne podwaliny informatyki pracą o liczbach obliczalnych i maszynach uniwersalnych?	John von Neumann	Alan Turing	Claude Shannon	Kurt Gödel
+Quel mathématicien britannique a posé en 1936 les bases théoriques de l'informatique avec son article sur les nombres calculables et la machine universelle ?	John von Neumann	Alan Turing	Claude Shannon	Kurt Gödel
+¿Qué matemático británico sentó en 1936 las bases teóricas de la informática con su artículo sobre los números computables y la máquina universal?	John von Neumann	Alan Turing	Claude Shannon	Kurt Gödel
+@92f79bcd
+Jaka szybka hierarchia pamięci statycznej (L1, L2, L3) w strukturze procesora zmniejsza opóźnienie dostępu do pamięci głównej?	Pamięć wymiany	Pamięć podręczna procesora (cache)	DRAM	VRAM
+Quelle hiérarchie de mémoire statique rapide (L1, L2, L3) intégrée au processeur réduit la latence vers la mémoire principale ?	Mémoire d'échange	Mémoire cache du processeur	DRAM	VRAM
+¿Qué jerarquía de memoria estática rápida (L1, L2, L3) integrada en la CPU reduce la latencia con la memoria principal?	Memoria de intercambio	Caché de la CPU	DRAM	VRAM
+@23b1f877
+Jak w programowaniu współbieżnym nazywa się sytuacja, gdy dwa lub więcej wątków są trwale zablokowane, czekając na zasoby trzymane przez siebie nawzajem?	Wyścig (race condition)	Zakleszczenie (deadlock)	Livelock	Zagłodzenie
+En programmation concurrente, comment appelle-t-on la situation où plusieurs threads sont bloqués indéfiniment en attendant des ressources détenues les uns par les autres ?	Situation de compétition	Interblocage (deadlock)	Livelock	Famine
+En programación concurrente, ¿cómo se llama la situación en la que dos o más hilos quedan bloqueados para siempre esperando recursos que tiene el otro?	Condición de carrera	Interbloqueo (deadlock)	Livelock	Inanición
+@3d204d78
+Od nazwisk których trzech matematyków, twórców kryptografii klucza publicznego w 1977 roku, pochodzi skrót RSA?	Rivest, Shamir, Adleman	Ritchie, Shannon, Amdahl	Russell, Searle, Asimov	Robbins, Shor, Aiken
+De quels trois mathématiciens, pionniers de la cryptographie à clé publique en 1977, vient l'acronyme RSA ?	Rivest, Shamir, Adleman	Ritchie, Shannon, Amdahl	Russell, Searle, Asimov	Robbins, Shor, Aiken
+¿De qué tres matemáticos, pioneros de la criptografía de clave pública en 1977, procede el acrónimo RSA?	Rivest, Shamir, Adleman	Ritchie, Shannon, Amdahl	Russell, Searle, Asimov	Robbins, Shor, Aiken
+@74cee2e9
+Jaki jest stały rozmiar skrótu generowanego przez funkcję SHA-256 używaną w protokole Bitcoin?	128 bitów	256 bitów	512 bitów	1024 bity
+Quelle est la taille fixe de l'empreinte produite par la fonction de hachage SHA-256 utilisée dans Bitcoin ?	128 bits	256 bits	512 bits	1 024 bits
+¿Qué tamaño fijo tiene el resumen que genera el algoritmo de hash SHA-256 usado en Bitcoin?	128 bits	256 bits	512 bits	1024 bits
+@b91d4ccf
+Który model koncepcyjny standaryzuje komunikację w sieciach komputerowych w siedmiu warstwach abstrakcji?	Model TCP/IP	Model OSI	Protokół Ethernet	Model sieci ARPA
+Quel modèle conceptuel standardise les télécommunications réseau en sept couches d'abstraction ?	Modèle TCP/IP	Modèle OSI	Protocole Ethernet	Modèle du réseau ARPA
+¿Qué modelo conceptual estandariza las comunicaciones de red en siete capas de abstracción?	Modelo TCP/IP	Modelo OSI	Protocolo Ethernet	Modelo de red ARPA
+@40916902
+Który komputer lampowy, ukończony na Uniwersytecie Pensylwanii w 1945 roku, był pierwszym elektronicznym komputerem cyfrowym ogólnego przeznaczenia?	Colossus	ENIAC	EDVAC	UNIVAC I
+Quel ordinateur à tubes, achevé à l'université de Pennsylvanie en 1945, fut le premier ordinateur électronique numérique généraliste ?	Colossus	ENIAC	EDVAC	UNIVAC I
+¿Qué ordenador de válvulas terminado en la Universidad de Pensilvania en 1945 fue el primer ordenador digital electrónico de propósito general?	Colossus	ENIAC	EDVAC	UNIVAC I
+@840ff046
+Która firma półprzewodnikowa wprowadziła 64-bitowe rozszerzenie architektury x86 (AMD64 / x86-64) w 2003 roku, przed Intelem?	IBM	AMD	Cyrix	Motorola
+Quelle entreprise de semi-conducteurs a introduit l'extension 64 bits de l'architecture x86 (AMD64 / x86-64) en 2003, avant Intel ?	IBM	AMD	Cyrix	Motorola
+¿Qué empresa de semiconductores introdujo la extensión de 64 bits de x86 (AMD64 / x86-64) en 2003, antes que Intel?	IBM	AMD	Cyrix	Motorola
+@a214abdb
+Która notacja matematyczna klasyfikuje algorytmy według tego, jak ich czas lub pamięć rosną asymptotycznie z rozmiarem danych?	Notacja dużego O	Ciąg Fibonacciego	Współczynnik Turinga	Współczynnik Fouriera
+Quelle notation mathématique classe les algorithmes selon la croissance asymptotique de leur temps ou mémoire en fonction de la taille des données ?	Notation grand O	Suite de Fibonacci	Ratio de Turing	Coefficient de Fourier
+¿Qué notación matemática clasifica los algoritmos según cómo crece asintóticamente su tiempo o memoria con el tamaño de la entrada?	Notación O grande	Sucesión de Fibonacci	Razón de Turing	Coeficiente de Fourier
+@83cd2302
+Które dwie krytyczne luki sprzętowe ujawnione w 2018 roku wykorzystywały kanały boczne wykonania spekulatywnego do odczytu pamięci jądra?	Heartbleed i Shellshock	Meltdown i Spectre	Stuxnet i WannaCry	EternalBlue i Pegasus
+Quelles deux failles matérielles critiques révélées en 2018 exploitaient l'exécution spéculative pour lire la mémoire du noyau ?	Heartbleed et Shellshock	Meltdown et Spectre	Stuxnet et WannaCry	EternalBlue et Pegasus
+¿Qué dos vulnerabilidades de hardware reveladas en 2018 aprovechaban la ejecución especulativa para leer la memoria del núcleo?	Heartbleed y Shellshock	Meltdown y Spectre	Stuxnet y WannaCry	EternalBlue y Pegasus
+@59a8e6f7
+Która liniowa struktura danych działa według ścisłej zasady „ostatni wszedł, pierwszy wyszedł” (LIFO)?	Kolejka	Stos	Lista jednokierunkowa	Drzewo binarne
+Quelle structure de données linéaire fonctionne selon le principe strict « dernier entré, premier sorti » (LIFO) ?	File	Pile	Liste chaînée	Arbre binaire
+¿Qué estructura de datos lineal funciona según el principio estricto «último en entrar, primero en salir» (LIFO)?	Cola	Pila	Lista enlazada	Árbol binario
+@23d8301d
+Jakie właściwości integralności transakcji w relacyjnych bazach danych oznacza skrót ACID?	Atomowość, spójność, izolacja, trwałość	Dostęp, kontrola, integralność, dane	Uwierzytelnianie, bezpieczeństwo, indeksowanie, bezpośredniość	Dokładność, współbieżność, izolacja, usuwanie
+Quelles propriétés d'intégrité des transactions de bases de données relationnelles désigne l'acronyme ACID ?	Atomicité, cohérence, isolation, durabilité	Accès, contrôle, intégrité, données	Authentification, sécurité, indexation, direct	Exactitude, concurrence, isolation, suppression
+¿Qué propiedades de integridad de las transacciones de bases de datos relacionales designa el acrónimo ACID?	Atomicidad, consistencia, aislamiento, durabilidad	Acceso, control, integridad, datos	Autenticación, seguridad, indexación, directo	Exactitud, concurrencia, aislamiento, borrado
+@fb954ead
+Jaki błąd oprogramowania powstaje w C, gdy dynamicznie przydzielona pamięć (malloc) nie jest zwalniana (free), stopniowo zużywając RAM?	Błąd segmentacji	Wyciek pamięci	Przepełnienie bufora	Rozbicie stosu
+Quel défaut logiciel survient en C quand la mémoire allouée dynamiquement (malloc) n'est pas libérée (free), consommant peu à peu la RAM ?	Erreur de segmentation	Fuite de mémoire	Dépassement de tampon	Écrasement de pile
+¿Qué fallo de software ocurre en C cuando la memoria reservada dinámicamente (malloc) no se libera (free) y va consumiendo RAM?	Fallo de segmentación	Fuga de memoria	Desbordamiento de búfer	Destrucción de la pila
+@568bc324
+Który protokół kryptograficzny z 1976 roku pozwala dwóm stronom ustalić wspólny sekret przez niezabezpieczony kanał?	Wymiana kluczy Diffiego-Hellmana	Konstrukcja Merkle'a-Damgårda	Schemat Feistela-Bella	Uzgadnianie kluczy Shamira-Lamporta
+Quel protocole cryptographique de 1976 permet à deux interlocuteurs d'établir un secret commun sur un canal non sécurisé ?	Échange de clés Diffie-Hellman	Construction de Merkle-Damgård	Schéma de Feistel-Bell	Accord de clés Shamir-Lamport
+¿Qué protocolo criptográfico de 1976 permite a dos partes acordar un secreto compartido por un canal inseguro?	Intercambio de claves Diffie-Hellman	Construcción de Merkle-Damgård	Esquema de Feistel-Bell	Acuerdo de claves Shamir-Lamport
+@eb9ea06a
+Który podstawowy protokół routingu wektora ścieżek wymienia informacje o trasach między systemami autonomicznymi w szkielecie internetu?	OSPF	RIP	BGP (Border Gateway Protocol)	ICMP
+Quel protocole de routage à vecteur de chemins échange les informations de routage entre systèmes autonomes sur la dorsale d'Internet ?	OSPF	RIP	BGP (Border Gateway Protocol)	ICMP
+¿Qué protocolo de enrutamiento de vector de rutas intercambia información entre sistemas autónomos en la red troncal de internet?	OSPF	RIP	BGP (Border Gateway Protocol)	ICMP
+@964e476b
+Który nowoczesny, kompilowany język programowania systemowego zapewnia bezpieczeństwo pamięci w czasie kompilacji bez odśmiecacza, dzięki modelowi własności i pożyczania?	Go	Rust	Swift	Kotlin
+Quel langage de programmation système moderne et compilé garantit la sûreté mémoire à la compilation sans ramasse-miettes, grâce à la possession et à l'emprunt ?	Go	Rust	Swift	Kotlin
+¿Qué lenguaje de programación de sistemas moderno y compilado garantiza la seguridad de memoria en compilación sin recolector de basura, gracias a la propiedad y el préstamo?	Go	Rust	Swift	Kotlin
