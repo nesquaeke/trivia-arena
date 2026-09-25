@@ -49,11 +49,16 @@ func _ready() -> void:
 		var pro: AudioStream = AudioPack.find("sfx", n)
 		if pro:
 			streams[n] = pro
-	# yalnız ses paketinde olan efektler (sentez karşılığı yok)
-	for n in ["pop"]:
+	# yalnız ses paketinde olan efektler; paket yoksa eski karşılığı çalar ("" = sessiz)
+	var extras := {"pop": "", "chaos_alarm": "coin", "chaos_ice": "", "chaos_bighead": "", "chaos_invert": "",
+			"chaos_tiny": "", "chaos_moving": "", "dizzy": "bump", "door_drop": "", "door_open": "",
+			"door_rattle": "", "zoom": "", "award": "", "join": "ding"}
+	for n in extras:
 		var extra: AudioStream = AudioPack.find("sfx", n)
 		if extra:
 			streams[n] = extra
+		elif extras[n] != "" and streams.has(extras[n]):
+			streams[n] = streams[extras[n]]
 
 func play(name: String, db: float = 0.0, pitch: float = 1.0) -> void:
 	if muted or not streams.has(name):

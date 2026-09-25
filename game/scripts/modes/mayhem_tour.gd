@@ -289,6 +289,7 @@ func _standings() -> void:
 func _announce_chaos(kind: String) -> void:
 	Sfx.play("sting", -2.0)
 	Sfx.play("war_horn", -4.0)
+	get_tree().create_timer(0.5).timeout.connect(func(): Sfx.play("chaos_" + kind, -1.0))
 	if game.cam:
 		game.cam.add_trauma(0.4)
 	_mh("chaos_show", [I18n.t("mh.chaos." + kind), I18n.t("mh.chaos.%s.d" % kind), {"ice": "ice", "bighead": "bighead", "invert": "invert", "tiny": "star", "moving": "bolt"}.get(kind, "bolt")])
@@ -326,7 +327,7 @@ func _fill_meter(frac_right: float, frac_fast: float) -> void:
 		chaos_next = pool[rng.randi() % pool.size()]
 		meter = 0.0
 		_mh("set_meter", [1.0, true])
-		Sfx.play("coin", -4.0, 0.8)
+		Sfx.play("chaos_alarm", -4.0)
 		_say(I18n.t("mh.meter_full"), Color("FF7A5A"), I18n.t("mh.meter_full_sub"))
 		get_tree().create_timer(1.6).timeout.connect(func(): _mh("set_meter", [0.0]))
 	else:
@@ -391,8 +392,10 @@ func _zone_question(label: String, prompt: String, options: Array, correct: Arra
 		if _zone_mode == "doors":
 			if _cur_correct.has(i):
 				_doors[i].open_right()
+				Sfx.play("door_open", -3.0)
 			else:
 				_doors[i].shake_wrong()
+				Sfx.play("door_rattle", -9.0, 0.95 + i * 0.04)
 		else:
 			stage.flash_zone(i, Color(0.35, 1.0, 0.45) if _cur_correct.has(i) else Color(1.0, 0.2, 0.15))
 	return res
@@ -434,6 +437,7 @@ func _show_doors(on: bool) -> void:
 			d.close()
 			d.position.y = 4.0
 			d.create_tween().tween_property(d, "position:y", 0.0, 0.5).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(i * 0.08)
+			get_tree().create_timer(0.25 + i * 0.08).timeout.connect(func(): Sfx.play("door_drop", -6.0, 0.95 + i * 0.05))
 		else:
 			d.visible = false
 
@@ -503,6 +507,7 @@ func _tick_zones() -> void:
 		stage.board.options = opts
 		_hud("hud_question", [I18n.t("mh.chaos.moving"), stage.board.prompt, opts, "", Color("FF7A5A"), timer_total, 0, Vector2i(0, 0)])
 		Sfx.play("whoosh", -2.0, 1.4)
+		Sfx.play("chaos_moving", -3.0)
 		_say(I18n.t("mh.moved"), Color("FF7A5A"))
 		for p in _bot_plan:
 			var plan_d: Dictionary = _bot_plan[p]
@@ -766,6 +771,7 @@ func _g_zoom() -> void:
 		used.append(q.ids[target])
 		var total := answer_s + 3.0
 		_mh("zoom_open", [q.ids[target], total, rng.randi()])
+		Sfx.play("zoom", -4.0)
 		var res := await _zone_question(I18n.t("mh.q_of", {"n": i + 1, "m": 2}), I18n.t("mh.zoom.q"), q.names, [target], total, "", Color("B8893B"), -0.1)
 		_mh("zoom_reveal")
 		_score(res, total, 2.0)
@@ -1254,6 +1260,7 @@ func _caught(p: Plush, b: Dictionary) -> void:
 		p.tumble(Vector3(rng.randf_range(-1, 1), 0, 1).normalized(), 0.9 if b.giant else 0.5)
 		p.float_text(I18n.t("mh.falling.stunned"), Color("FF6B52"))
 		Sfx.play("bump", -2.0, 0.8)
+		Sfx.play("dizzy", -5.0)
 		return
 	if c.get("ok", false):
 		return
@@ -1397,6 +1404,8 @@ func _awards() -> void:
 	Music.play("trivia", 0.8)
 	_mh("awards_show", [rows])
 	Sfx.play("fanfare", -6.0, 1.1)
+	for i in rows.size():
+		get_tree().create_timer(0.3 + i * 0.35).timeout.connect(func(): Sfx.play("award", -5.0, 1.0 + i * 0.03))
 	await _wait(3.5 + rows.size() * 0.6)
 	_mh("awards_hide")
 	await _wait(0.4)

@@ -52,6 +52,20 @@ SFX = [
     ("war_drum", 3, 1.8, 1, "One powerful deep war drum hit, taiko and timpani, epic board game battle."),
     ("war_horn", 3, 3.0, 1, "A medieval war horn call, two long brassy notes, epic but toy-like board game battle."),
     ("collapse", 3, 3.5, 1, "A toy castle tower collapsing: stone blocks crumbling, rumble and falling rubble, cartoonish, not violent."),
+    # ── 3: Mayhem anları (kaos, kapılar, yakınlaştırma, ödüller) ─────
+    ("chaos_alarm", 3, 1.6, 2, "A comedic cartoon warning alarm: a wobbly rising siren whistle with a bike horn honk, chaos is coming, playful."),
+    ("chaos_ice", 3, 1.4, 2, "Magical ice freezing over a floor: crisp crackling frost spreading with a sparkly shimmer, cartoon style."),
+    ("chaos_bighead", 3, 1.2, 2, "A cartoon balloon inflating quickly with a rubbery stretch and a funny squeak, a head growing huge."),
+    ("chaos_invert", 3, 1.2, 2, "A dizzy cartoon reverse warp: a descending then rising wobbly slide whistle with a swirly whoosh, everything flipped."),
+    ("chaos_tiny", 3, 1.0, 2, "A cartoon shrinking sound: a fast descending sparkly slide whistle ending in a tiny cute squeak."),
+    ("chaos_moving", 3, 1.4, 2, "Wooden theatre stage machinery shifting: gears clanking, a rope pulley and a sliding wooden rumble, cartoon style."),
+    ("dizzy", 3, 1.4, 2, "A cartoon dizzy daze: little birds tweeting and circling with a soft wobbly ring, after a bonk on the head."),
+    ("door_drop", 3, 0.6, 2, "A small wooden door frame dropping onto a wooden theatre stage and bouncing once, a hollow clunk, short."),
+    ("door_open", 3, 1.2, 2, "A small wooden door swinging open with a short creak, revealing a warm magical golden shimmer."),
+    ("door_rattle", 3, 0.7, 2, "A locked small wooden door rattling and shaking, a quick comedic handle jiggle, short."),
+    ("zoom", 3, 1.2, 1, "A vintage camera lens zooming: a smooth mechanical whirr with a soft click, short."),
+    ("award", 3, 0.9, 2, "A sparkling award reveal: a bright glockenspiel flourish with a soft shimmer, a trophy appearing, short."),
+    ("join", 3, 0.6, 2, "A cheerful cartoon pop with a tiny rising bell, a new player joining the game, very short."),
 ]
 
 # Mayhem "Kulağına Güven": oyuncu sesi tanımaya çalışır — tanıdık ve net olmalı (tema eki yok)

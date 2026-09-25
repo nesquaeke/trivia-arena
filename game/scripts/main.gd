@@ -138,7 +138,7 @@ func _join(key: String, ctrl: Object, p_name: String, look: Dictionary, announce
 	players.append(p)
 	_joined_sets[key] = p
 	if announce:
-		Sfx.play("ding", -6.0, 1.2)
+		Sfx.play("join", -4.0)
 		if bots.size() > 0 and players.size() + bots.size() > 8:
 			var b: Plush = bots.pop_back()
 			b.queue_free()

@@ -1356,5 +1356,96 @@
   "credits": 0,
   "alts": 0,
   "at": "2026-09-25 21:39"
+ },
+ "sfx/chaos_alarm": {
+  "prompt": "A comedic cartoon warning alarm: a wobbly rising siren whistle with a bike horn honk, chaos is coming, playful. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.6,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:19"
+ },
+ "sfx/chaos_ice": {
+  "prompt": "Magical ice freezing over a floor: crisp crackling frost spreading with a sparkly shimmer, cartoon style. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.36,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/chaos_bighead": {
+  "prompt": "A cartoon balloon inflating quickly with a rubbery stretch and a funny squeak, a head growing huge. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.2,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/chaos_invert": {
+  "prompt": "A dizzy cartoon reverse warp: a descending then rising wobbly slide whistle with a swirly whoosh, everything flipped. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.2,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/chaos_tiny": {
+  "prompt": "A cartoon shrinking sound: a fast descending sparkly slide whistle ending in a tiny cute squeak. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.0,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/chaos_moving": {
+  "prompt": "Wooden theatre stage machinery shifting: gears clanking, a rope pulley and a sliding wooden rumble, cartoon style. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.36,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/dizzy": {
+  "prompt": "A cartoon dizzy daze: little birds tweeting and circling with a soft wobbly ring, after a bonk on the head. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.36,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/door_drop": {
+  "prompt": "A small wooden door frame dropping onto a wooden theatre stage and bouncing once, a hollow clunk, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.6,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/door_open": {
+  "prompt": "A small wooden door swinging open with a short creak, revealing a warm magical golden shimmer. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.77,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/door_rattle": {
+  "prompt": "A locked small wooden door rattling and shaking, a quick comedic handle jiggle, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.68,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/zoom": {
+  "prompt": "A vintage camera lens zooming: a smooth mechanical whirr with a soft click, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 1.2,
+  "credits": 0,
+  "alts": 0,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/award": {
+  "prompt": "A sparkling award reveal: a bright glockenspiel flourish with a soft shimmer, a trophy appearing, short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.88,
+  "credits": 0,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
+ },
+ "sfx/join": {
+  "prompt": "A cheerful cartoon pop with a tiny rising bell, a new player joining the game, very short. Warm vintage theatre game show atmosphere, playful plush-toy cartoon feel, clean studio quality, no music, no speech.",
+  "dur": 0.6,
+  "credits": 270,
+  "alts": 1,
+  "at": "2026-09-25 22:20"
  }
 }
