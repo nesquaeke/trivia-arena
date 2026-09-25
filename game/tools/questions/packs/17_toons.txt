@@ -1,0 +1,49 @@
+# Çizgi Film & Oyuncak
+toons|1|Tom ve Jerry'de Tom hangi hayvandır?|In Tom and Jerry, what animal is Tom?|Kedi~Cat|Fare~Mouse|Köpek~Dog|Tavşan~Rabbit
+toons|1|Sünger Bob nerede yaşar?|Where does SpongeBob live?|Bir ananasın içinde~In a pineapple|Bir kayanın altında~Under a rock|Bir kalede~In a castle|Bir gemide~On a ship
+toons|1|Temel Reis güç için ne yer?|What does Popeye eat for strength?|Ispanak~Spinach|Havuç~Carrots|Bal~Honey|Balık~Fish
+toons|1|Garfield en çok hangi yemeği sever?|Which food does Garfield love most?|Lazanya~Lasagne|Pizza|Hamburger|Balık~Fish
+toons|1|Winnie the Pooh en çok neyi sever?|What does Winnie the Pooh love most?|Bal~Honey|Elma~Apples|Pasta~Cake|Süt~Milk
+toons|1|"Kayıp Balık Nemo"da Nemo hangi balıktır?|What kind of fish is Nemo?|Palyaço balığı~Clownfish|Köpekbalığı~Shark|Japon balığı~Goldfish|Kılıç balığı~Swordfish
+toons|1|Şirinler hangi renktir?|What colour are the Smurfs?|Mavi~Blue|Yeşil~Green|Sarı~Yellow|Kırmızı~Red
+toons|1|Mickey Mouse'u kim yarattı?|Who created Mickey Mouse?|Walt Disney|Hanna-Barbera|Pixar|Warner Bros.
+toons|1|Shrek nedir?|What is Shrek?|Bir dev (ogre)~An ogre|Bir ejderha~A dragon|Bir şövalye~A knight|Bir eşek~A donkey
+toons|1|Minyonlar en çok hangi meyveyi sever?|Which fruit do the Minions love?|Muz~Banana|Elma~Apple|Çilek~Strawberry|Kivi~Kiwi
+toons|1|Pinokyo yalan söyleyince ne olur?|What happens when Pinocchio lies?|Burnu uzar~His nose grows|Kulakları büyür~His ears grow|Kızarır~He turns red|Ağlar~He cries
+toons|1|"Oyuncak Hikayesi"ndeki kovboyun adı nedir?|What is the cowboy's name in Toy Story?|Woody|Buzz|Rex|Jessie
+toons|1|LEGO hangi ülkenin oyuncağıdır?|LEGO comes from which country?|Danimarka~Denmark|Almanya~Germany|İsveç~Sweden|ABD~USA
+toons|1|"Karlar Ülkesi"nde (Frozen) buz güçleri olan kraliçe kimdir?|In Frozen, which queen has ice powers?|Elsa|Anna|Rapunzel|Ariel
+toons|1|"Aslan Kral"ın kahramanı yavru aslanın adı nedir?|What is the lion cub's name in The Lion King?|Simba|Nala|Mufasa|Scar
+toons|1|Peppa hangi hayvandır?|What animal is Peppa?|Domuz~Pig|Tavşan~Rabbit|Kedi~Cat|İnek~Cow
+toons|1|Scooby-Doo hangi hayvandır?|What kind of animal is Scooby-Doo?|Köpek~Dog|Kedi~Cat|At~Horse|Ayı~Bear
+toons|1|Keloğlan masallarının kahramanında ne yoktur?|What is Keloğlan (Turkish folk hero) famously missing?|Saç~Hair|Ayakkabı~Shoes|Burun~A nose|Ev~A house
+toons|1|Nasreddin Hoca genelde hangi hayvana ters biner?|Which animal does Nasreddin Hodja famously ride backwards?|Eşek~Donkey|At~Horse|Deve~Camel|İnek~Cow
+toons|2|Bugs Bunny'nin meşhur sorusu nedir?|What is Bugs Bunny's famous line?|Naber doktor?~What's up, Doc?|Hadi gidelim!~Let's go!|Yabba dabba doo!|D'oh!
+toons|2|Buz Devri'ndeki sincap Scrat neyin peşindedir?|What is Scrat always chasing in Ice Age?|Palamut~An acorn|Peynir~Cheese|Muz~A banana|Balık~A fish
+toons|2|Şirinlerin düşmanı Gargamel'in kedisinin adı nedir (Türkçede)?|What is the name of Gargamel's cat?|Azman~Azrael|Tekir~Tabby|Pisi~Kitty|Garfield
+toons|2|Rubik küpünü icat eden kişi hangi ülkeliydi?|The inventor of the Rubik's Cube was from which country?|Macaristan~Hungary|Rusya~Russia|Japonya~Japan|Almanya~Germany
+toons|2|Kung Fu Panda'nın adı nedir?|What is the Kung Fu Panda's name?|Po|Shifu|Tai Lung|Oogway
+toons|2|Tenten (Tintin) çizgi romanlarının köpeğinin adı nedir?|What is Tintin's dog called?|Milu~Snowy|Rex|Pluto|Odie
+toons|2|Asteriks ve Oburiks'e gücünü veren nedir?|What gives Asterix his strength?|Sihirli iksir~A magic potion|Ispanak~Spinach|Yaban domuzu~Wild boar meat|Güneş~The sun
+toons|2|Snoopy'nin sahibi kimdir?|Who is Snoopy's owner?|Charlie Brown|Linus|Lucy|Garfield
+toons|2|Polonya'nın ünlü çizgi film ikilisi hangisidir?|Which is a famous Polish cartoon duo?|Bolek ve Lolek~Bolek and Lolek|Tom ve Jerry~Tom and Jerry|Tip ve Tap~Chip and Dale|Max ve Moritz~Max and Moritz
+toons|2|Polonyalı çizgi film köpeği Reksio'nun özelliği nedir?|What is Reksio, the Polish cartoon hero?|Bir köpek~A dog|Bir kedi~A cat|Bir ayı~A bear|Bir robot~A robot
+toons|2|İspanyol çizgi roman ikilisi Mortadelo ve Filemón ne iş yapar?|What are Spain's comic duo Mortadelo and Filemón?|Gizli ajan~Secret agents|Aşçı~Chefs|Futbolcu~Footballers|Korsan~Pirates
+toons|2|Pembe Panter hangi hayvandır?|What animal is the Pink Panther?|Panter~Panther|Aslan~Lion|Kedi~House cat|Kaplan~Tiger
+toons|2|Simpsonlar'da babanın adı nedir?|What is the dad's name in The Simpsons?|Homer|Bart|Ned|Moe
+toons|2|Teletubbies'lerin karnında ne vardır?|What do the Teletubbies have on their tummies?|Ekran~A screen|Cep~A pocket|Saat~A clock|Ayna~A mirror
+toons|2|Pokémon'da "Hepsini yakalamalısın" sloganı hangi kahramanın yolculuğudur?|Whose journey is "Gotta catch 'em all" in the Pokémon anime?|Ash (Ash Ketchum)|Brock|Misty|Gary
+toons|2|Doraemon hangi hayvana benzeyen bir robottur?|Doraemon is a robot that looks like which animal?|Kedi~Cat|Köpek~Dog|Tavşan~Rabbit|Penguen~Penguin
+toons|2|Türk çizgi dizisi "Rafadan Tayfa"daki çocuklar genelde nerede toplanır?|Where do the kids of Turkish cartoon "Rafadan Tayfa" usually gather?|Mahallede~In their neighbourhood|Uzayda~In space|Okyanusta~In the ocean|Bir şatoda~In a castle
+toons|2|Barbie bebeği hangi yıl piyasaya çıktı?|In which year was the Barbie doll launched?|1959|1939|1979|1999
+toons|3|Mickey Mouse'un ilk sesli çizgi filmi hangisidir?|What was Mickey Mouse's first sound cartoon?|Steamboat Willie|Fantasia|Plane Crazy|The Band Concert
+toons|3|Moomin (Muminler) hangi ülkenin çizgi karakterleridir?|The Moomins come from which country?|Finlandiya~Finland|Norveç~Norway|İsveç~Sweden|Danimarka~Denmark
+toons|3|İlk uzun metrajlı Disney animasyon filmi hangisidir?|What was Disney's first feature-length animated film?|Pamuk Prenses~Snow White|Pinokyo~Pinocchio|Bambi|Dumbo
+toons|3|Tenten'in yaratıcısı Hergé hangi ülkedendir?|Tintin's creator Hergé was from which country?|Belçika~Belgium|Fransa~France|İsviçre~Switzerland|Hollanda~Netherlands
+toons|3|Arjantinli çizgi roman kızı Mafalda en çok neyden nefret eder?|What does Argentine comic girl Mafalda famously hate?|Çorba~Soup|Okul~School|Köpekler~Dogs|Yağmur~Rain
+toons|3|Heidi'nin dedesiyle yaşadığı dağlar hangileridir?|In which mountains does Heidi live with her grandfather?|Alpler~The Alps|Pireneler~The Pyrenees|Karpatlar~The Carpathians|Himalayalar~The Himalayas
+toons|3|Pixar'ın ilk uzun metrajlı filmi hangisidir?|What was Pixar's first feature film?|Oyuncak Hikayesi~Toy Story|Kayıp Balık Nemo~Finding Nemo|Canavarlar Şirketi~Monsters, Inc.|Arabalar~Cars
+toons|3|Yo-yo oyuncağı en eski hangi uygarlıkta görülür?|The yo-yo was already known in which ancient civilisation?|Antik Yunan~Ancient Greece|Aztekler~The Aztecs|Vikingler~The Vikings|İnkalar~The Incas
+toons|3|Şirinleri yaratan Peyo hangi ülkedendir?|Peyo, creator of the Smurfs, was from which country?|Belçika~Belgium|Fransa~France|Hollanda~Netherlands|İtalya~Italy
+toons|3|Türk çocuk dizisi "Pepee"nin ana karakteri neyi çok sever?|What does Pepee, the Turkish kids' character, love to do?|Dans etmek ve oynamak~Dance and play|Uyumak~Sleep|Yemek pişirmek~Cook|Uçmak~Fly
+toons|3|"Işın kılıcı" hangi film serisinde kullanılır?|In which film saga are lightsabers used?|Yıldız Savaşları~Star Wars|Uzay Yolu~Star Trek|Dune|Galaksi Rehberi~Hitchhiker's Guide

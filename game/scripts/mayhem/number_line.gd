@@ -12,6 +12,7 @@ var hi := 100.0
 var year := false
 var log_scale := false
 var _pin: Node3D
+var _markers := {}
 
 func setup(p_lo: float, p_hi: float, p_year: bool) -> void:
 	lo = p_lo
@@ -124,6 +125,39 @@ void fragment() {
 	ALPHA = 0.55 * smoothstep(0.0, 0.25, UV.y) * smoothstep(1.0, 0.75, UV.y);
 }"""
 	return s
+
+## Kilitli tahmin: oyuncu renginde küçük bir bayrak
+func set_marker(id: int, v: float, col: Color) -> void:
+	var m: Node3D = _markers.get(id)
+	if m == null:
+		m = Node3D.new()
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = col
+		mat.emission_enabled = true
+		mat.emission = col
+		mat.emission_energy_multiplier = 0.5
+		var pole := MeshInstance3D.new()
+		var cm := CylinderMesh.new()
+		cm.top_radius = 0.02
+		cm.bottom_radius = 0.02
+		cm.height = 0.9
+		pole.mesh = cm
+		pole.material_override = mat
+		pole.position.y = 0.45
+		m.add_child(pole)
+		var flag := MeshInstance3D.new()
+		var bm := BoxMesh.new()
+		bm.size = Vector3(0.32, 0.2, 0.02)
+		flag.mesh = bm
+		flag.material_override = mat
+		flag.position = Vector3(0.17, 0.78, 0)
+		m.add_child(flag)
+		add_child(m)
+		_markers[id] = m
+		m.scale = Vector3.ONE * 0.01
+		create_tween().tween_property(m, "scale", Vector3.ONE, 0.3).set_trans(Tween.TRANS_BACK)
+	var tw := create_tween()
+	tw.tween_property(m, "position", Vector3(x_of(v), 0.0, Z - 0.3), 0.18)
 
 ## Doğru cevaba altın bir iğne düşer
 func drop_pin(v: float, text: String) -> void:

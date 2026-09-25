@@ -25,7 +25,7 @@ extends Button
 @export var big := true:
 	set(v):
 		big = v
-		custom_minimum_size.y = 92.0 if big else 50.0
+		custom_minimum_size.y = 92.0 if big else 45.0
 		queue_redraw()
 @export var accent := Color("F6CF7B")
 
@@ -92,10 +92,10 @@ func _draw() -> void:
 	if _press > 0.0:
 		draw_rect(Rect2(-48, 2, size.x + 90, size.y - 4), Color(1, 0.9, 0.7, 0.18 * _press))
 	var f_title := Pal.display()
-	var fs := 62 if big else 36
+	var fs := 62 if big else 33
 	var cap_fs := 20 if big else 19
 	var x0 := (84.0 if emblem != "" else 64.0) + 18.0 * h + slide
-	var title_y := 58.0 if big else 38.0
+	var title_y := 58.0 if big else 34.0
 	# madalyon (ya da numara)
 	var idx_col := Pal.MUTED.lerp(accent, h)
 	var iy := title_y - fs * 0.5

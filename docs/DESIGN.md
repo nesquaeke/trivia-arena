@@ -127,6 +127,22 @@ Web sürümünün planı, sahneye serilen 3D bir Türkiye haritasında:
 
 Henüz yok (GDD'nin sonraki fazları): çevrimiçi analitik ve soru metrikleri, günlük görevler, aile filtresi, renk körlüğü şekilleri, soru kaynağı/doğrulama alanları, soru editörü.
 
+### Günlük Kelime, jeton ve mağaza (v0.6)
+- **`core/daily_word.gd`:**
+  - Gün numarası 2026-01-01'den sayılır. Cevap: `answers[gün % n]`, karışık ama sabit sıra.
+  - Değerlendirme Wordle kurallarıyla yapılır; tekrar eden harfler doğru sayılır.
+  - Durum `Profile.data.daily` içinde, dile göre ayrı tutulur. Seri iki dilde tek sayılır.
+- **Jeton (`Profile.data.coins`):**
+  - Günlük Kelime'den ve maç sonundan kazanılır; maç sonu kazancı rütbe panelinde "+N" olarak görünür.
+  - `Progress.buy()` öğeyi `owned` listesine yazar.
+  - Fiyatlar: rütbe öğesi 60 + 14×seviye, başarım öğesi 350; mağazaya özel öğelerin fiyatı sabittir.
+- **Karakterim:** kilitli öğe `preview_look` ile kaydedilmeden giydirilir, panel kapanınca geri alınır.
+- **Giysiler (`actors/plush_extras.gd`):**
+  - Kıyafet kılıfları gövde kapsülünün profilini izleyen dönel yüzeylerdir (`lathe`); kenarlara dikiş şeridi eklenir.
+  - Kolyeler boynu önden saran yay üzerine dizilir (`neck_arc`).
+  - Gözlükler yüzün eğrisine açılı durur ve kulağa giden sapları vardır.
+  - Pelerin, arkada kalan kavisli bir yüzeydir.
+
 ### Soru bankası
 `tools/questions/packs/*.txt` satır başına bir soru içerir: `kategori|zorluk(1-3)|TR|EN|doğru|yanlış|yanlış|yanlış`. Şık `tr~en` biçiminde iki dilde yazılabilir. Tahmin satırlarının biçimi `E|cevap|min|max|yıl|TR soru|birim|EN soru|unit`. `build_pack.py` bu paketleri tekrarları ayıklayıp `data/questions.json`'a ekler.
 
@@ -183,9 +199,10 @@ Banka yaklaşık 2000 soru ve 98 tahmin sorusundan oluşur. 15 kategori var, bun
 | v0.2 | Klasik şov (web kuralları), yeni arayüz (kinetik tipografi, shaderlar, canlı 3D portre), düzenlenebilir sahne ağacı, 63 başsız test |
 | v0.3 | Gerçek sanat: pelüş karakter modeli + kumaş dokuları, tiyatro dekor modelleri, müzik, gamepad ile menü gezinme, ayarlar (ses, görüntü kalitesi) |
 | v0.4 | Sahne Rütbesi ve 46 açılabilir öğe, tur çubuğu, ~2000 soru, taş/kiremit shaderları, kayıt dosyası dayanıklılığı, hata raporu |
-| **v0.5 (bu sürüm)** | Mayhem Turu: 8 mini oyun, Mayhem Metre, kaos olayları, ödül töreni, telefon tepkileri |
-| v0.6 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
-| v0.7 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
+| v0.5 | Mayhem Turu: 8 mini oyun, Mayhem Metre, kaos olayları, ödül töreni, telefon tepkileri |
+| **v0.6 (bu sürüm)** | Günlük Kelime + jeton + mağaza, 33 yeni giysi (kolye, kıyafet, şapka, gözlük), Mayhem kapıları ve tahmin girişi, eğlenceli kategoriler + 3 yeni kategori |
+| v0.7 | Online: sunucu-yetkili fizik + istemci interpolasyonu (ENet → SteamMultiplayerPeer), Steam lobileri, loca sohbeti, iskeletli ragdoll |
+| v0.8 | Steamworks: başarımlar, bulut kayıt, mağaza sayfası, Remote Play Together testleri |
 
 ### Performans notları
 - Hacimsel sis ve gölgeli spotlar Forward+ gerektirir. Zayıf makineler için "Sade" kalite ayarı (v0.3) sisi ve ikincil gölgeleri kapatacak.

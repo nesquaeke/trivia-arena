@@ -158,9 +158,13 @@ func _build() -> void:
 		add_child(t)
 		_build_tower(t, i, pal, wall, roof, trim, gold)
 		_towers.append(t)
-	# can armaları: tepede üç kalkan
+	# can armaları: kalenin önünde, iki direkli ahşap bir tabelada üç kalkan
+	var wood := m("sign_wood", Color("6A4020"), 0.8)
+	_mi(self, _box(0.5, 0.05, 0.03), wood, Vector3(0, 0.25, 0.5))
+	for side: int in [-1, 1]:
+		_mi(self, _cyl(0.014, 0.016, 0.22, 6), wood, Vector3(0.23 * side, 0.18, 0.5))
 	for i in 3:
-		var pip := _mi(self, _box(0.1, 0.12, 0.02), m("pip", color, 0.5, 0.0, 0.3), Vector3((i - 1) * 0.15, 1.12, 0.1))
+		var pip := _mi(self, _box(0.1, 0.12, 0.02), m("pip", color, 0.5, 0.0, 0.3), Vector3((i - 1) * 0.15, 0.36, 0.5))
 		var tip := MeshInstance3D.new()
 		var pr := PrismMesh.new()
 		pr.size = Vector3(0.1, 0.06, 0.02)

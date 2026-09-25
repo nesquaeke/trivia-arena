@@ -1,0 +1,45 @@
+# Bunu Biliyor Olmalısın (gündelik hayat)
+life|1|Trafik ışığında hangi renk "dur" demektir?|Which traffic light colour means stop?|Kırmızı~Red|Yeşil~Green|Sarı~Yellow|Mavi~Blue
+life|1|Bir yılda kaç mevsim vardır?|How many seasons are there in a year?|4|2|3|6
+life|1|Buzdolabının genel olarak amacı nedir?|What is a fridge mainly for?|Yiyecekleri soğuk tutmak~Keeping food cold|Yemek pişirmek~Cooking|Çamaşır yıkamak~Washing clothes|Işık vermek~Giving light
+life|1|Suyun kaynama noktası (deniz seviyesinde) kaç °C'dir?|At sea level, water boils at how many °C?|100|90|80|120
+life|1|Bir günde kaç saat vardır?|How many hours are in a day?|24|12|20|36
+life|1|Diş fırçalamak için genelde ne kullanılır?|What do you usually put on a toothbrush?|Diş macunu~Toothpaste|Şampuan~Shampoo|Bal~Honey|Tereyağı~Butter
+life|1|Bir kedinin yavrusuna ne denir?|What is a baby cat called?|Yavru kedi~Kitten|Kuzu~Lamb|Tay~Foal|Buzağı~Calf
+life|1|Hangisi bir mutfak eşyasıdır?|Which of these is a kitchen utensil?|Kepçe~Ladle|Tornavida~Screwdriver|Çekiç~Hammer|Fırça~Paintbrush
+life|1|Güneş hangi yönden doğar?|In which direction does the Sun rise?|Doğu~East|Batı~West|Kuzey~North|Güney~South
+life|1|Bir futbol topu genelde hangi şekildedir?|What shape is a football usually?|Küre~Sphere|Küp~Cube|Oval~Oval|Silindir~Cylinder
+life|1|Postacı ne getirir?|What does a postman deliver?|Mektup~Letters|Pizza|Süt~Milk|Gazete~Newspapers only
+life|1|Şemsiye en çok ne zaman kullanılır?|When do people mostly use an umbrella?|Yağmurda~When it rains|Gece~At night|Kışın içeride~Indoors in winter|Yemekte~At dinner
+life|1|Bir düzine kaç tanedir?|How many is a dozen?|12|10|6|20
+life|1|Termometre neyi ölçer?|What does a thermometer measure?|Sıcaklık~Temperature|Ağırlık~Weight|Uzunluk~Length|Zaman~Time
+life|1|Hangisi sabah kahvaltısında sık yenir?|Which is a common breakfast food?|Yumurta~Eggs|Dondurma~Ice cream|Patlamış mısır~Popcorn|Pizza
+life|1|Bir yılda kaç hafta vardır (yaklaşık)?|About how many weeks are in a year?|52|48|56|60
+life|1|Pusula ibresi hangi yönü gösterir?|Which way does a compass needle point?|Kuzey~North|Güney~South|Doğu~East|Batı~West
+life|1|Arabanın hangi parçası onu durdurur?|Which part of a car stops it?|Fren~Brakes|Direksiyon~Steering wheel|Korna~Horn|Silecek~Wipers
+life|2|Standart bir pizzanın dilimlere ayrılması genelde kaç parçadır?|A standard round pizza is usually cut into how many slices?|8|5|10|12
+life|2|Bir A4 kâğıdı yaklaşık kaç santimetre uzunluğundadır?|About how long is an A4 sheet of paper?|30 cm|20 cm|40 cm|50 cm
+life|2|Hangisi yenilenebilir enerji kaynağıdır?|Which is a renewable energy source?|Rüzgâr~Wind|Kömür~Coal|Petrol~Oil|Doğalgaz~Natural gas
+life|2|Bir basketbol potasının yerden yüksekliği yaklaşık kaç metredir?|About how high is a basketball hoop?|3 m|2 m|4 m|5 m
+life|2|Mikrodalga fırınlar yiyeceği neyle ısıtır?|What do microwave ovens use to heat food?|Mikrodalgalar~Microwaves|Ateş~Fire|Buhar~Steam|Buz~Ice
+life|2|Evdeki prizlerde (Avrupa) voltaj yaklaşık kaçtır?|Roughly what voltage are European household sockets?|230 V|110 V|12 V|400 V
+life|2|Hangi kan grubu "genel verici" olarak bilinir?|Which blood type is known as the universal donor?|0 Rh-~O negative|AB Rh+~AB positive|A Rh+~A positive|B Rh-~B negative
+life|2|Bir yetişkinin normal nabzı dakikada yaklaşık kaçtır?|What is a typical adult resting heart rate per minute?|60–100|20–40|120–160|180–200
+life|2|Barkodun altındaki sayılar ne işe yarar?|What are the numbers under a barcode for?|Ürün kodu~Product code|Fiyat~Price only|Üretim saati~Time made|Kalori~Calories
+life|2|Hangisi bir "fiyat etiketi"nde yazmaz genelde?|Which do you NOT usually find on a price tag?|Satıcının doğum günü~The seller's birthday|Fiyat~Price|Ürün adı~Product name|Barkod~Barcode
+life|2|Bir haftanın ortasındaki gün hangisidir (Pazartesi ile başlarsa)?|If the week starts on Monday, which day is in the middle?|Perşembe~Thursday|Çarşamba~Wednesday|Salı~Tuesday|Cuma~Friday
+life|2|Hangisi bir çamaşır makinesi programı değildir?|Which is NOT a washing machine setting?|Izgara~Grill|Hassas~Delicate|Pamuklu~Cotton|Sıkma~Spin
+life|2|Bir telefonun şarjı %20'nin altına inince çoğu telefon ne yapar?|What do most phones do when battery drops below 20%?|Uyarı verir~Show a warning|Kapanır~Turn off|Isınır~Heat up|Titreşir~Vibrate nonstop
+life|2|Normal bir yetişkin günde ortalama kaç adım atar (yaklaşık)?|About how many steps does an average adult take per day?|5.000~5,000|500|50.000~50,000|500.000~500,000
+life|2|Bir paket makarna genelde kaç gramdır (Avrupa)?|In Europe, a standard pack of pasta usually weighs…|500 g|100 g|2 kg|50 g
+life|2|Sabah kahvesindeki uyarıcı madde hangisidir?|Which stimulant is in coffee?|Kafein~Caffeine|Şeker~Sugar|Tuz~Salt|Vitamin C
+life|3|Standart bir kredi kartında kaç rakam bulunur?|How many digits are on a standard credit card number?|16|12|10|20
+life|3|Hangi ülkenin prizleri Türkiye ve İspanya'yla aynı tiptir (Tip F)?|Which country uses the same plug (Type F) as Turkey and Spain?|Almanya~Germany|Birleşik Krallık~UK|ABD~USA|Japonya~Japan
+life|3|Bir LED ampul, eski bir akkor ampule göre yaklaşık ne kadar az enerji harcar?|An LED bulb uses roughly how much less energy than an old bulb?|%80~80% less|%10~10% less|%30~30% less|Aynı~The same
+life|3|Hangi rakam telefon tuş takımında "WXYZ" harfleriyle birliktedir?|Which number shares its key with "WXYZ" on a phone keypad?|9|7|8|0
+life|3|İnsanlar hayatlarının yaklaşık ne kadarını uyuyarak geçirir?|About how much of their life do people spend asleep?|Üçte biri~A third|Yarısı~Half|Onda biri~A tenth|Dörtte üçü~Three quarters
+life|3|Bir otomobil lastiğinin önerilen hava basıncı genelde hangi birimle yazılır?|Car tyre pressure is commonly given in…|Bar ya da PSI~Bar or PSI|Litre~Litres|Volt~Volts|Kalori~Calories
+life|3|Ortalama bir duş kaç litre su harcar (10 dakika)?|About how much water does a 10-minute shower use?|Yaklaşık 80 litre~About 80 litres|Yaklaşık 5 litre~About 5 litres|Yaklaşık 500 litre~About 500 litres|Yaklaşık 1 litre~About 1 litre
+life|3|Hangi vitamin güneş ışığıyla vücudumuzda üretilir?|Which vitamin does your body make from sunlight?|D vitamini~Vitamin D|C vitamini~Vitamin C|A vitamini~Vitamin A|B12
+life|3|Evde en çok enerji harcayan cihazlardan biri genelde hangisidir?|Which home appliance is usually one of the biggest energy users?|Isıtıcı/klima~Heater or air conditioner|Telefon şarjı~Phone charger|Saat~Clock|Radyo~Radio
+life|3|"www" yazan bir adres neyin adresidir?|An address starting with "www" is an address of what?|Web sitesi~A website|Ev~A house|E-posta~An email box only|Telefon~A phone

@@ -1,0 +1,49 @@
+# Beyin Acıtıcı (mantık ve bilmece, kelime oyunu yok)
+brain|1|Bir yarışta ikinciyi geçtin. Kaçıncısın?|In a race you overtake the person in second place. What place are you in now?|İkinci~Second|Birinci~First|Üçüncü~Third|Sonuncu~Last
+brain|1|Dizideki sıradaki sayı: 2, 4, 8, 16, ?|Next number: 2, 4, 8, 16, ?|32|24|20|64
+brain|1|Dizideki sıradaki sayı: 1, 1, 2, 3, 5, 8, ?|Next number: 1, 1, 2, 3, 5, 8, ?|13|11|12|16
+brain|1|Bir haftada kaç saat vardır?|How many hours are in a week?|168|144|124|192
+brain|1|Bir küpün kaç kenarı (ayrıtı) vardır?|How many edges does a cube have?|12|8|6|10
+brain|1|Bir ipi 3 yerinden kesersen kaç parça olur?|If you cut a rope in 3 places, how many pieces do you get?|4|3|5|6
+brain|1|Hangisi diğerlerinden farklı: Elma, Armut, Havuç, Kiraz?|Which is the odd one out: apple, pear, carrot, cherry?|Havuç~Carrot|Elma~Apple|Armut~Pear|Kiraz~Cherry
+brain|1|Bir düzine yumurtanın yarısının yarısı kaç yumurtadır?|Half of half a dozen eggs is how many eggs?|3|6|4|2
+brain|1|1'den 10'a kadar olan sayıların toplamı kaçtır?|What is the sum of the numbers from 1 to 10?|55|50|45|60
+brain|1|Bir üçgenin iç açılarının toplamı kaç derecedir?|The angles inside a triangle add up to how many degrees?|180|90|360|270
+brain|1|Harf dizisinde sıradaki: A, C, E, G, ?|Next letter: A, C, E, G, ?|I|H|J|K
+brain|1|En küçük asal sayı hangisidir?|What is the smallest prime number?|2|1|3|0
+brain|1|Hangisi diğerlerinden farklı: Kare, Üçgen, Daire, Küp?|Odd one out: square, triangle, circle, cube?|Küp~Cube|Kare~Square|Üçgen~Triangle|Daire~Circle
+brain|1|Saatte 60 km hızla giden bir araba 30 dakikada kaç km yol alır?|A car at 60 km/h travels how far in 30 minutes?|30 km|60 km|20 km|45 km
+brain|1|Ayşe'nin annesinin üç çocuğu var: Nisan, Mayıs ve…?|Mary's mother has three children: April, May and…?|Ayşe~Mary|Haziran~June|Mart~March|Temmuz~July
+brain|1|Bir yılda 31 gün çeken kaç ay vardır?|How many months of the year have 31 days?|7|6|5|8
+brain|1|Saat tam 3:00'te akrep ile yelkovan arasındaki açı kaç derecedir?|At exactly 3:00, what is the angle between the clock hands?|90|45|180|60
+brain|2|Pazartesiden 100 gün sonra hangi gün olur?|What day is it 100 days after a Monday?|Çarşamba~Wednesday|Pazartesi~Monday|Salı~Tuesday|Perşembe~Thursday
+brain|2|Dizideki sıradaki sayı: 100, 90, 81, 73, ?|Next number: 100, 90, 81, 73, ?|66|65|64|67
+brain|2|Dizideki sıradaki sayı: 3, 6, 12, 24, ?|Next number: 3, 6, 12, 24, ?|48|36|30|42
+brain|2|Karanlıkta çekmecede 3 kırmızı ve 3 mavi çorap var. Aynı renkte bir çift için en az kaç çorap almalısın?|A drawer has 3 red and 3 blue socks. In the dark, how many must you take to be sure of a matching pair?|3|2|4|6
+brain|2|10 metrelik kuyuda bir salyangoz gündüz 3 m çıkıp gece 2 m kayıyor. Kaçıncı gün çıkar?|A snail in a 10 m well climbs 3 m by day and slips 2 m at night. On which day does it get out?|8|10|7|9
+brain|2|Bir dikdörtgen kâğıdın dört köşesini düz kesersen kaç köşesi olur?|If you snip off all four corners of a rectangle, how many corners does it have?|8|4|0|12
+brain|2|Yarım düzine düzine kaç eder?|How much is half a dozen dozen?|72|6|36|144
+brain|2|Kardeşimden 2 yaş büyüğüm. 10 yıl sonra aramızda kaç yaş fark olur?|I'm 2 years older than my sister. How many years apart will we be in 10 years?|2|12|10|20
+brain|2|Hangisi diğerlerinden farklı: 2, 3, 5, 9, 11?|Odd one out: 2, 3, 5, 9, 11?|9|2|5|11
+brain|2|Bir satranç tahtasında kaç tane siyah kare vardır?|How many black squares are on a chessboard?|32|64|16|30
+brain|2|Harf dizisinde sıradaki: Z, Y, X, W, ?|Next letter: Z, Y, X, W, ?|V|U|T|A
+brain|2|Bir aynada saat 3:00'ü gösteriyor gibi görünüyor. Gerçek saat kaçtır?|A clock seen in a mirror seems to show 3:00. What time is it really?|9:00|3:00|6:00|12:00
+brain|2|Bir fırın 3 ekmeği 3 dakikada pişiriyorsa, aynı anda 6 ekmek sığan fırın 6 ekmeği kaç dakikada pişirir?|An oven bakes 3 loaves in 3 minutes. If 6 fit at once, how long for 6 loaves?|3 dakika~3 minutes|6 dakika~6 minutes|12 dakika~12 minutes|9 dakika~9 minutes
+brain|2|Bir sınıfta 5 kişi herkesle bir kez tokalaşırsa toplam kaç tokalaşma olur?|If 5 people each shake hands once with everyone else, how many handshakes happen?|10|20|25|5
+brain|2|"KALEM" kelimesinin harfleriyle hangisi yazılabilir?|Which word can be made from the letters of "LEMON"?|MELAK~MELON|KELAM~LEMONS|KALEMİ~SOLEMN|MAKAL~LEMUR
+brain|2|Bir zarın tüm yüzlerindeki noktaların toplamı kaçtır?|What is the total of all the dots on a standard die?|21|18|24|36
+brain|2|Hangi sayının yarısı onun dörtte birinin iki katıdır?|Which number's half equals twice its quarter?|Hepsinin~Every number|Sadece 0~Only 0|Sadece 4~Only 4|Hiçbirinin~None
+brain|3|5 makine 5 dakikada 5 parça yapıyorsa, 100 makine 100 parçayı kaç dakikada yapar?|If 5 machines make 5 parts in 5 minutes, how long do 100 machines take for 100 parts?|5 dakika~5 minutes|100 dakika~100 minutes|20 dakika~20 minutes|1 dakika~1 minute
+brain|3|Bir top ve bir raket toplam 110 TL. Raket toptan 100 TL pahalı. Top kaç TL?|A bat and a ball cost 1.10 in total. The bat costs 1.00 more than the ball. How much is the ball?|5 TL~0.05|10 TL~0.10|1 TL~0.01|15 TL~0.15
+brain|3|Bir göldeki nilüferler her gün iki katına çıkıyor ve gölü 48 günde kaplıyor. Gölün yarısını kaçıncı gün kaplar?|Lily pads double every day and cover a lake in 48 days. On which day do they cover half of it?|47|24|46|12
+brain|3|1'den 100'e kadar sayılar yazılırken 9 rakamı kaç kez kullanılır?|Writing the numbers 1 to 100, how many times do you write the digit 9?|20|10|11|19
+brain|3|Bir günde (24 saatte) akrep ile yelkovan kaç kez üst üste gelir?|In 24 hours, how many times do the hour and minute hands overlap?|22|24|12|23
+brain|3|Dizideki sıradaki sayı: 1, 4, 9, 16, 25, ?|Next number: 1, 4, 9, 16, 25, ?|36|30|35|49
+brain|3|Dizideki sıradaki sayı: 2, 3, 5, 7, 11, ?|Next number: 2, 3, 5, 7, 11, ?|13|12|15|14
+brain|3|Üç kutudan birinde altın var. Birini seçersin, sunucu boş bir kutuyu açar. Değiştirirsen kazanma şansın ne olur?|The Monty Hall problem: if you switch doors, what is your chance of winning?|2/3|1/2|1/3|1
+brain|3|Bir odada kaç kişi olmalı ki ikisinin aynı gün doğmuş olma ihtimali %50'yi geçsin?|How many people must be in a room for a 50%+ chance that two share a birthday?|23|183|50|100
+brain|3|Bir kağıdı 10 kez ikiye katlarsan kalınlığı kaç kat olur?|If you fold a sheet of paper in half 10 times, how many layers thick is it?|1024|20|100|512
+brain|3|Bir saat her saat başı o saat kadar çalıyor (1'de 1, 2'de 2…). 12 saatte toplam kaç kez çalar?|A clock chimes the hour (once at 1, twice at 2…). How many chimes in 12 hours?|78|66|72|144
+brain|3|Hangi sayı İngilizce yazıldığında harfleri alfabetik sıradadır?|Which number's English name has its letters in alphabetical order?|Forty (40)~Forty|Seven (7)~Seven|Eight (8)~Eight|Ten (10)~Ten
+brain|3|Bir asansör 1. kattan 5. kata 20 saniyede çıkıyor. 1'den 9'a kaç saniyede çıkar?|A lift goes from floor 1 to floor 5 in 20 seconds. How long from floor 1 to floor 9?|40|36|45|30
+brain|3|Bir saniyede kaç milisaniye vardır?|How many milliseconds are in a second?|1000|100|60|10000

@@ -96,6 +96,10 @@ func _draw() -> void:
 	draw_rect(Rect2(bx, by, bw * frac, 4), Color(1, 1, 1, 0.25 * a))
 	var gain_txt := "+%d XP" % int(_shown_xp - float(award.before))
 	draw_string(Pal.display_bold(), Vector2(bx, by + 38), gain_txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color(Pal.GOOD, a))
+	if int(award.get("coins", 0)) > 0:
+		var gx := bx + Pal.display_bold().get_string_size(gain_txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 24).x + 26
+		Icons.draw(self, "coins", Vector2(gx + 10, by + 30), 22, Color(Pal.GOLD, a))
+		draw_string(Pal.display_bold(), Vector2(gx + 26, by + 38), "+%d" % int(award.coins), HORIZONTAL_ALIGNMENT_LEFT, -1, 24, Color(Pal.GOLD, a))
 	if _level_shown < Progress.MAX_LEVEL:
 		var nxt := Pal.t("rank.next", {"n": Progress.xp_for(_level_shown + 1) - int(_shown_xp)})
 		var nw := Pal.italic().get_string_size(nxt, HORIZONTAL_ALIGNMENT_LEFT, -1, 16).x

@@ -20,7 +20,7 @@ const JUMP_VEL := 5.25
 const SHOVE_RANGE := 1.45
 const SHOVE_IMPULSE := 5.2
 const SHOVE_COOLDOWN := 0.65
-const OUT_Y := -2.5
+const OUT_Y := -1.5          # orkestra çukurunun zemini -2.0: oraya düşen de "düştü" sayılır
 
 var player_name := "Oyuncu"
 var look := {}

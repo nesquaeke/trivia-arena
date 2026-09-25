@@ -27,6 +27,28 @@ NEW_CATEGORIES = {
     "space": ["Uzay", "Space", "#2B3F8C"],
     "odd": ["Tuhaf ama Gerçek", "Odd but True", "#8C2B6B"],
     "lang": ["Diller ve Kelimeler", "Words & Languages", "#6B7A1E"],
+    "brain": ["Beyin Acıtıcı", "Brain Teasers", "#7A3FB0"],
+    "life": ["Bunu Biliyor Olmalısın", "You Should Know This", "#3A8A8A"],
+    "toons": ["Çizgi Film & Oyuncak", "Cartoons & Toys", "#D2553A"],
+}
+
+## Oyun içi eğlenceli kategori adları (kuru "Bilim" yerine "Beynini Yak")
+FUN_NAMES = {
+    "geo": ["Dünya Turu", "World Tour"],
+    "sci": ["Beynini Yak", "Brain Burner"],
+    "hist": ["Geçmişte Neler Olmuş", "Back in the Day"],
+    "film": ["Patlamış Mısır", "Popcorn Time"],
+    "music": ["Kulağına Güven", "Trust Your Ears"],
+    "game": ["Oyun Başlasın", "Game On"],
+    "sport": ["Terlemeden Spor", "Couch Athlete"],
+    "art": ["Fırça Darbesi", "Brush Strokes"],
+    "lit": ["Kitap Kurdu", "Bookworm"],
+    "nature": ["Hayvanlar Garip", "Wild Things"],
+    "food": ["Ağzın Sulanacak", "Snack Attack"],
+    "tech": ["Robotlar Daha Akıllı", "Robots Are Smarter"],
+    "space": ["Uzay Boşluğu", "Lost in Space"],
+    "odd": ["Tuhaf ama Gerçek", "Odd but True"],
+    "lang": ["Dil Sürçmesi", "Tongue Twisters"],
 }
 
 
@@ -41,6 +63,10 @@ def main():
     d = json.load(open(DATA, encoding="utf-8"))
     for k, v in NEW_CATEGORIES.items():
         d["categories"].setdefault(k, v)
+    for k, v in FUN_NAMES.items():
+        if k in d["categories"]:
+            d["categories"][k][0] = v[0]
+            d["categories"][k][1] = v[1]
     have = set()
     for t in d["tiers"].values():
         for q in t:

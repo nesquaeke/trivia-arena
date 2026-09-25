@@ -18,7 +18,7 @@ func _ready() -> void:
 			_only = a.substr(7)
 	await get_tree().process_frame
 	var tests := [
-		"test_i18n", "test_questions", "test_profile", "test_save_file", "test_error_reporter", "test_progress", "test_round_track",
+		"test_i18n", "test_questions", "test_profile", "test_save_file", "test_error_reporter", "test_progress", "test_shop", "test_daily_word", "test_round_track",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
 		"test_stage_builds", "test_trapdoors", "test_rules", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
 	]
@@ -72,7 +72,7 @@ func test_i18n() -> void:
 	check(I18n.t("arena.alive", {"n": 3}) == "Sahnede 3 kişi", "yer tutucu dolduruluyor")
 
 func test_questions() -> void:
-	check(Questions.count() >= 1990, "~2000 soru yüklendi (%d)" % Questions.count())
+	check(Questions.count() >= 2100, "2100+ soru yüklendi (%d)" % Questions.count())
 	var bad := 0
 	for k in Questions.tiers:
 		for q in Questions.tiers[k]:
@@ -161,6 +161,59 @@ func test_progress() -> void:
 	check(b.gain == 50 + 120, "günlük ikramiye günde bir kez")
 	Profile.data = old_data
 
+func test_shop() -> void:
+	var old_data: Dictionary = Profile.data.duplicate(true)
+	Profile.data.xp = 0
+	Profile.data.coins = 0
+	Profile.data.owned = []
+	check(not Progress.is_unlocked("outfit", "cape") and Progress.requirement("outfit", "cape").has("shop"), "pelerin yalnız mağazada")
+	check(not Progress.buy("outfit", "cape"), "jeton yetmezse alınamaz")
+	Profile.data.coins = 1000
+	var cost := Progress.price("outfit", "cape")
+	check(Progress.buy("outfit", "cape") and Progress.is_unlocked("outfit", "cape"), "satın alınan öğe açılır")
+	check(Progress.coins() == 1000 - cost, "jeton düşer (%d)" % cost)
+	check(Progress.price("hat", "wizard") > 0 and Progress.buy("hat", "wizard"), "rütbe öğesi de jetonla alınabilir")
+	Progress.begin_match()
+	var a := Progress.award(0, {"correct": 5}, "arena")
+	check(int(a.get("coins", 0)) == 15 + 40 + 10, "maç sonunda jeton kazanılır (%d)" % int(a.get("coins", 0)))
+	var pv := PlushVisual.new({"color": "sky", "outfit": "tuxedo", "necklace": "locket", "hat": "tiara", "glasses": "goggles"})
+	add_child(pv)
+	await get_tree().process_frame
+	var extras := pv.find_children("*", "MeshInstance3D", true, false).filter(func(n): return n.is_in_group("extra"))
+	check(extras.size() > 20, "yeni giysiler giyilir (%d parça)" % extras.size())
+	pv.apply_look({"color": "sky"})
+	await get_tree().process_frame
+	var left := pv.find_children("*", "MeshInstance3D", true, false).filter(func(n): return n.is_in_group("extra"))
+	check(left.is_empty(), "giysi değişince eskisi temizlenir")
+	pv.queue_free()
+	Profile.data = old_data
+
+func test_daily_word() -> void:
+	var old_data: Dictionary = Profile.data.duplicate(true)
+	check(DailyWord.evaluate("kalem", "kalem") == [2, 2, 2, 2, 2], "tam isabet")
+	check(DailyWord.evaluate("aaxxx", "abcda") == [2, 1, 0, 0, 0], "tekrar eden harf doğru sayılır")
+	check(DailyWord.evaluate("lllll", "hello") == [0, 0, 2, 2, 0], "fazla harf gri kalır")
+	var tr := DailyWord.answer("tr")
+	check(tr.length() == 5 and DailyWord.is_valid(tr, "tr"), "bugünün Türkçe kelimesi geçerli (%s)" % tr)
+	check(DailyWord.answer("en").length() == 5, "İngilizce kelime var")
+	check(DailyWord.answer("tr", "2026-03-01") != DailyWord.answer("tr", "2026-03-02"), "her gün farklı kelime")
+	check(DailyWord.lower("IŞIK", "tr") == "ışık" and DailyWord.upper("iyi", "tr") == "İYİ", "Türkçe büyük/küçük harf")
+	Profile.data.daily = {}
+	Profile.data.coins = 0
+	var r0 := DailyWord.submit("tr", "abc")
+	check(not r0.ok and r0.why == "len", "kısa tahmin reddedilir")
+	var r1 := DailyWord.submit("tr", "qqqqq")
+	check(not r1.ok and r1.why == "word", "sözlükte olmayan reddedilir")
+	var wrong := "kitap" if tr != "kitap" else "kalem"
+	var r2 := DailyWord.submit("tr", wrong)
+	check(r2.ok and not r2.done, "geçerli yanlış tahmin kaydedilir")
+	var r3 := DailyWord.submit("tr", tr)
+	check(r3.ok and r3.won and r3.done and int(r3.reward) == 120 + 10, "2. denemede çözene 120 + seri 10 jeton")
+	check(Progress.coins() == 130 and DailyWord.streak() == 1, "jeton ve seri kaydedildi")
+	check(not DailyWord.submit("tr", tr).ok, "aynı gün tekrar oynanmaz")
+	check(DailyWord.share_text("tr").contains("🟩🟩🟩🟩🟩"), "paylaşım metni")
+	Profile.data = old_data
+
 func test_round_track() -> void:
 	var t := RoundTrack.new()
 	add_child(t)
@@ -245,6 +298,18 @@ func test_fall_out() -> void:
 	await seconds(1.5)
 	check(fired[0] and p.state == Plush.State.OUT, "sahneden düşen elenir")
 	root.queue_free()
+	# orkestra çukuruna (sahnenin önü) düşen de "düştü" sayılmalı ki geri gelebilsin
+	var m: Node = await _get_main()
+	var q: Plush = m.all_actors()[0]
+	var fired2 := [false]
+	var cb := func(_x): fired2[0] = true
+	q.fell_out.connect(cb)
+	q.teleport(Vector3(0, 0.6, Stage.FRONT_Z + 2.6))
+	await seconds(2.5)
+	check(fired2[0], "orkestra çukuruna düşen sahneye geri çağrılır")
+	q.fell_out.disconnect(cb)
+	await seconds(2.0)
+	check(q.global_position.y > -0.5 and q.state != Plush.State.OUT, "lobide kulisten geri geldi")
 
 var _main: Node = null
 
@@ -414,7 +479,7 @@ func test_mayhem_match() -> void:
 	var scored: bool = a.st.values().any(func(s): return s.points > 0)
 	check(scored, "puan kazanıldı")
 	check(a.st.values().any(func(s): return s.est_n >= 2), "tahmin turu sayıldı")
-	check(a.st.values().any(func(s): return s.caught > 0), "yağan cevaplardan doğru yakalandı")
+	check(a.st.values().any(func(s): return s.caught + s.stunned > 0), "yağan cevaplarda bloklar yakalandı")
 	for p in a.ranking():
 		var s: Dictionary = a.st[p]
 		print("     %s: %d puan, %d/%d doğru, yakalama %d, sersem %d, tahmin sırası %.1f, zıplama %d" % [p.player_name, s.points, s.correct, s.asked, s.caught, s.stunned, s.est_sum / max(1, s.est_n), s.jumps])

@@ -6,7 +6,7 @@ extends Node
 signal changed
 
 const PATH := "user://profile.json"
-const DEFAULT_LOOK := {"color": "mustard", "hat": "tophat", "mustache": "handlebar", "bowtie": "classic", "glasses": "none",
+const DEFAULT_LOOK := {"color": "mustard", "hat": "tophat", "mustache": "handlebar", "bowtie": "classic", "glasses": "none", "necklace": "none", "outfit": "none",
 	"culture": "janissary", "castle": "fairy", "banner": "plain"}
 
 var data := {}
@@ -36,6 +36,9 @@ func _defaults() -> Dictionary:
 		"xp": 0,
 		"unlocked": [],
 		"seen_unlocks": [],
+		"coins": 0,
+		"owned": [],
+		"daily": {},          # Günlük Kelime: {"tr": {date, guesses, done, won}, "streak", "last_win"}
 	}
 
 func _read(path: String) -> Variant:

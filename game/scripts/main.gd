@@ -225,6 +225,18 @@ func apply_look_to_player_one() -> void:
 	if _ward_castle and is_instance_valid(_ward_castle) and (_ward_castle.style != String(Profile.look().get("castle", "fairy")) or _ward_castle.banner != String(Profile.look().get("banner", "plain"))):
 		wardrobe_conquest(true)
 
+## Kilitli bir öğeyi mağazada denemek: kaydetmeden giydir (Karakterim kapanınca geri döner)
+func preview_look(k: String, v: String) -> void:
+	var look: Dictionary = Profile.data.look
+	var had := look.has(k)
+	var old = look.get(k)
+	look[k] = v
+	apply_look_to_player_one()
+	if had:
+		look[k] = old
+	else:
+		look.erase(k)
+
 ## Kostüm odasında Fetih sekmesi: pelüş kültür kostümünü giyer, yanında kalesi belirir
 var _ward_castle: CastleModel = null
 
@@ -727,6 +739,38 @@ func prepare_game_shot(part: String) -> void:
 			await get_tree().create_timer(0.6).timeout
 			(_demo_map.piece(id) as CastleModel).collapse()
 			await get_tree().create_timer(1.25).timeout
+		"wear1", "wear2", "wear3", "wear4", "wear5", "wear6", "wear7", "wear8":
+			# giysi vitrini: 5 pelüş yakından
+			props.clear()
+			for a in all_actors():
+				a.visible = false
+				a.freeze = true
+			var sets := {
+				"wear1": [{"hat": "beanie"}, {"hat": "graduate"}, {"hat": "halo"}, {"hat": "headphones"}, {"hat": "bunny"}],
+				"wear2": [{"hat": "santa"}, {"hat": "tiara"}, {"hat": "sombrero"}, {"hat": "laurel"}, {"hat": "flowers", "mustache": "beard"}],
+				"wear3": [{"glasses": "round"}, {"glasses": "star"}, {"glasses": "shades"}, {"glasses": "heart"}, {"glasses": "aviator"}],
+				"wear4": [{"glasses": "cinema3d"}, {"glasses": "nerd"}, {"glasses": "goggles"}, {"glasses": "monocle", "mustache": "beard"}, {"glasses": "eyepatch", "bowtie": "pearls"}],
+				"wear5": [{"outfit": "sweater"}, {"outfit": "overalls"}, {"outfit": "tutu"}, {"outfit": "cape"}, {"outfit": "vest"}],
+				"wear6": [{"outfit": "tuxedo"}, {"outfit": "hoodie"}, {"outfit": "raincoat"}, {"outfit": "sweater", "necklace": "gold_chain"}, {"outfit": "cape", "hat": "crown"}],
+				"wear7": [{"necklace": "gold_chain"}, {"necklace": "locket"}, {"necklace": "beads"}, {"necklace": "lei"}, {"necklace": "tooth"}],
+				"wear8": [{"necklace": "crystal"}, {"necklace": "medallion"}, {"bowtie": "pearls"}, {"bowtie": "scarf"}, {"necklace": "lei", "hat": "sombrero", "glasses": "shades"}],
+			}
+			var cols2 := ["mustard", "sky", "rose", "mint", "lilac"]
+			var root3 := Node3D.new()
+			add_child(root3)
+			var lst: Array = sets[part]
+			for i in lst.size():
+				var lk := {"color": cols2[i], "hat": "none", "mustache": "none", "bowtie": "none", "glasses": "none"}
+				lk.merge(lst[i], true)
+				var pv2 := PlushVisual.new(lk)
+				root3.add_child(pv2)
+				pv2.position = Vector3((i - 2) * 1.0, 0.02, 1.2)
+				pv2.rotation.y = (i - 2) * -0.12
+			cam.set_custom({"pos": Vector3(0, 1.55, 4.9), "look": Vector3(0, 0.95, 1.2), "fov": 40.0, "h": 0.0, "sway": 0.0}, true)
+			stage.set_solo(true)
+			if ui:
+				ui.show_lobby_chrome(false)
+			await get_tree().create_timer(2.0).timeout
 		"hats_demo", "faces_demo":
 			# yeni kozmetik vitrini: 10 pelüş, her birinde farklı açılan öğe
 			props.clear()

@@ -17,10 +17,14 @@ const COLOR_KEYS := ["mustard", "butter", "tangerine", "rose", "mint", "sky", "l
 	"cherry", "navy", "forest", "plum", "coral", "snow", "cocoa", "gold"]
 ## Oyuncu rengi olarak seçilebilenler (ilk 8'i herkese açık, diğerleri Sahne Rütbesi ile)
 const HATS := ["none", "tophat", "bowler", "fez", "boater", "crown", "cone",
-	"beret", "party", "tricorn", "wizard", "chef", "jester", "cowboy", "propeller", "flowers", "laurel"]
+	"beret", "party", "tricorn", "wizard", "chef", "jester", "cowboy", "propeller", "flowers", "laurel",
+	"beanie", "graduate", "halo", "headphones", "bunny", "santa", "tiara", "sombrero"]
 const MUSTACHES := ["none", "handlebar", "chevron", "pencil", "walrus", "imperial", "goatee", "horseshoe", "curly", "beard"]
 const BOWTIES := ["none", "classic", "dotted", "big", "scarf", "medal", "pearls", "ascot", "rose", "bell"]
-const GLASSES := ["none", "round", "monocle", "star", "shades", "domino", "eyepatch"]
+const GLASSES := ["none", "round", "monocle", "star", "shades", "domino", "eyepatch",
+	"heart", "aviator", "cinema3d", "nerd", "goggles"]
+const NECKLACES := PlushExtras.NECKLACES
+const OUTFITS := PlushExtras.OUTFITS
 
 static var _felt_normal: NoiseTexture2D
 static var _mats := {}
@@ -226,7 +230,7 @@ func _build() -> void:
 	neck_anchor.position = Vector3(0, 0.86, 0.23)
 	body_root.add_child(neck_anchor)
 	glasses_anchor = Node3D.new()
-	glasses_anchor.position = Vector3(0, 0.19, 0.29)
+	glasses_anchor.position = Vector3(0, 0.19, 0.285)
 	head_pivot.add_child(glasses_anchor)
 
 # ── kostüm ──────────────────────────────────────────────────────────
@@ -243,6 +247,7 @@ func apply_look(l: Dictionary) -> void:
 		for ch in a.get_children():
 			ch.queue_free()
 	CultureCostume.undress(self)
+	_clear_extras()
 	if culture != "":
 		CultureCostume.dress(self, culture, costume_color if costume_color != null else c)
 		return
@@ -250,6 +255,17 @@ func apply_look(l: Dictionary) -> void:
 	_build_mustache(String(look.get("mustache", "none")))
 	_build_bowtie(String(look.get("bowtie", "none")))
 	_build_glasses(String(look.get("glasses", "none")))
+	PlushExtras.build_outfit(self, String(look.get("outfit", "none")), c)
+	PlushExtras.build_necklace(self, String(look.get("necklace", "none")))
+
+## Kıyafet, kolye ve yeni aksesuar parçalarını sök (gövde, kollar, bacaklar, baş)
+func _clear_extras() -> void:
+	for a in [body_root, arm_l, arm_r, leg_l, leg_r, head_pivot, hat_anchor, glasses_anchor]:
+		if a == null:
+			continue
+		for ch in a.get_children():
+			if ch.is_in_group("extra"):
+				ch.free()
 
 ## Fetih kostümünü giy ("" verilirse Trivia kostümüne döner)
 func set_culture(c: String) -> void:
@@ -361,10 +377,16 @@ func _build_hat(kind: String) -> void:
 				_mesh(hat_anchor, _sphere(0.02), mat("flw_c", Color("F2C230"), 0.6), fp + Vector3(0, 0.03, 0))
 			_mesh(hat_anchor, _cyl(0.2, 0.2, 0.02, 24), mat("leaf", Color("4E9A45"), 0.8), Vector3(0, -0.07, 0))
 		"laurel":
+			var leaf := mat("laurel", Color("8DB548"), 0.5, 0.15)
+			var leaf2 := mat("laurel2", Color("C8B84A"), 0.4, 0.4)
 			for side: int in [-1, 1]:
-				for k in 6:
-					var a := PI / 2 + side * (0.3 + k * 0.38)
-					_mesh(hat_anchor, _sphere(0.04), gold, Vector3(cos(a) * 0.2, -0.05 + k * 0.012, sin(a) * 0.2), Vector3(0, -a, 0.5 * side), Vector3(1.6, 0.5, 0.8))
+				for k in 7:
+					var a := PI / 2 + side * (0.25 + k * 0.36)
+					var pos := Vector3(cos(a) * 0.245, -0.1 + k * 0.006, sin(a) * 0.235)
+					_mesh(hat_anchor, _sphere(0.042), leaf if k % 2 == 0 else leaf2, pos, Vector3(0.0, -a + PI / 2, 0.55 * side), Vector3(1.7, 0.42, 0.75))
+			_mesh(hat_anchor, _sphere(0.03), gold, Vector3(0, -0.09, 0.24))
+		_:
+			PlushExtras.build_hat(self, kind)
 
 func _build_mustache(kind: String) -> void:
 	var hair := mat("hair", Color("2A1A10"), 0.9)
@@ -399,9 +421,13 @@ func _build_mustache(kind: String) -> void:
 				t.outer_radius = 0.034
 				_mesh(face_anchor, t, hair, Vector3(0.12 * side, 0.025, 0.0), Vector3(PI / 2, 0, 0))
 		"beard":
-			var bm := felt(Color("3A2616"))
-			_mesh(face_anchor, _capsule(0.022, 0.18), hair, Vector3(0, 0.005, 0.015), Vector3(0, 0, PI / 2))
-			_mesh(face_anchor, _sphere(0.13), bm, Vector3(0, -0.13, -0.05), Vector3.ZERO, Vector3(1.25, 0.8, 0.6))
+			# sakal: çeneyi saran yumuşak keçe, yanaklardan aşağı iner; ağız görünür kalır
+			var bm := felt(Color("6B4A2E"))
+			_mesh(face_anchor, _sphere(0.2), bm, Vector3(0, -0.14, -0.1), Vector3.ZERO, Vector3(1.2, 0.85, 0.72))
+			for side: int in [-1, 1]:
+				_mesh(face_anchor, _sphere(0.07), bm, Vector3(0.17 * side, -0.04, -0.07), Vector3.ZERO, Vector3(0.7, 1.3, 0.8))
+			for side: int in [-1, 1]:
+				_mesh(face_anchor, _capsule(0.02, 0.1), bm, Vector3(0.05 * side, 0.01, 0.012), Vector3(0, 0, PI / 2 - 0.2 * side))
 
 func _build_bowtie(kind: String) -> void:
 	if kind == "none":
@@ -447,9 +473,8 @@ func _build_neck_extra(kind: String) -> bool:
 			_mesh(neck_anchor, _cyl(0.05, 0.05, 0.015, 20), gold, Vector3(0, -0.14, 0.02), Vector3(PI / 2, 0, 0))
 			_mesh(neck_anchor, _cyl(0.0, 0.03, 0.01, 5), mat("medal_s", Color("FFF1C4"), 0.4, 0.5), Vector3(0, -0.14, 0.03), Vector3(PI / 2, 0, 0))
 		"pearls":
-			for i in 13:
-				var a := PI * i / 12.0
-				_mesh(neck_anchor, _sphere(0.025), mat("pearl", Color("F6F1E6"), 0.2, 0.1), Vector3(cos(a) * 0.2, -0.05 - sin(a) * 0.08, -0.08 + sin(a) * 0.08))
+			for p in PlushExtras.neck_arc(16, 0.87, 0.09, 0.02):
+				_mesh(neck_anchor, _sphere(0.024), mat("pearl", Color("F6F1E6"), 0.2, 0.1), (p as Vector3) - neck_anchor.position)
 		"ascot":
 			var am := mat("ascot", Color("7A3E6E"), 0.4)
 			_mesh(neck_anchor, _sphere(0.05), am, Vector3(0, -0.01, 0.0))
@@ -481,8 +506,9 @@ func _build_glasses(kind: String) -> void:
 				var t := TorusMesh.new()
 				t.inner_radius = 0.055
 				t.outer_radius = 0.068
-				_mesh(glasses_anchor, t, frame, Vector3(0.1 * side, 0, 0), Vector3(PI / 2, 0, 0))
-			_mesh(glasses_anchor, _capsule(0.008, 0.07), frame, Vector3(0, 0.005, 0), Vector3(0, 0, PI / 2))
+				_mesh(glasses_anchor, t, frame, Vector3(0.1 * side, 0, -0.005), Vector3(PI / 2, 0.3 * side, 0))
+			_mesh(glasses_anchor, _capsule(0.008, 0.07), frame, Vector3(0, 0.005, 0.004), Vector3(0, 0, PI / 2))
+			PlushExtras.temples(self, frame, 0.0, 0.16)
 		"monocle":
 			var t2 := TorusMesh.new()
 			t2.inner_radius = 0.058
@@ -490,12 +516,19 @@ func _build_glasses(kind: String) -> void:
 			_mesh(glasses_anchor, t2, gold, Vector3(0.1, 0, 0.005), Vector3(PI / 2, 0, 0))
 			_mesh(glasses_anchor, _capsule(0.004, 0.24), gold, Vector3(0.15, -0.14, -0.02), Vector3(0, 0, 0.3))
 		"star":
+			var sf := mat("star_g", Color("F04E8C"), 0.35)
 			for side: int in [-1, 1]:
-				_mesh(glasses_anchor, _cyl(0.085, 0.085, 0.02, 5), mat("star_g", Color("F04E8C"), 0.4), Vector3(0.1 * side, 0, 0), Vector3(PI / 2, 0, PI / 10))
-				_mesh(glasses_anchor, _cyl(0.06, 0.06, 0.022, 5), mat("star_l", Color("2A1A2A"), 0.2), Vector3(0.1 * side, 0, 0.004), Vector3(PI / 2, 0, PI / 10))
+				_mesh(glasses_anchor, PlushExtras.polygon_mesh(PlushExtras.star_poly(0.08, 0.042), 0.018), sf, Vector3(0.1 * side, 0, -0.006), Vector3(0, 0.3 * side, 0))
+				_mesh(glasses_anchor, PlushExtras.polygon_mesh(PlushExtras.star_poly(0.055, 0.028), 0.02), mat("star_l", Color("3A1A3A"), 0.1, 0.2), Vector3(0.1 * side, 0, 0.0), Vector3(0, 0.3 * side, 0))
+			_mesh(glasses_anchor, _capsule(0.007, 0.05), sf, Vector3(0, 0.01, 0.0), Vector3(0, 0, PI / 2))
+			PlushExtras.temples(self, sf, 0.01, 0.16)
 		"shades":
-			_mesh(glasses_anchor, BoxMesh.new(), mat("shades", Color("111114"), 0.15, 0.3), Vector3(0, 0, 0.005), Vector3.ZERO, Vector3(0.32, 0.075, 0.02))
-			_mesh(glasses_anchor, BoxMesh.new(), mat("shades_hi", Color("5A6A8A"), 0.1, 0.5), Vector3(-0.08, 0.02, 0.016), Vector3(0, 0, 0.3), Vector3(0.05, 0.01, 0.005))
+			var sh := mat("shades", Color("111114"), 0.12, 0.3)
+			for side: int in [-1, 1]:
+				_mesh(glasses_anchor, _sphere(0.065), sh, Vector3(0.095 * side, -0.005, -0.004), Vector3(0, 0.3 * side, 0), Vector3(1.25, 0.8, 0.2))
+				_mesh(glasses_anchor, BoxMesh.new(), mat("shades_hi", Color("7A8AAA"), 0.1, 0.5), Vector3(0.07 * side - 0.02, 0.02, 0.012), Vector3(0, 0.3 * side, 0.4), Vector3(0.04, 0.008, 0.004))
+			_mesh(glasses_anchor, _capsule(0.008, 0.06), sh, Vector3(0, 0.025, 0.0), Vector3(0, 0, PI / 2))
+			PlushExtras.temples(self, sh, 0.02, 0.17)
 		"domino":
 			var dm := mat("domino", Color("1E1A2E"), 0.4)
 			_mesh(glasses_anchor, _sphere(0.1), dm, Vector3(0, 0, -0.015), Vector3.ZERO, Vector3(1.75, 0.6, 0.35))
@@ -504,6 +537,8 @@ func _build_glasses(kind: String) -> void:
 		"eyepatch":
 			_mesh(glasses_anchor, _cyl(0.06, 0.06, 0.02, 16), mat("patch", Color("141014"), 0.6), Vector3(-0.1, 0, 0.006), Vector3(PI / 2, 0, 0))
 			_mesh(glasses_anchor, _capsule(0.006, 0.42), mat("patch", Color("141014"), 0.6), Vector3(0, 0.03, -0.02), Vector3(0, 0, PI / 2 - 0.3))
+		_:
+			PlushExtras.build_glasses(self, kind)
 
 # ── sabotaj görünüşleri ─────────────────────────────────────────────
 var _boots: Array[MeshInstance3D] = []

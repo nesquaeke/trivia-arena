@@ -21,7 +21,19 @@ const FREE := {
 	"culture": ["viking", "centurion", "pharaoh", "samurai", "mariachi", "musketeer", "highlander", "janissary", "hussar", "frontier"],
 	"castle": ["himeji", "pyramid", "alhambra", "fairy", "gothic", "steppe"],
 	"banner": ["plain"],
+	"necklace": ["none"],
+	"outfit": ["none"],
 }
+
+## Yalnız mağazada (Günlük Kelime ve maçlardan kazanılan jetonla)
+const SHOP_ONLY := {
+	"hat:bunny": 180, "hat:santa": 200, "hat:tiara": 260, "hat:sombrero": 220,
+	"glasses:cinema3d": 150, "glasses:nerd": 150, "glasses:goggles": 200,
+	"necklace:lei": 160, "necklace:tooth": 140, "necklace:crystal": 300,
+	"outfit:tutu": 240, "outfit:cape": 320, "outfit:raincoat": 220,
+}
+## Rütbe/başarım öğelerini beklemeden almak isteyene fiyat
+const ACH_PRICE := 350
 
 ## Seviye ödülleri: seviye → ["kategori:öğe", ...]
 const LEVEL_UNLOCKS := {
@@ -32,6 +44,13 @@ const LEVEL_UNLOCKS := {
 	18: ["culture:pirate"], 19: ["bowtie:pearls"], 20: ["banner:cross", "color:plum"], 21: ["hat:chef"],
 	22: ["mustache:horseshoe"], 23: ["hat:jester"], 24: ["castle:lighthouse"], 25: ["banner:checker", "color:snow"],
 	26: ["mustache:beard"], 27: ["culture:explorer"], 28: ["hat:laurel"], 29: ["bowtie:bell"], 30: ["color:gold", "banner:sun"],
+}
+## Yeni giysiler (v0.6): seviyelere eklenir
+const LEVEL_UNLOCKS_2 := {
+	3: ["necklace:beads"], 5: ["outfit:sweater"], 7: ["hat:beanie"], 9: ["glasses:heart"],
+	11: ["necklace:gold_chain"], 13: ["outfit:overalls"], 15: ["hat:headphones"], 17: ["outfit:hoodie"],
+	19: ["glasses:aviator"], 21: ["necklace:locket"], 23: ["outfit:vest"], 25: ["hat:graduate"],
+	27: ["outfit:tuxedo"], 29: ["necklace:medallion"], 30: ["hat:halo"],
 }
 
 ## Başarım ödülleri
@@ -94,6 +113,19 @@ static func title_key(lv: int) -> String:
 	return key
 
 # ── kilitler ────────────────────────────────────────────────────────
+static var _levels_cache := {}
+
+## Seviye → öğeler (iki tablonun birleşimi)
+static func level_table() -> Dictionary:
+	if _levels_cache.is_empty():
+		for l in LEVEL_UNLOCKS:
+			_levels_cache[l] = LEVEL_UNLOCKS[l].duplicate()
+		for l in LEVEL_UNLOCKS_2:
+			if not _levels_cache.has(l):
+				_levels_cache[l] = []
+			_levels_cache[l].append_array(LEVEL_UNLOCKS_2[l])
+	return _levels_cache
+
 static func is_unlocked(cat: String, item: String) -> bool:
 	if FREE.get(cat, []).has(item):
 		return true
@@ -101,11 +133,12 @@ static func is_unlocked(cat: String, item: String) -> bool:
 	if p == null:
 		return true
 	var id := cat + ":" + item
-	if p.data.get("unlocked", []).has(id):
+	if p.data.get("unlocked", []).has(id) or p.data.get("owned", []).has(id):
 		return true
 	var lv := level()
-	for l in LEVEL_UNLOCKS:
-		if int(l) <= lv and LEVEL_UNLOCKS[l].has(id):
+	var lt := level_table()
+	for l in lt:
+		if int(l) <= lv and lt[l].has(id):
 			return true
 	var ach: Dictionary = p.data.get("achievements", {})
 	for a in ACH_UNLOCKS:
@@ -118,19 +151,66 @@ static func requirement(cat: String, item: String) -> Dictionary:
 	if is_unlocked(cat, item):
 		return {}
 	var id := cat + ":" + item
-	for l in LEVEL_UNLOCKS:
-		if LEVEL_UNLOCKS[l].has(id):
-			return {"level": int(l)}
+	if SHOP_ONLY.has(id):
+		return {"shop": true, "price": int(SHOP_ONLY[id])}
+	var lt := level_table()
+	for l in lt:
+		if lt[l].has(id):
+			return {"level": int(l), "price": price(cat, item)}
 	for a in ACH_UNLOCKS:
 		if ACH_UNLOCKS[a].has(id):
-			return {"ach": a}
-	return {"level": MAX_LEVEL}
+			return {"ach": a, "price": ACH_PRICE}
+	return {"level": MAX_LEVEL, "price": price(cat, item)}
+
+## Jeton fiyatı (açıksa 0)
+static func price(cat: String, item: String) -> int:
+	if FREE.get(cat, []).has(item):
+		return 0
+	var id := cat + ":" + item
+	if SHOP_ONLY.has(id):
+		return int(SHOP_ONLY[id])
+	var lt := level_table()
+	for l in lt:
+		if lt[l].has(id):
+			return 60 + int(l) * 14
+	return ACH_PRICE
+
+static func coins() -> int:
+	var p := _prof()
+	return int(p.data.get("coins", 0)) if p else 0
+
+static func add_coins(n: int) -> void:
+	var p := _prof()
+	if p == null:
+		return
+	p.data["coins"] = max(0, int(p.data.get("coins", 0)) + n)
+	p.save()
+
+## Satın al: yeterli jeton varsa öğe kalıcı olarak açılır
+static func buy(cat: String, item: String) -> bool:
+	var p := _prof()
+	if p == null or is_unlocked(cat, item):
+		return false
+	var cost := price(cat, item)
+	if coins() < cost:
+		return false
+	p.data["coins"] = coins() - cost
+	var owned: Array = p.data.get("owned", [])
+	owned.append(cat + ":" + item)
+	p.data["owned"] = owned
+	p.save()
+	return true
 
 ## Şu an açık olan bütün kilitli öğeler (açılış anını yakalamak için)
 static func unlocked_ids() -> Array:
 	var out := []
-	for l in LEVEL_UNLOCKS:
-		for id in LEVEL_UNLOCKS[l]:
+	for id in SHOP_ONLY:
+		var sp0: PackedStringArray = String(id).split(":")
+		if is_unlocked(sp0[0], sp0[1]):
+			out.append(id)
+	var lt := level_table()
+	for l in lt:
+		for id in lt[l]:
 			var sp: PackedStringArray = String(id).split(":")
 			if is_unlocked(sp[0], sp[1]):
 				out.append(id)
@@ -142,9 +222,10 @@ static func unlocked_ids() -> Array:
 	return out
 
 static func total_unlockables() -> int:
-	var n := 0
-	for l in LEVEL_UNLOCKS:
-		n += LEVEL_UNLOCKS[l].size()
+	var n := SHOP_ONLY.size()
+	var lt := level_table()
+	for l in lt:
+		n += lt[l].size()
 	for a in ACH_UNLOCKS:
 		n += ACH_UNLOCKS[a].size()
 	return n
@@ -185,10 +266,13 @@ static func award(rank: int, stats: Dictionary, kind: String) -> Dictionary:
 	for l in lines:
 		gain += int(l[1])
 	p.data["xp"] = before + gain
+	# jeton: katılım 15, ilk üç 40/25/10, her doğru 2 (en çok 30)
+	var coin_gain: int = 15 + ([40, 25, 10][rank] if rank >= 0 and rank < 3 else 0) + mini(30, correct * 2)
+	p.data["coins"] = int(p.data.get("coins", 0)) + coin_gain
 	p.save()
 	var after_ids := unlocked_ids()
 	var fresh := after_ids.filter(func(id): return not before_ids.has(id))
-	last_award = {"before": before, "after": before + gain, "gain": gain, "lines": lines,
+	last_award = {"before": before, "after": before + gain, "gain": gain, "lines": lines, "coins": coin_gain,
 		"level_before": level_of(before), "level_after": level_of(before + gain), "new": fresh}
 	return last_award
 

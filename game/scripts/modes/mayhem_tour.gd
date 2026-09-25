@@ -68,6 +68,14 @@ var _sound: AudioStreamPlayer
 var _props3d: Array[Node3D] = []
 var _tiny_orig := {}
 var _worst_rank := {}
+const DOOR_X := [-4.8, -1.6, 1.6, 4.8]
+const DOOR_Z := -4.2
+var _doors: Array[AnswerDoor] = []
+var _zone_mode := "grid"         # grid: 2×2 kapak · doors: arkadaki dört kapı
+var _phone_pick := {}          # telefon: şık düğmesiyle verilen cevap [kapak, an]
+var _est_lock := {}           # Plush -> kilitli tahmin (zıplama, klavye ya da telefon)
+var _est_typed := ""
+var _est_typer: Plush = null
 
 func setup(p_game: Node, actors: Array[Plush], p_timer: float, p_level: String, seed_val := 0) -> void:
 	game = p_game
@@ -118,6 +126,9 @@ static func build_plan(p_length: String, r: RandomNumberGenerator) -> Array:
 	return out
 
 func _exit_tree() -> void:
+	for d in _doors:
+		if is_instance_valid(d):
+			d.queue_free()
 	_clear_chaos()
 	_clear_props()
 	if _line:
@@ -182,6 +193,7 @@ func stats_for(p: Plush) -> Dictionary:
 func _on_jumped(p: Plush) -> void:
 	if st.has(p):
 		st[p].jumps += 1
+	_est_jump(p)
 
 func line_up() -> void:
 	var n := contestants.size()
@@ -329,15 +341,23 @@ func _zone_question(label: String, prompt: String, options: Array, correct: Arra
 	_cur_correct = correct.duplicate()
 	timer_total = total
 	stage.board.show_question(round_no - 1, prompt, options, cat_name, cat_color, total)
-	stage.set_zone_texts(options)
-	stage.set_zones_visible(true)
+	if _zone_mode == "doors":
+		stage.set_zones_visible(false)
+		for i in 4:
+			_doors[i].set_answer(String(options[i]))
+	else:
+		stage.set_zone_texts(options)
+		stage.set_zones_visible(true)
 	_hud("hud_question", [label, prompt, options, cat_name, cat_color, total, 0, Vector2i(0, 0)])
 	_notify_all(prompt.substr(0, 90))
 	Sfx.play("ding", -4.0, 0.9)
 	_zone.clear()
+	_phone_pick.clear()
 	for p in contestants:
 		p.frozen_input = false
 		_zone[p] = [-1, 0.0]
+		if p.controller is Controllers.Phone:
+			_notify(p, {"t": "mode", "m": "abcd", "q": prompt, "options": options})
 	_plan_zone_bots(prompt, acc_mod)
 	_q_t = 0.0
 	time_left = total
@@ -351,7 +371,9 @@ func _zone_question(label: String, prompt: String, options: Array, correct: Arra
 	_hud("hud_timer", [0.0, total])
 	var res := {}
 	for p in contestants:
-		var z: Array = _zone.get(p, [-1, 0.0])
+		var z: Array = _phone_pick.get(p, _zone.get(p, [-1, 0.0]))
+		if p.controller is Controllers.Phone:
+			_notify(p, {"t": "mode", "m": ""})
 		var zi := int(z[0])
 		if _dead_zones.has(zi):
 			zi = -1
@@ -366,14 +388,61 @@ func _zone_question(label: String, prompt: String, options: Array, correct: Arra
 	for i in 4:
 		if _dead_zones.has(i):
 			continue
-		stage.flash_zone(i, Color(0.35, 1.0, 0.45) if _cur_correct.has(i) else Color(1.0, 0.2, 0.15))
+		if _zone_mode == "doors":
+			if _cur_correct.has(i):
+				_doors[i].open_right()
+			else:
+				_doors[i].shake_wrong()
+		else:
+			stage.flash_zone(i, Color(0.35, 1.0, 0.45) if _cur_correct.has(i) else Color(1.0, 0.2, 0.15))
 	return res
+
+## Oyuncunun seçtiği şık: kapak (2×2) ya da kapı önündeki şerit
+func _zone_of(p: Plush) -> int:
+	var pos := p.global_position
+	if _zone_mode == "doors":
+		if pos.z > 0.3 or pos.y < -0.5:
+			return -1
+		if pos.x < -3.2:
+			return 0
+		if pos.x < 0.0:
+			return 1
+		if pos.x < 3.2:
+			return 2
+		return 3
+	return stage.zone_at(pos)
+
+func _zone_target(z: int) -> Vector3:
+	if _zone_mode == "doors":
+		return Vector3(DOOR_X[z] + rng.randf_range(-0.9, 0.9), 0, DOOR_Z + rng.randf_range(1.0, 2.6))
+	var he := stage.zone_half_extents()
+	return stage.zone_center(z) + Vector3(rng.randf_range(-he.x, he.x) * 0.5, 0, rng.randf_range(-he.y, he.y) * 0.5)
+
+func _show_doors(on: bool) -> void:
+	_zone_mode = "doors" if on else "grid"
+	if on and _doors.is_empty():
+		for i in 4:
+			var d := AnswerDoor.new()
+			stage.add_child(d)
+			d.setup(Stage.LETTERS[i], Pal.ZONE[i])
+			d.position = Vector3(DOOR_X[i], 0.0, DOOR_Z)
+			_doors.append(d)
+	for i in _doors.size():
+		var d: AnswerDoor = _doors[i]
+		if on:
+			d.visible = true
+			d.close()
+			d.position.y = 4.0
+			d.create_tween().tween_property(d, "position:y", 0.0, 0.5).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT).set_delay(i * 0.08)
+		else:
+			d.visible = false
 
 func _physics_process(delta: float) -> void:
 	_poll_reactions()
 	if phase != "question":
 		return
-	var d := delta * fast_forward
+	# Yağan Cevaplar gerçek zamanlıdır: bloklar ve pelüşler aynı saatle yarışır
+	var d := delta if game_id == "falling" else delta * fast_forward
 	time_left -= d
 	_q_t += d
 	stage.board.time_left = max(0.0, time_left)
@@ -386,7 +455,7 @@ func _physics_process(delta: float) -> void:
 		"nearest":
 			_tick_line()
 		"falling":
-			_tick_falls(d)
+			_tick_falls(delta)   # bloklar gerçek zamanlı düşer (pelüşler de gerçek hızda koşar)
 		_:
 			if game_id == "final" and _line:
 				_tick_line()
@@ -398,7 +467,12 @@ func _tick_zones() -> void:
 	for p in _zone:
 		if not is_instance_valid(p):
 			continue
-		var z := stage.zone_at(p.global_position)
+		if p.controller is Controllers.Phone and not _phone_pick.has(p):
+			var a: int = p.controller.take_answer()
+			if a >= 0:
+				_phone_pick[p] = [a, _q_t]
+				p.float_text(Stage.LETTERS[a], Pal.ZONE[a])
+		var z := _zone_of(p)
 		if z != _zone[p][0]:
 			_zone[p] = [z, _q_t]
 	# kaçan cevaplar: sürenin yarısında şıklar yer değiştirir
@@ -416,7 +490,16 @@ func _tick_zones() -> void:
 				corr.append(perm[i])
 		_cur_options = opts
 		_cur_correct = corr
-		stage.set_zone_texts(opts)
+		for pp in _phone_pick:
+			_phone_pick[pp] = [perm[int(_phone_pick[pp][0])], _phone_pick[pp][1]]
+		for pp in contestants:
+			if pp.controller is Controllers.Phone and not _phone_pick.has(pp):
+				_notify(pp, {"t": "mode", "m": "abcd", "q": stage.board.prompt, "options": opts})
+		if _zone_mode == "doors":
+			for i in 4:
+				_doors[i].set_answer(String(opts[i]))
+		else:
+			stage.set_zone_texts(opts)
 		stage.board.options = opts
 		_hud("hud_question", [I18n.t("mh.chaos.moving"), stage.board.prompt, opts, "", Color("FF7A5A"), timer_total, 0, Vector2i(0, 0)])
 		Sfx.play("whoosh", -2.0, 1.4)
@@ -451,7 +534,6 @@ func _plan_zone_bots(prompt: String, acc_mod: float) -> void:
 		p.controller.go_to(Vector3(rng.randf_range(-1.2, 1.2), 0, rng.randf_range(-0.6, 0.6)))
 
 func _drive_bots() -> void:
-	var he := stage.zone_half_extents()
 	for p in _bot_plan:
 		if not is_instance_valid(p) or not p.is_active():
 			continue
@@ -459,7 +541,7 @@ func _drive_bots() -> void:
 		if plan_d.has("zone"):
 			if time_left <= plan_d.at and not plan_d.get("going", false):
 				plan_d.going = true
-				p.controller.go_to(stage.zone_center(plan_d.zone) + Vector3(rng.randf_range(-he.x, he.x) * 0.5, 0, rng.randf_range(-he.y, he.y) * 0.5))
+				p.controller.go_to(_zone_target(plan_d.zone))
 		elif plan_d.has("x"):
 			if time_left <= plan_d.at and not plan_d.get("going", false):
 				plan_d.going = true
@@ -608,7 +690,7 @@ func _tf() -> Dictionary:
 		var w := [0, 1, 2, 3]
 		w.erase(q.correct)
 		shown = w[rng.randi() % 3]
-	var stmt := "%s\n→ %s" % [q.prompt, q.options[shown]]
+	var stmt := I18n.t("mh.tf.stmt", {"q": q.prompt, "a": q.options[shown]})
 	var T := I18n.t("mh.true")
 	var F := I18n.t("mh.false")
 	return {"prompt": stmt, "options": [T, F, T, F], "correct": [0, 2] if truth else [1, 3], "cat": q.cat, "col": q.col,
@@ -661,6 +743,8 @@ func _icons_q(exclude: Array = []) -> Dictionary:
 
 # ── 1 · Four Doors ─────────────────────────────────────────────────
 func _g_doors() -> void:
+	_show_doors(true)
+	await _wait(0.8)
 	for i in 3:
 		var q := _mc(["d1", "d1", "d2"][i])
 		var res := await _zone_question(I18n.t("mh.q_of", {"n": i + 1, "m": 3}), q.prompt, q.options, [q.correct], answer_s, q.cat, q.col)
@@ -668,6 +752,9 @@ func _g_doors() -> void:
 		await _wait(2.6)
 		_hud("hud_question_hide")
 		stage.board.reveal = -1
+		for d in _doors:
+			d.close()
+	_show_doors(false)
 
 # ── 2 · Zoom Panic ─────────────────────────────────────────────────
 func _g_zoom() -> void:
@@ -889,6 +976,14 @@ func _nearest_one(label: String, total: float) -> void:
 	_hud("hud_question", [label, prompt, [], I18n.t("mh.nearest"), Color("F2B83C"), total, 0, Vector2i(0, 0)])
 	_say(I18n.t("mh.nearest.how"), Color("F2C66A"), I18n.t("mh.nearest.how_sub"))
 	_notify_all(String(L.q).substr(0, 90))
+	_est_lock.clear()
+	_est_typed = ""
+	_est_typer = null
+	for p in contestants:
+		if p.controller is Controllers.Keyboard and _est_typer == null:
+			_est_typer = p
+		if p.controller is Controllers.Phone:
+			_notify(p, {"t": "mode", "m": "num", "q": String(L.q), "unit": unit, "min": int(lo), "max": int(hi), "year": year})
 	_bot_plan.clear()
 	for p in contestants:
 		p.frozen_input = false
@@ -908,7 +1003,10 @@ func _nearest_one(label: String, total: float) -> void:
 	_hud("hud_timer", [0.0, total])
 	var guesses := {}
 	for p in contestants:
-		guesses[p] = _line.value_at(p.global_position.x)
+		guesses[p] = _est_value(p)
+		if p.controller is Controllers.Phone:
+			_notify(p, {"t": "mode", "m": ""})
+	_mh("est_readout", [[]])
 	Sfx.play("drumroll", -6.0)
 	_say(I18n.t("mh.and_answer"), Color("F2C66A"))
 	await _wait(1.1)
@@ -958,12 +1056,71 @@ func _nearest_one(label: String, total: float) -> void:
 	_hud("hud_question_hide")
 	_refresh_scores()
 
+## Oyuncunun tahmini: kilitlediyse o, değilse durduğu yer
+func _est_value(p: Plush) -> float:
+	if _est_lock.has(p):
+		return float(_est_lock[p])
+	return _line.value_at(p.global_position.x) if _line else 0.0
+
+func _set_est(p: Plush, v: float) -> void:
+	if _line == null:
+		return
+	v = clampf(v, _line.lo, _line.hi)
+	var first := not _est_lock.has(p)
+	_est_lock[p] = v
+	_line.set_marker(p.get_instance_id(), v, pcolor(p))
+	if first:
+		Sfx.play("stamp", -8.0, 1.4)
+
 func _tick_line() -> void:
 	if _line == null:
 		return
+	var rows := []
 	for p in contestants:
-		if is_instance_valid(p):
-			p.set_plate(p.player_name, NumberLine.fmt(_line.value_at(p.global_position.x), _line.year, I18n.lang), pcolor(p))
+		if not is_instance_valid(p):
+			continue
+		# telefonun sayı klavyesi
+		if p.controller is Controllers.Phone and phase == "question":
+			var e: Dictionary = p.controller.take_number()
+			if not e.is_empty():
+				_set_est(p, float(e.get("v", 0)))
+		var locked := _est_lock.has(p)
+		var txt := NumberLine.fmt(_est_value(p), _line.year, I18n.lang)
+		p.set_plate(p.player_name, ("✓ " if locked else "") + txt, pcolor(p))
+		if not _is_bot(p):
+			var typed := p == _est_typer and _est_typed != "" and not locked
+			rows.append({"name": p.player_name, "color": pcolor(p), "text": _est_typed if typed else txt, "locked": locked, "typing": typed})
+	_mh("est_readout", [rows])
+
+## Zıplayan insan oyuncu tahminini durduğu yerde kilitler (yeniden zıplarsa günceller)
+func _est_jump(p: Plush) -> void:
+	if _line and phase == "question" and not _is_bot(p) and (game_id == "nearest" or game_id == "final"):
+		_set_est(p, _line.value_at(p.global_position.x))
+
+## Klavyeden rakam yazmak: 1. klavye oyuncusu; Enter kilitler, Backspace siler
+func _unhandled_input(e: InputEvent) -> void:
+	if _line == null or phase != "question" or _est_typer == null:
+		return
+	if not (e is InputEventKey) or not e.pressed or e.echo:
+		return
+	var k := (e as InputEventKey).keycode
+	var digit := -1
+	if k >= KEY_0 and k <= KEY_9:
+		digit = k - KEY_0
+	elif k >= KEY_KP_0 and k <= KEY_KP_9:
+		digit = k - KEY_KP_0
+	if digit >= 0 and _est_typed.length() < 9:
+		_est_typed += str(digit)
+		_est_lock.erase(_est_typer)
+		Sfx.play("tick", -8.0, 1.3)
+	elif k == KEY_BACKSPACE and _est_typed != "":
+		_est_typed = _est_typed.substr(0, _est_typed.length() - 1)
+	elif (k == KEY_ENTER or k == KEY_KP_ENTER) and _est_typed != "":
+		_set_est(_est_typer, float(_est_typed))
+		_est_typed = ""
+	else:
+		return
+	get_viewport().set_input_as_handled()
 
 # ── 7 · Yağan Cevaplar ─────────────────────────────────────────────
 func _g_falling() -> void:
@@ -1108,7 +1265,7 @@ func _bot_fall(p: Plush, plan_d: Dictionary) -> void:
 	plan_d.next = float(plan_d.next) - get_physics_process_delta_time() * fast_forward
 	if plan_d.next > 0.0:
 		return
-	plan_d.next = rng.randf_range(0.5, 1.1)
+	plan_d.next = rng.randf_range(0.25, 0.55)
 	if _catch.get(p, {}).get("ok", false):
 		p.controller.go_to(Vector3(rng.randf_range(-4, 4), 0, rng.randf_range(-2, 2)))
 		return
@@ -1118,9 +1275,11 @@ func _bot_fall(p: Plush, plan_d: Dictionary) -> void:
 		if b.giant:
 			continue
 		var good := int(b.opt) == int(_cur_correct[0])
-		if good != bool(plan_d.smart) and rng.randf() < 0.8:
+		if good != bool(plan_d.smart) and rng.randf() < 0.85:
 			continue
 		var n: Node3D = b.node
+		if float(b.life) < 0.6 and n.position.y <= 0.46:
+			continue
 		var dd := Vector2(p.global_position.x - n.position.x, p.global_position.z - n.position.z).length()
 		if dd < bd:
 			bd = dd
@@ -1149,8 +1308,11 @@ func _g_final() -> void:
 				_answer_override = ""
 			"doors":
 				var q2 := _mc("d1")
-				var res2 := await _zone_question(label, q2.prompt, q2.options, [q2.correct], total, q2.cat, q2.col)
-				_score(res2, total, 1.0, true)
+				_show_doors(true)
+				var res2 := await _zone_question(label, q2.prompt, q2.options, [q2.correct], total + 1.5, q2.cat, q2.col)
+				_score(res2, total + 1.5, 1.0, true)
+				await _wait(1.6)
+				_show_doors(false)
 			"zoom":
 				var q3 := _icons_q()
 				var tg := rng.randi() % 4

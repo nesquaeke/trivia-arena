@@ -11,10 +11,11 @@ signal howto_requested(kind: String)
 signal quit_requested
 signal settings_requested
 signal online_requested
+signal daily_requested
 
 const COL_X := 88.0
 const COL_W := 600.0
-const MENU_ORDER := ["trivia", "conquest", "mayhem", "house", "online", "customize", "spectate", "howto", "settings", "quit"]
+const MENU_ORDER := ["trivia", "conquest", "mayhem", "daily", "house", "online", "customize", "spectate", "howto", "settings", "quit"]
 
 var game: Node
 var logo: MarqueeLogo
@@ -69,6 +70,7 @@ func setup(p_game: Node) -> void:
 	var gap := Control.new()
 	gap.custom_minimum_size.y = 10
 	menu_col.add_child(gap)
+	_add_btn("daily", "star", false, func(): daily_requested.emit())
 	_add_btn("house", "phone", false, func(): house_requested.emit())
 	_add_btn("online", "globe", false, func(): online_requested.emit())
 	_add_btn("customize", "hanger", false, func(): wardrobe_requested.emit())
@@ -204,10 +206,12 @@ func retext() -> void:
 	var map := {"trivia": ["menu.trivia", "menu.trivia.sub"], "conquest": ["menu.conquest", "menu.conquest.sub"], "mayhem": ["menu.mayhem", "menu.mayhem.sub"],
 		"house": ["menu.house", "menu.house.sub"], "online": ["menu.online", "menu.online.sub"], "customize": ["menu.customize", "menu.customize.sub"],
 		"spectate": ["menu.spectate", "menu.spectate.sub"], "howto": ["menu.howto", "menu.howto.sub"],
-		"settings": ["menu.settings", "menu.settings.sub"], "quit": ["menu.quit", "menu.quit.sub"]}
+		"settings": ["menu.settings", "menu.settings.sub"], "quit": ["menu.quit", "menu.quit.sub"],
+		"daily": ["menu.daily", "menu.daily.sub"]}
 	for id in map:
 		buttons[id].title = I18n.t(map[id][0])
 		buttons[id].caption = I18n.t(map[id][1])
+	refresh_daily()
 	footer.visible = bool(Profile.setting("hints", true))
 	# tek satır: kendi tuşlar + ikinci oyuncu/gamepad nasıl katılır
 	footer.items = ["WASD|" + I18n.t("hint.run"), I18n.t("key.space") + "|" + I18n.t("hint.jump"), "F|" + I18n.t("hint.shove"),
@@ -221,6 +225,14 @@ func retext() -> void:
 	_go.label = I18n.t("setup.go")
 	_back.label = I18n.t("common.back")
 	refresh_setup()
+
+## Günlük Kelime satırı: bugün çözüldüyse söyle
+func refresh_daily() -> void:
+	if not buttons.has("daily"):
+		return
+	var lang := "en" if I18n.lang == "en" else "tr"
+	var st := DailyWord.state(lang)
+	buttons["daily"].caption = I18n.t("menu.daily.done" if bool(st.done) else "menu.daily.sub")
 
 func refresh_setup() -> void:
 	var km := {"conquest": ["menu.conquest", "menu.conquest.sub", "setup.rules_c"], "mayhem": ["menu.mayhem", "menu.mayhem.sub", "setup.rules_m"]}

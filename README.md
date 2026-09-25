@@ -30,6 +30,10 @@ Fizik motoruyla çalışan, kaotik bir 3D parti bilgi yarışması. Kırmızı k
 | **On kültür kostümü** | **Altı kale üslubu, 3 kule = 3 can** |
 | ![Kostüm odası](docs/screenshots/wardrobe_cq.jpg) | ![Ev partisi](docs/screenshots/house.jpg) |
 | **Kostüm odası:** Trivia ve Fetih sekmeleri | **Ev partisi:** QR'ı okut, telefonun kumanda olsun |
+| ![Günlük Kelime](docs/screenshots/daily_done.jpg) | ![Mağaza](docs/screenshots/wardrobe_shop.jpg) |
+| **Günlük Kelime:** 6 denemede bul, jeton kazan | **Mağaza:** kilitli öğeyi dene, jetonla al |
+| ![Kıyafetler](docs/screenshots/outfits.jpg) | ![Mayhem: Dört Kapı](docs/screenshots/mh_doors.jpg) |
+| **Kıyafetler:** kazak, tulum, tütü, yelek, smokin, kapüşonlu… | **Mayhem · Dört Kapı:** gerçek kapılar |
 | ![Mayhem: Dört Kapı](docs/screenshots/mh_reveal.jpg) | ![Mayhem: Zoom Panik](docs/screenshots/mh_zoom.jpg) |
 | **Mayhem · Dört Kapı:** yanlış kapaktakiler havaya uçar | **Mayhem · Zoom Panik:** "BU NE?!" |
 | ![Mayhem: En Yakın](docs/screenshots/mh_nearest.jpg) | ![Mayhem: Yağan Cevaplar](docs/screenshots/mh_falling.jpg) |
@@ -101,6 +105,9 @@ Diğer kurallar:
 - **Mayhem Metre:** doğrular ve hızlı cevaplar doldurur. Dolunca bir sonraki tura bir kaos olayı gelir: buz pisti, dev kafalar, ters kumanda, minikler ya da kaçan cevaplar (şıklar sürenin yarısında yer değiştirir).
 - **Joker:** sonuncu, lidere 150+ puan uzaksa o tur ×2 puan alır.
 - **Sunucu:** her cevaptan önce "Ve doğru cevap…" diye bekletir, ardından kısa bir yorum yapar ("Zeynep farklı bir evrende yaşıyor.").
+- **Dört Kapı:** sahnenin arkasında dört büyük, ampullü tabelalı oyun şovu kapısı var. Doğru kapı açılır ve içinden altın ışık taşar; yanlış kapıların önündekiler fırlatılır.
+- **Tahmin girişi:** En Yakın Kazanır'da koşarak seçebilirsin. Ayrıca klavyeden rakam yazıp Enter'a basabilir ya da zıplayarak kilitleyebilirsin. Telefona sayı klavyesi gelir. Soru kartında büyük bir "Tahminin" göstergesi, sayı doğrusunda da her kilitli tahmin için oyuncu renginde bir bayrak görünür.
+- **Telefon:** kapak/kapı sorularında telefona şık düğmeleri gelir; basmak cevabı kilitler.
 - **Tepkiler:** telefonla oynayanın ekranında HAHA / OHA! / NOOO / EZ düğmeleri var. Basınca sahnede başının üstünde çıkar.
 - **Ödül töreni:** maç sonunda herkes bir ödül alır: Beyin, Panik Butonu, Tahmin Ustası, Tam Bir Bela, Son Saniye Kahramanı, Büyük Dönüş, Zıp Zıp, Sahnenin Işığı.
 - **Süre:** Hızlı (~10 dk, 3 oyun + final) ya da Tam tur (~20 dk, 6 oyun + final). Kurulum ekranından seçilir.
@@ -141,6 +148,16 @@ Oyun içinde **Esc** ya da gamepad **Start** perde arası menüsünü açar (dev
 
 `game/export_presets.cfg` Windows ve Linux dışa aktarma ayarlarını içerir (çıktı `build/`).
 
+### Günlük Kelime ve jeton
+
+Menüde **Günlük Kelime**: her gün herkese aynı 5 harfli kelime, 6 deneme (Wordle tarzı). Türkçe oynarken Türkçe kelime, İngilizcede İngilizce kelime gelir.
+
+- **Oynanış:** kutucuklar sırayla döner: yeşil yerinde, sarı kelimede var, gri yok. Yazmak için fiziksel ya da ekran klavyesi kullanılır; Enter gönderir, Backspace siler, Esc kapatır.
+- **Jeton:** çözene 150 (1. deneme) … 50 (6. deneme), üstüne seri bonusu (gün başına +10, en çok +50) ve 30 XP. Bilemeyen 15 jeton alır. Maçlar da jeton verir: katılım 15, ilk üç 40/25/10, her doğru 2.
+- **Paylaş:** sonucu renkli karelerle panoya kopyalar.
+- **Mağaza:** Karakterim'de kilitli bir öğeye gelince pelüş onu dener ve "SATIN AL · N JETON" düğmesi çıkar. Rütbe ya da başarım bekleyen her öğe jetonla da alınabilir. Bazı öğeler yalnız mağazada satılır.
+- **Kaynak dosyalar:** kelime listeleri `tools/words/*_answers.txt`. Geçerli tahmin sözlüğü wordfreq'ten üretilir: `python3 game/tools/words/build_words.py` → `data/words.json`.
+
 ### İlerleme: Sahne Rütbesi
 
 Her maç XP kazandırır (`scripts/core/progress.gd`). 30 seviye ve dokuz ünvan var: Figüran, Suflör, Gardıropçu … Tiyatro Sahibi.
@@ -178,7 +195,7 @@ Sol üstte kaçıncı turda olduğunu gösteren şerit (`scripts/ui/hud/round_tr
 ### Diğerleri
 
 - **Karakterim:** iki sekme.
-  - **Trivia:** 17 şapka, 10 bıyık, 10 boyun aksesuarı, 7 gözlük, 16 renk.
+  - **Trivia:** 25 şapka, 10 bıyık, 10 boyun aksesuarı, 12 gözlük, 8 kolye/takı, 9 kıyafet (kazak, tulum, tütü, pelerin, yelek, smokin, kapüşonlu, yağmurluk), 16 renk. Giysiler `scripts/actors/plush_extras.gd` içinde; gövdenin profilini izleyen kılıflardan yapılır.
   - **Fetih:** 13 kültür kostümü, 8 kale üslubu, 8 sancak deseni.
 - **İzleyici:** yan duvardaki locadan izle; sahneye gül, domates ya da şapka fırlat.
 - **Ev partisi:** evde tek ekran, diğer oyuncular telefonlarını kumanda olarak kullanır.
@@ -199,7 +216,8 @@ Godot'da `game/project.godot`'u aç. En sık dokunulacak yerler:
 | Metinler (TR/EN) | `scripts/core/i18n.gd` |
 | Sorular | `tools/questions/packs/*.txt` (satır başına bir soru) → `python3 game/tools/questions/build_pack.py` → `data/questions.json` |
 | Kostümler | `scripts/actors/plush_visual.gd` (`HATS`, `MUSTACHES`, `BOWTIES`, `GLASSES`, `COLORS`) |
-| Kilitler, XP | `scripts/core/progress.gd` |
+| Kilitler, XP, jeton fiyatları | `scripts/core/progress.gd` (`LEVEL_UNLOCKS`, `LEVEL_UNLOCKS_2`, `SHOP_ONLY`) |
+| Kategori adları | `tools/questions/build_pack.py` → `FUN_NAMES` ("Beynini Yak", "Ağzın Sulanacak"…) |
 | Mayhem: sıralama setleri, ses listesi | `tools/questions/mayhem_pack.py` → `data/mayhem.json`; sesler `tools/music/mayhem_sounds.py` |
 | Mayhem: mini oyunlar, puanlar, kaos olayları | `scripts/modes/mayhem_tour.gd` (başındaki sabitler) |
 | Bot zekâsı | `scripts/modes/classic_show.gd` (`BOT_ACC`, `BOT_READ`), `conquest_war.gd` (`BOT_ACC`, `BOT_SPREAD`) |
@@ -274,7 +292,8 @@ game/
   scenes/main.tscn        oyunun sahne ağacı (Stage, Props, Actors, Camera, UI)
   scenes/ui_gallery.tscn  arayüz parçaları vitrini
   data/rules.tres         bütün oyun sayıları
-  data/questions.json     ~2000 çift dilli soru, 15 kategori × kolay/orta/zor (+ 98 tahmin sorusu)
+  data/questions.json     2135 çift dilli soru, 18 kategori × kolay/orta/zor (+ 98 tahmin sorusu)
+  data/words.json         Günlük Kelime sözlükleri (TR/EN)
   ui/fonts/               yazı tipi ayarları (Big Shoulders, Fraunces)
   ui/theme/               Godot teması
   ui/shaders/             parıltı, ampul, halka sayaç, kadife perde, gren, spot

@@ -43,6 +43,8 @@ var _awards: Control
 var _award_rows: Array = []
 
 var _joker: Control
+var _est: Control
+var _est_rows: Array = []
 var _joker_name := ""
 var _joker_col := Color.WHITE
 
@@ -56,6 +58,7 @@ func _ready() -> void:
 	_chaos = _layer(Rect2(0, 0, 1920, 1080), _draw_chaos)
 	_awards = _layer(Rect2(0, 0, 1920, 1080), _draw_awards)
 	_joker = _layer(Rect2(1920 - 480, 890, 420, 60), _draw_joker)
+	_est = _layer(Rect2(360, 166, 1200, 130), _draw_est)
 
 func _layer(r: Rect2, fn: Callable) -> Control:
 	var c := Control.new()
@@ -80,14 +83,14 @@ func _process(delta: float) -> void:
 		var fov := _zoom_from * pow(_zoom_to / _zoom_from, _zoom_k)
 		_zoom_cam.fov = fov
 		_zoom_pivot.rotation.y += delta * 0.25
-	for c in [_sound, _chain, _chaos, _awards, _joker]:
+	for c in [_sound, _chain, _chaos, _awards, _joker, _est]:
 		if c.visible:
 			c.queue_redraw()
 
 func reset() -> void:
 	meter = 0.0
 	_meter_shown = 0.0
-	for c in [_sound, _chain, _chaos, _awards, _joker]:
+	for c in [_sound, _chain, _chaos, _awards, _joker, _est]:
 		c.visible = false
 	zoom_close()
 
@@ -343,6 +346,34 @@ func _draw_chaos(c: Control) -> void:
 	var fi := Pal.italic()
 	var dw := fi.get_string_size(_chaos_desc, HORIZONTAL_ALIGNMENT_LEFT, -1, 30).x
 	c.draw_string(fi, Vector2((s.x - dw) * 0.5, y0 + 236), _chaos_desc, HORIZONTAL_ALIGNMENT_LEFT, -1, 30, Pal.CREAM)
+
+# ── En Yakın: insan oyuncuların anlık tahmini ──────────────────────
+## rows: [{name, color, text, locked, typing}]
+func est_readout(rows: Array) -> void:
+	visible = true
+	_est_rows = rows
+	_est.visible = not rows.is_empty()
+
+func _draw_est(c: Control) -> void:
+	var n := _est_rows.size()
+	if n == 0:
+		return
+	var w := minf(360.0, (c.size.x - (n - 1) * 20.0) / n)
+	var x0 := (c.size.x - (n * w + (n - 1) * 20.0)) * 0.5
+	var f := Pal.display()
+	for i in n:
+		var r0: Dictionary = _est_rows[i]
+		var col: Color = r0.color
+		var r := Rect2(Vector2(x0 + i * (w + 20.0), 0), Vector2(w, 118))
+		var pts := Icons.notched(r, 12.0)
+		c.draw_colored_polygon(pts, Color(Pal.NIGHT, 0.92))
+		Icons.outline(c, pts, Color(col, 1.0 if r0.locked else 0.6), 3.0 if r0.locked else 1.5)
+		var head := Pal.upper(String(r0.name)) + "  ·  " + Pal.t("mh.est.locked" if r0.locked else ("mh.est.typing" if r0.typing else "mh.est.yours"))
+		c.draw_string(Pal.kicker(), r.position + Vector2(18, 30), head, HORIZONTAL_ALIGNMENT_LEFT, w - 36, 17, Color(col.lightened(0.3), 0.95))
+		var txt := String(r0.text) + ("▌" if r0.typing and fmod(_t, 0.8) < 0.4 else "")
+		c.draw_string(f, r.position + Vector2(18, 98), txt, HORIZONTAL_ALIGNMENT_LEFT, w - 60, 64, Pal.CHAMPAGNE)
+		if r0.locked:
+			Icons.draw(c, "check", r.position + Vector2(w - 34, 76), 30, Pal.GOOD)
 
 # ── Joker (geride kalana ×2) ───────────────────────────────────────
 func joker_show(p_name: String, col: Color) -> void:

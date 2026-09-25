@@ -78,6 +78,7 @@ func setup(p_game: Node) -> void:
 	menu.howto_requested.connect(func(k): open_howto(k))
 	menu.quit_requested.connect(_quit)
 	menu.settings_requested.connect(func(): open_settings())
+	menu.daily_requested.connect(_open_daily)
 	menu.online_requested.connect(func():
 		root.move_child(online, -1)
 		online.open())
@@ -94,7 +95,7 @@ func setup(p_game: Node) -> void:
 
 
 	wardrobe = WardrobePanel.new()
-	wardrobe.position = Vector2(1920 + 40, 110)
+	wardrobe.position = Vector2(1920 + 40, 96)
 	wardrobe.visible = false
 	root.add_child(wardrobe)
 	wardrobe.look_changed.connect(func(k, v):
@@ -104,6 +105,8 @@ func setup(p_game: Node) -> void:
 		wardrobe.refresh()
 		_refresh_card())
 	wardrobe.done.connect(_close_wardrobe)
+	wardrobe.preview.connect(func(k, v): game.preview_look(k, v))
+	wardrobe.bought.connect(func(): _refresh_card())
 	wardrobe.tab_changed.connect(func(c): game.wardrobe_conquest(c))
 
 	house = HouseCard.new()
@@ -271,6 +274,7 @@ func _open_wardrobe() -> void:
 	game.enter_wardrobe()
 
 func _close_wardrobe() -> void:
+	game.apply_look_to_player_one()   # denenen (satın alınmamış) öğeyi çıkar
 	menu.set_shown(true)
 	_card_to(true)
 	_slide(wardrobe, "position:x", 1920 + 40.0)
@@ -396,6 +400,24 @@ func set_paused(on: bool) -> void:
 	else:
 		pause.close()
 
+var word: WordPanel
+
+func _open_daily() -> void:
+	if word == null:
+		word = WordPanel.new()
+		root.add_child(word)
+		word.closed.connect(func():
+			for p in game.all_actors():
+				p.frozen_input = false
+			menu.refresh_daily()
+			_refresh_card()
+			menu.buttons["daily"].grab_focus())
+		word.rewarded.connect(func(): _refresh_card())
+	root.move_child(word, -1)
+	for p in game.all_actors():
+		p.frozen_input = true
+	word.open()
+
 func open_settings() -> void:
 	root.move_child(settings, -1)
 	settings.open()
@@ -417,7 +439,7 @@ func stage_curtain_then(cb: Callable) -> void:
 	cb.call()
 
 func _unhandled_input(e: InputEvent) -> void:
-	if settings.visible or online.visible:
+	if settings.visible or online.visible or (word != null and word.visible):
 		return
 	var back: bool = e.is_action_pressed("ui_cancel") or (e is InputEventJoypadButton and e.pressed and e.button_index == JOY_BUTTON_START)
 	if back:
@@ -443,6 +465,27 @@ func show_result(title: String, ranking: Array, rows: Array = []) -> void:
 # ── ekran görüntüsü aracı ──────────────────────────────────────────
 func prepare_shot(part: String) -> void:
 	match part:
+		"daily", "daily_done":
+			Profile.data.daily = {}
+			Profile.data.coins = 240
+			var ans := DailyWord.answer("tr")
+			for w in ["kitap", "deniz", "bulut"]:
+				if w != ans and DailyWord.state("tr").guesses.size() < 2:
+					DailyWord.submit("tr", w)
+			if part == "daily_done":
+				DailyWord.submit("tr", ans)
+			_open_daily()
+			if part == "daily":
+				word._cur = ans.substr(0, 2)
+			await get_tree().create_timer(2.2).timeout
+		"wardrobe_shop":
+			Profile.data.coins = 640
+			_open_wardrobe()
+			await get_tree().create_timer(1.6).timeout
+			wardrobe._rows["outfit"]._step(4)
+			await get_tree().create_timer(0.3).timeout
+			wardrobe._rows["necklace"]._step(4)
+			await get_tree().create_timer(1.6).timeout
 		"setup":
 			menu._open_setup("arena")
 			await get_tree().create_timer(1.8).timeout
