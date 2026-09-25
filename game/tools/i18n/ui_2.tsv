@@ -1,0 +1,230 @@
+look.tophat	Cylinder	Haut-de-forme	Chistera
+look.bowler	Melonik	Chapeau melon	Bombín
+look.fez	Fez	Fez	Fez
+look.boater	Kanotier	Canotier	Canotier
+look.crown	Korona	Couronne	Corona
+look.cone	Czapeczka imprezowa	Cône de fête	Cono de fiesta
+look.handlebar	Kierownica	Guidon	Manillar
+look.chevron	Szewron	Chevron	Chevron
+look.pencil	Wąsik jak ołówek	Fine moustache	Bigote fino
+look.walrus	Mors	Morse	Morsa
+look.classic	Klasyczna	Classique	Clásica
+look.dotted	W groszki	À pois	De lunares
+look.big	Olbrzymia	XXL	Gigante
+color.mustard	Musztarda	Moutarde	Mostaza
+color.butter	Masło	Beurre	Mantequilla
+color.tangerine	Mandarynka	Mandarine	Mandarina
+color.rose	Róża	Rose	Rosa
+color.mint	Mięta	Menthe	Menta
+color.sky	Niebo	Ciel	Cielo
+color.lilac	Liliowy	Lilas	Lila
+color.charcoal	Grafit	Anthracite	Carbón
+spectate.title	Loża	La Loge	El Palco
+spectate.hint	Rzuć coś na scenę:	Lance quelque chose sur scène :	Lanza algo al escenario:
+spectate.rose	Róża	Rose	Rosa
+spectate.tomato	Pomidor	Tomate	Tomate
+spectate.hat	Kapelusz	Chapeau	Sombrero
+spectate.leave	Opuść lożę	Quitter la loge	Salir del palco
+howto.head	DZIŚ WIECZOREM	CE SOIR	ESTA NOCHE
+howto.title	Jak grać	Comment jouer	Cómo jugar
+howto.t1	Pytanie spada na wielką tablicę.	La question tombe sur le tableau géant.	La pregunta cae en el tablero gigante.
+howto.t2	Podłoga dzieli się na cztery zapadnie: A · B · C · D.	Le sol se divise en quatre trappes : A · B · C · D.	El suelo se divide en cuatro trampillas: A · B · C · D.
+howto.t3	Biegnij do dobrej odpowiedzi, zanim skończy się czas.	Cours vers la bonne réponse avant la fin du temps.	Corre a la respuesta correcta antes de que se acabe el tiempo.
+howto.t4	Złe zapadnie się otwierają; kto na nich stoi, spada.	Les mauvaises trappes s'ouvrent ; qui est dessus tombe.	Las trampillas equivocadas se abren; quien esté encima cae.
+howto.t5	Pchaj, potrącaj, zrzucaj. Wygrywa ostatni na scenie.	Pousse, bouscule, fais-les tomber. Le dernier debout gagne.	Empuja, choca, tíralos. Gana el último en pie.
+howto.c1	Akt I · Założenie. Jedno pytanie szacunkowe: najbliższy typ stawia zamek jako pierwszy. Każdy zaczyna z 1000 punktami; zamek ma 3 wieże.	Acte I · Fondation. Une question d'estimation : l'estimation la plus proche place son château en premier. Tout le monde commence à 1000 points ; un château a 3 tours.	Acto I · Fundación. Una pregunta de estimación: la más cercana coloca su castillo primero. Todos empiezan con 1000 puntos; un castillo tiene 3 torres.
+howto.c2	Akt II · Podział ziemi. W pytaniach szacunkowych najbliższy typ bierze 2 regiony, drugi 1 (graniczące z twoimi). Region daje 200, region 2× daje 400.	Acte II · Partage des terres. Aux questions d'estimation, le plus proche prend 2 régions, le deuxième 1 (voisines des tiennes). Une région rapporte 200, une région 2× 400.	Acto II · Reparto de tierras. En las preguntas de estimación, el más cercano se lleva 2 regiones y el segundo 1 (limítrofes con las tuyas). Una región vale 200, una región 2× vale 400.
+howto.c3	Akt III · Czas wojny. Na zmianę atakujcie sąsiedni region wroga. Atakujący i obrońca odpowiadają na to samo pytanie; jeśli rację ma tylko atakujący, ziemia i jej punkty zmieniają właściciela.	Acte III · L'ère de la guerre. À tour de rôle, attaquez une région ennemie voisine. Attaquant et défenseur répondent à la même question ; si seul l'attaquant a raison, la terre et ses points changent de mains.	Acto III · La era de la guerra. Por turnos, atacad una región enemiga vecina. Atacante y defensor responden la misma pregunta; si solo acierta el atacante, la tierra y sus puntos cambian de manos.
+howto.c4	Obaj mają rację? Decyduje pytanie szacunkowe. Trafienie w zamek burzy wieżę; strać ostatnią, a odpadasz, a twoja ziemia i punkty przechodzą na zdobywcę.	Les deux ont raison ? Une question d'estimation tranche. Toucher un château abat une tour ; perds la dernière et tu es éliminé, tes terres et tes points vont au conquérant.	¿Aciertan los dos? Decide una pregunta de estimación. Golpear un castillo derriba una torre; si pierdes la última quedas fuera y tus tierras y puntos pasan al conquistador.
+howto.c5	Gdy kończą się rundy wojny, wygrywa gracz na placu boju z największą liczbą punktów.	À la fin des manches de guerre, le joueur encore debout avec le plus de points gagne.	Al terminar las rondas de guerra, gana el jugador en pie con más puntos.
+conquest.run	Bądź pierwszy na dobrym podium!	Sois le premier sur le bon podium !	¡Llega el primero al podio correcto!
+conquest.big	Jackpot: blok 2×2!	Jackpot : un bloc 2×2 !	¡Premio gordo: un bloque de 2×2!
+conquest.phone	Pytanie {n}: biegnij na dobre podium!	Question {n} : cours vers le bon podium !	Pregunta {n}: ¡corre al podio correcto!
+conquest.claim	{name} pomalował {n} pól!	{name} a peint {n} case(s) !	¡{name} pintó {n} casilla(s)!
+conquest.nobody	Nikt nie dotarł na dobre podium.	Personne n'a atteint le bon podium.	Nadie llegó al podio correcto.
+conquest.winner	{name} rządzi sceną: {n} pól!	{name} règne sur la scène : {n} cases !	¡{name} domina el escenario: {n} casillas!
+howto.keys	WASD bieg · Spacja skok · F pchnięcie	WASD courir · Espace sauter · F pousser	WASD correr · Espacio saltar · F empujar
+howto.close	Podnieś afisz	Relever l'affiche	Subir el cartel
+arena.round	Pytanie {n}	Question {n}	Pregunta {n}
+arena.alive	Na scenie zostało: {n}	{n} encore sur scène	Quedan {n} en el escenario
+arena.run	Biegnij do właściwej zapadni!	Cours vers la bonne trappe !	¡Corre a la trampilla correcta!
+arena.open	Zapadnie się otwierają!	Les trappes s'ouvrent !	¡Se abren las trampillas!
+arena.correct	Prawidłowa odpowiedź: {x}	Bonne réponse : {x}	Respuesta correcta: {x}
+arena.nobody	Nikt nie zgadł. Zapadnie zostają zamknięte. Jeszcze raz!	Personne n'a trouvé. Les trappes restent fermées. On recommence !	Nadie acertó. Las trampillas siguen cerradas. ¡Otra vez!
+arena.fell	{names} spada!	{names} tombe !	¡{names} cae!
+arena.winner	{name} zostaje ostatni na scenie!	{name} est le dernier debout !	¡{name} es el último en pie!
+arena.draw	Scena jest pusta. Brak zwycięzcy!	La scène est vide. Pas de gagnant !	El escenario está vacío. ¡No hay ganador!
+arena.back	Wróć do lobby	Retour au hall	Volver al vestíbulo
+arena.again	Bis!	Rappel !	¡Otra!
+arena.pit	Kanał orkiestry	La fosse	El foso
+arena.lobby_board	DZIŚ · TRIVIA ARENA · WYGRYWA OSTATNI NA SCENIE	CE SOIR · TRIVIA ARENA · LE DERNIER DEBOUT GAGNE	ESTA NOCHE · TRIVIA ARENA · GANA EL ÚLTIMO EN PIE
+round.1	Polowanie na kategorie	Chasse aux catégories	Caza de categorías
+round.2	Runda mocy	Manche de pouvoir	Ronda de poder
+round.3	Ostatni na scenie	Le dernier debout	El último en pie
+round.1d	4 pytania. 250 za dobrą odpowiedź; serie dają 500, potem 750.	4 questions. 250 par bonne réponse ; les séries rapportent 500, puis 750.	4 preguntas. 250 por acierto; las rachas dan 500 y luego 750.
+round.2d	W każdym pytaniu najszybsza dobra odpowiedź wybiera: kradzież punktów albo sabotaż.	À chaque question, la bonne réponse la plus rapide choisit : voler des points ou saboter.	En cada pregunta, el acierto más rápido elige: robar puntos o sabotear.
+round.3d	Punkty stają się zdrowiem. Tylko najszybsza dobra odpowiedź unika kary.	Les points deviennent des vies. Seule la bonne réponse la plus rapide échappe au prix.	Los puntos se convierten en vida. Solo el acierto más rápido se libra del precio.
+round.1.chip1	250 · 250 · 500 · 750	250 · 250 · 500 · 750	250 · 250 · 500 · 750
+round.1.chip2	Pomyłka zeruje serię	Une erreur remet la série à zéro	Un fallo reinicia la racha
+round.1.chip3	Łatwe → Trudne	Facile → Difficile	Fácil → Difícil
+round.2.chip1	Kradzież 400	Vol de 400	Robo de 400
+round.2.chip2	Ołów · Odwrócenie · Lód · Wielka głowa	Plomb · Inversion · Glace · Grosse tête	Plomo · Inversión · Hielo · Cabezón
+round.2.chip3	Wybiera najszybsza dobra odpowiedź	La réponse juste la plus rapide choisit	Elige el acierto más rápido
+round.3.chip1	Punkty = zdrowie	Points = vies	Puntos = vida
+round.3.chip2	Kara rośnie z każdym pytaniem	Le prix augmente à chaque question	El precio sube en cada pregunta
+round.3.chip3	Zero i zapadnia się otwiera	À zéro, la trappe s'ouvre	A cero, se abre la trampilla
+tug.title	Przeciąganie liny kategorii	Tir à la corde des catégories	Tira y afloja de categorías
+tug.sub	Wejdź do koła swojej kategorii i skacz! Każdy skok to pociągnięcie.	Entre dans le cercle de ta catégorie et saute ! Chaque saut est une traction.	¡Métete en el círculo de tu categoría y salta! Cada salto es un tirón.
+tug.phone	Wbiegnij do koła swojej kategorii, wciskaj SKOK!	Cours dans le cercle de ta catégorie, martèle SAUTER !	¡Corre al círculo de tu categoría y machaca SALTAR!
+tug.won	Temat tej rundy: {cat}	Thème de cette manche : {cat}	Tema de esta ronda: {cat}
+hud.hp	{n} HP	{n} PV	{n} PV
+hud.pts	{n} pkt	{n} pts	{n} pts
+hud.q_of	Pytanie {n}/{m}	Question {n}/{m}	Pregunta {n}/{m}
+hud.q_final	Pytanie o życie {n}	Question de vie {n}	Pregunta de vida {n}
+hud.stake	Kara: {n} HP	Prix : {n} PV	Precio: {n} PV
+hud.safe	BEZPIECZNY	SAUF	A SALVO
+hud.fastest	Najszybsza dobra odpowiedź: {name}	Bonne réponse la plus rapide : {name}	Acierto más rápido: {name}
+hud.nobody	Nikt nie zgadł	Personne n'a trouvé	Nadie acertó
+hud.died	{names} spada pod scenę!	{names} passe à travers la scène !	¡{names} cae por el escenario!
+hud.round	RUNDA {n}	MANCHE {n}	RONDA {n}
+hud.standings	Klasyfikacja	Classement	Clasificación
+hud.after	Po rundzie {n}	Après la manche {n}	Tras la ronda {n}
+hud.best_combo	najlepsza seria ×{n}	meilleure série ×{n}	mejor racha ×{n}
+reward.none	Nikt nie odpowiedział dobrze	Personne n'a bien répondu	Nadie acertó
+reward.none_sub	Tym razem bez nagrody.	Pas de récompense cette fois.	Esta vez no hay premio.
+reward.title	{name} wybiera nagrodę	{name} choisit une récompense	{name} elige un premio
+reward.pick_target	Kogo?	Qui ?	¿A quién?
+reward.pick_action	Co wybierasz?	Qu'est-ce que ce sera ?	¿Qué va a ser?
+reward.bot_thinking	Knuje…	Complote…	Tramando…
+reward.timeout	Czas minął, nagroda przepadła!	Temps écoulé, la récompense est perdue !	¡Se acabó el tiempo, el premio se ha perdido!
+reward.stole	{a} ukradł {n} punktów graczowi {b}!	{a} a volé {n} points à {b} !	¡{a} le robó {n} puntos a {b}!
+reward.sabotaged	{a} sabotuje gracza {b}: {x}!	{a} a saboté {b} : {x} !	¡{a} sabotea a {b}: {x}!
+reward.siphon	Ukradnij {n}	Voler {n}	Robar {n}
+reward.siphon_d	Prosto z ich wyniku do twojego.	Directement de son score au tien.	Directo de su marcador al tuyo.
+reward.phone	Nagroda twoja! Przesuń: wybór · SKOK: potwierdź · PCHNIJ: wstecz	La récompense est à toi ! Glisse : choisir · SAUTER : valider · POUSSER : retour	¡El premio es tuyo! Desliza: elegir · SALTAR: confirmar · EMPUJAR: atrás
+reward.how	Ruch: wybór · Skok: potwierdź · Pchnięcie: wstecz · lub kliknij	Bouger : choisir · Sauter : valider · Pousser : retour · ou clique	Mover: elegir · Saltar: confirmar · Empujar: atrás · o haz clic
+debuff.lead	Ołowiane buty	Bottes de plomb	Botas de plomo
+debuff.invert	Odwrócone sterowanie	Commandes inversées	Controles invertidos
+debuff.ice	Lodowisko	Patinoire	Pista de hielo
+debuff.bighead	Wielka głowa	Grosse tête	Cabezón
+debuff.siphon	Napad	Braquage	Atraco
+debuff.lead.d	Chodzi o połowę wolniej przez jedno pytanie.	Marche deux fois moins vite pendant une question.	Camina a mitad de velocidad durante una pregunta.
+debuff.invert.d	Sterowanie odwraca się na jedno pytanie.	Les commandes s'inversent pendant une question.	Los controles se invierten durante una pregunta.
+debuff.ice.d	Brak przyczepności przez jedno pytanie.	Aucune adhérence pendant une question.	Sin agarre durante una pregunta.
+debuff.bighead.d	Głowa puchnie; najlżejsze pchnięcie go przewraca.	La tête enfle ; la moindre poussée le renverse.	La cabeza se hincha; el menor empujón lo derriba.
+result.points	Punkty	Points	Puntos
+result.hp	Zdrowie	Vies	Vida
+result.correct	Dobre	Justes	Aciertos
+result.combo	Seria	Série	Racha
+result.stolen	Skradzione	Volés	Robados
+result.out	Odpadł	Éliminé	Fuera
+hud.stake_s	Kara	Prix	Precio
+round.kicker	Akt	Acte	Acto
+result.correct_n	{n}/{m} dobrze	{n}/{m} justes	{n}/{m} aciertos
+result.stolen_n	ukradł {n}	a volé {n}	robó {n}
+wardrobe.kicker	Za kulisami	Coulisses	Entre bastidores
+house.kicker	Dołącz telefonem	Rejoindre par téléphone	Únete con el móvil
+house.code	Kod pokoju	Code de la salle	Código de sala
+spectate.kicker	Loża na balkonie	Loge du balcon	Palco del balcón
+howto.r_tug	Każdy akt zaczyna się przeciąganiem liny: stań w kole swojej kategorii i skacz. Najmocniej pociągnięta kategoria wyznacza akt.	Chaque acte commence par un tir à la corde : place-toi dans le cercle de ta catégorie et saute. La catégorie la plus tirée définit l'acte.	Cada acto empieza con un tira y afloja: ponte en el círculo de tu categoría y salta. La categoría con más tirones marca el acto.
+howto.r_1	Akt I · Polowanie na kategorie. Gdy czas minie, zapadnia, na której stoisz, to twoja odpowiedź. Dobre odpowiedzi rosną 250 · 250 · 500 · 750.	Acte I · Chasse aux catégories. À la fin du temps, la trappe sur laquelle tu te tiens est ta réponse. Les bonnes réponses montent 250 · 250 · 500 · 750.	Acto I · Caza de categorías. Cuando se acaba el tiempo, la trampilla en la que estás es tu respuesta. Los aciertos suben 250 · 250 · 500 · 750.
+howto.r_2	Akt II · Runda mocy. Najszybsza dobra odpowiedź wybiera: ukraść 400 rywalowi albo go sabotować (ołowiane buty, odwrócone sterowanie, lód, wielka głowa).	Acte II · Manche de pouvoir. La bonne réponse la plus rapide choisit : voler 400 à un rival ou le saboter (bottes de plomb, commandes inversées, glace, grosse tête).	Acto II · Ronda de poder. El acierto más rápido elige: robar 400 a un rival o sabotearlo (botas de plomo, controles invertidos, hielo, cabezón).
+howto.r_3	Akt III · Ostatni na scenie. Punkty stają się zdrowiem. W każdym pytaniu bezpieczna jest tylko najszybsza dobra odpowiedź; reszta płaci. Spadnij do zera, a otworzy się twoja zapadnia.	Acte III · Le dernier debout. Les points deviennent des vies. À chaque question, seule la bonne réponse la plus rapide est à l'abri ; les autres paient. À zéro, ta trappe s'ouvre.	Acto III · El último en pie. Los puntos se convierten en vida. En cada pregunta solo el acierto más rápido está a salvo; los demás pagan. Llega a cero y se abre tu trampilla.
+howto.r_4	Pchanie jest dozwolone: zrzuć rywali z dobrej zapadni!	Pousser est permis : éjecte tes rivaux de la bonne trappe !	Empujar vale: ¡echa a tus rivales de la trampilla correcta!
+cq.act1	Założenie	Fondation	Fundación
+cq.act2	Podział ziemi	Partage des terres	Reparto de tierras
+cq.act3	Czas wojny	L'ère de la guerre	La era de la guerra
+cq.act1d	Jedno pytanie szacunkowe ustala kolejność. Najbliższy typ zakłada zamek jako pierwszy.	Une question d'estimation fixe l'ordre. L'estimation la plus proche fonde son château en premier.	Una pregunta de estimación fija el orden. La más cercana funda su castillo primero.
+cq.act2d	Pytania szacunkowe: najbliższy typ bierze dwa regiony, drugi jeden. Każdy region jest wart 200.	Questions d'estimation : le plus proche prend deux régions, le deuxième une. Chaque région vaut 200.	Preguntas de estimación: el más cercano se lleva dos regiones y el segundo una. Cada región vale 200.
+cq.act3d	Na zmianę atakujcie sąsiedni region wroga. Atakujący i obrońca odpowiadają na to samo pytanie.	À tour de rôle, attaquez une région ennemie voisine. Attaquant et défenseur répondent à la même question.	Por turnos, atacad una región enemiga vecina. Atacante y defensor responden la misma pregunta.
+cq.1.chip1	Start z 1000	Départ à 1000	Empiezas con 1000
+cq.1.chip2	Zamki nie mogą się stykać	Les châteaux ne se touchent pas	Los castillos no pueden tocarse
+cq.1.chip3	3 wieże = 3 życia	3 tours = 3 vies	3 torres = 3 vidas
+cq.2.chip1	1.: 2 regiony	1er : 2 régions	1.º: 2 regiones
+cq.2.chip2	2.: 1 region	2e : 1 région	2.º: 1 región
+cq.2.chip3	Region 2×: 400	Région 2× : 400	Región 2×: 400
+cq.3.chip1	Wygraj sam, zabierz ziemię	Gagne seul, prends la terre	Gana solo y quédate la tierra
+cq.3.chip2	Obaj dobrze? Decyduje szacunek	Les deux justes ? Une estimation tranche	¿Aciertan ambos? Decide una estimación
+cq.3.chip3	Pada ostatnia wieża, pada zamek	Dernière tour tombée, château tombé	Cae la última torre, cae el castillo
+cq.estimate	Pytanie szacunkowe	Question d'estimation	Pregunta de estimación
+cq.estimate_n	Runda szacunkowa {n}	Manche d'estimation {n}	Ronda de estimación {n}
+cq.ruler_how	Lewo/prawo: przesuń flagę (przytrzymaj, by przyspieszyć) · góra/dół: dokładnie · skok: wbij · albo wpisz / przeciągnij	Gauche/droite : déplace ton drapeau (maintiens pour accélérer) · haut/bas : ajuster · sauter : planter · ou tape / fais glisser	Izquierda/derecha: mueve tu bandera (mantén para acelerar) · arriba/abajo: ajuste fino · saltar: clavarla · o escribe / arrastra
+cq.unit	Jednostka: {u}	Unité : {u}	Unidad: {u}
+cq.locked	Zatwierdzone	Validé	Fijado
+cq.worth	{p} pkt	{p} pts	{p} pts
+cq.castleOf	Zamek gracza {name} ({n} wież)	Château de {name} ({n} tours)	Castillo de {name} ({n} torres)
+cq.landOf	Ziemia gracza {name}	Terres de {name}	Tierras de {name}
+cq.attacker	Atakujący	Attaquant	Atacante
+cq.defender	Obrońca	Défenseur	Defensor
+cq.yourTurn	Twój ruch	À toi de jouer	Tu turno
+cq.fallen	Zamek upadł	Château tombé	Castillo caído
+cq.attackCall	{a} → {t}! Zadąć w rogi	{a} → {t} ! Sonnez les cors	¡{a} → {t}! Que suenen los cuernos
+cq.answer	Prawidłowa odpowiedź	Bonne réponse	Respuesta correcta
+cq.off	różnica {n}	écart de {n}	a {n} de distancia
+cq.exact	w dziesiątkę	dans le mille	clavado
+cq.castleOrder	Kolejność zakładania zaczyna {name}	L'ordre de fondation commence par {name}	El orden de fundación empieza por {name}
+cq.castleTitle	{name}, załóż swój zamek	{name}, fonde ton château	{name}, funda tu castillo
+cq.castleSub	Wybierz jeden ze świecących regionów. Zamki nie mogą stać obok siebie.	Choisis une des régions lumineuses. Les châteaux ne peuvent pas être côte à côte.	Elige una de las regiones iluminadas. Los castillos no pueden estar juntos.
+cq.castleBuilt	{a} założył zamek w: {t}	{a} a fondé un château à {t}	{a} fundó un castillo en {t}
+cq.castlesDone	Wszystkie zamki stoją. Teraz pusta ziemia.	Tous les châteaux sont debout. Place aux terres vides.	Todos los castillos están en pie. Ahora, la tierra vacía.
+cq.claimTitle	{name}, zajmij ziemię ({n})	{name}, revendique tes terres ({n})	{name}, reclama tus tierras ({n})
+cq.claimSub	Wybierz świecący region na swojej granicy.	Choisis une région lumineuse à ta frontière.	Elige una región iluminada en tu frontera.
+cq.picked	{a} zajął {t} (+{p})	{a} a pris {t} (+{p})	{a} reclamó {t} (+{p})
+cq.expandDone	Nie ma już pustej ziemi. Zaczyna się wojna!	Plus de terres vides. La guerre commence !	No queda tierra vacía. ¡Empieza la guerra!
+cq.turnOf	{name} atakuje	{name} attaque	{name} ataca
+cq.pickTarget	Zaatakuj region wroga na swojej granicy. Trafienie w zamek burzy wieżę.	Attaque une région ennemie à ta frontière. Toucher un château abat une tour.	Ataca una región enemiga en tu frontera. Golpear un castillo derriba una torre.
+cq.noTargets	Brak celów dla {name}, tura pominięta	Aucune cible pour {name}, tour passé	No hay objetivos para {name}, turno saltado
+cq.duel	Pojedynek · {a} × {d}	Duel · {a} × {d}	Duelo · {a} × {d}
+cq.duel_s	Pojedynek	Duel	Duelo
+cq.duelSub	{a} atakuje, {d} broni. Ziemia zmienia właściciela, tylko jeśli rację ma sam atakujący.	{a} attaque, {d} défend. La terre change de mains seulement si l'attaquant seul a raison.	{a} ataca, {d} defiende. La tierra cambia de manos solo si acierta únicamente el atacante.
+cq.duel_how	Lewo/prawo: wybór · skok: zatwierdź · lub kliknij	Gauche/droite : choisir · sauter : valider · ou clique	Izquierda/derecha: elegir · saltar: fijar · o haz clic
+cq.tieBreak	Remis! Decyduje pytanie szacunkowe.	Égalité ! Une question d'estimation tranche.	¡Empate! Decide una pregunta de estimación.
+cq.captured	{a} zdobył {t} i ukradł {p} punktów	{a} a pris {t} et volé {p} points	{a} tomó {t} y robó {p} puntos
+cq.repelled	{d} odparł atak	{d} a repoussé l'attaque	{d} rechazó el ataque
+cq.towerFell	{a} zburzył wieżę! {d}: zostało {n}	{a} a abattu une tour ! {d} : il en reste {n}	¡{a} derribó una torre! {d}: quedan {n}
+cq.castleFell	{a} zniszczył zamek gracza {d}! Wszystkie regiony i {p} punktów zmieniły właściciela	{a} a détruit le château de {d} ! Toutes les régions et {p} points ont changé de mains	¡{a} destruyó el castillo de {d}! Todas las regiones y {p} puntos cambiaron de manos
+cq.bannerFall	Zamek upada!	Le château tombe !	¡Cae el castillo!
+cq.round	Runda wojny {n}/{m}	Manche de guerre {n}/{m}	Ronda de guerra {n}/{m}
+cq.winner	{name} rządzi mapą!	{name} règne sur la carte !	¡{name} domina el mapa!
+cq.tiles	{n} regionów	{n} régions	{n} regiones
+cq.towers	{n} wież	{n} tours	{n} torres
+cq.pick_how	Ruch: wybierz region · skok: potwierdź · lub kliknij	Bouger : choisir une région · sauter : valider · ou clique	Mover: elegir región · saltar: confirmar · o haz clic
+cq.autopick	Czas minął, region wybrano automatycznie	Temps écoulé, une région a été choisie	Se acabó el tiempo, se eligió una región
+cq.phone_est	Podaj swój typ! Przesuń flagę joystickiem, SKOK, by ją wbić.	Fais ton estimation ! Déplace ton drapeau au joystick, SAUTER pour le planter.	¡Haz tu estimación! Mueve tu bandera con el joystick y pulsa SALTAR para clavarla.
+cq.phone_pick	Twoja kolej: wybierz region joystickiem, SKOK, by potwierdzić.	À toi : choisis une région au joystick, SAUTER pour valider.	Tu turno: elige una región con el joystick y pulsa SALTAR para confirmar.
+cq.phone_duel	Pojedynek! Wybierz joystickiem, SKOK, by zatwierdzić.	Duel ! Choisis au joystick, SAUTER pour valider.	¡Duelo! Elige con el joystick y pulsa SALTAR para fijar.
+ward.tab_trivia	Postać Trivia	Personnage Trivia	Personaje de Trivia
+ward.tab_conquest	Pionek Conquest	Pion Conquest	Ficha de Conquest
+ward.culture	Kultura	Culture	Cultura
+ward.castle	Zamek	Château	Castillo
+culture.knight	Rycerz	Chevalier	Caballero
+culture.pirate	Pirat	Pirate	Pirata
+culture.explorer	Odkrywca	Explorateur	Explorador
+castle.onion	Pałac z kopułami	Palais à bulbes	Palacio de cúpulas
+castle.lighthouse	Fort z latarnią	Fort-phare	Fuerte faro
+banner.plain	Gładki	Uni	Liso
+banner.stripes	Pasy	Rayures	Rayas
+banner.chevron	Szewron	Chevron	Chevron
+banner.star	Gwiazda	Étoile	Estrella
+banner.cross	Krzyż	Croix	Cruz
+banner.checker	Szachownica	Damier	Ajedrezado
+banner.sun	Słońce	Soleil	Sol
+look.beret	Beret	Béret	Boina
+look.party	Czapeczka imprezowa	Chapeau de fête	Gorro de fiesta
+look.tricorn	Trójgraniasty	Tricorne	Tricornio
+look.wizard	Czarodziej	Magicien	Mago
+look.chef	Kucharz	Toque de chef	Gorro de chef
+look.jester	Błazen	Bouffon	Bufón
+look.cowboy	Kowboj	Cow-boy	Vaquero
+look.propeller	Śmigiełko	Hélice	Hélice
+look.flowers	Wianek	Couronne de fleurs	Corona de flores
+look.laurel	Laur	Laurier	Laurel
+look.imperial	Cesarskie	Impériale	Imperial
+look.goatee	Kozia bródka	Bouc	Perilla
+look.horseshoe	Podkowa	Fer à cheval	Herradura
+look.curly	Kręcone	Bouclée	Rizado
+look.beard	Pełna broda	Barbe fournie	Barba completa
+look.scarf	Szal	Écharpe	Bufanda
+look.medal	Medal	Médaille	Medalla
+look.pearls	Perły	Perles	Perlas
+look.ascot	Fular	Ascot	Fular

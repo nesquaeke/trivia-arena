@@ -50,11 +50,13 @@ static func round3(v: float) -> float:
 	var mag := pow(10.0, floor(log(abs(v)) / log(10.0)) - 2.0)
 	return round(v / mag) * mag
 
+const THOUSANDS := {"tr": ".", "en": ",", "pl": " ", "fr": " ", "es": "."}
+
 static func fmt(v: float, is_year: bool, lang := "tr") -> String:
 	if is_year:
 		return str(int(v))
 	if abs(v) < 10.0 and v != floor(v):
-		return ("%.1f" % v).replace(".", "," if lang == "tr" else ".")
+		return ("%.1f" % v).replace(".", "." if lang == "en" else ",")
 	var s := str(int(round(v)))
 	var out := ""
 	var n := 0
@@ -62,7 +64,7 @@ static func fmt(v: float, is_year: bool, lang := "tr") -> String:
 		out = s[i] + out
 		n += 1
 		if n % 3 == 0 and i > 0 and s[i - 1] != "-":
-			out = ("." if lang == "tr" else ",") + out
+			out = String(THOUSANDS.get(lang, ",")) + out
 	return out
 
 func _build() -> void:

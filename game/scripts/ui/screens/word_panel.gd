@@ -1,6 +1,6 @@
 class_name WordPanel
 extends Control
-## Günlük Kelime ekranı: 6×5 kutu, ekran klavyesi (TR/EN), kutular sırayla döner.
+## Günlük Kelime ekranı: 6×5 kutu, ekran klavyesi (dile göre: TR, EN, PL, FR AZERTY, ES), kutular sırayla döner.
 ## Fiziksel klavyeden yazılır (Enter gönderir, Backspace siler, Esc kapatır) ya da tıklanır.
 ## Bitince sonuç kartı: kazanılan jeton, seri, paylaşım (panoya renkli kareler), yeni kelimeye kalan süre.
 
@@ -9,8 +9,13 @@ signal rewarded
 
 const TILE := 76.0
 const GAP := 10.0
-const ROWS_TR := ["ertyuıopğü", "asdfghjklşi", "zcvbnmöç"]
-const ROWS_EN := ["qwertyuiop", "asdfghjkl", "zxcvbnm"]
+const ROWS := {
+	"tr": ["ertyuıopğü", "asdfghjklşi", "zcvbnmöç"],
+	"en": ["qwertyuiop", "asdfghjkl", "zxcvbnm"],
+	"pl": ["ąćęłńóśźż", "wertyuiop", "asdfghjkl", "zcbnm"],
+	"fr": ["azertyuiop", "qsdfghjklm", "wxcvbn"],
+	"es": ["qwertyuiop", "asdfghjklñ", "zxcvbnm"],
+}
 const COL := [Color("3A3036"), Color("C9A22E"), Color("3E9A55")]   # yok / var / yerinde
 
 var lang := "tr"
@@ -49,7 +54,7 @@ func _ready() -> void:
 	add_child(_close_btn)
 
 func open() -> void:
-	lang = "en" if I18n.lang == "en" else "tr"
+	lang = I18n.lang if ROWS.has(I18n.lang) else "en"
 	_cur = ""
 	_flip.clear()
 	_msg = ""
@@ -119,7 +124,7 @@ func _type(ch: String) -> void:
 	if bool(DailyWord.state(lang).done):
 		return
 	ch = DailyWord.lower(ch, lang)
-	var alpha := ("".join(ROWS_TR) if lang == "tr" else "".join(ROWS_EN))
+	var alpha := "".join(ROWS[lang])
 	if not alpha.contains(ch) or _cur.length() >= DailyWord.LEN:
 		return
 	_cur += ch
@@ -258,9 +263,9 @@ func _draw() -> void:
 		draw_string(Pal.italic(), Vector2(cx - mw * 0.5, 735), _msg, HORIZONTAL_ALIGNMENT_LEFT, -1, 28, Color(Pal.CHAMPAGNE, minf(1.0, _msg_t * 3.0)))
 	# klavye
 	_keys.clear()
-	var rows: Array = ROWS_TR if lang == "tr" else ROWS_EN
+	var rows: Array = ROWS[lang]
 	var kwid := 70.0
-	var kh := 68.0
+	var kh := 68.0 if rows.size() <= 3 else 54.0
 	var ky := 770.0
 	for ri in rows.size():
 		var row: String = rows[ri]

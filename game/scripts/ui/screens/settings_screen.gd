@@ -131,7 +131,7 @@ func _build_video() -> void:
 	_seg("video", "grain", ["set.on", "set.off"], 300)
 
 func _build_game() -> void:
-	_seg("game", "lang", ["Türkçe", "English"], 360)
+	_seg("game", "lang", ["Türkçe", "English", "Polski", "Français", "Español"], 700)
 	_seg("game", "hints", ["set.on", "set.off"], 300)
 	var reset := CtaButton.new()
 	reset.style = "velvet"
@@ -222,7 +222,7 @@ func _apply_seg(key: String, i: int) -> void:
 			Profile.set_setting("grain", i == 0)
 			GameSettings.apply_grain(get_tree())
 		"lang":
-			I18n.set_lang(["tr", "en"][i])
+			I18n.set_lang(I18n.LANGS[i])
 			Profile.data.lang = I18n.lang
 			Profile.save()
 			retext()
@@ -253,7 +253,7 @@ func _sel_of(key: String) -> int:
 		"fps": return maxi(0, [30, 60, 120, 0].find(int(Profile.setting("fps", 0))))
 		"shake": return 0 if bool(Profile.setting("shake", true)) else 1
 		"grain": return 0 if bool(Profile.setting("grain", true)) else 1
-		"lang": return 1 if I18n.lang == "en" else 0
+		"lang": return maxi(0, I18n.LANGS.find(I18n.lang))
 		"hints": return 0 if bool(Profile.setting("hints", true)) else 1
 	return 0
 

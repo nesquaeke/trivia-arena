@@ -4,7 +4,7 @@ extends Node
 
 var tiers := {}          # "d1" -> Array[Dictionary]
 var estimate := []
-var categories := {}     # "geo" -> [tr, en, renk]
+var categories := {}     # "geo" -> [tr, en, renk, pl, fr, es]
 var _used := {}          # soru metni -> true (bu oturumda soruldu)
 
 func _ready() -> void:
@@ -62,14 +62,14 @@ func draw(index: int, rng: RandomNumberGenerator = null) -> Dictionary:
 ## Soruyu aktif dilde metne çevirir (dil değişirse aynı soru yeniden okunur).
 func face(item: Dictionary, lang: String) -> Dictionary:
 	var q: Dictionary = item.src
-	var L: Dictionary = q.get(lang, q.tr)
+	var L: Dictionary = q.get(lang, q.get("en", q.tr))
 	var opts := []
 	for i in item.order:
 		opts.append(L.o[i])
 	var cat_row: Array = categories.get(item.cat, [item.cat, item.cat, "#B8893B"])
 	return {
 		"prompt": L.q, "options": opts, "correct": item.correct,
-		"cat_name": cat_row[1 if lang == "en" else 0], "cat_color": Color(cat_row[2]),
+		"cat_name": category_name(item.cat, lang), "cat_color": Color(cat_row[2]),
 	}
 
 ## Belirli bir zorluk ve (varsa) kategoriden soru çek. Kategoride uygun soru
@@ -112,9 +112,13 @@ func pick_categories(n: int, rng: RandomNumberGenerator, exclude: Array = [], de
 		ok[j] = tmp
 	return ok.slice(0, n)
 
+## Kategori satırı: [tr, en, renk, pl, fr, es]
+const CAT_IDX := {"tr": 0, "en": 1, "pl": 3, "fr": 4, "es": 5}
+
 func category_name(c: String, lang: String) -> String:
 	var row: Array = categories.get(c, [c, c, "#B8893B"])
-	return String(row[1 if lang == "en" else 0])
+	var i: int = CAT_IDX.get(lang, 1)
+	return String(row[i] if i < row.size() else row[1])
 
 func category_color(c: String) -> Color:
 	var row: Array = categories.get(c, [c, c, "#B8893B"])

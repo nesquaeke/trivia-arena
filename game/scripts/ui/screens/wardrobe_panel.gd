@@ -205,8 +205,7 @@ func _locked_hint(cat: String, item: String) -> void:
 	elif req.has("level"):
 		_hint = Pal.t("rank.locked_level", {"n": req.level}) + " · " + Pal.t("shop.or_buy", {"n": req.get("price", 0)})
 	else:
-		var row: Array = SteamService.ACHIEVEMENTS.get(String(req.get("ach", "")), ["?", "?"])
-		_hint = Pal.t("rank.locked_ach", {"a": row[0] if Pal.tr_lang() else row[1]})
+		_hint = Pal.t("rank.locked_ach", {"a": SteamService.ach_name(String(req.get("ach", "")))})
 	_hint_t = 2.5
 	Pal.sfx("buzz", -12.0, 1.4)
 	_rank.queue_redraw()

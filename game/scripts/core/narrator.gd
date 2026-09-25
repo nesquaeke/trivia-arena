@@ -36,9 +36,11 @@ func enabled() -> bool:
 func _stream(key: String) -> AudioStream:
 	var lang := "tr"
 	var i18n := get_node_or_null("/root/I18n")
-	if i18n and String(i18n.lang) == "en":
-		lang = "en"
+	if i18n:
+		lang = String(i18n.lang)
 	var path := DIR + lang + "/" + key + ".ogg"
+	if not ResourceLoader.exists(path):
+		path = DIR + "en/" + key + ".ogg"
 	if _cache.has(path):
 		return _cache[path]
 	var s: AudioStream = load(path) if ResourceLoader.exists(path) else null

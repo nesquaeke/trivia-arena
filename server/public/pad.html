@@ -134,11 +134,24 @@ const T = {
   en:{tag:'— The Grand Stage · Controller —',code:'Stage code',name:'Your stage name',go:'Step on stage',stick:'Drag here<br>to run',
       jump:'JUMP',shove:'SHOVE',out:'You are out!',outSub:'Watch from the pit. You are back next match.',
       noStage:'No stage with that code. Check the code on screen.',full:'The stage is full (8 players).',conn:'Connecting…',
-      lost:'Connection lost, retrying…',hostLeft:'The stage closed.',ready:'You are on stage!',short:'The code has 4 letters.',lock:'LOCK IN',locked:'LOCKED IN ✓',range:'between {a} and {b}'}
+      lost:'Connection lost, retrying…',hostLeft:'The stage closed.',ready:'You are on stage!',short:'The code has 4 letters.',lock:'LOCK IN',locked:'LOCKED IN ✓',range:'between {a} and {b}'},
+  pl:{tag:'— Wielka Scena · Kontroler —',code:'Kod sceny',name:'Twoje imię sceniczne',go:'Wejdź na scenę',stick:'Przeciągnij tutaj,<br>aby biegać',
+      jump:'SKOK',shove:'PCHNIJ',out:'Odpadasz!',outSub:'Oglądaj z kanału. W następnym meczu wracasz na scenę.',
+      noStage:'Nie ma sceny z tym kodem. Sprawdź kod na ekranie.',full:'Scena jest pełna (8 graczy).',conn:'Łączenie…',
+      lost:'Utracono połączenie, ponawiam…',hostLeft:'Scena została zamknięta.',ready:'Jesteś na scenie!',short:'Kod ma 4 litery.',lock:'ZATWIERDŹ',locked:'ZATWIERDZONO ✓',range:'od {a} do {b}'},
+  fr:{tag:'— La Grande Scène · Manette —',code:'Code de la scène',name:'Ton nom de scène',go:'Monter sur scène',stick:'Glisse ici<br>pour courir',
+      jump:'SAUTER',shove:'POUSSER',out:'Éliminé !',outSub:'Regarde depuis la fosse. Tu reviens au prochain match.',
+      noStage:'Aucune scène avec ce code. Vérifie le code à l’écran.',full:'La scène est pleine (8 joueurs).',conn:'Connexion…',
+      lost:'Connexion perdue, nouvelle tentative…',hostLeft:'La scène est fermée.',ready:'Tu es sur scène !',short:'Le code fait 4 lettres.',lock:'VALIDER',locked:'VALIDÉ ✓',range:'entre {a} et {b}'},
+  es:{tag:'— El Gran Escenario · Mando —',code:'Código del escenario',name:'Tu nombre artístico',go:'Subir al escenario',stick:'Arrastra aquí<br>para correr',
+      jump:'SALTAR',shove:'EMPUJAR',out:'¡Eliminado!',outSub:'Mira desde el foso. Vuelves en la próxima partida.',
+      noStage:'No hay ningún escenario con ese código. Revisa el código en pantalla.',full:'El escenario está lleno (8 jugadores).',conn:'Conectando…',
+      lost:'Conexión perdida, reintentando…',hostLeft:'El escenario se ha cerrado.',ready:'¡Estás en el escenario!',short:'El código tiene 4 letras.',lock:'FIJAR',locked:'FIJADO ✓',range:'entre {a} y {b}'}
 };
-let LANG = (navigator.language||'tr').toLowerCase().startsWith('tr') ? 'tr' : 'en';
-const t = (k) => T[LANG][k] || k;
-function applyLang(l){ if (l) LANG = l === 'en' ? 'en' : 'tr'; document.documentElement.lang = LANG; document.querySelectorAll('[data-t]').forEach(el => el.innerHTML = t(el.dataset.t)); }
+const pickLang = (l) => { l = String(l||'').toLowerCase().slice(0,2); return T[l] ? l : 'en'; };
+let LANG = pickLang(navigator.language||'tr');
+const t = (k) => T[LANG][k] || T.en[k] || k;
+function applyLang(l){ if (l) LANG = pickLang(l); document.documentElement.lang = LANG; document.querySelectorAll('[data-t]').forEach(el => el.innerHTML = t(el.dataset.t)); }
 applyLang();
 const $ = (id) => document.getElementById(id);
 const store = { get:(k,d)=>{try{return localStorage.getItem(k)??d}catch(e){return d}}, set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}} };

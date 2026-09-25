@@ -1,7 +1,8 @@
 class_name DailyWord
 extends RefCounted
 ## Günlük Kelime (Wordle tarzı): her gün herkes için aynı 5 harfli kelime, 6 hak.
-## Türkçe ve İngilizce ayrı listeler (data/words.json, tools/words/build_words.py).
+## Her dilin ayrı listesi (tr, en, pl, fr, es: data/words.json, tools/words/build_words.py).
+## FR ve ES'de aksanlar yok sayılır (é = e; ñ ayrı harf), PL ve TR kendi harflerini korur.
 ## Çözene jeton: 1. denemede 150 … 6. denemede 50, seri bonusu (gün başına +10, en çok +50).
 ## Durum Profile.data.daily içinde: {"tr": {date, guesses, done, won, reward}, "streak", "last_win"}
 
@@ -10,6 +11,9 @@ const TRIES := 6
 const EPOCH := "2026-01-01"
 const REWARD := [150, 120, 100, 80, 60, 50]
 const LOSE_REWARD := 15
+const LANGS := ["tr", "en", "pl", "fr", "es"]
+const FALLBACK := {"tr": "kalem", "en": "apple", "pl": "kwiat", "fr": "arbre", "es": "playa"}
+const TITLE := {"tr": "Günlük Kelime", "en": "Daily Word", "pl": "Słowo Dnia", "fr": "Mot du Jour", "es": "Palabra del Día"}
 
 static var _data := {}
 static var _valid := {}
@@ -25,7 +29,7 @@ static func _load() -> void:
 	if typeof(d) != TYPE_DICTIONARY:
 		return
 	_data = d
-	for lang in ["tr", "en"]:
+	for lang in LANGS:
 		var s := {}
 		for w in d.get(lang, {}).get("valid", []):
 			s[String(w)] = true
@@ -46,18 +50,27 @@ static func answer(lang: String, date := "") -> String:
 	_load()
 	var arr: Array = _data.get(lang, {}).get("answers", [])
 	if arr.is_empty():
-		return "kalem" if lang == "tr" else "apple"
+		return String(FALLBACK.get(lang, "apple"))
 	return String(arr[posmod(day_index(date), arr.size())])
 
 static func is_valid(word: String, lang: String) -> bool:
 	_load()
 	return _valid.get(lang, {}).has(word) or word == answer(lang)
 
-## Türkçe küçük harf (I → ı, İ → i)
+## Küçük harf ve dil kuralı: Türkçede I → ı, İ → i; FR/ES aksanları atılır (ñ kalır)
+const STRIP := {"à": "a", "â": "a", "ä": "a", "á": "a", "ç": "c", "é": "e", "è": "e", "ê": "e", "ë": "e",
+	"î": "i", "ï": "i", "í": "i", "ô": "o", "ö": "o", "ó": "o", "ù": "u", "û": "u", "ü": "u", "ú": "u", "ÿ": "y"}
+
 static func lower(s: String, lang: String) -> String:
 	if lang == "tr":
 		s = s.replace("I", "ı").replace("İ", "i")
-	return s.to_lower()
+	s = s.to_lower()
+	if lang == "fr" or lang == "es":
+		for k in STRIP:
+			s = s.replace(k, STRIP[k])
+		if lang == "fr":
+			s = s.replace("œ", "oe").replace("æ", "ae")
+	return s
 
 static func upper(s: String, lang: String) -> String:
 	if lang == "tr":
@@ -164,7 +177,7 @@ static func share_text(lang: String) -> String:
 		for m in evaluate(String(g), ans):
 			row += ["⬛", "🟨", "🟩"][int(m)]
 		lines.append(row)
-	var head := "Trivia Arena · %s #%d  %s/6" % ["Günlük Kelime" if lang == "tr" else "Daily Word", day_index() + 1, str(s.guesses.size()) if s.won else "X"]
+	var head := "Trivia Arena · %s #%d  %s/6" % [String(TITLE.get(lang, "Daily Word")), day_index() + 1, str(s.guesses.size()) if s.won else "X"]
 	return head + "\n" + "\n".join(lines)
 
 ## Yeni kelimeye kalan süre (sn)

@@ -92,6 +92,8 @@ func _ready() -> void:
 			debug_round = int(a.substr(8))
 		elif a.begins_with("--ff="):
 			debug_ff = float(a.substr(5))
+		elif a.begins_with("--lang="):
+			I18n.set_lang(a.substr(7))
 	if _shot_mode != "":
 		Profile.save_enabled = false
 		if _shot_mode.contains("result_rank"):

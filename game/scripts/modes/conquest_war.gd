@@ -360,7 +360,7 @@ func _pick_estimate() -> Dictionary:
 	return q
 
 func _est_text(q: Dictionary) -> Dictionary:
-	var L: Dictionary = q.get(I18n.lang, q.tr)
+	var L: Dictionary = q.get(I18n.lang, q.get("en", q.tr))
 	return {"q": String(L.q), "unit": String(L.get("unit", ""))}
 
 ## Katılanlardan tahmin toplar. Dönüş: [{p, guess, diff, at}] farka (sonra hıza) göre sıralı

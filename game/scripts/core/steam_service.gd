@@ -104,9 +104,25 @@ func unlock(id: String) -> void:
 	if _s:
 		_s.call("setAchievement", id)
 		_s.call("storeStats")
-	var lang := String(get_node("/root/I18n").lang) if has_node("/root/I18n") else "tr"
-	var row: Array = ACHIEVEMENTS[id]
-	achievement_unlocked.emit(id, row[1] if lang == "en" else row[0])
+	achievement_unlocked.emit(id, ach_name(id))
+
+## Başarım adı/açıklaması etkin dilde (PL/FR/ES: data/i18n/<dil>.json "ach.<ID>.name|desc")
+func ach_name(id: String) -> String:
+	return _ach_text(id, 0)
+
+func ach_desc(id: String) -> String:
+	return _ach_text(id, 2)
+
+func _ach_text(id: String, base: int) -> String:
+	var row: Array = ACHIEVEMENTS.get(id, ["?", "?", "", ""])
+	var i18n := get_node_or_null("/root/I18n")
+	var lang := String(i18n.lang) if i18n else "tr"
+	if lang == "tr":
+		return String(row[base])
+	if lang == "en" or i18n == null:
+		return String(row[base + 1])
+	var key := "ach.%s.%s" % [id, "name" if base == 0 else "desc"]
+	return String(i18n.extra.get(lang, {}).get(key, row[base + 1]))
 
 func unlocked_count() -> int:
 	var n := 0

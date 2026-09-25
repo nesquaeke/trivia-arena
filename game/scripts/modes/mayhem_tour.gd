@@ -170,7 +170,7 @@ func _notify(p: Plush, msg: Dictionary) -> void:
 		game.notify_player(p, msg)
 
 func _L() -> String:
-	return "en" if I18n.lang == "en" else "tr"
+	return I18n.lang
 
 func _refresh_scores(deltas := {}) -> void:
 	var rows := []
@@ -714,9 +714,9 @@ func _sound_q() -> Dictionary:
 		return {"id": s.id, "prompt": I18n.t("mh.sound.composer"), "options": shuffled, "correct": order.find(0)}
 	var others := sounds.filter(func(o): return String(o.kind) == kind and o.id != s.id)
 	others.shuffle()
-	var opts2 := [String(s[L])]
+	var opts2 := [String(s.get(L, s.en))]
 	for i in 3:
-		opts2.append(String(others[i][L]))
+		opts2.append(String(others[i].get(L, others[i].en)))
 	var order2 := [0, 1, 2, 3]
 	order2.shuffle()
 	var sh2 := []
@@ -799,7 +799,7 @@ func _g_order() -> void:
 		while picked.has(o) and sets.size() > 2:
 			o = sets[rng.randi() % sets.size()]
 		picked.append(o)
-		var L: Dictionary = o.get(_L(), o.tr)
+		var L: Dictionary = o.get(_L(), o.get("en", o.tr))
 		var items: Array = L.items
 		var labels: Array = L.labels
 		var slot := [0, 1, 2, 3]       # slot[k] = k. sıradaki öğenin kapağı
@@ -960,7 +960,7 @@ func _g_nearest() -> void:
 func _nearest_one(label: String, total: float) -> void:
 	var pool: Array = Questions.estimate
 	var q: Dictionary = pool[rng.randi() % pool.size()]
-	var L: Dictionary = q.get(_L(), q.tr)
+	var L: Dictionary = q.get(_L(), q.get("en", q.tr))
 	var a := float(q.a)
 	var lo := float(q.min)
 	var hi := float(q.max)

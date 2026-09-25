@@ -667,18 +667,51 @@ const S := {
 
 }
 
+const LANGS := ["tr", "en", "pl", "fr", "es"]
+const LANG_NAMES := {"tr": "Türkçe", "en": "English", "pl": "Polski", "fr": "Français", "es": "Español"}
+## TR ve EN yukarıdaki S sözlüğünde; diğer diller res://data/i18n/<dil>.json (anahtar → metin).
+## Bir çeviri eksikse İngilizcesi gösterilir.
+var extra := {}
+
 func _ready() -> void:
 	lang = "tr"
+	for l in ["pl", "fr", "es"]:
+		var path := "res://data/i18n/%s.json" % l
+		if FileAccess.file_exists(path):
+			var d = JSON.parse_string(FileAccess.get_file_as_string(path))
+			if typeof(d) == TYPE_DICTIONARY:
+				extra[l] = d
 
 func t(key: String, args: Dictionary = {}) -> String:
 	var row: Array = S.get(key, [])
-	var out: String = key if row.is_empty() else String(row[1 if lang == "en" else 0])
+	var out: String
+	if row.is_empty():
+		out = String(extra.get(lang, {}).get(key, key))
+	elif lang == "tr":
+		out = String(row[0])
+	elif lang == "en":
+		out = String(row[1])
+	else:
+		out = String(extra.get(lang, {}).get(key, row[1]))
 	for k in args:
 		out = out.replace("{" + String(k) + "}", str(args[k]))
 	return out
 
+## Dil sırasına göre bir satırdan seç: [tr, en, pl, fr, es] (eksikse İngilizce)
+func pick(row: Array) -> String:
+	var i := LANGS.find(lang)
+	if i >= 0 and i < row.size() and String(row[i]) != "":
+		return String(row[i])
+	return String(row[1] if row.size() > 1 else row[0])
+
+## Sözlük biçimli çok dilli veri: {"tr": .., "en": .., "pl": ..}
+func pick_dict(d: Dictionary, fallback := "en"):
+	if d.has(lang):
+		return d[lang]
+	return d.get(fallback, d.get("tr"))
+
 func set_lang(l: String) -> void:
-	if l != "tr" and l != "en":
+	if not LANGS.has(l):
 		return
 	if l == lang:
 		return
@@ -686,13 +719,43 @@ func set_lang(l: String) -> void:
 	changed.emit(lang)
 
 func toggle() -> void:
-	set_lang("en" if lang == "tr" else "tr")
+	set_lang(LANGS[(LANGS.find(lang) + 1) % LANGS.size()])
 
-## Test: her anahtarın iki dili de dolu mu?
+## Sayı biçimi: binlik ayırıcı ve ondalık işareti dile göre
+func thousands_sep() -> String:
+	match lang:
+		"en": return ","
+		"pl", "fr": return " "
+	return "."
+
+func decimal_sep() -> String:
+	return "." if lang == "en" else ","
+
+func fmt_int(n: int) -> String:
+	var s := str(absi(n))
+	var out := ""
+	var c := 0
+	for i in range(s.length() - 1, -1, -1):
+		out = s[i] + out
+		c += 1
+		if c % 3 == 0 and i > 0:
+			out = thousands_sep() + out
+	return ("-" if n < 0 else "") + out
+
+## Test: her anahtarın bütün dilleri dolu mu?
 func missing_keys() -> Array:
 	var bad := []
 	for k in S:
 		var row: Array = S[k]
 		if row.size() != 2 or String(row[0]).is_empty() or String(row[1]).is_empty():
+			bad.append(k)
+	return bad
+
+## Test: ek dillerde eksik ya da fazla anahtar
+func missing_extra(l: String) -> Array:
+	var d: Dictionary = extra.get(l, {})
+	var bad := []
+	for k in S:
+		if String(d.get(k, "")).is_empty():
 			bad.append(k)
 	return bad

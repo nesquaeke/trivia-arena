@@ -6,6 +6,7 @@ extends Control
 ## tıklayınca kapanır. İsme tıklamak adı değiştirir.
 
 signal lang_toggled
+signal lang_selected(lang: String)
 signal rename_requested
 
 var player_name := "OYUNCU"
@@ -51,13 +52,13 @@ func _ready() -> void:
 		add_child(n)
 		_nums[k[0]] = n
 	_lang = Segmented.new()
-	_lang.options = ["TR", "EN"]
-	_lang.font_size = 18
-	_lang.custom_minimum_size = Vector2(100, 34)
-	_lang.size = Vector2(100, 34)
-	_lang.position = Vector2(W - STUB - 100 - 16, 16)
+	_lang.options = ["TR", "EN", "PL", "FR", "ES"]
+	_lang.font_size = 15
+	_lang.custom_minimum_size = Vector2(210, 34)
+	_lang.size = Vector2(210, 34)
+	_lang.position = Vector2(W - STUB - 210 - 16, 16)
 	_lang.focus_mode = Control.FOCUS_NONE
-	_lang.changed.connect(func(_i): lang_toggled.emit())
+	_lang.changed.connect(func(i): lang_selected.emit(I18n.LANGS[i]))
 	add_child(_lang)
 	_apply_k()
 	mouse_entered.connect(func(): _hover = true)
@@ -75,7 +76,7 @@ func refresh(p_name: String, p_stats: Dictionary, look: Dictionary, lang: String
 		portrait.hop()
 	for k in _nums:
 		_nums[k].value = int(stats.get(k, 0))
-	_lang.selected = 1 if lang == "en" else 0
+	_lang.selected = maxi(0, I18n.LANGS.find(lang))
 	queue_redraw()
 
 func toggle(open := not expanded) -> void:

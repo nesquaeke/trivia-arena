@@ -132,15 +132,13 @@ func _draw_panel() -> void:
 	var title := Pal.upper(Pal.t("ach.title")) + "  %d / %d" % [SteamService.unlocked_count(), SteamService.ACHIEVEMENTS.size()]
 	_panel.draw_string(Pal.display_bold(), Vector2(ax, 170 + off), title, HORIZONTAL_ALIGNMENT_LEFT, -1, 28, Color(Pal.CHAMPAGNE, k))
 	var i := 0
-	var en := not Pal.tr_lang()
 	for id in SteamService.ACHIEVEMENTS:
-		var row: Array = SteamService.ACHIEVEMENTS[id]
 		var got := SteamService.is_unlocked(id)
 		var cx := ax + (i % 2) * 300.0
 		var cy := 210.0 + (i / 2) * 82.0 + off
 		var col := Pal.GOLD if got else Color(Pal.MUTED, 0.5)
 		_panel.draw_circle(Vector2(cx + 22, cy + 24), 20, Color(col, k))
 		Icons.draw(_panel, "crown" if got else "cross", Vector2(cx + 22, cy + 25), 22 if got else 14, Color(Pal.VELVET if got else Pal.INK, k))
-		_panel.draw_string(Pal.display_bold(), Vector2(cx + 52, cy + 22), Pal.upper(String(row[1] if en else row[0])), HORIZONTAL_ALIGNMENT_LEFT, 240, 20, Color(Pal.CHAMPAGNE if got else Pal.CREAM, (1.0 if got else 0.6) * k))
-		_panel.draw_string(Pal.italic(), Vector2(cx + 52, cy + 44), String(row[3] if en else row[2]), HORIZONTAL_ALIGNMENT_LEFT, 240, 15, Color(Pal.CREAM, 0.6 * k))
+		_panel.draw_string(Pal.display_bold(), Vector2(cx + 52, cy + 22), Pal.upper(SteamService.ach_name(id)), HORIZONTAL_ALIGNMENT_LEFT, 240, 20, Color(Pal.CHAMPAGNE if got else Pal.CREAM, (1.0 if got else 0.6) * k))
+		_panel.draw_string(Pal.italic(), Vector2(cx + 52, cy + 44), SteamService.ach_desc(id), HORIZONTAL_ALIGNMENT_LEFT, 240, 15, Color(Pal.CREAM, 0.6 * k))
 		i += 1

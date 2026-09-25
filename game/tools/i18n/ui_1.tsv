@@ -1,0 +1,230 @@
+title.top	TRIVIA	TRIVIA	TRIVIA
+title.bottom	ARENA	ARENA	ARENA
+title.tagline	Wielka Scena	La Grande Scène	El Gran Escenario
+common.back	Wstecz	Retour	Atrás
+common.done	Gotowe	Terminé	Listo
+common.start	Kurtyna w górę!	Lever de rideau !	¡Arriba el telón!
+common.soon	WKRÓTCE	BIENTÔT	PRÓXIMAMENTE
+menu.trivia	Trivia Arena	Trivia Arena	Trivia Arena
+menu.trivia.sub	Trzy akty: polowanie na kategorie, runda mocy, ostatni na scenie.	Trois actes : chasse aux catégories, manche de pouvoir, dernier debout.	Tres actos: caza de categorías, ronda de poder, el último en pie.
+menu.settings	Ustawienia	Paramètres	Ajustes
+menu.settings.sub	Dźwięk, obraz, jakość	Son, affichage, qualité	Sonido, pantalla, calidad
+menu.quit	Wyjdź	Quitter	Salir
+menu.quit.sub	Zasuń kurtynę	Baisser le rideau	Bajar el telón
+setup.length	Długość meczu	Durée du match	Duración de la partida
+setup.len.short	Krótki	Court	Corta
+setup.len.normal	Normalny	Normal	Normal
+setup.len.long	Długi	Long	Larga
+set.tab.sound	Dźwięk	Son	Sonido
+set.tab.video	Obraz	Affichage	Pantalla
+set.tab.game	Rozgrywka	Jeu	Juego
+set.tab.controls	Sterowanie	Commandes	Controles
+set.tab.about	O grze	À propos	Acerca de
+set.tab.sound.d	Muzyka, efekty i głos prowadzącego mają osobne poziomy głośności.	Musique, effets et voix du présentateur ont chacun leur volume.	La música, los efectos y la voz del presentador tienen su propio volumen.
+set.tab.video.d	Tryb ekranu, jakość i liczba klatek. Niska jakość jest dla starszych komputerów.	Mode d'écran, qualité et fréquence d'images. La qualité basse est pour les anciens ordinateurs.	Modo de pantalla, calidad y fotogramas. La calidad baja es para ordenadores antiguos.
+set.tab.game.d	Język, podpowiedzi i zapisane statystyki.	Langue, astuces et statistiques enregistrées.	Idioma, pistas y estadísticas guardadas.
+set.tab.controls.d	Wszystkie sterowania działają jednocześnie: klawiatura, pad, telefon.	Toutes les commandes marchent en même temps : clavier, manette, téléphone.	Todos los controles funcionan a la vez: teclado, mando, móvil.
+set.tab.about.d	Wersja i twórcy.	Version et crédits.	Versión y créditos.
+set.master_vol	Główna	Général	General
+set.master_vol.d	Ogólna głośność wszystkiego.	Volume global de tout.	Volumen general de todo.
+set.music_vol	Muzyka	Musique	Música
+set.music_vol.d	Orkiestra: walc w lobby, marsz wojenny, napięcie.	L'orchestre : valse du hall, marche de guerre, suspense.	La orquesta: vals del vestíbulo, marcha de guerra, tensión.
+set.sfx_vol	Efekty	Effets	Efectos
+set.sfx_vol.d	Skoki, bębny, walące się zamki, reakcje publiczności.	Sauts, tambours, châteaux qui s'écroulent, réactions du public.	Saltos, tambores, castillos que se derrumban, reacciones del público.
+set.voice_vol	Głos prowadzącego	Voix du présentateur	Voz del presentador
+set.voice_vol.d	Zapowiedzi prowadzącego. Po zmianie usłyszysz próbkę.	Les annonces du présentateur. Tu entendras un extrait en le modifiant.	Los anuncios del presentador. Oirás una muestra al cambiarlo.
+set.narrator	Prowadzący	Présentateur	Presentador
+set.narrator.d	Włącza lub wyłącza zapowiedzi prowadzącego.	Active ou désactive les annonces du présentateur.	Activa o desactiva los anuncios del presentador.
+set.window	Ekran	Écran	Pantalla
+set.window.d	Pełny ekran bez ramki najlepiej znosi Alt+Tab.	Le plein écran sans bordure est le plus fluide pour l'Alt+Tab.	La pantalla completa sin bordes es la más fluida con Alt+Tab.
+set.quality	Jakość	Qualité	Calidad
+set.quality.d	Niska: bez dodatków mgły i cieni, rozdzielczość 75%. Wysoka: wszystko włączone.	Basse : brouillard et ombres réduits, résolution 75 %. Haute : tout activé.	Baja: sin extras de niebla y sombras, resolución al 75 %. Alta: todo activado.
+set.vsync	V-Sync	V-Sync	V-Sync
+set.vsync.d	Zapobiega rozrywaniu obrazu. Gdy wyłączone, działa limit klatek.	Empêche le déchirement de l'image. Désactivé, la limite d'images s'applique.	Evita el desgarro de imagen. Si está desactivado, se aplica el límite de fotogramas.
+set.fps	Limit klatek	Limite d'images	Límite de FPS
+set.fps.d	Na laptopach zalecane 60 dla baterii i ciszy wentylatora.	60 est conseillé sur portable pour la batterie et le bruit du ventilateur.	En portátiles se recomienda 60 por la batería y el ruido del ventilador.
+set.shake	Wstrząsy ekranu	Tremblement de l'écran	Vibración de pantalla
+set.shake.d	Kamera trzęsie się, gdy padają wieże i walą się zamki.	La caméra tremble quand les tours tombent et que les châteaux s'effondrent.	La cámara tiembla cuando caen torres y se derrumban castillos.
+set.grain	Ziarno filmowe	Grain de pellicule	Grano de película
+set.grain.d	Faktura starego kina. Wyłącz dla czystszego obrazu.	Texture de vieux cinéma. Désactive-le pour une image plus nette.	Textura de cine antiguo. Desactívalo para una imagen más limpia.
+set.lang	Język	Langue	Idioma
+set.lang.d	Pytania, interfejs i prowadzący mówią w tym języku.	Les questions, l'interface et le présentateur suivent cette langue.	Las preguntas, la interfaz y el presentador usan este idioma.
+set.hints	Podpowiedzi klawiszy	Aide des touches	Ayuda de teclas
+set.hints.d	Pokazuje pasek klawiszy na dole lobby.	Affiche la barre des touches en bas du hall.	Muestra la barra de teclas en la parte inferior del vestíbulo.
+set.reset	Statystyki	Statistiques	Estadísticas
+set.reset.d	Czyści wygrane, serie i rekordy. Kostiumy i ustawienia zostają.	Efface victoires, séries et records. Costumes et réglages restent.	Borra victorias, rachas y récords. Los disfraces y ajustes se mantienen.
+set.reset.btn	Resetuj	Réinitialiser	Reiniciar
+set.reset.sure	Na pewno? Naciśnij ponownie	Sûr ? Appuie encore	¿Seguro? Pulsa otra vez
+set.reset.done	Wyczyszczono	Effacé	Borrado
+set.on	Wł.	Activé	Sí
+set.off	Wył.	Désactivé	No
+set.windowed	Okno	Fenêtre	Ventana
+set.borderless	Bez ramki	Sans bordure	Sin bordes
+set.full	Pełny ekran	Plein écran	Pantalla completa
+set.q.low	Niska	Basse	Baja
+set.q.medium	Średnia	Moyenne	Media
+set.q.high	Wysoka	Haute	Alta
+set.unlimited	Bez limitu	Illimité	Sin límite
+set.nav	Q/E lub LB/RB: zakładki · Esc/B: wstecz	Q/E ou LB/RB : onglets · Échap/B : retour	Q/E o LB/RB: pestañas · Esc/B: atrás
+set.ctl.kb1	Gracz 1 · klawiatura	Joueur 1 · clavier	Jugador 1 · teclado
+set.ctl.kb2	Gracz 2 · klawiatura	Joueur 2 · clavier	Jugador 2 · teclado
+set.ctl.pad	Pad (naciśnij A, aby dołączyć)	Manette (appuie sur A pour rejoindre)	Mando (pulsa A para unirte)
+set.ctl.phone	Telefon (impreza domowa)	Téléphone (soirée à la maison)	Móvil (fiesta en casa)
+set.ctl.type	wpisz typ	tape une estimation	escribe una estimación
+set.ctl.pause	pauza	pause	pausa
+set.ctl.tabs	zakładki	onglets	pestañas
+set.ctl.join	zeskanuj, by dołączyć	scanne pour rejoindre	escanea para unirte
+set.ctl.numpad	klawiatura numeryczna	pavé numérique	teclado numérico
+set.ctl.answers	przyciski odpowiedzi	boutons de réponse	botones de respuesta
+set.version	Wersja	Version	Versión
+set.credits	[b]Gra[/b]  Godot 4 · fizyka Jolt\n[b]Czcionki[/b]  Big Shoulders, Fraunces (SIL Open Font License)\n[b]Muzyka i efekty[/b]  syntetyzowane z nut (tools/music/compose.py)\n[b]Głos prowadzącego[/b]  eSpeak NG + MBROLA (tools/voice/narrate.py), można zastąpić prawdziwym lektorem\n[b]Mapa[/b]  prowincje Turcji, 16 regionów\n\n[i]Czerwony aksamit, mosiężne szyldy, pluszowi bohaterowie. Miłego przedstawienia.[/i]	[b]Jeu[/b]  Godot 4 · physique Jolt\n[b]Polices[/b]  Big Shoulders, Fraunces (SIL Open Font License)\n[b]Musique et effets[/b]  synthétisés à partir de notes (tools/music/compose.py)\n[b]Voix du présentateur[/b]  eSpeak NG + MBROLA (tools/voice/narrate.py), remplaçable par un vrai comédien\n[b]Carte[/b]  provinces de Turquie, 16 régions\n\n[i]Velours rouge, enseignes en laiton, héros en peluche. Bon spectacle.[/i]	[b]Juego[/b]  Godot 4 · física Jolt\n[b]Fuentes[/b]  Big Shoulders, Fraunces (SIL Open Font License)\n[b]Música y efectos[/b]  sintetizados a partir de notas (tools/music/compose.py)\n[b]Voz del presentador[/b]  eSpeak NG + MBROLA (tools/voice/narrate.py), sustituible por un actor de doblaje real\n[b]Mapa[/b]  provincias de Turquía, 16 regiones\n\n[i]Terciopelo rojo, letreros de latón, héroes de peluche. Disfruta del espectáculo.[/i]
+menu.online	Online	En ligne	En línea
+menu.online.sub	Graj z dalekimi znajomymi przez Steam	Joue avec des amis éloignés via Steam	Juega con amigos lejanos a través de Steam
+online.kicker	Zdalne miejsca	Places à distance	Asientos remotos
+online.explain	Dzięki Remote Play Together gra jest przesyłana do znajomego; jego klawiatura lub pad staje się tu graczem. Nie musi mieć gry. Albo, jeśli twój serwer imprezy domowej jest publiczny, telefony mogą dołączyć kodem z dowolnego miejsca.	Avec Remote Play Together, le jeu est diffusé chez ton ami ; son clavier ou sa manette devient un joueur ici. Il n'a pas besoin de posséder le jeu. Ou, si ton serveur de soirée est public, les téléphones peuvent rejoindre avec un code depuis n'importe où.	Con Remote Play Together el juego se transmite a tu amigo; su teclado o mando se convierte aquí en un jugador. No necesita tener el juego. O, si tu servidor de fiesta en casa es público, los móviles pueden unirse con un código desde cualquier lugar.
+online.rpt	Zaproś znajomego (Remote Play)	Inviter un ami (Remote Play)	Invitar a un amigo (Remote Play)
+online.lobby	Otwórz lobby znajomych	Ouvrir un salon d'amis	Abrir una sala de amigos
+online.house	Dołącz telefonem (impreza domowa)	Rejoindre par téléphone (soirée)	Unirse con el móvil (fiesta en casa)
+online.rpt_open	Okno zaproszeń Steam jest otwarte.	La fenêtre d'invitation Steam est ouverte.	La ventana de invitación de Steam está abierta.
+online.lobby_open	Otwieranie lobby…	Ouverture du salon…	Abriendo la sala…
+online.lobby_ready	Lobby gotowe. Znajomi mogą dołączyć przez Steam.	Salon prêt. Tes amis peuvent rejoindre depuis Steam.	Sala lista. Tus amigos pueden unirse desde Steam.
+online.no_steam	Brak połączenia ze Steam. Działa w wersji Steam.	Steam non connecté. Fonctionne dans la version Steam.	Steam no conectado. Funciona en la versión de Steam.
+online.steam_on	Połączono ze Steam: {name}	Connecté à Steam : {name}	Conectado a Steam: {name}
+ach.title	Osiągnięcia	Succès	Logros
+ach.unlocked	Odblokowano osiągnięcie	Succès débloqué	Logro desbloqueado
+set.report.copy	Kopiuj raport błędu	Copier le rapport d'erreur	Copiar informe de error
+set.report.folder	Folder raportów	Dossier des rapports	Carpeta de informes
+set.report.copied	Skopiowano do schowka	Copié dans le presse-papiers	Copiado al portapapeles
+set.report.d	Jeśli coś pójdzie nie tak, skopiuj raport i wyślij go twórcy. Raporty zostają na tym komputerze.	Si quelque chose tourne mal, copie le rapport et envoie-le au développeur. Les rapports restent sur cet ordinateur.	Si algo va mal, copia el informe y envíalo al desarrollador. Los informes se quedan en este ordenador.
+crash.title	Ostatnia sesja zamknęła się nieoczekiwanie	La dernière session s'est fermée de façon inattendue	La última sesión se cerró inesperadamente
+crash.desc	Zapisano raport: Ustawienia → O grze	Un rapport a été enregistré : Paramètres → À propos	Se guardó un informe: Ajustes → Acerca de
+profile.recovered	Profil przywrócono z kopii zapasowej	Profil restauré depuis la sauvegarde	Perfil restaurado desde la copia de seguridad
+track.round	Runda {n} / {m}	Manche {n} / {m}	Ronda {n} / {m}
+track.last	Ostatnia runda za nami	Dernière manche terminée	Última ronda terminada
+track.free	{n} wolne	{n} libres	{n} libres
+rank.kicker	Ranga sceniczna	Rang de scène	Rango escénico
+rank.up	Awans!	Promotion !	¡Subes de rango!
+rank.next	{n} XP do następnej rangi	{n} XP avant le rang suivant	{n} XP para el siguiente rango
+rank.new	Nowe odblokowania	Nouveaux déblocages	Nuevos desbloqueos
+rank.level	Ranga {n}	Rang {n}	Rango {n}
+rank.locked_level	Odblokowanie na randze {n}	Débloqué au rang {n}	Se desbloquea en el rango {n}
+rank.locked_ach	Osiągnięcie: {a}	Succès : {a}	Logro: {a}
+rank.extra	Statysta	Figurant	Extra
+rank.prompter	Sufler	Souffleur	Apuntador
+rank.dresser	Garderobiany	Habilleur	Figurinista
+rank.chorus	Chórzysta	Choriste	Corista
+rank.support	Rola drugoplanowa	Second rôle	Actor secundario
+rank.lead	Główna rola	Premier rôle	Papel principal
+rank.star	Gwiazda	Vedette	Estrella
+rank.legend	Legenda	Légende	Leyenda
+rank.owner	Właściciel sceny	Maître de la scène	Dueño del escenario
+xp.play	Wyjście na scenę	Monté sur scène	Salió al escenario
+xp.rank1	Pierwsze miejsce	Première place	Primer puesto
+xp.rank2	Drugie miejsce	Deuxième place	Segundo puesto
+xp.rank3	Trzecie miejsce	Troisième place	Tercer puesto
+xp.correct	{n} poprawnych odpowiedzi	{n} bonnes réponses	{n} respuestas correctas
+xp.capture	{n} zdobytych regionów	{n} régions conquises	{n} regiones conquistadas
+xp.topple	{n} zburzonych zamków	{n} châteaux renversés	{n} castillos derribados
+xp.steal	Łup z napadu	Butin du braquage	Botín del atraco
+xp.daily	Pierwsza wygrana dnia	Première victoire du jour	Primera victoria del día
+color.cherry	Wiśnia	Cerise	Cereza
+color.navy	Granat	Marine	Azul marino
+color.forest	Leśna zieleń	Forêt	Bosque
+color.plum	Śliwka	Prune	Ciruela
+color.coral	Koral	Corail	Coral
+color.snow	Śnieg	Neige	Nieve
+color.cocoa	Kakao	Cacao	Cacao
+color.gold	Złoto	Or	Oro
+wardrobe.glasses	Okulary	Lunettes	Gafas
+ward.banner	Sztandar	Bannière	Estandarte
+settings.kicker	Za kulisami	Coulisses	Entre bastidores
+settings.sound	Dźwięk	Son	Sonido
+settings.video	Obraz	Affichage	Pantalla
+settings.master	Główna	Général	General
+settings.music	Muzyka	Musique	Música
+settings.sfx	Efekty	Effets	Efectos
+settings.window	Ekran	Écran	Pantalla
+settings.windowed	W oknie	Fenêtré	En ventana
+settings.full	Pełny ekran	Plein écran	Pantalla completa
+settings.quality	Jakość	Qualité	Calidad
+settings.q.low	Niska	Basse	Baja
+settings.q.medium	Średnia	Moyenne	Media
+settings.q.high	Wysoka	Haute	Alta
+settings.shake	Wstrząsy	Tremblement	Vibración
+settings.on	Wł.	Activé	Sí
+settings.off	Wył.	Désactivé	No
+pause.title	Antrakt	Entracte	Entreacto
+pause.resume	Wznów	Reprendre	Continuar
+pause.lobby	Wróć do lobby	Retour au hall	Volver al vestíbulo
+pause.hint	Esc / Start: wznów	Échap / Start : reprendre	Esc / Start: continuar
+menu.conquest	Conquest Quiz	Conquest Quiz	Conquest Quiz
+menu.conquest.sub	Załóż zamek na mapie Turcji, podziel ziemię, a potem ruszaj na wojnę.	Fonde ton château sur la carte de la Turquie, partage les terres, puis fais la guerre.	Funda tu castillo en el mapa de Turquía, reparte las tierras y luego haz la guerra.
+menu.customize	Moja postać	Mon personnage	Mi personaje
+menu.customize.sub	Kapelusze, wąsy, muszki, kolory	Chapeaux, moustaches, nœuds papillon, couleurs	Sombreros, bigotes, pajaritas, colores
+menu.spectate	Dołącz jako widz	Rejoindre en spectateur	Unirse como espectador
+menu.spectate.sub	Oglądaj z loży, rzucaj róże	Regarde depuis la loge, lance des roses	Mira desde el palco, lanza rosas
+menu.howto	Jak grać	Comment jouer	Cómo jugar
+menu.howto.sub	Afisz w skrócie	Le programme, en bref	El programa, en breve
+ticket.admit	WSTĘP DLA JEDNEJ OSOBY	ENTRÉE UNIQUE	ENTRADA INDIVIDUAL
+ticket.row	RZĄD	RANG	FILA
+ticket.seat	MIEJSCE	PLACE	ASIENTO
+ticket.record	BILANS	BILAN	HISTORIAL
+ticket.wl	W / P	V / D	V / D
+ticket.champs	Mistrzostwa areny	Championnats de l'arène	Campeonatos de la arena
+ticket.streak	Obecna seria	Série en cours	Racha actual
+ticket.best	Najlepsza seria	Meilleure série	Mejor racha
+ticket.rename	Kliknij, aby zmienić imię	Clique pour renommer	Haz clic para cambiar el nombre
+ticket.champs_s	Korony	Couronnes	Coronas
+ticket.streak_s	Seria	Série	Racha
+ticket.best_s	Rekord	Record	Récord
+hint.run	bieg	courir	correr
+hint.jump	skok	sauter	saltar
+hint.shove	pchnięcie	pousser	empujar
+hint.join	Naciśnij swój klawisz, aby dołączyć:	Appuie sur ta touche pour rejoindre :	Pulsa tu tecla para unirte:
+hint.p2join	dołącza gracz 2	le joueur 2 rejoint	se une el jugador 2
+hint.padjoin	dołącza pad	une manette rejoint	se une un mando
+hint.p2	Gracz 2	Joueur 2	Jugador 2
+key.space	Spacja	Espace	Espacio
+key.enter	Enter	Entrée	Intro
+key.arrows	Strzałki	Flèches	Flechas
+key.rshift	P-Shift	Maj D	Mayús D
+key.pad	Pad A	Manette A	Mando A
+menu.section.play	Przedstawienia	Spectacles	Funciones
+menu.section.more	Za kulisami	Coulisses	Entre bastidores
+setup.go	Kurtyna w górę	Lever de rideau	Arriba el telón
+setup.rules	Trzy akty · 12 pytań + runda życia	Trois actes · 12 questions + manche des vies	Tres actos · 12 preguntas + ronda de vidas
+setup.rules_c	Trzy akty · 15 regionów · zamki i pojedynki	Trois actes · 15 régions · châteaux et duels	Tres actos · 15 regiones · castillos y duelos
+menu.house	Impreza domowa	Soirée à la maison	Fiesta en casa
+menu.house.sub	Zeskanuj QR, telefon jest kontrolerem	Scanne le QR, ton téléphone devient la manette	Escanea el QR, tu móvil es el mando
+house.title	Impreza domowa	Soirée à la maison	Fiesta en casa
+house.scan	Zeskanuj kod QR aparatem telefonu albo otwórz ten adres i wpisz kod:	Scanne le QR avec l'appareil photo de ton téléphone, ou ouvre cette adresse et tape le code :	Escanea el QR con la cámara del móvil, o abre esta dirección y escribe el código:
+house.phones	Połączone telefony: {n}	Téléphones connectés : {n}	Móviles conectados: {n}
+house.none	Jeszcze brak telefonów	Pas encore de téléphone	Todavía no hay móviles
+house.connecting	Łączenie z serwerem…	Connexion au serveur…	Conectando con el servidor…
+house.error	Brak połączenia z serwerem, ponawiam…	Serveur injoignable, nouvelle tentative…	No se puede conectar con el servidor, reintentando…
+house.server	Adres serwera	Adresse du serveur	Dirección del servidor
+house.connect	Połącz	Connecter	Conectar
+house.close	Zamknij	Fermer	Cerrar
+house.status_q	Pytanie {n}: biegnij do właściwej zapadni!	Question {n} : cours vers la bonne trappe !	Pregunta {n}: ¡corre a la trampilla correcta!
+house.status_lobby	Jesteś w lobby. Biegaj, skacz, pchaj!	Tu es dans le hall. Cours, saute, pousse !	Estás en el vestíbulo. ¡Corre, salta, empuja!
+house.status_win	Wygrałeś! Scena jest twoja!	Tu as gagné ! La scène est à toi !	¡Has ganado! ¡El escenario es tuyo!
+lobby.join	Dołącz: WASD + Spacja  ·  Strzałki + Enter  ·  Pad Ⓐ	Rejoindre : WASD + Espace  ·  Flèches + Entrée  ·  Manette Ⓐ	Unirse: WASD + Espacio  ·  Flechas + Intro  ·  Mando Ⓐ
+lobby.controls	Bieg: WASD  ·  Skok: Spacja  ·  Pchnięcie: F	Courir : WASD  ·  Sauter : Espace  ·  Pousser : F	Correr: WASD  ·  Saltar: Espacio  ·  Empujar: F
+lobby.controls2	Gracz 2: Strzałki · Enter skok · Prawy Shift pchnięcie	Joueur 2 : Flèches · Entrée saut · Maj droite pousser	Jugador 2: Flechas · Intro salta · Mayús derecha empuja
+lobby.leader	{name} ma najdłuższą serię: {n}	{name} détient la plus longue série : {n}	{name} tiene la racha más larga: {n}
+setup.title	Dzisiejsze przedstawienie	Le spectacle de ce soir	La función de esta noche
+setup.bots	Boty	Bots	Bots
+setup.level	Poziom botów	Difficulté des bots	Dificultad de los bots
+setup.level.easy	Łatwy	Facile	Fácil
+setup.level.normal	Normalny	Normal	Normal
+setup.level.hard	Trudny	Difficile	Difícil
+setup.timer	Czas na odpowiedź	Temps de réponse	Tiempo de respuesta
+setup.seconds	{n} s	{n} s	{n} s
+setup.players	Na scenie: {n} graczy	Sur scène : {n} joueurs	En el escenario: {n} jugadores
+wardrobe.title	Garderoba	Loge des costumes	Sala de vestuario
+wardrobe.color	Materiał	Tissu	Tela
+wardrobe.hat	Kapelusz	Chapeau	Sombrero
+wardrobe.mustache	Wąsy	Moustache	Bigote
+wardrobe.bowtie	Muszka	Nœud papillon	Pajarita
+wardrobe.name	Imię sceniczne	Nom de scène	Nombre artístico
+look.none	Brak	Aucun	Ninguno

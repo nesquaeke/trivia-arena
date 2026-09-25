@@ -1,0 +1,217 @@
+look.rose	Róża w butonierce	Rose à la boutonnière	Rosa en el ojal
+look.bell	Obroża z dzwonkiem	Collier à clochette	Collar con cascabel
+look.round	Okrągłe okulary	Lunettes rondes	Gafas redondas
+look.monocle	Monokl	Monocle	Monóculo
+look.star	Okulary gwiazdki	Lunettes étoiles	Gafas de estrella
+look.shades	Okulary przeciwsłoneczne	Lunettes de soleil	Gafas de sol
+look.domino	Maska domino	Loup	Antifaz
+look.eyepatch	Opaska na oko	Cache-œil	Parche en el ojo
+culture.viking	Wiking	Pillard nordique	Saqueador nórdico
+culture.centurion	Legionista rzymski	Légionnaire romain	Legionario romano
+culture.pharaoh	Faraon	Pharaon	Faraón
+culture.samurai	Samuraj	Samouraï	Samurái
+culture.mariachi	Mariachi	Mariachi	Mariachi
+culture.musketeer	Muszkieter	Mousquetaire	Mosquetero
+culture.highlander	Góral szkocki	Highlander	Highlander
+culture.janissary	Janczar	Janissaire	Jenízaro
+culture.hussar	Husarz skrzydlaty	Hussard ailé	Húsar alado
+culture.frontier	Zwiadowca z pogranicza	Éclaireur de la frontière	Explorador de la frontera
+castle.himeji	Biała Czapla	Héron blanc	Garza Blanca
+castle.pyramid	Piramida schodkowa	Pyramide à degrés	Pirámide escalonada
+castle.alhambra	Alhambra	Alhambra	Alhambra
+castle.fairy	Baśniowa twierdza	Donjon de conte de fées	Torreón de cuento
+castle.gothic	Gotycka katedra	Cathédrale gothique	Catedral gótica
+castle.steppe	Chanat stepowy	Khanat des steppes	Kanato de la estepa
+result.tiles_n	{n} regionów	{n} régions	{n} regiones
+result.title	Kurtyna!	Rideau !	¡Telón!
+result.place	{n}.	{n}e	{n}.º
+menu.mayhem	Mayhem Tour	Mayhem Tour	Mayhem Tour
+menu.mayhem.sub	Każde pytanie to minigra: biegaj, łap, zgaduj, zapamiętuj. Nikt nie odpada.	Chaque question est un mini-jeu : cours, attrape, devine, retiens. Personne n'est éliminé.	Cada pregunta es un minijuego: corre, atrapa, adivina, recuerda. Nadie queda fuera.
+setup.rules_m	Minigry · zdarzenia chaosu · finał ×1,5	Mini-jeux · événements chaos · finale ×1,5	Minijuegos · eventos de caos · final ×1,5
+setup.len.quick	Szybka (~10 min)	Rapide (~10 min)	Rápida (~10 min)
+setup.len.tour	Pełna trasa (~20 min)	Tournée complète (~20 min)	Gira completa (~20 min)
+mh.meter	MIERNIK MAYHEM	JAUGE MAYHEM	MEDIDOR MAYHEM
+mh.zoom_tag	ZBLIŻENIE	GROS PLAN	PRIMER PLANO
+mh.chaos_kicker	· ZDARZENIE CHAOSU ·	· ÉVÉNEMENT CHAOS ·	· EVENTO DE CAOS ·
+mh.joker_badge	{name} · JOKER ×2	{name} · JOKER ×2	{name} · COMODÍN ×2
+mh.awards	Nagrody wieczoru	Les prix de la soirée	Los premios de la noche
+mh.doors	Cztery drzwi	Quatre portes	Cuatro puertas
+mh.doors.d	Biegnij do właściwej zapadni. Złe wystrzelą cię w powietrze!	Cours vers la bonne trappe. Les mauvaises t'envoient en l'air !	Corre a la trampilla correcta. ¡Las equivocadas te lanzan por los aires!
+mh.doors.chip1	3 pytania	3 questions	3 preguntas
+mh.doors.chip2	Szybciej = do +50	Plus vite = jusqu'à +50	Más rápido = hasta +50
+mh.doors.chip3	Źle = wystrzał	Faux = éjection	Fallo = lanzamiento
+mh.zoom	Panika zbliżenia	Panique au zoom	Pánico al zoom
+mh.zoom.d	Coś jest pokazane o wiele za blisko i powoli się oddala. Zgadnij wcześnie, zgarnij dużo.	Un objet est montré de beaucoup trop près et dézoome lentement. Devine tôt, gagne gros.	Algo se muestra demasiado cerca y se aleja poco a poco. Adivina pronto y gana mucho.
+mh.zoom.chip1	2 przedmioty	2 objets	2 objetos
+mh.zoom.chip2	Wcześnie = do +100	Tôt = jusqu'à +100	Pronto = hasta +100
+mh.zoom.chip3	Biegnij na zapadnię	Cours vers une trappe	Corre a una trampilla
+mh.zoom.q	CO TO JEST?!	C'EST QUOI, ÇA ?!	¡¿QUÉ ES ESTO?!
+mh.nearest	Najbliżej wygrywa	Le plus proche gagne	El más cercano gana
+mh.nearest.d	Scena to oś liczbowa. Miejsce, w którym stoisz, to twój typ. Najbliższy wygrywa.	La scène est une droite graduée. Ta position est ton estimation. Le plus proche gagne.	El escenario es una recta numérica. Donde estás es tu estimación. Gana el más cercano.
+mh.nearest.chip1	1. = 150	1er = 150	1.º = 150
+mh.nearest.chip2	W dziesiątkę +50	Dans le mille +50	Diana +50
+mh.nearest.chip3	Biegnij w lewo lub w prawo	Cours à gauche ou à droite	Corre a izquierda o derecha
+mh.nearest.how	Stań na swoim typie!	Place-toi sur ton estimation !	¡Ponte sobre tu estimación!
+mh.nearest.how_sub	Biegnij, by wybrać, albo wpisz cyfry (klawiatura/telefon) · SKOK lub Enter = zatwierdź	Cours pour choisir ou tape des chiffres (clavier/téléphone) · SAUTER ou Entrée = valider	Corre para elegir o escribe cifras (teclado/móvil) · SALTAR o Intro = fijar
+mh.est.yours	twój typ	ton estimation	tu estimación
+mh.est.locked	zatwierdzone	validé	fijado
+mh.est.typing	wpisywanie · Enter	saisie · Entrée	escribiendo · Intro
+mh.nearest.best	Najbliżej: {name} ({v})	Le plus proche : {name} ({v})	El más cercano: {name} ({v})
+mh.bullseye	W DZIESIĄTKĘ!	DANS LE MILLE !	¡DIANA!
+mh.order	Chaos kolejności	Chaos de l'ordre	Caos del orden
+mh.order.d	Cztery rzeczy, jedna dobra kolejność. Na każdym kroku biegnij do następnej.	Quatre choses, un seul bon ordre. À chaque étape, cours vers la suivante.	Cuatro cosas, un solo orden correcto. En cada paso corre a la siguiente.
+mh.order.chip1	2 zestawy	2 séries	2 series
+mh.order.chip2	3 kroki	3 étapes	3 pasos
+mh.order.chip3	Drzwi ✓ są zamknięte	Les portes ✓ sont fermées	Las puertas ✓ están cerradas
+mh.order.next	Co jest następne?	Qu'est-ce qui vient ensuite ?	¿Qué va después?
+mh.order.step	Krok {n}/{m}	Étape {n}/{m}	Paso {n}/{m}
+mh.sound	Zaufaj uszom	Fie-toi à tes oreilles	Confía en tu oído
+mh.sound.d	Gra melodia albo dźwięk. Znajdź jego źródło i biegnij do niego.	Un air ou un bruit retentit. Trouve sa source et cours-y.	Suena una melodía o un ruido. Encuentra su origen y corre hacia él.
+mh.sound.chip1	3 dźwięki	3 sons	3 sonidos
+mh.sound.chip2	Melodie i odgłosy	Airs et bruits	Melodías y ruidos
+mh.sound.chip3	Podgłośnij!	Monte le son !	¡Sube el volumen!
+mh.sound.melody	Co to za melodia?	Quel est cet air ?	¿Qué melodía es esta?
+mh.sound.composer	Kto skomponował tę melodię?	Qui a composé cet air ?	¿Quién compuso esta melodía?
+mh.sound.sfx	Co to za dźwięk?	Quel est ce bruit ?	¿Qué sonido es este?
+mh.sound.playing	TERAZ GRA…	EN COURS…	SONANDO…
+mh.falling	Spadające odpowiedzi	Réponses en chute	Respuestas que caen
+mh.falling.d	Odpowiedzi spadają z nieba. Złap dobrą; złe i wielkie podróbki ogłuszają.	Les réponses pleuvent. Attrape la bonne ; les mauvaises et les faux géants t'étourdissent.	Llueven respuestas. Atrapa la correcta; las falsas y las gigantes trucadas te marean.
+mh.falling.chip1	2 pytania	2 questions	2 preguntas
+mh.falling.chip2	Złap = odpowiedz	Attraper = répondre	Atrapar = responder
+mh.falling.chip3	Czerwony olbrzym = uciekaj!	Géant rouge = cours !	Gigante rojo = ¡corre!
+mh.falling.how	Złap dobrą odpowiedź!	Attrape la bonne réponse !	¡Atrapa la respuesta correcta!
+mh.falling.how_sub	Stań pod nią. Zła cię przewróci.	Place-toi dessous. Une mauvaise te renverse.	Ponte debajo. Una equivocada te derriba.
+mh.falling.fake	PODRÓBKA!	FAUX !	¡FALSA!
+mh.falling.stunned	OSZOŁOMIONY!	ÉTOURDI !	¡MAREADO!
+mh.memory	Panika pamięci	Panique mémoire	Pánico de memoria
+mh.memory.d	Zapamiętaj cztery przedmioty. Potem znikną… albo pudełka zostaną przetasowane.	Mémorise quatre objets. Ensuite ils disparaissent… ou les boîtes sont mélangées.	Memoriza cuatro objetos. Luego desaparecen… o se barajan las cajas.
+mh.memory.chip1	2 rundy	2 manches	2 rondas
+mh.memory.chip2	3,5 sekundy na patrzenie	3,5 secondes pour regarder	3,5 segundos para mirar
+mh.memory.chip3	Śledź pudełka	Suis les boîtes	Sigue las cajas
+mh.memory.look	ZAPAMIĘTAJ!	MÉMORISE !	¡MEMORIZA!
+mh.memory.look_sub	Co jest na których drzwiach?	Lequel est sur quelle porte ?	¿Cuál está en qué puerta?
+mh.memory.q	Gdzie był przedmiot: {x}?	Où était : {x} ?	¿Dónde estaba: {x}?
+mh.memory.q2	W którym pudełku jest: {x}?	Quelle boîte contient : {x} ?	¿Qué caja tiene: {x}?
+mh.final	Finałowy Mayhem	Mayhem final	Mayhem final
+mh.final.d	Co 8 sekund inna gra. Wszystkie punkty ×1,5!	Un jeu différent toutes les 8 secondes. Tous les points ×1,5 !	Un juego distinto cada 8 segundos. ¡Todos los puntos ×1,5!
+mh.final.chip1	6 błyskawicznych pytań	6 questions éclair	6 preguntas rápidas
+mh.final.chip2	Punkty ×1,5	Points ×1,5	Puntos ×1,5
+mh.final.chip3	Bez przerwy	Sans pause	Sin parar
+mh.final.step	Finał {n}/{m}	Finale {n}/{m}	Final {n}/{m}
+mh.final.k.tf	Prawda czy fałsz?	Vrai ou faux ?	¿Verdadero o falso?
+mh.final.k.doors	Cztery drzwi	Quatre portes	Cuatro puertas
+mh.final.k.zoom	Zbliżenie	Zoom	Zoom
+mh.final.k.nearest	Najbliżej	Le plus proche	El más cercano
+mh.final.k.sound	Dźwięk	Son	Sonido
+mh.tf.stmt	{q}\nOdpowiedź: „{a}” · Prawda czy fałsz?	{q}\nRéponse : « {a} » · Vrai ou faux ?	{q}\nRespuesta: «{a}» · ¿Verdadero o falso?
+mh.true	PRAWDA	VRAI	VERDADERO
+mh.false	FAŁSZ	FAUX	FALSO
+mh.q_of	Pytanie {n}/{m}	Question {n}/{m}	Pregunta {n}/{m}
+mh.joker	{name} dostaje JOKERA!	{name} reçoit le JOKER !	¡{name} recibe el COMODÍN!
+mh.joker_sub	Ostatnie miejsce punktuje ×2 w tej rundzie	La dernière place marque ×2 cette manche	El último puesto puntúa ×2 esta ronda
+mh.chaos.ice	Lodowisko	Patinoire	Pista de hielo
+mh.chaos.ice.d	Scena zamarzła. Zapomnij o hamulcach.	La scène a gelé. Oublie les freins.	El escenario se ha congelado. Olvídate de frenar.
+mh.chaos.bighead	Wielkie głowy	Têtes géantes	Cabezas gigantes
+mh.chaos.bighead.d	Wszystkim spuchły głowy. Powodzenia z równowagą.	Toutes les têtes ont enflé. Bonne chance pour l'équilibre.	A todos se les ha hinchado la cabeza. Suerte con el equilibrio.
+mh.chaos.invert	Odwrócone sterowanie	Commandes inversées	Controles invertidos
+mh.chaos.invert.d	Lewo to prawo, prawo to lewo. Zachowaj spokój.	La gauche est à droite, la droite à gauche. Reste calme.	La izquierda es la derecha y la derecha la izquierda. Mantén la calma.
+mh.chaos.tiny	Wszyscy są malutcy	Tout le monde est minuscule	Todos son diminutos
+mh.chaos.tiny.d	Kieszonkowi gracze. Drzwi wyglądają na ogromne.	Des joueurs de poche. Les portes semblent immenses.	Jugadores de bolsillo. Las puertas parecen enormes.
+mh.chaos.moving	Odpowiedzi w ruchu	Réponses en mouvement	Respuestas en movimiento
+mh.chaos.moving.d	W połowie odpowiedzi zamieniają się miejscami!	À mi-chemin, les réponses échangent leurs places !	¡A mitad de camino, las respuestas cambian de sitio!
+mh.meter_full	MIERNIK MAYHEM PEŁNY!	LA JAUGE MAYHEM EST PLEINE !	¡EL MEDIDOR MAYHEM ESTÁ LLENO!
+mh.meter_full_sub	W następnej rundzie nadchodzi chaos.	Le chaos arrive à la prochaine manche.	El caos llega en la próxima ronda.
+mh.moved	ODPOWIEDZI SIĘ PRZESUNĘŁY!	LES RÉPONSES ONT BOUGÉ !	¡LAS RESPUESTAS SE HAN MOVIDO!
+mh.and_answer	A odpowiedź to…	Et la réponse est…	Y la respuesta es…
+mh.answer_was	Odpowiedź: {x}	Réponse : {x}	Respuesta: {x}
+mh.n_right	Trafiło {n} z {m}.	{n} sur {m} ont trouvé.	Acertaron {n} de {m}.
+mh.c.nobody.1	Nikt nie zgadł. Szczerze, ja też nie.	Personne n'a trouvé. Honnêtement, moi non plus.	Nadie acertó. Sinceramente, yo tampoco.
+mh.c.nobody.2	Cisza… nawet reflektory się wstydzą.	Silence… même les projecteurs ont honte.	Silencio… hasta los focos se avergüenzan.
+mh.c.nobody.3	Kompletnie źle. Ale razem, a to się liczy.	Complètement faux. Mais ensemble, et ça compte.	Totalmente mal. Pero juntos, y eso cuenta.
+mh.c.all.1	Wszyscy zgadli! Za łatwe?	Tout le monde a trouvé ! Trop facile ?	¡Todos acertaron! ¿Demasiado fácil?
+mh.c.all.2	Komplet dobrych odpowiedzi. Jestem pod wrażeniem.	Carton plein de bonnes réponses. Je suis impressionné.	Pleno de respuestas correctas. Estoy impresionado.
+mh.c.all.3	Dobra, to było łatwe. Następne nie będzie.	Bon, c'était facile. La prochaine ne le sera pas.	Vale, esa era fácil. La siguiente no lo será.
+mh.c.lone.1	{name} żyje w innym wszechświecie.	{name} vit dans un autre univers.	{name} vive en otro universo.
+mh.c.lone.2	Wszyscy pobiegli w tę samą stronę. Oprócz {name}. Dlaczego?	Tout le monde a couru du même côté. Sauf {name}. Pourquoi ?	Todos corrieron hacia el mismo lado. Menos {name}. ¿Por qué?
+mh.c.lone.3	{name}, wyglądałeś na takiego pewnego…	{name}, tu avais l'air si sûr…	{name}, parecías tan seguro…
+mh.c.solo.1	Tylko {name} zgadł! Brawa!	Seul {name} a trouvé ! Applaudissements !	¡Solo {name} acertó! ¡Aplausos!
+mh.c.solo.2	{name} stoi sam. I ma rację.	{name} est seul. Et il a raison.	{name} está solo. Y tiene razón.
+mh.c.solo.3	Wiedziała jedna osoba: {name}. Reszta, notujcie.	Une seule personne savait : {name}. Les autres, prenez des notes.	Solo una persona lo sabía: {name}. Los demás, tomad nota.
+mh.award.brain	Mózg	Le Cerveau	El Cerebro
+mh.award.brain.d	Najwięcej dobrych odpowiedzi: {n}	Le plus de bonnes réponses : {n}	Más respuestas correctas: {n}
+mh.award.panic	Przycisk paniki	Le Bouton panique	El Botón del Pánico
+mh.award.panic.d	Najszybsze odpowiedzi: średnio {s} s	Réponses les plus rapides : {s} s en moyenne	Respuestas más rápidas: {s} s de media
+mh.award.guesser	Zgadywacz	Le Devin	El Adivino
+mh.award.guesser.d	Najbliższe typy ({n} w dziesiątkę)	Estimations les plus proches ({n} dans le mille)	Estimaciones más cercanas ({n} dianas)
+mh.award.menace	Totalne zagrożenie	La Menace absolue	La Amenaza Total
+mh.award.menace.d	{n} złych odpowiedzi. Wciąż na scenie.	{n} mauvaises réponses. Toujours sur scène.	{n} respuestas incorrectas. Aún en el escenario.
+mh.award.lastsec	Bohater ostatniej sekundy	Héros de la dernière seconde	Héroe del último segundo
+mh.award.lastsec.d	{n} dobrze w ostatniej chwili	{n} justes au buzzer	{n} aciertos en el último instante
+mh.award.comeback	Wielki powrót	La Remontada	La Remontada
+mh.award.comeback.d	Wspiął się z miejsca {n}	Remonté depuis la place {n}	Remontó desde el puesto {n}
+mh.award.jumper	Skoczek	Le Sauteur	El Saltarín
+mh.award.jumper.d	Skoczył {n} razy w tym meczu	A sauté {n} fois dans ce match	Saltó {n} veces en esta partida
+mh.award.light	W świetle reflektorów	Sous les projecteurs	Bajo los focos
+mh.award.light.d	Reflektor nie odstępował cię ani na chwilę	Le projecteur ne t'a jamais quitté	El foco nunca te abandonó
+mh.winner	{name} JEST MISTRZEM MAYHEM!	{name} EST LE CHAMPION DU MAYHEM !	¡{name} ES EL CAMPEÓN DEL MAYHEM!
+wardrobe.necklace	Naszyjnik i biżuteria	Collier et bijoux	Collar y joyas
+wardrobe.outfit	Strój	Tenue	Atuendo
+coins.n	{n} monet	{n} pièces	{n} monedas
+shop.buy	KUP · {n} MONET	ACHETER · {n} PIÈCES	COMPRAR · {n} MONEDAS
+shop.need	BRAKUJE {n} MONET	IL MANQUE {n} PIÈCES	FALTAN {n} MONEDAS
+shop.bought	{x} jest twój!	{x} est à toi !	¡{x} es tuyo!
+shop.poor	Za mało monet. Rozwiąż Słowo Dnia, graj mecze!	Pas assez de pièces. Résous le Mot du Jour, joue des matchs !	No tienes monedas suficientes. ¡Resuelve la Palabra del Día y juega partidas!
+shop.only	Sklep · {n} monet	Boutique · {n} pièces	Tienda · {n} monedas
+shop.or_buy	lub {n} monet	ou {n} pièces	o {n} monedas
+look.beanie	Czapka beanie	Bonnet	Gorro de lana
+look.graduate	Biret absolwenta	Toque de diplômé	Birrete de graduación
+look.halo	Aureola	Auréole	Aureola
+look.headphones	Słuchawki	Casque audio	Auriculares
+look.bunny	Uszy królika	Oreilles de lapin	Orejas de conejo
+look.santa	Czapka Mikołaja	Bonnet de Père Noël	Gorro de Papá Noel
+look.tiara	Tiara	Diadème	Tiara
+look.sombrero	Sombrero	Sombrero	Sombrero mexicano
+look.heart	Okulary serduszka	Lunettes cœur	Gafas de corazón
+look.aviator	Pilotki	Lunettes d'aviateur	Gafas de aviador
+look.cinema3d	Okulary 3D	Lunettes 3D	Gafas 3D
+look.nerd	Okulary kujona	Lunettes de geek	Gafas de empollón
+look.goggles	Gogle narciarskie	Masque de ski	Gafas de esquí
+look.gold_chain	Złoty łańcuch	Chaîne en or	Cadena de oro
+look.locket	Medalion z sercem	Médaillon cœur	Guardapelo de corazón
+look.beads	Korale	Collier de perles de bois	Collar de cuentas
+look.lei	Wieniec z kwiatów	Collier de fleurs	Collar de flores
+look.tooth	Ząb rekina	Dent de requin	Diente de tiburón
+look.crystal	Kryształowy wisiorek	Pendentif en cristal	Colgante de cristal
+look.medallion	Słoneczny medalion	Médaillon solaire	Medallón del sol
+look.sweater	Sweter w paski	Pull rayé	Jersey de rayas
+look.overalls	Ogrodniczki	Salopette	Peto
+look.tutu	Tutu	Tutu	Tutú
+look.cape	Peleryna bohatera	Cape de héros	Capa de héroe
+look.vest	Kamizelka	Gilet	Chaleco
+look.tuxedo	Smoking	Smoking	Esmoquin
+look.hoodie	Bluza z kapturem	Sweat à capuche	Sudadera con capucha
+look.raincoat	Płaszcz przeciwdeszczowy	Imperméable	Impermeable
+menu.daily	Słowo Dnia	Mot du Jour	Palabra del Día
+menu.daily.sub	Znajdź dzisiejsze słowo w 6 próbach · zdobywaj monety	Trouve le mot du jour en 6 essais · gagne des pièces	Encuentra la palabra de hoy en 6 intentos · gana monedas
+menu.daily.done	Rozwiązane dziś ✓ · nowe słowo jutro	Résolu aujourd'hui ✓ · nouveau mot demain	Resuelta hoy ✓ · nueva palabra mañana
+word.kicker	Słowo Dnia · #{n}	Mot du Jour · #{n}	Palabra del Día · #{n}
+word.title	Dzisiejsze słowo	Le mot du jour	La palabra de hoy
+word.hint	Pisz i naciśnij Enter · zielony: dobre miejsce · żółty: jest w słowie · szary: nie ma · Esc: zamknij	Tape et appuie sur Entrée · vert : bien placé · jaune : dans le mot · gris : absent · Échap : fermer	Escribe y pulsa Intro · verde: en su sitio · amarillo: está en la palabra · gris: no está · Esc: cerrar
+word.enter	ENTER	ENTRÉE	INTRO
+word.short	Potrzeba 5 liter	Il faut 5 lettres	Faltan letras: son 5
+word.unknown	Nie ma tego słowa na liście	Mot absent de la liste	No está en la lista de palabras
+word.win1	NIESAMOWITE! Za pierwszym razem!	INCROYABLE ! Du premier coup !	¡INCREÍBLE! ¡A la primera!
+word.win2	Geniusz!	Génial !	¡Genio!
+word.win3	Wspaniale!	Superbe !	¡Magnífico!
+word.win4	Nieźle!	Bien joué !	¡Bien!
+word.win5	Było blisko!	C'était moins une !	¡Por poco!
+word.win6	Uff! Ostatnia szansa!	Ouf ! Dernière chance !	¡Uf! ¡Última oportunidad!
+word.lose	Słowo to {w}. Spróbuj jutro!	Le mot était {w}. Réessaie demain !	La palabra era {w}. ¡Vuelve a intentarlo mañana!
+word.won	Rozwiązane!	Trouvé !	¡Resuelta!
+word.lost	Tym razem nie	Pas cette fois	Esta vez no
+word.answer	Słowo: {w}	Mot : {w}	Palabra: {w}
+word.reward_note	Wydaj monety na nowe stroje w Mojej postaci!	Dépense tes pièces en nouvelles tenues dans Mon personnage !	¡Gasta monedas en ropa nueva en Mi personaje!
+word.next	Nowe słowo za {t}	Nouveau mot dans {t}	Nueva palabra en {t}
+word.share	UDOSTĘPNIJ	PARTAGER	COMPARTIR
+word.copied	Wynik skopiowano do schowka	Résultat copié dans le presse-papiers	Resultado copiado al portapapeles
+word.streak	Seria {n} dni	Série de {n} jours	Racha de {n} días

@@ -4,14 +4,28 @@ extends RefCounted
 ## Memory Panic'te kapakların üstünde döner. Hepsi ilkel şekillerden, parlak
 ## plastik oyuncak hissiyle. Yeni nesne: NAMES'e ad, build()'e bir dal.
 
+## [tr, en, pl, fr, es]
 const NAMES := {
-	"apple": ["Elma", "Apple"], "banana": ["Muz", "Banana"], "duck": ["Lastik ördek", "Rubber duck"],
-	"cake": ["Doğum günü pastası", "Birthday cake"], "bell": ["Zil", "Bell"], "gift": ["Hediye kutusu", "Gift box"],
-	"ball": ["Futbol topu", "Football"], "cactus": ["Kaktüs", "Cactus"], "fish": ["Japon balığı", "Goldfish"],
-	"umbrella": ["Şemsiye", "Umbrella"], "rocket": ["Roket", "Rocket"], "donut": ["Donut", "Doughnut"],
-	"mushroom": ["Mantar", "Mushroom"], "snowman": ["Kardan adam", "Snowman"], "icecream": ["Dondurma", "Ice cream"],
-	"lollipop": ["Lolipop", "Lollipop"], "teapot": ["Çaydanlık", "Teapot"], "dice": ["Zar", "Die"],
+	"apple": ["Elma", "Apple", "Jabłko", "Pomme", "Manzana"],
+	"banana": ["Muz", "Banana", "Banan", "Banane", "Plátano"],
+	"duck": ["Lastik ördek", "Rubber duck", "Gumowa kaczka", "Canard en caoutchouc", "Patito de goma"],
+	"cake": ["Doğum günü pastası", "Birthday cake", "Tort urodzinowy", "Gâteau d'anniversaire", "Tarta de cumpleaños"],
+	"bell": ["Zil", "Bell", "Dzwonek", "Cloche", "Campana"],
+	"gift": ["Hediye kutusu", "Gift box", "Pudełko z prezentem", "Boîte cadeau", "Caja de regalo"],
+	"ball": ["Futbol topu", "Football", "Piłka nożna", "Ballon de foot", "Balón de fútbol"],
+	"cactus": ["Kaktüs", "Cactus", "Kaktus", "Cactus", "Cactus"],
+	"fish": ["Japon balığı", "Goldfish", "Złota rybka", "Poisson rouge", "Pez dorado"],
+	"umbrella": ["Şemsiye", "Umbrella", "Parasol", "Parapluie", "Paraguas"],
+	"rocket": ["Roket", "Rocket", "Rakieta", "Fusée", "Cohete"],
+	"donut": ["Donut", "Doughnut", "Pączek", "Beignet", "Dónut"],
+	"mushroom": ["Mantar", "Mushroom", "Grzyb", "Champignon", "Seta"],
+	"snowman": ["Kardan adam", "Snowman", "Bałwan", "Bonhomme de neige", "Muñeco de nieve"],
+	"icecream": ["Dondurma", "Ice cream", "Lody", "Glace", "Helado"],
+	"lollipop": ["Lolipop", "Lollipop", "Lizak", "Sucette", "Piruleta"],
+	"teapot": ["Çaydanlık", "Teapot", "Czajniczek", "Théière", "Tetera"],
+	"dice": ["Zar", "Die", "Kostka do gry", "Dé", "Dado"],
 }
+const LANG_IDX := {"tr": 0, "en": 1, "pl": 2, "fr": 3, "es": 4}
 
 static var _mats := {}
 
@@ -20,7 +34,8 @@ static func ids() -> Array:
 
 static func name_of(id: String, lang: String) -> String:
 	var row: Array = NAMES.get(id, [id, id])
-	return String(row[1 if lang == "en" else 0])
+	var i: int = LANG_IDX.get(lang, 1)
+	return String(row[i] if i < row.size() else row[1])
 
 static func mat(c: Color, rough := 0.32, metal := 0.0, emit := 0.0) -> StandardMaterial3D:
 	var key := "%s|%.2f|%.2f|%.2f" % [c.to_html(), rough, metal, emit]

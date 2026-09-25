@@ -62,11 +62,17 @@ static func upper(s: String) -> String:
 
 const KEEP := ["TRIVIA", "QUIZ", "SHIFT", "ARENA", "WASD", "PAD", "ENTER"]
 
+static func lang() -> String:
+	if Engine.is_editor_hint():
+		return "tr"
+	var i18n := _i18n()
+	return "tr" if i18n == null else String(i18n.get("lang"))
+
 static func tr_lang() -> bool:
 	if Engine.is_editor_hint():
 		return true
 	var i18n := _i18n()
-	return i18n == null or String(i18n.get("lang")) != "en"
+	return i18n == null or String(i18n.get("lang")) == "tr"
 
 ## Sözlükten metin; editörde (autoload yokken) anahtarı döndürür.
 static func t(key: String, args := {}) -> String:

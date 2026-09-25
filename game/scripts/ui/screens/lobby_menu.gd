@@ -230,8 +230,7 @@ func retext() -> void:
 func refresh_daily() -> void:
 	if not buttons.has("daily"):
 		return
-	var lang := "en" if I18n.lang == "en" else "tr"
-	var st := DailyWord.state(lang)
+	var st := DailyWord.state(I18n.lang)
 	buttons["daily"].caption = I18n.t("menu.daily.done" if bool(st.done) else "menu.daily.sub")
 
 func refresh_setup() -> void:

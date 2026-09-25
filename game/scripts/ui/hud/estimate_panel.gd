@@ -83,7 +83,7 @@ static func group(n: int, is_year := false) -> String:
 	var neg := n < 0
 	var s := str(absi(n))
 	if not is_year and s.length() > 3:
-		var sep := "." if Pal.tr_lang() else ","
+		var sep := String(NumberLine.THOUSANDS.get(Pal.lang(), ","))
 		var out := ""
 		var c := 0
 		for i in range(s.length() - 1, -1, -1):
@@ -337,15 +337,18 @@ func _draw_ruler(k: float) -> void:
 	if mode == "reveal":
 		_draw_answer(y)
 
+const SHORT_SUFFIX := {"tr": [" mn", " bin"], "en": ["M", "k"], "pl": [" mln", " tys."], "fr": [" M", " k"], "es": [" M", " mil"]}
+
 func _short(n: int) -> String:
 	if year:
 		return str(n)
-	var tr := Pal.tr_lang()
+	var l := Pal.lang()
+	var suf: Array = SHORT_SUFFIX.get(l, SHORT_SUFFIX.en)
 	if n >= 1000000:
 		var m := n / 1000000.0
-		return (str(snappedf(m, 0.1)).trim_suffix(".0") + (" mn" if tr else "M")).replace(".", "," if tr else ".")
+		return (str(snappedf(m, 0.1)).trim_suffix(".0") + String(suf[0])).replace(".", "." if l == "en" else ",")
 	if n >= 10000:
-		return str(n / 1000) + (" bin" if tr else "k")
+		return str(n / 1000) + String(suf[1])
 	return group(n)
 
 func _ticks() -> Array:

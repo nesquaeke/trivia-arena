@@ -90,6 +90,10 @@ func setup(p_game: Node) -> void:
 		I18n.toggle()
 		Profile.data.lang = I18n.lang
 		Profile.save())
+	card.lang_selected.connect(func(l: String):
+		I18n.set_lang(l)
+		Profile.data.lang = I18n.lang
+		Profile.save())
 	card.rename_requested.connect(_open_rename)
 	_build_rename()
 
@@ -153,8 +157,7 @@ func setup(p_game: Node) -> void:
 	if ErrorReporter.last_crash_report != "":
 		toast.call_deferred("show_toast", Pal.t("crash.title"), Pal.t("crash.desc"))
 	SteamService.achievement_unlocked.connect(func(id, title):
-		var row: Array = SteamService.ACHIEVEMENTS[id]
-		toast.show_toast(title, String(row[2] if Pal.tr_lang() else row[3]))
+		toast.show_toast(title, SteamService.ach_desc(id))
 		root.move_child(toast, -1))
 	pause.resume_requested.connect(func(): set_paused(false))
 	pause.lobby_requested.connect(func():
@@ -468,12 +471,15 @@ func prepare_shot(part: String) -> void:
 		"daily", "daily_done":
 			Profile.data.daily = {}
 			Profile.data.coins = 240
-			var ans := DailyWord.answer("tr")
-			for w in ["kitap", "deniz", "bulut"]:
-				if w != ans and DailyWord.state("tr").guesses.size() < 2:
-					DailyWord.submit("tr", w)
+			var dl := I18n.lang
+			var ans := DailyWord.answer(dl)
+			var tries: Dictionary = {"tr": ["kitap", "deniz", "bulut"], "en": ["crane", "sloth", "pride"], "pl": ["droga", "serce", "kolor"],
+				"fr": ["monde", "livre", "plage"], "es": ["mundo", "libro", "noche"]}
+			for w in tries.get(dl, tries.en):
+				if w != ans and DailyWord.state(dl).guesses.size() < 2:
+					DailyWord.submit(dl, w)
 			if part == "daily_done":
-				DailyWord.submit("tr", ans)
+				DailyWord.submit(dl, ans)
 			_open_daily()
 			if part == "daily":
 				word._cur = ans.substr(0, 2)

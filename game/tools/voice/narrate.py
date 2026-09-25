@@ -9,7 +9,7 @@ Gerçek bir seslendirme sanatçısıyla değiştirmek için: aynı adlarla .ogg
 dosyalarını bu klasöre koy (bu betiği bir daha çalıştırma). Oyun dosya
 adına bakar, sesin nereden geldiğini umursamaz.
 
-Kurulum (Ubuntu/Debian):  sudo apt install espeak-ng mbrola mbrola-tr1 mbrola-us2
+Kurulum (Ubuntu/Debian):  sudo apt install espeak-ng mbrola mbrola-tr1 mbrola-us2 mbrola-pl1 mbrola-fr1 mbrola-es2
                           pip install numpy scipy soundfile
 Kullanım:                 python3 game/tools/voice/narrate.py
 """
@@ -30,9 +30,13 @@ VOICES = {
     # dil: (espeak sesi, hız, perde)
     "tr": ("mb-tr1", 138, 44),
     "en": ("mb-us2", 150, 42),
+    "pl": ("mb-pl1", 140, 40),
+    "fr": ("mb-fr1", 150, 44),
+    "es": ("mb-es2", 150, 44),
 }
+LANG_IDX = {"tr": 0, "en": 1, "pl": 2, "fr": 3, "es": 4}
 
-# anahtar: (Türkçe, İngilizce)
+# anahtar: (Türkçe, İngilizce) — PL/FR/ES aşağıda MORE içinde
 LINES = {
     "welcome": ("Büyük Sahneye hoş geldiniz!", "Welcome to the Grand Stage!"),
     "ready": ("Hazır mısınız? Perde açılıyor!", "Are you ready? Curtain up!"),
@@ -64,6 +68,46 @@ LINES = {
     "steal": ("Soygun!", "A heist!"),
     "sabotage": ("Sabotaj!", "Sabotage!"),
 }
+
+
+# anahtar: (Lehçe, Fransızca, İspanyolca)
+MORE = {
+    "welcome": ("Witajcie na Wielkiej Scenie!", "Bienvenue sur la Grande Scène !", "¡Bienvenidos al Gran Escenario!"),
+    "ready": ("Gotowi? Kurtyna w górę!", "Vous êtes prêts ? Lever de rideau !", "¿Estáis listos? ¡Se levanta el telón!"),
+    "act1_arena": ("Akt pierwszy! Polowanie na kategorie.", "Premier acte ! La chasse aux catégories.", "¡Primer acto! La caza de categorías."),
+    "act2_arena": ("Akt drugi! Runda mocy.", "Deuxième acte ! La manche de pouvoir.", "¡Segundo acto! La ronda de poder."),
+    "act3_arena": ("Akt trzeci! Wygrywa ostatni na scenie.", "Troisième acte ! Le dernier debout gagne.", "¡Tercer acto! Gana el último en pie."),
+    "act1_cq": ("Akt pierwszy! Wznieście swoje zamki.", "Premier acte ! Bâtissez vos châteaux.", "¡Primer acto! Levantad vuestros castillos."),
+    "act2_cq": ("Akt drugi! Wyścig o ziemię.", "Deuxième acte ! La conquête des terres.", "¡Segundo acto! El reparto de tierras."),
+    "act3_cq": ("Akt trzeci! Nadchodzi czas wojny.", "Troisième acte ! L'ère de la guerre commence.", "¡Tercer acto! Comienza la era de la guerra."),
+    "estimate": ("Czas na wasze typy!", "À vos estimations !", "¡Haced vuestras apuestas!"),
+    "reveal": ("A prawidłowa odpowiedź to...", "Et la bonne réponse est...", "Y la respuesta correcta es..."),
+    "spot_on": ("W dziesiątkę!", "En plein dans le mille !", "¡Clavado!"),
+    "question": ("Nadchodzi pytanie!", "Voici la question !", "¡Ahí va la pregunta!"),
+    "correct": ("Prawidłowa odpowiedź!", "Bonne réponse !", "¡Respuesta correcta!"),
+    "nobody": ("Nikt nie zgadł!", "Personne n'a trouvé !", "¡Nadie la ha acertado!"),
+    "five": ("Zostało pięć sekund!", "Plus que cinq secondes !", "¡Quedan cinco segundos!"),
+    "duel": ("Pojedynek!", "Duel !", "¡Duelo!"),
+    "attack": ("Atak!", "À l'attaque !", "¡Al ataque!"),
+    "tower": ("Wieża upada!", "Une tour s'effondre !", "¡Cae una torre!"),
+    "castle_fall": ("Zamek upadł!", "Le château est tombé !", "¡El castillo ha caído!"),
+    "repel": ("Atak odparty!", "L'attaque est repoussée !", "¡Ataque rechazado!"),
+    "capture": ("Ziemia zmienia właściciela!", "La terre change de mains !", "¡La tierra cambia de manos!"),
+    "tie": ("Remis! Rozstrzygnie szacunek.", "Égalité ! Une estimation va trancher.", "¡Empate! Lo decidirá una estimación."),
+    "castle_pick": ("Wybierz miejsce na swój zamek!", "Choisis l'emplacement de ton château !", "¡Elige dónde se alza tu castillo!"),
+    "last_round": ("Ostatnia runda!", "Dernière manche !", "¡Última ronda!"),
+    "eliminated": ("Odpada!", "Éliminé !", "¡Eliminado!"),
+    "winner": ("A zwycięzcą tego wieczoru jest...", "Et le gagnant de la soirée est...", "Y el ganador de esta noche es..."),
+    "applause": ("Wielkie brawa!", "Une grande salve d'applaudissements !", "¡Un gran aplauso!"),
+    "steal": ("Skok na kasę!", "Un braquage !", "¡Un atraco!"),
+    "sabotage": ("Sabotaż!", "Sabotage !", "¡Sabotaje!"),
+}
+
+
+def line(key, lang):
+    if lang in ("tr", "en"):
+        return LINES[key][LANG_IDX[lang]]
+    return MORE[key][LANG_IDX[lang] - 2]
 
 
 def speak(text, voice, speed, pitch):
@@ -118,14 +162,17 @@ def announcer(x):
 
 
 def main():
-    want = sys.argv[1:]
+    want = [a for a in sys.argv[1:] if not a.startswith("--lang=")]
+    langs = [a[7:] for a in sys.argv[1:] if a.startswith("--lang=")] or list(VOICES)
     for lang, (voice, speed, pitch) in VOICES.items():
+        if lang not in langs:
+            continue
         folder = os.path.join(OUT, lang)
         os.makedirs(folder, exist_ok=True)
         for key, pair in LINES.items():
             if want and key not in want:
                 continue
-            text = pair[0] if lang == "tr" else pair[1]
+            text = line(key, lang)
             y = announcer(speak(text, voice, speed, pitch))
             sf.write(os.path.join(folder, key + ".ogg"), y, SR, format="OGG", subtype="VORBIS")
         print(lang, "tamam:", len(LINES), "replik")

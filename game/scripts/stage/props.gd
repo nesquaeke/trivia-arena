@@ -245,7 +245,10 @@ func jury_table(pos: Vector3) -> StaticBody3D:
 	for x: float in [-1.55, 1.55]:
 		_shape(s, _boxs(Vector3(0.1, 0.92, 0.9)), Vector3(x, 0.46, 0))
 	var plate := Label3D.new()
-	plate.text = "JÜRİ"
+	plate.text = _jury_word()
+	var i18n: Node = Engine.get_main_loop().root.get_node_or_null("/root/I18n") if Engine.get_main_loop() is SceneTree else null
+	if i18n:
+		i18n.changed.connect(func(_l): plate.text = _jury_word())
 	plate.font = Pal.display()
 	plate.font_size = 96
 	plate.pixel_size = 0.004
@@ -303,3 +306,10 @@ func crate(pos: Vector3, yaw := 0.0) -> RigidBody3D:
 	_mesh(b, _boxm(Vector3(0.62, 0.62, 0.08)), dark, Vector3(0, 0.3, 0), Vector3(0, 0, PI / 4), Vector3(1.2, 0.12, 1))
 	_shape(b, _boxs(Vector3(0.6, 0.6, 0.6)), Vector3(0, 0.3, 0))
 	return b
+
+const JURY := {"tr": "JÜRİ", "en": "JURY", "pl": "JURY", "fr": "JURY", "es": "JURADO"}
+
+static func _jury_word() -> String:
+	var ml := Engine.get_main_loop()
+	var i18n: Node = ml.root.get_node_or_null("/root/I18n") if ml is SceneTree else null
+	return String(JURY.get(String(i18n.get("lang")) if i18n else "tr", "JURY"))
