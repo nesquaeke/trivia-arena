@@ -1,0 +1,440 @@
+@744d2d6f
+Do którego morza wpada Nil?	Morze Czerwone	Morze Czarne	Morze Śródziemne	Morze Arabskie
+Dans quelle mer se jette le Nil ?	Mer Rouge	Mer Noire	Mer Méditerranée	Mer d'Arabie
+¿En qué mar desemboca el Nilo?	Mar Rojo	Mar Negro	Mar Mediterráneo	Mar Arábigo
+@e01b90f6
+Które miasto nazywane jest „Wielkim Jabłkiem”?	Nowy Jork	Los Angeles	Londyn	Paryż
+Quelle ville est surnommée « la Grosse Pomme » ?	New York	Los Angeles	Londres	Paris
+¿Qué ciudad es apodada «la Gran Manzana»?	Nueva York	Los Ángeles	Londres	París
+@77e8ee60
+Z jakiego kwiatu najbardziej słynie Holandia?	Tulipan	Róża	Storczyk	Stokrotka
+Pour quelle fleur les Pays-Bas sont-ils le plus connus ?	La tulipe	La rose	L'orchidée	La marguerite
+¿Por qué flor son más conocidos los Países Bajos?	Tulipán	Rosa	Orquídea	Margarita
+@39f60979
+Jaki jest wzór chemiczny wody?	O2	CO2	H2O	NaCl
+Quelle est la formule chimique de l'eau ?	O2	CO2	H2O	NaCl
+¿Cuál es la fórmula química del agua?	O2	CO2	H2O	NaCl
+@a91712f6
+Jaki gaz pobierają rośliny, by wytwarzać pokarm przy użyciu światła słonecznego?	Hel	Tlen	Dwutlenek węgla	Azot
+Quel gaz les plantes absorbent-elles pour fabriquer leur nourriture grâce à la lumière du soleil ?	Hélium	Oxygène	Dioxyde de carbone	Azote
+¿Qué gas absorben las plantas para fabricar su alimento con la luz del sol?	Helio	Oxígeno	Dióxido de carbono	Nitrógeno
+@da658549
+Jaki jest największy narząd ludzkiego ciała?	Skóra	Mózg	Płuca	Wątroba
+Quel est le plus grand organe du corps humain ?	La peau	Le cerveau	Les poumons	Le foie
+¿Cuál es el órgano más grande del cuerpo humano?	La piel	El cerebro	Los pulmones	El hígado
+@25aef50a
+W ilu °C zamarza woda na poziomie morza?	0	-10	10	32
+À combien de °C l'eau gèle-t-elle au niveau de la mer ?	0	-10	10	32
+¿A cuántos °C se congela el agua al nivel del mar?	0	-10	10	32
+@273884cc
+Co znajduje się w centrum naszego Układu Słonecznego?	Jowisz	Ziemia	Słońce	Księżyc
+Qu'y a-t-il au centre de notre Système solaire ?	Jupiter	La Terre	Le Soleil	La Lune
+¿Qué hay en el centro de nuestro sistema solar?	Júpiter	La Tierra	El Sol	La Luna
+@19528ba8
+Który metal jest silnie przyciągany przez magnesy?	Miedź	Żelazo	Złoto	Aluminium
+Quel métal les aimants attirent-ils fortement ?	Cuivre	Fer	Or	Aluminium
+¿Qué metal atraen con fuerza los imanes?	Cobre	Hierro	Oro	Aluminio
+@ec7f15ca
+Ile kolorów tradycyjnie wyróżnia się w tęczy?	5	9	7	6
+Combien de couleurs compte-t-on traditionnellement dans un arc-en-ciel ?	5	9	7	6
+¿Cuántos colores se cuentan tradicionalmente en el arcoíris?	5	9	7	6
+@d9639bef
+Co serce pompuje po całym ciele?	Żółć	Wodę	Krew	Powietrze
+Que pompe le cœur dans tout le corps ?	De la bile	De l'eau	Du sang	De l'air
+¿Qué bombea el corazón por todo el cuerpo?	Bilis	Agua	Sangre	Aire
+@584cb1fe
+Czy dźwięk może rozchodzić się w pustej przestrzeni (próżni)?	Nie	Tak, bardzo szybko	Tak, powoli	Tylko nocą
+Le son peut-il voyager dans le vide ?	Non	Oui, très vite	Oui, lentement	Seulement la nuit
+¿Puede viajar el sonido por el espacio vacío (el vacío)?	No	Sí, muy rápido	Sí, despacio	Solo de noche
+@901b9cc6
+W co zamienia się lód po podgrzaniu?	W piasek	W wodę	W sól	W szkło
+En quoi la glace se transforme-t-elle quand on la chauffe ?	En sable	En eau	En sel	En verre
+¿En qué se convierte el hielo al calentarlo?	En arena	En agua	En sal	En vidrio
+@ab188b9c
+Jakim gazem muszą oddychać ludzie?	Helem	Metanem	Dwutlenkiem węgla	Tlenem
+Quel gaz les humains doivent-ils respirer ?	Hélium	Méthane	Dioxyde de carbone	Oxygène
+¿Qué gas necesitan respirar los seres humanos?	Helio	Metano	Dióxido de carbono	Oxígeno
+@cfd13f83
+Jaką substancję dentyści polecają do ochrony zębów?	Cukier	Fluor	Kofeinę	Sól
+Quelle substance les dentistes recommandent-ils pour protéger les dents ?	Le sucre	Le fluor	La caféine	Le sel
+¿Qué sustancia recomiendan los dentistas para proteger los dientes?	Azúcar	Flúor	Cafeína	Sal
+@886e8735
+Co mierzy termometr?	Wilgotność	Wagę	Prędkość	Temperaturę
+Que mesure un thermomètre ?	L'humidité	Le poids	La vitesse	La température
+¿Qué mide un termómetro?	La humedad	El peso	La velocidad	La temperatura
+@c5d6e427
+Jaki dźwięk następuje po błysku pioruna?	Grzmot	Grad	Echo	Wiatr
+Quel bruit suit un éclair ?	Le tonnerre	La grêle	L'écho	Le vent
+¿Qué sonido sigue al destello de un rayo?	El trueno	El granizo	El eco	El viento
+@a6ee2587
+Do której nauki należy badanie skamieniałości dinozaurów?	Astronomia	Paleontologia	Meteorologia	Botanika
+L'étude des fossiles de dinosaures relève de quelle science ?	L'astronomie	La paléontologie	La météorologie	La botanique
+El estudio de los fósiles de dinosaurio pertenece a ¿qué ciencia?	Astronomía	Paleontología	Meteorología	Botánica
+@a5bf132b
+Jaka jest chemiczna nazwa soli kuchennej?	Azotan potasu	Wodorowęglan sodu	Węglan wapnia	Chlorek sodu
+Quel est le nom chimique du sel de table ?	Nitrate de potassium	Bicarbonate de sodium	Carbonate de calcium	Chlorure de sodium
+¿Cuál es el nombre químico de la sal de mesa?	Nitrato de potasio	Bicarbonato de sodio	Carbonato de calcio	Cloruro de sodio
+@cbf7c815
+Jaka jest najdłuższa kość w ludzkim ciele?	Piszczel	Kość ramienna	Kość udowa	Kręgosłup
+Quel est l'os le plus long du corps humain ?	Le tibia	L'humérus	Le fémur	La colonne vertébrale
+¿Cuál es el hueso más largo del cuerpo humano?	Tibia	Húmero	Fémur	Columna vertebral
+@9b314c5c
+Które z tych zwierząt NIE jest ssakiem?	Nietoperz	Wieloryb	Delfin	Krokodyl
+Lequel de ces animaux n'est PAS un mammifère ?	Chauve-souris	Baleine	Dauphin	Crocodile
+¿Cuál de estos NO es un mamífero?	Murciélago	Ballena	Delfín	Cocodrilo
+@3e3870d2
+Czego używają lekarze, by słuchać bicia serca?	Termometru	Mikroskopu	Teleskopu	Stetoskopu
+Qu'utilisent les médecins pour écouter les battements du cœur ?	Un thermomètre	Un microscope	Un télescope	Un stéthoscope
+¿Qué usan los médicos para escuchar los latidos del corazón?	Termómetro	Microscopio	Telescopio	Estetoscopio
+@067ca814
+Co jest naturalnym satelitą Ziemi?	Mars	Księżyc	Wenus	Słońce
+Quel est le satellite naturel de la Terre ?	Mars	La Lune	Vénus	Le Soleil
+¿Cuál es el satélite natural de la Tierra?	Marte	La Luna	Venus	El Sol
+@ab2cbe02
+Czym były przede wszystkim egipskie piramidy?	Grobowcami faraonów	Spichlerzami	Twierdzami	Obserwatoriami
+À quoi servaient principalement les pyramides d'Égypte ?	De tombeaux pour les pharaons	De greniers à grain	De forteresses	D'observatoires
+¿Para qué se construyeron principalmente las pirámides de Egipto?	Tumbas de faraones	Graneros	Fortalezas	Observatorios
+@5169408e
+Który ocean przepłynął Kolumb w 1492 roku?	Atlantycki	Arktyczny	Indyjski	Spokojny
+Quel océan Christophe Colomb a-t-il traversé en 1492 ?	Atlantique	Arctique	Indien	Pacifique
+¿Qué océano cruzó Colón en 1492?	Atlántico	Ártico	Índico	Pacífico
+@884dcc6b
+Kto jako pierwszy człowiek chodził po Księżycu?	Michael Collins	Buzz Aldrin	Neil Armstrong	Jurij Gagarin
+Qui fut le premier homme à marcher sur la Lune ?	Michael Collins	Buzz Aldrin	Neil Armstrong	Youri Gagarine
+¿Quién fue la primera persona en caminar sobre la Luna?	Michael Collins	Buzz Aldrin	Neil Armstrong	Yuri Gagarin
+@361eaf8f
+W którym roku zatonął Titanic?	1912	1898	1905	1920
+En quelle année le Titanic a-t-il coulé ?	1912	1898	1905	1920
+¿En qué año se hundió el Titanic?	1912	1898	1905	1920
+@4d1908fb
+W której słynnej budowli odbywały się walki rzymskich gladiatorów?	Koloseum	Panteon	Partenon	Forum
+Quel célèbre édifice accueillait les combats de gladiateurs romains ?	Le Colisée	Le Panthéon	Le Parthénon	Le Forum
+¿Qué famoso edificio acogía los combates de gladiadores romanos?	El Coliseo	El Panteón	El Partenón	El Foro
+@a3dee470
+Z którą starożytną cywilizacją najczęściej kojarzą się mumie?	Wikingowie	Aztekowie	Starożytny Egipt	Starożytna Grecja
+À quelle civilisation antique associe-t-on le plus les momies ?	Les Vikings	Les Aztèques	L'Égypte ancienne	La Grèce antique
+¿Con qué civilización antigua se asocian más las momias?	Los vikingos	Los aztecas	El antiguo Egipto	La antigua Grecia
+@b33e59a7
+Skąd pochodzili głównie wikingowie?	Z Włoch	Ze Skandynawii	Z Egiptu	Z Hiszpanii
+D'où venaient principalement les Vikings ?	D'Italie	De Scandinavie	D'Égypte	D'Espagne
+¿De dónde procedían principalmente los vikingos?	De Italia	De Escandinavia	De Egipto	De España
+@f312ef71
+W którym roku upadł mur berliński?	1989	1979	1961	1991
+En quelle année le mur de Berlin est-il tombé ?	1989	1979	1961	1991
+¿En qué año cayó el Muro de Berlín?	1989	1979	1961	1991
+@5457834b
+Gdzie narodziły się starożytne igrzyska olimpijskie?	We Włoszech	W Turcji	W Egipcie	W Grecji
+Où sont nés les Jeux olympiques antiques ?	En Italie	En Turquie	En Égypte	En Grèce
+¿Dónde comenzaron los antiguos Juegos Olímpicos?	En Italia	En Turquía	En Egipto	En Grecia
+@1e2492be
+Po co zbudowano Wielki Mur Chiński?	Dla ozdoby	Jako drogę	Do nawadniania	Do obrony
+Pourquoi a-t-on construit la Grande Muraille de Chine ?	Pour décorer	Comme route	Pour l'irrigation	Pour se défendre
+¿Para qué se construyó la Gran Muralla china?	Como decoración	Como carretera	Para el riego	Para la defensa
+@5aa81f73
+Samurajowie byli wojownikami którego kraju?	Chin	Mongolii	Japonii	Korei
+Les samouraïs étaient des guerriers de quel pays ?	La Chine	La Mongolie	Le Japon	La Corée
+Los samuráis eran guerreros de ¿qué país?	China	Mongolia	Japón	Corea
+@1e853761
+Autor Mony Lisy słynął także jako…	Podróżnik	Poeta	Król	Wynalazca
+Le peintre de la Joconde était aussi célèbre en tant que…	Explorateur	Poète	Roi	Inventeur
+El pintor de la Mona Lisa también era famoso como…	Explorador	Poeta	Rey	Inventor
+@8b1854c7
+Którzy bracia wykonali pierwszy lot samolotem z napędem w 1903 roku?	Bracia Lumière	Bracia Wright	Bracia Marx	Bracia Grimm
+Quels frères ont réalisé le premier vol motorisé en 1903 ?	Les frères Lumière	Les frères Wright	Les Marx Brothers	Les frères Grimm
+¿Qué hermanos realizaron el primer vuelo propulsado en 1903?	Los hermanos Lumière	Los hermanos Wright	Los hermanos Marx	Los hermanos Grimm
+@acdfae59
+Z którą epoką najbardziej kojarzą się rycerze?	Rewolucja przemysłowa	Średniowiecze	Epoka kamienia	Era kosmiczna
+À quelle époque associe-t-on le plus les chevaliers ?	La révolution industrielle	Le Moyen Âge	L'âge de pierre	L'ère spatiale
+¿Con qué época se asocian más los caballeros?	La Revolución Industrial	La Edad Media	La Edad de Piedra	La era espacial
+@71223e71
+Cesarzem którego kraju był Napoleon?	Hiszpanii	Rosji	Włoch	Francji
+Napoléon était l'empereur de quel pays ?	L'Espagne	La Russie	L'Italie	La France
+¿De qué país fue emperador Napoleón?	España	Rusia	Italia	Francia
+@0a092967
+W którym roku zakończyła się II wojna światowa?	1945	1918	1939	1950
+En quelle année la Seconde Guerre mondiale s'est-elle terminée ?	1945	1918	1939	1950
+¿En qué año terminó la Segunda Guerra Mundial?	1945	1918	1939	1950
+@1b06c830
+Która cywilizacja zbudowała Machu Picchu?	Majowie	Olmekowie	Inkowie	Aztekowie
+Quelle civilisation a construit le Machu Picchu ?	Les Mayas	Les Olmèques	Les Incas	Les Aztèques
+¿Qué civilización construyó Machu Picchu?	Los mayas	Los olmecas	Los incas	Los aztecas
+@72280ddf
+Który wynalazca rozpowszechnił druk w Europie?	Johannes Gutenberg	Leonardo da Vinci	Galileusz	Thomas Edison
+Quel inventeur a répandu l'imprimerie en Europe ?	Johannes Gutenberg	Léonard de Vinci	Galilée	Thomas Edison
+¿Qué inventor difundió la imprenta en Europa?	Johannes Gutenberg	Leonardo da Vinci	Galileo Galilei	Thomas Edison
+@44ce5411
+Jak nazywa się słynna piracka bandera?	Krzyż z czaszką	Jolly Roger	Union Jack	Czarna Perła
+Comment s'appelle le célèbre drapeau pirate ?	Croix de crâne	Jolly Roger	Union Jack	Black Pearl
+¿Cómo se llama la famosa bandera pirata?	Cruz de calavera	Jolly Roger	Union Jack	Perla Negra
+@c873324f
+W którym wieku odnaleziono grobowiec Tutanchamona?	W XVIII wieku	W XIX wieku	W XX wieku	W XXI wieku
+Au cours de quel siècle a-t-on découvert le tombeau de Toutânkhamon ?	XVIIIe siècle	XIXe siècle	XXe siècle	XXIe siècle
+¿En qué siglo se descubrió la tumba de Tutankamón?	Siglo XVIII	Siglo XIX	Siglo XX	Siglo XXI
+@f3d21eb6
+Jak ma na imię zabawka-kowboj w „Toy Story”?	Jessie	Rex	Chudy	Buzz
+Comment s'appelle le jouet cow-boy dans « Toy Story » ?	Jessie	Rex	Woody	Buzz
+¿Cómo se llama el juguete vaquero de «Toy Story»?	Jessie	Rex	Woody	Buzz
+@6e8f263d
+Do której szkoły magii chodzi Harry Potter?	Ilvermorny	Durmstrang	Hogwart	Beauxbatons
+Quelle école de sorcellerie Harry Potter fréquente-t-il ?	Ilvermorny	Durmstrang	Poudlard	Beauxbâtons
+¿A qué escuela de magia va Harry Potter?	Ilvermorny	Durmstrang	Hogwarts	Beauxbatons
+@9395dd95
+Jak nazywa się szablozęba wiewiórka goniąca żołędzia w „Epoce lodowcowej”?	Wiewiór	Maniek	Sid	Diego
+Comment s'appelle l'écureuil à dents de sabre qui court après son gland dans « L'Âge de glace » ?	Scrat	Manny	Sid	Diego
+¿Cómo se llama la ardilla dientes de sable que persigue una bellota en «Ice Age»?	Scrat	Manny	Sid	Diego
+@0ce3275f
+Jak ma na imię młody lew w „Królu Lwie”?	Mufasa	Nala	Simba	Skaza
+Comment s'appelle le jeune lion dans « Le Roi lion » ?	Mufasa	Nala	Simba	Scar
+¿Cómo se llama el joven león de «El rey león»?	Mufasa	Nala	Simba	Scar
+@2a7fb579
+Która seria filmów słynie z mieczy świetlnych?	Diuna	Gwiezdne wojny	Matrix	Star Trek
+Quelle saga de films est connue pour ses sabres laser ?	Dune	Star Wars	Matrix	Star Trek
+¿Qué saga de películas es famosa por sus sables de luz?	Dune	Star Wars	Matrix	Star Trek
+@7da05d14
+Która królowa w „Krainie lodu” ma lodowe moce?	Vaiana	Elsa	Anna	Ariel
+Dans « La Reine des neiges », quelle reine a des pouvoirs de glace ?	Vaiana	Elsa	Anna	Ariel
+En «Frozen», ¿qué reina tiene poderes de hielo?	Vaiana	Elsa	Anna	Ariel
+@d0cf0ed4
+Jak naprawdę nazywa się Spider-Man?	Peter Parker	Clark Kent	Tony Stark	Bruce Wayne
+Quel est le vrai nom de Spider-Man ?	Peter Parker	Clark Kent	Tony Stark	Bruce Wayne
+¿Cuál es el verdadero nombre de Spider-Man?	Peter Parker	Clark Kent	Tony Stark	Bruce Wayne
+@2ec5d7cd
+Jak nazywa się gadający osioł w „Shreku”?	Kot	Pierniczek	Osioł	Lord Farquaad
+Comment s'appelle l'âne qui parle dans « Shrek » ?	Le Chat	Ti-Biscuit	L'Âne	Lord Farquaad
+¿Cómo se llama el asno que habla en «Shrek»?	El Gato	Jengi	Asno	Lord Farquaad
+@62529d33
+Którego miasta broni Batman?	Metropolis	Star City	Central City	Gotham
+Quelle ville Batman protège-t-il ?	Metropolis	Star City	Central City	Gotham
+¿Qué ciudad protege Batman?	Metrópolis	Star City	Central City	Gotham
+@97065836
+Który aktor zagrał w „Titanicu” (1997)?	Johnny Depp	Brad Pitt	Leonardo DiCaprio	Tom Cruise
+Quel acteur a joué dans « Titanic » (1997) ?	Johnny Depp	Brad Pitt	Leonardo DiCaprio	Tom Cruise
+¿Qué actor protagonizó «Titanic» (1997)?	Johnny Depp	Brad Pitt	Leonardo DiCaprio	Tom Cruise
+@3412e833
+Jakiego koloru są głównie Minionki?	Fioletowe	Żółte	Zielone	Niebieskie
+De quelle couleur sont principalement les Minions ?	Violets	Jaunes	Verts	Bleus
+¿De qué color son principalmente los Minions?	Morados	Amarillos	Verdes	Azules
+@e3f90994
+Jaką rybą jest Nemo?	Płaszczką	Złotą rybką	Błazenkiem	Rekinem
+Quel poisson est Nemo ?	Une raie	Un poisson rouge	Un poisson-clown	Un requin
+¿Qué tipo de pez es Nemo?	Mantarraya	Pez dorado	Pez payaso	Tiburón
+@defddec7
+Jaki jest numer kodowy Jamesa Bonda?	070	700	007	001
+Quel est le matricule de James Bond ?	070	700	007	001
+¿Cuál es el número en clave de James Bond?	070	700	007	001
+@076bab22
+Jaka substancja jest słabością Supermana?	Złoto	Kryptonit	Vibranium	Adamantium
+Quelle substance est la faiblesse de Superman ?	L'or	La kryptonite	Le vibranium	L'adamantium
+¿Qué sustancia es la debilidad de Superman?	Oro	Kryptonita	Vibranio	Adamantium
+@2c30a4ca
+W którym kraju przyznaje się Oscary?	We Włoszech	W USA	W Wielkiej Brytanii	We Francji
+Dans quel pays décerne-t-on les Oscars ?	Italie	États-Unis	Royaume-Uni	France
+¿En qué país se entregan los Óscar?	Italia	EE. UU.	Reino Unido	Francia
+@d39641c9
+Jak ma na imię sowa Harry'ego Pottera?	Hedwiga	Errol	Fawkes	Krzywołap
+Comment s'appelle la chouette de Harry Potter ?	Hedwige	Errol	Fumseck	Pattenrond
+¿Cómo se llama la lechuza de Harry Potter?	Hedwig	Errol	Fawkes	Crookshanks
+@c8dfb267
+Kim jest czerwone auto wyścigowe w „Autach”?	Zygzak McQueen	Sally	Złomek	Doc Hudson
+Qui est la voiture de course rouge dans « Cars » ?	Flash McQueen	Sally	Martin	Doc Hudson
+¿Quién es el coche de carreras rojo de «Cars»?	Rayo McQueen	Sally	Mate	Doc Hudson
+@9c592473
+W którym filmie robot zbierający śmieci zakochuje się w EWIE?	WALL-E	Stalowy gigant	Roboty	Wielka szóstka
+Dans quel film un robot ramasseur de déchets tombe amoureux d'EVE ?	WALL-E	Le Géant de fer	Robots	Les Nouveaux Héros
+¿En qué película un robot que recoge basura se enamora de EVA?	WALL-E	El gigante de hierro	Robots	Big Hero 6
+@f51ceb92
+Co zostaje przywrócone do życia w „Parku Jurajskim”?	Kosmici	Dinozaury	Mamuty	Smoki
+Que ramène-t-on à la vie dans « Jurassic Park » ?	Des extraterrestres	Des dinosaures	Des mammouths	Des dragons
+¿Qué vuelve a la vida en «Parque Jurásico»?	Extraterrestres	Dinosaurios	Mamuts	Dragones
+@73701596
+Z jakiego dodatku słynie Włóczęga Charliego Chaplina?	Korona	Opaska na oko	Melonik i laseczka	Peleryna
+Pour quel accessoire le vagabond de Charlie Chaplin est-il connu ?	Une couronne	Un cache-œil	Un chapeau melon et une canne	Une cape
+¿Por qué accesorio es famoso el vagabundo de Charlie Chaplin?	Corona	Parche en el ojo	Bombín y bastón	Capa
+@3275455f
+Jakiego koloru są klawisze fortepianu?	Niebieskie i białe	Czarne i białe	Złote i czarne	Czerwone i białe
+De quelles couleurs sont les touches d'un piano ?	Bleu et blanc	Noir et blanc	Or et noir	Rouge et blanc
+¿De qué colores son las teclas del piano?	Azul y blanco	Negro y blanco	Dorado y negro	Rojo y blanco
+@5dd91b58
+Którego zespołu utworem jest „Bohemian Rhapsody”?	Queen	The Beatles	Rolling Stones	Pink Floyd
+« Bohemian Rhapsody » est une chanson de quel groupe ?	Queen	The Beatles	Rolling Stones	Pink Floyd
+«Bohemian Rhapsody» es una canción de ¿qué grupo?	Queen	The Beatles	Rolling Stones	Pink Floyd
+@73580676
+Z którego miasta pochodzili The Beatles?	Manchester	Liverpool	Londyn	Dublin
+De quelle ville venaient les Beatles ?	Manchester	Liverpool	Londres	Dublin
+¿De qué ciudad eran The Beatles?	Mánchester	Liverpool	Londres	Dublín
+@5c0ae137
+Ile strun ma standardowa gitara?	6	4	8	5
+Combien de cordes a une guitare standard ?	6	4	8	5
+¿Cuántas cuerdas tiene una guitarra estándar?	6	4	8	5
+@ee57bc9f
+Którego piosenkarza nazywano „Królem Popu”?	Elvis Presley	Prince	Michael Jackson	Freddie Mercury
+Quel chanteur était surnommé le « Roi de la pop » ?	Elvis Presley	Prince	Michael Jackson	Freddie Mercury
+¿A qué cantante llamaban el «Rey del Pop»?	Elvis Presley	Prince	Michael Jackson	Freddie Mercury
+@5e2cbaed
+Kogo nazywa się „Królem Rock and Rolla”?	Johnny Cash	Little Richard	Elvis Presley	Chuck Berry
+Qui est surnommé le « King du rock'n'roll » ?	Johnny Cash	Little Richard	Elvis Presley	Chuck Berry
+¿A quién se conoce como el «Rey del Rock and Roll»?	Johnny Cash	Little Richard	Elvis Presley	Chuck Berry
+@3b012271
+Do której rodziny instrumentów należą skrzypce?	Dęte drewniane	Strunowe	Dęte blaszane	Perkusyjne
+À quelle famille d'instruments appartient le violon ?	Les bois	Les cordes	Les cuivres	Les percussions
+¿A qué familia de instrumentos pertenece el violín?	Viento madera	Cuerda	Viento metal	Percusión
+@1e0b5b25
+Jakim instrumentem jest werbel?	Strunowym	Dętym	Klawiszowym	Perkusyjnym
+Quel type d'instrument est la caisse claire ?	À cordes	À vent	À clavier	À percussion
+¿Qué tipo de instrumento es la caja?	De cuerda	De viento	De teclado	De percusión
+@17cf1f97
+Jak nazywa się osoba prowadząca orkiestrę?	Autor	Kapitan	Dyrygent	Pilot
+Comment s'appelle la personne qui dirige un orchestre ?	L'auteur	Le capitaine	Le chef d'orchestre	Le pilote
+¿Cómo se llama la persona que dirige una orquesta?	Autor	Capitán	Director	Piloto
+@eb8f82b9
+Który szwedzki zespół śpiewa „Mamma Mia”?	Roxette	Europe	Ace of Base	ABBA
+Quel groupe suédois chante « Mamma Mia » ?	Roxette	Europe	Ace of Base	ABBA
+¿Qué grupo sueco canta «Mamma Mia»?	Roxette	Europe	Ace of Base	ABBA
+@af45c7c1
+Który instrument ma pedały, klawisze i struny w środku?	Fortepian	Harfa	Trąbka	Flet
+Quel instrument possède des pédales, des touches et des cordes à l'intérieur ?	Le piano	La harpe	La trompette	La flûte
+¿Qué instrumento tiene pedales, teclas y cuerdas dentro?	Piano	Arpa	Trompeta	Flauta
+@4741256a
+W którym kraju urodził się Mozart?	We Włoszech	W Niemczech	W Austrii	We Francji
+Dans quel pays est né Mozart ?	Italie	Allemagne	Autriche	France
+¿En qué país nació Mozart?	Italia	Alemania	Austria	Francia
+@9dc49d47
+Jak nazywają się słowa piosenki?	Tekst	Rytm	Nuty	Tempo
+Comment appelle-t-on les mots d'une chanson ?	Les paroles	Le rythme	Les notes	Le tempo
+¿Cómo se llaman las palabras de una canción?	Letra	Ritmo	Notas	Tempo
+@687573ee
+Z którym krajem najbardziej kojarzy się flamenco?	Portugalia	Meksyk	Hiszpania	Argentyna
+À quel pays associe-t-on le plus le flamenco ?	Portugal	Mexique	Espagne	Argentine
+¿Con qué país se asocia más el flamenco?	Portugal	México	España	Argentina
+@2d40f546
+Z którego kraju pochodzi Chopin, najsłynniejszy kompozytor tego kraju?	Austria	Polska	Węgry	Francja
+Chopin est le compositeur le plus célèbre de quel pays ?	Autriche	Pologne	Hongrie	France
+Chopin es el compositor más famoso de ¿qué país?	Austria	Polonia	Hungría	Francia
+@43c366b6
+W którym kraju narodziło się karaoke?	Japonia	Filipiny	USA	Korea
+Dans quel pays le karaoké est-il né ?	Japon	Philippines	États-Unis	Corée
+¿En qué país nació el karaoke?	Japón	Filipinas	EE. UU.	Corea
+@78a10ee1
+Z którym krajem najbardziej kojarzy się tango?	Kuba	Brazylia	Hiszpania	Argentyna
+À quel pays associe-t-on le plus le tango ?	Cuba	Brésil	Espagne	Argentine
+¿Con qué país se asocia más el tango?	Cuba	Brasil	España	Argentina
+@9d8d033e
+Z którego kraju pochodzi muzyka reggae?	Kuba	Jamajka	Nigeria	Brazylia
+De quel pays vient le reggae ?	Cuba	Jamaïque	Nigeria	Brésil
+¿De qué país procede el reggae?	Cuba	Jamaica	Nigeria	Brasil
+@111a306f
+Kiedy zwykle śpiewa się „Sto lat” (Happy Birthday)?	Na urodzinach	Przed meczami	Na weselach	W Nowy Rok
+Quand chante-t-on généralement « Joyeux anniversaire » ?	Aux anniversaires	Avant les matchs	Aux mariages	Au Nouvel An
+¿Cuándo se canta normalmente «Cumpleaños feliz»?	En los cumpleaños	Antes de los partidos	En las bodas	En Año Nuevo
+@4cfa4e49
+W który instrument się dmucha?	Harfa	Bęben	Skrzypce	Flet
+Dans quel instrument souffle-t-on ?	La harpe	Le tambour	Le violon	La flûte
+¿En qué instrumento se sopla?	Arpa	Tambor	Violín	Flauta
+@5ab2fe8b
+Jak ma na imię brat Mario?	Yoshi	Luigi	Toad	Wario
+Comment s'appelle le frère de Mario ?	Yoshi	Luigi	Toad	Wario
+¿Cómo se llama el hermano de Mario?	Yoshi	Luigi	Toad	Wario
+@c3625635
+Którą księżniczkę zwykle ratuje Mario?	Zeldę	Rosalinę	Peach	Daisy
+Quelle princesse Mario sauve-t-il habituellement ?	Zelda	Harmonie	Peach	Daisy
+¿A qué princesa suele rescatar Mario?	Zelda	Estela	Peach	Daisy
+@9f77ea7b
+Co je Pac-Man w labiryncie?	Grzybki	Kropki	Jabłka	Monety
+Que mange Pac-Man dans le labyrinthe ?	Des champignons	Des pac-gommes	Des pommes	Des pièces
+¿Qué come Pac-Man en el laberinto?	Setas	Puntos	Manzanas	Monedas
+@346fe62b
+Która figura szachowa porusza się tylko po przekątnej?	Skoczek	Goniec	Wieża	Hetman
+Quelle pièce d'échecs se déplace uniquement en diagonale ?	Le cavalier	Le fou	La tour	La dame
+¿Qué pieza de ajedrez se mueve solo en diagonal?	Caballo	Alfil	Torre	Reina
+@096a58d0
+Z czego zbudowany jest świat w „Minecrafcie”?	Z sześciokątów	Z bloków	Z kart	Z kul
+De quoi est fait le monde de « Minecraft » ?	D'hexagones	De blocs	De cartes	De sphères
+¿De qué está hecho el mundo de «Minecraft»?	Hexágonos	Bloques	Cartas	Esferas
+@8a5e89f4
+Jakim zwierzęciem jest Sonic?	Kotem	Lisem	Jeżem	Królikiem
+Quel animal est Sonic ?	Un chat	Un renard	Un hérisson	Un lapin
+¿Qué animal es Sonic?	Gato	Zorro	Erizo	Conejo
+@a2a7a133
+Co spada z góry w „Tetrisie”?	Kształty z czterech klocków	Karty	Gwiazdki	Piłki
+Qu'est-ce qui tombe du haut de l'écran dans « Tetris » ?	Des formes de quatre blocs	Des cartes	Des étoiles	Des balles
+¿Qué cae desde arriba en «Tetris»?	Figuras de cuatro bloques	Cartas	Estrellas	Pelotas
+@a691b654
+Z której serii pochodzi Pikachu?	Digimon	Zelda	Pokémon	Kirby
+De quelle série vient Pikachu ?	Digimon	Zelda	Pokémon	Kirby
+¿De qué saga es Pikachu?	Digimon	Zelda	Pokémon	Kirby
+@61831bb8
+Ile pól ma szachownica?	81	48	100	64
+Combien de cases compte un échiquier ?	81	48	100	64
+¿Cuántas casillas tiene un tablero de ajedrez?	81	48	100	64
+@c5f0dd7e
+Przeciwległe ścianki standardowej kostki do gry zawsze dają w sumie…	6	7	8	12
+Les faces opposées d'un dé standard font toujours au total…	6	7	8	12
+Las caras opuestas de un dado estándar siempre suman…	6	7	8	12
+@02894858
+Co atakują ptaki w „Angry Birds”?	Koty	Świnie	Krokodyle	Roboty
+Qu'attaquent les oiseaux dans « Angry Birds » ?	Des chats	Des cochons	Des crocodiles	Des robots
+En «Angry Birds», ¿a quién atacan los pájaros?	Gatos	Cerdos	Cocodrilos	Robots
+@1193369b
+Która karta w Monopoly pozwala wyjść z więzienia?	Podatek	Szansa	Wychodzisz z więzienia	Start
+Au Monopoly, quelle carte permet de sortir de prison ?	Impôts	Chance	Vous êtes libéré de prison	Case Départ
+En el Monopoly, ¿qué carta te saca de la cárcel?	Impuesto	Suerte	Queda libre de la cárcel	Salida
+@8e927cca
+Która figura szachowa porusza się w kształcie litery „L”?	Skoczek	Pionek	Król	Goniec
+Quelle pièce d'échecs se déplace en forme de « L » ?	Le cavalier	Le pion	Le roi	Le fou
+¿Qué pieza de ajedrez se mueve en forma de «L»?	Caballo	Peón	Rey	Alfil
+@9dc27ed7
+Jak nazywa się ukryty wróg w „Among Us”?	Zdrajca	Oszust	Szpieg	Złodziej
+Comment s'appelle l'ennemi caché dans « Among Us » ?	Le traître	L'imposteur	L'espion	Le voleur
+¿Cómo se llama el enemigo oculto en «Among Us»?	Traidor	Impostor	Espía	Ladrón
+@be8e44ea
+Kto jest bohaterem Nintendo w zielonej tunice?	Mario	Kirby	Link	Fox
+Qui est le héros de Nintendo en tunique verte ?	Mario	Kirby	Link	Fox
+¿Quién es el héroe de Nintendo con túnica verde?	Mario	Kirby	Link	Fox
+@d2fdb33d
+Jakie oznaczenia są na kostkach domina?	Litery	Serduszka	Oczka	Gwiazdki
+Quelles marques trouve-t-on sur les dominos ?	Des lettres	Des cœurs	Des points	Des étoiles
+¿Qué marcas tienen las fichas de dominó?	Letras	Corazones	Puntos	Estrellas
+@bfecda88
+Co wygrywa ostatni gracz na placu boju w klasycznym „Fortnite”?	Gwiezdny Medal	Królewskie Zwycięstwo (Victory Royale)	Smocza Korona	Złoty Puchar
+Que gagne le dernier joueur en vie dans le « Fortnite » classique ?	Médaille étoilée	Victoire royale	Couronne du dragon	Coupe d'or
+¿Qué gana el último jugador en pie en el «Fortnite» clásico?	Medalla estelar	Victoria magistral (Victory Royale)	Corona de dragón	Copa de oro
+@4c201ba0
+Ile kart ma standardowa talia (bez jokerów)?	60	48	52	54
+Combien de cartes compte un jeu standard (sans jokers) ?	60	48	52	54
+¿Cuántas cartas tiene una baraja estándar (sin comodines)?	60	48	52	54
+@6ad26901
+Ile ścian ma kostka Rubika?	4	8	9	6
+Combien de faces a un Rubik's Cube ?	4	8	9	6
+¿Cuántas caras tiene un cubo de Rubik?	4	8	9	6
+@e9d18f24
+Co łączy się w „Candy Crush”?	Owoce	Klejnoty	Cukierki	Zwierzęta
+Qu'associe-t-on dans « Candy Crush » ?	Des fruits	Des gemmes	Des bonbons	Des animaux
+¿Qué se combina en «Candy Crush»?	Frutas	Gemas	Caramelos	Animales
+@0d8060f1
+Ilu zawodników drużyny piłkarskiej przebywa na boisku?	11	9	12	10
+Combien de joueurs d'une équipe de football sont sur le terrain ?	11	9	12	10
+¿Cuántos jugadores tiene un equipo de fútbol en el campo?	11	9	12	10
+@0db5bc8f
+Jak nazywa się obręcz, do której rzuca się w koszykówce?	Siatka	Bramka	Obręcz	Słupek
+Comment appelle-t-on l'anneau dans lequel on tire au basket ?	Le filet	Le but	L'arceau	Le poteau
+¿Cómo se llama el aro por el que se tira en baloncesto?	Red	Portería	Aro	Poste
+@2e2e5efe
+Które angielskie słowo oznacza zero w tenisie?	Love	Duck	Nil	Zero
+Au tennis, quel mot anglais signifie zéro ?	Love	Duck	Nil	Zero
+En tenis, ¿qué palabra inglesa significa cero?	Love	Duck	Nil	Zero
+@843d37c4
+Ile jest kół olimpijskich?	6	7	5	4
+Combien y a-t-il d'anneaux olympiques ?	6	7	5	4
+¿Cuántos anillos olímpicos hay?	6	7	5	4
+@bfddca4e
+W którym sporcie używa się określeń „strike” i „spare”?	Kręgle	Baseball	Golf	Krykiet
+Quel sport utilise les termes « strike » et « spare » ?	Le bowling	Le baseball	Le golf	Le cricket
+¿Qué deporte usa los términos «strike» y «spare»?	Bolos	Béisbol	Golf	Críquet
+@65a715c6
+Jakim wyścigiem jest Tour de France?	Kolarskim	Samochodowym	Żeglarskim	Biegowym
+Quel type de course est le Tour de France ?	Cycliste	Automobile	À la voile	À pied
+¿Qué tipo de carrera es el Tour de Francia?	Ciclismo	Automovilismo	Vela	Atletismo
+@75139533
+Czym uderza się piłkę w golfie?	Rakietą	Kijem	Pałką	Paletką
+Avec quoi frappe-t-on la balle au golf ?	Une raquette	Un club	Une batte	Une pagaie
+¿Con qué se golpea la bola en el golf?	Raqueta	Palo	Bate	Pala

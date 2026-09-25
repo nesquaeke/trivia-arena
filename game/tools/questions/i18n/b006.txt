@@ -1,0 +1,440 @@
+@d01de4ec
+Ile mniej więcej czasu zajmuje Księżycowi okrążenie Ziemi?	Około miesiąca	Tydzień	Dzień	Rok
+Combien de temps environ la Lune met-elle pour faire le tour de la Terre ?	Environ un mois	Une semaine	Un jour	Un an
+¿Cuánto tarda aproximadamente la Luna en dar la vuelta a la Tierra?	Alrededor de un mes	Una semana	Un día	Un año
+@f033ba98
+Do czego służy teleskop?	Mierzy ciepło	Nagrywa dźwięk	Przybliża odległe obiekty	Mierzy czas
+À quoi sert un télescope ?	Mesurer la chaleur	Enregistrer le son	Rapprocher les objets lointains	Mesurer le temps
+¿Para qué sirve un telescopio?	Mide el calor	Graba sonido	Hace que lo lejano parezca cerca	Mide el tiempo
+@48faf234
+Na której planecie żyjemy?	Wenus	Ziemia	Mars	Pluton
+Sur quelle planète vivons-nous ?	Vénus	La Terre	Mars	Pluton
+¿En qué planeta vivimos?	Venus	La Tierra	Marte	Plutón
+@25b29ea4
+Jak zwykle śpią astronauci na orbicie?	W łóżku	Nigdy nie śpią	W śpiworze przypiętym do ściany	Balansując na stojąco
+Comment les astronautes dorment-ils habituellement en orbite ?	Dans un lit	Ils ne dorment jamais	Dans un sac de couchage attaché au mur	Debout en équilibre
+¿Cómo suelen dormir los astronautas en órbita?	En una cama	Nunca duermen	En un saco de dormir sujeto a la pared	De pie en equilibrio
+@49cca9dc
+Warkocz komety zawsze jest skierowany od…	Jowisza	Księżyca	Słońca	Ziemi
+La queue d'une comète pointe toujours à l'opposé de…	Jupiter	La Lune	Le Soleil	La Terre
+La cola de un cometa siempre apunta en dirección contraria a…	Júpiter	La Luna	El Sol	La Tierra
+@07994461
+Ile serc ma ośmiornica?	2	1	3	8
+Combien de cœurs a une pieuvre ?	2	1	3	8
+¿Cuántos corazones tiene un pulpo?	2	1	3	8
+@fb672b53
+Które zwierzę nie potrafi chodzić do tyłu?	Koń	Krab	Kangur	Kot
+Quel animal ne peut pas marcher à reculons ?	Le cheval	Le crabe	Le kangourou	Le chat
+¿Qué animal no puede caminar hacia atrás?	Caballo	Cangrejo	Canguro	Gato
+@acc21189
+Czym botanicznie jest banan?	Kwiatem	Warzywem	Zbożem	Jagodą
+Botaniquement, qu'est-ce qu'une banane ?	Une fleur	Un légume	Une céréale	Une baie
+Botánicamente, ¿qué es un plátano?	Una flor	Una verdura	Un cereal	Una baya
+@5ca3be79
+Badania sugerują, że krowy dają więcej mleka, gdy…	Biegają	Są w ciemności	Słuchają muzyki	Są same
+Selon certaines études, les vaches donnent plus de lait quand elles…	Courent	Sont dans le noir	Écoutent de la musique	Sont seules
+Algunos estudios indican que las vacas dan más leche cuando…	Corren	Están a oscuras	Escuchan música	Están solas
+@13461fd9
+Jak pszczoły miodne przekazują sobie wskazówki drogi?	Piszą	Śpiewają	Błyskają światłem	Tańczą
+Comment les abeilles se transmettent-elles les directions ?	Elles écrivent	Elles chantent	Elles clignotent	Elles dansent
+¿Cómo se indican el camino las abejas?	Escriben	Cantan	Emiten destellos	Bailan
+@43ac518d
+Które zwierzę potrafi spać z jednym okiem otwartym?	Delfin	Królik	Krowa	Żółw
+Quel animal peut dormir avec un œil ouvert ?	Le dauphin	Le lapin	La vache	La tortue
+¿Qué animal puede dormir con un ojo abierto?	Delfín	Conejo	Vaca	Tortuga
+@1faaeec9
+Dlaczego flamingi są różowe?	Przez oparzenia słoneczne	Rodzą się różowe	Przez to, co jedzą	Bo się wstydzą
+Pourquoi les flamants sont-ils roses ?	Des coups de soleil	Ils naissent roses	À cause de ce qu'ils mangent	Ils sont gênés
+¿Por qué son rosas los flamencos?	Por quemaduras solares	Nacen rosas	Por lo que comen	Porque les da vergüenza
+@88ee64ae
+Ile mniej więcej razy dziennie mruga człowiek?	150 000	15 000	1500	150
+Combien de fois environ une personne cligne-t-elle des yeux par jour ?	150 000	15 000	1 500	150
+¿Cuántas veces parpadea una persona al día, aproximadamente?	150.000	15.000	1.500	150
+@7773f31a
+Jak długo mogą spać niektóre ślimaki?	Nawet 3 lata	Nigdy nie śpią	3 minuty	3 godziny
+Combien de temps certains escargots peuvent-ils dormir ?	Jusqu'à 3 ans	Ils ne dorment jamais	3 minutes	3 heures
+¿Cuánto pueden llegar a dormir algunos caracoles?	Hasta 3 años	Nunca duermen	3 minutos	3 horas
+@3a3ccfcf
+Jaką część życia koty spędzają mniej więcej na spaniu?	Jedną dziesiątą	Wcale	Połowę	Dwie trzecie
+Quelle part de leur vie les chats passent-ils environ à dormir ?	Un dixième	Aucune	La moitié	Les deux tiers
+¿Qué parte de su vida pasan durmiendo los gatos, aproximadamente?	Una décima parte	Nada	La mitad	Dos tercios
+@996834f8
+Który owoc ma nasiona na zewnątrz?	Wiśnia	Truskawka	Banan	Jabłko
+Quel fruit porte ses graines à l'extérieur ?	La cerise	La fraise	La banane	La pomme
+¿Qué fruta lleva las semillas por fuera?	Cereza	Fresa	Plátano	Manzana
+@c702cd1d
+Jakiego koloru jest język żyrafy?	Biały	Fioletowoniebieski	Żółty	Różowy
+De quelle couleur est la langue d'une girafe ?	Blanche	Bleu-violet	Jaune	Rose
+¿De qué color es la lengua de la jirafa?	Blanca	Azul violáceo	Amarilla	Rosa
+@64dc6c3d
+Który ptak nie umie latać, ale biega bardzo szybko?	Struś	Wróbel	Orzeł	Jaskółka
+Quel oiseau ne vole pas mais court très vite ?	L'autruche	Le moineau	L'aigle	L'hirondelle
+¿Qué ave no vuela pero corre muy rápido?	Avestruz	Gorrión	Águila	Golondrina
+@f6ccca31
+Ile zębów może mieć ślimak?	Tysiące	32	2	Wcale
+Combien de dents un escargot peut-il avoir ?	Des milliers	32	2	Aucune
+¿Cuántos dientes puede tener un caracol?	Miles	32	2	Ninguno
+@69bda201
+Czym ludzie rzucają w siebie na hiszpańskim festiwalu „La Tomatina”?	Balonami z wodą	Pomarańczami	Pomidorami	Mąką
+Pendant « La Tomatina » en Espagne, que se lancent les gens ?	Des bombes à eau	Des oranges	Des tomates	De la farine
+En «La Tomatina» de España, ¿qué se lanza la gente?	Globos de agua	Naranjas	Tomates	Harina
+@49242bed
+Czy mrówki kiedykolwiek śpią?	Tak, w krótkich drzemkach	Tylko w niedziele	Nigdy	Tylko zimą
+Les fourmis dorment-elles ?	Oui, par petites siestes	Seulement le dimanche	Jamais	Seulement en hiver
+¿Duermen alguna vez las hormigas?	Sí, en siestas cortas	Solo los domingos	Nunca	Solo en invierno
+@9e9d7054
+Jakiego koloru jest skóra niedźwiedzia polarnego?	Czarna	Biała	Różowa	Żółta
+De quelle couleur est la peau de l'ours polaire ?	Noire	Blanche	Rose	Jaune
+¿De qué color es la piel del oso polar?	Negra	Blanca	Rosa	Amarilla
+@af79d4ac
+Jaki kształt mają kupki wombata?	Serca	Spirali	Sześcianu	Gwiazdy
+Quelle forme ont les crottes de wombat ?	Un cœur	Une spirale	Un cube	Une étoile
+¿Qué forma tiene la caca del wombat?	Corazón	Espiral	Cubo	Estrella
+@1a51bde1
+Jak powiedzieć „cześć” po hiszpańsku?	Ciao	Hallo	Hola	Cześć
+Comment dit-on « bonjour » en espagnol ?	Ciao	Hallo	Hola	Cześć
+¿Cuál de estos saludos es el español?	Ciao	Hallo	Hola	Cześć
+@76c74200
+Jak brzmi swobodne polskie powitanie?	Hola	Cześć	Salut	Hej hej hej
+Comment dit-on un « salut » décontracté en polonais ?	Hola	Cześć	Salut	Hej hej hej
+¿Cómo se dice un «hola» informal en polaco?	Hola	Cześć	Salut	Hej hej hej
+@1e7ed93e
+Jak jest „dziękuję” po angielsku?	Thank you	Sorry	Please	Hello
+Comment dit-on « merci » en anglais ?	Thank you	Sorry	Please	Hello
+¿Cómo se dice «gracias» en inglés?	Thank you	Sorry	Please	Hello
+@5486f0dd
+Co znaczy hiszpańskie słowo „gracias”?	Do widzenia	Cześć	Proszę	Dziękuję
+Que signifie le mot espagnol « gracias » ?	Au revoir	Bonjour	S'il te plaît	Merci
+¿Qué significa en inglés la palabra española «gracias»?	Goodbye	Hello	Please	Thank you
+@66186ab7
+Co znaczy polskie słowo „dziękuję” po angielsku?	Yes	Thank you	Good morning	No
+Que signifie le mot polonais « dziękuję » ?	Oui	Merci	Bonjour	Non
+¿Qué significa la palabra polaca «dziękuję»?	Sí	Gracias	Buenos días	No
+@59526b42
+Jak powiedzieć „cześć” po turecku?	Salve	Hola	Merhaba	Ahoj
+Comment dit-on « bonjour » en turc ?	Salve	Hola	Merhaba	Ahoj
+¿Cómo se dice «hola» en turco?	Salve	Hola	Merhaba	Ahoj
+@94aab0e1
+Co liczy się po hiszpańsku słowami „uno, dos, tres”?	Czerwony, niebieski, zielony	1, 2, 3	Pon., wt., śr.	A, B, C
+Que compte-t-on en espagnol avec « uno, dos, tres » ?	Rouge, bleu, vert	1, 2, 3	Lun., mar., mer.	A, B, C
+¿Qué se cuenta con «uno, dos, tres»?	Rojo, azul, verde	1, 2, 3	Lun., mar., miér.	A, B, C
+@c2b80a43
+Który język ma najwięcej rodzimych użytkowników?	Chiński mandaryński	Hindi	Angielski	Hiszpański
+Quelle langue compte le plus de locuteurs natifs ?	Le chinois mandarin	L'hindi	L'anglais	L'espagnol
+¿Qué idioma tiene más hablantes nativos?	Chino mandarín	Hindi	Inglés	Español
+@40ef138b
+Z którego języka pochodzi słowo „pizza”?	Z hiszpańskiego	Z włoskiego	Z greckiego	Z francuskiego
+De quelle langue vient le mot « pizza » ?	L'espagnol	L'italien	Le grec	Le français
+¿De qué idioma viene la palabra «pizza»?	Español	Italiano	Griego	Francés
+@10456d88
+Z którego języka pochodzi słowo „Kindergarten”?	Z niemieckiego	Z niderlandzkiego	Z polskiego	Ze szwedzkiego
+De quelle langue vient le mot « Kindergarten » ?	L'allemand	Le néerlandais	Le polonais	Le suédois
+¿De qué idioma viene la palabra «Kindergarten»?	Alemán	Neerlandés	Polaco	Sueco
+@908c61a1
+Co znaczy po hiszpańsku „adiós”?	Proszę	Cześć	Do widzenia	Smacznego
+Que signifie « adiós » en espagnol ?	S'il te plaît	Bonjour	Au revoir	Bon appétit
+¿Qué significa «adiós» en inglés?	Please	Hello	Goodbye	Enjoy your meal
+@4a5b9f33
+Ile liter ma alfabet turecki?	29	28	32	26
+Combien de lettres compte l'alphabet turc ?	29	28	32	26
+¿Cuántas letras tiene el alfabeto turco?	29	28	32	26
+@11746400
+Ile liter ma alfabet angielski?	29	24	26	28
+Combien de lettres compte l'alphabet anglais ?	29	24	26	28
+¿Cuántas letras tiene el alfabeto inglés?	29	24	26	28
+@f43e5f9b
+Z którego języka pochodzi słowo „karaoke”?	Z koreańskiego	Z tajskiego	Z japońskiego	Z chińskiego
+De quelle langue vient le mot « karaoké » ?	Le coréen	Le thaï	Le japonais	Le chinois
+¿De qué idioma viene la palabra «karaoke»?	Coreano	Tailandés	Japonés	Chino
+@b17699dc
+Jakim językiem mówi się w Brazylii?	Włoskim	Hiszpańskim	Portugalskim	Brazylijskim
+Quelle langue parle-t-on au Brésil ?	L'italien	L'espagnol	Le portugais	Le brésilien
+¿Qué idioma se habla en Brasil?	Italiano	Español	Portugués	Brasileño
+@84756ff1
+Jakie zwierzę to po hiszpańsku „gato”?	Kot	Kaczka	Pies	Koń
+Quel animal est « gato » en espagnol ?	Le chat	Le canard	Le chien	Le cheval
+¿Cómo se dice «gato» en inglés?	Cat	Duck	Dog	Horse
+@2a78fc11
+Co znaczy polskie „tak” po angielsku?	No	Thanks	Yes	Maybe
+Que signifie « tak » en polonais ?	Non	Merci	Oui	Peut-être
+¿Qué significa «tak» en polaco?	No	Gracias	Sí	Quizás
+@35a0b223
+Z którego języka pochodzi słowo „robot”?	Z niemieckiego	Z czeskiego	Z angielskiego	Z rosyjskiego
+De quelle langue vient le mot « robot » ?	L'allemand	Le tchèque	L'anglais	Le russe
+¿De qué idioma viene la palabra «robot»?	Alemán	Checo	Inglés	Ruso
+@854fddc2
+Słowo „ketchup” pochodzi pierwotnie z…	Meksyku	Azji Południowo-Wschodniej / Chin	USA	Włoch
+Le mot « ketchup » vient à l'origine…	Du Mexique	D'Asie du Sud-Est / de Chine	Des États-Unis	D'Italie
+La palabra «kétchup» procede originalmente de…	México	El Sudeste Asiático / China	EE. UU.	Italia
+@e23a2cf7
+Z którego języka pochodzi słowo „tsunami”?	Z japońskiego	Z indonezyjskiego	Z chińskiego	Z hawajskiego
+De quelle langue vient le mot « tsunami » ?	Le japonais	L'indonésien	Le chinois	L'hawaïen
+¿De qué idioma viene la palabra «tsunami»?	Japonés	Indonesio	Chino	Hawaiano
+@3d1feb36
+Które zwierzę robi „hav hav” po turecku, „guau guau” po hiszpańsku i „hau hau” po polsku?	Krowa	Kaczka	Pies	Kot
+Quel animal fait « hav hav » en turc, « guau guau » en espagnol et « hau hau » en polonais ?	La vache	Le canard	Le chien	Le chat
+¿Qué animal hace «hav hav» en turco, «guau guau» en español y «hau hau» en polaco?	Vaca	Pato	Perro	Gato
+@88d7f6ce
+W wyścigu wyprzedzasz osobę na drugim miejscu. Na którym miejscu jesteś teraz?	Trzecim	Ostatnim	Pierwszym	Drugim
+Dans une course, tu dépasses la personne en deuxième position. À quelle place es-tu maintenant ?	Troisième	Dernier	Premier	Deuxième
+En una carrera adelantas a quien va segundo. ¿En qué puesto vas ahora?	Tercero	Último	Primero	Segundo
+@419149d2
+Następna liczba: 2, 4, 8, 16, ?	32	64	20	24
+Nombre suivant : 2, 4, 8, 16, ?	32	64	20	24
+¿Qué número sigue: 2, 4, 8, 16…?	32	64	20	24
+@2c285531
+Następna liczba: 1, 1, 2, 3, 5, 8, ?	13	11	12	16
+Nombre suivant : 1, 1, 2, 3, 5, 8, ?	13	11	12	16
+¿Qué número sigue: 1, 1, 2, 3, 5, 8…?	13	11	12	16
+@1d1b09eb
+Ile godzin ma tydzień?	192	124	168	144
+Combien d'heures compte une semaine ?	192	124	168	144
+¿Cuántas horas tiene una semana?	192	124	168	144
+@b2ea5143
+Ile krawędzi ma sześcian?	6	10	8	12
+Combien d'arêtes a un cube ?	6	10	8	12
+¿Cuántas aristas tiene un cubo?	6	10	8	12
+@f9317b91
+Jeśli przetniesz linę w 3 miejscach, ile otrzymasz kawałków?	5	3	4	6
+Si tu coupes une corde à 3 endroits, combien de morceaux obtiens-tu ?	5	3	4	6
+Si cortas una cuerda por 3 sitios, ¿cuántos trozos obtienes?	5	3	4	6
+@324a24bf
+Co tu nie pasuje: jabłko, gruszka, marchewka, wiśnia?	Wiśnia	Jabłko	Marchewka	Gruszka
+Quel est l'intrus : pomme, poire, carotte, cerise ?	Cerise	Pomme	Carotte	Poire
+¿Cuál es el intruso: manzana, pera, zanahoria, cereza?	Cereza	Manzana	Zanahoria	Pera
+@a53df5fe
+Połowa z połowy tuzina jajek to ile jajek?	3	2	6	4
+La moitié d'une demi-douzaine d'œufs, c'est combien d'œufs ?	3	2	6	4
+La mitad de media docena de huevos son ¿cuántos huevos?	3	2	6	4
+@575b99d2
+Ile wynosi suma liczb od 1 do 10?	50	55	45	60
+Quelle est la somme des nombres de 1 à 10 ?	50	55	45	60
+¿Cuánto suman los números del 1 al 10?	50	55	45	60
+@5f1606fa
+Ile stopni daje suma kątów w trójkącie?	270	90	180	360
+La somme des angles d'un triangle fait combien de degrés ?	270	90	180	360
+¿Cuántos grados suman los ángulos de un triángulo?	270	90	180	360
+@616b5bd8
+Następna litera: A, C, E, G, ?	K	I	H	J
+Lettre suivante : A, C, E, G, ?	K	I	H	J
+¿Qué letra sigue: A, C, E, G…?	K	I	H	J
+@3ccfeb7c
+Jaka jest najmniejsza liczba pierwsza?	0	1	2	3
+Quel est le plus petit nombre premier ?	0	1	2	3
+¿Cuál es el número primo más pequeño?	0	1	2	3
+@364fcd55
+Co tu nie pasuje: kwadrat, trójkąt, koło, sześcian?	Sześcian	Koło	Kwadrat	Trójkąt
+Quel est l'intrus : carré, triangle, cercle, cube ?	Cube	Cercle	Carré	Triangle
+¿Cuál es el intruso: cuadrado, triángulo, círculo, cubo?	Cubo	Círculo	Cuadrado	Triángulo
+@f7f18d57
+Jaką odległość przejedzie w 30 minut samochód jadący 60 km/h?	45 km	20 km	60 km	30 km
+Quelle distance parcourt en 30 minutes une voiture roulant à 60 km/h ?	45 km	20 km	60 km	30 km
+¿Qué distancia recorre en 30 minutos un coche a 60 km/h?	45 km	20 km	60 km	30 km
+@fe831ecd
+Mama Mary ma troje dzieci: April, May i…?	July	March	June	Mary
+La mère de Marie a trois enfants : Avril, Mai et… ?	Juillet	Mars	Juin	Marie
+La madre de María tiene tres hijos: Abril, Mayo y… ¿quién?	Julio	Marzo	Junio	María
+@55b5da76
+Ile miesięcy w roku ma 31 dni?	7	6	5	8
+Combien de mois de l'année ont 31 jours ?	7	6	5	8
+¿Cuántos meses del año tienen 31 días?	7	6	5	8
+@64344bba
+Jaki kąt tworzą wskazówki zegara dokładnie o 3:00?	90	45	180	60
+À 3 h pile, quel angle forment les aiguilles d'une horloge ?	90	45	180	60
+A las 3:00 en punto, ¿qué ángulo forman las agujas del reloj?	90	45	180	60
+@18d1f02c
+Który kolor sygnalizacji świetlnej oznacza „stój”?	Żółty	Czerwony	Niebieski	Zielony
+Quelle couleur du feu signifie « stop » ?	Jaune	Rouge	Bleu	Vert
+¿Qué color del semáforo significa «alto»?	Amarillo	Rojo	Azul	Verde
+@973a2938
+Ile jest pór roku?	3	6	2	4
+Combien y a-t-il de saisons dans une année ?	3	6	2	4
+¿Cuántas estaciones tiene el año?	3	6	2	4
+@cbf33518
+Do czego służy głównie lodówka?	Do świecenia	Do prania ubrań	Do gotowania	Do chłodzenia jedzenia
+À quoi sert principalement un réfrigérateur ?	À éclairer	À laver le linge	À cuisiner	À garder les aliments au froid
+¿Para qué sirve principalmente una nevera?	Dar luz	Lavar la ropa	Cocinar	Mantener la comida fría
+@91cb2402
+W ilu °C wrze woda na poziomie morza?	80	90	120	100
+À combien de °C l'eau bout-elle au niveau de la mer ?	80	90	120	100
+¿A cuántos °C hierve el agua al nivel del mar?	80	90	120	100
+@1d37f026
+Ile godzin ma doba?	24	12	36	20
+Combien d'heures y a-t-il dans une journée ?	24	12	36	20
+¿Cuántas horas tiene un día?	24	12	36	20
+@a9d1ba80
+Co zwykle nakłada się na szczoteczkę do zębów?	Miód	Pastę do zębów	Szampon	Masło
+Que met-on généralement sur une brosse à dents ?	Du miel	Du dentifrice	Du shampoing	Du beurre
+¿Qué se pone normalmente en el cepillo de dientes?	Miel	Pasta de dientes	Champú	Mantequilla
+@c9d09cae
+Jak nazywa się małe kota?	Źrebię	Kociątko	Jagnię	Cielę
+Comment appelle-t-on un bébé chat ?	Un poulain	Un chaton	Un agneau	Un veau
+¿Cómo se llama la cría del gato?	Potro	Gatito	Cordero	Ternero
+@68eec548
+Które z tych przedmiotów to przybór kuchenny?	Pędzel	Chochla	Młotek	Śrubokręt
+Lequel de ces objets est un ustensile de cuisine ?	Pinceau	Louche	Marteau	Tournevis
+¿Cuál de estos es un utensilio de cocina?	Pincel	Cucharón	Martillo	Destornillador
+@48080a27
+Po której stronie wschodzi Słońce?	Na wschodzie	Na zachodzie	Na północy	Na południu
+De quel côté le Soleil se lève-t-il ?	À l'est	À l'ouest	Au nord	Au sud
+¿Por dónde sale el Sol?	Por el este	Por el oeste	Por el norte	Por el sur
+@b6d75f1e
+Jaki kształt ma zwykle piłka nożna?	Sześcianu	Kuli	Owalu	Walca
+Quelle forme a généralement un ballon de foot ?	Un cube	Une sphère	Un ovale	Un cylindre
+¿Qué forma suele tener un balón de fútbol?	Cubo	Esfera	Óvalo	Cilindro
+@3bba5fbd
+Co doręcza listonosz?	Tylko gazety	Pizzę	Mleko	Listy
+Que distribue le facteur ?	Seulement des journaux	Des pizzas	Du lait	Des lettres
+¿Qué reparte el cartero?	Solo periódicos	Pizza	Leche	Cartas
+@8b3f346b
+Kiedy ludzie najczęściej używają parasola?	W nocy	W domu zimą	Przy obiedzie	Gdy pada deszcz
+Quand utilise-t-on surtout un parapluie ?	La nuit	À l'intérieur en hiver	Au dîner	Quand il pleut
+¿Cuándo se usa sobre todo el paraguas?	De noche	En casa en invierno	En la cena	Cuando llueve
+@f93a4f62
+Ile to jest tuzin?	10	20	6	12
+Combien fait une douzaine ?	10	20	6	12
+¿Cuántas son una docena?	10	20	6	12
+@2b637f2e
+Co jest popularnym daniem na śniadanie?	Lody	Jajka	Popcorn	Pizza
+Lequel de ces aliments se mange couramment au petit-déjeuner ?	De la glace	Des œufs	Du pop-corn	De la pizza
+¿Cuál es un alimento habitual en el desayuno?	Helado	Huevos	Palomitas	Pizza
+@9f0a0eb5
+Ile mniej więcej tygodni ma rok?	48	52	56	60
+Combien de semaines environ compte une année ?	48	52	56	60
+¿Cuántas semanas tiene un año, aproximadamente?	48	52	56	60
+@b4b3ce3d
+W którą stronę wskazuje igła kompasu?	Na zachód	Na północ	Na wschód	Na południe
+Vers où pointe l'aiguille d'une boussole ?	L'ouest	Le nord	L'est	Le sud
+¿Hacia dónde apunta la aguja de una brújula?	Oeste	Norte	Este	Sur
+@59113e3a
+Która część samochodu go zatrzymuje?	Wycieraczki	Klakson	Hamulce	Kierownica
+Quelle partie de la voiture sert à l'arrêter ?	Les essuie-glaces	Le klaxon	Les freins	Le volant
+¿Qué parte del coche sirve para detenerlo?	Limpiaparabrisas	Claxon	Frenos	Volante
+@ffa846cb
+Jakim zwierzęciem jest Tom z „Toma i Jerry'ego”?	Myszą	Psem	Królikiem	Kotem
+Dans « Tom et Jerry », quel animal est Tom ?	Une souris	Un chien	Un lapin	Un chat
+En «Tom y Jerry», ¿qué animal es Tom?	Ratón	Perro	Conejo	Gato
+@d2fb5b3c
+Gdzie mieszka SpongeBob?	Pod kamieniem	Na statku	W ananasie	W zamku
+Où habite Bob l'éponge ?	Sous un rocher	Sur un bateau	Dans un ananas	Dans un château
+¿Dónde vive Bob Esponja?	Bajo una roca	En un barco	En una piña	En un castillo
+@ac1c3c08
+Co je Popeye, żeby mieć siłę?	Szpinak	Rybę	Marchewkę	Miód
+Que mange Popeye pour être fort ?	Des épinards	Du poisson	Des carottes	Du miel
+¿Qué come Popeye para tener fuerza?	Espinacas	Pescado	Zanahorias	Miel
+@a6730996
+Jakie jedzenie Garfield kocha najbardziej?	Rybę	Hamburgera	Pizzę	Lazanię
+Quel plat Garfield aime-t-il le plus ?	Le poisson	Le hamburger	La pizza	Les lasagnes
+¿Qué comida le gusta más a Garfield?	Pescado	Hamburguesa	Pizza	Lasaña
+@ee0b6463
+Co Kubuś Puchatek kocha najbardziej?	Miód	Mleko	Ciasto	Jabłka
+Qu'est-ce que Winnie l'ourson aime le plus ?	Le miel	Le lait	Le gâteau	Les pommes
+¿Qué es lo que más le gusta a Winnie the Pooh?	La miel	La leche	El pastel	Las manzanas
+@73960c47
+Jaką rybą jest Nemo?	Rekinem	Błazenkiem	Złotą rybką	Włócznikiem
+Quel poisson est Nemo ?	Un requin	Un poisson-clown	Un poisson rouge	Un espadon
+¿Qué pez es Nemo?	Tiburón	Pez payaso	Pez dorado	Pez espada
+@043dd4de
+Jakiego koloru są Smerfy?	Niebieskie	Zielone	Czerwone	Żółte
+De quelle couleur sont les Schtroumpfs ?	Bleus	Verts	Rouges	Jaunes
+¿De qué color son los Pitufos?	Azules	Verdes	Rojos	Amarillos
+@72542edf
+Kto stworzył Myszkę Miki?	Walt Disney	Pixar	Hanna-Barbera	Warner Bros.
+Qui a créé Mickey Mouse ?	Walt Disney	Pixar	Hanna-Barbera	Warner Bros.
+¿Quién creó a Mickey Mouse?	Walt Disney	Pixar	Hanna-Barbera	Warner Bros.
+@d9b8609e
+Kim jest Shrek?	Osłem	Smokiem	Rycerzem	Ogrem
+Qu'est-ce que Shrek ?	Un âne	Un dragon	Un chevalier	Un ogre
+¿Qué es Shrek?	Un asno	Un dragón	Un caballero	Un ogro
+@cdba4693
+Który owoc uwielbiają Minionki?	Kiwi	Truskawkę	Jabłko	Banana
+Quel fruit les Minions adorent-ils ?	Le kiwi	La fraise	La pomme	La banane
+¿Qué fruta adoran los Minions?	Kiwi	Fresa	Manzana	Plátano
+@1032e7f2
+Co się dzieje, gdy Pinokio kłamie?	Rosną mu uszy	Rośnie mu nos	Płacze	Czerwienieje
+Que se passe-t-il quand Pinocchio ment ?	Ses oreilles poussent	Son nez s'allonge	Il pleure	Il rougit
+¿Qué pasa cuando Pinocho miente?	Le crecen las orejas	Le crece la nariz	Llora	Se pone rojo
+@8c785580
+Jak ma na imię kowboj w „Toy Story”?	Chudy	Jessie	Buzz	Rex
+Comment s'appelle le cow-boy de « Toy Story » ?	Woody	Jessie	Buzz	Rex
+¿Cómo se llama el vaquero de «Toy Story»?	Woody	Jessie	Buzz	Rex
+@327bcc25
+Z którego kraju pochodzi LEGO?	Z USA	Z Niemiec	Ze Szwecji	Z Danii
+De quel pays vient LEGO ?	États-Unis	Allemagne	Suède	Danemark
+¿De qué país es LEGO?	EE. UU.	Alemania	Suecia	Dinamarca
+@f7b70d02
+Która królowa w „Krainie lodu” ma lodowe moce?	Ariel	Elsa	Roszpunka	Anna
+Dans « La Reine des neiges », quelle reine a des pouvoirs de glace ?	Ariel	Elsa	Raiponce	Anna
+En «Frozen», ¿qué reina tiene poderes de hielo?	Ariel	Elsa	Rapunzel	Anna
+@50c149b6
+Jak ma na imię lwiątko w „Królu Lwie”?	Nala	Mufasa	Skaza	Simba
+Comment s'appelle le lionceau du « Roi lion » ?	Nala	Mufasa	Scar	Simba
+¿Cómo se llama el cachorro de león de «El rey león»?	Nala	Mufasa	Scar	Simba
+@79b14f6e
+Jakim zwierzęciem jest Peppa?	Królikiem	Kotem	Krową	Świnką
+Quel animal est Peppa ?	Un lapin	Un chat	Une vache	Un cochon
+¿Qué animal es Peppa?	Conejo	Gato	Vaca	Cerdita
+@9792480f
+Jakim zwierzęciem jest Scooby-Doo?	Psem	Kotem	Niedźwiedziem	Koniem
+Quel animal est Scooby-Doo ?	Un chien	Un chat	Un ours	Un cheval
+¿Qué animal es Scooby-Doo?	Perro	Gato	Oso	Caballo
+@5024d08f
+Czego słynnie brakuje Keloğlanowi (turecki bohater ludowy)?	Nosa	Domu	Butów	Włosów
+Que manque-t-il célèbrement à Keloğlan (héros populaire turc) ?	Un nez	Une maison	Des chaussures	Des cheveux
+¿Qué le falta famosamente a Keloğlan (héroe popular turco)?	La nariz	Una casa	Zapatos	Pelo
+@2b5de405
+Na którym zwierzęciu Nasreddin Hodża słynnie jeździ tyłem?	Na ośle	Na krowie	Na koniu	Na wielbłądzie
+Sur quel animal Nasreddin Hodja monte-t-il célèbrement à l'envers ?	Un âne	Une vache	Un cheval	Un chameau
+¿En qué animal monta famosamente al revés Nasreddín Hodja?	Burro	Vaca	Caballo	Camello
+@344ee0ab
+Który francuski malarz współtworzył kubizm razem z Pablem Picassem w Paryżu na początku XX wieku?	Georges Braque	Fernand Léger	Juan Gris	Robert Delaunay
+Quel peintre français a cofondé le cubisme avec Pablo Picasso à Paris au début du XXe siècle ?	Georges Braque	Fernand Léger	Juan Gris	Robert Delaunay
+¿Qué pintor francés cofundó el cubismo junto a Pablo Picasso en el París de principios del siglo XX?	Georges Braque	Fernand Léger	Juan Gris	Robert Delaunay
+@c4ad5697
+Który buntowniczy mistrz baroku zrewolucjonizował malarstwo europejskie, doprowadzając do granic dramatyczny kontrast światła i cienia (światłocień)?	Caravaggio	Peter Paul Rubens	Diego Velázquez	Artemisia Gentileschi
+Quel maître rebelle du baroque a révolutionné la peinture européenne en poussant à l'extrême le contraste entre ombre et lumière (clair-obscur) ?	Le Caravage	Pierre Paul Rubens	Diego Vélasquez	Artemisia Gentileschi
+¿Qué rebelde maestro del Barroco revolucionó la pintura europea llevando al límite el contraste entre luz y sombra (claroscuro)?	Caravaggio	Pedro Pablo Rubens	Diego Velázquez	Artemisia Gentileschi
+@7f8dd75e
+Jaki jest pełny tytuł obrazu Claude'a Moneta z 1872 roku, od którego impresjonizm wziął swoją nazwę?	Lilie wodne	Impresja, wschód słońca	Pole maków	Stogi siana
+Quel est le titre complet du tableau de Claude Monet (1872) qui a donné son nom à l'impressionnisme ?	Les Nymphéas	Impression, soleil levant	Les Coquelicots	Les Meules
+¿Cuál es el título completo del cuadro de Claude Monet de 1872 que dio nombre al impresionismo?	Los nenúfares	Impresión, sol naciente	Campo de amapolas	Almiares
+@e127d559
+Kto zapoczątkował puentylizm, stawiając obok siebie drobne kropki czystego koloru, które mieszają się optycznie w oku widza?	Georges Seurat	Paul Signac	Camille Pissarro	Odilon Redon
+Qui a été le pionnier du pointillisme, en juxtaposant de petits points de couleur pure qui se mélangent dans l'œil du spectateur ?	Georges Seurat	Paul Signac	Camille Pissarro	Odilon Redon
+¿Quién fue el pionero del puntillismo, que yuxtapone pequeños puntos de color puro que se mezclan en el ojo del espectador?	Georges Seurat	Paul Signac	Camille Pissarro	Odilon Redon
+@95c7e03a
+Który francuski pisarz i poeta napisał Manifest surrealizmu z 1924 roku, tworząc filozoficzne podstawy surrealizmu?	Guillaume Apollinaire	André Breton	Louis Aragon	Paul Éluard
+Quel écrivain et poète français a rédigé le Manifeste du surréalisme de 1924, fondement philosophique du mouvement ?	Guillaume Apollinaire	André Breton	Louis Aragon	Paul Éluard
+¿Qué escritor y poeta francés redactó el Manifiesto surrealista de 1924, base filosófica del surrealismo?	Guillaume Apollinaire	André Breton	Louis Aragon	Paul Éluard
+@3c66e636
+Która wpływowa niemiecka szkoła sztuki i projektowania została założona w Weimarze przez architekta Waltera Gropiusa w 1919 roku?	Wchutiemas	Bauhaus	École des Beaux-Arts	De Stijl
+Quelle influente école allemande d'art et de design a été fondée à Weimar par l'architecte Walter Gropius en 1919 ?	Vkhoutemas	Bauhaus	École des Beaux-Arts	De Stijl
+¿Qué influyente escuela alemana de arte y diseño fundó el arquitecto Walter Gropius en Weimar en 1919?	Vjutemás	Bauhaus	École des Beaux-Arts	De Stijl
+@abaef004
+Jaki kształt łuku odróżnia architekturę gotyckich kościołów od półkolistych łuków stylu romańskiego?	Łuk półkolisty	Łuk ostry (ostrołuk)	Łuk podkowiasty	Łuk obniżony
+Quelle forme d'arc distingue l'architecture religieuse gothique des arcs en plein cintre du style roman ?	Arc en plein cintre	Arc brisé (ogive)	Arc outrepassé	Arc surbaissé
+¿Qué forma de arco distingue la arquitectura religiosa gótica de los arcos de medio punto del románico?	Arco de medio punto	Arco apuntado (ojival)	Arco de herradura	Arco rebajado
+@563e5257
+Który sferyczny, trójkątny element architektoniczny pozwala oprzeć okrągłą kopułę na kwadratowym przęśle, jak słynnie w Hagii Sofii?	Trompa	Pendentyw (żagielek)	Bęben	Sklepienie
+Quel élément architectural triangulaire et sphérique permet de poser une coupole ronde sur un plan carré, comme à Sainte-Sophie ?	Trompe	Pendentif	Tambour	Voûte
+¿Qué elemento arquitectónico triangular y esférico permite colocar una cúpula circular sobre una planta cuadrada, como en Santa Sofía?	Trompa	Pechina	Tambor	Bóveda
+@4d1efb42
+Kto namalował „Rozstrzelanie powstańców madryckich 3 maja 1808”, przedstawiające egzekucję hiszpańskich powstańców przez wojska Napoleona w Madrycie?	Francisco Goya	Diego Velázquez	El Greco	Bartolomé Murillo
+Qui a peint « Tres de mayo », qui montre l'exécution de résistants espagnols par les troupes d'occupation napoléoniennes à Madrid ?	Francisco Goya	Diego Vélasquez	Le Greco	Bartolomé Murillo
+¿Quién pintó «El 3 de mayo en Madrid» (Los fusilamientos), que muestra la ejecución de patriotas españoles por las tropas napoleónicas?	Francisco de Goya	Diego Velázquez	El Greco	Bartolomé Murillo
+@916db1ab
+Który amerykański rzeźbiarz zrewolucjonizował rzeźbę XX wieku, wynajdując wiszące, delikatnie wyważone mobile poruszane przez podmuchy powietrza?	Alexander Calder	Jean Tinguely	Naum Gabo	Barbara Hepworth
+Quel sculpteur américain a révolutionné la sculpture du XXe siècle en inventant les mobiles suspendus, en équilibre délicat et mus par l'air ?	Alexander Calder	Jean Tinguely	Naum Gabo	Barbara Hepworth
+¿Qué escultor estadounidense revolucionó la escultura del siglo XX inventando los móviles colgantes, en delicado equilibrio y movidos por el aire?	Alexander Calder	Jean Tinguely	Naum Gabo	Barbara Hepworth
+@e1e597d1
+Który antyartystyczny ruch awangardowy narodził się w Zurychu podczas I wojny światowej, by wyśmiać mieszczańską logikę i szaleństwo zmechanizowanej rzezi?	Futuryzm	Dadaizm	Konstruktywizm	Ekspresjonizm
+Quel mouvement d'avant-garde anti-art est né à Zurich pendant la Première Guerre mondiale pour ridiculiser la logique bourgeoise et la folie du massacre mécanisé ?	Futurisme	Dadaïsme	Constructivisme	Expressionnisme
+¿Qué movimiento vanguardista antiarte surgió en Zúrich durante la Primera Guerra Mundial para ridiculizar la lógica burguesa y la locura de la matanza mecanizada?	Futurismo	Dadaísmo	Constructivismo	Expresionismo
+@4d2687cc
+Jaki tytuł nadał Marcel Duchamp swojemu skandalicznemu ready-made z 1917 roku – odwróconemu porcelanowemu pisuarowi podpisanemu „R. Mutt”?	Koło rowerowe	Fontanna	Suszarka do butelek	Przed złamaniem ręki
+Quel titre Marcel Duchamp a-t-il donné à son ready-made scandaleux de 1917, un urinoir en porcelaine renversé signé « R. Mutt » ?	Roue de bicyclette	Fontaine	Porte-bouteilles	In Advance of the Broken Arm
+¿Qué título dio Marcel Duchamp a su escandaloso ready-made de 1917, un urinario de porcelana invertido firmado «R. Mutt»?	Rueda de bicicleta	La fuente	Portabotellas	En previsión del brazo roto
+@03fadb0f
+Który włoski rzeźbiarz baroku mistrzowsko oddał w litym marmurze ciało, liście i ruch w dziele „Apollo i Dafne”?	Gian Lorenzo Bernini	Francesco Borromini	Antonio Canova	Alessandro Algardi
+Quel sculpteur baroque italien a magistralement rendu la chair, les feuilles et le mouvement dans le marbre avec « Apollon et Daphné » ?	Le Bernin	Francesco Borromini	Antonio Canova	Alessandro Algardi
+¿Qué escultor barroco italiano plasmó magistralmente en mármol la carne, las hojas y el movimiento en «Apolo y Dafne»?	Gian Lorenzo Bernini	Francesco Borromini	Antonio Canova	Alessandro Algardi

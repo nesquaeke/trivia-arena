@@ -1,0 +1,440 @@
+@b2315d13
+Które fikcyjne miasto wzorowane na Los Angeles jest głównym miejscem akcji Grand Theft Auto V?	Liberty City	Vice City	Los Santos	San Fierro
+Quelle ville fictive inspirée de Los Angeles sert de cadre principal à Grand Theft Auto V ?	Liberty City	Vice City	Los Santos	San Fierro
+¿Qué ciudad ficticia inspirada en Los Ángeles es el escenario principal de Grand Theft Auto V?	Liberty City	Vice City	Los Santos	San Fierro
+@bc463505
+Który żółty stworek typu elektrycznego jest kultową maskotką serii Pokémon?	Charmander	Squirtle	Pikachu	Bulbasaur
+Quelle créature jaune de type électrik est la mascotte emblématique de la franchise Pokémon ?	Salamèche	Carapuce	Pikachu	Bulbizarre
+¿Qué criatura amarilla de tipo eléctrico es la mascota emblemática de la saga Pokémon?	Charmander	Squirtle	Pikachu	Bulbasaur
+@ecd4470a
+Jaki zawód i tytuł ma Geralt z Rivii, bohater serii Wiedźmin?	Mag	Wiedźmin	Rycerz	Pirat
+Quels sont le métier et le titre de Geralt de Riv, le héros de la série The Witcher ?	Mage	Sorceleur	Chevalier	Pirate
+¿Cuál es la profesión y el título de Geralt de Rivia, protagonista de la saga The Witcher?	Mago	Brujo	Caballero	Pirata
+@28cdd3cf
+Jak nazywa się sarkastyczna sztuczna inteligencja nadzorująca komory testowe w Portal i Portal 2?	HAL 9000	GLaDOS	Cortana	SHODAN
+Comment s'appelle l'intelligence artificielle sarcastique qui supervise les salles de test de Portal et Portal 2 ?	HAL 9000	GLaDOS	Cortana	SHODAN
+¿Cómo se llama la sarcástica inteligencia artificial que supervisa las salas de pruebas de Portal y Portal 2?	HAL 9000	GLaDOS	Cortana	SHODAN
+@1bced8f1
+Co zbiera maskotka Segi, jeż Sonic, na poziomach, by chronić się przed obrażeniami?	Złote pierścienie	Gwiazdki	Diamenty	Grzybki
+Que ramasse Sonic le hérisson, la mascotte de Sega, pour se protéger des dégâts ?	Des anneaux d'or	Des étoiles	Des diamants	Des champignons
+¿Qué recoge Sonic, la mascota de Sega, en los niveles para protegerse del daño?	Anillos dorados	Estrellas	Diamantes	Setas
+@aef59b99
+Jaki tytuł nosi przepowiedziany bohater z duszą smoka, w którego wciela się gracz w The Elder Scrolls V: Skyrim?	Nerevaryjczyk	Bohater Cyrodiil	Dovahkiin (Smocze Dziecię)	Siwobrody
+Quel titre porte le héros prophétisé à l'âme de dragon incarné par le joueur dans The Elder Scrolls V: Skyrim ?	Nérévarine	Champion de Cyrodiil	Dovahkiin (Enfant de dragon)	Grisebarbe
+¿Qué título tiene el héroe profetizado con alma de dragón que encarna el jugador en The Elder Scrolls V: Skyrim?	Nerevarino	Campeón de Cyrodiil	Dovahkiin (Sangre de Dragón)	Barbagrís
+@44bbecce
+Która japońska korporacja technologiczna wprowadziła w 1994 roku pierwszą konsolę PlayStation?	Nintendo	Sega	Sony	Bandai
+Quelle entreprise technologique japonaise a lancé la première console PlayStation en 1994 ?	Nintendo	Sega	Sony	Bandai
+¿Qué empresa tecnológica japonesa lanzó la primera consola PlayStation en 1994?	Nintendo	Sega	Sony	Bandai
+@f4139721
+Kim jest milczący fizyk teoretyczny z łomem, bohater serii Half-Life?	Barney Calhoun	Gordon Freeman	Eli Vance	G-Man
+Qui est le physicien théoricien muet armé d'un pied-de-biche, héros de la série Half-Life ?	Barney Calhoun	Gordon Freeman	Eli Vance	G-Man
+¿Quién es el silencioso físico teórico armado con una palanca, protagonista de la saga Half-Life?	Barney Calhoun	Gordon Freeman	Eli Vance	G-Man
+@44975286
+Która gra battle royale od Epic Games słynie z wyjątkowej mechaniki budowania?	PUBG	Fortnite	Apex Legends	Warzone
+Quel battle royale développé par Epic Games est célèbre pour son système unique de construction ?	PUBG	Fortnite	Apex Legends	Warzone
+¿Qué battle royale desarrollado por Epic Games es famoso por su mecánica única de construcción?	PUBG	Fortnite	Apex Legends	Warzone
+@f2151b11
+Jak nazywa się spartański wojownik, który toczy wojnę z bogami Olimpu i mitologii nordyckiej w God of War?	Kratos	Ares	Atreus	Dejmos
+Qui est le guerrier spartiate qui fait la guerre au panthéon olympien et à la mythologie nordique dans God of War ?	Kratos	Arès	Atreus	Déimos
+¿Quién es el guerrero espartano que lucha contra los dioses del Olimpo y la mitología nórdica en God of War?	Kratos	Ares	Atreus	Deimos
+@a603bb84
+Który sztandarowy wojownik ze Street Fightera rzuca słynny niebieski pocisk energii zwany „Hadouken”?	Ken	Ryu	Guile	Chun-Li
+Quel combattant emblématique de Street Fighter lance le fameux projectile d'énergie bleue appelé « Hadouken » ?	Ken	Ryu	Guile	Chun-Li
+¿Qué luchador insignia de Street Fighter lanza el famoso proyectil de energía azul llamado «Hadouken»?	Ken	Ryu	Guile	Chun-Li
+@3f70cdd1
+Jaki punkt kontrolny w serii Dark Souls odnawia zdrowie, uzupełnia przedmioty i służy do odrodzenia po śmierci?	Latarnia	Ognisko	Ołtarz	Posąg
+Quel point de contrôle permet de regagner de la vie, de recharger ses objets et de réapparaître après la mort dans la série Dark Souls ?	Lanterne	Feu de camp	Autel	Statue
+¿Qué punto de control sirve para recuperar vida, reponer objetos y reaparecer tras morir en la saga Dark Souls?	Farol	Hoguera	Altar	Estatua
+@835729e9
+Jak nazywa się rola graczy, którzy w grze Among Us mają po cichu zabijać członków załogi?	Oszust	Szpieg	Sabotażysta	Duch
+Dans le jeu de déduction Among Us, quel rôle est confié aux joueurs chargés d'éliminer secrètement l'équipage ?	Imposteur	Espion	Saboteur	Fantôme
+En el juego de deducción Among Us, ¿qué rol tienen los jugadores que deben matar en secreto a la tripulación?	Impostor	Espía	Saboteador	Fantasma
+@3f68e3d3
+Które dwie przeciwne frakcje walczą ze sobą w scenariuszach rozbrajania bomby i ratowania zakładników w serii Counter-Strike?	Żołnierze i szpiedzy	Terroryści i antyterroryści	Policja i mafia	Rebelianci i egzekutorzy
+Quelles sont les deux factions qui s'affrontent dans les scénarios de désamorçage de bombe et de sauvetage d'otages de Counter-Strike ?	Soldats et espions	Terroristes et antiterroristes	Police et mafia	Rebelles et agents
+¿Qué dos bandos se enfrentan en los escenarios de desactivar bombas y rescatar rehenes de la saga Counter-Strike?	Soldados y espías	Terroristas y antiterroristas	Policía y mafia	Rebeldes y agentes
+@f57b5bbe
+Jak nazywa się fikcyjny język, którym mówią postacie w serii The Sims?	Esperanto	Język minionków	Simlish	Bełkot
+Comment s'appelle la langue imaginaire parlée par les personnages de la série Les Sims ?	L'espéranto	Le minionais	Le simlish	Le charabia
+¿Cómo se llama el idioma ficticio que hablan los personajes de la saga Los Sims?	Esperanto	Idioma minion	Simlish	Galimatías
+@a6097f40
+Jaka jest główna mapa 5 na 5 w rywalizacyjnej grze MOBA League of Legends od Riot Games?	Wyjąca Otchłań	Pokręcony Las	Summoner's Rift	Kryształowa Blizna
+Quelle est la carte principale en 5 contre 5 du MOBA compétitif League of Legends de Riot Games ?	Abîme hurlant	Forêt torturée	La Faille de l'invocateur	Cicatrice de cristal
+¿Cuál es el mapa principal 5 contra 5 del MOBA competitivo League of Legends de Riot Games?	Abismo de los Lamentos	Bosque Retorcido	La Grieta del Invocador	Cicatriz de Cristal
+@563678a9
+Które dwie główne frakcje prowadzą nieustanną wojnę w uniwersum World of Warcraft?	Horda i Przymierze	Światło i Pustka	Imperium i Republika	Klany i gildie
+Quelles sont les deux grandes factions en conflit permanent dans l'univers de World of Warcraft ?	La Horde et l'Alliance	La Lumière et le Vide	L'Empire et la République	Les clans et les guildes
+¿Qué dos grandes facciones están en guerra perpetua en el universo de World of Warcraft?	La Horda y la Alianza	La Luz y el Vacío	El Imperio y la República	Clanes y gremios
+@5a3165db
+Jak nazywa się brytyjska archeolożka, która bada zaginione ruiny i podziemne grobowce w serii Tomb Raider?	Jill Valentine	Lara Croft	Elena Fisher	Claire Redfield
+Qui est l'héroïne archéologue britannique qui explore des ruines perdues et des tombeaux souterrains dans Tomb Raider ?	Jill Valentine	Lara Croft	Elena Fisher	Claire Redfield
+¿Quién es la arqueóloga británica que explora ruinas perdidas y tumbas subterráneas en la saga Tomb Raider?	Jill Valentine	Lara Croft	Elena Fisher	Claire Redfield
+@73016bb8
+Która symulacja tenisa stołowego na automaty wydana przez Atari w 1972 roku stała się jednym z pierwszych komercyjnych przebojów wideo?	Pong	Breakout	Space Invaders	Asteroids
+Quelle simulation de tennis de table d'arcade sortie par Atari en 1972 fut l'un des tout premiers succès commerciaux du jeu vidéo ?	Pong	Breakout	Space Invaders	Asteroids
+¿Qué simulador de tenis de mesa para recreativas lanzado por Atari en 1972 fue uno de los primeros éxitos comerciales del videojuego?	Pong	Breakout	Space Invaders	Asteroids
+@d8711646
+Które tajne bractwo walczy z templariuszami na przestrzeni dziejów w serii Assassin's Creed?	Klan Cienia	Bractwo Asasynów	Iluminaci	Masoni
+Quelle confrérie secrète combat les Templiers à travers l'histoire dans la saga Assassin's Creed ?	Le clan de l'Ombre	La confrérie des Assassins	Les Illuminati	Les francs-maçons
+¿Qué hermandad secreta combate a los templarios a lo largo de la historia en la saga Assassin's Creed?	Clan de la Sombra	Hermandad de los Asesinos	Illuminati	Masones
+@5cf7993b
+Master Chief, słynny opancerzony superżołnierz SPARTAN-II, jest głównym bohaterem której serii FPS science fiction?	Destiny	Gears of War	Halo	Killzone
+Le Master Chief, super-soldat SPARTAN-II en armure, est le héros principal de quelle série de FPS de science-fiction ?	Destiny	Gears of War	Halo	Killzone
+El Jefe Maestro, el icónico supersoldado SPARTAN-II con armadura, ¿de qué saga de disparos de ciencia ficción es protagonista?	Destiny	Gears of War	Halo	Killzone
+@d85a699b
+Kto jest głównym grywalnym banitą w westernowej epopei Rockstara Red Dead Redemption 2?	John Marston	Dutch van der Linde	Arthur Morgan	Micah Bell
+Qui est le hors-la-loi jouable principal de l'épopée western de Rockstar Red Dead Redemption 2 ?	John Marston	Dutch van der Linde	Arthur Morgan	Micah Bell
+¿Quién es el forajido protagonista jugable de la epopeya del oeste de Rockstar Red Dead Redemption 2?	John Marston	Dutch van der Linde	Arthur Morgan	Micah Bell
+@f573543c
+Jak nazywa się jasnowłosa kreskówkowa maskotka w kombinezonie, pokazująca kciuk w górę w serii Fallout?	Pip-Boy	Vault Boy	Nuka Man	Wasteland Bob
+Comment s'appelle la mascotte blonde en combinaison qui lève le pouce dans la série Fallout ?	Pip-Boy	Vault Boy	Nuka Man	Wasteland Bob
+¿Cómo se llama la mascota rubia con mono que levanta el pulgar en la saga Fallout?	Pip-Boy	Vault Boy	Nuka Man	Wasteland Bob
+@0029a0bd
+Która megakorporacja odpowiada za epidemie bioorganicznych zombie i T-Wirusa w Resident Evil?	Aperture Science	Umbrella Corporation	Abstergo	Vault-Tec
+Quelle mégacorporation est directement responsable des épidémies de zombies et du virus T dans Resident Evil ?	Aperture Science	Umbrella Corporation	Abstergo	Vault-Tec
+¿Qué megacorporación es responsable de los brotes zombis y del virus T en Resident Evil?	Aperture Science	Umbrella Corporation	Abstergo	Vault-Tec
+@31513850
+Która przebojowa seria gier mobilnych pokazuje ptaki wystrzeliwane z procy przeciw zielonym świniom kradnącym jajka?	Flappy Bird	Cut the Rope	Angry Birds	Fruit Ninja
+Quelle série de jeux mobiles à succès met en scène des oiseaux lancés au lance-pierre contre des cochons verts voleurs d'œufs ?	Flappy Bird	Cut the Rope	Angry Birds	Fruit Ninja
+¿Qué exitosa saga de juegos para móvil enfrenta a pájaros lanzados con tirachinas contra cerdos verdes que roban huevos?	Flappy Bird	Cut the Rope	Angry Birds	Fruit Ninja
+@b5c692fd
+Który piekielny ninja w żółtym stroju z Mortal Kombat rzuca włócznię na linie, krzycząc „Get over here!”?	Sub-Zero	Scorpion	Reptile	Noob Saibot
+Quel ninja infernal vêtu de jaune dans Mortal Kombat lance une lance à corde en criant « Get over here! » ?	Sub-Zero	Scorpion	Reptile	Noob Saibot
+¿Qué ninja infernal de amarillo de Mortal Kombat lanza un arpón con cuerda gritando «Get over here!»?	Sub-Zero	Scorpion	Reptile	Noob Saibot
+@c333af77
+Kim jest skacząca w czasie brytyjska bohaterka z dwoma pistoletami, maskotka strzelanki Blizzarda Overwatch?	Widowmaker	D.Va	Tracer	Mercy
+Qui est l'héroïne britannique qui saute dans le temps avec ses deux pistolets, mascotte du jeu de tir Overwatch de Blizzard ?	Fatale	D.Va	Tracer	Ange
+¿Quién es la heroína británica con dos pistolas que salta en el tiempo, mascota del shooter Overwatch de Blizzard?	Widowmaker	D.Va	Tracer	Mercy
+@d3d50441
+Jak nazywa się ogromna kraina fantasy rządzona przez królową Marikę, w której toczy się akcja Elden Ring?	Lordran	Drangleic	Ziemie Pomiędzy	Boletaria
+Comment s'appelle le vaste royaume fantastique gouverné par la reine Marika où se déroule Elden Ring ?	Lordran	Drangleic	L'Entre-terre	Boletaria
+¿Cómo se llama el vasto reino de fantasía gobernado por la reina Márika donde transcurre Elden Ring?	Lordran	Drangleic	Las Tierras Intermedias	Boletaria
+@49b3db66
+Do jakiego gatunku naczelnych należy tytułowy antagonista porywający Pauline w klasyku automatowym Donkey Kong z 1981 roku?	Szympans	Goryl	Orangutan	Pawian
+À quelle espèce de grand primate appartient l'antagoniste qui enlève Pauline dans le classique d'arcade Donkey Kong (1981) ?	Chimpanzé	Gorille	Orang-outan	Babouin
+¿A qué especie de gran primate pertenece el antagonista que secuestra a Pauline en el clásico arcade Donkey Kong (1981)?	Chimpancé	Gorila	Orangután	Babuino
+@d3a52d2f
+Jakim przydomkiem gracze powszechnie nazywają opancerzonego marine zabijającego demony, bohatera Dooma?	Duke Nukem	Doom Slayer (Doomguy)	Serious Sam	B.J. Blazkowicz
+Quel surnom les joueurs donnent-ils universellement au marine en armure qui massacre les démons dans Doom ?	Duke Nukem	Doom Slayer (Doomguy)	Serious Sam	B.J. Blazkowicz
+¿Qué apodo usan todos los jugadores para el marine acorazado que mata demonios en Doom?	Duke Nukem	Doom Slayer (Doomguy)	Serious Sam	B.J. Blazkowicz
+@e6ead6fc
+Który kraj jest największy na świecie pod względem powierzchni?	Kanada	Chiny	Rosja	Stany Zjednoczone
+Quel est le plus grand pays du monde par sa superficie ?	Canada	Chine	Russie	États-Unis
+¿Cuál es el país más grande del mundo por superficie?	Canadá	China	Rusia	Estados Unidos
+@1d663a52
+Która rzeka jest najdłuższa na świecie, przepływa przez Afrykę i uchodzi do Morza Śródziemnego?	Amazonka	Nil	Kongo	Missisipi
+Quel est le plus long fleuve du monde, qui traverse l'Afrique et se jette dans la Méditerranée ?	L'Amazone	Le Nil	Le Congo	Le Mississippi
+¿Cuál es el río más largo del mundo, que atraviesa África y desemboca en el Mediterráneo?	Amazonas	Nilo	Congo	Misisipi
+@6e4940f3
+Która góra w Himalajach, wznosząca się na 8848 m n.p.m., jest najwyższym szczytem Ziemi?	K2	Kanczendzonga	Mount Everest	Lhotse
+Situé dans l'Himalaya à 8 848 mètres d'altitude, quel sommet est le plus haut de la Terre ?	K2	Kangchenjunga	Mont Everest	Lhotse
+Situado en el Himalaya a 8848 metros sobre el nivel del mar, ¿qué monte es el pico más alto de la Tierra?	K2	Kanchenjunga	Monte Everest	Lhotse
+@e21cb57f
+Jaka jest oficjalna stolica Australii?	Sydney	Melbourne	Brisbane	Canberra
+Quelle est la capitale officielle de l'Australie ?	Sydney	Melbourne	Brisbane	Canberra
+¿Cuál es la capital oficial de Australia?	Sídney	Melbourne	Brisbane	Canberra
+@55ebe520
+Który ocean ma największą powierzchnię i najgłębszy rów na Ziemi?	Ocean Spokojny	Ocean Atlantycki	Ocean Indyjski	Ocean Arktyczny
+Quel océan a la plus grande superficie et la fosse la plus profonde de la Terre ?	Océan Pacifique	Océan Atlantique	Océan Indien	Océan Arctique
+¿Qué océano tiene la mayor superficie y la fosa más profunda de la Tierra?	Océano Pacífico	Océano Atlántico	Océano Índico	Océano Ártico
+@b5744574
+Która cieśnina oddziela Europę od Afryki i łączy Morze Śródziemne z Oceanem Atlantyckim?	Cieśnina Ormuz	Cieśnina Gibraltarska	Bab al-Mandab	Cieśnina Kaletańska
+Quel détroit sépare l'Europe de l'Afrique et relie la Méditerranée à l'océan Atlantique ?	Détroit d'Ormuz	Détroit de Gibraltar	Bab-el-Mandeb	Pas de Calais
+¿Qué estrecho separa Europa de África y une el Mediterráneo con el océano Atlántico?	Estrecho de Ormuz	Estrecho de Gibraltar	Bab el-Mandeb	Paso de Calais
+@3d8f0db1
+Jaka jest stolica Japonii?	Kioto	Osaka	Tokio	Hiroszima
+Quelle est la capitale du Japon ?	Kyoto	Osaka	Tokyo	Hiroshima
+¿Cuál es la capital de Japón?	Kioto	Osaka	Tokio	Hiroshima
+@7125f0c9
+Która jest największą gorącą pustynią świata, pokrywającą większość Afryki Północnej?	Gobi	Kalahari	Atakama	Sahara
+Quel est le plus grand désert chaud du monde, qui couvre la majeure partie de l'Afrique du Nord ?	Désert de Gobi	Désert du Kalahari	Désert d'Atacama	Désert du Sahara
+¿Cuál es el mayor desierto cálido del mundo, que cubre casi todo el norte de África?	Desierto de Gobi	Desierto del Kalahari	Desierto de Atacama	Desierto del Sáhara
+@929d3a35
+Która jest największą wyspą świata niezaliczaną do kontynentów?	Grenlandia	Madagaskar	Borneo	Nowa Gwinea
+Quelle est la plus grande île du monde qui n'est pas considérée comme un continent ?	Groenland	Madagascar	Bornéo	Nouvelle-Guinée
+¿Cuál es la isla más grande del mundo que no se considera un continente?	Groenlandia	Madagascar	Borneo	Nueva Guinea
+@409d9963
+Które pasmo górskie, ciągnące się przez Amerykę Południową, jest najdłuższym łańcuchem górskim na lądzie?	Góry Skaliste	Andy	Alpy	Ural
+Quelle chaîne de montagnes, qui traverse l'Amérique du Sud, est la plus longue chaîne continentale du monde ?	Montagnes Rocheuses	Cordillère des Andes	Alpes	Oural
+¿Qué cordillera, que recorre Sudamérica, es la más larga del mundo en tierra firme?	Montañas Rocosas	Cordillera de los Andes	Alpes	Montes Urales
+@77ebe4d0
+Jaka jest oficjalna stolica Kanady?	Toronto	Montreal	Vancouver	Ottawa
+Quelle est la capitale officielle du Canada ?	Toronto	Montréal	Vancouver	Ottawa
+¿Cuál es la capital oficial de Canadá?	Toronto	Montreal	Vancouver	Ottawa
+@5afaa912
+Które niepodległe państwo jest najmniejsze na świecie zarówno pod względem powierzchni, jak i ludności?	Watykan	Monako	San Marino	Liechtenstein
+Quel État indépendant est le plus petit du monde en superficie comme en population ?	Vatican	Monaco	Saint-Marin	Liechtenstein
+¿Cuál es el estado independiente más pequeño del mundo tanto en superficie como en población?	Ciudad del Vaticano	Mónaco	San Marino	Liechtenstein
+@c8d0e4ac
+Jaka jest stolica Brazylii?	Rio de Janeiro	São Paulo	Brasília	Salvador
+Quelle est la capitale du Brésil ?	Rio de Janeiro	São Paulo	Brasília	Salvador
+¿Cuál es la capital de Brasil?	Río de Janeiro	São Paulo	Brasilia	Salvador
+@be210bdf
+Które wąskie ramię Oceanu Atlantyckiego oddziela Francję od Wielkiej Brytanii?	Kanał La Manche	Morze Północne	Morze Bałtyckie	Morze Irlandzkie
+Quel bras étroit de l'océan Atlantique sépare la France du Royaume-Uni ?	La Manche	Mer du Nord	Mer Baltique	Mer d'Irlande
+¿Qué estrecho brazo del océano Atlántico separa Francia del Reino Unido?	Canal de la Mancha	Mar del Norte	Mar Báltico	Mar de Irlanda
+@004941c6
+Które jezioro na Syberii jest najgłębszym jeziorem słodkowodnym świata?	Morze Kaspijskie	Jezioro Wiktorii	Bajkał	Jezioro Górne
+Situé en Sibérie, quel lac est le lac d'eau douce le plus profond du monde ?	Mer Caspienne	Lac Victoria	Lac Baïkal	Lac Supérieur
+Situado en Siberia, ¿qué lago es el lago de agua dulce más profundo del mundo?	Mar Caspio	Lago Victoria	Lago Baikal	Lago Superior
+@9370bfcb
+Który kanał łączy Ocean Atlantycki ze Spokojnym, dzięki czemu nie trzeba opływać Ameryki Południowej?	Kanał Sueski	Kanał Kiloński	Kanał Panamski	Kanał Koryncki
+Quel canal relie les océans Atlantique et Pacifique, évitant de contourner l'Amérique du Sud ?	Canal de Suez	Canal de Kiel	Canal de Panama	Canal de Corinthe
+¿Qué canal une los océanos Atlántico y Pacífico y evita rodear Sudamérica?	Canal de Suez	Canal de Kiel	Canal de Panamá	Canal de Corinto
+@3f99bcbd
+Który kontynent jest najludniejszy na świecie?	Afryka	Europa	Azja	Ameryka Północna
+Quel est le continent le plus peuplé du monde ?	Afrique	Europe	Asie	Amérique du Nord
+¿Cuál es el continente más poblado del mundo?	África	Europa	Asia	América del Norte
+@c85e6ee3
+Jaka jest stolica Stanów Zjednoczonych?	Nowy Jork	Waszyngton	Los Angeles	Chicago
+Quelle est la capitale des États-Unis ?	New York	Washington	Los Angeles	Chicago
+¿Cuál es la capital de Estados Unidos?	Nueva York	Washington D. C.	Los Ángeles	Chicago
+@dd465657
+Jaka jest konstytucyjna stolica Holandii?	Rotterdam	Haga	Utrecht	Amsterdam
+Quelle est la capitale constitutionnelle des Pays-Bas ?	Rotterdam	La Haye	Utrecht	Amsterdam
+¿Cuál es la capital constitucional de los Países Bajos?	Róterdam	La Haya	Utrecht	Ámsterdam
+@39126539
+Które dorzecze jest domem największego lasu deszczowego na świecie?	Dorzecze Amazonki	Dorzecze Konga	Dorzecze Gangesu	Dorzecze Mekongu
+Quel bassin abrite la plus grande forêt tropicale humide du monde ?	Bassin amazonien	Bassin du Congo	Bassin du Gange	Bassin du Mékong
+¿Qué cuenca alberga la selva tropical más grande del mundo?	Cuenca del Amazonas	Cuenca del Congo	Cuenca del Ganges	Cuenca del Mekong
+@36385ad6
+Które pasmo górskie w Rosji wyznacza część umownej granicy między Europą a Azją?	Kaukaz	Ural	Ałtaj	Tienszan
+Quelle chaîne de montagnes de Russie forme une partie de la frontière conventionnelle entre l'Europe et l'Asie ?	Caucase	Oural	Altaï	Tian Shan
+¿Qué cordillera de Rusia forma parte de la frontera convencional entre Europa y Asia?	Cáucaso	Montes Urales	Montes Altái	Tian Shan
+@8574789f
+Jaka jest stolica Hiszpanii?	Barcelona	Sewilla	Walencja	Madryt
+Quelle est la capitale de l'Espagne ?	Barcelone	Séville	Valence	Madrid
+¿Cuál es la capital de España?	Barcelona	Sevilla	Valencia	Madrid
+@866afc80
+Która sztuczna droga wodna łączy bezpośrednio Morze Śródziemne z Morzem Czerwonym?	Kanał Sueski	Kanał Panamski	Cieśnina Ormuz	Kanał Basry
+Quelle voie d'eau artificielle relie directement la Méditerranée à la mer Rouge ?	Canal de Suez	Canal de Panama	Détroit d'Ormuz	Canal de Bassora
+¿Qué vía navegable artificial une directamente el Mediterráneo con el mar Rojo?	Canal de Suez	Canal de Panamá	Estrecho de Ormuz	Canal de Basora
+@f9e40a49
+Jaka jest stolica Chińskiej Republiki Ludowej?	Szanghaj	Pekin	Kanton	Shenzhen
+Quelle est la capitale de la République populaire de Chine ?	Shanghai	Pékin	Canton	Shenzhen
+¿Cuál es la capital de la República Popular China?	Shanghái	Pekín	Cantón	Shenzhen
+@2d1d752b
+Które wielkie pasmo górskie rozciąga się przez Europę Środkową, m.in. przez Francję, Szwajcarię, Włochy i Austrię?	Pireneje	Karpaty	Apeniny	Alpy
+Quelle grande chaîne de montagnes s'étend sur l'Europe centrale, dont la France, la Suisse, l'Italie et l'Autriche ?	Pyrénées	Carpates	Apennins	Alpes
+¿Qué gran cordillera se extiende por Europa central, incluidas Francia, Suiza, Italia y Austria?	Pirineos	Cárpatos	Apeninos	Alpes
+@c2dcad30
+Który skuty lodem kontynent na krańcu półkuli południowej nie ma stałej ludności?	Antarktyda	Arktyka	Oceania	Patagonia
+Quel continent recouvert de glace, à l'extrême sud de l'hémisphère Sud, n'a pas de population permanente ?	Antarctique	Arctique	Océanie	Patagonie
+¿Qué continente cubierto de hielo, en el extremo sur del hemisferio sur, no tiene población permanente?	Antártida	Ártico	Oceanía	Patagonia
+@92f68594
+Jaka jest stolica Norwegii, skandynawskiego kraju słynącego z fiordów?	Sztokholm	Kopenhaga	Helsinki	Oslo
+Quelle est la capitale de la Norvège, le pays scandinave célèbre pour ses fjords ?	Stockholm	Copenhague	Helsinki	Oslo
+¿Cuál es la capital de Noruega, el país escandinavo famoso por sus fiordos?	Estocolmo	Copenhague	Helsinki	Oslo
+@586ff278
+Jaka jest oficjalna stolica Niemiec?	Monachium	Frankfurt	Berlin	Hamburg
+Quelle est la capitale officielle de l'Allemagne ?	Munich	Francfort	Berlin	Hambourg
+¿Cuál es la capital oficial de Alemania?	Múnich	Fráncfort	Berlín	Hamburgo
+@7e79d2d7
+Przez który z tych kontynentów nie przebiega równik?	Afryka	Ameryka Południowa	Azja	Europa
+Lequel de ces continents l'équateur ne traverse-t-il pas ?	Afrique	Amérique du Sud	Asie	Europe
+¿Por cuál de estos continentes no pasa el ecuador?	África	América del Sur	Asia	Europa
+@7a3b68fa
+Do jakiego przedmiotu słynnie przypomina kształtem Półwysep Apeniński na mapie Morza Śródziemnego?	But	Miecz	Łuk	Półksiężyc
+À quel objet la péninsule italienne ressemble-t-elle sur une carte de la Méditerranée ?	Une botte	Une épée	Un arc	Un croissant
+¿A qué objeto se parece la península itálica en un mapa del Mediterráneo?	Una bota	Una espada	Un arco	Una media luna
+@1d30ce2a
+Który kraj ma wybrzeże zarówno nad Morzem Czarnym, jak i nad Morzem Śródziemnym (wraz z Egejskim)?	Grecja	Turcja	Bułgaria	Rumunia
+Quel pays possède des côtes à la fois sur la mer Noire et sur la Méditerranée (mer Égée comprise) ?	Grèce	Turquie	Bulgarie	Roumanie
+¿Qué país tiene costas tanto en el mar Negro como en el Mediterráneo (Egeo incluido)?	Grecia	Turquía	Bulgaria	Rumanía
+@fbb9cd87
+Jaka jest stolica Indii?	Bombaj	Kalkuta	Nowe Delhi	Bangalur
+Quelle est la capitale de l'Inde ?	Bombay	Calcutta	New Delhi	Bangalore
+¿Cuál es la capital de la India?	Bombay	Calcuta	Nueva Delhi	Bangalore
+@66d2b91b
+Która rzeka odprowadza największą ilość wody na świecie?	Amazonka	Nil	Jangcy	Missisipi
+Quel fleuve déverse le plus grand volume d'eau au monde ?	L'Amazone	Le Nil	Le Yangzi Jiang	Le Mississippi
+¿Qué río vierte el mayor caudal de agua del mundo?	Amazonas	Nilo	Yangtsé	Misisipi
+@9e835168
+Jaka jest stolica Portugalii?	Porto	Lizbona	Faro	Coimbra
+Quelle est la capitale du Portugal ?	Porto	Lisbonne	Faro	Coimbra
+¿Cuál es la capital de Portugal?	Oporto	Lisboa	Faro	Coímbra
+@ad690f9e
+Która cieśnina łączy bezpośrednio Morze Czarne z Morzem Marmara?	Dardanele	Bosfor	Cieśnina Kerczeńska	Kanał Koryncki
+Quel détroit relie directement la mer Noire à la mer de Marmara ?	Dardanelles	Bosphore	Détroit de Kertch	Canal de Corinthe
+¿Qué estrecho une directamente el mar Negro con el mar de Mármara?	Dardanelos	Bósforo	Estrecho de Kerch	Canal de Corinto
+@8bba6db3
+Które wydarzenie historyczne zaczęło się w 1789 roku od zdobycia Bastylii i obaliło monarchię absolutną?	Rewolucja przemysłowa	Rewolucja francuska	Wojna o niepodległość USA	Rewolucja bolszewicka
+Quel événement historique a commencé en 1789 avec la prise de la Bastille et renversé la monarchie absolue ?	La révolution industrielle	La Révolution française	La guerre d'indépendance américaine	La révolution bolchevique
+¿Qué acontecimiento histórico empezó en 1789 con la toma de la Bastilla y derrocó la monarquía absoluta?	La Revolución Industrial	La Revolución francesa	La guerra de independencia de EE. UU.	La Revolución bolchevique
+@033eb3e8
+Który sułtan osmański zdobył Stambuł w 1453 roku, kładąc kres Cesarstwu Wschodniorzymskiemu (Bizancjum)?	Selim I	Sulejman Wspaniały	Mehmed Zdobywca	Murad II
+Quel sultan ottoman a conquis Istanbul en 1453, mettant fin à l'Empire romain d'Orient (byzantin) ?	Sélim Ier	Soliman le Magnifique	Mehmed le Conquérant	Murad II
+¿Qué sultán otomano conquistó Estambul en 1453 y puso fin al Imperio romano de Oriente (bizantino)?	Selim I	Solimán el Magnífico	Mehmed el Conquistador	Murad II
+@994d8196
+Kto był pierwszym prezydentem Stanów Zjednoczonych?	Thomas Jefferson	Jerzy Waszyngton	Abraham Lincoln	Benjamin Franklin
+Qui fut le premier président des États-Unis ?	Thomas Jefferson	George Washington	Abraham Lincoln	Benjamin Franklin
+¿Quién fue el primer presidente de Estados Unidos?	Thomas Jefferson	George Washington	Abraham Lincoln	Benjamin Franklin
+@ccc247a9
+Który największy liniowiec pasażerski swoich czasów zatonął w dziewiczym rejsie w 1912 roku po zderzeniu z górą lodową?	Britannic	Lusitania	Titanic	Queen Mary
+Quel paquebot, le plus grand de son époque, a sombré lors de son voyage inaugural en 1912 après avoir heurté un iceberg ?	Britannic	Lusitania	Titanic	Queen Mary
+¿Qué transatlántico, el mayor de su época, se hundió en su viaje inaugural en 1912 tras chocar con un iceberg?	Britannic	Lusitania	Titanic	Queen Mary
+@e3233129
+Który dokument, podpisany przez angielskiego króla Jana bez Ziemi w 1215 roku, po raz pierwszy w historii ograniczył władzę monarchy?	Wielka Karta Swobód	Habeas corpus	Karta Praw	Traktat wersalski
+Quel document, signé par le roi Jean sans Terre en 1215, a limité pour la première fois de l'histoire les pouvoirs du monarque ?	La Magna Carta	L'Habeas corpus	La Déclaration des droits	Le traité de Versailles
+¿Qué documento, firmado por Juan sin Tierra en 1215, limitó por primera vez en la historia el poder del monarca?	La Carta Magna	El hábeas corpus	La Declaración de Derechos	El Tratado de Versalles
+@ca52b547
+Które dwie części rozdzielał mur berliński, symbol zimnej wojny, który upadł w 1989 roku?	Berlin Wschodni i Zachodni	Północne i Południowe Niemcy	Berlin i Wiedeń	Pragę i Berlin
+Quelles deux parties séparait le mur de Berlin, symbole de la guerre froide tombé en 1989 ?	Berlin-Est et Berlin-Ouest	L'Allemagne du Nord et du Sud	Berlin et Vienne	Prague et Berlin
+¿Qué dos sectores separaba el Muro de Berlín, símbolo de la Guerra Fría que cayó en 1989?	Berlín Este y Oeste	Alemania del Norte y del Sur	Berlín y Viena	Praga y Berlín
+@71e25b02
+Który genueński odkrywca przepłynął Atlantyk pod hiszpańską banderą w 1492 roku i dotarł do Ameryki?	Amerigo Vespucci	Vasco da Gama	Krzysztof Kolumb	Ferdynand Magellan
+Quel explorateur génois a traversé l'Atlantique sous pavillon espagnol en 1492 et atteint les Amériques ?	Amerigo Vespucci	Vasco de Gama	Christophe Colomb	Fernand de Magellan
+¿Qué explorador genovés cruzó el Atlántico bajo bandera española en 1492 y llegó a América?	Américo Vespucio	Vasco da Gama	Cristóbal Colón	Fernando de Magallanes
+@67b10ea8
+Kto jako pierwszy człowiek poleciał w kosmos i okrążył Ziemię na pokładzie Wostoka 1 w 1961 roku?	Neil Armstrong	Jurij Gagarin	John Glenn	Buzz Aldrin
+Qui fut le premier humain à aller dans l'espace et à faire le tour de la Terre à bord de Vostok 1 en 1961 ?	Neil Armstrong	Youri Gagarine	John Glenn	Buzz Aldrin
+¿Quién fue el primer ser humano en viajar al espacio y orbitar la Tierra a bordo del Vostok 1 en 1961?	Neil Armstrong	Yuri Gagarin	John Glenn	Buzz Aldrin
+@77063ed1
+Które wydarzenie wywołało wybuch I wojny światowej?	Zamach na austro-węgierskiego następcę tronu w Sarajewie	Zatonięcie RMS Lusitania	Niemiecka inwazja na Polskę	Obalenie caratu w Rosji
+Quel événement a déclenché la Première Guerre mondiale ?	L'assassinat de l'héritier austro-hongrois à Sarajevo	Le naufrage du RMS Lusitania	L'invasion de la Pologne par l'Allemagne	La chute du régime tsariste en Russie
+¿Qué hecho desencadenó la Primera Guerra Mundial?	El asesinato del heredero austrohúngaro en Sarajevo	El hundimiento del RMS Lusitania	La invasión alemana de Polonia	La caída del régimen zarista en Rusia
+@abd1fc54
+Który przywódca bolszewików obalił carat w Rosji w 1917 roku i położył podwaliny pod Związek Radziecki?	Józef Stalin	Lew Trocki	Włodzimierz Lenin	Michaił Gorbaczow
+Quel dirigeant bolchevique a renversé le régime tsariste en 1917 et posé les bases de l'Union soviétique ?	Joseph Staline	Léon Trotski	Vladimir Lénine	Mikhaïl Gorbatchev
+¿Qué líder bolchevique derrocó el régimen zarista en 1917 y sentó las bases de la Unión Soviética?	Iósif Stalin	León Trotski	Vladímir Lenin	Mijaíl Gorbachov
+@453dea68
+Która budowla ze starożytnego Egiptu jest jedynym z siedmiu cudów świata starożytnego, który przetrwał do dziś?	Latarnia morska na Faros	Wielka Piramida w Gizie (Cheopsa)	Wiszące ogrody Babilonu	Kolos Rodyjski
+Quel monument de l'Égypte antique est la seule des Sept Merveilles du monde antique à avoir survécu jusqu'à nos jours ?	Le phare d'Alexandrie	La grande pyramide de Gizeh (Khéops)	Les jardins suspendus de Babylone	Le colosse de Rhodes
+¿Qué construcción del antiguo Egipto es la única de las siete maravillas del mundo antiguo que sigue en pie?	El faro de Alejandría	La Gran Pirámide de Guiza (Keops)	Los jardines colgantes de Babilonia	El coloso de Rodas
+@6fe6988f
+W jakiej bitwie seldżucki sułtan Alp Arslan pokonał armię bizantyjską w 1071 roku, otwierając Turkom drogę do Anatolii?	Bitwa pod Dandanakanem	Bitwa pod Pasinler	Bitwa pod Manzikertem	Bitwa pod Myriokefalon
+Lors de quelle bataille le sultan seldjoukide Alp Arslan a-t-il vaincu l'armée byzantine en 1071, ouvrant l'Anatolie aux Turcs ?	Bataille de Dandanakan	Bataille de Pasinler	Bataille de Manzikert	Bataille de Myriokephalon
+¿En qué batalla derrotó el sultán selyúcida Alp Arslan al ejército bizantino en 1071, abriendo Anatolia a los turcos?	Batalla de Dandanaqan	Batalla de Pasinler	Batalla de Manzikert	Batalla de Miriocéfalo
+@1f8feb42
+Który rewolucjonista walczący z apartheidem został pierwszym czarnoskórym prezydentem RPA?	Nelson Mandela	Kofi Annan	Desmond Tutu	Robert Mugabe
+Quel révolutionnaire anti-apartheid est devenu le premier président noir d'Afrique du Sud ?	Nelson Mandela	Kofi Annan	Desmond Tutu	Robert Mugabe
+¿Qué revolucionario contra el apartheid se convirtió en el primer presidente negro de Sudáfrica?	Nelson Mandela	Kofi Annan	Desmond Tutu	Robert Mugabe
+@85c622e9
+Która bohaterka prowadziła wojska francuskie w wojnie stuletniej, przerwała oblężenie Orleanu, a później spłonęła na stosie?	Maria Antonina	Joanna d'Arc	Elżbieta I	Katarzyna Wielka
+Quelle héroïne historique a mené les troupes françaises pendant la guerre de Cent Ans, levé le siège d'Orléans puis fini sur le bûcher ?	Marie-Antoinette	Jeanne d'Arc	Élisabeth Ire	Catherine la Grande
+¿Qué heroína histórica dirigió a las tropas francesas en la guerra de los Cien Años, levantó el sitio de Orleans y acabó en la hoguera?	María Antonieta	Juana de Arco	Isabel I	Catalina la Grande
+@1322cf52
+Który słynny filozof starożytnej Grecji był nauczycielem młodego Aleksandra Wielkiego?	Sokrates	Platon	Arystoteles	Diogenes
+Quel célèbre philosophe grec fut le précepteur d'Alexandre le Grand dans sa jeunesse ?	Socrate	Platon	Aristote	Diogène
+¿Qué famoso filósofo de la antigua Grecia fue tutor de Alejandro Magno en su juventud?	Sócrates	Platón	Aristóteles	Diógenes
+@6ae5571a
+W którym mieście w 1773 roku odbył się protest zwany „herbatką”, który rozpalił amerykańską wojnę o niepodległość?	Nowy Jork	Boston	Filadelfia	Waszyngton
+Dans quelle ville a eu lieu en 1773 la « Tea Party », qui a mis le feu aux poudres de la guerre d'indépendance américaine ?	New York	Boston	Philadelphie	Washington
+¿En qué ciudad tuvo lugar en 1773 el «Motín del Té», que encendió la guerra de independencia estadounidense?	Nueva York	Boston	Filadelfia	Washington
+@134291e9
+Kto był ostatnim faktycznym władcą ptolemejskiego Egiptu?	Nefertiti	Hatszepsut	Kleopatra VII	Nefertari
+Qui fut la dernière souveraine régnante du royaume ptolémaïque d'Égypte ?	Néfertiti	Hatchepsout	Cléopâtre VII	Néfertari
+¿Quién fue la última gobernante en activo del reino ptolemaico del antiguo Egipto?	Nefertiti	Hatshepsut	Cleopatra VII	Nefertari
+@f026a2aa
+W którym roku oficjalnie rozwiązano Związek Radziecki (ZSRR)?	1989	1990	1991	1993
+En quelle année l'Union soviétique (URSS) a-t-elle été officiellement dissoute ?	1989	1990	1991	1993
+¿En qué año se disolvió oficialmente la Unión Soviética (URSS)?	1989	1990	1991	1993
+@0a0c1218
+Którą amerykańską bazę morską zaatakowała Japonia w 1941 roku, wciągając USA do II wojny światowej?	Midway	Pearl Harbor	Iwo Jima	Guam
+Quelle base navale américaine le Japon a-t-il attaquée en 1941, faisant entrer les États-Unis dans la Seconde Guerre mondiale ?	Midway	Pearl Harbor	Iwo Jima	Guam
+¿Qué base naval estadounidense atacó Japón en 1941, lo que llevó a EE. UU. a la Segunda Guerra Mundial?	Midway	Pearl Harbor	Iwo Jima	Guam
+@5de75015
+Który mongolski przywódca stworzył największe w historii zwarte imperium lądowe?	Timur	Czyngis-chan	Attyla	Hulagu
+Quel chef mongol a fondé le plus grand empire terrestre d'un seul tenant de l'histoire ?	Tamerlan	Gengis Khan	Attila	Houlagou
+¿Qué líder mongol creó el mayor imperio terrestre continuo de la historia?	Tamerlán	Gengis Kan	Atila	Hulagu
+@c3a7c2af
+Na które japońskie miasto zrzucono pierwszą bombę atomową 6 sierpnia 1945 roku?	Hiroszima	Nagasaki	Tokio	Kioto
+Sur quelle ville japonaise a été larguée la première bombe atomique le 6 août 1945 ?	Hiroshima	Nagasaki	Tokyo	Kyoto
+¿Sobre qué ciudad japonesa se lanzó la primera bomba atómica el 6 de agosto de 1945?	Hiroshima	Nagasaki	Tokio	Kioto
+@6ff380d9
+W którym kraju w połowie XVIII wieku zaczęła się rewolucja przemysłowa po wynalezieniu maszyny parowej?	Francja	Niemcy	Wielka Brytania	Holandia
+Dans quel pays la révolution industrielle a-t-elle commencé au milieu du XVIIIe siècle, après le développement de la machine à vapeur ?	France	Allemagne	Grande-Bretagne	Pays-Bas
+¿En qué país empezó a mediados del siglo XVIII la Revolución Industrial, tras el desarrollo de la máquina de vapor?	Francia	Alemania	Gran Bretaña	Países Bajos
+@9fffeab5
+Która niszczycielska pandemia, zwana „czarną śmiercią”, zabiła około jednej trzeciej ludności Europy w latach 1347–1351?	Cholera	Dżuma dymienicza	Ospa	Grypa hiszpanka
+Quelle pandémie dévastatrice, surnommée la « Peste noire », a tué environ un tiers de la population européenne entre 1347 et 1351 ?	Le choléra	La peste bubonique	La variole	La grippe espagnole
+¿Qué devastadora pandemia, conocida como «peste negra», acabó con cerca de un tercio de la población europea entre 1347 y 1351?	Cólera	Peste bubónica	Viruela	Gripe española
+@9b8cd860
+Które mauzoleum w Agrze zlecił wybudować cesarz Wielkich Mogołów Szahdżahan na pamiątkę ukochanej żony Mumtaz Mahal?	Czerwony Fort	Tadż Mahal	Grobowiec Humajuna	Kutb Minar
+Quel mausolée d'Agra, en Inde, l'empereur moghol Shah Jahan a-t-il fait construire en mémoire de son épouse préférée, Mumtaz Mahal ?	Le Fort rouge	Le Taj Mahal	Le tombeau d'Humayun	Le Qutb Minar
+¿Qué mausoleo de Agra, en la India, mandó construir el emperador mogol Shah Jahan en memoria de su esposa favorita, Mumtaz Mahal?	Fuerte Rojo	Taj Mahal	Tumba de Humayun	Qutab Minar
+@60c50e02
+Kto był pierwszą kobietą na stanowisku premiera Wielkiej Brytanii, nazywaną „Żelazną Damą”?	Theresa May	Królowa Wiktoria	Margaret Thatcher	Angela Merkel
+Qui fut la première femme Premier ministre du Royaume-Uni, surnommée la « Dame de fer » ?	Theresa May	La reine Victoria	Margaret Thatcher	Angela Merkel
+¿Quién fue la primera mujer primera ministra del Reino Unido, apodada «la Dama de Hierro»?	Theresa May	La reina Victoria	Margaret Thatcher	Angela Merkel
+@4a1f07d0
+Który traktat z 1923 roku uznał na arenie międzynarodowej granice i suwerenność Republiki Turcji?	Traktat w Sèvres	Traktat w Lozannie	Traktat w Aleksandropolu	Rozejm w Mudanya
+Quel traité de 1923 a reconnu internationalement les frontières et la souveraineté de la République de Turquie ?	Traité de Sèvres	Traité de Lausanne	Traité d'Alexandropol	Armistice de Moudanya
+¿Qué tratado de 1923 reconoció internacionalmente las fronteras y la soberanía de la República de Turquía?	Tratado de Sèvres	Tratado de Lausana	Tratado de Alexandropol	Armisticio de Mudanya
+@dc6f8b18
+Który władca słynie z jednego z najstarszych spisanych kodeksów prawa z zasadą „oko za oko”?	Hammurabi	Ramzes	Cyrus	Urukagina
+Quel souverain est célèbre pour l'un des plus anciens codes de lois écrits, avec le principe « œil pour œil » ?	Hammurabi	Ramsès	Cyrus	Urukagina
+¿Qué gobernante es famoso por uno de los códigos legales escritos más antiguos, con el principio «ojo por ojo»?	Hammurabi	Ramsés	Ciro	Urukagina
+@42a59c47
+Gdzie w 1944 roku przeprowadzono aliancki desant, by wyzwolić Europę Zachodnią w czasie II wojny światowej?	Sycylia	Normandia	Dunkierka	Krym
+Où a eu lieu en 1944 le débarquement allié destiné à libérer l'Europe de l'Ouest pendant la Seconde Guerre mondiale ?	En Sicile	En Normandie	À Dunkerque	En Crimée
+¿Dónde tuvo lugar en 1944 el desembarco aliado para liberar Europa occidental en la Segunda Guerra Mundial?	Sicilia	Normandía	Dunkerque	Crimea
+@546ef125
+Która cywilizacja Mezopotamii wynalazła pismo klinowe, co wyznacza początek historii pisanej?	Babilończycy	Asyryjczycy	Sumerowie	Akadyjczycy
+Quelle civilisation mésopotamienne a inventé l'écriture cunéiforme, marquant le début de l'histoire écrite ?	Les Babyloniens	Les Assyriens	Les Sumériens	Les Akkadiens
+¿Qué civilización mesopotámica inventó la escritura cuneiforme, que marca el inicio de la historia escrita?	Babilonios	Asirios	Sumerios	Acadios
+@66c59275
+Którego dnia w 44 roku p.n.e. zamordowano w senacie rzymskiego dyktatora Juliusza Cezara?	15 marca (idy marcowe)	1 stycznia	25 grudnia	4 lipca
+À quelle date, en 44 av. J.-C., le dictateur romain Jules César a-t-il été assassiné au Sénat ?	15 mars (ides de mars)	1er janvier	25 décembre	4 juillet
+¿En qué fecha del año 44 a. C. fue asesinado en el Senado el dictador romano Julio César?	15 de marzo (idus de marzo)	1 de enero	25 de diciembre	4 de julio
+@20d78940
+Na której wyspie zmarł na wygnaniu Napoleon Bonaparte po ostatecznej klęsce pod Waterloo?	Elba	Korsyka	Wyspa Świętej Heleny	Kreta
+Sur quelle île Napoléon Bonaparte est-il mort en exil après sa défaite finale à Waterloo ?	L'île d'Elbe	La Corse	Sainte-Hélène	La Crète
+¿En qué isla murió en el exilio Napoleón Bonaparte tras su derrota final en Waterloo?	Elba	Córcega	Santa Elena	Creta
+@54ca1733
+Który teolog zapoczątkował reformację w 1517 roku, przybijając 95 tez do drzwi kościoła Wszystkich Świętych w Wittenberdze?	Jan Kalwin	Marcin Luter	Tomasz More	Erazm z Rotterdamu
+Quel théologien a lancé la Réforme protestante en 1517 en clouant ses 95 thèses sur la porte de l'église de la Toussaint de Wittemberg ?	Jean Calvin	Martin Luther	Thomas More	Érasme
+¿Qué teólogo inició la Reforma protestante en 1517 clavando sus 95 tesis en la puerta de la iglesia de Todos los Santos de Wittenberg?	Juan Calvino	Martín Lutero	Tomás Moro	Erasmo
+@4b9341cc
+W którym roku otwarto Kanał Sueski, łączący Morze Śródziemne z Morzem Czerwonym i rewolucjonizujący handel morski?	1869	1914	1821	1901
+En quelle année le canal de Suez, qui relie la Méditerranée à la mer Rouge et a révolutionné le commerce maritime, a-t-il été inauguré ?	1869	1914	1821	1901
+¿En qué año se inauguró el canal de Suez, que une el Mediterráneo con el mar Rojo y revolucionó el comercio marítimo?	1869	1914	1821	1901
+@fc068c00
+Kto był pierwszym oficjalnym cesarzem Cesarstwa Rzymskiego?	Juliusz Cezar	Neron	August (Oktawian)	Marek Aureliusz
+Qui fut le premier empereur officiel de l'Empire romain ?	Jules César	Néron	Auguste (Octave)	Marc Aurèle
+¿Quién fue el primer emperador oficial del Imperio romano?	Julio César	Nerón	Augusto (Octavio)	Marco Aurelio
+@a8daa17f
+Kto jest uważany za założyciela i pierwszego władcę księstwa osmańskiego?	Ertugrul Gazi	Osman I	Orhan Gazi	Murad I
+Qui est considéré comme le fondateur et premier chef de la principauté ottomane ?	Ertuğrul Gazi	Osman Ier	Orhan Gazi	Murad Ier
+¿Quién es considerado el fundador y primer líder del principado otomano?	Ertuğrul Gazi	Osmán I	Orhan Gazi	Murad I
+@00c761db
+Jak nazywa się student prawa, bohater „Zbrodni i kary”, który zabija siekierą starą lichwiarkę i jej siostrę?	Raskolnikow	Iwan Karamazow	Książę Myszkin	Obłomow
+Qui est l'étudiant en droit de « Crime et Châtiment » qui tue à la hache une vieille prêteuse sur gages et sa sœur ?	Raskolnikov	Ivan Karamazov	Le prince Mychkine	Oblomov
+¿Quién es el estudiante de derecho de «Crimen y castigo» que mata con un hacha a una vieja usurera y a su hermana?	Raskólnikov	Iván Karamázov	El príncipe Myshkin	Oblómov
+@9ca5a94d
+Kto jest autorem dystopijnej powieści o inwigilacji „Rok 1984”, która wprowadziła pojęcie Wielkiego Brata?	Aldous Huxley	George Orwell	Ray Bradbury	Arthur Koestler
+Qui est l'auteur de « 1984 », roman dystopique sur la surveillance qui a inventé Big Brother ?	Aldous Huxley	George Orwell	Ray Bradbury	Arthur Koestler
+¿Quién es el autor de «1984», la novela distópica sobre la vigilancia que creó el concepto del Gran Hermano?	Aldous Huxley	George Orwell	Ray Bradbury	Arthur Koestler
+@29cd4f5d
+Który angielski dramatopisarz napisał ponadczasowe tragedie, takie jak „Hamlet”, „Makbet”, „Otello” i „Romeo i Julia”?	Charles Dickens	William Szekspir	Christopher Marlowe	Oscar Wilde
+Quel dramaturge anglais a écrit des tragédies intemporelles comme « Hamlet », « Macbeth », « Othello » et « Roméo et Juliette » ?	Charles Dickens	William Shakespeare	Christopher Marlowe	Oscar Wilde
+¿Qué dramaturgo inglés escribió tragedias inmortales como «Hamlet», «Macbeth», «Otelo» y «Romeo y Julieta»?	Charles Dickens	William Shakespeare	Christopher Marlowe	Oscar Wilde
+@4302f660
+Kim jest hiszpański autor „Don Kichota”, powieści o ekscentrycznym szlachcicu atakującym wiatraki, które bierze za olbrzymów?	Miguel de Cervantes	Gabriel García Márquez	Federico García Lorca	Lope de Vega
+Qui est l'auteur espagnol de « Don Quichotte », roman d'un hidalgo excentrique qui attaque des moulins à vent qu'il prend pour des géants ?	Miguel de Cervantes	Gabriel García Márquez	Federico García Lorca	Lope de Vega
+¿Quién es el autor español del «Quijote», la novela de un hidalgo excéntrico que ataca molinos de viento creyendo que son gigantes?	Miguel de Cervantes	Gabriel García Márquez	Federico García Lorca	Lope de Vega
+@4669b26d
+Kto napisał „Małego Księcia”, opowieść o małym księciu z planetoidy B-612 i jego miłości do róży?	Albert Camus	Jean-Paul Sartre	Antoine de Saint-Exupéry	Juliusz Verne
+Qui a écrit « Le Petit Prince », l'histoire d'un jeune prince venu de l'astéroïde B 612 et de son amour pour une rose ?	Albert Camus	Jean-Paul Sartre	Antoine de Saint-Exupéry	Jules Verne
+¿Quién escribió «El principito», la historia de un joven príncipe del asteroide B 612 y su amor por una rosa?	Albert Camus	Jean-Paul Sartre	Antoine de Saint-Exupéry	Julio Verne
+@7fa349a8
+Który filolog i pisarz stworzył krainę fantasy Śródziemie, pisząc „Władcę Pierścieni” i „Hobbita”?	C.S. Lewis	J.R.R. Tolkien	George R.R. Martin	Terry Pratchett
+Quel philologue et écrivain a créé le monde de fantasy de la Terre du Milieu en écrivant « Le Seigneur des anneaux » et « Le Hobbit » ?	C.S. Lewis	J.R.R. Tolkien	George R.R. Martin	Terry Pratchett
+¿Qué filólogo y escritor creó el mundo de fantasía de la Tierra Media, autor de «El Señor de los Anillos» y «El hobbit»?	C.S. Lewis	J.R.R. Tolkien	George R.R. Martin	Terry Pratchett
+@c593481c
+Kto napisał „Nędzników”, historię odkupienia Jana Valjeana, uwięzionego za kradzież bochenka chleba?	Aleksander Dumas	Wiktor Hugo	Honoré de Balzac	Émile Zola
+Qui est l'auteur des « Misérables », qui suit la rédemption de Jean Valjean, emprisonné pour avoir volé un pain ?	Alexandre Dumas	Victor Hugo	Honoré de Balzac	Émile Zola
+¿Quién escribió «Los miserables», que narra la redención de Jean Valjean, encarcelado por robar una hogaza de pan?	Alejandro Dumas	Victor Hugo	Honoré de Balzac	Émile Zola
+@d9747a82
+Kto stworzył słynnego fikcyjnego detektywa Sherlocka Holmesa, mieszkającego przy Baker Street 221B?	Agatha Christie	Arthur Conan Doyle	Edgar Allan Poe	G.K. Chesterton
+Qui a créé le célèbre détective Sherlock Holmes, qui habite au 221B Baker Street ?	Agatha Christie	Arthur Conan Doyle	Edgar Allan Poe	G.K. Chesterton
+¿Quién creó al famoso detective Sherlock Holmes, que vive en el 221B de Baker Street?	Agatha Christie	Arthur Conan Doyle	Edgar Allan Poe	G.K. Chesterton
+@1afaff5d
+Który wielki rosyjski powieściopisarz napisał monumentalne dzieła „Wojna i pokój” oraz „Anna Karenina”?	Fiodor Dostojewski	Antoni Czechow	Lew Tołstoj	Iwan Turgieniew
+Quel grand romancier russe a écrit les épopées monumentales « Guerre et Paix » et « Anna Karénine » ?	Fiodor Dostoïevski	Anton Tchekhov	Léon Tolstoï	Ivan Tourgueniev
+¿Qué gran novelista ruso escribió las monumentales «Guerra y paz» y «Ana Karenina»?	Fiódor Dostoyevski	Antón Chéjov	León Tolstói	Iván Turguénev
+@98847baa
+Kto napisał „Przemianę”, w której komiwojażer Gregor Samsa budzi się przemieniony w potwornego owada?	Franz Kafka	Tomasz Mann	Hermann Hesse	Stefan Zweig
+Qui a écrit « La Métamorphose », où le représentant de commerce Gregor Samsa se réveille transformé en insecte monstrueux ?	Franz Kafka	Thomas Mann	Hermann Hesse	Stefan Zweig
+¿Quién escribió «La metamorfosis», donde el viajante Gregor Samsa despierta convertido en un insecto monstruoso?	Franz Kafka	Thomas Mann	Hermann Hesse	Stefan Zweig

@@ -1,0 +1,440 @@
+@9c2eb90c
+Z ilu kości składa się szkielet dorosłego człowieka?	186	206	256	300
+Combien d'os compte le squelette d'un être humain adulte ?	186	206	256	300
+¿Cuántos huesos forman el esqueleto de un ser humano adulto?	186	206	256	300
+@a6fe5125
+Który angielski uczony sformułował prawo powszechnego ciążenia i klasyczne zasady dynamiki?	Galileusz	Izaak Newton	Albert Einstein	Michael Faraday
+Quel savant anglais a formulé la loi de la gravitation universelle et les lois classiques du mouvement ?	Galilée	Isaac Newton	Albert Einstein	Michael Faraday
+¿Qué científico inglés formuló la ley de la gravitación universal y las leyes clásicas del movimiento?	Galileo Galilei	Isaac Newton	Albert Einstein	Michael Faraday
+@8d8b2bfc
+Jak nazywa się proces, w którym zielone rośliny wykorzystują energię słoneczną do wytwarzania glukozy i tlenu?	Fotosynteza	Chemosynteza	Fermentacja	Oddychanie
+Comment s'appelle le processus par lequel les plantes vertes utilisent l'énergie solaire pour produire du glucose et de l'oxygène ?	Photosynthèse	Chimiosynthèse	Fermentation	Respiration
+¿Cómo se llama el proceso por el que las plantas verdes usan la energía solar para producir glucosa y oxígeno?	Fotosíntesis	Quimiosíntesis	Fermentación	Respiración
+@c1ae4d8e
+Które bogate w żelazo białko w czerwonych krwinkach odpowiada za transport tlenu w organizmie?	Mioglobina	Kolagen	Hemoglobina	Insulina
+Quelle protéine riche en fer des globules rouges transporte l'oxygène dans tout le corps ?	Myoglobine	Collagène	Hémoglobine	Insuline
+¿Qué proteína rica en hierro de los glóbulos rojos transporta el oxígeno por todo el cuerpo?	Mioglobina	Colágeno	Hemoglobina	Insulina
+@c75b6079
+Jaka wartość oznacza odczyn obojętny w skali pH mierzącej kwasowość i zasadowość?	0	5	7	14
+Quelle valeur correspond à la neutralité sur l'échelle du pH, qui mesure l'acidité et la basicité ?	0	5	7	14
+¿Qué valor indica neutralidad en la escala de pH, que mide la acidez y la alcalinidad?	0	5	7	14
+@d2019eb9
+Który szkocki lekarz przypadkiem odkrył w 1928 roku penicylinę, pierwszy antybiotyk stosowany w medycynie?	Ludwik Pasteur	Aleksander Fleming	Robert Koch	Edward Jenner
+Quel médecin écossais a découvert par hasard la pénicilline, premier antibiotique clinique, en 1928 ?	Louis Pasteur	Alexander Fleming	Robert Koch	Edward Jenner
+¿Qué médico escocés descubrió por casualidad la penicilina, el primer antibiótico clínico, en 1928?	Louis Pasteur	Alexander Fleming	Robert Koch	Edward Jenner
+@9a6e98d5
+Które szerokie pasmo włókien nerwowych umożliwia komunikację między lewą a prawą półkulą mózgu?	Ciało modzelowate	Móżdżek	Wzgórze	Rdzeń kręgowy
+Quel large faisceau de fibres nerveuses permet la communication entre les hémisphères cérébraux gauche et droit ?	Corps calleux	Cervelet	Thalamus	Moelle épinière
+¿Qué amplio haz de fibras nerviosas comunica los hemisferios cerebrales izquierdo y derecho?	Cuerpo calloso	Cerebelo	Tálamo	Médula espinal
+@17780bbd
+Jaka właściwość fizyczna opisuje opór ciała wobec zmiany prędkości lub stanu ruchu?	Bezwładność	Pęd	Tarcie	Moment siły
+Quelle propriété physique décrit la résistance d'un objet à tout changement de sa vitesse ou de son mouvement ?	Inertie	Impulsion	Frottement	Couple
+¿Qué propiedad física describe la resistencia de un cuerpo a cualquier cambio de su velocidad o de su estado de movimiento?	Inercia	Impulso	Rozamiento	Par de torsión
+@7463def4
+Jak nazywa się gęste centrum atomu, zawierające protony i neutrony?	Chmura elektronowa	Jądro	Orbital	Powłoka walencyjna
+Comment s'appelle le cœur dense d'un atome qui contient ses protons et ses neutrons ?	Nuage électronique	Noyau	Orbitale	Couche de valence
+¿Cómo se llama el centro denso del átomo que contiene protones y neutrones?	Nube electrónica	Núcleo	Orbital	Capa de valencia
+@776b08f3
+Który włoski astronom jako pierwszy zobaczył przez teleskop cztery największe księżyce Jowisza?	Galileusz	Mikołaj Kopernik	Johannes Kepler	Giordano Bruno
+Quel astronome italien a été le premier à observer au télescope les quatre plus grandes lunes de Jupiter ?	Galilée	Nicolas Copernic	Johannes Kepler	Giordano Bruno
+¿Qué astrónomo italiano fue el primero en observar con telescopio las cuatro lunas más grandes de Júpiter?	Galileo Galilei	Nicolás Copérnico	Johannes Kepler	Giordano Bruno
+@c4b936e7
+Jaki jest wzór chemiczny zwykłej soli kuchennej?	KCl	NaOH	NaCl	CaCO3
+Quelle est la formule chimique du sel de table ?	KCl	NaOH	NaCl	CaCO3
+¿Cuál es la fórmula química de la sal de mesa?	KCl	NaOH	NaCl	CaCO3
+@c16f9797
+Która kość jest najdłuższa i najmocniejsza w ludzkim ciele?	Piszczel	Kość ramienna	Kość udowa	Żebro
+Quel est l'os le plus long et le plus solide du corps humain ?	Tibia	Humérus	Fémur	Côte
+¿Cuál es el hueso más largo y fuerte del cuerpo humano?	Tibia	Húmero	Fémur	Costilla
+@dfc9dd59
+Jak nazywa się miara przeciwstawiania się przepływowi prądu elektrycznego w obwodzie?	Napięcie	Opór	Pojemność	Indukcyjność
+Comment appelle-t-on la mesure de l'opposition au passage du courant électrique dans un circuit ?	Tension	Résistance	Capacité	Inductance
+¿Cómo se llama la oposición al paso de la corriente eléctrica en un circuito?	Tensión	Resistencia	Capacidad	Inductancia
+@8aba4f76
+Która planeta ma największą masę i objętość w naszym Układzie Słonecznym?	Saturn	Neptun	Uran	Jowisz
+Quelle planète a la plus grande masse et le plus grand volume de notre Système solaire ?	Saturne	Neptune	Uranus	Jupiter
+¿Qué planeta tiene la mayor masa y el mayor volumen de nuestro sistema solar?	Saturno	Neptuno	Urano	Júpiter
+@22cd38a7
+Który funkcjonalny odcinek DNA jest uznawany za podstawową fizyczną jednostkę dziedziczności?	Gen	Chromatyna	Aminokwas	Nukleotyd
+Quel segment fonctionnel de l'ADN est l'unité physique de base de l'hérédité ?	Gène	Chromatine	Acide aminé	Nucléotide
+¿Qué segmento funcional del ADN es la unidad física básica de la herencia?	Gen	Cromatina	Aminoácido	Nucleótido
+@d9fdc399
+Jaki jest symbol chemiczny rtęci w układzie okresowym?	Cu	Ag	Hg	Pb
+Quel est le symbole chimique du mercure dans le tableau périodique ?	Cu	Ag	Hg	Pb
+¿Cuál es el símbolo químico del mercurio en la tabla periódica?	Cu	Ag	Hg	Pb
+@14456050
+Jak nazywa się substancja, która przyspiesza reakcję chemiczną, sama nie ulegając trwałej przemianie?	Katalizator	Rozpuszczalnik	Polimer	Substrat
+Quelle substance accélère une réaction chimique sans subir elle-même de transformation permanente ?	Catalyseur	Solvant	Polymère	Réactif
+¿Qué sustancia acelera una reacción química sin sufrir ella misma un cambio permanente?	Catalizador	Disolvente	Polímero	Reactivo
+@be157c80
+Który narząd wytwarza insulinę regulującą poziom glukozy we krwi?	Wątroba	Nadnercze	Trzustka	Tarczyca
+Quel organe produit l'insuline qui régule le taux de glucose dans le sang ?	Foie	Glande surrénale	Pancréas	Thyroïde
+¿Qué órgano produce la insulina que regula la glucosa en sangre?	Hígado	Glándula suprarrenal	Páncreas	Tiroides
+@6d1e6c3a
+Jakie zjawisko optyczne polega na rozszczepieniu światła białego na barwy widma po przejściu przez pryzmat?	Pochłanianie światła	Odbicie światła	Załamanie i rozszczepienie	Polaryzacja
+Quel phénomène optique décrit la décomposition de la lumière blanche en couleurs du spectre à travers un prisme ?	Absorption	Réflexion	Réfraction et dispersion	Polarisation
+¿Qué fenómeno óptico describe la separación de la luz blanca en los colores del espectro al atravesar un prisma?	Absorción de la luz	Reflexión de la luz	Refracción y dispersión	Polarización
+@9f63c4b9
+Która reakcja jądrowa zasila Słońce, łącząc jądra wodoru w hel w temperaturze jądra gwiazdy?	Rozszczepienie	Synteza (fuzja)	Rozpad promieniotwórczy	Spalanie
+Quelle réaction nucléaire alimente le Soleil en fusionnant des noyaux d'hydrogène en hélium au cœur de l'étoile ?	Fission	Fusion	Désintégration radioactive	Combustion
+¿Qué reacción nuclear alimenta al Sol fusionando núcleos de hidrógeno en helio en el núcleo de la estrella?	Fisión	Fusión	Desintegración radiactiva	Combustión
+@be8fda75
+Ile regulaminowo trwa mecz piłki nożnej, bez dogrywki?	80 minut	90 minut	100 minut	60 minut
+Quelle est la durée réglementaire d'un match de football, hors prolongations ?	80 minutes	90 minutes	100 minutes	60 minutes
+¿Cuánto dura reglamentariamente un partido de fútbol, sin contar la prórroga?	80 minutos	90 minutos	100 minutos	60 minutos
+@66669160
+Ile punktów w koszykówce daje celny rzut z linii rzutów wolnych?	1 punkt	2 punkty	3 punkty	4 punkty
+Au basket, combien de points vaut un lancer franc réussi ?	1 point	2 points	3 points	4 points
+En baloncesto, ¿cuántos puntos vale un tiro libre anotado?	1 punto	2 puntos	3 puntos	4 puntos
+@4a64545d
+Ile splecionych kół, symbolizujących pięć kontynentów, jest na fladze olimpijskiej?	4	5	6	7
+Combien d'anneaux entrelacés, représentant les cinq continents, figurent sur le drapeau olympique ?	4	5	6	7
+¿Cuántos anillos entrelazados, que representan los cinco continentes, aparecen en la bandera olímpica?	4	5	6	7
+@6c071fea
+Kim jest legendarny jamajski sprinter, rekordzista świata na 100 i 200 metrów?	Carl Lewis	Tyson Gay	Usain Bolt	Yohan Blake
+Qui est le sprinteur jamaïcain légendaire, détenteur des records du monde du 100 et du 200 mètres ?	Carl Lewis	Tyson Gay	Usain Bolt	Yohan Blake
+¿Quién es el legendario velocista jamaicano que tiene los récords mundiales de 100 y 200 metros?	Carl Lewis	Tyson Gay	Usain Bolt	Yohan Blake
+@eee6bb70
+Który kraj jest najbardziej utytułowany w historii mistrzostw świata FIFA – wygrał je 5 razy?	Niemcy	Włochy	Argentyna	Brazylia
+Quel pays est le plus titré de l'histoire de la Coupe du monde, avec 5 victoires ?	Allemagne	Italie	Argentine	Brésil
+¿Qué país es el más laureado de la historia del Mundial, con 5 títulos?	Alemania	Italia	Argentina	Brasil
+@8c4041eb
+Który turniej wielkoszlemowy w tenisie rozgrywany jest jako pierwszy w każdym roku?	Roland Garros	Wimbledon	Australian Open	US Open
+Quel tournoi du Grand Chelem de tennis se joue en premier chaque année ?	Roland-Garros	Wimbledon	Open d'Australie	US Open
+¿Qué torneo de Grand Slam de tenis se juega primero cada año?	Roland Garros	Wimbledon	Abierto de Australia	Abierto de EE. UU.
+@a5a49797
+Która legenda koszykówki zdobyła 6 tytułów NBA z Chicago Bulls i uwieczniła koszulkę z numerem 23?	Kobe Bryant	Michael Jordan	LeBron James	Magic Johnson
+Quelle légende du basket a remporté 6 titres NBA avec les Chicago Bulls et immortalisé le maillot numéro 23 ?	Kobe Bryant	Michael Jordan	LeBron James	Magic Johnson
+¿Qué leyenda del baloncesto ganó 6 anillos de la NBA con los Chicago Bulls e inmortalizó la camiseta con el 23?	Kobe Bryant	Michael Jordan	LeBron James	Magic Johnson
+@03eca510
+Kto jest najbardziej utytułowanym olimpijczykiem wszech czasów, z 28 medalami, w tym 23 złotymi w pływaniu?	Ian Thorpe	Mark Spitz	Michael Phelps	Ryan Lochte
+Qui est l'athlète olympique le plus médaillé de tous les temps, avec 28 médailles dont 23 en or en natation ?	Ian Thorpe	Mark Spitz	Michael Phelps	Ryan Lochte
+¿Quién es el deportista olímpico más laureado de la historia, con 28 medallas, 23 de ellas de oro en natación?	Ian Thorpe	Mark Spitz	Michael Phelps	Ryan Lochte
+@912504c5
+Jaka jest przepisowa odległość punktu karnego od linii bramkowej w piłce nożnej?	9,15 metra	11 metrów	12 metrów	10,5 metra
+Quelle est la distance réglementaire entre le point de penalty et la ligne de but au football ?	9,15 mètres	11 mètres	12 mètres	10,5 mètres
+¿Cuál es la distancia reglamentaria entre el punto de penalti y la línea de gol en el fútbol?	9,15 metros	11 metros	12 metros	10,5 metros
+@97b6c23b
+Jak nazywa się kwadratowe pole otoczone linami, na którym toczą się walki bokserskie?	Tatami	Kort	Ring	Oktagon
+Comment appelle-t-on l'espace carré entouré de cordes où se disputent les combats de boxe ?	Tatami	Court	Ring	Octogone
+¿Cómo se llama el recinto cuadrado rodeado de cuerdas donde se disputan los combates de boxeo?	Tatami	Pista	Cuadrilátero	Octágono
+@d906bfd9
+Który Argentyńczyk strzelił gola „ręką Boga” Anglii na mundialu w 1986 roku?	Diego Maradona	Lionel Messi	Gabriel Batistuta	Mario Kempes
+Quel Argentin a marqué le but de la « main de Dieu » contre l'Angleterre lors de la Coupe du monde 1986 ?	Diego Maradona	Lionel Messi	Gabriel Batistuta	Mario Kempes
+¿Qué argentino marcó el gol de «la mano de Dios» a Inglaterra en el Mundial de 1986?	Diego Maradona	Lionel Messi	Gabriel Batistuta	Mario Kempes
+@2ce08a6d
+Który hiszpański tenisista, nazywany „Królem mączki”, wygrał turniej singla mężczyzn Roland Garros 14 razy?	Roger Federer	Carlos Alcaraz	Rafael Nadal	Novak Đoković
+Quel joueur de tennis espagnol, surnommé le « roi de la terre battue », a remporté 14 fois Roland-Garros en simple messieurs ?	Roger Federer	Carlos Alcaraz	Rafael Nadal	Novak Djokovic
+¿Qué tenista español, apodado el «Rey de la tierra batida», ganó 14 veces Roland Garros en individual masculino?	Roger Federer	Carlos Alcaraz	Rafael Nadal	Novak Djokovic
+@c2fd31ab
+Jaki jest oficjalny dystans biegu maratońskiego?	40,000 km	42,195 km	45,500 km	50,000 km
+Quelle est la distance officielle d'un marathon ?	40,000 km	42,195 km	45,500 km	50,000 km
+¿Cuál es la distancia oficial de una maratón?	40,000 km	42,195 km	45,500 km	50,000 km
+@2cbce8f2
+Ilu zawodników jednej drużyny przebywa jednocześnie na boisku podczas meczu siatkówki?	5	6	7	8
+Combien de joueurs d'une même équipe sont sur le terrain en même temps lors d'un match de volley-ball ?	5	6	7	8
+¿Cuántos jugadores de un equipo están a la vez en la pista en un partido de voleibol?	5	6	7	8
+@59b5addf
+Jak nazywa się czarno-biała flaga, którą macha się na zakończenie wyścigu Formuły 1?	Flaga w szachownicę	Żółta flaga	Zielona flaga	Czerwona flaga
+Comment s'appelle le drapeau noir et blanc agité pour signaler la fin d'une course de Formule 1 ?	Drapeau à damier	Drapeau jaune	Drapeau vert	Drapeau rouge
+¿Cómo se llama la bandera blanca y negra que se ondea para señalar el final de una carrera de Fórmula 1?	Bandera a cuadros	Bandera amarilla	Bandera verde	Bandera roja
+@d053cc99
+Jak nazywa się wyczyn piłkarza, który strzela trzy gole w jednym meczu?	Dublet	Hat trick	Zdobycz	Asysta
+Comment appelle-t-on l'exploit d'un footballeur qui marque trois buts dans un même match ?	Doublé	Coup du chapeau (triplé)	Razzia	Passe décisive
+¿Cómo se llama la hazaña de un futbolista que marca tres goles en un mismo partido?	Doblete	Triplete (hat-trick)	Botín	Asistencia
+@fbde19cf
+Ile standardowo trwa zegar akcji, w którym drużyna atakująca musi oddać rzut we współczesnej koszykówce?	14 sekund	24 sekundy	30 sekund	35 sekund
+Quelle est la durée standard du chronomètre des tirs accordé à l'équipe en attaque au basket moderne ?	14 secondes	24 secondes	30 secondes	35 secondes
+¿Cuánto dura el reloj de posesión que tiene el equipo atacante para tirar en el baloncesto moderno?	14 segundos	24 segundos	30 segundos	35 segundos
+@69ebc3cb
+W którym historycznym mieście odbyły się pierwsze nowożytne igrzyska olimpijskie w 1896 roku?	Paryż	Londyn	Ateny	Rzym
+Dans quelle ville historique se sont tenus les premiers Jeux olympiques modernes en 1896 ?	Paris	Londres	Athènes	Rome
+¿En qué ciudad histórica se celebraron los primeros Juegos Olímpicos modernos en 1896?	París	Londres	Atenas	Roma
+@40c3e958
+Jak często, w normalnych warunkach, odbywają się mistrzostwa świata FIFA?	Co 2 lata	Co 3 lata	Co 4 lata	Co 5 lat
+En temps normal, à quelle fréquence a lieu la Coupe du monde de la FIFA ?	Tous les 2 ans	Tous les 3 ans	Tous les 4 ans	Tous les 5 ans
+En circunstancias normales, ¿cada cuánto se celebra el Mundial de la FIFA?	Cada 2 años	Cada 3 años	Cada 4 años	Cada 5 años
+@a03bc56f
+Który legendarny bokser wagi ciężkiej uwiecznił słowa „Unosić się jak motyl, żądlić jak pszczoła”?	Mike Tyson	Muhammad Ali	George Foreman	Joe Frazier
+Quel boxeur poids lourd légendaire a immortalisé la phrase « Voler comme un papillon, piquer comme une abeille » ?	Mike Tyson	Mohamed Ali	George Foreman	Joe Frazier
+¿Qué legendario boxeador de peso pesado inmortalizó la frase «Flota como una mariposa, pica como una abeja»?	Mike Tyson	Muhammad Ali	George Foreman	Joe Frazier
+@918729ad
+Jak w tenisie nazywa się wynik remisowy 40:40 w jednym gemie?	Równowaga	Tie-break	Przewaga	Break point
+Au tennis, comment appelle-t-on l'égalité à 40-40 dans un jeu ?	Égalité	Tie-break	Avantage	Balle de break
+En tenis, ¿cómo se llama el empate a 40 dentro de un juego?	Iguales (deuce)	Tie-break	Ventaja	Punto de rotura
+@3abe5348
+Ilu zawodników, łącznie z bramkarzem, gra na boisku w jednej drużynie w piłce ręcznej?	6	7	8	9
+Combien de joueurs par équipe, gardien compris, sont sur le terrain lors d'un match de handball ?	6	7	8	9
+¿Cuántos jugadores por equipo, portero incluido, hay en la pista en un partido de balonmano?	6	7	8	9
+@b6ee6339
+Obok Michaela Schumachera, który kierowca jako jedyny zdobył 7 tytułów mistrza świata Formuły 1?	Sebastian Vettel	Max Verstappen	Lewis Hamilton	Fernando Alonso
+Outre Michael Schumacher, quel est le seul autre pilote à avoir remporté 7 titres de champion du monde de Formule 1 ?	Sebastian Vettel	Max Verstappen	Lewis Hamilton	Fernando Alonso
+Además de Michael Schumacher, ¿qué otro piloto es el único que ha ganado 7 Mundiales de Fórmula 1?	Sebastian Vettel	Max Verstappen	Lewis Hamilton	Fernando Alonso
+@6fdb5169
+Jak nazywa się czarny krążek z wulkanizowanej gumy, którego używa się w hokeju na lodzie zamiast piłki?	Strzał	Krążek	Dysk	Pierścień
+Comment s'appelle le disque noir en caoutchouc vulcanisé utilisé à la place d'une balle au hockey sur glace ?	Tir	Palet (rondelle)	Disque	Anneau
+¿Cómo se llama el disco negro de caucho vulcanizado que se usa en lugar de una pelota en el hockey sobre hielo?	Tiro	Disco (puck)	Plato	Aro
+@318993c0
+Która kartka oznacza natychmiastowe usunięcie zawodnika z boiska, przez co drużyna gra w osłabieniu?	Żółta kartka	Niebieska kartka	Czerwona kartka	Biała kartka
+Quel carton signale l'exclusion immédiate d'un joueur, laissant son équipe en infériorité numérique ?	Carton jaune	Carton bleu	Carton rouge	Carton blanc
+¿Qué tarjeta indica la expulsión inmediata de un jugador, dejando a su equipo con uno menos?	Tarjeta amarilla	Tarjeta azul	Tarjeta roja	Tarjeta blanca
+@323d8195
+Jak w baseballu nazywa się uderzenie, po którym piłka wylatuje poza boisko, a pałkarz obiega wszystkie cztery bazy?	Strike	Home run	Bunt	Aut
+Au baseball, comment appelle-t-on le coup où le frappeur envoie la balle hors du terrain et fait le tour des quatre bases ?	Prise	Coup de circuit (home run)	Amorti	Retrait
+En béisbol, ¿cómo se llama cuando el bateador saca la pelota del campo y recorre las cuatro bases?	Strike	Jonrón	Toque	Out
+@d4782983
+Ile punktów minimum trzeba zdobyć, by wygrać seta według współczesnych przepisów tenisa stołowego?	11	15	21	25
+Selon les règles modernes du tennis de table, combien de points faut-il au minimum pour gagner une manche ?	11	15	21	25
+Según las reglas modernas del tenis de mesa, ¿qué puntuación mínima hace falta para ganar un juego?	11	15	21	25
+@d45ec9b2
+Jak nazywa się słynny mecz rywali – hiszpańskich gigantów Realu Madryt i Barcelony?	Superclásico	El Clásico	Derby della Madonnina	Der Klassiker
+Comment s'appelle le célèbre match entre les géants espagnols du Real Madrid et du FC Barcelone ?	Superclásico	El Clásico	Derby della Madonnina	Der Klassiker
+¿Cómo se llama el célebre duelo entre los gigantes del fútbol español Real Madrid y Barcelona?	Superclásico	El Clásico	Derbi della Madonnina	Der Klassiker
+@889a6f30
+Jaki jest w futbolu amerykańskim główny sposób zdobycia 6 punktów przez wniesienie piłki na pole punktowe rywala?	Field goal	Przyłożenie (touchdown)	Fumble	Przechwyt
+Au football américain, quelle est la principale action à 6 points qui consiste à porter le ballon dans l'en-but adverse ?	Field goal	Touché (touchdown)	Échappé	Interception
+En fútbol americano, ¿cuál es la principal forma de anotar 6 puntos llevando el balón a la zona de anotación rival?	Gol de campo	Touchdown	Fumble	Intercepción
+@0a3c69cb
+Jaki przepis łamie koszykarz, który robi więcej niż dwa kroki bez kozłowania piłki?	Kroki	Faul	Goaltending	Błąd połowy
+Au basket, quelle faute commet un joueur qui fait plus de deux pas sans dribbler ?	Marcher	Faute	Goaltending	Retour en zone
+En baloncesto, ¿qué infracción comete un jugador que da más de dos pasos sin botar el balón?	Pasos	Falta	Interferencia	Campo atrás
+@746ea812
+Czy według przepisów piłki nożnej bramkarz może dotykać piłki rękami poza polem karnym?	Tak, wolno mu	Nie, to przewinienie	Tylko przy wybiciu od bramki	Tylko za zgodą sędziego
+Selon les lois du football, le gardien peut-il toucher le ballon avec les mains hors de sa surface de réparation ?	Oui, c'est permis	Non, c'est une faute	Seulement sur les dégagements	Seulement avec l'accord de l'arbitre
+Según las reglas del fútbol, ¿puede el portero tocar el balón con las manos fuera de su área?	Sí, está permitido	No, es falta	Solo en los saques de puerta	Solo con permiso del árbitro
+@a82edc3a
+Jak w golfie nazywa się ukończenie dołka jednym uderzeniem poniżej par?	Bogey	Birdie	Eagle	Albatros
+Au golf, comment appelle-t-on un trou joué en un coup de moins que le par ?	Bogey	Birdie	Eagle	Albatros
+En golf, ¿cómo se llama completar un hoyo con un golpe menos que el par?	Bogey	Birdie	Eagle	Albatros
+@8c5fd94a
+Jak w bilardzie nazywa się biała bila uderzana kijem, by trafić inne bile?	Ósemka	Bila biała	Bila zagrywana	Bila kolorowa
+Au billard, comment appelle-t-on la bille blanche frappée avec la queue pour toucher les autres billes ?	La 8	Bille blanche (de choc)	Bille objet	Bille de couleur
+En billar, ¿cómo se llama la bola blanca que se golpea con el taco para dar a las demás?	La bola 8	Bola blanca	Bola objetivo	Bola de color
+@c21e6219
+Ile punktów w łucznictwie olimpijskim daje centralny żółty pierścień tarczy?	8	9	10	12
+Au tir à l'arc olympique, combien de points vaut l'anneau jaune central de la cible ?	8	9	10	12
+En tiro con arco olímpico, ¿cuántos puntos vale el anillo amarillo central de la diana?	8	9	10	12
+@4e453356
+Jaki jest przepisowy cel łuku przed polem karnym w piłce nożnej?	Wyznaczanie linii spalonego	Zapewnienie, by przy rzucie karnym pozostali zawodnicy byli co najmniej 9,15 m od piłki	Oznaczenie miejsca sędziego	Czysto estetyczna symetria
+Quel est le rôle réglementaire de l'arc de cercle situé devant la surface de réparation au football ?	Déterminer les lignes de hors-jeu	Garantir que les joueurs restent à au moins 9,15 mètres du ballon lors d'un penalty	Marquer la place officielle de l'arbitre	Une simple symétrie esthétique
+¿Cuál es la función reglamentaria de la media luna situada fuera del área en el fútbol?	Marcar las líneas de fuera de juego	Que los demás jugadores estén al menos a 9,15 metros del balón en un penalti	Marcar la posición oficial del árbitro	Pura simetría estética
+@5575fb82
+Kim jest legendarny wizjoner, który w 1976 roku współzałożył Apple razem ze Steve'em Wozniakiem?	Bill Gates	Steve Jobs	Michael Dell	Larry Ellison
+Qui est le visionnaire légendaire qui a cofondé Apple en 1976 avec Steve Wozniak ?	Bill Gates	Steve Jobs	Michael Dell	Larry Ellison
+¿Quién es el legendario visionario que cofundó Apple en 1976 junto a Steve Wozniak?	Bill Gates	Steve Jobs	Michael Dell	Larry Ellison
+@9455e162
+Co oznacza skrót „www” w adresach stron internetowych?	World Wide Web	World Wide Wireless	Wide Web Wire	World Wireless Web
+Que signifie l'abréviation « www » dans les adresses de sites web ?	World Wide Web	World Wide Wireless	Wide Web Wire	World Wireless Web
+¿Qué significa la abreviatura «www» de las direcciones web?	World Wide Web	World Wide Wireless	Wide Web Wire	World Wireless Web
+@0533f4d1
+Który podzespół komputera działa jako pamięć tymczasowa i traci dane po wyłączeniu zasilania?	Dysk twardy (HDD)	ROM	RAM	Karta graficzna
+Quel composant sert de mémoire temporaire à l'ordinateur et perd ses données quand on l'éteint ?	Disque dur (HDD)	ROM	RAM	Carte graphique
+¿Qué componente funciona como memoria temporal del ordenador y pierde sus datos al apagarlo?	Disco duro (HDD)	ROM	RAM	Tarjeta gráfica
+@41122c6a
+Które dwa mobilne systemy operacyjne są najpopularniejsze na świecie na rynku smartfonów?	Android i iOS	Windows i macOS	Symbian i Android	HarmonyOS i Tizen
+Quels sont les deux systèmes d'exploitation mobiles les plus utilisés au monde sur smartphone ?	Android et iOS	Windows et macOS	Symbian et Android	HarmonyOS et Tizen
+¿Cuáles son los dos sistemas operativos móviles más usados del mundo en smartphones?	Android e iOS	Windows y macOS	Symbian y Android	HarmonyOS y Tizen
+@28e1d398
+Która przeglądarka internetowa stworzona przez Google jest najczęściej używana na świecie?	Safari	Firefox	Opera	Chrome
+Quel navigateur web développé par Google est le plus utilisé au monde ?	Safari	Firefox	Opera	Chrome
+¿Qué navegador web desarrollado por Google es el más usado del mundo?	Safari	Firefox	Opera	Chrome
+@4425204e
+Ile bitów tworzy jeden bajt danych cyfrowych?	4 bity	8 bitów	16 bitów	32 bity
+Combien de bits forment un octet de données numériques ?	4 bits	8 bits	16 bits	32 bits
+¿Cuántos bits forman un byte de datos digitales?	4 bits	8 bits	16 bits	32 bits
+@b1861c96
+Który symbol oddziela nazwę użytkownika od nazwy domeny w adresie e-mail?	#	&	@	$
+Quel symbole sépare le nom d'utilisateur du nom de domaine dans une adresse e-mail ?	#	&	@	$
+¿Qué símbolo separa el nombre de usuario del dominio en una dirección de correo electrónico?	#	&	@	$
+@20b37a9c
+W którym roku Steve Jobs zaprezentował pierwszy iPhone, rozpoczynając rewolucję smartfonów?	2005	2007	2009	2010
+En quelle année Steve Jobs a-t-il présenté le premier iPhone, lançant la révolution des smartphones ?	2005	2007	2009	2010
+¿En qué año presentó Steve Jobs el primer iPhone, que desató la revolución de los smartphones?	2005	2007	2009	2010
+@23490ac9
+Jaki uniwersalny skrót klawiszowy służy do kopiowania zaznaczonego tekstu lub elementów?	Ctrl + V	Ctrl + X	Ctrl + C	Ctrl + Z
+Quel raccourci clavier universel sert à copier un texte ou des éléments sélectionnés ?	Ctrl + V	Ctrl + X	Ctrl + C	Ctrl + Z
+¿Qué atajo de teclado universal se usa para copiar el texto o los elementos seleccionados?	Ctrl + V	Ctrl + X	Ctrl + C	Ctrl + Z
+@9a6efe2c
+Co oznacza skrót USB, używany do podłączania urządzeń i ładowania?	Universal Serial Bus	United Standard Board	Universal System Byte	Unified Serial Base
+Que signifie l'abréviation USB, utilisée pour brancher et recharger des appareils ?	Universal Serial Bus	United Standard Board	Universal System Byte	Unified Serial Base
+¿Qué significa la abreviatura USB, que se usa para conectar y cargar dispositivos?	Universal Serial Bus	United Standard Board	Universal System Byte	Unified Serial Base
+@31b3de9f
+Który programista założył serwis społecznościowy Facebook na Uniwersytecie Harvarda w 2004 roku?	Jack Dorsey	Mark Zuckerberg	Evan Spiegel	Kevin Systrom
+Quel programmeur a fondé le réseau social Facebook à l'université Harvard en 2004 ?	Jack Dorsey	Mark Zuckerberg	Evan Spiegel	Kevin Systrom
+¿Qué programador fundó la red social Facebook en la Universidad de Harvard en 2004?	Jack Dorsey	Mark Zuckerberg	Evan Spiegel	Kevin Systrom
+@a54eae7a
+Który szybki nośnik danych przechowuje je w kościach pamięci flash zamiast na wirujących talerzach magnetycznych?	HDD	SSD	CD-ROM	Dyskietka
+Quel support de stockage rapide enregistre les données sur des puces de mémoire flash plutôt que sur des plateaux magnétiques rotatifs ?	HDD	SSD	CD-ROM	Disquette
+¿Qué unidad de almacenamiento rápida guarda los datos en chips de memoria flash en vez de en platos magnéticos giratorios?	HDD	SSD	CD-ROM	Disquete
+@ab5b2c14
+Którego języka znaczników używa się do tworzenia szkieletu i treści stron internetowych?	HTML	Python	SQL	C++
+Quel langage de balisage sert à structurer le squelette et le contenu des pages web ?	HTML	Python	SQL	C++
+¿Qué lenguaje de marcado se usa para estructurar el esqueleto y el contenido de las páginas web?	HTML	Python	SQL	C++
+@4fefa2d7
+Która technologia pozwala urządzeniom bezprzewodowo łączyć się z siecią lokalną i internetem?	Bluetooth	Podczerwień	Wi-Fi	Ethernet
+Quelle technologie permet aux appareils de se connecter sans fil à un réseau local et à Internet ?	Bluetooth	Infrarouge	Wi-Fi	Ethernet
+¿Qué tecnología permite a los dispositivos conectarse sin cables a una red local y a internet?	Bluetooth	Infrarrojos	Wifi	Ethernet
+@43e04a42
+Który podzespół uważa się za „mózg” komputera, wykonujący instrukcje matematyczne i logiczne?	Procesor (CPU)	Zasilacz (PSU)	Płyta główna	Karta dźwiękowa
+Quel composant est considéré comme le « cerveau » de l'ordinateur, qui exécute les instructions mathématiques et logiques ?	Processeur (CPU)	Alimentation (PSU)	Carte mère	Carte son
+¿Qué componente se considera el «cerebro» del ordenador, que ejecuta las instrucciones matemáticas y lógicas?	Procesador (CPU)	Fuente de alimentación (PSU)	Placa base	Tarjeta de sonido
+@3fef27ec
+W którym roku powstał YouTube, najpopularniejszy serwis wideo na świecie?	2003	2005	2007	2010
+En quelle année a été fondée YouTube, la plateforme de partage de vidéos la plus populaire au monde ?	2003	2005	2007	2010
+¿En qué año se fundó YouTube, la plataforma de vídeos más popular del mundo?	2003	2005	2007	2010
+@3563de2f
+Która firma programistyczna stworzyła format PDF, globalny standard wymiany dokumentów cyfrowych?	Microsoft	Adobe	Oracle	IBM
+Quel éditeur de logiciels a créé le format PDF, standard mondial d'échange de documents numériques ?	Microsoft	Adobe	Oracle	IBM
+¿Qué empresa de software creó el formato PDF, estándar mundial para intercambiar documentos digitales?	Microsoft	Adobe	Oracle	IBM
+@966f0acf
+Który historyczny król skandynawski dał nazwę standardowi bezprzewodowemu Bluetooth?	Ragnar Lodbrok	Harald Sinozęby	Ivar Bez Kości	Kanut Wielki
+Quel roi scandinave historique a inspiré le nom de la norme sans fil Bluetooth ?	Ragnar Lodbrok	Harald à la Dent bleue	Ivar sans Os	Knut le Grand
+¿Qué rey escandinavo histórico inspiró el nombre del estándar inalámbrico Bluetooth?	Ragnar Lodbrok	Harald Diente Azul	Ivar el Deshuesado	Canuto el Grande
+@ce60b2f5
+Jakim standardowym skrótem klawiszowym cofa się ostatnią wykonaną czynność na komputerze?	Ctrl + Z	Ctrl + Y	Ctrl + A	Ctrl + S
+Quel raccourci clavier standard permet d'annuler la dernière action sur un ordinateur ?	Ctrl + Z	Ctrl + Y	Ctrl + A	Ctrl + S
+¿Qué atajo de teclado estándar sirve para deshacer la última acción en el ordenador?	Ctrl + Z	Ctrl + Y	Ctrl + A	Ctrl + S
+@35140ad1
+Co oznacza nawigacyjny skrót GPS?	Global Positioning System	General Point Satellite	Ground Path Signal	Global Power Station
+Que signifie l'acronyme de navigation GPS ?	Global Positioning System	General Point Satellite	Ground Path Signal	Global Power Station
+¿Qué significan las siglas de navegación GPS?	Global Positioning System	General Point Satellite	Ground Path Signal	Global Power Station
+@9ee3c616
+Który bezpieczny, szyfrowany protokół internetowy oznaczany jest ikoną kłódki w pasku adresu przeglądarki?	HTTP	HTTPS	FTP	SSH
+Quel protocole web sécurisé et chiffré est signalé par un cadenas dans la barre d'adresse du navigateur ?	HTTP	HTTPS	FTP	SSH
+¿Qué protocolo web seguro y cifrado se representa con un candado en la barra de direcciones del navegador?	HTTP	HTTPS	FTP	SSH
+@5a24e00f
+Kto założył Amazon, jedną z największych na świecie firm handlu internetowego i chmury obliczeniowej?	Elon Musk	Jeff Bezos	Satya Nadella	Tim Cook
+Qui a fondé Amazon, l'une des plus grandes entreprises mondiales de commerce en ligne et d'informatique en nuage ?	Elon Musk	Jeff Bezos	Satya Nadella	Tim Cook
+¿Quién fundó Amazon, una de las mayores empresas del mundo de comercio electrónico y computación en la nube?	Elon Musk	Jeff Bezos	Satya Nadella	Tim Cook
+@16986df9
+Który podzespół oblicza i wyświetla na ekranie grafikę 2D i 3D?	Karta graficzna (GPU)	Karta sieciowa	Dysk twardy	Chłodzenie procesora
+Quel composant calcule et affiche à l'écran les graphismes 2D et 3D ?	Carte graphique (GPU)	Carte réseau	Disque dur	Ventirad du processeur
+¿Qué componente calcula y dibuja en pantalla los gráficos 2D y 3D?	Tarjeta gráfica (GPU)	Tarjeta de red	Disco duro	Disipador de la CPU
+@48e04aa5
+Skąd pochodzi nazwa standardowego układu klawiatury QWERTY?	Od nazwiska wynalazcy	Od sześciu pierwszych liter w lewym górnym rzędzie	Od wczesnego kodu telegraficznego	Od numeru oryginalnego patentu
+D'où vient le nom de la disposition de clavier QWERTY ?	Du nom de son inventeur	Des six premières lettres de la rangée supérieure gauche	D'un ancien code télégraphique	De son numéro de brevet d'origine
+¿De dónde viene el nombre de la distribución de teclado QWERTY?	Del apellido de su inventor	De las seis primeras letras de la fila superior izquierda	De un antiguo código telegráfico	De su código de patente original
+@36d158a3
+Którzy dwaj wspólnicy założyli wyszukiwarkę Google na Uniwersytecie Stanforda w 1998 roku?	Larry Page i Siergiej Brin	Steve Jobs i Steve Wozniak	Bill Gates i Paul Allen	David Filo i Jerry Yang
+Quels deux associés ont fondé le moteur de recherche Google à l'université Stanford en 1998 ?	Larry Page et Sergey Brin	Steve Jobs et Steve Wozniak	Bill Gates et Paul Allen	David Filo et Jerry Yang
+¿Qué dos socios fundaron el buscador Google en la Universidad de Stanford en 1998?	Larry Page y Serguéi Brin	Steve Jobs y Steve Wozniak	Bill Gates y Paul Allen	David Filo y Jerry Yang
+@c19c6652
+Ile kilobajtów (KB) daje jeden megabajt (MB) w binarnym zapisie danych?	100 KB	512 KB	1000 KB	1024 KB
+En stockage informatique binaire, combien de kilo-octets (Ko) font un mégaoctet (Mo) ?	100 Ko	512 Ko	1000 Ko	1024 Ko
+En almacenamiento informático binario, ¿cuántos kilobytes (KB) forman un megabyte (MB)?	100 KB	512 KB	1000 KB	1024 KB
+@9115b4de
+Jak ogólnie nazywa się oprogramowanie stworzone, by przenikać do systemów komputerowych, niszczyć je lub przejmować bez zgody użytkownika?	Spam	Złośliwe oprogramowanie / wirus	Zapora sieciowa	Sterownik
+Quel terme générique désigne un logiciel conçu pour s'infiltrer dans un système informatique, l'endommager ou le compromettre sans le consentement de l'utilisateur ?	Spam	Logiciel malveillant / virus	Pare-feu	Pilote
+¿Qué término general designa al software creado para infiltrarse, dañar o comprometer sistemas informáticos sin permiso del usuario?	Spam	Malware / virus informático	Cortafuegos	Controlador
+@0f6e9ca7
+Jaka jest główna funkcja karty „incognito”, czyli prywatnej, w przeglądarce?	Przyspiesza internet	Całkowicie ukrywa publiczny adres IP	Usuwa lokalnie historię i ciasteczka po zakończeniu sesji	Chroni przed każdym złośliwym oprogramowaniem
+Quelle est la fonction principale d'un onglet de navigation privée dans un navigateur ?	Accélérer Internet	Masquer complètement l'adresse IP publique	Effacer localement l'historique et les cookies à la fin de la session	Empêcher toute infection par un logiciel malveillant
+¿Cuál es la función principal de una pestaña de incógnito o privada en el navegador?	Acelera internet	Oculta por completo la IP pública	Borra localmente el historial y las cookies al cerrar la sesión	Impide cualquier infección de malware
+@5b4591c2
+Który klawisz funkcyjny tradycyjnie naciska się w przeglądarkach w Windows, by odświeżyć stronę?	F1	F5	F8	F11
+Quelle touche de fonction appuie-t-on traditionnellement dans les navigateurs sous Windows pour actualiser la page ?	F1	F5	F8	F11
+¿Qué tecla de función se pulsa tradicionalmente en los navegadores de Windows para recargar la página?	F1	F5	F8	F11
+@ff1620f0
+Jaki owoc z odgryzionym kawałkiem widnieje w słynnym logo firmy Apple?	Pomarańcza	Nadgryzione jabłko	Gruszka	Wiśnia
+Quel fruit croqué figure sur le célèbre logo de l'entreprise Apple ?	Orange	Pomme croquée	Poire	Cerise
+¿Qué fruta mordida aparece en el famoso logotipo de Apple?	Naranja	Manzana mordida	Pera	Cereza
+@8a62ec68
+Który bezprzewodowy standard krótkiego zasięgu umożliwia płatności zbliżeniowe i parowanie dotykiem w smartfonach?	NFC	LTE	GPS	UWB
+Quelle norme sans fil à courte portée permet le paiement sans contact et l'appairage par simple contact sur les smartphones ?	NFC	LTE	GPS	UWB
+¿Qué estándar inalámbrico de corto alcance permite pagos sin contacto y emparejar acercando el móvil?	NFC	LTE	GPS	UWB
+@430c1cf6
+Który amerykański pionier technologii współzałożył Microsoft w 1975 roku z Paulem Allenem?	Steve Ballmer	Bill Gates	Michael Bloomberg	Larry Page
+Quel pionnier américain de la tech a cofondé Microsoft en 1975 avec Paul Allen ?	Steve Ballmer	Bill Gates	Michael Bloomberg	Larry Page
+¿Qué pionero tecnológico estadounidense cofundó Microsoft en 1975 junto a Paul Allen?	Steve Ballmer	Bill Gates	Michael Bloomberg	Larry Page
+@77aefe37
+Który słynny kod stanu HTTP oznacza, że żądanej strony nie znaleziono na serwerze?	200 OK	404 Not Found	500 Server Error	301 Redirect
+Quel célèbre code d'état HTTP indique que la page demandée est introuvable sur le serveur ?	200 OK	404 Not Found	500 Server Error	301 Redirect
+¿Qué famoso código de estado HTTP indica que la página solicitada no se encuentra en el servidor?	200 OK	404 Not Found	500 Server Error	301 Redirect
+@4954d216
+Gdzie w systemie Windows trafiają usunięte pliki, zanim zostaną trwale skasowane?	Pobrane	Moje dokumenty	Kosz	Pliki systemowe
+Où sont conservés temporairement les fichiers supprimés avant leur effacement définitif sous Windows ?	Téléchargements	Mes documents	Corbeille	Fichiers système
+¿Dónde se guardan temporalmente los archivos borrados antes de eliminarlos para siempre en Windows?	Descargas	Mis documentos	Papelera de reciclaje	Archivos del sistema
+@1f3f7386
+Jaka była standardowa pojemność popularnej 3,5-calowej dyskietki HD używanej w komputerach PC?	1,44 MB	128 MB	1 GB	10 MB
+Quelle était la capacité standard d'une disquette haute densité de 3,5 pouces utilisée sur PC ?	1,44 Mo	128 Mo	1 Go	10 Mo
+¿Cuál era la capacidad estándar de un disquete de alta densidad de 3,5 pulgadas usado en los PC?	1,44 MB	128 MB	1 GB	10 MB
+@be2948af
+Który ocean jest największy na Ziemi?	Ocean Indyjski	Ocean Arktyczny	Ocean Atlantycki	Ocean Spokojny
+Quel est le plus grand océan de la Terre ?	Océan Indien	Océan Arctique	Océan Atlantique	Océan Pacifique
+¿Cuál es el océano más grande de la Tierra?	Océano Índico	Océano Ártico	Océano Atlántico	Océano Pacífico
+@c6d213d0
+Na którym kontynencie żyją dziko kangury?	W Australii	W Azji	W Ameryce Południowej	W Afryce
+Sur quel continent vivent les kangourous à l'état sauvage ?	Australie	Asie	Amérique du Sud	Afrique
+¿En qué continente viven los canguros en estado salvaje?	Australia	Asia	América del Sur	África
+@d32414de
+W którym mieście stoi wieża Eiffla?	Paryż	Londyn	Rzym	Madryt
+Dans quelle ville se trouve la tour Eiffel ?	Paris	Londres	Rome	Madrid
+¿En qué ciudad está la torre Eiffel?	París	Londres	Roma	Madrid
+@859bcead
+Który kraj ma kształt buta?	Chile	Grecja	Włochy	Portugalia
+Quel pays a la forme d'une botte ?	Chili	Grèce	Italie	Portugal
+¿Qué país tiene forma de bota?	Chile	Grecia	Italia	Portugal
+@2ea19349
+Na którym kontynencie leży Sahara?	Australia	Ameryka Południowa	Azja	Afryka
+Sur quel continent se trouve le Sahara ?	Australie	Amérique du Sud	Asie	Afrique
+¿En qué continente está el desierto del Sáhara?	Australia	América del Sur	Asia	África
+@9ff4a48d
+Jaki liść widnieje na fladze Kanady?	Platan	Dąb	Klon	Palma
+Quelle feuille figure sur le drapeau du Canada ?	Platane	Chêne	Érable	Palmier
+¿Qué hoja aparece en la bandera de Canadá?	Plátano de sombra	Roble	Arce	Palmera
+@8c1abd26
+Jaka jest najwyższa góra świata?	Mont Blanc	K2	Everest	Kilimandżaro
+Quelle est la plus haute montagne du monde ?	Mont Blanc	K2	Everest	Kilimandjaro
+¿Cuál es la montaña más alta del mundo?	Mont Blanc	K2	Everest	Kilimanjaro
+@7c5b807f
+W którym mieście stoi Statua Wolności?	Nowy Jork	Boston	Waszyngton	Chicago
+Dans quelle ville se trouve la statue de la Liberté ?	New York	Boston	Washington	Chicago
+¿En qué ciudad está la Estatua de la Libertad?	Nueva York	Boston	Washington	Chicago
+@993d7ef1
+Jaka jest stolica Polski?	Kraków	Warszawa	Gdańsk	Poznań
+Quelle est la capitale de la Pologne ?	Cracovie	Varsovie	Gdańsk	Poznań
+¿Cuál es la capital de Polonia?	Cracovia	Varsovia	Gdansk	Poznań
+@c907a8ea
+W którym mieście jest Big Ben?	Manchester	Dublin	Londyn	Edynburg
+Dans quelle ville se trouve Big Ben ?	Manchester	Dublin	Londres	Édimbourg
+¿En qué ciudad está el Big Ben?	Mánchester	Dublín	Londres	Edimburgo
+@8486b089
+W jakim języku mówi się głównie w Brazylii?	Po francusku	Po portugalsku	Po hiszpańsku	Po brazylijsku
+Quelle langue parle-t-on principalement au Brésil ?	Le français	Le portugais	L'espagnol	Le brésilien
+¿Qué idioma se habla principalmente en Brasil?	Francés	Portugués	Español	Brasileño
+@8cc75f16
+W którym kraju leży Giza, słynąca z piramid?	Sudan	Meksyk	Egipt	Peru
+Dans quel pays se trouve Gizeh, célèbre pour ses pyramides ?	Soudan	Mexique	Égypte	Pérou
+¿En qué país está Guiza, famosa por sus pirámides?	Sudán	México	Egipto	Perú
+@67c30dee
+Który kontynent jest najzimniejszy i pokryty lodem?	Antarktyda	Syberia	Arktyka	Grenlandia
+Quel est le continent le plus froid, couvert de glace ?	Antarctique	Sibérie	Arctique	Groenland
+¿Cuál es el continente más frío, cubierto de hielo?	Antártida	Siberia	El Ártico	Groenlandia
+@58544cf4
+Który kraj ma terytorium zarówno w Europie, jak i w Azji?	Egipt	Iran	Grecja	Turcja
+Quel pays possède des terres à la fois en Europe et en Asie ?	Égypte	Iran	Grèce	Turquie
+¿Qué país tiene territorio tanto en Europa como en Asia?	Egipto	Irán	Grecia	Turquía
+@3bc4a786
+Wenecja słynie z kanałów. W którym kraju leży?	Chorwacja	Francja	Holandia	Włochy
+Venise est célèbre pour ses canaux. Dans quel pays se trouve-t-elle ?	Croatie	France	Pays-Bas	Italie
+Venecia es famosa por sus canales. ¿En qué país está?	Croacia	Francia	Países Bajos	Italia
+@bbbc2303
+W którym kraju leży większość Amazońskiego lasu deszczowego?	Brazylia	Kolumbia	Peru	Wenezuela
+Dans quel pays se trouve la majeure partie de la forêt amazonienne ?	Brésil	Colombie	Pérou	Venezuela
+¿En qué país está la mayor parte de la selva amazónica?	Brasil	Colombia	Perú	Venezuela
+@319e87cd
+Ile jest kontynentów (według najpopularniejszego podziału)?	7	5	6	9
+Combien y a-t-il de continents (selon le décompte le plus courant) ?	7	5	6	9
+¿Cuántos continentes hay (según el recuento más habitual)?	7	5	6	9
+@1903ba8a
+Jaka jest stolica Meksyku?	Cancún	Tijuana	Guadalajara	Meksyk
+Quelle est la capitale du Mexique ?	Cancún	Tijuana	Guadalajara	Mexico
+¿Cuál es la capital de México?	Cancún	Tijuana	Guadalajara	Ciudad de México
+@f92394d6
+Gdzie żyją dziko niedźwiedzie polarne?	W Alpach	W Himalajach	Wokół bieguna północnego	Na Antarktydzie
+Où vivent les ours polaires à l'état sauvage ?	Dans les Alpes	Dans l'Himalaya	Autour du pôle Nord	En Antarctique
+¿Dónde viven los osos polares en estado salvaje?	En los Alpes	En el Himalaya	Alrededor del polo norte	En la Antártida
+@7f62a89c
+Z jakiego jedzenia szczególnie słynie Szwajcaria?	Sushi	Czekolada i ser	Ryż	Taco
+Pour quel aliment la Suisse est-elle particulièrement célèbre ?	Les sushis	Le chocolat et le fromage	Le riz	Les tacos
+¿Por qué comida es especialmente famosa Suiza?	Sushi	Chocolate y queso	Arroz	Tacos

@@ -1,0 +1,440 @@
+@58ffe716
+Który piłkarz może dotykać piłki rękami?	Napastnik	Obrońca	Pomocnik	Bramkarz
+Quel footballeur a le droit de toucher le ballon avec les mains ?	L'attaquant	Le défenseur	Le milieu	Le gardien
+¿Qué futbolista puede tocar el balón con las manos?	Delantero	Defensa	Centrocampista	Portero
+@936d292d
+Ile mniej więcej kilometrów liczy maraton?	42	30	50	21
+Un marathon fait environ combien de kilomètres ?	42	30	50	21
+¿Cuántos kilómetros tiene aproximadamente una maratón?	42	30	50	21
+@97c3c568
+Który sport uprawia się na lodzie z krążkiem?	Łyżwiarstwo figurowe	Curling	Hokej na lodzie	Narciarstwo
+Quel sport se pratique sur glace avec un palet ?	Patinage artistique	Curling	Hockey sur glace	Ski
+¿Qué deporte se juega sobre hielo con un disco?	Patinaje artístico	Curling	Hockey sobre hielo	Esquí
+@3543db1d
+Ilu zawodników z każdej drużyny gra na boisku w siatkówce?	7	6	4	5
+Combien de joueurs par équipe sont sur le terrain au volley-ball ?	7	6	4	5
+¿Cuántos jugadores por equipo hay en la pista en voleibol?	7	6	4	5
+@67294eec
+W którym sporcie zawodnicy „ścinają” piłkę nad siatką?	Golf	Piłka ręczna	Piłka nożna	Siatkówka
+Dans quel sport les joueurs « smashent »-ils le ballon au-dessus d'un filet ?	Golf	Handball	Football	Volley-ball
+¿En qué deporte los jugadores «rematan» el balón por encima de una red?	Golf	Balonmano	Fútbol	Voleibol
+@ef84f5f4
+Gdzie odbywają się walki bokserskie?	Na boisku	Na ringu	W basenie	Na bieżni
+Où se déroulent les combats de boxe ?	Sur un terrain	Sur un ring	Dans une piscine	Sur une piste
+¿Dónde se celebran los combates de boxeo?	En un campo	En un cuadrilátero	En una piscina	En una pista
+@e6c9d0b7
+Który sport należy do zimowych igrzysk olimpijskich?	Narciarstwo	Surfing	Siatkówka	Maraton
+Quel sport fait partie des Jeux olympiques d'hiver ?	Le ski	Le surf	Le volley-ball	Le marathon
+¿Qué deporte forma parte de los Juegos Olímpicos de Invierno?	Esquí	Surf	Voleibol	Maratón
+@78e06a1f
+Czym jest Formuła 1?	Wyścigami łodzi	Wyścigami konnymi	Wyścigami samolotów	Wyścigami samochodowymi
+Qu'est-ce que la Formule 1 ?	Des courses de bateaux	Des courses hippiques	Des courses aériennes	Des courses automobiles
+¿Qué es la Fórmula 1?	Carreras de barcos	Carreras de caballos	Carreras aéreas	Carreras de coches
+@457544aa
+Zapasy sumo są narodowym sportem którego kraju?	Korei	Japonii	Chin	Mongolii
+Le sumo est le sport national de quel pays ?	La Corée	Le Japon	La Chine	La Mongolie
+La lucha de sumo es el deporte nacional de ¿qué país?	Corea	Japón	China	Mongolia
+@a4358ff2
+Jakiego koloru jest zwykle piłeczka do tenisa stołowego?	Czerwona	Żółtozielona	Czarna	Biała lub pomarańczowa
+De quelle couleur est généralement une balle de tennis de table ?	Rouge	Jaune-vert	Noire	Blanche ou orange
+¿De qué color suele ser una pelota de tenis de mesa?	Roja	Amarillo verdoso	Negra	Blanca o naranja
+@56a5c06b
+Ilu zawodników z każdej drużyny gra na boisku do koszykówki?	5	7	4	6
+Combien de joueurs par équipe sont sur un terrain de basket ?	5	7	4	6
+¿Cuántos jugadores por equipo hay en una pista de baloncesto?	5	7	4	6
+@4e612b61
+W którym sporcie obowiązuje przepis o spalonym?	Koszykówka	Siatkówka	Tenis	Piłka nożna
+Quel sport a la règle du hors-jeu ?	Basket	Volley-ball	Tennis	Football
+¿Qué deporte tiene la regla del fuera de juego?	Baloncesto	Voleibol	Tenis	Fútbol
+@1c558735
+Najsłynniejsze mistrzostwa świata dotyczą którego sportu?	Piłki nożnej	Golfa	Tenisa	Koszykówki
+La Coupe du monde la plus célèbre concerne quel sport ?	Le football	Le golf	Le tennis	Le basket
+El Mundial más famoso es de ¿qué deporte?	Fútbol	Golf	Tenis	Baloncesto
+@44720cd5
+Jaki kolor powstaje z połączenia czerwonej i żółtej farby?	Pomarańczowy	Brązowy	Zielony	Fioletowy
+Quelle couleur obtient-on en mélangeant du rouge et du jaune ?	Orange	Marron	Vert	Violet
+¿Qué color sale al mezclar pintura roja y amarilla?	Naranja	Marrón	Verde	Morado
+@21681190
+Jaki kolor powstaje z niebieskiej i żółtej farby?	Fioletowy	Różowy	Pomarańczowy	Zielony
+Quelle couleur donnent le bleu et le jaune mélangés ?	Violet	Rose	Orange	Vert
+¿Qué color sale de la pintura azul y la amarilla?	Morado	Rosa	Naranja	Verde
+@0d6825dc
+Jakie kwiaty słynnie malował Van Gogh?	Tulipany	Słoneczniki	Lilie wodne	Róże
+Quelles fleurs Van Gogh a-t-il peintes de façon célèbre ?	Des tulipes	Des tournesols	Des nénuphars	Des roses
+¿Qué flores pintó Van Gogh en sus cuadros más famosos?	Tulipanes	Girasoles	Nenúfares	Rosas
+@3feabcee
+Jak nazywa się artysta, który tworzy posągi?	Garncarz	Architekt	Malarz	Rzeźbiarz
+Comment appelle-t-on l'artiste qui crée des statues ?	Potier	Architecte	Peintre	Sculpteur
+¿Cómo se llama el artista que hace estatuas?	Alfarero	Arquitecto	Pintor	Escultor
+@b025f9a0
+W którym muzeum wystawiana jest Mona Lisa?	Luwr	Uffizi	Prado	British Museum
+Dans quel musée la Joconde est-elle exposée ?	Le Louvre	Les Offices	Le Prado	Le British Museum
+¿En qué museo se expone la Mona Lisa?	Louvre	Uffizi	Prado	Museo Británico
+@739d8c02
+Jak nazywa się deska, na której malarze mieszają farby?	Płótno	Pędzel	Paleta	Sztaluga
+Comment s'appelle la planche sur laquelle les peintres mélangent leurs couleurs ?	La toile	Le pinceau	La palette	Le chevalet
+¿Cómo se llama la tabla en la que los pintores mezclan sus colores?	Lienzo	Pincel	Paleta	Caballete
+@8ae1e7f4
+Jak nazywa się stojak, który trzyma obraz podczas malowania?	Płótno	Rama	Sztaluga	Paleta
+Comment s'appelle le support qui tient le tableau pendant qu'on peint ?	La toile	Le cadre	Le chevalet	La palette
+¿Cómo se llama el soporte que sujeta el cuadro mientras pintas?	Lienzo	Marco	Caballete	Paleta
+@0d0aa20c
+Jak nazywa się sztuka wyrabiania naczyń z gliny?	Kaligrafia	Malarstwo	Garncarstwo	Rzeźba
+Comment appelle-t-on l'art de fabriquer des pots en argile ?	La calligraphie	La peinture	La poterie	La sculpture
+¿Cómo se llama el arte de hacer vasijas de barro?	Caligrafía	Pintura	Alfarería	Escultura
+@a0d29042
+Z którego kraju pochodził Pablo Picasso?	Z Hiszpanii	Z Francji	Z Portugalii	Z Włoch
+De quel pays était Pablo Picasso ?	Espagne	France	Portugal	Italie
+¿De qué país era Pablo Picasso?	España	Francia	Portugal	Italia
+@8ac4d2dd
+Jak nazywa się sztuka składania papieru?	Kirigami	Bonsai	Ikebana	Origami
+Comment s'appelle l'art du pliage de papier ?	Kirigami	Bonsaï	Ikebana	Origami
+¿Cómo se llama el arte de doblar papel?	Kirigami	Bonsái	Ikebana	Origami
+@2b24f365
+Co dzieje się z nosem Pinokia, gdy kłamie?	Rośnie	Czerwienieje	Kurczy się	Swędzi
+Qu'arrive-t-il au nez de Pinocchio quand il ment ?	Il s'allonge	Il devient rouge	Il rétrécit	Il le démange
+¿Qué le pasa a la nariz de Pinocho cuando miente?	Crece	Se pone roja	Encoge	Le pica
+@f1d15745
+Jak nazywa się przyjaciel Sherlocka Holmesa, lekarz?	Hudson	Lestrade	Watson	Moriarty
+Comment s'appelle l'ami médecin de Sherlock Holmes ?	Hudson	Lestrade	Watson	Moriarty
+¿Cómo se llama el amigo médico de Sherlock Holmes?	Hudson	Lestrade	Watson	Moriarty
+@51bb3676
+Które zwierzę jest czarnym charakterem w „Czerwonym Kapturku”?	Wilk	Lew	Lis	Niedźwiedź
+Dans « Le Petit Chaperon rouge », quel animal est le méchant ?	Le loup	Le lion	Le renard	L'ours
+En «Caperucita Roja», ¿qué animal es el villano?	El lobo	El león	El zorro	El oso
+@9fe9eb2a
+Co gubi Kopciuszek na balu?	Rękawiczkę	Pierścionek	Koronę	Szklany pantofelek
+Que perd Cendrillon au bal ?	Son gant	Sa bague	Sa couronne	Sa pantoufle de verre
+¿Qué pierde Cenicienta en el baile?	Su guante	Su anillo	Su corona	Su zapatito de cristal
+@ad4569aa
+Kto napisał „Romea i Julię”?	Jane Austen	William Szekspir	Charles Dickens	Oscar Wilde
+Qui a écrit « Roméo et Juliette » ?	Jane Austen	William Shakespeare	Charles Dickens	Oscar Wilde
+¿Quién escribió «Romeo y Julieta»?	Jane Austen	William Shakespeare	Charles Dickens	Oscar Wilde
+@7c8a563d
+Co słynnie atakuje Don Kichot, biorąc to za olbrzymów?	Zamki	Góry	Wiatraki	Drzewa
+Que Don Quichotte attaque-t-il en croyant que ce sont des géants ?	Des châteaux	Des montagnes	Des moulins à vent	Des arbres
+¿Qué ataca Don Quijote creyendo que son gigantes?	Castillos	Montañas	Molinos de viento	Árboles
+@88415d15
+Za kim Alicja wskakuje do nory w „Alicji w Krainie Czarów”?	Za Szalonym Kapelusznikiem	Za Kotem	Za Białym Królikiem	Za Królową
+Qui Alice suit-elle dans le terrier dans « Alice au pays des merveilles » ?	Le Chapelier fou	Le Chat	Le Lapin blanc	La Reine
+¿A quién sigue Alicia por la madriguera en «Alicia en el país de las maravillas»?	Al Sombrerero Loco	Al Gato	Al Conejo Blanco	A la Reina
+@eb1caabb
+Kto napisał książki o Harrym Potterze?	J.R.R. Tolkien	J.K. Rowling	C.S. Lewis	Roald Dahl
+Qui a écrit les livres Harry Potter ?	J.R.R. Tolkien	J.K. Rowling	C.S. Lewis	Roald Dahl
+¿Quién escribió los libros de Harry Potter?	J.R.R. Tolkien	J.K. Rowling	C.S. Lewis	Roald Dahl
+@0f9a6082
+Ilu krasnoludków jest w „Królewnie Śnieżce”?	9	5	7	6
+Combien de nains y a-t-il dans « Blanche-Neige » ?	9	5	7	6
+¿Cuántos enanitos hay en «Blancanieves»?	9	5	7	6
+@8334bed6
+Gdzie mieszka Piotruś Pan?	W krainie Oz	W Nibylandii	W Narnii	W Krainie Czarów
+Où vit Peter Pan ?	Au pays d'Oz	Au Pays imaginaire	À Narnia	Au pays des merveilles
+¿Dónde vive Peter Pan?	En Oz	En el País de Nunca Jamás	En Narnia	En el País de las Maravillas
+@7884aadc
+Skąd pochodzi Mały Książę?	Z Wenus	Z Marsa	Z planetoidy	Z Księżyca
+D'où vient le Petit Prince ?	De Vénus	De Mars	D'un astéroïde	De la Lune
+¿De dónde viene el Principito?	De Venus	De Marte	De un asteroide	De la Luna
+@86075a76
+Gdzie utknął Robinson Crusoe?	Na statku	Na bezludnej wyspie	W jaskini	Na pustyni
+Où Robinson Crusoé est-il bloqué ?	Sur un bateau	Sur une île déserte	Dans une grotte	Dans un désert
+¿Dónde queda atrapado Robinson Crusoe?	En un barco	En una isla desierta	En una cueva	En un desierto
+@a2ff447b
+W której bajce dziewczynka odwiedza dom trzech niedźwiedzi?	Roszpunka	Złotowłosa	Jaś i Małgosia	Królewna Śnieżka
+Dans quel conte une fillette visite-t-elle la maison des trois ours ?	Raiponce	Boucle d'or	Hansel et Gretel	Blanche-Neige
+¿En qué cuento una niña visita la casa de los tres osos?	Rapunzel	Ricitos de Oro	Hansel y Gretel	Blancanieves
+@3cc421af
+Jakie jest największe zwierzę na Ziemi?	Płetwal błękitny	Żarłacz biały	Żyrafa	Słoń
+Quel est le plus grand animal de la Terre ?	La baleine bleue	Le grand requin blanc	La girafe	L'éléphant
+¿Cuál es el animal más grande de la Tierra?	Ballena azul	Tiburón blanco	Jirafa	Elefante
+@4c9efc2f
+Jaki słodki pokarm wytwarzają pszczoły?	Miód	Syrop	Dżem	Cukier
+Quel aliment sucré les abeilles fabriquent-elles ?	Le miel	Le sirop	La confiture	Le sucre
+¿Qué alimento dulce fabrican las abejas?	Miel	Sirope	Mermelada	Azúcar
+@19902f17
+Jakiego koloru jest skóra niedźwiedzia polarnego pod futrem?	Biała	Różowa	Czarna	Żółta
+De quelle couleur est la peau de l'ours polaire sous sa fourrure ?	Blanche	Rose	Noire	Jaune
+¿De qué color es la piel del oso polar bajo su pelaje?	Blanca	Rosa	Negra	Amarilla
+@4b5d1dab
+Które zwierzę słynie z długiej szyi?	Żyrafa	Zebra	Wielbłąd	Kangur
+Quel animal est célèbre pour son long cou ?	La girafe	Le zèbre	Le chameau	Le kangourou
+¿Qué animal es famoso por su largo cuello?	Jirafa	Cebra	Camello	Canguro
+@84cb4de3
+Czym staje się gąsienica?	Motylem	Mrówką	Pająkiem	Pszczołą
+Que devient une chenille ?	Un papillon	Une fourmi	Une araignée	Une abeille
+¿En qué se convierte una oruga?	Mariposa	Hormiga	Araña	Abeja
+@da88167c
+Czym żywią się głównie pandy?	Mięsem	Bambusem	Rybami	Owocami
+Que mangent principalement les pandas ?	De la viande	Du bambou	Du poisson	Des fruits
+¿Qué comen principalmente los pandas?	Carne	Bambú	Pescado	Fruta
+@e863fdbc
+Jak nazywa się młoda żaba?	Jagnię	Kijanka	Pisklę	Źrebię
+Comment appelle-t-on un bébé grenouille ?	Un agneau	Un têtard	Un poussin	Un poulain
+¿Cómo se llama la cría de la rana?	Cordero	Renacuajo	Pollito	Potro
+@a001b982
+Który ptak nie umie latać, ale bardzo szybko biega?	Struś	Mewa	Wróbel	Orzeł
+Quel oiseau ne peut pas voler mais court très vite ?	L'autruche	La mouette	Le moineau	L'aigle
+¿Qué ave no puede volar pero corre muy rápido?	Avestruz	Gaviota	Gorrión	Águila
+@d5dc27af
+Ile ramion ma ośmiornica?	10	12	8	6
+Combien de bras a une pieuvre ?	10	12	8	6
+¿Cuántos brazos tiene un pulpo?	10	12	8	6
+@dbb85f91
+Które zwierzę nazywa się „królem dżungli”?	Goryl	Słoń	Lew	Tygrys
+Quel animal appelle-t-on le « roi de la jungle » ?	Le gorille	L'éléphant	Le lion	Le tigre
+¿Qué animal es llamado el «rey de la selva»?	Gorila	Elefante	León	Tigre
+@9634d959
+Drzewa zrzucające liście jesienią nazywamy…	Liściastymi	Zimozielonymi	Kaktusami	Palmami
+Les arbres qui perdent leurs feuilles en automne sont appelés…	À feuilles caduques	À feuilles persistantes	Cactus	Palmiers
+Los árboles que pierden las hojas en otoño se llaman…	De hoja caduca	De hoja perenne	Cactus	Palmeras
+@524391af
+Co wielbłąd magazynuje w garbie?	Piasek	Tłuszcz	Wodę	Powietrze
+Que stocke le chameau dans sa bosse ?	Du sable	De la graisse	De l'eau	De l'air
+¿Qué almacena el camello en su joroba?	Arena	Grasa	Agua	Aire
+@f1aac6a7
+Jakiego koloru są paski zebry?	Czarne i białe	Brązowe i białe	Szare i białe	Żółte i czarne
+De quelles couleurs sont les rayures du zèbre ?	Noir et blanc	Marron et blanc	Gris et blanc	Jaune et noir
+¿De qué colores son las rayas de la cebra?	Negro y blanco	Marrón y blanco	Gris y blanco	Amarillo y negro
+@e88c410a
+Na której półkuli żyje większość pingwinów?	Północnej	Wschodniej	Na obu po równo	Południowej
+Dans quel hémisphère vivent la plupart des manchots ?	Nord	Est	Les deux à parts égales	Sud
+¿En qué hemisferio vive la mayoría de los pingüinos?	Norte	Oriental	En ambos por igual	Sur
+@89efaee1
+Gdzie zazwyczaj rosną kaktusy?	Na pustyniach	W lasach deszczowych	Na lodowcach	W jeziorach
+Où poussent généralement les cactus ?	Dans les déserts	Dans les forêts tropicales	Sur les glaciers	Dans les lacs
+¿Dónde crecen normalmente los cactus?	En los desiertos	En las selvas tropicales	En los glaciares	En los lagos
+@77158363
+Które zwierzę nosi młode w torbie?	Królik	Niedźwiedź	Małpa	Kangur
+Quel animal porte son petit dans une poche ?	Le lapin	L'ours	Le singe	Le kangourou
+¿Qué animal lleva a su cría en una bolsa?	Conejo	Oso	Mono	Canguro
+@9c2de6c2
+Ile nóg ma pająk?	4	8	6	10
+Combien de pattes a une araignée ?	4	8	6	10
+¿Cuántas patas tiene una araña?	4	8	6	10
+@a090fac5
+Do której grupy zwierząt należą wieloryby?	Płazów	Ryb	Gadów	Ssaków
+À quel groupe d'animaux appartiennent les baleines ?	Les amphibiens	Les poissons	Les reptiles	Les mammifères
+¿A qué grupo de animales pertenecen las ballenas?	Anfibios	Peces	Reptiles	Mamíferos
+@0e7a3ef7
+Które powolne zwierzę spędza większość życia, wisząc do góry nogami?	Koala	Szop	Lemur	Leniwiec
+Quel animal très lent passe la majeure partie de sa vie suspendu à l'envers ?	Le koala	Le raton laveur	Le lémurien	Le paresseux
+¿Qué animal lento pasa casi toda su vida colgado boca abajo?	Koala	Mapache	Lémur	Perezoso
+@8657e3d7
+Z czego zmieniania słyną kameleony?	Głosu	Kształtu	Koloru	Rozmiaru
+Qu'est-ce que les caméléons sont célèbres pour changer ?	Leur voix	Leur forme	Leur couleur	Leur taille
+¿Qué son famosos por cambiar los camaleones?	La voz	La forma	El color	El tamaño
+@6c0cb40e
+Z jakiego owocu robi się guacamole?	Z mango	Z banana	Z awokado	Z kiwi
+Avec quel fruit fait-on le guacamole ?	La mangue	La banane	L'avocat	Le kiwi
+¿Con qué fruta se hace el guacamole?	Mango	Plátano	Aguacate	Kiwi
+@a98e51da
+Z kuchni którego kraju pochodzi sushi?	Chin	Japonii	Tajlandii	Korei
+De la cuisine de quel pays viennent les sushis ?	Chine	Japon	Thaïlande	Corée
+¿De la cocina de qué país viene el sushi?	China	Japón	Tailandia	Corea
+@063e312d
+Z którego kraju pochodzi paella?	Z Portugalii	Z Meksyku	Z Hiszpanii	Z Włoch
+La paella est un plat de quel pays ?	Portugal	Mexique	Espagne	Italie
+¿De qué país es la paella?	Portugal	México	España	Italia
+@6abd1d55
+Pierogi to słynne pierożki z którego kraju?	Z Chin	Z Francji	Z Polski	Z Włoch
+Les pierogi sont de célèbres raviolis de quel pays ?	Chine	France	Pologne	Italie
+Los pierogi son famosas empanadillas de ¿qué país?	China	Francia	Polonia	Italia
+@0f36306f
+Z czego robi się popcorn?	Z pszenicy	Z ryżu	Z jęczmienia	Z kukurydzy
+Avec quoi fait-on le pop-corn ?	Le blé	Le riz	L'orge	Le maïs
+¿De qué se hacen las palomitas?	Trigo	Arroz	Cebada	Maíz
+@40e2d21a
+Z którego kraju pizza rozeszła się po świecie?	Z Francji	Z USA	Z Grecji	Z Włoch
+De quel pays la pizza s'est-elle répandue dans le monde ?	France	États-Unis	Grèce	Italie
+¿Desde qué país se extendió la pizza por el mundo?	Francia	EE. UU.	Grecia	Italia
+@c32ea3dc
+Z ziaren jakiej rośliny robi się czekoladę?	Wanilii	Leszczyny	Kawy	Kakaowca
+Le chocolat est fabriqué à partir des fèves de quelle plante ?	La vanille	Le noisetier	Le café	Le cacaoyer
+¿De las semillas de qué planta se hace el chocolate?	Vainilla	Avellano	Café	Cacao
+@814535f7
+Z którym krajem najbardziej kojarzy się croissant?	Szwajcaria	Francja	Belgia	Włochy
+À quel pays associe-t-on le plus le croissant ?	Suisse	France	Belgique	Italie
+¿Con qué país se asocia más el cruasán?	Suiza	Francia	Bélgica	Italia
+@a16f990f
+Z którego kraju pochodzą tacos?	Z Peru	Z Meksyku	Z Hiszpanii	Z Argentyny
+De quel pays viennent les tacos ?	Pérou	Mexique	Espagne	Argentine
+¿De qué país son los tacos?	Perú	México	España	Argentina
+@1029e400
+Z czego robi się ser?	Z mleka	Z jajek	Z mąki	Z cukru
+Avec quoi fait-on le fromage ?	Du lait	Des œufs	De la farine	Du sucre
+¿De qué se hace el queso?	Leche	Huevos	Harina	Azúcar
+@cba90f40
+Który owoc kojarzy się z małpami?	Banan	Winogrono	Jabłko	Pomarańcza
+Quel fruit associe-t-on aux singes ?	La banane	Le raisin	La pomme	L'orange
+¿Qué fruta se asocia con los monos?	Plátano	Uva	Manzana	Naranja
+@6a1e8d4c
+Jaki kształt ma spaghetti?	Rurki	Muszelki	Kokardki	Długie cienkie nitki
+Quelle forme ont les spaghettis ?	Des tubes	Des coquillages	Des nœuds papillon	De longs fils fins
+¿Qué forma tienen los espaguetis?	Tubos	Conchas	Lacitos	Hilos largos y finos
+@4f091ad4
+Jak w amerykańskim angielskim nazywa się smażone paski ziemniaków?	Crisps	French fries	Tylko wedges	Tylko chips
+Comment appelle-t-on les frites en anglais américain ?	Crisps	French fries	Seulement wedges	Seulement chips
+¿Cómo se llaman las patatas fritas en tiras en inglés americano?	Crisps	French fries	Solo wedges	Solo chips
+@b21da450
+Jakiego koloru są palone ziarna kawy?	Brązowe	Czerwone	Zielone	Białe
+De quelle couleur sont les grains de café torréfiés ?	Marron	Rouges	Verts	Blancs
+¿De qué color son los granos de café tostados?	Marrones	Rojos	Verdes	Blancos
+@4f9efe8a
+Jak smakuje cytryna?	Kwaśno	Gorzko	Słono	Słodko
+Quel goût a le citron ?	Acide	Amer	Salé	Sucré
+¿A qué sabe un limón?	Ácido	Amargo	Salado	Dulce
+@a52955e2
+Który pokarm wytwarzany przez pszczoły może przetrwać tysiące lat bez zepsucia?	Masło	Miód	Chleb	Dżem
+Quel aliment fabriqué par les abeilles peut se conserver des milliers d'années sans se gâter ?	Le beurre	Le miel	Le pain	La confiture
+¿Qué alimento fabricado por las abejas puede durar miles de años sin estropearse?	Mantequilla	Miel	Pan	Mermelada
+@c4e89ee7
+Hiszpańską tortillę robi się głównie z…	Ryżu	Jajek i ziemniaków	Ryby	Mąki kukurydzianej
+La tortilla espagnole se prépare principalement avec…	Du riz	Des œufs et des pommes de terre	Du poisson	De la farine de maïs
+La tortilla española se hace principalmente con…	Arroz	Huevos y patatas	Pescado	Harina de maíz
+@879e78a4
+Kotlet do burgera robi się zwykle z…	Ryby	Mielonej wołowiny	Sera	Grzybów
+Le steak d'un burger est généralement fait de…	Poisson	Bœuf haché	Fromage	Champignon
+La carne de una hamburguesa suele ser de…	Pescado	Ternera picada	Queso	Champiñón
+@0224d440
+Z jakiej rośliny pochodzą liście herbaty?	Z laurowca	Z krzewu herbacianego	Z mięty	Z lipy
+De quelle plante proviennent les feuilles de thé ?	Le laurier	Le théier	La menthe	Le tilleul
+¿De qué planta vienen las hojas de té?	Laurel	La planta del té	Menta	Tilo
+@3884487f
+Z jakich dwóch głównych składników robi się majonez?	Pomidora i cukru	Żółtka i oleju	Mleka i mąki	Sera i soli
+Quels sont les deux ingrédients principaux de la mayonnaise ?	Tomate et sucre	Jaune d'œuf et huile	Lait et farine	Fromage et sel
+¿Cuáles son los dos ingredientes principales de la mayonesa?	Tomate y azúcar	Yema de huevo y aceite	Leche y harina	Queso y sal
+@71399833
+Jaki jest zwykle skrót „kopiuj” w Windows?	Ctrl+X	Ctrl+Z	Ctrl+V	Ctrl+C
+Quel est le raccourci habituel pour « copier » sous Windows ?	Ctrl+X	Ctrl+Z	Ctrl+V	Ctrl+C
+¿Cuál es el atajo habitual para «copiar» en Windows?	Ctrl+X	Ctrl+Z	Ctrl+V	Ctrl+C
+@d4ca317b
+Na którym z dwóch systemów działa większość smartfonów?	Android i iOS	Symbian i Palm	macOS i DOS	Windows i Linux
+Sur quels deux systèmes fonctionnent la plupart des smartphones ?	Android et iOS	Symbian et Palm	macOS et DOS	Windows et Linux
+¿Con qué dos sistemas funciona la mayoría de los smartphones?	Android e iOS	Symbian y Palm	macOS y DOS	Windows y Linux
+@29aac980
+Która część jest nazywana „mózgiem” komputera?	Procesor (CPU)	Myszka	Monitor	Głośnik
+Quelle pièce est appelée le « cerveau » de l'ordinateur ?	Le processeur (CPU)	La souris	L'écran	Le haut-parleur
+¿Qué pieza es conocida como el «cerebro» del ordenador?	Procesador (CPU)	Ratón	Monitor	Altavoz
+@d9171bc9
+Do czego służy Wi-Fi?	Do ładowania baterii	Do drukowania zdjęć	Do bezprzewodowego internetu	Do podgrzewania jedzenia
+À quoi sert le Wi-Fi ?	À recharger les batteries	À imprimer des photos	À l'Internet sans fil	À réchauffer la nourriture
+¿Para qué sirve el wifi?	Cargar baterías	Imprimir fotos	Internet inalámbrico	Calentar comida
+@ee1a2c20
+Jaki jest zwykle skrót „cofnij” w Windows?	Ctrl+Y	Ctrl+B	Ctrl+U	Ctrl+Z
+Quel est le raccourci habituel pour « annuler » sous Windows ?	Ctrl+Y	Ctrl+B	Ctrl+U	Ctrl+Z
+¿Cuál es el atajo habitual para «deshacer» en Windows?	Ctrl+Y	Ctrl+B	Ctrl+U	Ctrl+Z
+@cf0c8bcb
+Który symbol zawsze występuje w adresie e-mail?	&	#	@	%
+Quel symbole se trouve toujours dans une adresse e-mail ?	&	#	@	%
+¿Qué símbolo aparece siempre en una dirección de correo electrónico?	&	#	@	%
+@1cc72296
+Do udostępniania czego służy głównie YouTube?	Map	Nut	Filmów wideo	Kart z przepisami
+YouTube sert principalement à partager quoi ?	Des cartes	Des partitions	Des vidéos	Des fiches recettes
+¿Para compartir qué se usa principalmente YouTube?	Mapas	Partituras	Vídeos	Fichas de recetas
+@0e5a7e19
+Dlaczego myszka komputerowa nazywa się myszką?	Jej kabel wygląda jak ogon	Jej wynalazca kochał myszy	Bo jest cicha	Lubi ser
+Pourquoi la souris d'ordinateur s'appelle-t-elle ainsi ?	Son câble ressemble à une queue	Son inventeur adorait les souris	Parce qu'elle est silencieuse	Elle aime le fromage
+¿Por qué el ratón del ordenador se llama ratón?	Su cable parece una cola	Su inventor adoraba los ratones	Porque es silencioso	Le gusta el queso
+@556bb0b3
+Które urządzenie przenosi rzeczy na papier?	Skaner	Drukarka	Router	Kamera internetowa
+Quel appareil met les choses sur papier ?	Le scanner	L'imprimante	Le routeur	La webcam
+¿Qué aparato pasa las cosas a papel?	Escáner	Impresora	Router	Cámara web
+@ae2985e8
+W którym kraju najpierw zyskały popularność emoji?	W Finlandii	W USA	W Japonii	W Korei Południowej
+Dans quel pays les emojis sont-ils d'abord devenus populaires ?	Finlande	États-Unis	Japon	Corée du Sud
+¿En qué país se popularizaron primero los emojis?	Finlandia	EE. UU.	Japón	Corea del Sur
+@641fedd0
+Co robi „tryb samolotowy” w telefonie?	Ładuje baterię	Wyłącza połączenia bezprzewodowe	Sprawia, że telefon lata	Podgłaśnia dźwięk
+Que fait le « mode avion » sur un téléphone ?	Il recharge la batterie	Il coupe les connexions sans fil	Il fait voler le téléphone	Il monte le volume
+¿Qué hace el «modo avión» en un móvil?	Carga la batería	Desactiva las conexiones inalámbricas	Hace que el móvil vuele	Sube el volumen
+@be822d39
+Który klawisz jest zwykle najdłuższy na klawiaturze?	Tab	Enter	Spacja	Shift
+Quelle est généralement la touche la plus longue du clavier ?	Tab	Entrée	Barre d'espace	Maj
+¿Cuál suele ser la tecla más larga del teclado?	Tab	Intro	Barra espaciadora	Mayús
+@292db3e5
+Co oznacza „www”?	World Wide Web	World Web Window	Wide World Wifi	Web With Words
+Que signifie « www » ?	World Wide Web	World Web Window	Wide World Wifi	Web With Words
+¿Qué significa «www»?	World Wide Web	World Web Window	Wide World Wifi	Web With Words
+@d1e1cfa2
+Logo której firmy to nadgryzione jabłko?	Nokia	Microsoft	Samsung	Apple
+Le logo de quelle entreprise est une pomme croquée ?	Nokia	Microsoft	Samsung	Apple
+¿El logotipo de qué empresa es una manzana mordida?	Nokia	Microsoft	Samsung	Apple
+@a7f7a44b
+Do czego zwykle używa się Bluetooth?	Do gotowania w mikrofalówce	Do rozmów satelitarnych	Do nadawania telewizji	Do bezprzewodowych połączeń krótkiego zasięgu
+À quoi sert couramment le Bluetooth ?	À cuisiner au micro-ondes	Aux appels par satellite	À diffuser la télévision	Aux liaisons sans fil de courte portée
+¿Para qué se usa habitualmente el Bluetooth?	Cocinar en el microondas	Llamadas por satélite	Emitir televisión	Conexiones inalámbricas de corto alcance
+@18caa1bd
+Które popularne rozszerzenie pliku oznacza skompresowane archiwum?	.zip	.jpg	.txt	.mp3
+Quelle extension de fichier courante désigne une archive compressée ?	.zip	.jpg	.txt	.mp3
+¿Qué extensión de archivo habitual indica un archivo comprimido?	.zip	.jpg	.txt	.mp3
+@8085fcf2
+Na czym słynnie zacinają się roboty sprzątające?	Na kablach i skarpetkach	Na suficie	W lodówce	W ogrodzie
+Sur quoi les robots aspirateurs se coincent-ils célèbrement ?	Les câbles et les chaussettes	Le plafond	Le frigo	Dans le jardin
+¿Con qué se atascan famosamente los robots aspiradores?	Cables y calcetines	El techo	La nevera	En el jardín
+@bfa4227d
+Czym jest „selfie”?	Rodzajem robota	Kablem	Aplikacją	Zdjęciem, które robisz sam sobie
+Qu'est-ce qu'un « selfie » ?	Un type de robot	Un câble	Une application	Une photo que l'on prend de soi-même
+¿Qué es un «selfie»?	Un tipo de robot	Un cable	Una aplicación	Una foto que te haces a ti mismo
+@80bf7861
+Czym zwykle skanuje się kody QR?	Słuchawkami	Klawiaturą	Aparatem w telefonie	Mikrofonem
+Avec quoi scanne-t-on habituellement les QR codes ?	Un casque	Un clavier	L'appareil photo du téléphone	Un micro
+¿Con qué se escanean normalmente los códigos QR?	Unos auriculares	Un teclado	La cámara del móvil	Un micrófono
+@767e93e8
+Jak po angielsku nazywa się ponowne uruchomienie komputera?	Rebuild	Reboot	Rewind	Refill
+Comment dit-on redémarrer un ordinateur en anglais ?	Rebuild	Reboot	Rewind	Refill
+¿Cómo se dice en inglés reiniciar el ordenador?	Rebuild	Reboot	Rewind	Refill
+@a4364c2f
+Która planeta nazywana jest Czerwoną Planetą?	Merkury	Mars	Jowisz	Wenus
+Quelle planète surnomme-t-on la planète rouge ?	Mercure	Mars	Jupiter	Vénus
+¿Qué planeta es conocido como el planeta rojo?	Mercurio	Marte	Júpiter	Venus
+@7a21fccb
+Jaka jest największa planeta Układu Słonecznego?	Jowisz	Saturn	Neptun	Ziemia
+Quelle est la plus grande planète du Système solaire ?	Jupiter	Saturne	Neptune	La Terre
+¿Cuál es el planeta más grande del sistema solar?	Júpiter	Saturno	Neptuno	La Tierra
+@8014f916
+Która planeta najbardziej słynie z pierścieni?	Mars	Saturn	Wenus	Merkury
+Quelle planète est la plus célèbre pour ses anneaux ?	Mars	Saturne	Vénus	Mercure
+¿Qué planeta es más famoso por sus anillos?	Marte	Saturno	Venus	Mercurio
+@60a4ed46
+Kto jako pierwszy człowiek stanął na Księżycu?	Michael Collins	Jurij Gagarin	Buzz Aldrin	Neil Armstrong
+Qui fut le premier humain à marcher sur la Lune ?	Michael Collins	Youri Gagarine	Buzz Aldrin	Neil Armstrong
+¿Quién fue la primera persona en pisar la Luna?	Michael Collins	Yuri Gagarin	Buzz Aldrin	Neil Armstrong
+@293e897d
+Kto był pierwszym człowiekiem w kosmosie?	Neil Armstrong	John Glenn	Alan Shepard	Jurij Gagarin
+Qui fut le premier humain dans l'espace ?	Neil Armstrong	John Glenn	Alan Shepard	Youri Gagarine
+¿Quién fue el primer ser humano en el espacio?	Neil Armstrong	John Glenn	Alan Shepard	Yuri Gagarin
+@a228b232
+Co noszą astronauci poza statkiem kosmicznym?	Kombinezon nurka	Płaszcz przeciwdeszczowy	Piżamę	Skafander kosmiczny
+Que portent les astronautes à l'extérieur du vaisseau ?	Une combinaison de plongée	Un imperméable	Un pyjama	Une combinaison spatiale
+¿Qué llevan los astronautas fuera de la nave?	Traje de buzo	Impermeable	Pijama	Traje espacial
+@7bf15c69
+Jaki jest najjaśniejszy naturalny obiekt na nocnym niebie?	Gwiazda Polarna	Księżyc	Mars	Droga Mleczna
+Quel est l'objet naturel le plus brillant du ciel nocturne ?	L'étoile polaire	La Lune	Mars	La Voie lactée
+¿Cuál es el objeto natural más brillante del cielo nocturno?	La estrella polar	La Luna	Marte	La Vía Láctea
+@2b703aa8
+Jak nazywa się nasza galaktyka?	Andromeda	Droga Mleczna	Orion	Wielka Niedźwiedzica
+Comment s'appelle notre galaxie ?	Andromède	La Voie lactée	Orion	La Grande Ourse
+¿Cómo se llama nuestra galaxia?	Andrómeda	La Vía Láctea	Orión	Osa Mayor
+@65439edf
+Czym jest Słońce?	Kometą	Gwiazdą	Księżycem	Planetą
+Qu'est-ce que le Soleil ?	Une comète	Une étoile	Une lune	Une planète
+¿Qué es el Sol?	Un cometa	Una estrella	Una luna	Un planeta
+@f3e1aeae
+Uczucie braku ciężaru na orbicie nazywa się…	Choroba unoszenia	Lotność	Nieważkość	Lekkość
+La sensation de ne rien peser en orbite s'appelle…	Le mal du flottement	La légèreté d'esprit	L'apesanteur	La légèreté
+La sensación de no pesar nada en órbita se llama…	Mareo flotante	Volatilidad	Ingravidez	Ligereza
+@7fd4364d
+NASA jest agencją kosmiczną którego kraju?	USA	Kanady	Rosji	Wielkiej Brytanii
+La NASA est l'agence spatiale de quel pays ?	États-Unis	Canada	Russie	Royaume-Uni
+La NASA es la agencia espacial de ¿qué país?	EE. UU.	Canadá	Rusia	Reino Unido
+@96d5ebe4
+Która planeta jest najbliżej Słońca?	Mars	Wenus	Merkury	Ziemia
+Quelle planète est la plus proche du Soleil ?	Mars	Vénus	Mercure	La Terre
+¿Qué planeta está más cerca del Sol?	Marte	Venus	Mercurio	La Tierra
+@e96dea8a
+Czym naprawdę jest „spadająca gwiazda”?	Satelitą	Spadającą gwiazdą	Spalającym się meteorem	Samolotem
+Qu'est-ce qu'une « étoile filante » en réalité ?	Un satellite	Une étoile qui tombe	Un météore qui se consume	Un avion
+¿Qué es realmente una «estrella fugaz»?	Un satélite	Una estrella que cae	Un meteoro que se quema	Un avión
+@0b8716f4
+Jak nazywał się słynny pies wysłany na orbitę w 1957 roku?	Łajka	Lassie	Bobik	Reks
+Comment s'appelait la célèbre chienne envoyée en orbite en 1957 ?	Laïka	Lassie	Bobik	Rex
+¿Cómo se llamaba la famosa perra enviada a la órbita en 1957?	Laika	Lassie	Bobik	Rex
