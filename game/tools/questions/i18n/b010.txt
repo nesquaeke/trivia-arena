@@ -1,0 +1,440 @@
+@d2c2eeff
+Ekstremalne ciśnienie w płaszczu lodowych olbrzymów, takich jak Uran i Neptun, ściska metan w opady czego?	Diamentów	Płynnego złota	Rubinów	Siarki
+Les pressions extrêmes du manteau des géantes de glace comme Uranus et Neptune compriment le méthane en pluies de quoi ?	Diamants	Or liquide	Rubis	Soufre
+Las presiones extremas del manto de gigantes helados como Urano y Neptuno comprimen el metano en lluvias de ¿qué?	Diamantes	Oro líquido	Rubíes	Azufre
+@2271e10a
+Które narzędzie biologii molekularnej umożliwia precyzyjną edycję genomu za pomocą endonukleazy kierowanej RNA?	PCR	Western blot	CRISPR-Cas9	Elektroforeza żelowa
+Quel outil de biologie moléculaire permet d'éditer précisément le génome à l'aide d'une endonucléase guidée par un ARN ?	PCR	Western blot	CRISPR-Cas9	Électrophorèse sur gel
+¿Qué herramienta de biología molecular permite editar el genoma con precisión mediante una endonucleasa guiada por ARN?	PCR	Western blot	CRISPR-Cas9	Electroforesis en gel
+@fec64f21
+Do której kategorii właściwości roztworów należy podwyższenie temperatury wrzenia zależne od stężenia cząstek substancji rozpuszczonej?	Właściwości termoelektryczne	Właściwości koligatywne	Właściwości alotropowe	Właściwości katalityczne
+À quelle catégorie de propriétés des solutions appartient l'élévation du point d'ébullition, qui dépend de la concentration en particules de soluté ?	Propriétés thermoélectriques	Propriétés colligatives	Propriétés allotropiques	Propriétés catalytiques
+¿A qué categoría de propiedades de las disoluciones pertenece el aumento del punto de ebullición, que depende de la concentración de partículas de soluto?	Propiedades termoeléctricas	Propiedades coligativas	Propiedades alotrópicas	Propiedades catalíticas
+@9940dbd9
+Który fizyk dostał Nagrodę Nobla z fizyki w 1921 roku za wyjaśnienie efektu fotoelektrycznego kwantowaniem energii fotonów?	Albert Einstein	Max Planck	Niels Bohr	Erwin Schrödinger
+Quel physicien a reçu le prix Nobel de physique 1921 pour avoir expliqué l'effet photoélectrique par la quantification de l'énergie des photons ?	Albert Einstein	Max Planck	Niels Bohr	Erwin Schrödinger
+¿Qué físico ganó el Nobel de Física de 1921 por explicar el efecto fotoeléctrico mediante la energía cuantizada de los fotones?	Albert Einstein	Max Planck	Niels Bohr	Erwin Schrödinger
+@48caa4a6
+Które fotoreceptory, odpowiedzialne za ostre widzenie barwne w świetle dziennym, są gęsto skupione w dołku środkowym siatkówki?	Pręciki	Czopki	Komórki zwojowe	Komórki amakrynowe
+Quels photorécepteurs, responsables de la vision des couleurs très nette en plein jour, sont concentrés dans la fovéa de la rétine ?	Bâtonnets	Cônes	Cellules ganglionnaires	Cellules amacrines
+¿Qué fotorreceptores, responsables de la visión del color nítida con luz diurna, se concentran en la fóvea de la retina?	Bastones	Conos	Células ganglionares	Células amacrinas
+@f8cd7ff5
+Jak nazywa się granica czasoprzestrzeni, za którą nic, nawet światło, nie może uciec z czarnej dziury?	Dysk akrecyjny	Ergosfera	Horyzont zdarzeń	Granica Roche'a
+Comment s'appelle la frontière de l'espace-temps au-delà de laquelle rien, pas même la lumière, ne peut s'échapper d'un trou noir ?	Disque d'accrétion	Ergosphère	Horizon des événements	Limite de Roche
+¿Cómo se llama el límite del espacio-tiempo más allá del cual nada, ni siquiera la luz, puede escapar de un agujero negro?	Disco de acreción	Ergosfera	Horizonte de sucesos	Límite de Roche
+@6b76578f
+Jaka silnie żrąca mieszanina kwasu azotowego i solnego potrafi rozpuścić metale szlachetne, np. złoto?	Woda królewska	Kwas siarkowy	Azotan srebra	Ciężka woda
+Quel mélange très corrosif d'acide nitrique et d'acide chlorhydrique peut dissoudre les métaux nobles comme l'or ?	Eau régale	Acide sulfurique	Nitrate d'argent	Eau lourde
+¿Qué mezcla muy corrosiva de ácido nítrico y clorhídrico es capaz de disolver metales nobles como el oro?	Agua regia	Ácido sulfúrico	Nitrato de plata	Agua pesada
+@38dca8bd
+Kto jako jedyny zdobył trzy mistrzostwa świata FIFA, unosząc puchar z Brazylią w 1958, 1962 i 1970 roku?	Garrincha	Zico	Pelé	Ronaldo Nazário
+Qui est le seul joueur à avoir remporté trois Coupes du monde, avec le Brésil en 1958, 1962 et 1970 ?	Garrincha	Zico	Pelé	Ronaldo Nazário
+¿Quién es el único jugador que ha ganado tres Mundiales, con Brasil en 1958, 1962 y 1970?	Garrincha	Zico	Pelé	Ronaldo Nazário
+@0e0433dc
+Który środkowy NBA zdobył w 1962 roku niepobity rekord 100 punktów w jednym meczu?	Bill Russell	Wilt Chamberlain	Kareem Abdul-Jabbar	Elgin Baylor
+Quel pivot NBA a marqué 100 points en un seul match en 1962, un record jamais battu ?	Bill Russell	Wilt Chamberlain	Kareem Abdul-Jabbar	Elgin Baylor
+¿Qué pívot de la NBA anotó en 1962 el récord imbatido de 100 puntos en un solo partido?	Bill Russell	Wilt Chamberlain	Kareem Abdul-Jabbar	Elgin Baylor
+@b494ccdc
+Jakiego koloru jest słynna koszulka lidera klasyfikacji generalnej Tour de France?	Różowa	W grochy	Żółta	Zielona
+De quelle couleur est le célèbre maillot du leader du classement général du Tour de France ?	Rose	À pois	Jaune	Vert
+¿De qué color es el famoso maillot del líder de la general del Tour de Francia?	Rosa	De lunares	Amarillo	Verde
+@089fc25b
+Jak nazywa się wygranie wszystkich czterech turniejów wielkoszlemowych w singlu i złota olimpijskiego w jednym roku kalendarzowym?	Wielki Szlem	Złoty Szlem	Super Szlem	Szlem kariery
+Comment appelle-t-on le fait de remporter les quatre tournois du Grand Chelem en simple et l'or olympique la même année ?	Grand Chelem	Golden Slam	Super Chelem	Grand Chelem en carrière
+¿Cómo se llama ganar los cuatro Grand Slam individuales y el oro olímpico en un mismo año natural?	Grand Slam	Golden Slam	Super Slam	Grand Slam de carrera
+@3e30dc5f
+W którym kraju znajduje się historyczny, wąski uliczny tor Formuły 1 ze słynnym tunelem?	Włochy (Monza)	Monako (Monte Carlo)	Belgia (Spa)	Singapur (Marina Bay)
+Dans quel pays se trouve le circuit urbain historique et étroit de Formule 1 avec son célèbre tunnel ?	Italie (Monza)	Monaco (Monte-Carlo)	Belgique (Spa)	Singapour (Marina Bay)
+¿En qué país está el histórico y estrecho circuito urbano de Fórmula 1 con su famoso túnel?	Italia (Monza)	Mónaco (Montecarlo)	Bélgica (Spa)	Singapur (Marina Bay)
+@ddb25328
+Jak brzmiał legendarny przydomek olimpijskiej reprezentacji USA w koszykówce z 1992 roku z Jordanem, Magikiem Johnsonem i Birdem?	The Avengers	Dream Team	All-Stars	Redeem Team
+Quel était le surnom légendaire de l'équipe olympique américaine de basket de 1992 avec Jordan, Magic Johnson et Larry Bird ?	The Avengers	La Dream Team	Les All-Stars	La Redeem Team
+¿Cuál era el legendario apodo de la selección olímpica de baloncesto de EE. UU. de 1992, con Jordan, Magic Johnson y Larry Bird?	The Avengers	El Dream Team	All-Stars	El Redeem Team
+@9d21555f
+Która skazywana na porażkę reprezentacja zaskoczyła świat, wygrywając EURO 2004?	Dania	Czechy	Grecja	Portugalia
+Quelle sélection outsider a stupéfié le monde du football en remportant l'Euro 2004 ?	Danemark	République tchèque	Grèce	Portugal
+¿Qué selección, sin ser favorita, sorprendió al mundo al ganar la Eurocopa 2004?	Dinamarca	República Checa	Grecia	Portugal
+@271786e6
+Na jakiej nawierzchni tradycyjnie rozgrywa się Wimbledon, najstarszy turniej tenisowy świata?	Twardej	Ziemnej (mączce)	Trawiastej	Dywanowej
+Sur quelle surface se joue traditionnellement Wimbledon, le plus ancien tournoi de tennis du monde ?	Dur	Terre battue	Gazon	Moquette
+¿Sobre qué superficie se juega tradicionalmente Wimbledon, el torneo de tenis más antiguo del mundo?	Pista dura	Tierra batida	Hierba	Moqueta
+@0f813921
+Ile razy więcej od własnej masy ciała podrzucił legendarny sztangista Naim Süleymanoğlu („Kieszonkowy Herkules”)?	2 razy	2,5 raza	Ponad 3 razy	4 razy
+Combien de fois son propre poids l'haltérophile légendaire Naim Süleymanoğlu (« Hercule de poche ») a-t-il soulevé à l'épaulé-jeté ?	2 fois	2,5 fois	Plus de 3 fois	4 fois
+¿Cuántas veces su propio peso levantó en dos tiempos el legendario halterófilo Naim Süleymanoğlu («Hércules de bolsillo»)?	2 veces	2,5 veces	Más de 3 veces	4 veces
+@271505af
+Według przepisów gry zawodnik nie może być na spalonym, otrzymując piłkę bezpośrednio z którego stałego fragmentu?	Rzutu wolnego bezpośredniego	Wrzutu z autu	Rzutu rożnego	Rzutu wolnego pośredniego
+Selon les lois du jeu, un joueur ne peut pas être hors-jeu s'il reçoit directement le ballon sur quelle phase arrêtée ?	Coup franc direct	Rentrée de touche	Corner	Coup franc indirect
+Según las reglas del juego, un jugador no puede estar en fuera de juego si recibe el balón directamente de ¿qué acción a balón parado?	Tiro libre directo	Saque de banda	Saque de esquina	Tiro libre indirecto
+@835ce795
+Który rozgrywający Los Angeles Lakers z Galerii Sław jest pierwowzorem białej sylwetki w oficjalnym logo NBA?	Jerry West	Michael Jordan	Bob Cousy	Kareem Abdul-Jabbar
+Quel arrière des Los Angeles Lakers, membre du Hall of Fame, a servi de modèle à la silhouette blanche du logo officiel de la NBA ?	Jerry West	Michael Jordan	Bob Cousy	Kareem Abdul-Jabbar
+¿Qué escolta de Los Angeles Lakers del Salón de la Fama es el modelo de la silueta blanca del logo oficial de la NBA?	Jerry West	Michael Jordan	Bob Cousy	Kareem Abdul-Jabbar
+@11af1ba8
+W której konkurencji pływackiej trzeba przepłynąć delfinem, grzbietem, klasykiem i dowolnym w tej właśnie kolejności?	Sztafeta	Styl zmienny (IM)	Sprint łączony	Sprint czterema stylami
+Quelle épreuve de natation impose de nager papillon, dos, brasse et nage libre dans cet ordre précis ?	Relais	Quatre nages individuel	Sprint combiné	Sprint quatre styles
+¿Qué prueba de natación exige nadar mariposa, espalda, braza y libre en ese orden exacto?	Relevo	Estilos individual	Sprint combinado	Sprint de cuatro estilos
+@98e11b44
+Który klub, przy kursie 5000 do 1, cudownie wygrał Premier League w sezonie 2015–2016?	Blackburn Rovers	Leicester City	West Ham United	Southampton
+Quel club a défié une cote de 5 000 contre 1 pour remporter miraculeusement la Premier League en 2015-2016 ?	Blackburn Rovers	Leicester City	West Ham United	Southampton
+¿Qué club desafió una cuota de 5.000 a 1 para ganar milagrosamente la Premier League en 2015-2016?	Blackburn Rovers	Leicester City	West Ham United	Southampton
+@0259ea95
+Który zespół wyścigowy jako jedyny startował w każdym sezonie mistrzostw świata Formuły 1 od ich powstania w 1950 roku?	McLaren	Williams	Ferrari	Mercedes
+Quelle écurie est la seule à avoir disputé toutes les saisons du championnat du monde de Formule 1 depuis sa création en 1950 ?	McLaren	Williams	Ferrari	Mercedes
+¿Qué escudería es la única que ha disputado todas las temporadas del Mundial de Fórmula 1 desde su creación en 1950?	McLaren	Williams	Ferrari	Mercedes
+@baff69a0
+Która wielobojowa konkurencja lekkoatletyczna mężczyzn składa się z dziesięciu dyscyplin rozgrywanych przez dwa dni?	Siedmiobój	Dziesięciobój	Pięciobój	Triatlon
+Quelle épreuve combinée d'athlétisme masculine comprend dix disciplines disputées sur deux jours ?	Heptathlon	Décathlon	Pentathlon	Triathlon
+¿Qué prueba combinada de atletismo masculino consta de diez disciplinas disputadas en dos días?	Heptatlón	Decatlón	Pentatlón	Triatlón
+@2ba8e982
+Kto ma rekord ery open w liczbie wielkoszlemowych tytułów kobiet w singlu – 23?	Steffi Graf	Serena Williams	Martina Navrátilová	Chris Evert
+Qui détient le record de l'ère Open du plus grand nombre de titres du Grand Chelem en simple dames, avec 23 ?	Steffi Graf	Serena Williams	Martina Navrátilová	Chris Evert
+¿Quién tiene el récord de la era Open de títulos de Grand Slam individuales femeninos, con 23?	Steffi Graf	Serena Williams	Martina Navrátilová	Chris Evert
+@61526155
+Który kraj Ameryki Południowej zorganizował i wygrał pierwsze mistrzostwa świata FIFA w 1930 roku?	Brazylia	Argentyna	Urugwaj	Włochy
+Quel pays d'Amérique du Sud a organisé et remporté la toute première Coupe du monde en 1930 ?	Brésil	Argentine	Uruguay	Italie
+¿Qué país sudamericano organizó y ganó el primer Mundial de la FIFA en 1930?	Brasil	Argentina	Uruguay	Italia
+@02b235ee
+Przepis „trzech sekund” w koszykówce zabrania atakującym ciągłego przebywania w którym obszarze?	W kole środkowym	W strefie podkoszowej („trumnie”)	Za linią rzutów za 3 punkty	W narożniku linii końcowej
+Au basket, la règle des « trois secondes » interdit aux attaquants de rester en continu dans quelle zone ?	Le rond central	La raquette	Derrière la ligne à trois points	Le coin de la ligne de fond
+En baloncesto, la regla de los «tres segundos» impide a los atacantes permanecer seguidos en ¿qué zona?	Círculo central	La zona (la pintura)	Más allá de la línea de tres	Esquina de la línea de fondo
+@46daee9c
+Który klub najwięcej razy wygrał Ligę Mistrzów / Puchar Europy?	AC Milan	Bayern Monachium	Liverpool	Real Madryt
+Quel club a remporté le plus de fois la Ligue des champions / Coupe d'Europe ?	AC Milan	Bayern Munich	Liverpool	Real Madrid
+¿Qué club ha ganado más veces la Liga de Campeones / Copa de Europa?	AC Milan	Bayern de Múnich	Liverpool	Real Madrid
+@4318b71c
+Jaki jest standardowy maksymalny brejk możliwy w jednej partii snookera?	140	147	155	160
+Quel est le break maximal standard réalisable en une seule manche de snooker ?	140	147	155	160
+¿Cuál es la tacada máxima estándar posible en un solo frame de snooker?	140	147	155	160
+@cf21a09b
+Który legendarny mistrz wagi ciężkiej zakończył karierę niepokonany, z bilansem 49 zwycięstw w 49 zawodowych walkach?	Mike Tyson	Rocky Marciano	Joe Louis	Evander Holyfield
+Quel champion poids lourd légendaire a pris sa retraite invaincu avec 49 victoires en 49 combats professionnels ?	Mike Tyson	Rocky Marciano	Joe Louis	Evander Holyfield
+¿Qué legendario campeón de los pesos pesados se retiró invicto con 49 victorias en 49 combates profesionales?	Mike Tyson	Rocky Marciano	Joe Louis	Evander Holyfield
+@e66c4c51
+Jaki uruchamiany przez kierowcę system w F1 otwiera klapę tylnego skrzydła, zmniejszając opór i ułatwiając wyprzedzanie?	KERS	DRS (system redukcji oporu)	Halo	Turbo boost
+Quel système activé par le pilote en F1 ouvre un volet de l'aileron arrière pour réduire la traînée et faciliter les dépassements ?	KERS	DRS (système de réduction de traînée)	Halo	Turbo boost
+¿Qué sistema activado por el piloto en F1 abre una aleta del alerón trasero para reducir la resistencia y facilitar los adelantamientos?	KERS	DRS (sistema de reducción de resistencia)	Halo	Turbo boost
+@e56cc692
+Z ilu regulaminowych części (kwart) składa się standardowy mecz piłki wodnej?	2	3	4	5
+Combien de périodes réglementaires (quarts-temps) compte un match de water-polo ?	2	3	4	5
+¿Cuántos periodos reglamentarios (cuartos) tiene un partido de waterpolo?	2	3	4	5
+@197fb147
+Na którym międzynarodowym turnieju Antonín Panenka po raz pierwszy wykonał swój zuchwały rzut karny „podcinką”?	Mundial 1970	Euro 1976	Mundial 1982	Euro 1984
+Lors de quel tournoi international Antonín Panenka a-t-il dévoilé son audacieux penalty piqué ?	Coupe du monde 1970	Euro 1976	Coupe du monde 1982	Euro 1984
+¿En qué torneo internacional estrenó Antonín Panenka su audaz penalti picado?	Mundial de 1970	Eurocopa de 1976	Mundial de 1982	Eurocopa de 1984
+@8f6bbc7f
+Która drużyna NBA osiągnęła najlepszy bilans sezonu zasadniczego w historii (73-9) w sezonie 2015–2016?	Chicago Bulls	Golden State Warriors	San Antonio Spurs	Cleveland Cavaliers
+Quelle franchise NBA a réalisé le meilleur bilan de saison régulière de l'histoire (73-9) en 2015-2016 ?	Chicago Bulls	Golden State Warriors	San Antonio Spurs	Cleveland Cavaliers
+¿Qué franquicia de la NBA logró el mejor balance de temporada regular de la historia (73-9) en 2015-2016?	Chicago Bulls	Golden State Warriors	San Antonio Spurs	Cleveland Cavaliers
+@4d7a7636
+W którym ekskluzywnym klubie w Georgii odbywa się co roku turniej golfowy The Masters?	St Andrews Links	Augusta National Golf Club	Pebble Beach	Royal Troon
+Dans quel club exclusif de Géorgie se tient chaque année le Masters de golf ?	St Andrews Links	Augusta National Golf Club	Pebble Beach	Royal Troon
+¿En qué exclusivo club de Georgia se celebra cada año el Masters de golf?	St Andrews Links	Augusta National Golf Club	Pebble Beach	Royal Troon
+@1b8ee18a
+Która reprezentacja dokonała „cudu w Bernie”, pokonując 3:2 faworyzowanych Węgrów w finale mundialu 1954?	Włochy	RFN	Szwecja	Anglia
+Quelle nation a réalisé le « miracle de Berne » en battant 3-2 la grande Hongrie, favorite, en finale de la Coupe du monde 1954 ?	Italie	RFA	Suède	Angleterre
+¿Qué selección protagonizó el «milagro de Berna» al vencer 3-2 a la favorita Hungría en la final del Mundial de 1954?	Italia	Alemania Occidental	Suecia	Inglaterra
+@7fbc4f68
+Jakie trzy bronie są używane we współczesnym szermierce olimpijskiej?	Floret, szpada, szabla	Sztylet, bagnet, włócznia	Miecz, kordzik, harpun	Bułat, floret, łuk
+Quelles sont les trois armes de l'escrime olympique moderne ?	Fleuret, épée, sabre	Dague, baïonnette, lance	Épée longue, dague, harpon	Cimeterre, fleuret, arc long
+¿Cuáles son las tres armas de la esgrima olímpica moderna?	Florete, espada, sable	Daga, bayoneta, lanza	Espada larga, puñal, arpón	Cimitarra, florete, arco largo
+@28636958
+Kto ustanowił rekord wszech czasów w liczbie złotych medali na jednych igrzyskach, zdobywając osiem złotych w Pekinie 2008?	Usain Bolt	Michael Phelps	Ian Thorpe	Aleksandr Popow
+Qui a établi le record absolu de médailles d'or aux mêmes Jeux en en remportant huit à Pékin 2008 ?	Usain Bolt	Michael Phelps	Ian Thorpe	Alexandre Popov
+¿Quién estableció el récord absoluto de oros en unos mismos Juegos al ganar ocho en Pekín 2008?	Usain Bolt	Michael Phelps	Ian Thorpe	Alexander Popov
+@5521200a
+Który serbski tenisista ma rekord ery open mężczyzn – 24 wielkoszlemowe tytuły w singlu?	Rafael Nadal	Roger Federer	Novak Đoković	Andy Murray
+Quel joueur serbe détient le record masculin de l'ère Open avec 24 titres du Grand Chelem en simple ?	Rafael Nadal	Roger Federer	Novak Djokovic	Andy Murray
+¿Qué tenista serbio tiene el récord masculino de la era Open con 24 títulos de Grand Slam individuales?	Rafael Nadal	Roger Federer	Novak Djokovic	Andy Murray
+@17c08e6d
+Kształt jakiej litery przypominają słupki bramki na końcach boiska do rugby?	Litery T	Litery Y	Litery H	Litery V
+À quelle lettre ressemblent les poteaux situés à chaque extrémité d'un terrain de rugby ?	La lettre T	La lettre Y	La lettre H	La lettre V
+¿A qué letra se parecen los postes situados en cada extremo de un campo de rugby?	La letra T	La letra Y	La letra H	La letra V
+@1f78d103
+Jakiego koloru jest koszulka lidera (Maglia Rosa) wyścigu etapowego Giro d'Italia?	Żółta	Różowa	Czerwona	Niebieska
+De quelle couleur est le maillot du leader (Maglia Rosa) du Tour d'Italie ?	Jaune	Rose	Rouge	Bleu
+¿De qué color es la maglia del líder (Maglia Rosa) del Giro de Italia?	Amarilla	Rosa	Roja	Azul
+@a1f6ffb4
+Kto pozostaje jedynym bramkarzem w historii piłki nożnej, który zdobył Złotą Piłkę (1963)?	Gianluigi Buffon	Iker Casillas	Lew Jaszyn	Dino Zoff
+Qui reste le seul gardien de but de l'histoire à avoir remporté le Ballon d'or (1963) ?	Gianluigi Buffon	Iker Casillas	Lev Yachine	Dino Zoff
+¿Quién sigue siendo el único portero de la historia que ha ganado el Balón de Oro (1963)?	Gianluigi Buffon	Iker Casillas	Lev Yashin	Dino Zoff
+@cd6f0ec6
+Jak nazywał się szeroki, niemal niemożliwy do zablokowania rzut jedną ręką z wysokiego wybicia, spopularyzowany przez Kareema Abdul-Jabbara?	Fadeaway	Skyhook	Floater	Obrót
+Comment s'appelait le tir à une main avec un point de lancer très haut, quasiment impossible à contrer, popularisé par Kareem Abdul-Jabbar ?	Fadeaway	Skyhook	Floater	Tir en pivot
+¿Cómo se llamaba el tiro a una mano con lanzamiento muy alto, casi imposible de taponar, que popularizó Kareem Abdul-Jabbar?	Fadeaway	Gancho del cielo (skyhook)	Bombita	Tiro en giro
+@949016f6
+Jaka jest decyzja w piłce nożnej, jeśli piłka z wrzutu z autu wpada bezpośrednio do bramki rywala, nie dotykając nikogo?	Bramka zostaje uznana	Bez bramki; rzut od bramki	Wrzut jest powtarzany	Rzut wolny pośredni
+Au football, quelle est la décision si une rentrée de touche entre directement dans le but adverse sans toucher personne ?	Le but est accordé	Pas de but ; sortie de but	La touche est rejouée	Coup franc indirect
+En fútbol, ¿qué se decide si un saque de banda entra directamente en la portería rival sin tocar a nadie?	Se concede el gol	No es gol; saque de puerta	Se repite el saque	Tiro libre indirecto
+@88331ba3
+Który fiński programista stworzył w 1991 roku otwarte jądro systemu operacyjnego Linux?	Richard Stallman	Linus Torvalds	Bjarne Stroustrup	Ken Thompson
+Quel ingénieur logiciel finlandais a créé en 1991 le noyau libre du système Linux ?	Richard Stallman	Linus Torvalds	Bjarne Stroustrup	Ken Thompson
+¿Qué ingeniero de software finlandés creó en 1991 el núcleo de código abierto del sistema Linux?	Richard Stallman	Linus Torvalds	Bjarne Stroustrup	Ken Thompson
+@a60aa337
+Który brytyjski naukowiec wynalazł w 1989 roku w CERN sieć WWW, HTML i pierwszy serwer internetowy?	Tim Berners-Lee	Alan Turing	Vint Cerf	Robert Kahn
+Quel scientifique britannique a inventé le World Wide Web, le HTML et le premier serveur web au CERN en 1989 ?	Tim Berners-Lee	Alan Turing	Vint Cerf	Robert Kahn
+¿Qué científico británico inventó la World Wide Web, el HTML y el primer servidor web en el CERN en 1989?	Tim Berners-Lee	Alan Turing	Vint Cerf	Robert Kahn
+@3ce8aaee
+Który język programowania działający po stronie klienta Brendan Eich stworzył w zaledwie 10 dni w Netscape w 1995 roku?	Python	PHP	JavaScript	Ruby
+Quel langage de programmation côté client Brendan Eich a-t-il créé en seulement 10 jours chez Netscape en 1995 ?	Python	PHP	JavaScript	Ruby
+¿Qué lenguaje de programación del lado del cliente creó Brendan Eich en solo 10 días en Netscape en 1995?	Python	PHP	JavaScript	Ruby
+@af6d8480
+Jakim pseudonimem posłużyła się nieznana osoba lub grupa, która w 2008 roku napisała whitepaper Bitcoina?	Vitalik Buterin	Satoshi Nakamoto	Hal Finney	Nick Szabo
+Quel pseudonyme a utilisé la personne ou le groupe inconnu qui a rédigé le livre blanc du Bitcoin en 2008 ?	Vitalik Buterin	Satoshi Nakamoto	Hal Finney	Nick Szabo
+¿Qué seudónimo usó la persona o grupo desconocido que escribió el whitepaper de Bitcoin en 2008?	Vitalik Buterin	Satoshi Nakamoto	Hal Finney	Nick Szabo
+@0f008ca8
+Który hierarchiczny, zdecentralizowany system nazw tłumaczy czytelne nazwy domen na liczbowe adresy IP?	DHCP	DNS (system nazw domen)	BGP	FTP
+Quel système de noms hiérarchique et décentralisé traduit les noms de domaine lisibles en adresses IP numériques ?	DHCP	DNS (Domain Name System)	BGP	FTP
+¿Qué sistema de nombres jerárquico y descentralizado traduce los nombres de dominio legibles en direcciones IP numéricas?	DHCP	DNS (sistema de nombres de dominio)	BGP	FTP
+@5fe65bf5
+Który holenderski programista stworzył w 1991 roku język Python, nazywając go na cześć Monty Pythona?	Guido van Rossum	James Gosling	Anders Hejlsberg	Larry Wall
+Quel programmeur néerlandais a créé le langage Python en 1991, en hommage aux Monty Python ?	Guido van Rossum	James Gosling	Anders Hejlsberg	Larry Wall
+¿Qué programador neerlandés creó el lenguaje Python en 1991, llamándolo así por los Monty Python?	Guido van Rossum	James Gosling	Anders Hejlsberg	Larry Wall
+@3fcbbee0
+Która empiryczna obserwacja przewidywała, że liczba tranzystorów w układzie scalonym będzie się podwajać mniej więcej co dwa lata?	Prawo Amdahla	Prawo Moore'a	Prawo Metcalfe'a	Prawo Wirtha
+Quelle observation empirique prévoyait que le nombre de transistors d'une puce doublerait environ tous les deux ans ?	Loi d'Amdahl	Loi de Moore	Loi de Metcalfe	Loi de Wirth
+¿Qué observación empírica predijo que el número de transistores de un chip se duplicaría aproximadamente cada dos años?	Ley de Amdahl	Ley de Moore	Ley de Metcalfe	Ley de Wirth
+@b35ab714
+Który standardowy protokół sieciowy odpowiada za wysyłanie poczty elektronicznej w sieciach IP?	POP3	IMAP	SMTP (Simple Mail Transfer Protocol)	SNMP
+Quel protocole réseau standard assure l'envoi des e-mails sortants sur les réseaux IP ?	POP3	IMAP	SMTP (Simple Mail Transfer Protocol)	SNMP
+¿Qué protocolo de red estándar se encarga de enviar el correo electrónico saliente por redes IP?	POP3	IMAP	SMTP (Simple Mail Transfer Protocol)	SNMP
+@d79120bf
+Kto zaprojektował w 2005 roku rozproszony system kontroli wersji Git do zarządzania rozwojem jądra Linuksa?	Linus Torvalds	Dennis Ritchie	Donald Knuth	Brian Kernighan
+Qui a conçu en 2005 le système de gestion de versions distribué Git pour le développement du noyau Linux ?	Linus Torvalds	Dennis Ritchie	Donald Knuth	Brian Kernighan
+¿Quién diseñó en 2005 el sistema de control de versiones distribuido Git para gestionar el desarrollo del núcleo de Linux?	Linus Torvalds	Dennis Ritchie	Donald Knuth	Brian Kernighan
+@d067e135
+Który informatyk z Bell Labs stworzył język C i współprojektował system operacyjny Unix?	Dennis Ritchie	Ada Lovelace	John Backus	Alan Kay
+Quel informaticien des Bell Labs a créé le langage C et co-conçu le système d'exploitation Unix ?	Dennis Ritchie	Ada Lovelace	John Backus	Alan Kay
+¿Qué informático de Bell Labs creó el lenguaje C y codiseñó el sistema operativo Unix?	Dennis Ritchie	Ada Lovelace	John Backus	Alan Kay
+@d57b40c4
+Ile bitów służy do zapisu adresu internetowego w standardzie IPv4?	16 bitów	32 bity	64 bity	128 bitów
+Combien de bits servent à représenter une adresse Internet dans la norme IPv4 ?	16 bits	32 bits	64 bits	128 bits
+¿Cuántos bits se usan para representar una dirección de internet en el estándar IPv4?	16 bits	32 bits	64 bits	128 bits
+@e02e7785
+Która technologia wyświetlaczy wykorzystuje samoświecące diody organiczne, dając prawdziwą czerń i niemal nieskończony kontrast?	TFT-LCD	Panel TN	OLED	IPS-LCD
+Quelle technologie d'écran utilise des diodes organiques auto-émissives pour des noirs parfaits et un contraste quasi infini ?	TFT-LCD	Dalle TN	OLED	IPS-LCD
+¿Qué tecnología de pantalla usa diodos orgánicos autoemisivos para lograr negros puros y un contraste casi infinito?	TFT-LCD	Panel TN	OLED	IPS-LCD
+@953dd271
+Jaki język dziedzinowy jest międzynarodowym standardem odpytywania i zarządzania relacyjnymi bazami danych?	NoSQL	SQL (Structured Query Language)	GraphQL	JSON
+Quel langage dédié est la norme internationale pour interroger et gérer les bases de données relationnelles ?	NoSQL	SQL (Structured Query Language)	GraphQL	JSON
+¿Qué lenguaje específico es el estándar internacional para consultar y gestionar bases de datos relacionales?	NoSQL	SQL (Structured Query Language)	GraphQL	JSON
+@1f8e6e17
+Która sieć z komutacją pakietów, uruchomiona w 1969 roku przez Departament Obrony USA, stała się podstawą współczesnego internetu?	USENET	ARPANET	ALOHANET	NSFNET
+Quel réseau à commutation de paquets lancé en 1969 par le département de la Défense américain a servi de base à l'Internet moderne ?	USENET	ARPANET	ALOHANET	NSFNET
+¿Qué red de conmutación de paquetes creada en 1969 por el Departamento de Defensa de EE. UU. fue la base de la internet moderna?	USENET	ARPANET	ALOHANET	NSFNET
+@222d011f
+Który komputer Apple z 1984 roku był pierwszym masowym komputerem osobistym z interfejsem graficznym i myszką?	Apple I	Apple II	Macintosh	Lisa
+Quel ordinateur Apple sorti en 1984 fut le premier ordinateur personnel grand public doté d'une interface graphique et d'une souris ?	Apple I	Apple II	Macintosh	Lisa
+¿Qué ordenador de Apple lanzado en 1984 fue el primer ordenador personal de masas con interfaz gráfica y ratón?	Apple I	Apple II	Macintosh	Lisa
+@9bc1fb60
+Jak nazywają się małe bloki tekstu zapisywane przez przeglądarkę na komputerze, przechowujące stan sesji i preferencje?	Ciasteczko (cookie)	Pamięć podręczna	Certyfikat	Token
+Comment appelle-t-on les petits fichiers texte stockés par le navigateur qui conservent l'état de session et les préférences ?	Cookie	Cache	Certificat	Jeton
+¿Cómo se llaman los pequeños bloques de texto que el navegador guarda en el ordenador para conservar la sesión y las preferencias?	Cookie	Caché	Certificado	Token
+@b178eaf6
+Który 4-bitowy procesor Intela z 1971 roku był pierwszym na świecie komercyjnie dostępnym mikroprocesorem w jednym układzie?	Intel 8086	Intel 4004	Intel 8080	MOS 6502
+Quel processeur 4 bits sorti par Intel en 1971 fut le premier microprocesseur monopuce commercialisé au monde ?	Intel 8086	Intel 4004	Intel 8080	MOS 6502
+¿Qué procesador de 4 bits lanzado por Intel en 1971 fue el primer microprocesador de un solo chip comercializado del mundo?	Intel 8086	Intel 4004	Intel 8080	MOS 6502
+@6adc1b58
+Jaki cyberatak zalewa serwer lub sieć ruchem pochodzącym z rozproszonych, przejętych botnetów?	Phishing	Man-in-the-Middle	DDoS (rozproszona odmowa usługi)	SQL injection
+Quelle cyberattaque submerge un serveur ou un réseau sous un flot de trafic provenant de botnets distribués ?	Hameçonnage	Homme du milieu	DDoS (déni de service distribué)	Injection SQL
+¿Qué ciberataque satura un servidor o red con una avalancha de tráfico procedente de botnets distribuidas?	Phishing	Hombre en el medio	DDoS (denegación de servicio distribuida)	Inyección SQL
+@13b0e545
+Który mechanizm w programowaniu obiektowym pozwala klasie przejmować właściwości i metody klasy nadrzędnej?	Dziedziczenie	Hermetyzacja	Polimorfizm	Abstrakcja
+En programmation orientée objet, quel mécanisme permet à une classe de reprendre les propriétés et méthodes d'une classe parente ?	Héritage	Encapsulation	Polymorphisme	Abstraction
+En programación orientada a objetos, ¿qué mecanismo permite a una clase heredar propiedades y métodos de una clase padre?	Herencia	Encapsulamiento	Polimorfismo	Abstracción
+@7dee8e4f
+Który superkomputer szachowy IBM pokonał w 1997 roku mistrza świata Garriego Kasparowa w meczu sześciu partii?	Watson	Deep Blue	Roadrunner	Summit
+Quel superordinateur d'échecs d'IBM a battu le champion du monde Garry Kasparov dans un match en six parties en 1997 ?	Watson	Deep Blue	Roadrunner	Summit
+¿Qué superordenador de ajedrez de IBM derrotó al campeón mundial Gari Kaspárov en un duelo a seis partidas en 1997?	Watson	Deep Blue	Roadrunner	Summit
+@d84b82b4
+Jak w kryptografii asymetrycznej nazywa się jawnie udostępniany klucz służący do szyfrowania?	Klucz prywatny	Klucz publiczny	Klucz główny	Klucz sesji
+En cryptographie asymétrique, comment s'appelle la clé diffusée librement et utilisée pour chiffrer ?	Clé privée	Clé publique	Clé maîtresse	Clé de session
+En criptografía asimétrica, ¿cómo se llama la clave que se distribuye abiertamente y sirve para cifrar?	Clave privada	Clave pública	Clave maestra	Clave de sesión
+@8f5a8cfa
+Jak nazywa się proces znajdowania, izolowania i naprawiania błędów w oprogramowaniu?	Refaktoryzacja	Debugowanie	Kompilacja	Profilowanie
+Comment s'appelle le processus qui consiste à trouver, isoler et corriger les bugs d'un logiciel ?	Refactorisation	Débogage	Compilation	Profilage
+¿Cómo se llama el proceso de localizar, aislar y corregir errores en el software?	Refactorización	Depuración	Compilación	Perfilado
+@11e48a6b
+Przez jaki szybki szeregowy interfejs magistrali nowoczesne dyski NVMe łączą się bezpośrednio z płytą główną?	SATA III	PCIe (PCI Express)	USB 3.0	IDE
+Par quelle interface de bus série à haut débit les SSD NVMe modernes se connectent-ils directement à la carte mère ?	SATA III	PCIe (PCI Express)	USB 3.0	IDE
+¿Mediante qué interfaz de bus serie de alta velocidad se conectan los SSD NVMe modernos directamente a la placa base?	SATA III	PCIe (PCI Express)	USB 3.0	IDE
+@4c29b4e7
+Które wydanie Windows z 2001 roku zasłynęło interfejsem Luna i tapetą „Bliss” z zielonym wzgórzem?	Windows 98	Windows 2000	Windows XP	Windows 7
+Quelle version de Windows sortie en 2001 est devenue culte pour son interface Luna et son fond d'écran « Bliss » à la colline verte ?	Windows 98	Windows 2000	Windows XP	Windows 7
+¿Qué versión de Windows de 2001 se hizo icónica por su interfaz Luna y el fondo de pantalla «Bliss» de la colina verde?	Windows 98	Windows 2000	Windows XP	Windows 7
+@10a0e299
+Który serwis hostingu repozytoriów Git w chmurze Microsoft kupił w 2018 roku za 7,5 mld dolarów?	GitLab	Bitbucket	GitHub	SourceForge
+Quel service d'hébergement de dépôts Git en ligne Microsoft a-t-il racheté en 2018 pour 7,5 milliards de dollars ?	GitLab	Bitbucket	GitHub	SourceForge
+¿Qué servicio de alojamiento de repositorios Git en la nube compró Microsoft en 2018 por 7500 millones de dólares?	GitLab	Bitbucket	GitHub	SourceForge
+@b54742b3
+Jak nazywa się ustawienie podzespołu, np. CPU lub GPU, do pracy z wyższym taktowaniem niż przewiduje producent?	Undervolting	Podkręcanie (overclocking)	Dławienie termiczne	Hyper-Threading
+Comment appelle-t-on le fait de régler un composant comme un CPU ou un GPU pour qu'il tourne à une fréquence supérieure à celle prévue par le fabricant ?	Undervolting	Surcadençage (overclocking)	Throttling thermique	Hyper-Threading
+¿Cómo se llama configurar un componente como una CPU o GPU para que funcione a más frecuencia de la indicada por el fabricante?	Undervolting	Overclocking	Estrangulamiento térmico	Hyper-Threading
+@a43e5d23
+Która filozofia projektowania zestawu instrukcji procesora jest podstawą energooszczędnych układów ARM?	CISC	RISC (zredukowany zestaw instrukcji)	VLIW	EPIC
+Quelle philosophie de jeu d'instructions sert de base architecturale aux puces ARM économes en énergie ?	CISC	RISC (jeu d'instructions réduit)	VLIW	EPIC
+¿Qué filosofía de diseño del conjunto de instrucciones es la base de los eficientes chips ARM?	CISC	RISC (conjunto de instrucciones reducido)	VLIW	EPIC
+@b6214217
+Który protokół zarządzania siecią dynamicznie przydziela adresy IP i parametry konfiguracji urządzeniom w podsieci?	DNS	DHCP (Dynamic Host Configuration Protocol)	ARP	ICMP
+Quel protocole réseau attribue dynamiquement des adresses IP et des paramètres de configuration aux appareils d'un sous-réseau ?	DNS	DHCP (Dynamic Host Configuration Protocol)	ARP	ICMP
+¿Qué protocolo de red asigna dinámicamente direcciones IP y parámetros de configuración a los dispositivos de una subred?	DNS	DHCP (Dynamic Host Configuration Protocol)	ARP	ICMP
+@9121f63a
+Która technologia tunelowania tworzy szyfrowane połączenie punkt–punkt przez sieci publiczne, ukrywając lokalizację użytkownika?	VPN (wirtualna sieć prywatna)	Proxy	VLAN	NAT
+Quelle technologie de tunnel chiffré crée une connexion point à point sur les réseaux publics en masquant la localisation de l'utilisateur ?	VPN (réseau privé virtuel)	Proxy	VLAN	NAT
+¿Qué tecnología de túnel cifrado crea una conexión punto a punto por redes públicas ocultando la ubicación del usuario?	VPN (red privada virtual)	Proxy	VLAN	NAT
+@da28e097
+Jaka jest główna różnica między projektowaniem interfejsu (UI) a projektowaniem doświadczeń użytkownika (UX)?	UI to warstwa wizualna i elementy interaktywne, a UX to cała ścieżka użytkownika, architektura i użyteczność	UI to kod frontendu, a UX to grafika	UI to sprzęt, a UX to oprogramowanie	To dokładnie te same pojęcia
+Quelle est la principale différence entre le design d'interface (UI) et le design d'expérience utilisateur (UX) ?	L'UI porte sur l'aspect visuel et les éléments interactifs, l'UX sur le parcours global, l'architecture et l'utilisabilité	L'UI est le code front-end, l'UX le graphisme	L'UI concerne le matériel, l'UX le logiciel	Ce sont des synonymes
+¿Cuál es la diferencia principal entre el diseño de interfaz (UI) y el de experiencia de usuario (UX)?	La UI se centra en lo visual y los elementos interactivos; la UX, en el recorrido global, la arquitectura y la usabilidad	La UI es código frontend y la UX, diseño gráfico	La UI es hardware y la UX, software	Son sinónimos exactos
+@a9d4da5f
+Która firma technologiczna stworzyła w 1995 roku język Java pod kierunkiem Jamesa Goslinga?	Sun Microsystems	Oracle	Microsoft	Netscape
+Quelle entreprise informatique a développé le langage Java sous la direction de James Gosling en 1995 ?	Sun Microsystems	Oracle	Microsoft	Netscape
+¿Qué empresa tecnológica desarrolló el lenguaje Java bajo la dirección de James Gosling en 1995?	Sun Microsystems	Oracle	Microsoft	Netscape
+@c69d242b
+Który język arkuszy stylów określa wygląd, typografię, kolory i responsywne układy dokumentów HTML?	XML	CSS (kaskadowe arkusze stylów)	JSON	Markdown
+Quel langage de feuilles de style définit la mise en forme, la typographie, les couleurs et la mise en page adaptative des documents HTML ?	XML	CSS (Cascading Style Sheets)	JSON	Markdown
+¿Qué lenguaje de hojas de estilo define el formato visual, la tipografía, los colores y los diseños adaptables de los documentos HTML?	XML	CSS (hojas de estilo en cascada)	JSON	Markdown
+@d676b72a
+Która angielska matematyczka jest uznawana za pierwszą programistkę świata dzięki algorytmowi dla maszyny analitycznej Babbage'a?	Grace Hopper	Ada Lovelace	Margaret Hamilton	Katherine Johnson
+Quelle mathématicienne anglaise est considérée comme la première programmeuse de l'histoire pour son algorithme destiné à la machine analytique de Babbage ?	Grace Hopper	Ada Lovelace	Margaret Hamilton	Katherine Johnson
+¿Qué matemática inglesa es considerada la primera programadora de la historia por su algoritmo para la máquina analítica de Babbage?	Grace Hopper	Ada Lovelace	Margaret Hamilton	Katherine Johnson
+@4cbd57a9
+Jaka nowoczesna specyfikacja oprogramowania układowego zastąpiła klasyczny BIOS przy inicjalizacji sprzętu i uruchamianiu systemów na PC?	Klasyczny BIOS	UEFI (Unified Extensible Firmware Interface)	Ustawienia CMOS	POST
+Quelle spécification moderne de micrologiciel a remplacé le BIOS pour initialiser le matériel et démarrer les systèmes sur PC ?	BIOS classique	UEFI (Unified Extensible Firmware Interface)	Configuration CMOS	POST
+¿Qué especificación moderna de firmware sustituyó a la BIOS para inicializar el hardware y arrancar los sistemas en los PC?	BIOS clásica	UEFI (Unified Extensible Firmware Interface)	Configuración CMOS	POST
+@51f0d203
+Jaki model licencjonowania oprogramowania daje użytkownikom prawo do wglądu, modyfikacji i dalszej dystrybucji kodu źródłowego?	Własnościowy	Otwarte oprogramowanie (open source)	Freeware	Shareware
+Quel modèle de licence donne aux utilisateurs le droit d'examiner, de modifier et de redistribuer le code source ?	Propriétaire	Open source	Gratuiciel	Partagiciel
+¿Qué modelo de licencia de software otorga a los usuarios el derecho a ver, modificar y redistribuir el código fuente?	Privativo	Código abierto	Freeware	Shareware
+@c0ac868d
+Która rzeka jest najczęściej wymieniana jako najdłuższa na świecie?	Nil	Amazonka	Jangcy	Missisipi
+Quel fleuve est le plus souvent cité comme le plus long du monde ?	Le Nil	L'Amazone	Le Yangzi Jiang	Le Mississippi
+¿Qué río suele citarse como el más largo del mundo?	Nilo	Amazonas	Yangtsé	Misisipi
+@b87cfdec
+Jaka jest stolica Australii?	Melbourne	Canberra	Sydney	Perth
+Quelle est la capitale de l'Australie ?	Melbourne	Canberra	Sydney	Perth
+¿Cuál es la capital de Australia?	Melbourne	Canberra	Sídney	Perth
+@de3e2f17
+Który kraj jest największy pod względem powierzchni?	USA	Rosja	Kanada	Chiny
+Quel est le plus grand pays par sa superficie ?	États-Unis	Russie	Canada	Chine
+¿Cuál es el país más grande por superficie?	EE. UU.	Rusia	Canadá	China
+@d9600c8a
+W którym kraju leży Machu Picchu?	Chile	Boliwia	Ekwador	Peru
+Dans quel pays se trouve le Machu Picchu ?	Chili	Bolivie	Équateur	Pérou
+¿En qué país está Machu Picchu?	Chile	Bolivia	Ecuador	Perú
+@328d7f9c
+Który kraj ma najwięcej wysp?	Filipiny	Szwecja	Indonezja	Japonia
+Quel pays compte le plus d'îles ?	Philippines	Suède	Indonésie	Japon
+¿Qué país tiene más islas?	Filipinas	Suecia	Indonesia	Japón
+@d982fbbf
+Jaka jest stolica Kanady?	Ottawa	Toronto	Vancouver	Montreal
+Quelle est la capitale du Canada ?	Ottawa	Toronto	Vancouver	Montréal
+¿Cuál es la capital de Canadá?	Ottawa	Toronto	Vancouver	Montreal
+@c9320c81
+Który kraj jako jedyny zajmuje cały kontynent?	Australia	Grenlandia	Antarktyda	Brazylia
+Quel est le seul pays qui occupe tout un continent ?	Australie	Groenland	Antarctique	Brésil
+¿Cuál es el único país que ocupa todo un continente?	Australia	Groenlandia	Antártida	Brasil
+@76610a21
+Jak nazywają się słynne wybuchające gorące źródła Islandii?	Fiordy	Gejzery	Lodowce	Delty
+Comment s'appellent les célèbres sources chaudes jaillissantes d'Islande ?	Fjords	Geysers	Glaciers	Deltas
+¿Cómo se llaman las famosas fuentes termales que brotan en Islandia?	Fiordos	Géiseres	Glaciares	Deltas
+@77ff0c22
+Który kraj nazywa się „Krainą tysiąca jezior”?	Finlandia	Norwegia	Kanada	Szwecja
+Quel pays est surnommé le « pays des mille lacs » ?	Finlande	Norvège	Canada	Suède
+¿Qué país es conocido como la «tierra de los mil lagos»?	Finlandia	Noruega	Canadá	Suecia
+@9e1a9db8
+Jakie jest najmniejsze państwo świata?	Liechtenstein	San Marino	Monako	Watykan
+Quel est le plus petit pays du monde ?	Liechtenstein	Saint-Marin	Monaco	Vatican
+¿Cuál es el país más pequeño del mundo?	Liechtenstein	San Marino	Mónaco	Ciudad del Vaticano
+@ba27fa17
+Jaka jest stolica Argentyny?	Lima	Santiago	Buenos Aires	Montevideo
+Quelle est la capitale de l'Argentine ?	Lima	Santiago	Buenos Aires	Montevideo
+¿Cuál es la capital de Argentina?	Lima	Santiago	Buenos Aires	Montevideo
+@3809091b
+Jak nazywają się głębokie, wąskie zatoki wzdłuż wybrzeża Norwegii?	Delty	Laguny	Fiordy	Kaniony
+Comment s'appellent les bras de mer profonds et étroits le long de la côte norvégienne ?	Deltas	Lagunes	Fjords	Canyons
+¿Cómo se llaman las entradas de mar profundas y estrechas de la costa de Noruega?	Deltas	Lagunas	Fiordos	Cañones
+@5912894b
+Flaga którego kraju to czerwone koło na białym tle?	Korei	Japonii	Chin	Wietnamu
+Quel pays a pour drapeau un cercle rouge sur fond blanc ?	Corée	Japon	Chine	Viêt Nam
+¿Qué país tiene como bandera un círculo rojo sobre fondo blanco?	Corea	Japón	China	Vietnam
+@27abe9bf
+W którym kraju leży Kilimandżaro?	Tanzania	Uganda	Etiopia	Kenia
+Dans quel pays se trouve le Kilimandjaro ?	Tanzanie	Ouganda	Éthiopie	Kenya
+¿En qué país está el Kilimanjaro?	Tanzania	Uganda	Etiopía	Kenia
+@6924148f
+Na której wyspie leży Tokio?	Kiusiu	Honsiu	Sikoku	Hokkaido
+Sur quelle île se trouve Tokyo ?	Kyūshū	Honshū	Shikoku	Hokkaidō
+¿En qué isla está Tokio?	Kiushu	Honshu	Shikoku	Hokkaido
+@6e95fceb
+Które dwa kraje mają najdłuższą wspólną granicę lądową na świecie?	Argentyna i Chile	Rosja i Chiny	Indie i Chiny	Kanada i USA
+Quels deux pays partagent la plus longue frontière terrestre du monde ?	Argentine et Chili	Russie et Chine	Inde et Chine	Canada et États-Unis
+¿Qué dos países comparten la frontera terrestre más larga del mundo?	Argentina y Chile	Rusia y China	India y China	Canadá y EE. UU.
+@29bce575
+Barcelona jest stolicą którego regionu?	Andaluzji	Galicji	Kraju Basków	Katalonii
+Barcelone est la capitale de quelle région ?	Andalousie	Galice	Pays basque	Catalogne
+Barcelona es la capital de ¿qué región?	Andalucía	Galicia	País Vasco	Cataluña
+@2559668b
+Która rzeka przepływa przez Kraków?	Łaba	Dunaj	Wisła	Odra
+Quel fleuve traverse Cracovie ?	L'Elbe	Le Danube	La Vistule	L'Oder
+¿Qué río pasa por Cracovia?	Elba	Danubio	Vístula	Óder
+@1c4df818
+Jaka jest największa gorąca pustynia świata?	Sahara	Gobi	Atakama	Kalahari
+Quel est le plus grand désert chaud du monde ?	Le Sahara	Le Gobi	L'Atacama	Le Kalahari
+¿Cuál es el mayor desierto cálido del mundo?	Sáhara	Gobi	Atacama	Kalahari
+@eed328bb
+Który kraj składa się z około 17 000 wysp?	Grecja	Nowa Zelandia	Indonezja	Japonia
+Quel pays est composé d'environ 17 000 îles ?	Grèce	Nouvelle-Zélande	Indonésie	Japon
+¿Qué país está formado por unas 17.000 islas?	Grecia	Nueva Zelanda	Indonesia	Japón
+@c2eb5612
+W którym kraju jest Wielki Kanion?	Meksyk	USA	Kanada	Australia
+Dans quel pays se trouve le Grand Canyon ?	Mexique	États-Unis	Canada	Australie
+¿En qué país está el Gran Cañón?	México	EE. UU.	Canadá	Australia
+@f253c676
+Jak nazywa się rdzenna ludność Nowej Zelandii?	Aborygeni	Maorysi	Saamowie	Inuici
+Comment s'appelle le peuple autochtone de Nouvelle-Zélande ?	Aborigènes	Maoris	Samis	Inuits
+¿Cómo se llama el pueblo indígena de Nueva Zelanda?	Aborígenes	Maoríes	Samis	Inuit
+@144ce193
+Jaka jest stolica Danii?	Helsinki	Oslo	Kopenhaga	Sztokholm
+Quelle est la capitale du Danemark ?	Helsinki	Oslo	Copenhague	Stockholm
+¿Cuál es la capital de Dinamarca?	Helsinki	Oslo	Copenhague	Estocolmo
+@3e17d04b
+Który kraj produkuje najwięcej kawy na świecie?	Etiopia	Wietnam	Brazylia	Kolumbia
+Quel pays produit le plus de café au monde ?	Éthiopie	Viêt Nam	Brésil	Colombie
+¿Qué país produce más café en el mundo?	Etiopía	Vietnam	Brasil	Colombia
+@5e4c78bc
+Które jezioro jest najgłębsze na świecie?	Górne	Bajkał	Tanganika	Wiktorii
+Quel est le lac le plus profond du monde ?	Supérieur	Baïkal	Tanganyika	Victoria
+¿Cuál es el lago más profundo del mundo?	Superior	Baikal	Tanganica	Victoria
+@1ae4b4ea
+Do którego morza wpada Dunaj?	Bałtyckiego	Czarnego	Północnego	Adriatyckiego
+Dans quelle mer se jette le Danube ?	Mer Baltique	Mer Noire	Mer du Nord	Mer Adriatique
+¿En qué mar desemboca el Danubio?	Mar Báltico	Mar Negro	Mar del Norte	Mar Adriático
+@dc557928
+Które miasto słynnie zbudowano na siedmiu wzgórzach?	Lizbona	Kair	Ateny	Rzym
+Quelle ville est réputée bâtie sur sept collines ?	Lisbonne	Le Caire	Athènes	Rome
+¿Qué ciudad es famosa por estar construida sobre siete colinas?	Lisboa	El Cairo	Atenas	Roma
+@920d6683
+Jak nazywa się dziś kraj dawniej zwany Birmą?	Laos	Kambodża	Tajlandia	Mjanma
+Comment s'appelle aujourd'hui le pays autrefois appelé Birmanie ?	Laos	Cambodge	Thaïlande	Myanmar
+¿Cómo se llama hoy el país antes llamado Birmania?	Laos	Camboya	Tailandia	Myanmar
+@298a6e02
+Który pierwiastek ma symbol „Au”?	Argon	Złoto	Srebro	Aluminium
+Quel élément a pour symbole « Au » ?	Argon	Or	Argent	Aluminium
+¿Qué elemento tiene el símbolo «Au»?	Argón	Oro	Plata	Aluminio
+@06a85c94
+Co porusza się szybciej: światło czy dźwięk?	Zależy od pogody	Światło	Dźwięk	Tak samo
+Qu'est-ce qui va le plus vite : la lumière ou le son ?	Ça dépend de la météo	La lumière	Le son	Pareil
+¿Qué viaja más rápido: la luz o el sonido?	Depende del tiempo	La luz	El sonido	Igual
+@6746a88a
+Co nadaje ludzkiej krwi czerwony kolor?	Insulina	Płytki krwi	Osocze	Hemoglobina
+Qu'est-ce qui donne au sang humain sa couleur rouge ?	L'insuline	Les plaquettes	Le plasma	L'hémoglobine
+¿Qué da a la sangre humana su color rojo?	Insulina	Plaquetas	Plasma	Hemoglobina
+@1bba1421
+Którego naukowca podobno zainspirowało spadające jabłko?	Albert Einstein	Galileusz	Izaak Newton	Nikola Tesla
+Quel savant aurait été inspiré par la chute d'une pomme ?	Albert Einstein	Galilée	Isaac Newton	Nikola Tesla
+¿A qué científico se dice que le inspiró una manzana al caer?	Albert Einstein	Galileo Galilei	Isaac Newton	Nikola Tesla
+@c92407e1
+Jak nazywa się środek atomu?	Elektron	Cząsteczka	Powłoka	Jądro
+Comment appelle-t-on le centre d'un atome ?	Électron	Molécule	Couche	Noyau
+¿Cómo se llama el centro de un átomo?	Electrón	Molécula	Capa	Núcleo
