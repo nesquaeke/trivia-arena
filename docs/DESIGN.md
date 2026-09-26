@@ -149,9 +149,16 @@ Henüz yok (GDD'nin sonraki fazları): çevrimiçi analitik ve soru metrikleri, 
 Banka yaklaşık 2000 soru ve 98 tahmin sorusundan oluşur. 15 kategori var, bunların arasında Uzay, Tuhaf ama Gerçek ve Diller ve Kelimeler yeni. Sorular evrenseldir, İspanyol ve Polonyalı oyuncular için de yerel dokunuşlar içerir.
 
 ### Haritalar
-Conquest iki haritada oynanır; kurulum ekranında seçilir. **Türkiye:** 16 bölge, gerçek il sınırları, çevresi saten deniz. **Polonya:** 16 voyvodalık, resmî Lehçe adlarıyla (Mazowieckie, Wielkopolskie…). Kuzeyi Baltık, diğer yönleri komşu ülkelerin (Niemcy, Czechy, Słowacja, Ukraina, Białoruś, Litwa, Rosja) keçesi. Komşuluklar sınırlardan hesaplanır ve gerçekle birebir aynıdır (34 sınır). Mesajlarda voyvodalık oyuncunun dilindeki adıyla geçer (TR "Mazovya", EN "Masovia", PL "Mazowieckie"). Kaleler ve taşlar haritanın ölçeğine göre küçülür. Harita verisi: Simplemaps.com (ticari kullanım serbest).
+Conquest iki haritada oynanır; kurulum ekranında seçilir. **Türkiye:** 16 bölge, gerçek il sınırları, çevresi saten deniz. **Polonya:** 16 voyvodalık, resmî Lehçe adlarıyla (Mazowieckie, Wielkopolskie…). Kuzeyi Baltık; komşu ülkeler (Niemcy, Czechy, Słowacja, Ukraina, Białoruś, Litwa, Rosja) denizin üstünde silik yazı olarak durur. Komşuluklar sınırlardan hesaplanır ve gerçekle birebir aynıdır (34 sınır). Mesajlarda voyvodalık oyuncunun dilindeki adıyla geçer (TR "Mazovya", EN "Masovia", PL "Mazowieckie"). Kaleler ve taşlar haritanın ölçeğine göre küçülür. Bölge adları bölgeye sığdırılır: ad kalenin altında, bölgenin en geniş yatay şeridinde tam boy yazılır; dar bölgede iki satıra bölünür (Święto-/krzyskie, Batı/Akdeniz), hiçbir yerde sığmıyorsa küçülür. Çok küçük ya da uzun bölgelerde (Opolskie, Śląskie, Güney Marmara, Doğu Karadeniz…) kale ve ad yeri veride elle verilir (`seat`, `label_at`). Açılışta bölgeler sırayla yukarıdan düşer; ele geçirilen bölgede renkli kıvılcım ve yayılan halka, taş konunca toz bulutu çıkar. Harita verisi: Simplemaps.com (ticari kullanım serbest).
 
 ![Polonya haritası](screenshots/map_poland.jpg)
+
+### Sahne efektleri
+`StageFx` bütün modların ortak efektleridir (tek atımlık CPUParticles3D, bitince kendini siler): doğru cevapta oyuncunun üstünde parıltı (seri 3+ ise altın), elenende ve yanlış kapaktan fırlayanda toz bulutu, kulisten geri dönüşte pofuduk bulut, ödüllerde konfeti yağmuru, maç sonunda iki yandan konfeti topları ve ardından yağmur (Conquest'te kazananın renkleriyle).
+
+**Takılma koruması:** sahne dışında bir çıkıntıya takılan (ör. ön pervaz) ya da yan/arka duvarın ötesine geçen pelüş 1,2 sn sonra düşmüş sayılır ve modun kuralıyla kulisten geri gelir; 5 sn'den uzun yerde kalan pelüş kendiliğinden kalkar.
+
+![Kazanan anı](screenshots/win_fx.jpg)
 
 ### Diller
 Oyun beş dilde oynanır: Türkçe, İngilizce, Lehçe, Fransızca, İspanyolca. Arayüz, 2135 soru, 98 tahmin sorusu, Mayhem sıralama setleri ve ses adları, kategori adları, başarımlar, Günlük Kelime (dile özel sözlük ve klavye: Lehçe harf sırası, Fransızca AZERTY, İspanyolca Ñ), anlatıcı sesi (MBROLA pl1/fr1/es2) ve telefon kumandası hepsi çevrilidir. Sayılar dile göre biçimlenir: TR/ES `150.000`, PL/FR `150 000`, EN `150,000`; ondalık virgül EN dışında. Bir çeviri eksikse metin İngilizceye düşer. Soru çevirilerinde şıklar İngilizcedeki sırayla yazılır, böylece doğru cevabın yeri bütün dillerde aynı kalır.

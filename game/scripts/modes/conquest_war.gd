@@ -1102,7 +1102,7 @@ func _resolve(a: Plush, d: Plush, id: String, win: bool) -> void:
 func on_fell_out(p: Plush) -> void:
 	await _wait(1.0)
 	if is_instance_valid(p):
-		p.revive(Vector3(p.global_position.x, 0.3, 3.45))
+		p.revive(Vector3(clampf(p.global_position.x, -5.4, 5.4), 0.3, 3.45))
 		p.frozen_input = true
 
 func _finish() -> void:
@@ -1125,6 +1125,7 @@ func _finish() -> void:
 	Music.sting("victory")
 	Sfx.play("applause", -6.0)
 	_curtain_call(rk)
+	StageFx.celebrate(stage, Vector3(0, 0, 1.2), [pcolor(rk[0]), Pal.GOLD, Color("F7F1E3")] if rk.size() > 0 else StageFx.CONFETTI)
 	if rk.size() > 0:
 		stage.set_gold_target(rk[0])
 		_notify(rk[0], {"t": "status", "text": I18n.t("house.status_win")})

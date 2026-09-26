@@ -168,6 +168,28 @@ func _physics_process(delta: float) -> void:
 	if global_position.y < OUT_Y and state != State.OUT:
 		_set_state(State.OUT)
 		fell_out.emit(self)
+		return
+	_watchdog(delta)
+
+## Güvenlik ağı: sahne dışında bir çıkıntıya/boşluğa takılan (y > OUT_Y olduğu için "düştü"
+## sayılmayan) oyuncu 1.2 sn sonra düşmüş sayılır ve modun kuralıyla kulisten geri gelir.
+## Bir şeye sıkışıp yerde çok uzun kalan pelüş de ayağa kalkar.
+var _off_t := 0.0
+## Büyük Sahne'deki oyuncular için true (main.gd): sahne dışı sınırları yalnız orada geçerli
+var stage_bounds := false
+func _watchdog(delta: float) -> void:
+	if freeze or not visible or state == State.OUT or not is_inside_tree():
+		_off_t = 0.0
+		return
+	var p := global_position
+	var off := stage_bounds and (p.y < -0.4 or absf(p.x) > 8.4 or p.z > 4.75 or p.z < -5.3)
+	_off_t = _off_t + delta if off else 0.0
+	if _off_t > 1.2:
+		_off_t = 0.0
+		_set_state(State.OUT)
+		fell_out.emit(self)
+	elif state == State.TUMBLE and state_t > 5.0:
+		_start_getup()
 
 func _integrate_forces(s: PhysicsDirectBodyState3D) -> void:
 	if _upright_pending:
@@ -329,6 +351,9 @@ func revive(pos: Vector3) -> void:
 	restore_collision()
 	frozen_input = false
 	teleport(pos, 0.0)
+	# kulisten dönüş: pofuduk bir toz bulutu
+	if get_parent() is Node3D:
+		StageFx.puff(get_parent(), pos + Vector3(0, -0.2, 0), Color(0.95, 0.9, 0.8), 14, 0.8)
 
 
 # ── sabotajlar, isim plakası, uçan yazılar, kişisel kapak ───────────

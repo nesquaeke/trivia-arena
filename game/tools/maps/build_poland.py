@@ -32,7 +32,7 @@ NAMES = {
     "PL12": ("Małopolskie", "Mało-\npolskie", "Lesser Poland", "Küçük Polonya", "Petite-Pologne", "Pequeña Polonia", "MAŁ"),
     "PL14": ("Mazowieckie", "Mazowieckie", "Masovia", "Mazovya", "Mazovie", "Mazovia", "MAZ"),
     "PL16": ("Opolskie", "Opolskie", "Opole", "Opole", "Opole", "Opole", "OPO"),
-    "PL18": ("Podkarpackie", "Podkarpackie", "Subcarpathia", "Karpat Önü", "Basses-Carpates", "Subcarpacia", "PKR"),
+    "PL18": ("Podkarpackie", "Podkar-\npackie", "Subcarpathia", "Karpat Önü", "Basses-Carpates", "Subcarpacia", "PKR"),
     "PL20": ("Podlaskie", "Podlaskie", "Podlachia", "Podlasya", "Podlachie", "Podlaquia", "PDL"),
     "PL22": ("Pomorskie", "Pomorskie", "Pomerania", "Pomeranya", "Poméranie", "Pomerania", "POM"),
     "PL24": ("Śląskie", "Śląskie", "Silesia", "Silezya", "Silésie", "Silesia", "ŚLĄ"),
@@ -41,11 +41,13 @@ NAMES = {
     "PL30": ("Wielkopolskie", "Wielko-\npolskie", "Greater Poland", "Büyük Polonya", "Grande-Pologne", "Gran Polonia", "WLK"),
     "PL32": ("Zachodniopomorskie", "Zachodnio-\npomorskie", "West Pomerania", "Batı Pomeranya", "Poméranie-Occidentale", "Pomerania Occidental", "ZPM"),
 }
-# Komşu ülkelerin kara keçesi (SVG koordinatı). Kuzey kenarı gerçek kıyıyı izler:
-# Almanya kıyısı → Polonya'nın altından (görünmez) → Kaliningrad → Litvanya kıyısı.
-# Sahne sınırları: x -619…1619, y -36…1018 (tahta ölçeğine göre).
-LAND = [-640, 150, -300, 175, 40, 282, 70, 300, 300, 330, 540, 300, 548, 214, 600, 158, 700, 140,
-        800, 125, 870, 70, 930, -40, 1640, -40, 1640, 1040, -640, 1040]
+# Küçük bölgeler: kale ([x, y]) ve adın yüksekliği ([x, y], x yalnız ipucu) SVG koordinatında elle.
+# Kale kuzeyde, ad güneyde: kamera güneyden baktığı için kale adın üstüne binmez.
+PLACE = {
+    "PL16": ([398.0, 636.0], [365.0, 704.0]),    # Opolskie: geniş bel y≈700
+    "PL24": ([502.0, 640.0], [500.0, 706.0]),    # Śląskie
+    "PL26": ([640.0, 614.0], [650.0, 684.0]),    # Świętokrzyskie
+}
 
 # Kıyı voyvodalıkları: dış (paylaşılmayan) sınırlarının kuzeye bakan kısmı Baltık kıyısıdır
 COASTAL = {"PL32": 175.0, "PL22": 175.0, "PL28": 120.0}   # id → bu y'nin üstü kıyı (Kaliningrad sınırı hariç)
@@ -146,20 +148,25 @@ def main():
     for k in ids:
         pl, lab, en, tr, fr, es, ab = NAMES[k]
         cx, cy = labels[k]
-        regions.append({"id": k.lower(), "tr": tr, "en": en, "pl": pl, "fr": fr, "es": es, "label": lab, "ab": ab,
+        reg = {"id": k.lower(), "tr": tr, "en": en, "pl": pl, "fr": fr, "es": es, "label": pl, "ab": ab,
                         "cx": round(cx, 1), "cy": round(cy, 1), "adj": sorted(x.lower() for x in adj[k]),
-                        "loops": [simplify(l) for l in raw[k]]})
+                        "loops": [simplify(l) for l in raw[k]]}
+        if "\n" in lab:
+            reg["label2"] = lab          # dar bölgede iki satır (MapBoard hangisi büyük sığarsa onu seçer)
+        if k in PLACE:                   # küçük bölge: kale ve ad yeri elle
+            reg["seat"], reg["label_at"] = PLACE[k]
+        regions.append(reg)
     data = {"name": "polska", "cols": w, "rows": h, "links": [], "coast": [], "shore": [simplify(s, 0.8) for s in shore],
             # gemiler Baltık'ta (kıyının kuzeyinde): [x, y, yön]; salınım genişliği (m)
             "ships": [[160.0, 40.0, 1.0], [600.0, 25.0, -1.0]], "ship_roam": 1.4,
-            # komşu ülkeler: denizin üstüne serilen kara keçesi (kuzeyi Baltık açık kalır)
-            "land": [LAND],
+            # komşu ülkeler yalnız silik yazı olarak (keçe kara parçası kaldırıldı: tuhaf duruyordu)
             # [yazı, x, y, deniz mi]
             "decor": [["BAŁTYK", -70.0, 200.0, True], ["NIEMCY", -190.0, 560.0, False],
                       ["CZECHY", 250.0, 975.0, False], ["SŁOWACJA", 640.0, 1000.0, False],
                       ["UKRAINA", 1130.0, 790.0, False], ["BIAŁORUŚ", 1110.0, 470.0, False],
                       ["LITWA", 1010.0, 160.0, False], ["ROSJA", 690.0, 175.0, False]],
-            "label_scale": 0.62, "label_offset": 0.4,
+            # küçük bölgeler: kale kuzey yarıda, ad güney yarıda; ad bölge genişliğine sığdırılır
+            "label_scale": 0.9, "split_seat": True,
             "credit": "Map: Simplemaps.com (free for commercial use)", "regions": regions}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

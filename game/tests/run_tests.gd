@@ -20,7 +20,7 @@ func _ready() -> void:
 	var tests := [
 		"test_i18n", "test_questions", "test_profile", "test_save_file", "test_error_reporter", "test_progress", "test_shop", "test_daily_word", "test_round_track",
 		"test_plush_run", "test_plush_jump", "test_shove_tumble_getup", "test_fall_out",
-		"test_stage_builds", "test_trapdoors", "test_rules", "test_wardrobe_spot", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_conquest_match_pl", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
+		"test_stage_builds", "test_trapdoors", "test_rules", "test_wardrobe_spot", "test_stuck_recovery", "test_stage_fx", "test_arena_match", "test_conquest_map", "test_conquest_match", "test_conquest_match_pl", "test_mayhem_data", "test_mayhem_match", "test_estimate_ruler", "test_phone_events", "test_steam_local", "test_voice_and_audio",
 	]
 	for name in tests:
 		if _only != "" and name != _only:
@@ -309,7 +309,7 @@ func test_shove_tumble_getup() -> void:
 	var tilted := b.global_transform.basis.y.dot(Vector3.UP) < 0.95
 	check(tilted, "gövde gerçekten devrilir (ragdoll hissi)")
 	await seconds(3.6)
-	check(b.state == Plush.State.NORMAL, "bir süre sonra kalkar")
+	check(b.state == Plush.State.NORMAL, "bir süre sonra kalkar (durum %d, %s)" % [b.state, str(b.global_position)])
 	check(b.global_transform.basis.y.dot(Vector3.UP) > 0.99, "kalkınca dik durur")
 	root.queue_free()
 
@@ -387,6 +387,46 @@ func test_rules() -> void:
 	check(r.tier_for(3, 2) == "d2" and r.tier_for(3, 3) == "d3", "tur 3: önce orta, sonra zor")
 	var n := r.penalty_rounds(r.final_start_hp, 4)
 	check(n >= 7 and n <= 14, "4 kişilik masada 4500 can %d soruda biter" % n)
+
+## Sahne dışında bir çıkıntıya takılan ya da sıkışan pelüş kendiliğinden sahneye döner
+func test_stuck_recovery() -> void:
+	var m: Node = await _get_main()
+	var acts: Array = m.all_actors()
+	check(acts.size() >= 3, "sahnede en az 3 pelüş")
+	# ön pervaz çıkıntısı (zeminden 10 cm aşağıda), sahne yanının dışı, arka duvarın ötesi
+	var spots := [Vector3(0.5, -0.05, 4.95), Vector3(8.6, 0.2, 0.0), Vector3(-2.0, 0.3, -5.6)]
+	for i in spots.size():
+		var a: Plush = acts[i]
+		a.teleport(spots[i], 0.0)
+	await seconds(4.0)
+	var ok := 0
+	for i in spots.size():
+		var p: Vector3 = acts[i].global_position
+		if p.y > -0.3 and absf(p.x) < 8.1 and p.z < 4.6 and p.z > -5.1 and acts[i].state != Plush.State.OUT:
+			ok += 1
+	check(ok == spots.size(), "takılan pelüşler sahneye döndü (%d/%d)" % [ok, spots.size()])
+	var b: Plush = acts[0]
+	b.tumble(Vector3.RIGHT, 0.2)
+	b.state_t = 5.5
+	await frames(3)
+	check(b.state != Plush.State.TUMBLE, "uzun süre yerde kalan pelüş kalkar")
+
+## Sahne efektleri: konfeti, parıltı, toz bulutu kurulur ve süresi bitince kendini siler
+func test_stage_fx() -> void:
+	var m: Node = await _get_main()
+	var host := Node3D.new()
+	m.add_child(host)
+	StageFx.celebrate(host)
+	StageFx.sparkle(host, Vector3(0, 1, 0))
+	StageFx.puff(host, Vector3(1, 0.1, 0))
+	StageFx.confetti(host, Vector3.ZERO)
+	await frames(2)
+	check(host.get_child_count() == 5, "efektler kuruldu (%d/5)" % host.get_child_count())
+	await get_tree().create_timer(1.0).timeout
+	check(host.get_child_count() == 6, "kazanan anı: konfeti topları ardından yağmur (%d)" % host.get_child_count())
+	await get_tree().create_timer(4.6).timeout
+	check(host.get_child_count() == 0, "efektler bitince silindi (%d kaldı)" % host.get_child_count())
+	host.queue_free()
 
 ## Kostüm odası: oyuncu podyumun ortasına gelir, yüzü kameraya döner; açıkken
 ## sahneden düşse bile kenara değil yerine döner. Karttaki portre bakışı kopyalar.

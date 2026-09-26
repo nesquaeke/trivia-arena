@@ -404,6 +404,7 @@ func _resolve() -> void:
 				deltas[p] = gain
 				p.float_text("+%d" % gain + ("  ×%d" % s.combo if s.combo >= 2 else ""), Color("9BE38B"), s.combo >= 3)
 				p.visual.land(4.0)
+				StageFx.sparkle(stage, p.global_position + Vector3(0, 1.0, 0), Color("F2C66A") if s.combo >= 3 else Color("9BE38B"))
 			else:
 				s.combo = 0
 				p.float_text("×", Color("FF6B52"))
@@ -415,6 +416,7 @@ func _resolve() -> void:
 			s.combo = s.combo + 1 if right.has(p) else 0
 			if p == fastest:
 				p.float_text(I18n.t("hud.safe"), Color("9BE38B"), true)
+				StageFx.sparkle(stage, p.global_position + Vector3(0, 1.0, 0), Color("9BE38B"), 36)
 				continue
 			s.hp = max(0, s.hp - stake)
 			deltas[p] = -stake
@@ -463,6 +465,7 @@ func _kill(p: Plush) -> void:
 	out_order.append(p)
 	log_lines.append("DIE " + p.player_name)
 	stage.spawn_hatch(p.global_position)
+	StageFx.puff(stage, p.global_position + Vector3(0, 0.1, 0), Color(0.3, 0.22, 0.18), 22, 1.2)
 	Sfx.play("scream", -3.0, rng.randf_range(0.9, 1.2))
 	if game.cam:
 		game.cam.add_trauma(0.35)
@@ -668,6 +671,7 @@ func _finish() -> void:
 		game.on_match_finished("arena", names)
 	Sfx.play("fanfare", -2.0)
 	Sfx.play("applause", -6.0)
+	StageFx.celebrate(stage)
 	if rk.size() > 0 and is_instance_valid(rk[0]):
 		stage.set_gold_target(rk[0])
 		_notify(rk[0], {"t": "status", "text": I18n.t("house.status_win")})

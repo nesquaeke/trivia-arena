@@ -129,6 +129,7 @@ func _physics_process(delta: float) -> void:
 func _spawn(p_name: String, look: Dictionary, bot: bool, ctrl: Object) -> Plush:
 	var p := Plush.new(p_name, look, bot)
 	p.controller = ctrl
+	p.stage_bounds = true
 	actors_root.add_child(p)
 	var used := players.size() + bots.size()
 	p.teleport(SPAWNS[used % SPAWNS.size()] + Vector3(randf_range(-0.3, 0.3), 0, randf_range(-0.3, 0.3)), randf_range(-0.6, 0.6))
@@ -710,6 +711,13 @@ func prepare_game_shot(part: String) -> void:
 				await get_tree().process_frame
 			Engine.time_scale = 1.0
 			await get_tree().create_timer(3.5).timeout
+		"win_fx":
+			# kazanan anı: konfeti topları ve yağmuru (sonuç paneli açılmadan)
+			start_arena("arena")
+			while arena == null or arena.phase != "done":
+				await get_tree().process_frame
+			Engine.time_scale = 1.0
+			await get_tree().create_timer(1.2).timeout
 		"post_a", "post_c":
 			# maçı bitir, lobiye dön, Karakterim'i aç (maç sonrası hataları için)
 			start_arena("conquest" if part == "post_c" else "arena")

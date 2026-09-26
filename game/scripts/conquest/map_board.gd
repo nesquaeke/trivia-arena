@@ -10,7 +10,9 @@ extends Node3D
 ## Veri: res://data/maps/turkiye.json (web sürümündeki 15 bölge, gerçek il sınırları)
 ## ya da res://data/maps/polska.json (16 voyvodalık; tools/maps/build_poland.py üretir).
 ## Harita verisi isteğe bağlı: shore (kıyı şeridi), ships (gemiler), land (komşu ülkeler
-## keçesi), decor (ülke/deniz yazıları), label_scale/label_offset (bölge adı boyutu).
+## keçesi), decor (ülke/deniz yazıları), label_scale/label_offset (bölge adı boyutu),
+## label_fit (false: ad sığdırılmaz, kalenin altında tam boy), split_seat (kale kuzey yarıda);
+## bölgede label2 (iki satırlı ad), seat / label_at (küçük bölgede elle kale ve ad yeri).
 
 signal region_clicked(id: String)
 signal region_hovered(id: String)
@@ -36,6 +38,7 @@ var _waves: Array[Node3D] = []
 var hover_id := ""
 var _compass: Node3D
 var _ships: Array[Node3D] = []
+var _built := false
 
 ## Bölge sözlüğü:
 ##   id, name_tr, name_en, adj, seat (Vector3), polys (Array[PackedVector2Array], dünya x/z),
@@ -63,6 +66,7 @@ func build() -> void:
 		load_map()
 	for c in get_children():
 		c.queue_free()
+	position.y = 0.035       # sahne kapaklarının pirinç çıtaları satenin içinden görünmesin
 	regions.clear()
 	order.clear()
 	_build_sea()
@@ -83,6 +87,15 @@ func build() -> void:
 	_build_compass()
 	_build_frame()
 	_build_ships()
+	# açılış: bölgeler sırayla (batıdan doğuya) yukarıdan masaya iner
+	var k := 0
+	var sorted_ids := order.duplicate()
+	sorted_ids.sort_custom(func(a, b): return regions[a].seat.x < regions[b].seat.x)
+	for id in sorted_ids:
+		regions[id].lift = 2.4
+		regions[id]["drop_at"] = _t + 0.15 + k * 0.07
+		k += 1
+	_built = true
 
 func _felt(c: Color) -> StandardMaterial3D:
 	var m := StandardMaterial3D.new()
@@ -145,16 +158,39 @@ func _build_region(r: Dictionary, col: Color) -> void:
 	lines_mi.material_override = PlushVisual.mat("map_lines", Color(0.25, 0.14, 0.08), 1.0)
 	node.add_child(lines_mi)
 	var seat := to_world(float(r.cx), float(r.cy))
+	# küçük bölgeli haritalar: kale bölgenin kuzey yarısına (ad güneyde yer bulsun)
+	var vs := _vspan(polys, seat.x, seat.z)
+	if r.has("seat"):     # elle verilmiş kale yeri (çok küçük bölgeler)
+		seat = to_world(float(r.seat[0]), float(r.seat[1]))
+	elif bool(data.get("split_seat", false)) and vs.y > vs.x:
+		var h := vs.y - vs.x
+		seat.z = clampf((vs.x + vs.y) * 0.5 - h * 0.18, vs.x + 0.28, vs.y - 0.5)
+	# ad: label_fit (varsayılan) → bölgeye sığdırılır; kapalıysa kalenin altında tam boy
+	var base_ps := 0.0034 * float(data.get("label_scale", 1.0))
+	var lab_z := seat.z + float(data.get("label_offset", 0.42))
+	var fit := _fit_label(r, polys, seat.x, lab_z, base_ps)
+	if not bool(data.get("label_fit", true)):
+		# büyük bölgeli harita: ad kalenin altında tam boy; taşarsa iki satır
+		fit = [_texts(r)[0], base_ps, seat.x]
+		var span := _hspan(polys, lab_z, seat.x)
+		var w1 := _text_w(_texts(r)[0]) * base_ps
+		if _texts(r).size() > 1 and w1 > (span.y - span.x) * 1.05:
+			fit[0] = _texts(r)[1]
+	else:
+		fit = _place_label(r, polys, seat, base_ps, fit, lab_z)
+		lab_z = float(fit[3])
+	fit[1] = maxf(float(fit[1]), base_ps * 0.42)
 	var lab := Label3D.new()
 	lab.font = Pal.italic_black()
 	lab.font_size = 64
-	lab.pixel_size = 0.0034 * float(data.get("label_scale", 1.0))
-	lab.text = String(r.get("label", r.tr))
+	lab.pixel_size = fit[1]
+	lab.text = String(fit[0])
 	lab.modulate = Color("3A1C10")
 	lab.outline_size = 10
 	lab.outline_modulate = Color(1, 0.96, 0.86, 0.85)
 	lab.rotation = Vector3(-PI / 2, 0, 0)
-	lab.position = Vector3(seat.x, H + 0.012, seat.z + float(data.get("label_offset", 0.42)))
+	lab.position = Vector3(float(fit[2]), H + 0.012, lab_z)
+	lab.line_spacing = -6.0
 	lab.double_sided = false
 	node.add_child(lab)
 	regions[id] = {
@@ -164,6 +200,114 @@ func _build_region(r: Dictionary, col: Color) -> void:
 		"lift": 0.0, "lift_target": 0.0, "glow": 0.0, "glow_target": 0.0, "piece": null, "badge": null,
 	}
 	order.append(id)
+
+## Küçük bölgeli harita: adın en büyük sığdığı yükseklik (kalenin altı, gerekirse üstü) → [yazı, ps, x, z]
+func _place_label(r: Dictionary, polys: Array, seat: Vector3, base_ps: float, fit: Array, lab_z: float) -> Array:
+	# kale/taş adın üstüne binmesin: aradaki mesafe taşın boyuna göre
+	var dz := 0.5 * piece_scale() + 0.12
+	if float(fit[1]) > 0.0 and lab_z - seat.z < dz:
+		fit[1] = 0.0
+	var clear := dz
+	while dz <= 1.25:
+		for side: float in [1.0, -1.0]:     # önce kalenin altı, sonra üstü
+			if side < 0.0 and dz < clear + 0.2:
+				continue     # kamera güneyden bakar: kale üstündeki yazıyı örter, fazladan pay
+			var f2 := _fit_label(r, polys, seat.x, seat.z + dz * side, base_ps)
+			if float(f2[1]) > float(fit[1]) * (1.12 if side > 0.0 else 1.3):
+				fit = f2
+				lab_z = seat.z + dz * side
+		dz += 0.05
+	if float(fit[1]) < base_ps * 0.62:     # hâlâ küçük: kale yanına biraz daha yaklaş
+		var f3 := _fit_label(r, polys, seat.x, seat.z + clear * 0.8, base_ps)
+		if float(f3[1]) > float(fit[1]) * 1.15:
+			fit = f3
+			lab_z = seat.z + clear * 0.8
+	if r.has("label_at"):     # elle verilmiş ad yüksekliği
+		var at := to_world(float(r.label_at[0]), float(r.label_at[1]))
+		fit = _fit_label(r, polys, at.x, at.z, base_ps)
+		lab_z = at.z
+	if float(fit[1]) <= 0.0:     # hiçbir yerde sığmadı: kalenin hemen altına küçük yaz
+		fit = [String(r.get("label", r.tr)), base_ps * 0.5, seat.x]
+		lab_z = seat.z + 0.42
+	return [fit[0], fit[1], fit[2], lab_z]
+
+## Yatay çizginin (z) bölge içinde kalan parçası: x'i içeren (yoksa en geniş) aralık → Vector2(x0, x1)
+func _hspan(polys: Array, z: float, x_hint: float) -> Vector2:
+	var best := Vector2.ZERO
+	for poly: PackedVector2Array in polys:
+		var xs: Array[float] = []
+		var n := poly.size()
+		for i in n:
+			var a := poly[i]
+			var b := poly[(i + 1) % n]
+			if (a.y <= z and b.y > z) or (b.y <= z and a.y > z):
+				xs.append(a.x + (z - a.y) / (b.y - a.y) * (b.x - a.x))
+		xs.sort()
+		for i in range(0, xs.size() - 1, 2):
+			var seg := Vector2(xs[i], xs[i + 1])
+			if x_hint >= seg.x and x_hint <= seg.y:
+				return seg
+			if seg.y - seg.x > best.y - best.x:
+				best = seg
+	return best
+
+## Dikey çizginin (x) bölge içindeki parçası: z'yi içeren aralık → Vector2(z0, z1)
+func _vspan(polys: Array, x: float, z_hint: float) -> Vector2:
+	var flipped: Array = []
+	for poly: PackedVector2Array in polys:
+		var f := PackedVector2Array()
+		for v in poly:
+			f.append(Vector2(v.y, v.x))
+		flipped.append(f)
+	return _hspan(flipped, x, z_hint)
+
+## Adın biçimleri: tek satır, iki satır (verideki label2 ya da ortadaki boşluktan bölünmüş)
+func _texts(r: Dictionary) -> Array:
+	var one := String(r.get("label", r.tr))
+	var texts: Array = [one]
+	if r.has("label2"):
+		texts.append(String(r.label2))
+	elif one.contains(" "):
+		var cut := -1
+		for i in one.length():
+			if one[i] == " " and (cut < 0 or absi(i - one.length() / 2) < absi(cut - one.length() / 2)):
+				cut = i
+		texts.append(one.substr(0, cut) + "\n" + one.substr(cut + 1))
+	return texts
+
+## Yazının en geniş satırının genişliği (font_size 64, piksel)
+func _text_w(t: String) -> float:
+	var w := 0.0
+	for line in t.split("\n"):
+		w = maxf(w, Pal.italic_black().get_string_size(line, HORIZONTAL_ALIGNMENT_LEFT, -1, 64).x)
+	return w
+
+## Bölge adını sığdır: tek ya da iki satırlı biçimden hangisi daha büyük sığıyorsa → [yazı, pixel_size, x]
+func _fit_label(r: Dictionary, polys: Array, x_hint: float, z: float, base_ps: float) -> Array:
+	var texts := _texts(r)
+	var span := _hspan(polys, z, x_hint)
+	var best: Array = [texts[0], 0.0, x_hint]
+	var best_ps := 0.0
+	for t: String in texts:
+		var w := _text_w(t)
+		var room := (span.y - span.x) * float(data.get("label_room", 0.84))
+		if t.contains("\n") and room > 0.0:
+			# iki satır: üst ve alt satırın ortası da bölgede kalmalı (yazının gerçek boyuna göre)
+			var ps0 := minf(base_ps, room / maxf(w, 1.0))
+			var hh := t.count("\n") * 30.0 * ps0
+			for dzz: float in [-hh, hh]:
+				var s2 := _hspan(polys, z + dzz, (span.x + span.y) * 0.5)
+				var ov := maxf(0.0, minf(s2.y, span.y) - maxf(s2.x, span.x))
+				room = minf(room, ov * float(data.get("label_room", 0.84)) * 1.1)
+		if room <= 0.0:
+			continue     # bu yükseklikte bölge yok
+		var ps := minf(base_ps, room / maxf(w, 1.0))
+		if t.contains("\n"):
+			ps *= 0.97     # eşitlikte tek satır tercih edilir
+		if ps > best_ps:
+			best_ps = ps
+			best = [t, ps, (span.x + span.y) * 0.5]
+	return best
 
 ## Üçgeni istenen normale bakacak sırayla ekler (Godot'da ön yüz saat yönünde).
 func _tri(st: SurfaceTool, a: Vector3, b: Vector3, c: Vector3, n: Vector3) -> void:
@@ -286,6 +430,7 @@ func _build_sea() -> void:
 
 ## Komşu ülkeler: denizin üstüne serilen soluk keçe (Polonya haritasında Baltık dışında her yer kara)
 func _build_land() -> void:
+	_build_decor()
 	var land: Array = data.get("land", [])
 	if land.is_empty():
 		return
@@ -302,13 +447,16 @@ func _build_land() -> void:
 	m.uv1_scale = Vector3(1.4, 1.4, 1.4)
 	mi.material_override = m
 	add_child(mi)
+
+## Masadaki yazılar: deniz adı (parlak) ve komşu ülkeler (silik)
+func _build_decor() -> void:
 	for d in data.get("decor", []):
 		var lab := Label3D.new()
 		lab.font = Pal.italic_black() if bool(d[3]) else Pal.display_bold()
 		lab.font_size = 64
 		lab.pixel_size = 0.0036 if bool(d[3]) else 0.0028
 		lab.text = String(d[0])
-		lab.modulate = Color(0.85, 0.93, 1.0, 0.75) if bool(d[3]) else Color(0.95, 0.9, 0.78, 0.7)
+		lab.modulate = Color(0.85, 0.93, 1.0, 0.75) if bool(d[3]) else Color(0.95, 0.9, 0.78, 0.42)
 		lab.rotation = Vector3(-PI / 2, 0, 0)
 		var w := to_world(float(d[1]), float(d[2]))
 		lab.position = Vector3(w.x, 0.05, w.z)
@@ -603,6 +751,9 @@ func set_owner_color(id: String, col) -> void:
 	r.label.modulate = Color("3A1C10") if target.get_luminance() > 0.45 else Color("FFF4DC")
 	r.label.outline_modulate = Color(1, 0.96, 0.86, 0.85) if target.get_luminance() > 0.45 else Color(0.1, 0.04, 0.03, 0.85)
 	flash(id)
+	if col != null and _built:
+		burst(r.seat + Vector3(0, H, 0), col as Color, 46)
+		_ring(r.seat + Vector3(0, H + 0.02, 0), col as Color)
 
 func set_rich(id: String, on: bool) -> void:
 	var r := region(id)
@@ -611,7 +762,8 @@ func set_rich(id: String, on: bool) -> void:
 	r.rich = on
 	if on and r.badge == null:
 		var b := Node3D.new()
-		b.position = r.seat + Vector3(0.62, 0.3, -0.2)
+		b.position = r.seat + Vector3(0.62, 0.3, -0.2) * piece_scale()
+		b.scale = Vector3.ONE * piece_scale()
 		var coin := MeshInstance3D.new()
 		var cm := CylinderMesh.new()
 		cm.top_radius = 0.17
@@ -641,6 +793,91 @@ func set_rich(id: String, on: bool) -> void:
 			b.add_child(l)
 		r.node.add_child(b)
 		r.badge = b
+		b.add_child(_sparkles())
+
+# ── efektler ────────────────────────────────────────────────────────
+## Keçe tüyü patlaması: küçük renkli kareler yukarı sıçrar, dönerek düşer
+func burst(pos: Vector3, col: Color, amount := 40, power := 1.0) -> void:
+	var ps := CPUParticles3D.new()
+	ps.one_shot = true
+	ps.amount = amount
+	ps.lifetime = 1.3
+	ps.explosiveness = 0.92
+	var qm := QuadMesh.new()
+	qm.size = Vector2(0.07, 0.07)
+	var m := StandardMaterial3D.new()
+	m.albedo_color = col.lightened(0.1)
+	m.cull_mode = BaseMaterial3D.CULL_DISABLED
+	m.vertex_color_use_as_albedo = true
+	qm.material = m
+	ps.mesh = qm
+	ps.direction = Vector3.UP
+	ps.spread = 55.0
+	ps.initial_velocity_min = 1.6 * power
+	ps.initial_velocity_max = 3.2 * power
+	ps.gravity = Vector3(0, -6.5, 0)
+	ps.damping_min = 0.6
+	ps.damping_max = 1.4
+	ps.angular_velocity_min = -540.0
+	ps.angular_velocity_max = 540.0
+	ps.scale_amount_min = 0.5
+	ps.scale_amount_max = 1.2
+	var g := Gradient.new()
+	g.set_color(0, col.lightened(0.35))
+	g.set_color(1, col.darkened(0.15))
+	ps.color_initial_ramp = g
+	add_child(ps)
+	ps.position = pos
+	ps.emitting = true
+	get_tree().create_timer(ps.lifetime + 0.4).timeout.connect(ps.queue_free)
+
+## Zeminde yayılan ince halka (ele geçirme dalgası)
+func _ring(pos: Vector3, col: Color) -> void:
+	var mi := MeshInstance3D.new()
+	var tm := TorusMesh.new()
+	tm.inner_radius = 0.26
+	tm.outer_radius = 0.3
+	tm.rings = 32
+	mi.mesh = tm
+	var m := StandardMaterial3D.new()
+	m.albedo_color = col.lightened(0.3)
+	m.emission_enabled = true
+	m.emission = col
+	m.emission_energy_multiplier = 1.2
+	m.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	mi.material_override = m
+	add_child(mi)
+	mi.position = pos
+	var tw := mi.create_tween().set_parallel(true)
+	tw.tween_property(mi, "scale", Vector3(4.0, 1.0, 4.0) * piece_scale(), 0.7).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	tw.tween_property(m, "albedo_color:a", 0.0, 0.7)
+	tw.chain().tween_callback(mi.queue_free)
+
+## Zengin (2×) bölgenin rozetinde sürekli altın pırıltı
+func _sparkles() -> CPUParticles3D:
+	var ps := CPUParticles3D.new()
+	ps.amount = 10
+	ps.lifetime = 1.4
+	var sm := SphereMesh.new()
+	sm.radius = 0.018
+	sm.height = 0.036
+	var m := StandardMaterial3D.new()
+	m.albedo_color = Color("FFE7A0")
+	m.emission_enabled = true
+	m.emission = Color("FFD35A")
+	m.emission_energy_multiplier = 2.0
+	sm.material = m
+	ps.mesh = sm
+	ps.emission_shape = CPUParticles3D.EMISSION_SHAPE_SPHERE
+	ps.emission_sphere_radius = 0.22
+	ps.direction = Vector3.UP
+	ps.spread = 30.0
+	ps.initial_velocity_min = 0.1
+	ps.initial_velocity_max = 0.3
+	ps.gravity = Vector3.ZERO
+	ps.scale_amount_min = 0.4
+	ps.scale_amount_max = 1.0
+	return ps
 
 func flash(id: String) -> void:
 	var r := region(id)
@@ -683,7 +920,7 @@ func region_under_mouse(cam: Camera3D, screen_pos: Vector2) -> String:
 	var dir := cam.project_ray_normal(screen_pos)
 	if absf(dir.y) < 0.0001:
 		return ""
-	var t := (H - from.y) / dir.y
+	var t := (H + position.y - from.y) / dir.y
 	if t < 0:
 		return ""
 	return region_at(from + dir * t)
@@ -729,6 +966,7 @@ func set_piece(id: String, piece: Node3D) -> void:
 		piece.scale = Vector3(0.01, 0.01, 0.01)
 		# küçük ölçekli haritalarda (Polonya) kale ve taşlar bölgeye sığacak kadar küçülür
 		var s: Vector3 = piece.get_meta("base_scale", Vector3.ONE) * piece_scale()
+		burst(r.seat + Vector3(0, H, 0), Color("E6D6B4"), 26, 0.6)
 		var tw2 := piece.create_tween()
 		tw2.tween_property(piece, "scale", s, 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
@@ -787,7 +1025,9 @@ func _process(delta: float) -> void:
 	var pulse := 0.6 + 0.4 * sin(_t * 4.0)
 	for id in order:
 		var r: Dictionary = regions[id]
-		r.lift = Fx.damp(r.lift, r.lift_target, 10.0, delta)
+		if _t < float(r.get("drop_at", 0.0)):
+			continue
+		r.lift = Fx.damp(r.lift, r.lift_target, 10.0 if r.lift < 0.4 else 7.0, delta)
 		r.glow = Fx.damp(r.glow, r.glow_target, 6.0, delta)
 		r.node.position.y = r.lift
 		var e: float = r.glow * (pulse if r.glow_target > 0.0 and r.glow_target < 0.8 else 1.0)

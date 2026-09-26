@@ -590,6 +590,7 @@ func _score(res: Dictionary, total: float, speed_w := 1.0, launch := false) -> v
 			deltas[p] = gain
 			p.float_text("+%d" % gain + ("  ×%d" % s.streak if s.streak >= 3 else ""), Color("9BE38B"), s.streak >= 3)
 			p.visual.land(4.0)
+			StageFx.sparkle(stage, p.global_position + Vector3(0, 1.0, 0), Color("F2C66A") if s.streak >= 3 else Color("9BE38B"))
 			_notify(p, {"t": "buzz", "ms": 30})
 		else:
 			wrong.append(p)
@@ -613,6 +614,7 @@ func _launch(p: Plush) -> void:
 		dir = Vector3(0, 0, 1)
 	p.apply_central_impulse(Vector3(dir.x * 1.6, 6.8, 1.2) * p.mass)
 	p.tumble(dir, 0.8)
+	StageFx.puff(stage, p.global_position, Color(0.86, 0.78, 0.66), 16)
 	Sfx.play("trapdoor", -8.0, 1.4)
 	Sfx.play("scream", -9.0, rng.randf_range(1.1, 1.4))
 
@@ -1404,6 +1406,7 @@ func _awards() -> void:
 	Music.play("trivia", 0.8)
 	_mh("awards_show", [rows])
 	Sfx.play("fanfare", -6.0, 1.1)
+	StageFx.confetti(stage, Vector3(0, 0, 1.2), StageFx.CONFETTI, 160, 8.0)
 	for i in rows.size():
 		get_tree().create_timer(0.3 + i * 0.35).timeout.connect(func(): Sfx.play("award", -5.0, 1.0 + i * 0.03))
 	await _wait(3.5 + rows.size() * 0.6)
@@ -1430,6 +1433,7 @@ func _finish() -> void:
 		game.on_match_finished("mayhem", names)
 	Sfx.play("fanfare", -2.0)
 	Sfx.play("applause", -6.0)
+	StageFx.celebrate(stage)
 	if rk.size() > 0 and is_instance_valid(rk[0]):
 		stage.set_gold_target(rk[0])
 		_notify(rk[0], {"t": "status", "text": I18n.t("house.status_win")})
