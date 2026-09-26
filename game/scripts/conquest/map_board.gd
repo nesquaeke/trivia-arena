@@ -10,7 +10,7 @@ extends Node3D
 ## Veri: res://data/maps/turkiye.json (web sürümündeki 15 bölge, gerçek il sınırları)
 ## ya da res://data/maps/polska.json (16 voyvodalık; tools/maps/build_poland.py üretir).
 ## Harita verisi isteğe bağlı: shore (kıyı şeridi), ships (gemiler), land (komşu ülkeler
-## keçesi), decor (ülke/deniz yazıları), label_scale/label_offset (bölge adı boyutu),
+## keçesi), decor (ülke/deniz yazıları), label_scale/label_offset (bölge adı boyutu), view_zoom (kamera yakınlığı),
 ## label_fit (false: ad sığdırılmaz, kalenin altında tam boy), split_seat (kale kuzey yarıda);
 ## bölgede label2 (iki satırlı ad), seat / label_at (küçük bölgede elle kale ve ad yeri).
 
@@ -49,6 +49,17 @@ func load_map(path := "res://data/maps/turkiye.json") -> void:
 	var f := FileAccess.open(path, FileAccess.READ)
 	data = JSON.parse_string(f.get_as_text())
 	S = minf(WIDTH / float(data.cols), DEPTH_MAX / float(data.rows))
+
+## Kameranın haritaya yaklaşma oranı (dar haritalarda > 1)
+func view_zoom() -> float:
+	return float(data.get("view_zoom", 1.0))
+
+## Kamera ayarını haritanın yakınlığına göre ölçekle: bakış noktasına doğru yaklaşır
+func zoom_shot(shot: Dictionary) -> Dictionary:
+	var z := view_zoom()
+	if z != 1.0:
+		shot.pos = shot.look + (shot.pos - shot.look) / z
+	return shot
 
 func to_world(mx: float, my: float) -> Vector3:
 	return Vector3((mx - data.cols * 0.5) * S, 0.0, CENTER_Z + (my - data.rows * 0.5) * S)

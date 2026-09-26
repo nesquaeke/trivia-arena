@@ -119,6 +119,9 @@ func _physics_process(delta: float) -> void:
 	elif mode == Mode.WARDROBE:
 		var p1 := player_one()
 		if p1:
+			# podyumda kal: fizik motoru ışınlamayı geri yazarsa (ya da bir şey iterse) tekrar yerine koy
+			if p1.global_position.distance_to(WARD_POS) > 0.04 or not p1.freeze:
+				_pin_to_podium(p1)
 			# oyuncu sürüklediği açıda kalır; bir süre dokunmazsa hafifçe salınır
 			_ward_idle += delta
 			var sway := sin(_t * 0.7) * 0.35 * clampf((_ward_idle - 2.5) / 1.5, 0.0, 1.0)
@@ -193,10 +196,7 @@ func _on_fell_out(p: Plush) -> void:
 		# kostüm odası açıkken düşen oyuncu kenara değil, podyumdaki yerine döner (donmuş kalır)
 		if mode == Mode.WARDROBE and p == player_one():
 			p.revive(WARD_POS)
-			p.frozen_input = true
-			p.freeze = true
-			p.teleport(WARD_POS, p.facing)
-			p.global_position = WARD_POS
+			_pin_to_podium(p)
 			return
 		var side := -1.0 if randf() < 0.5 else 1.0
 		p.revive(Vector3(side * 7.2, 0.3, randf_range(-3.5, 0.5)))
@@ -303,11 +303,7 @@ func enter_wardrobe() -> void:
 		p1.frozen_input = true
 		# önce dondur, sonra ışınla: aynı karede dondurulan gövdeye ışınlama işlemiyordu,
 		# pelüş lobide nerede kaldıysa orada, sırtı dönük donuyordu
-		p1.linear_velocity = Vector3.ZERO
-		p1.angular_velocity = Vector3.ZERO
-		p1.freeze = true
-		p1.teleport(WARD_POS, 0.0)
-		p1.global_position = WARD_POS
+		_pin_to_podium(p1, 0.0)
 	for b in bots:
 		b.controller.go_to(Vector3(randf_range(-6.0, 6.0), 0, randf_range(-4.2, -3.4)))
 	stage.set_solo(true, true)
@@ -315,6 +311,18 @@ func enter_wardrobe() -> void:
 	cam.set_shot(BalconyCam.Shot.WARDROBE)
 	SteamService.presence("wardrobe")
 	Sfx.play("whoosh", -8.0, 1.2)
+
+## Pelüşü podyuma koy ve dondur. Önce dondur, sonra ışınla: aynı karede dondurulan gövdeye
+## ışınlama işlemiyordu. Fizik sunucusuna da doğrudan yazılır ki bir sonraki adımda geri gelmesin.
+func _pin_to_podium(p: Plush, yaw := NAN) -> void:
+	p.frozen_input = true
+	p.linear_velocity = Vector3.ZERO
+	p.angular_velocity = Vector3.ZERO
+	p.freeze = true
+	p.teleport(WARD_POS, p.facing if is_nan(yaw) else yaw)
+	p.global_position = WARD_POS
+	PhysicsServer3D.body_set_state(p.get_rid(), PhysicsServer3D.BODY_STATE_TRANSFORM, Transform3D(Basis.IDENTITY, WARD_POS))
+	p.reset_physics_interpolation()
 
 func exit_wardrobe() -> void:
 	wardrobe_conquest(false)
@@ -765,12 +773,12 @@ func prepare_game_shot(part: String) -> void:
 					mb.set_piece(ids[i], fig)
 			mb.set_mark(ids[5], "cursor")
 			mb.set_mark(ids[6], "pickable")
-			cam.set_custom({"pos": Vector3(0.0, 9.4, 4.5), "look": Vector3(0.0, 0.0, -1.25), "fov": 50.0, "h": -0.6, "sway": 0.0}, true)
+			cam.set_custom(mb.zoom_shot({"pos": Vector3(0.0, 9.4, 4.5), "look": Vector3(0.0, 0.0, -1.25), "fov": 50.0, "h": -0.6, "sway": 0.0}), true)
 			if ui:
 				ui.show_lobby_chrome(false)
 			await get_tree().create_timer(2.0).timeout
 		"map_top":
-			cam.set_custom({"pos": Vector3(0.0, 12.8, 2.2), "look": Vector3(0.0, 0.0, -1.3), "fov": 44.0, "h": -0.75, "sway": 0.0}, true)
+			cam.set_custom(_demo_map.zoom_shot({"pos": Vector3(0.0, 12.8, 2.2), "look": Vector3(0.0, 0.0, -1.3), "fov": 44.0, "h": -0.75, "sway": 0.0}), true)
 			await get_tree().create_timer(1.0).timeout
 		"castle_fall":
 			var id: String = _demo_map.order[0]

@@ -279,12 +279,12 @@ func _curtain_call(rk: Array[Plush]) -> void:
 ## Haritaya genel bakış: skor şeridine yer açmak için kadraj sağa kayık
 func _cam_overview() -> void:
 	if game.cam:
-		game.cam.set_custom({"pos": Vector3(0.0, 9.4, 4.5), "look": Vector3(0.0, 0.0, -1.25), "fov": 50.0, "h": -0.6, "sway": 0.0, "blend": 2.0})
+		game.cam.set_custom(board.zoom_shot({"pos": Vector3(0.0, 9.4, 4.5), "look": Vector3(0.0, 0.0, -1.25), "fov": 50.0, "h": -0.6, "sway": 0.0, "blend": 2.0}))
 
 ## Seçim: neredeyse tepeden, bütün bölgeler okunur
 func _cam_top() -> void:
 	if game.cam:
-		game.cam.set_custom({"pos": Vector3(0.0, 12.8, 2.2), "look": Vector3(0.0, 0.0, -1.3), "fov": 44.0, "h": -0.75, "sway": 0.0, "blend": 2.4})
+		game.cam.set_custom(board.zoom_shot({"pos": Vector3(0.0, 12.8, 2.2), "look": Vector3(0.0, 0.0, -1.3), "fov": 44.0, "h": -0.75, "sway": 0.0, "blend": 2.4}))
 
 ## İki bölgeye yakın plan (saldırı, düello): orta noktaya iner
 func _cam_focus(ids: Array, dist := 1.0) -> void:

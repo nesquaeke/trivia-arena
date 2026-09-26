@@ -161,12 +161,11 @@ def main():
             "ships": [[160.0, 40.0, 1.0], [600.0, 25.0, -1.0]], "ship_roam": 1.4,
             # komşu ülkeler yalnız silik yazı olarak (keçe kara parçası kaldırıldı: tuhaf duruyordu)
             # [yazı, x, y, deniz mi]
-            "decor": [["BAŁTYK", -70.0, 200.0, True], ["NIEMCY", -190.0, 560.0, False],
-                      ["CZECHY", 250.0, 975.0, False], ["SŁOWACJA", 640.0, 1000.0, False],
-                      ["UKRAINA", 1130.0, 790.0, False], ["BIAŁORUŚ", 1110.0, 470.0, False],
-                      ["LITWA", 1010.0, 160.0, False], ["ROSJA", 690.0, 175.0, False]],
+            "decor": [["BAŁTYK", -70.0, 200.0, True]],
             # küçük bölgeler: kale kuzey yarıda, ad güney yarıda; ad bölge genişliğine sığdırılır
             "label_scale": 0.9, "split_seat": True,
+            # harita dar: seçim ve genel bakış kamerası bu oranda yaklaşır (yanlarda boş masa kalmasın)
+            "view_zoom": 1.28,
             "credit": "Map: Simplemaps.com (free for commercial use)", "regions": regions}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(data, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))

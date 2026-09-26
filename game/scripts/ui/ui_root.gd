@@ -553,6 +553,17 @@ func prepare_shot(part: String) -> void:
 			await get_tree().create_timer(2.0).timeout
 			menu.buttons["trivia"].grab_focus()
 			await get_tree().create_timer(0.8).timeout
+		"wardrobe_far":
+			# oyuncu kenarda koşarken Karakterim açılır: ortaya ışınlanmalı
+			var p1: Plush = game.player_one()
+			p1.teleport(Vector3(5.0, 0.05, 2.0), 1.2)
+			await get_tree().create_timer(0.5).timeout
+			p1.linear_velocity = Vector3(3.0, 0, 1.0)
+			await get_tree().physics_frame
+			_open_wardrobe()
+			for i in 6:
+				await get_tree().create_timer(0.3).timeout
+				print("WARD ", p1.global_position, " freeze=", p1.freeze, " state=", p1.state)
 		"wardrobe":
 			_open_wardrobe()
 			await get_tree().create_timer(2.5).timeout
